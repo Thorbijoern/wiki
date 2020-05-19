@@ -205,6 +205,8 @@ Error message and password prompt
 
 <li>$:/state/toc/TableOfContents/Audio-amplifiers--118161433</li>
 
+<li>$:/state/toc/TableOfContents/Audio-mixing / signal processing--118161433</li>
+
 <li>$:/state/toc/TableOfContents/Audio-Sonnensystem--118161433</li>
 
 <li>$:/state/toc/TableOfContents/Audio-Soundsystem--118161433</li>
@@ -470,6 +472,8 @@ Error message and password prompt
 <li>diy speakers</li>
 
 <li>Draft of 'bus(/car) electric conversion'</li>
+
+<li>Draft of 'Open Source Digital Mixer'</li>
 
 <li>Effiziente Beschallung von Menschenmengen</li>
 
@@ -10036,6 +10040,9 @@ Error message and password prompt
 <div created="20200516195316912" modified="20200516212825787" title="$:/state/toc/TableOfContents/Audio-amplifiers--118161433">
 <pre>open</pre>
 </div>
+<div created="20200519115426190" modified="20200519115426190" title="$:/state/toc/TableOfContents/Audio-mixing / signal processing--118161433">
+<pre>open</pre>
+</div>
 <div created="20200514195052200" modified="20200516200214544" title="$:/state/toc/TableOfContents/Audio-Sonnensystem--118161433">
 <pre>close</pre>
 </div>
@@ -10057,7 +10064,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200519112026249" list="[[Open Source Digital Mixer]] [[free/open DSP]] [[diy analog mixing console]] TableOfContents" modified="20200519112803441" title="$:/StoryList">
+<div created="20200519112026249" list="[[free/open DSP]] [[Draft of 'Open Source Digital Mixer']] [[diy analog mixing console]] TableOfContents" modified="20200519115427945" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -11347,32 +11354,11 @@ other stuff:
 <div modified="20200519111021342" title="Draft of 'bus(/car) electric conversion'">
 <pre></pre>
 </div>
-<div created="20200515113647617" modified="20200515113711567" tags="Audio" title="Effiziente Beschallung von Menschenmengen">
-<pre>https://wiki.fridaysforfuture.is/index.php?title=Effiziente_Beschallung_von_Menschenmengen</pre>
-</div>
-<div created="20200519111215905" modified="20200519111703755" tags="[[bus(/car) electric conversion]]" title="electric motor and other parts">
-<pre>* out of old, crashed EVs?
-* dunno</pre>
-</div>
-<div created="20200514203641753" modified="20200515113840724" tags="Misc" title="electronic suppliers">
-<pre>* mouser
-* digikey
-* farnel
-* conrad
-* pollin
-* reichelt
-* https://www.voelkner.de/
-* https://www.buerklin.com/</pre>
-</div>
-<div created="20200514131345402" modified="20200519115355014" tags="[[mixing / signal processing]]" title="free/open DSP">
-<pre>(free as in freedom)
+<div created="20200518211155180" draft.of="Open Source Digital Mixer" draft.title="Open Source Digital Mixer" modified="20200519115517947" tags="[[mixing / signal processing]]" title="Draft of 'Open Source Digital Mixer'">
+<pre>DSP (as open as possible) with enough in/outputs and an interface for a microcontroller/raspberry pi or so.
+raspberrypi with wifi, bluetooth (and LAN?), app
 
-https://freedsp.cc - https://github.com/freeDSP
-
-c-dsp von minidsp?
-
-cheap eq or dsp boards from china?
-
+freedsp aurora?
 
 &quot;&quot;&quot;
 Soundcraft Ui16 oder Behringer X Air XR16
@@ -11395,16 +11381,40 @@ Musste mal schauen, was die Apps so bieten bzw. bei den einzelnen Herstellern. O
 
 ok, raspi zero mit wlan adapter, kleinem webserver und einem fetten dsp dran... midi over wifi hat sicherlich auch schon mal jemand gebastelt lol
 
-obwohl, eher normaler raspberry pi, wegen ethernet
+obwohl, eher normaler raspberry pi, wegen ethernet</pre>
+</div>
+<div created="20200515113647617" modified="20200515113711567" tags="Audio" title="Effiziente Beschallung von Menschenmengen">
+<pre>https://wiki.fridaysforfuture.is/index.php?title=Effiziente_Beschallung_von_Menschenmengen</pre>
+</div>
+<div created="20200519111215905" modified="20200519111703755" tags="[[bus(/car) electric conversion]]" title="electric motor and other parts">
+<pre>* out of old, crashed EVs?
+* dunno</pre>
+</div>
+<div created="20200514203641753" modified="20200515113840724" tags="Misc" title="electronic suppliers">
+<pre>* mouser
+* digikey
+* farnel
+* conrad
+* pollin
+* reichelt
+* https://www.voelkner.de/
+* https://www.buerklin.com/</pre>
+</div>
+<div created="20200514131345402" modified="20200519115559414" tags="[[mixing / signal processing]]" title="free/open DSP">
+<pre>(free as in freedom)
 
-ok, paar open source dsp projekte gibt es
+https://freedsp.cc - https://github.com/freeDSP
 
-da es kein realtime audio streaming ist, ist es eig. nicht so irre schwer
+c-dsp von minidsp?
+
+cheap eq or dsp boards from china?
+
+there are some open source/diy dsp projects, e.g. on hackaday
 
 https://hackaday.io/project/166122-esp32-as-bt-receiver-with-dsp-capabilities
 Stereo DAC with 32-bit, 384kHz PCM
-&quot;&quot;&quot;
 
+Stuff:
 
 * https://t.me/javaebooks/162
 * [[FAUST: Functional programming language for real-time DSP and synthesis|http://faust.grame.fr/about/]]
