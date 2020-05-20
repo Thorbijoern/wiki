@@ -10083,8 +10083,8 @@ Error message and password prompt
 <div created="20200520001703422" modified="20200520001703422" title="$:/state/toc/TableOfContents-sustainability/nachhaltigkeit-497309061">
 <pre>open</pre>
 </div>
-<div created="20200520131340632" modified="20200520131340632" title="$:/state/toc/TableOfContents/accumulator-cell technology--118161433">
-<pre>open</pre>
+<div created="20200520131340632" modified="20200520131427181" title="$:/state/toc/TableOfContents/accumulator-cell technology--118161433">
+<pre>close</pre>
 </div>
 <div created="20200516195301194" modified="20200516195312139" title="$:/state/toc/TableOfContents/accumulator-Lithium--118161433">
 <pre>close</pre>
@@ -10122,7 +10122,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200520123709279" list="[[cell technology]] [[battery packs]] [[Draft of 'New Tiddler']] TableOfContents" modified="20200520131408390" title="$:/StoryList">
+<div created="20200520123709279" list="[[Battery Management System (BMS)]] [[Draft of 'New Tiddler']] TableOfContents" modified="20200520131524876" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -11277,15 +11277,28 @@ anderson powerpole and similar seem pretty good for high current applications</p
 <pre>DLNA/~UPnP
 </pre>
 </div>
-<div created="20200514200114631" modified="20200514200525566" tags="Solar accumulator" title="Battery Management System (BMS)">
-<pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.</pre>
+<div created="20200514200114631" modified="20200520132306866" tags="Solar accumulator" title="Battery Management System (BMS)">
+<pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
+
+a BMS does these important tasks:
+
+* monitor cell voltage when chargin to prevent overcharging and overvoltage protection
+* monitor cell voltage when discharging to prevent overdischarging
+* overcurrent protection, to protect the batteries from short circuits
+* monitoring cell themp to prevent overheating (thermal cutout) (not as important in low power applications)
+* some might have serial connections so you can use a microcontroller to read the voltage and some might have build-in visible charge readouts or you can set them to only charge or discharge to a specific percentage
+
+some cell technologies might have special needs, e.g. LiFePO4 doesn't like beeing charged with themps under 0°C
+
+all this is so the cells are protected, live longer and faults like thermal runaways are prevented</pre>
 </div>
-<div created="20200518085821597" modified="20200520131044553" tags="accumulator" title="battery packs">
+<div created="20200518085821597" modified="20200520131515543" tags="accumulator" title="battery packs">
 <pre>a battery pack consists of different parts
 
 required:
 
 * accumulator cells - the cells which actually store the energy and are connected in series or parallel to produce the desired capacity and voltage
+* matching charger
 
 recommended:
 
