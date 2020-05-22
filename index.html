@@ -501,8 +501,6 @@ Error message and password prompt
 
 <li>diy weather station and air quality monitor</li>
 
-<li>Draft of 'ESP32 high-quality audio transmitter'</li>
-
 <li>Effiziente Beschallung von Menschenmengen</li>
 
 <li>electric motor and other parts</li>
@@ -10168,7 +10166,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200521123724775" list="[[free/open/cheap DSP]] [[esp32 audio projects]] [[Draft of 'ESP32 high-quality audio transmitter']] TableOfContents" modified="20200522122717912" title="$:/StoryList">
+<div created="20200521123724775" list="[[ESP32 high-quality audio transmitter]] TableOfContents" modified="20200522122757904" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -11548,31 +11546,6 @@ other stuff:
 <div created="20200522114815769" modified="20200522114849144" tags="sustainability/nachhaltigkeit" title="diy weather station and air quality monitor">
 <pre></pre>
 </div>
-<div created="20200522112515039" draft.of="ESP32 high-quality audio transmitter" draft.title="ESP32 high-quality audio transmitter" modified="20200522122449044" tags="Audio" title="Draft of 'ESP32 high-quality audio transmitter'">
-<pre>Parts:
-
-* [[Wemos D32 Pro (ESP32-WROVER)|https://www.wemos.cc/en/latest/d32/d32_pro.html]]
-* [[PCM5102A Board (32-bit, 384 kHz Stereo DAC)|https://www.ti.com/lit/ds/symlink/pcm5102a.pdf]]
-* [[PCM1808 Board (24-Bit, 96-kHz Stereo ADC)|https://www.ti.com/lit/ds/symlink/pcm1808.pdf]]
-
-some existing esp32 or esp8266 audio streaming projects:
-
-* https://hackaday.io/project/93838-esp32-bluetooth-a2dp-src
-* https://hackaday.io/project/166122-esp32-as-bt-receiver-with-dsp-capabilities
-* https://hackaday.io/project/18294-esp32-audio-recorder
-* https://hackaday.io/project/168354-esp32-based-internet-radio-and-bluetooth-speaker
-* https://hackaday.io/project/49280-wirelessstandalone-headset-audio-device
-* https://hackaday.io/project/167081-linki
-
-Libraries:
-
-* 
-
-I²S Pins:
-
-* Both I2C periherals are fully routable via the GPIO matrix, so you should be able to connect your codec to any GPIO pin (that is output-capable, for pins where you want to output a signal) [[(Source)|https://esp32.com/viewtopic.php?t=357]]
-</pre>
-</div>
 <div created="20200515113647617" modified="20200515113711567" tags="Audio" title="Effiziente Beschallung von Menschenmengen">
 <pre>https://wiki.fridaysforfuture.is/index.php?title=Effiziente_Beschallung_von_Menschenmengen</pre>
 </div>
@@ -11615,12 +11588,14 @@ knowledge:
 * https://hackaday.io/project/167081-linki
 * https://hackaday.io/project/166867-esp32-i2s-slm - sound level meter</pre>
 </div>
-<div created="20200522112515039" modified="20200522121220309" tags="Audio" title="ESP32 high-quality audio transmitter">
+<div created="20200522112515039" modified="20200522123927554" tags="Audio" title="ESP32 high-quality audio transmitter">
 <pre>Parts:
 
 * [[Wemos D32 Pro (ESP32-WROVER)|https://www.wemos.cc/en/latest/d32/d32_pro.html]]
 * [[PCM5102A Board (32-bit, 384 kHz Stereo DAC)|https://www.ti.com/lit/ds/symlink/pcm5102a.pdf]]
 * [[PCM1808 Board (24-Bit, 96-kHz Stereo ADC)|https://www.ti.com/lit/ds/symlink/pcm1808.pdf]]
+
+the ADCs and DACs of the ESP32 are not that great for audio (12bit ADCs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html]], 8bit DACs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/dac.html]], (stuff in de: [[[1]|http://esp32-server.de/adc/]], [[[2]|https://ckblog2016.net/2018/03/03/esp32-adc-dac/]])
 
 some existing esp32 or esp8266 audio streaming projects:
 
@@ -11630,7 +11605,15 @@ some existing esp32 or esp8266 audio streaming projects:
 * https://hackaday.io/project/168354-esp32-based-internet-radio-and-bluetooth-speaker
 * https://hackaday.io/project/49280-wirelessstandalone-headset-audio-device
 * https://hackaday.io/project/167081-linki
-* </pre>
+
+Libraries:
+
+* 
+
+I²S:
+
+* Both I2C periherals are fully routable via the GPIO matrix, so you should be able to connect your codec to any GPIO pin (that is output-capable, for pins where you want to output a signal) [[(Source)|https://esp32.com/viewtopic.php?t=357]]
+</pre>
 </div>
 <div created="20200519155629257" modified="20200519194224171" tags="[[Free/Open/Libre *]]" title="finding open hardware projects">
 <pre>* https://www.instructables.com/
@@ -11642,7 +11625,7 @@ some existing esp32 or esp8266 audio streaming projects:
 * gitlab
 * https://alternativeto.net/</pre>
 </div>
-<div created="20200514131345402" modified="20200519154047825" tags="[[mixing / signal processing]]" title="free/open/cheap DSP">
+<div created="20200514131345402" modified="20200522122837555" tags="[[mixing / signal processing]]" title="free/open/cheap DSP">
 <pre>(free as in freedom)
 
 https://freedsp.cc - https://github.com/freeDSP
@@ -11658,6 +11641,7 @@ Stereo DAC with 32-bit, 384kHz PCM
 
 * http://store3.sure-electronics.com/adau1701-audio-digital-signal-processor-kernel-board
 * https://auverdion.de/produkt/aurora-dsp/
+* the ESP32 has some DSP capabilities, take a look at [[esp32 audio projects]]
 
 Stuff:
 
