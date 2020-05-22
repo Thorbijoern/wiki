@@ -501,6 +501,8 @@ Error message and password prompt
 
 <li>diy weather station and air quality monitor</li>
 
+<li>Draft of 'ESP32 high-quality audio transmitter'</li>
+
 <li>Effiziente Beschallung von Menschenmengen</li>
 
 <li>electric motor and other parts</li>
@@ -10133,8 +10135,8 @@ Error message and password prompt
 <div created="20200516195316912" modified="20200522112512134" title="$:/state/toc/TableOfContents/Audio-amplifiers--118161433">
 <pre>close</pre>
 </div>
-<div created="20200519115426190" modified="20200519193023825" title="$:/state/toc/TableOfContents/Audio-mixing / signal processing--118161433">
-<pre>close</pre>
+<div created="20200519115426190" modified="20200522122715466" title="$:/state/toc/TableOfContents/Audio-mixing / signal processing--118161433">
+<pre>open</pre>
 </div>
 <div created="20200514195052200" modified="20200516200214544" title="$:/state/toc/TableOfContents/Audio-Sonnensystem--118161433">
 <pre>close</pre>
@@ -10166,7 +10168,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200521123724775" list="[[Bluetooth Audio]] [[ESP32 high-quality audio transmitter]] TableOfContents" modified="20200522121018530" title="$:/StoryList">
+<div created="20200521123724775" list="[[free/open/cheap DSP]] [[esp32 audio projects]] [[Draft of 'ESP32 high-quality audio transmitter']] TableOfContents" modified="20200522122717912" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -11546,6 +11548,31 @@ other stuff:
 <div created="20200522114815769" modified="20200522114849144" tags="sustainability/nachhaltigkeit" title="diy weather station and air quality monitor">
 <pre></pre>
 </div>
+<div created="20200522112515039" draft.of="ESP32 high-quality audio transmitter" draft.title="ESP32 high-quality audio transmitter" modified="20200522122449044" tags="Audio" title="Draft of 'ESP32 high-quality audio transmitter'">
+<pre>Parts:
+
+* [[Wemos D32 Pro (ESP32-WROVER)|https://www.wemos.cc/en/latest/d32/d32_pro.html]]
+* [[PCM5102A Board (32-bit, 384 kHz Stereo DAC)|https://www.ti.com/lit/ds/symlink/pcm5102a.pdf]]
+* [[PCM1808 Board (24-Bit, 96-kHz Stereo ADC)|https://www.ti.com/lit/ds/symlink/pcm1808.pdf]]
+
+some existing esp32 or esp8266 audio streaming projects:
+
+* https://hackaday.io/project/93838-esp32-bluetooth-a2dp-src
+* https://hackaday.io/project/166122-esp32-as-bt-receiver-with-dsp-capabilities
+* https://hackaday.io/project/18294-esp32-audio-recorder
+* https://hackaday.io/project/168354-esp32-based-internet-radio-and-bluetooth-speaker
+* https://hackaday.io/project/49280-wirelessstandalone-headset-audio-device
+* https://hackaday.io/project/167081-linki
+
+Libraries:
+
+* 
+
+I²S Pins:
+
+* Both I2C periherals are fully routable via the GPIO matrix, so you should be able to connect your codec to any GPIO pin (that is output-capable, for pins where you want to output a signal) [[(Source)|https://esp32.com/viewtopic.php?t=357]]
+</pre>
+</div>
 <div created="20200515113647617" modified="20200515113711567" tags="Audio" title="Effiziente Beschallung von Menschenmengen">
 <pre>https://wiki.fridaysforfuture.is/index.php?title=Effiziente_Beschallung_von_Menschenmengen</pre>
 </div>
@@ -11572,7 +11599,7 @@ knowledge:
 <pre>* https://www.elektronik-kompendium.de/
 * Wikipedia</pre>
 </div>
-<div created="20200522115726570" modified="20200522120948222" tags="Audio" title="esp32 audio projects">
+<div created="20200522115726570" modified="20200522122745845" tags="Audio" title="esp32 audio projects">
 <pre>* https://hackaday.io/project/164477-esp32-guitar-shield
 * also see [[ESP32 high-quality audio transmitter]]
 * https://hackaday.io/project/162628-audio-delay-and-vox-using-esp32
@@ -11586,14 +11613,14 @@ knowledge:
 * https://hackaday.io/project/46280-muffsy-stereo-relay-input-selector
 * https://hackaday.io/project/171566-wifi-balanced-audio-volume-control
 * https://hackaday.io/project/167081-linki
-* </pre>
+* https://hackaday.io/project/166867-esp32-i2s-slm - sound level meter</pre>
 </div>
-<div created="20200522112515039" modified="20200522120951832" tags="Audio" title="ESP32 high-quality audio transmitter">
+<div created="20200522112515039" modified="20200522121220309" tags="Audio" title="ESP32 high-quality audio transmitter">
 <pre>Parts:
 
-* Wemos D32 Pro (ESP32-WROVER)
-* [PCM5102A Board (32-bit, 384 kHz Stereo DAC)|https://www.ti.com/lit/ds/symlink/pcm5102a.pdf]
-* [PCM1808 Board (24-Bit, 96-kHz Stereo ADC)|https://www.ti.com/lit/ds/symlink/pcm1808.pdf]
+* [[Wemos D32 Pro (ESP32-WROVER)|https://www.wemos.cc/en/latest/d32/d32_pro.html]]
+* [[PCM5102A Board (32-bit, 384 kHz Stereo DAC)|https://www.ti.com/lit/ds/symlink/pcm5102a.pdf]]
+* [[PCM1808 Board (24-Bit, 96-kHz Stereo ADC)|https://www.ti.com/lit/ds/symlink/pcm1808.pdf]]
 
 some existing esp32 or esp8266 audio streaming projects:
 
