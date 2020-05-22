@@ -11588,14 +11588,14 @@ knowledge:
 * https://hackaday.io/project/167081-linki
 * https://hackaday.io/project/166867-esp32-i2s-slm - sound level meter</pre>
 </div>
-<div created="20200522112515039" modified="20200522123927554" tags="Audio" title="ESP32 high-quality audio transmitter">
+<div created="20200522112515039" modified="20200522124207506" tags="Audio" title="ESP32 high-quality audio transmitter">
 <pre>Parts:
 
 * [[Wemos D32 Pro (ESP32-WROVER)|https://www.wemos.cc/en/latest/d32/d32_pro.html]]
 * [[PCM5102A Board (32-bit, 384 kHz Stereo DAC)|https://www.ti.com/lit/ds/symlink/pcm5102a.pdf]]
 * [[PCM1808 Board (24-Bit, 96-kHz Stereo ADC)|https://www.ti.com/lit/ds/symlink/pcm1808.pdf]]
 
-the ADCs and DACs of the ESP32 are not that great for audio (12bit ADCs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html]], 8bit DACs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/dac.html]], (stuff in de: [[[1]|http://esp32-server.de/adc/]], [[[2]|https://ckblog2016.net/2018/03/03/esp32-adc-dac/]])
+the ADCs and DACs of the ESP32 are not that great for audio (12bit ADCs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html]], 8bit DACs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/dac.html]], (stuff in de: [[[1]|http://esp32-server.de/adc/]], [[[2]|https://ckblog2016.net/2018/03/03/esp32-adc-dac/]])), so i'll use I²C.
 
 some existing esp32 or esp8266 audio streaming projects:
 
@@ -11610,10 +11610,10 @@ Libraries:
 
 * 
 
-I²S:
+I²S Interfaces:
 
 * Both I2C periherals are fully routable via the GPIO matrix, so you should be able to connect your codec to any GPIO pin (that is output-capable, for pins where you want to output a signal) [[(Source)|https://esp32.com/viewtopic.php?t=357]]
-</pre>
+* https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2s.html</pre>
 </div>
 <div created="20200519155629257" modified="20200519194224171" tags="[[Free/Open/Libre *]]" title="finding open hardware projects">
 <pre>* https://www.instructables.com/
