@@ -11590,11 +11590,24 @@ knowledge:
 * https://hackaday.io/project/167081-linki
 * https://hackaday.io/project/166867-esp32-i2s-slm - sound level meter</pre>
 </div>
-<div created="20200522112515039" modified="20200522124207506" tags="Audio" title="ESP32 high-quality audio transmitter">
+<div created="20200522112515039" modified="20200524122738309" tags="Audio" title="ESP32 high-quality audio transmitter">
 <pre>Parts:
 
 * [[Wemos D32 Pro (ESP32-WROVER)|https://www.wemos.cc/en/latest/d32/d32_pro.html]]
 * [[PCM5102A Board (32-bit, 384 kHz Stereo DAC)|https://www.ti.com/lit/ds/symlink/pcm5102a.pdf]]
+** Pins required
+*** VCC - 5V Supply, not needed if you supply 3.3V directly (else there is a voltage regulator)
+*** 3.3V - 3.3V supply, not needed if you supply 5V on VCC
+*** GND - Ground
+*** SCL / SCK - System clock input
+*** BCK - Audio data bit clock input
+*** DIN - Data/Digital In - Audio data input
+*** LCK / LRC / LRCK - Audio data word clock input
+** Pins optional
+*** FLT - Filter select: Normal latency(Low) / Low latency (High)
+*** DMP / DEMP - De-emphasis controlfor 44.1-kHz sampling rate: Off (Low) / On (High)
+*** FMT - Audio format selection: I2S (Low) / Left-justified (High)
+*** XMT / XSMT - Soft mute control: Soft mute (Low) / soft un-mute (High)
 * [[PCM1808 Board (24-Bit, 96-kHz Stereo ADC)|https://www.ti.com/lit/ds/symlink/pcm1808.pdf]]
 
 the ADCs and DACs of the ESP32 are not that great for audio (12bit ADCs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html]], 8bit DACs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/dac.html]], (stuff in de: [[[1]|http://esp32-server.de/adc/]], [[[2]|https://ckblog2016.net/2018/03/03/esp32-adc-dac/]])), so i'll use I²C.
