@@ -10155,8 +10155,8 @@ Error message and password prompt
 <div created="20200516210150078" modified="20200603211309629" title="$:/state/toc/TableOfContents/Audio-Soundsystem--118161433">
 <pre>close</pre>
 </div>
-<div created="20200516205410828" modified="20200603211345170" title="$:/state/toc/TableOfContents/Audio-speakers--118161433">
-<pre>open</pre>
+<div created="20200516205410828" modified="20200603213226854" title="$:/state/toc/TableOfContents/Audio-speakers--118161433">
+<pre>close</pre>
 </div>
 <div created="20200518085913651" modified="20200519105032497" title="$:/state/toc/TableOfContents/Audio-speakers-497309061">
 <pre>close</pre>
@@ -10179,7 +10179,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200603201555661" list="[[diy speakers]] TableOfContents" modified="20200603211352661" title="$:/StoryList">
+<div created="20200603201555661" list="[[ESP32 high-quality audio transmitter]] TableOfContents" modified="20200603213230562" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -11624,7 +11624,7 @@ esp-idf setup:
 *
 </pre>
 </div>
-<div created="20200522112515039" modified="20200603203323381" tags="Audio Projects" title="ESP32 high-quality audio transmitter">
+<div created="20200522112515039" modified="20200603213943458" tags="Audio Projects" title="ESP32 high-quality audio transmitter">
 <pre>Parts:
 
 * [[Wemos D32 Pro (ESP32-WROVER)|https://www.wemos.cc/en/latest/d32/d32_pro.html]]
@@ -11659,6 +11659,12 @@ Wiring:
 ** XMT -&gt; connected to 3.3V through 10kOhm resistor (might be switchable with Ground, to soft-mute/soft-unmute the resceiver)
 
 the ADCs and DACs of the ESP32 are not that great for audio (12bit ADCs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html]], 8bit DACs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/dac.html]], (stuff in de: [[[1]|http://esp32-server.de/adc/]], [[[2]|https://ckblog2016.net/2018/03/03/esp32-adc-dac/]])), so i'll use I²C.
+
+high-quality examples of the esp-idf library using I2S and audio streaming:
+
+* https://github.com/espressif/esp-idf/tree/master/examples/peripherals/i2s - sending tones
+* https://github.com/espressif/esp-idf/tree/master/examples/bluetooth/bluedroid/classic_bt/a2dp_source - bluetooth a2dp sender
+* https://github.com/espressif/esp-idf/tree/master/examples/bluetooth/bluedroid/classic_bt/a2dp_sink - bluetooth a2dp receiver
 
 some existing esp32 or esp8266 audio streaming projects:
 
