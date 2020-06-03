@@ -10157,8 +10157,8 @@ Error message and password prompt
 <div created="20200516210150078" modified="20200603201544507" title="$:/state/toc/TableOfContents/Audio-Soundsystem--118161433">
 <pre>close</pre>
 </div>
-<div created="20200516205410828" modified="20200603201904343" title="$:/state/toc/TableOfContents/Audio-speakers--118161433">
-<pre>open</pre>
+<div created="20200516205410828" modified="20200603203308371" title="$:/state/toc/TableOfContents/Audio-speakers--118161433">
+<pre>close</pre>
 </div>
 <div created="20200518085913651" modified="20200519105032497" title="$:/state/toc/TableOfContents/Audio-speakers-497309061">
 <pre>close</pre>
@@ -10181,7 +10181,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200603201555661" list="[[DIY Line Array]] [[ESP32 high-quality audio transmitter]] TableOfContents" modified="20200603202318271" title="$:/StoryList">
+<div created="20200603201555661" list="[[ESP32 high-quality audio transmitter]] TableOfContents" modified="20200603202348307" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -11624,25 +11624,38 @@ knowledge:
 esp-idf setup:
 </pre>
 </div>
-<div created="20200522112515039" modified="20200603201732094" tags="Audio Projects" title="ESP32 high-quality audio transmitter">
+<div created="20200522112515039" modified="20200603203312268" tags="Audio Projects" title="ESP32 high-quality audio transmitter">
 <pre>Parts:
 
 * [[Wemos D32 Pro (ESP32-WROVER)|https://www.wemos.cc/en/latest/d32/d32_pro.html]]
 * [[PCM5102A Board (32-bit, 384 kHz Stereo DAC)|https://www.ti.com/lit/ds/symlink/pcm5102a.pdf]]
 ** Pins required
-*** VCC - 5V Supply, not needed if you supply 3.3V directly (else there is a voltage regulator)
+*** VCC - 5V Supply, not needed if you supply 3.3V directly (there is a voltage regulator stepping it down to 3.3V)
 *** 3.3V - 3.3V supply, not needed if you supply 5V on VCC
 *** GND - Ground
 *** SCL / SCK - System clock input
 *** BCK - Audio data bit clock input
 *** DIN - Data/Digital In - Audio data input
-*** LCK / LRC / LRCK - Audio data word clock input
+*** LCK / LRC / LRCK / WS - Audio data word clock input
 ** Pins optional on some boards (have pre-bridged jumpers)
 *** FLT - Filter select: Normal latency(Low) / Low latency (High)
 *** DMP / DEMP - De-emphasis controlfor 44.1-kHz sampling rate: Off (Low) / On (High)
 *** FMT - Audio format selection: I2S (Low) / Left-justified (High)
 *** XMT / XSMT - Soft mute control: Soft mute (Low) / soft un-mute (High)
 * [[PCM1808 Board (24-Bit, 96-kHz Stereo ADC)|https://www.ti.com/lit/ds/symlink/pcm1808.pdf]]
+
+Wiring:
+* PCM5102A
+** Vcc or 3.3.V - pretty obvious
+** Ground - pretty obvious
+** SCL -&gt; Ground
+** BCK -&gt; e.g. GPIO26
+** DIN -&gt; e.g. GPIO25
+** LCK -&gt; e.g. GPIO22
+** FLT -&gt; Ground?
+** DMP -&gt; Ground?
+** FMT -&gt; Ground
+** XMT -&gt; connected to 3.3V through 10kOhm resistor (might be switchable with Ground, to soft-mute/soft-unmute the resceiver)
 
 the ADCs and DACs of the ESP32 are not that great for audio (12bit ADCs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html]], 8bit DACs [[(Source)|https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/dac.html]], (stuff in de: [[[1]|http://esp32-server.de/adc/]], [[[2]|https://ckblog2016.net/2018/03/03/esp32-adc-dac/]])), so i'll use I²C.
 
