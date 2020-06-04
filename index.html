@@ -519,6 +519,8 @@ Error message and password prompt
 
 <li>ESP32 high-quality audio transmitter</li>
 
+<li>event/veranstaltungs aggregation</li>
+
 <li>finding open hardware projects</li>
 
 <li>finding open software projects</li>
@@ -10103,8 +10105,8 @@ Error message and password prompt
 <div created="20200520235848728" modified="20200521105907649" title="$:/state/toc/TableOfContents-accumulator-497309061">
 <pre>close</pre>
 </div>
-<div created="20200514145029779" modified="20200603201541169" title="$:/state/toc/TableOfContents-Audio--118161433">
-<pre>open</pre>
+<div created="20200514145029779" modified="20200604170452404" title="$:/state/toc/TableOfContents-Audio--118161433">
+<pre>close</pre>
 </div>
 <div created="20200516200258153" modified="20200519105034414" title="$:/state/toc/TableOfContents-Audio-497309061">
 <pre>close</pre>
@@ -10145,8 +10147,8 @@ Error message and password prompt
 <div created="20200520124028524" modified="20200521143848933" title="$:/state/toc/TableOfContents-sustainability/nachhaltigkeit--118161433">
 <pre>close</pre>
 </div>
-<div created="20200520001703422" modified="20200603200927431" title="$:/state/toc/TableOfContents-sustainability/nachhaltigkeit-497309061">
-<pre>open</pre>
+<div created="20200520001703422" modified="20200604170459403" title="$:/state/toc/TableOfContents-sustainability/nachhaltigkeit-497309061">
+<pre>close</pre>
 </div>
 <div created="20200520131340632" modified="20200520131427181" title="$:/state/toc/TableOfContents/accumulator-cell technology--118161433">
 <pre>close</pre>
@@ -10190,7 +10192,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200604080512368" list="[[ESP32 dev env]] TableOfContents" modified="20200604084429385" title="$:/StoryList">
+<div created="20200604080512368" list="[[event/veranstaltungs aggregation]] TableOfContents" modified="20200604084429385" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -11695,6 +11697,28 @@ I²S Interfaces:
 
 * Both I2C periherals are fully routable via the GPIO matrix, so you should be able to connect your codec to any GPIO pin (that is output-capable, for pins where you want to output a signal) [[(Source)|https://esp32.com/viewtopic.php?t=357]]
 * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2s.html</pre>
+</div>
+<div created="20200604170507083" modified="20200604173346951" tags="" title="event/veranstaltungs aggregation">
+<pre>wie kann man lokale events/veranstaltungen/termine/demos zu gewissen themen (z.b. nachhaltigkeit/umwelt/klima) am besten automatisch aggregieren?
+
+bei zukunftstadt war was ähnliches
+
+Probleme:
+
+* viele verschiedene plattformen/kanäle als quellen (asoziale medien (twitter, facebook und co), verschiedene webseiten, ...)
+* bisher in telegram kanälen und webseite (grünes brett) manuell gelöst
+
+Ideen:
+
+* Netzwerk n: nein, da müssten sich alle anmelden, es soll ein öffentlicher kalender werden
+** fragwürdige plattform, wechange? kommerziell?
+** schlechte usability
+* activity pub als basis sonst ist es auch nur inkompatibel
+* https://www.linux-magazin.de/ausgaben/2014/01/bitparade/
+* APIs der platformen nutzen
+* webseiten parsen
+* platform anbieten, eigene seite zum eintragen (manuell ist doof)
+* APIs einbauen in webseiten? CalDav, WebCal, iCal?</pre>
 </div>
 <div created="20200519155629257" modified="20200519194224171" tags="[[Free/Open/Libre *]]" title="finding open hardware projects">
 <pre>* https://www.instructables.com/
