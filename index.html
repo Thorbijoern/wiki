@@ -13994,7 +13994,7 @@ along the way the threads on one axle stripped and i had to change the axle. to 
 <div created="20200705170822773" modified="20201004192616821" tags="sustainability/nachhaltigkeit Projects" title="repairs">
 <pre></pre>
 </div>
-<div created="20201031135836212" modified="20201031141253248" tags="Projects" title="reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;">
+<div created="20201031135836212" modified="20201031142133889" tags="Projects" title="reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;">
 <pre>it's basically a small server/client to connect Serial devices (RS-232; DB9 connectors) too and communicate to them over ethernet.
 it has 4 serial connections and you can set the following modes for each serial connection separately:
 
@@ -14006,7 +14006,12 @@ it has 4 serial connections and you can set the following modes for each serial 
 ** the DE-304 connects to an IP:Port using TCP to establish the communication
 * UDP Server/Client
 
-to connect to the eathernet network the DE-304 has 10mbit and 100mbit Ethernet, the default IP is 192.168.127.154 but it supports DHCP and ~BootP.</pre>
+to connect to the eathernet network the DE-304 has 10mbit and 100mbit Ethernet, the default IP is 192.168.127.154 but it supports DHCP and ~BootP.
+
+Protocol reverse engineering:
+
+* started with the DE-304 in TCP Client mode for one port, set the Server IP to the PC i'm using, left Port as 4001, used wireshark to listen to the connections to my PC on port 4001
+* DE-304 starts with a normal TCP SYN to attempt a TCP connection</pre>
 </div>
 <div created="20200908125133174" modified="20200909212430709" tags="Projects repairs" title="reviving old VT420 and VT520 Terminals with Raspberry Pi">
 <pre>a friend of mine got cool VT520 and a VT420 Terminal and we wanted to use them again.
