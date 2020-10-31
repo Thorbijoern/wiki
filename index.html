@@ -815,6 +815,8 @@ Error message and password prompt
 
 <li>repairs</li>
 
+<li>reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;</li>
+
 <li>reviving old VT420 and VT520 Terminals with Raspberry Pi</li>
 
 <li>rotary subwoofer</li>
@@ -10553,7 +10555,7 @@ there are several standards/protocols which might be used:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201030131139227" list="[[Bresser / Meade motorized Telescope completion]] TableOfContents" modified="20201030131139227" title="$:/StoryList">
+<div created="20201030131139227" list="[[reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;]] [[Bresser / Meade motorized Telescope completion]] TableOfContents" modified="20201030131139227" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -13986,6 +13988,20 @@ along the way the threads on one axle stripped and i had to change the axle. to 
 </div>
 <div created="20200705170822773" modified="20201004192616821" tags="sustainability/nachhaltigkeit Projects" title="repairs">
 <pre></pre>
+</div>
+<div created="20201031135836212" modified="20201031141244104" tags="Projects" title="reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;">
+<pre>it's basically a small server/client to connect Serial devices (RS-232; DB9 connectors) too and communicate to them over ethernet.
+it has 4 serial connections and you can set the following modes for each serial connection separately:
+
+* Host Based
+** ?
+* TCP Server
+** connect to the DE-304 via TCP and communicate with the Serial device
+* TCP Client
+** the DE-304 connects to an IP:Port using TCP to establish the communication
+* UDP Server/Client
+
+to connect to the eathernet network the DE-304 has 10mbit and 100mbit Ethernet, the default IP is 192.168.127.154 but it supports DHCP and BootP.</pre>
 </div>
 <div created="20200908125133174" modified="20200909212430709" tags="Projects repairs" title="reviving old VT420 and VT520 Terminals with Raspberry Pi">
 <pre>a friend of mine got cool VT520 and a VT420 Terminal and we wanted to use them again.
