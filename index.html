@@ -683,7 +683,11 @@ Error message and password prompt
 
 <li>diy xy laserscanner / laser projector</li>
 
+<li>Draft of '&quot;smart&quot;-batteries'</li>
+
 <li>Draft of 'efficient (12&quot;, 10&quot; or 8&quot;) Tops'</li>
+
+<li>Draft of 'reusing huawei smartphone batteries'</li>
 
 <li>Dresden</li>
 
@@ -10637,8 +10641,8 @@ Youtube:
 <div created="20200520001703422" modified="20201104233743852" title="$:/state/toc/TableOfContents-sustainability/nachhaltigkeit-497309061">
 <pre>close</pre>
 </div>
-<div created="20200803010823521" modified="20201111152042373" title="$:/state/toc/TableOfContents/accumulator - battery-cell technology--118161433">
-<pre>open</pre>
+<div created="20200803010823521" modified="20201111155146988" title="$:/state/toc/TableOfContents/accumulator - battery-cell technology--118161433">
+<pre>close</pre>
 </div>
 <div created="20201109024932378" modified="20201109024935312" title="$:/state/toc/TableOfContents/accumulator - battery/cell technology-Lithium--118161433">
 <pre>close</pre>
@@ -10802,7 +10806,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201102111116362" list="LiFePO4 [[bus(/car) electric conversion]] [[cell technology]] TableOfContents" modified="20201111152045908" title="$:/StoryList">
+<div created="20201102111116362" list="[[cell technology]] [[battery pack safety]] [[Draft of '&quot;smart&quot;-batteries']] [[Draft of 'reusing huawei smartphone batteries']] TableOfContents" modified="20201111162507484" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -12128,7 +12132,7 @@ stuff
 * [[BMS (Battery Management System) DIY or Buy - Properly protecting Li-Ion/Li-Po Battery Packs|https://www.youtube.com/watch?v=rT-1gvkFj60]]
 * [[Small BMS Vs Large BMS|https://www.youtube.com/watch?v=0gmSMfeDpZ0]]</pre>
 </div>
-<div created="20201104185550842" modified="20201109032258689" tags="[[accumulator - battery]]" title="battery pack safety">
+<div created="20201104185550842" modified="20201111162428109" tags="[[accumulator - battery]]" title="battery pack safety">
 <pre>(mainly meant for lithium battery packs)
 
 * use wire that is rated for enough amps
@@ -12141,7 +12145,8 @@ stuff
 * use a thermal cutoff
 ** https://de.wikipedia.org/wiki/Temperatursicherung
 ** https://en.wikipedia.org/wiki/Thermal_cutoff
-* [[How to Make Battery Cables the Right Way and the Easy Way|https://www.youtube.com/watch?v=XkMdlPsBxkc]]</pre>
+* [[How to Make Battery Cables the Right Way and the Easy Way|https://www.youtube.com/watch?v=XkMdlPsBxkc]]
+* https://media.blackhat.com/bh-us-11/Miller/BH_US_11_Miller_Battery_Firmware_Public_WP.pdf</pre>
 </div>
 <div created="20200518085821597" modified="20201111084432734" tags="[[accumulator - battery]]" title="battery packs">
 <pre>a battery pack consists of different parts
@@ -12396,7 +12401,7 @@ Misc:
 
 * https://youtu.be/L_JXo-7p_t8</pre>
 </div>
-<div created="20200520131108336" modified="20201111155021103" tags="[[accumulator - battery]]" title="cell technology">
+<div created="20200520131108336" modified="20201111162518565" tags="[[accumulator - battery]]" title="cell technology">
 <pre>* https://en.wikipedia.org/wiki/List_of_battery_sizes
 * https://www.youtube.com/watch?v=LqgP16JQ24I
 * https://www.turn-on.de/tech/ratgeber/feststoff-graphen-und-co-kommt-eine-akku-revolution-512259
@@ -12410,7 +12415,9 @@ Misc:
 * https://www.technologyreview.com/topic/climate-change/battery-technology/
 * https://www.forbes.com/sites/jamesconca/2019/08/26/energys-future-battery-and-storage-technologies/
 * https://www.sciencedaily.com/news/matter_energy/batteries/
-* https://en.wikipedia.org/wiki/Flywheel_energy_storage</pre>
+* https://en.wikipedia.org/wiki/Flywheel_energy_storage
+* https://en.wikipedia.org/wiki/List_of_battery_types
+* https://en.wikipedia.org/wiki/Category:Rechargeable_batteries</pre>
 </div>
 <div created="20201104191444810" modified="20201110021813956" tags="[[accumulator - battery]]" title="charging">
 <pre>* [[https://de.wikipedia.org/wiki/Ladeverfahren#IU-Ladeverfahren_(CCCV)]]
@@ -12691,8 +12698,67 @@ galvanometers and their controllers are expensive
 * https://stanleyprojects.com/projects/laser/laserscanner has two (or more) versions
 * </pre>
 </div>
+<div created="20200908114454211" draft.of="&quot;smart&quot;-batteries" draft.title="&quot;smart&quot;-batteries" modified="20201111162454491" tags="[[accumulator - battery]]" title="Draft of '&quot;smart&quot;-batteries'">
+<pre>&quot;smart&quot; batteries are batteries or battery packs with a BMS or similar monitoring circuit and communication to the host device.
+
+every battery-pack using lithium-based batteries should have a thermal cutout / thermal protection, which shuts off the power delivery if the pack overheats. but even some single cell batteries, most commonly in phones, have thermistors, so the power management chip can detect overheating and shut it off.
+
+but many packs don't just have such a thermistor, many also have additional, digital, data lines to communicate other information, like serial-number, charge status, etc., to the host device.
+
+there are several standards/protocols which might be used:
+
+* MIPI Battery Interface (BIF)
+* https://en.wikipedia.org/wiki/Power_Management_Bus
+* https://en.wikipedia.org/wiki/System_Management_Bus
+
+stuff:
+
+* https://media.blackhat.com/bh-us-11/Miller/BH_US_11_Miller_Battery_Firmware_Public_WP.pdf
+* http://sbs-forum.org/</pre>
+</div>
 <div modified="20201111120953451" title="Draft of 'efficient (12&quot;, 10&quot; or 8&quot;) Tops'">
 <pre></pre>
+</div>
+<div created="20201108011335192" draft.of="reusing huawei smartphone batteries" draft.title="reusing huawei smartphone batteries" modified="20201111161835461" tags="[[accumulator - battery]]" title="Draft of 'reusing huawei smartphone batteries'">
+<pre>the phones from huawei are designed in a, not so sustainable way, that the display assembly contains half of the whole phone, nut just the display. If someone breaks the display of their huawei and has it fixed, half of the phone is new, including the battery which is attached to the back of the display with adhesive.
+if you carefully heat the display assembly you can soften the adhesive and remove the battery.
+
+the batteries i have at hand are a couple of different types from huawei phones.
+
+! Connection
+
+the connectors of the batteries obviously have power + and - but also feature four connections labeled &quot;TH&quot;, &quot;NC&quot;, &quot;ID&quot; and &quot;SW&quot;.
+The connectors are 10 pin, but the 3 most outer right and outer left are used for power.
+
+* ID: ?
+* SW: ?
+* TH: seems to be a standard 10k Thermistor
+* NC: Not Connected
+
+ID and SW are probably some kind of serial or 1-wire communication?
+
+* https://en.wikipedia.org/wiki/1-Wire
+* https://en.wikipedia.org/wiki/I%C2%B2C#Applications
+* https://en.wikipedia.org/wiki/System_Management_Bus
+* 
+
+information about the Connector
+
+* they use BCP connectors? can buy them at Faro
+* digikey/mouser also have different similar looking connectors for flex pcb's
+* seem to be pretty expensive
+* Hirose BM29 Series FPC-to-Board connectors? - https://www.mouser.de/datasheet/2/185/ed_BM29_20200219-1663613.pdf
+* https://www.mouser.de/Connectors/Board-to-Board-Mezzanine-Connectors/_/N-ay0kr?P=1yvgchwZ1z0z7ym
+* searching for FPC connector huawei on ebay only returns other connectors
+* or molex? https://www.mouser.de/ProductDetail/Molex/505066-1022?qs=byeeYqUIh0NeLDWTasJ8lQ%3D%3D
+
+
+getting data from all cells:
+
+* multiplexing (shift register)
+** https://www.instructables.com/Multiplexing-with-Arduino-and-the-74HC595/
+** https://www.elektronik-kompendium.de/sites/kom/0211292.htm
+** https://forum.arduino.cc/index.php?topic=640382.0</pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
@@ -14743,8 +14809,10 @@ https://www.bpb.de/</pre>
 * [[SMPS Tutorial (1): Introduction - Switched Mode Power Supplies and Power Conversion|https://www.youtube.com/watch?v=nbKwUSH9NiY]]
 * [[Power Supply Design #8 How Much Power?|https://www.youtube.com/watch?v=0A49MIG1HrU]]</pre>
 </div>
-<div created="20200908114306960" modified="20201108012133167" tags="Projects [[accumulator - battery]]" title="Powerpack from Smartphone batteries">
-<pre>insights in the working of batterypacks / [[&quot;smart&quot;-batteries]]</pre>
+<div created="20200908114306960" modified="20201111155248356" tags="Projects [[accumulator - battery]]" title="Powerpack from Smartphone batteries">
+<pre>insights in the working of batterypacks / [[&quot;smart&quot;-batteries]]
+
+[[reusing huawei smartphone batteries]]</pre>
 </div>
 <div created="20201109021921964" modified="20201111134102459" tags="Audio" title="professionell Audio lernen">
 <pre>* audio+engineering
