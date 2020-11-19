@@ -10612,8 +10612,8 @@ Youtube:
 <div created="20201111033706747" modified="20201112231633067" title="$:/state/toc/TableOfContents-Art--118161433">
 <pre>close</pre>
 </div>
-<div created="20200514145029779" modified="20201117235008406" title="$:/state/toc/TableOfContents-Audio--118161433">
-<pre>open</pre>
+<div created="20200514145029779" modified="20201117235100611" title="$:/state/toc/TableOfContents-Audio--118161433">
+<pre>close</pre>
 </div>
 <div created="20200516200258153" modified="20201104170425142" title="$:/state/toc/TableOfContents-Audio-497309061">
 <pre>close</pre>
@@ -10702,8 +10702,8 @@ Youtube:
 <div created="20201004192833505" modified="20201107220438274" title="$:/state/toc/TableOfContents/Audio-audio repairs--118161433">
 <pre>close</pre>
 </div>
-<div created="20201108002945070" modified="20201117235022054" title="$:/state/toc/TableOfContents/Audio-Audio Reproduction and amplification--118161433">
-<pre>open</pre>
+<div created="20201108002945070" modified="20201117235057922" title="$:/state/toc/TableOfContents/Audio-Audio Reproduction and amplification--118161433">
+<pre>close</pre>
 </div>
 <div created="20200802175050972" modified="20201111120510617" title="$:/state/toc/TableOfContents/Audio-digital audio--118161433">
 <pre>close</pre>
@@ -10846,7 +10846,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201112222304425" list="amplifiers TableOfContents" modified="20201117235024217" title="$:/StoryList">
+<div created="20201112222304425" list="[[switched mode power supply]] TableOfContents" modified="20201118174701874" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20200512221811754" title="$:/temp/advancedsearch">
@@ -11860,8 +11860,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" modified="20201117234807714" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" modified="20201118174658060" title="$:/temp/search">
+<pre>powe</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13725,7 +13725,7 @@ germany:
 * https://en.wikipedia.org/wiki/2019%E2%80%9320_Hong_Kong_protests
 * https://pen.gg/</pre>
 </div>
-<div created="20200515113845015" modified="20201117233521701" tags="Solar" title="inverter (Wechselrichter)">
+<div created="20200515113845015" modified="20201118174501354" tags="Solar" title="inverter (Wechselrichter)">
 <pre>this focusses on solar inverters or inverters using multibles of 12V as input
 
 inverters can be defined by
@@ -13758,10 +13758,12 @@ general information:
 
 circuit designs:
 
-* switching the DC and using a transformer for stepping up - most basic/simple design but finding high power transformers can be hard, due to the transformer working with 50/60Hz not the most efficient (around 80%)
-* using a step-up/boost circuit stepping up the DC Voltage (stepping down the current) and then switching the higher DC to produce the AC - uses smaller transformers in the boost circuit, more efficient due to the boost circuit using kHz frequencies, needs more filtering to filter the high freuencies
-** the boost-circuit works like in [[switched mode power supply]]s
-* z-source?
+# switching the DC and using a transformer for stepping up - most basic/simple design but finding high power transformers can be hard, due to the transformer working with 50/60Hz not the most efficient (around 80%)
+# using a step-up/boost circuit stepping up the DC Voltage (stepping down the current) and then switching the higher DC to produce the AC - uses smaller transformers in the boost circuit, more efficient due to the boost circuit using kHz frequencies, needs more filtering to filter the high freuencies
+## the boost-circuit works like in [[switched mode power supply]]s
+# z-source?
+* a common method of achieving a pretty good sine wave is sPWM, there are prebuild spwm driver modules which can be bought for a few euros at ebay, but there are similar projects using uC's like Arduinos for the SPWM and these can be easily modified to have more functions
+** https://github.com/MartinStokroos/openMicroInverter
 
 some diy:
 
@@ -15700,8 +15702,8 @@ some stuff
 water usage in production?
 microplastics?</pre>
 </div>
-<div created="20201110021349133" modified="20201117233441503" tags="Electronics" title="switched mode power supply">
-<pre>switched mode power supplies very efficient power supply designs rectifying the AC Voltage and stepping it down/up to the desired DC voltage
+<div created="20201110021349133" modified="20201119134120733" tags="Electronics" title="switched mode power supply">
+<pre>switched mode power supplies very efficient power supply designs rectifying the AC Voltage and stepping it down/up to the desired DC voltage; but DC-to-DC Converters are also often SMPS.
 
 * https://www.youtube.com/watch?v=37lIpTxUQcE
 * [[Power Supply Design|https://www.youtube.com/playlist?list=PLBF35875F73B5C9B5]]
@@ -15709,7 +15711,20 @@ microplastics?</pre>
 * [[Power Supply Design #8 How Much Power?|https://www.youtube.com/watch?v=0A49MIG1HrU]]
 * [[How SMPS works ~ What Components We Need? Switched Mode Power Supply|https://www.youtube.com/watch?v=cK5WLMFSGnw]]
 * https://en.wikipedia.org/wiki/Switched-mode_power_supply
-* https://de.wikipedia.org/wiki/Schaltnetzteil</pre>
+* https://de.wikipedia.org/wiki/Schaltnetzteil
+* [[YT: EEVBlog Playlist: Power Supply Design|https://www.youtube.com/playlist?list=PLBF35875F73B5C9B5]]
+
+running AC SMPS from DC
+
+* https://electronics.stackexchange.com/questions/262645/using-dc-voltage-instead-of-ac-to-supply-smps
+* https://www.heise.de/select/ct/2016/2/1452238205894722?hg=1&amp;hgi=2&amp;hgf=false
+
+design:
+
+* Simulation Software can help a lot with designing
+** https://de.wikipedia.org/wiki/LTspice
+** https://de.wikipedia.org/wiki/SPICE_(Software)
+** https://en.wikipedia.org/wiki/SPICE</pre>
 </div>
 <div caption="Contents" created="20200512222617653" list-after="$:/core/ui/SideBar/Open" modified="20200512222911163" tags="$:/tags/SideBar" title="TableOfContents">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
