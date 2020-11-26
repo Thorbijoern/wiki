@@ -707,10 +707,6 @@ Error message and password prompt
 
 <li>diy xy laserscanner / laser projector</li>
 
-<li>Draft of 'Battery Management System (BMS)'</li>
-
-<li>Draft of 'inverter (Wechselrichter)'</li>
-
 <li>Draft of 'Wirtschaftssystem'</li>
 
 <li>Dresden</li>
@@ -10675,8 +10671,8 @@ Youtube:
 <div created="20201106001147477" modified="20201112224215937" title="$:/state/toc/TableOfContents-Dresden--118161433">
 <pre>close</pre>
 </div>
-<div created="20201104230255182" modified="20201126224601026" title="$:/state/toc/TableOfContents-Electronics--118161433">
-<pre>close</pre>
+<div created="20201104230255182" modified="20201126232600953" title="$:/state/toc/TableOfContents-Electronics--118161433">
+<pre>open</pre>
 </div>
 <div created="20201112235352506" modified="20201113000256699" title="$:/state/toc/TableOfContents-Electronics-497309061">
 <pre>close</pre>
@@ -10894,7 +10890,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201126114909859" list="[[Open Hardware]] [[Draft of 'Battery Management System (BMS)']] [[Draft of 'inverter (Wechselrichter)']] TableOfContents" modified="20201126232510755" title="$:/StoryList">
+<div created="20201126114909859" list="[[DC microgrid]] [[electronic basics]] [[electronics knowledge]] [[inverter (Wechselrichter)]] TableOfContents" modified="20201126232615324" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201126115059615" title="$:/temp/advancedsearch">
@@ -12235,7 +12231,7 @@ software
 * [[Li-Ion battery short circuit,overcharge,undervoltage EXPERIMENT|https://www.youtube.com/watch?v=bNNWbm681AI&amp;t=43s]]
 * [[Testing LCBs (Lithium Ceramic Batteries) ~ The Future of Battery Technology?|https://www.youtube.com/watch?v=kJXRyWQgOY4]]</pre>
 </div>
-<div created="20200514200114631" modified="20201126223856503" tags="[[accumulator - battery]]" title="Battery Management System (BMS)">
+<div created="20200514200114631" modified="20201126232523593" tags="[[accumulator - battery]]" title="Battery Management System (BMS)">
 <pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
 
 a BMS does these important tasks:
@@ -12266,7 +12262,8 @@ stuff
 
 * [[BMS (Battery Management System) DIY or Buy - Properly protecting Li-Ion/Li-Po Battery Packs|https://www.youtube.com/watch?v=rT-1gvkFj60]]
 * [[Small BMS Vs Large BMS|https://www.youtube.com/watch?v=0gmSMfeDpZ0]]
-* https://en.wikipedia.org/wiki/Battery_management_system</pre>
+* https://en.wikipedia.org/wiki/Battery_management_system
+* https://www.eevblog.com/forum/manufacture/smart-bms-design/msg3300940/#msg3300940</pre>
 </div>
 <div created="20201104185550842" modified="20201126215413211" tags="[[accumulator - battery]]" title="battery pack safety">
 <pre>(mainly meant for lithium battery packs)
@@ -12923,162 +12920,6 @@ galvanometers and their controllers are expensive
 * https://stanleyprojects.com/projects/laser/laserscanner has two (or more) versions
 * </pre>
 </div>
-<div created="20200514200114631" draft.of="Battery Management System (BMS)" draft.title="Battery Management System (BMS)" modified="20201126232455856" tags="[[accumulator - battery]]" title="Draft of 'Battery Management System (BMS)'">
-<pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
-
-a BMS does these important tasks:
-
-* monitor cell voltage when chargin to prevent overcharging and overvoltage protection
-* monitor cell voltage when discharging to prevent overdischarging
-* overcurrent protection, to protect the batteries from short circuits
-* monitoring cell themp to prevent overheating (thermal cutout) (not as important in low power applications)
-* some might have serial connections so you can use a microcontroller to read the voltage and some might have build-in visible charge readouts or you can set them to only charge or discharge to a specific percentage
-
-some cell technologies might have special needs, e.g. LiFePO4 doesn't like beeing charged with themps under 0°C
-
-all this is so the cells are protected, live longer and faults like thermal runaways are prevented
-
-there are cheap bms boards from asia which should work perfectly fine fir smaller, low power applications, but with bigger high power projects you might need something better.
-
-open BMS:
-
-* https://openbms.net/
-* http://scienceenvy.com/open-bms/
-* https://github.com/Teslafly/OpenBMS
-* https://hackaday.io/project/25512-open-bms
-* https://hackaday.io/search?term=BMS
-* https://wiki.opensourceecology.de/LibreSolar_BMS_%E2%80%93_Batterie_Management_System
-
-
-stuff
-
-* [[BMS (Battery Management System) DIY or Buy - Properly protecting Li-Ion/Li-Po Battery Packs|https://www.youtube.com/watch?v=rT-1gvkFj60]]
-* [[Small BMS Vs Large BMS|https://www.youtube.com/watch?v=0gmSMfeDpZ0]]
-* https://en.wikipedia.org/wiki/Battery_management_system
-* https://www.eevblog.com/forum/manufacture/smart-bms-design/msg3300940/#msg3300940</pre>
-</div>
-<div created="20200515113845015" draft.of="inverter (Wechselrichter)" draft.title="inverter (Wechselrichter)" modified="20201126232431312" tags="[[Solar  / renewable energy]] Electronics" title="Draft of 'inverter (Wechselrichter)'">
-<pre>this focusses on solar inverters or inverters using multibles of 12V as input
-
-inverters can be defined by
-
-* the produced waveform
-** square wave - just a coarse square wave with two steps, only suited for low-sensitivity applications, pretty seldom, not suitable for most applications
-** modified sine wave - very coarse stepped rectangular waveform (thre steps: zero, + full power, zero and - full power); not the best for all appliances
-** sine wave - finer stepped wave wich is not perfect but much closer to a real sine wave; should work with all appliances just fine; often work with (S)PWM similar to a Class-D audio Amp(?)
-* additional features appart from converting DC to AC (some features overlap)
-** integrated charger - just an integrated charger for the connected batteries
-** grid-tie - can feed the standard electrical grid and works alongside the grid
-** UPS (Uninteruptible Power Supply) - inverters with integrated chargers which charge the battery when there is power on the grid, but switch on in case there is an outage
-** included MPPT - solar panals can be 
-* size(?)
-** normal ones (?)
-** microinverters - meant to be used for single solar panels with 100W or more - https://en.wikipedia.org/wiki/Solar_micro-inverter
-** nanoinverters - meant for small solar panels or single photovoltaic cells
-* output
-** single phase (most common)
-** three-phase
-
-general information:
-
-* https://de.wikipedia.org/wiki/Wechselrichter
-* https://en.wikipedia.org/wiki/Power_inverter#Output_waveform
-* https://www.lifewire.com/what-is-a-car-power-inverter-534721
-* https://openei.org/wiki/Definition:Inverter
-* https://en.wikipedia.org/wiki/Category:Inverters
-* [[YTPower Inverters Explained - How do they work working principle IGBT|https://www.youtube.com/watch?v=iIqhAX0I7lI]]
-* TEP
-** https://www.theengineeringprojects.com/2012/11/basics-of-inverters-with-topology.html
-** https://www.theengineeringprojects.com/2012/11/major-components-of-inverters.html
-** https://www.theengineeringprojects.com/2014/12/introduction-multilevel-inverters.html
-** https://www.theengineeringprojects.com/2012/11/pure-sine-wave-inter-design-with-code.html
-** https://www.theengineeringprojects.com/2012/11/modified-sine-wave-design-with-code.html
-* https://www.eevblog.com/forum/beginners/asking-for-resources-on-power-electronics-inverters-and-chargers/msg3306904/#msg3306904
-
-circuit designs:
-
-# switching the DC and using a transformer for stepping up - most basic/simple design but finding high power transformers can be hard, due to the transformer working with 50/60Hz not the most efficient (around 80%)
-# using a step-up/boost circuit stepping up the DC Voltage (stepping down the current) and then switching the higher DC to produce the AC - uses smaller transformers in the boost circuit, more efficient due to the boost circuit using kHz frequencies, needs more filtering to filter the high freuencies
-## the boost-circuit works like in [[switched mode power supply]]s
-# z-source?
-* a common method of achieving a pretty good sine wave is sPWM, there are prebuild spwm driver modules which can be bought for a few euros at ebay, but there are similar projects using uC's like Arduinos for the SPWM and these can be easily modified to have more functions
-** https://github.com/MartinStokroos/openMicroInverter
-
-some diy:
-
-* https://hackaday.io/search?term=inverter
-* [[Example of three-level PWM single phase power inverter design (full-bridge)|http://postreh.com/vmichal/papers/three-level-PWM-power-inverter.pdf]]
-* https://openenergymonitor.org/
-* https://www.electronics-lab.com/open-inverter-an-open-source-micro-solar-inverter/
-* https://sustburbia.blogspot.com/2015/10/openinverter-open-source-micro-solar.html?m=1 - https://sustburbia.blogspot.com/2015/10/open-inverter-part-6-thinking-allowed.html?m=1
-* https://www.opensourceecology.org/call-out-for-inverter-project/
-* https://wiki.opensourceecology.org/wiki/Inverter
-* http://arduino42.com/
-* https://github.com/gadgets-on-github/solar-inverter
-* https://github.com/MartinStokroos/openMicroInverter
-* maybe similar to [[motor controller / motor inverter]]
-* https://github.com/SDI-SoftwareDefinedInverter/TAPAS/
-* https://github.com/gonzojive/solar
-* https://github.com/transistorgrab/OSSI - not finished, but explains a lot of the parts
-* https://sourceforge.net/projects/os-si/
-* https://github.com/tvixen/4KW-230V-Inverter
-* https://github.com/texane/power_inverter
-* https://github.com/PV-Log/Open-Photovoltaic-Inverter-Database
-* https://github.com/pohsu/MIT-Pico-Grid
-* https://github.com/jaw0/littlebox-power-inverter
-* https://github.com/ThingEngineer/ReactorForge/wiki/ReactorForge-Hybrid-Driver
-* https://github.com/cyysu/Inverter
-* https://github.com/hildogjr/easyinverter
-* https://github.com/hussamaldean/sPWM-ATMEL
-* https://github.com/narongk/Arduino-Inverter-3-Phase
-* https://github.com/kelvingakuo/Power-Electronics
-* https://github.com/revyakin/avr-inverter-drive
-* https://github.com/Jeet1994/MATLAB-SIMULATION-FOR-PWM-INVERTERS-IN-POWER-ELECTRONICS
-* https://github.com/jpmatsci/INVERTER
-* https://github.com/sibyjackgrove/SolarPV-DER-simulation-utility
-* https://github.com/dfantonio/Single-Phase-Inverter-with-STM32F411
-* https://github.com/Levitrevisan/STM32_Inverter
-* https://github.com/charlieshao5189/Inverter_STM32/blob/master/README.md
-* https://github.com/CREST-APV/InverterModelling
-* https://github.com/atick-faisal/sPWM-Sine-Wave-Inverter-Arduino
-* https://github.com/oOflowOo/inverter
-* https://github.com/rusmanr/inverter
-* https://github.com/Narendra-Walawalkar/Inverter
-* https://github.com/mswati/inverter
-* https://github.com/jerkey/inverter
-* [[Does it suck? Chinese DIY Pure Sine Wave Inverter - Sinusoidal PWM (SPWM) Tutorial|https://www.youtube.com/watch?v=Dn2PFebi2ww]]
-* https://sustburbia.blogspot.com/2016/01/open-inverter-part-8-general-purpose.html
-
-stuff
-
-* https://ieeexplore.ieee.org/document/7530373
-* http://www.jetir.org/papers/JETIR1612001.pdf
-* https://www.sciencedirect.com/science/article/abs/pii/S0038092X19301999
-* https://www.edaboard.com/threads/bridge-inverter.395431/
-
-* https://en.m.wikipedia.org/wiki/Little_Box_Challenge
-* https://en.m.wikipedia.org/wiki/Solar_micro-inverter
-* https://github.com/opengd/solar-sis
-* https://github.com/www1374094/Three_Phase_Inverter_Base_dsp28335
-* https://github.com/meltaxa/solariot
-* https://github.com/slkakad?
-* https://github.com/mitxela/phase-locked-inverter
-* https://github.com/soldernerd/InverterControllerSoftware
-* https://github.com/revyakin/acid
-* https://github.com/motion55/SPWM.X
-* https://github.com/slkakad/sine-PWM-
-*https://www.ti.com/lit/an/slaa602a/slaa602a.pdf
-* http://arduino42.com/intro.shtml does not output 240VAC
-* [[YT: Electronic Basics #28: IGBT and when to use them|https://www.youtube.com/watch?v=RxRJW09A_XA]]
-* [[YT: MOSFET BJT or IGBT - Brief comparison Basic components #004|https://www.youtube.com/watch?v=VlMdSCI29A0]]
-* [[YT: Variable Frequency Drives Explained - VFD Basics IGBT inverter|https://www.youtube.com/watch?v=yEPe7RDtkgo]]
-* [[Variable Frequency Driver | Variable Inverter|https://www.youtube.com/watch?v=FElPFGyNI3k]]
-* [[Cheap 2000W Pure Sine Inverter Review and Teardown|https://www.youtube.com/watch?v=oLHQnnZSysQ]]
-
-
-* [[Why are these Danfoss SOLAR Inverters So Inexpensive?|https://www.youtube.com/watch?v=mYQ3QQoeGsk]]
-* https://www.youtube.com/watch?v=x-_PD2OzXuY</pre>
-</div>
 <div modified="20201126231009558" title="Draft of 'Wirtschaftssystem'">
 <pre></pre>
 </div>
@@ -13159,10 +13000,11 @@ for Cars and Trucks
 * https://www.bosch-mobility-solutions.com/de/produkte-und-services/pkw-und-leichte-nutzfahrzeuge/antriebssysteme/elektroantrieb/
 * https://www.n-tv.de/auto/Motoren-in-Elektroautos-sind-nicht-gleich-article21970051.html</pre>
 </div>
-<div created="20201126214215324" modified="20201126220409249" tags="Electronics" title="electronic basics">
+<div created="20201126214215324" modified="20201126232626874" tags="Electronics" title="electronic basics">
 <pre>* https://www.youtube.com/watch?v=cxXmWZDwNEs
 * https://www.youtube.com/watch?v=W2VwAL7-8-o
-* https://www.youtube.com/watch?v=xyMH8wKK-Ag</pre>
+* https://www.youtube.com/watch?v=xyMH8wKK-Ag
+* https://en.khanacademy.org/science/electrical-engineering</pre>
 </div>
 <div created="20200514203641753" modified="20201126132141023" tags="Electronics" title="electronic suppliers">
 <pre>* mouser
@@ -13177,10 +13019,11 @@ for Cars and Trucks
 * https://czh-labs.com/
 * https://lcsc.com/</pre>
 </div>
-<div created="20200929120615264" modified="20201126232049050" tags="TableOfContents" title="Electronics">
+<div created="20200929120615264" modified="20201126232558173" tags="TableOfContents" title="Electronics">
 <pre>* https://www.digikey.com/en/maker
 * https://www.digikey.de/reference-designs/en
-* https://www.eevblog.com/forum/index.php</pre>
+* https://www.eevblog.com/forum/index.php
+* https://en.khanacademy.org/science/electrical-engineering</pre>
 </div>
 <div created="20200521145108016" modified="20201126220418671" tags="Electronics" title="electronics knowledge">
 <pre>* https://www.elektronik-kompendium.de/
@@ -14054,7 +13897,7 @@ germany:
 * https://en.wikipedia.org/wiki/2019%E2%80%9320_Hong_Kong_protests
 * https://pen.gg/</pre>
 </div>
-<div created="20200515113845015" modified="20201126232116528" tags="[[Solar  / renewable energy]] Electronics" title="inverter (Wechselrichter)">
+<div created="20200515113845015" modified="20201126232527120" tags="[[Solar  / renewable energy]] Electronics" title="inverter (Wechselrichter)">
 <pre>this focusses on solar inverters or inverters using multibles of 12V as input
 
 inverters can be defined by
@@ -14084,6 +13927,13 @@ general information:
 * https://openei.org/wiki/Definition:Inverter
 * https://en.wikipedia.org/wiki/Category:Inverters
 * [[YTPower Inverters Explained - How do they work working principle IGBT|https://www.youtube.com/watch?v=iIqhAX0I7lI]]
+* TEP
+** https://www.theengineeringprojects.com/2012/11/basics-of-inverters-with-topology.html
+** https://www.theengineeringprojects.com/2012/11/major-components-of-inverters.html
+** https://www.theengineeringprojects.com/2014/12/introduction-multilevel-inverters.html
+** https://www.theengineeringprojects.com/2012/11/pure-sine-wave-inter-design-with-code.html
+** https://www.theengineeringprojects.com/2012/11/modified-sine-wave-design-with-code.html
+* https://www.eevblog.com/forum/beginners/asking-for-resources-on-power-electronics-inverters-and-chargers/msg3306904/#msg3306904
 
 circuit designs:
 
@@ -14140,6 +13990,11 @@ some diy:
 * https://sustburbia.blogspot.com/2016/01/open-inverter-part-8-general-purpose.html
 
 stuff
+
+* https://ieeexplore.ieee.org/document/7530373
+* http://www.jetir.org/papers/JETIR1612001.pdf
+* https://www.sciencedirect.com/science/article/abs/pii/S0038092X19301999
+* https://www.edaboard.com/threads/bridge-inverter.395431/
 
 * https://en.m.wikipedia.org/wiki/Little_Box_Challenge
 * https://en.m.wikipedia.org/wiki/Solar_micro-inverter
