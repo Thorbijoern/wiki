@@ -709,7 +709,7 @@ Error message and password prompt
 
 <li>diy xy laserscanner / laser projector</li>
 
-<li>Draft of 'New Tiddler'</li>
+<li>Draft of 'Soundboks Internals (Teardown)'</li>
 
 <li>Dresden</li>
 
@@ -842,6 +842,8 @@ Error message and password prompt
 <li>KV, Hasomed (Elefant) und Telematik Infrastrukur (Gesundheitsministerium/Spahn)</li>
 
 <li>Lab.Gruppen</li>
+
+<li>LADSPA, LV2 - Open Source VST alternative</li>
 
 <li>LD Systems Stinger 15A / LDE 152 / LDEB 152 / LDEB 152A repair</li>
 
@@ -10655,8 +10657,8 @@ Youtube:
 <div created="20200520235848728" modified="20200727154644053" title="$:/state/toc/TableOfContents-accumulator-497309061">
 <pre>open</pre>
 </div>
-<div created="20201111033706747" modified="20201128225046736" title="$:/state/toc/TableOfContents-Art--118161433">
-<pre>open</pre>
+<div created="20201111033706747" modified="20201128225905090" title="$:/state/toc/TableOfContents-Art--118161433">
+<pre>close</pre>
 </div>
 <div created="20200514145029779" modified="20201128225045839" title="$:/state/toc/TableOfContents-Audio--118161433">
 <pre>close</pre>
@@ -10901,7 +10903,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201128203435698" list="[[Draft of 'New Tiddler']] [[Open Source Audio Software]] TableOfContents" modified="20201128225322815" title="$:/StoryList">
+<div created="20201128203435698" list="[[Battery Management System (BMS)]] [[Draft of 'Soundboks Internals (Teardown)']] TableOfContents" modified="20201129154629394" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201126115059615" title="$:/temp/advancedsearch">
@@ -11915,8 +11917,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" modified="20201128225425694" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" modified="20201129154627524" title="$:/temp/search">
+<pre>bms</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -12264,13 +12266,14 @@ software
 * [[Li-Ion battery short circuit,overcharge,undervoltage EXPERIMENT|https://www.youtube.com/watch?v=bNNWbm681AI&amp;t=43s]]
 * [[Testing LCBs (Lithium Ceramic Batteries) ~ The Future of Battery Technology?|https://www.youtube.com/watch?v=kJXRyWQgOY4]]</pre>
 </div>
-<div created="20200514200114631" modified="20201126232523593" tags="[[accumulator - battery]]" title="Battery Management System (BMS)">
+<div created="20200514200114631" modified="20201129154811481" tags="[[accumulator - battery]]" title="Battery Management System (BMS)">
 <pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
 
 a BMS does these important tasks:
 
 * monitor cell voltage when chargin to prevent overcharging and overvoltage protection
 * monitor cell voltage when discharging to prevent overdischarging
+* balancing the cells when charging/discharging
 * overcurrent protection, to protect the batteries from short circuits
 * monitoring cell themp to prevent overheating (thermal cutout) (not as important in low power applications)
 * some might have serial connections so you can use a microcontroller to read the voltage and some might have build-in visible charge readouts or you can set them to only charge or discharge to a specific percentage
@@ -12969,9 +12972,50 @@ galvanometers and their controllers are expensive
 * https://stanleyprojects.com/projects/laser/laserscanner has two (or more) versions
 * </pre>
 </div>
-<div created="20201128225115552" draft.of="New Tiddler" draft.title="LADSPA, LV2 - Open Source VST alternative" modified="20201128225620378" tags="Art [[digital audio]] [[Free / Open / Libre *]]" title="Draft of 'New Tiddler'">
-<pre>* https://en.wikipedia.org/wiki/LADSPA
-* https://en.wikipedia.org/wiki/LV2</pre>
+<div created="20200514144908281" draft.of="Soundboks Internals (Teardown)" draft.title="Soundboks Internals (Teardown)" modified="20201129154554259" tags="Soundsystem" title="Draft of 'Soundboks Internals (Teardown)'">
+<pre>(soundboks 3 doesn't even have an analog input, it's just a stupidly big bluetooth speaker)
+
+Teardown: https://www.youtube.com/watch?v=WYk2dAuHJWo (Russian?)
+
+* https://www.soundboks.com/de/products/soundboks-2/techspecs/
+* https://www.soundboks.com/products/soundboks-2/techspecs/
+* https://www.soundboks.com/products/new-soundboks/compare/
+* https://github.com/alexgorbatchev/boominator
+
+tecspecs:
+
+* power supply
+** battery: 12,8V, 7,8Ah Lithium-Eisen-Phosphat (LiFePO4) with BMS
+** &quot;Dynamischer DC/DC Hochsetzsteller&quot;
+* amplifier:
+** Merus Audio eximo® Amp-Schaltung
+** 3 x 72W RMS Klasse D-Verstärker
+* drivers:
+** 2
+*** 1” 96 dB Silk Dome Tweeter (1 x 96dB 1&quot; (Ø25mm) Neodymhochtöner)
+*** 2 x 96 dB 10” (Ø254mm) Tieftöner
+** new
+*** 1” 104 dB Compression Driver Tweeter
+** bass reflex port
+*** 2 × Ø56mm Ports (2)
+*** &quot;Pulse Reflex Port&quot;, just some proprietary ports (new)
+* bluetooth chip/functions:
+** soundboks 2: Bt v3.0
+** new soundboks: Bt v5.0
+dimensions:
+* misc:
+** Effektiver Frequenzbereich: 40Hz - 20kHz
+** DSP (probably just some EQ and active crossover)
+** max SPL: 122 dB (2), 126 dB (new)
+** Ø35mm Stangenhalterung
+
+
+
+&quot;Clone&quot;:
+
+* [[cheap &quot;chinese&quot; amplifier boards]] or atleast small class d IC solutions on a pcb
+* analog input (XLR with 6.3mm jack instead of puny 3.5mm jack)
+* more like the euro container size? ([[[de]|https://de.wikipedia.org/wiki/Kleinladungstr%C3%A4ger]], [[[en]|https://en.wikipedia.org/wiki/Euro_container]])</pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
@@ -14212,6 +14256,11 @@ other
 
 * [[LAB GRUPPEN CLONES FROM CHINA REVIEW|https://www.youtube.com/watch?v=1uej7HLzSk0]]</pre>
 </div>
+<div created="20201128225115552" modified="20201128225756355" tags="Art [[digital audio]] [[Free / Open / Libre *]]" title="LADSPA, LV2 - Open Source VST alternative">
+<pre>* https://en.wikipedia.org/wiki/LADSPA
+* https://en.wikipedia.org/wiki/LV2
+* https://en.wikipedia.org/wiki/Disposable_Soft_Synth_Interface ?</pre>
+</div>
 <div created="20200705175327558" modified="20201004192758014" tags="[[audio repairs]]" title="LD Systems Stinger 15A / LDE 152 / LDEB 152 / LDEB 152A repair">
 <pre>(i don't know how these speakers are actually called but there's different names stated on the speakers and on the web)
 
@@ -14613,13 +14662,14 @@ https://voice.johni0702.de/?address=voice.johni0702.de&amp;port=443/demo
 
 * can only use port 80 or 443 (better use 443), so mumble also needs to listen on port 443 or you redirect it ([[Websockets|https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications]])</pre>
 </div>
-<div created="20201111033713155" modified="20201128225738761" tags="Art Audio" title="music creation">
+<div created="20201111033713155" modified="20201128225812618" tags="Art Audio" title="music creation">
 <pre>see:
 
 * [[Recording Audio]]
 * [[digital audio]]
 ** [[Open Source Audio Software]]
 ** [[Midi]]
+** [[LADSPA, LV2 - Open Source VST alternative]]
 
 * https://de.wikipedia.org/wiki/Tracker_(Musik)
 * https://swiki.hfbk-hamburg.de/MusicTechnology/
@@ -15026,7 +15076,7 @@ stuff:
 * Output Power
 * https://www.stereophile.com/content/measuring-loudspeakers-part-one-page-6</pre>
 </div>
-<div created="20201004184727504" modified="20201128225741788" tags="[[Free / Open / Libre *]] [[digital audio]] Art" title="Open Source Audio Software">
+<div created="20201004184727504" modified="20201128225826046" tags="[[Free / Open / Libre *]] [[digital audio]] Art" title="Open Source Audio Software">
 <pre>Lists:
 
 * https://opensource.com/article/18/2/open-source-audio-visual-production-tools
@@ -15066,6 +15116,7 @@ Software:
 * https://www.gnu.org/software/cursynth/
 * https://rosegardenmusic.com/
 ** https://en.wikipedia.org/wiki/Rosegarden
+* [[LADSPA, LV2 - Open Source VST alternative]]
 
 Open source operating systems with audio (/multimedia) tools preinstalled: https://distrowatch.com/search.php?&amp;category=Multimedia
 
