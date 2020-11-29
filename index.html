@@ -709,6 +709,8 @@ Error message and password prompt
 
 <li>diy xy laserscanner / laser projector</li>
 
+<li>Draft of 'Soundboks Internals (Teardown)'</li>
+
 <li>Dresden</li>
 
 <li>efficient (12&quot;, 10&quot; or 8&quot;) Tops</li>
@@ -10694,8 +10696,8 @@ Youtube:
 <div created="20200705191340100" modified="20200803011222647" title="$:/state/toc/TableOfContents-Free/Open/Libre *-497309061">
 <pre>close</pre>
 </div>
-<div created="20200514133342543" modified="20201128220917137" title="$:/state/toc/TableOfContents-Misc--118161433">
-<pre>close</pre>
+<div created="20200514133342543" modified="20201129202028117" title="$:/state/toc/TableOfContents-Misc--118161433">
+<pre>open</pre>
 </div>
 <div created="20200514132910802" modified="20200803011812752" title="$:/state/toc/TableOfContents-Misc-497309061">
 <pre>close</pre>
@@ -10901,7 +10903,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201128203435698" list="[[befestigen, verzurren]] [[efficient (12&quot;, 10&quot; or 8&quot;) Tops]] [[Soundboks Internals (Teardown)]] TableOfContents" modified="20201129201540824" title="$:/StoryList">
+<div created="20201128203435698" list="[[DIY amps]] [[Draft of 'Soundboks Internals (Teardown)']] TableOfContents" modified="20201129220436354" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201126115059615" title="$:/temp/advancedsearch">
@@ -11915,8 +11917,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" modified="20201129201538741" title="$:/temp/search">
-<pre>Ösenbefestigungsschiene</pre>
+<div created="20200512223214443" modified="20201129220433557" title="$:/temp/search">
+<pre>class </pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -12770,7 +12772,7 @@ connectors
 <div created="20200615221708894" modified="20200615221722697" tags="Audio" title="digital audio">
 <pre></pre>
 </div>
-<div created="20201104164448012" modified="20201128213633245" tags="amplifiers" title="DIY amps">
+<div created="20201104164448012" modified="20201129220447949" tags="amplifiers" title="DIY amps">
 <pre>* http://www.devtome.com/an_open_source_hi-fi_amplifier
 * [[HiFi Elektronik Selbstbauprojekte: Do it yourself (DIY) Tipps|http://www.hifi-forum.de/viewforum-103.html]]
 
@@ -12799,7 +12801,8 @@ class d
 * http://hephaestusaudio.com/media/2009/12/How-to-Design-a-Class-D-Amplifier.pdf
 * Reference designs
 ** [[Class D Audio Amplifier Reference Design - NXP|https://www.nxp.com/design/designs/class-d-audio-amplifier-reference-design:CLASS-D-AUDIO-AMPLIFIER]]
-** https://www.ti.com/audio-ic/amplifiers/speaker-amplifiers/reference-designs.html#search?famid=3419</pre>
+** https://www.ti.com/audio-ic/amplifiers/speaker-amplifiers/reference-designs.html#search?famid=3419
+* https://www.diyclassd.com/</pre>
 </div>
 <div created="20200519112604544" modified="20201111134424103" tags="[[mixing / signal processing]] [[Open Audio Hardware]]" title="diy analog mixing console">
 <pre>* https://www.circuitlib.com/index.php/tutorials/product/39-how-to-build-an-audio-mixer
@@ -12969,6 +12972,45 @@ galvanometers and their controllers are expensive
 * https://hackaday.io/project/28573-laser-xy-scanner
 * https://stanleyprojects.com/projects/laser/laserscanner has two (or more) versions
 * </pre>
+</div>
+<div created="20200514144908281" draft.of="Soundboks Internals (Teardown)" draft.title="Soundboks Internals (Teardown)" modified="20201129215945978" tags="Soundsystem" title="Draft of 'Soundboks Internals (Teardown)'">
+<pre>* Teardown: https://www.youtube.com/watch?v=WYk2dAuHJWo (Russian?)
+* https://www.soundboks.com/de/products/soundboks-2/techspecs/
+* https://www.soundboks.com/products/soundboks-2/techspecs/
+* https://www.soundboks.com/products/new-soundboks/compare/
+* https://github.com/alexgorbatchev/boominator
+* https://www.diyaudio.com/forums/class-d/104402-boominator-stab-ultimate-party-machine.html
+
+tecspecs:
+
+* power supply
+** battery: 12.8V, 7.8Ah Lithium Iron Phosphate (LiFePO4) with [[BMS|Battery Management System (BMS)]] (with indicator)
+** &quot;Dynamic DC/DC Boost Converter&quot; - just a step-up/boost [[SMPS|switched mode power supply (SMPS)]]
+* amplifier:
+** &quot;Merus Audio eximo® amp switching (Merus Audio eximo® Amp-Schaltung)&quot;
+** &quot;3 x 72Wrms class D amplifier&quot; - a lot of bullshit
+** ~~216Wrms combined, ~90W per woofer and 35-40W for the tweeter?~~
+** https://www.infineon.com/cms/en/product/power/class-d-audio-amplifier-ic/
+** [[PDF-Copy of an AudioXPress Article, published by Infineon|https://www.infineon.com/dgdl/Infineon-Infineon_Article_AudioXpress_SOUNDBOKS_ridiculously_large_portable_bluetooth_speaker_powered_by_merus_audio_eximo_amplifier_technology_EN-ART-v01_00-EN.pdf?fileId=5546d46265f064ff016658aa18890d1f]]
+*** 
+* drivers:
+** 2
+*** &quot;1 x 96dB 1” (Ø25mm) neodymium silk dome tweeter&quot;
+*** &quot;2 x 96dB 10” (Ø254mm) woofers&quot;
+** new
+*** 1” 104 dB Compression Driver Tweeter
+*** 2 × 10” 96dB woofers
+** bass reflex port
+*** 2 × Ø56mm Ports (2)
+*** &quot;Pulse Reflex Port&quot;, just some proprietary ports (new)
+* bluetooth chip/functions:
+** soundboks 2: Bt v3.0
+** new soundboks: Bt v5.0
+* misc:
+** &quot;Effective frequency range: 40Hz - 20kHz (Effektiver Frequenzbereich: 40Hz - 20kHz)&quot;
+** DSP (probably just some EQ and active crossover)
+** max SPL: 122 dB (2), 126 dB (new)
+** &quot;1 x Ø35mm Pole mount (Ø35mm Stangenhalterung)&quot;</pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
