@@ -347,6 +347,8 @@ Error message and password prompt
 
 <li>$:/state/toc/TableOfContents/Projects/repairs-audio repairs-497309061</li>
 
+<li>$:/state/toc/TableOfContents/Solar  / renewable energy-accumulator - battery--118161433</li>
+
 <li>$:/state/toc/TableOfContents/Solar-accumulator - battery--118161433</li>
 
 <li>$:/state/toc/TableOfContents/Solar-accumulator--118161433</li>
@@ -10875,6 +10877,9 @@ Youtube:
 <div created="20201018211134671" modified="20201018211326494" title="$:/state/toc/TableOfContents/Projects/repairs-audio repairs-497309061">
 <pre>close</pre>
 </div>
+<div created="20201130223725187" modified="20201130223725187" title="$:/state/toc/TableOfContents/Solar  / renewable energy-accumulator - battery--118161433">
+<pre>open</pre>
+</div>
 <div created="20200729194050041" modified="20200810205718311" title="$:/state/toc/TableOfContents/Solar-accumulator - battery--118161433">
 <pre>close</pre>
 </div>
@@ -10908,7 +10913,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201128203435698" list="[[MPPT - Maximum Power Point Tracking]] [[Draft of 'Solar / photovoltaic system outline']] [[Solar  / renewable energy]] TableOfContents" modified="20201130223442923" title="$:/StoryList">
+<div created="20201128203435698" list="[[inverter (Wechselrichter)]] [[Draft of 'Solar / photovoltaic system outline']] [[Solar  / renewable energy]] TableOfContents" modified="20201130223842804" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201126115059615" title="$:/temp/advancedsearch">
@@ -11922,8 +11927,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" modified="20201130212758248" title="$:/temp/search">
-<pre>amp</pre>
+<div created="20200512223214443" modified="20201130223838919" title="$:/temp/search">
+<pre>switched mode power supply </pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -12271,7 +12276,7 @@ software
 * [[Li-Ion battery short circuit,overcharge,undervoltage EXPERIMENT|https://www.youtube.com/watch?v=bNNWbm681AI&amp;t=43s]]
 * [[Testing LCBs (Lithium Ceramic Batteries) ~ The Future of Battery Technology?|https://www.youtube.com/watch?v=kJXRyWQgOY4]]</pre>
 </div>
-<div created="20200514200114631" modified="20201129154811481" tags="[[accumulator - battery]]" title="Battery Management System (BMS)">
+<div created="20200514200114631" modified="20201130223743848" tags="[[accumulator - battery]]" title="Battery Management System (BMS)">
 <pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
 
 a BMS does these important tasks:
@@ -12297,6 +12302,7 @@ open BMS:
 * https://hackaday.io/project/25512-open-bms
 * https://hackaday.io/search?term=BMS
 * https://wiki.opensourceecology.de/LibreSolar_BMS_%E2%80%93_Batterie_Management_System
+* https://libre.solar/devices/bms-overview
 
 
 stuff
@@ -12989,7 +12995,7 @@ galvanometers and their controllers are expensive
 * https://stanleyprojects.com/projects/laser/laserscanner has two (or more) versions
 * </pre>
 </div>
-<div created="20201126223918184" draft.of="Solar / photovoltaic system outline" draft.title="Solar / photovoltaic system outline" modified="20201130223432644" tags="[[Solar  / renewable energy]]" title="Draft of 'Solar / photovoltaic system outline'">
+<div created="20201126223918184" draft.of="Solar / photovoltaic system outline" draft.title="Solar / photovoltaic system outline" modified="20201130223825192" tags="[[Solar  / renewable energy]]" title="Draft of 'Solar / photovoltaic system outline'">
 <pre>a basic solar or photovoltaic system contains of:
 
 # the solar panels
@@ -12997,7 +13003,8 @@ galvanometers and their controllers are expensive
 ## an [[MPPT|MPPT - Maximum Power Point Tracking]] charge controller, draving the ideal ammount of current to get the most out of the solar panels to charge the battery
 ## PWM charge controller - not as interresting i think
 # some [[battery|accumulator - battery]] for storage/buffer
-# some a [[power inverter|inverter (Wechselrichter)]] or other [[power supply circuitry|switched mode power supply]] to convert the power to the needed/desired AC or DC voltage
+## the battery should have a [[BMS|Battery Management System (BMS)]] or some type or protection circuitry because most battery types will atleast take damage and loose capacity when over discarged
+# some a [[power inverter|inverter (Wechselrichter)]] or other [[power supply circuitry|switched mode power supply (SMPS)]] to convert the power to the needed/desired AC or DC voltage
 
 informations:
 
@@ -14041,7 +14048,7 @@ germany:
 * https://en.wikipedia.org/wiki/2019%E2%80%9320_Hong_Kong_protests
 * https://pen.gg/</pre>
 </div>
-<div created="20200515113845015" modified="20201126232709053" tags="[[Solar  / renewable energy]] [[power electronics]]" title="inverter (Wechselrichter)">
+<div created="20200515113845015" modified="20201130223913424" tags="[[Solar  / renewable energy]] [[power electronics]]" title="inverter (Wechselrichter)">
 <pre>this focusses on solar inverters or inverters using multibles of 12V as input
 
 inverters can be defined by
@@ -14083,7 +14090,7 @@ circuit designs:
 
 # switching the DC and using a transformer for stepping up - most basic/simple design but finding high power transformers can be hard, due to the transformer working with 50/60Hz not the most efficient (around 80%)
 # using a step-up/boost circuit stepping up the DC Voltage (stepping down the current) and then switching the higher DC to produce the AC - uses smaller transformers in the boost circuit, more efficient due to the boost circuit using kHz frequencies, needs more filtering to filter the high freuencies
-## the boost-circuit works like in [[switched mode power supply]]s
+## the boost-circuit works like in [[switched mode power supply (SMPS)]]s
 # z-source?
 * a common method of achieving a pretty good sine wave is sPWM, there are prebuild spwm driver modules which can be bought for a few euros at ebay, but there are similar projects using uC's like Arduinos for the SPWM and these can be easily modified to have more functions
 ** https://github.com/MartinStokroos/openMicroInverter
