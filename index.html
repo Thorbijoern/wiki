@@ -719,6 +719,8 @@ Error message and password prompt
 
 <li>diy xy laserscanner / laser projector</li>
 
+<li>Draft of 'Open Source modular DJ-Controller'</li>
+
 <li>Draft of 'switched mode power supply (SMPS)'</li>
 
 <li>Dresden</li>
@@ -10948,7 +10950,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201215230808141" list="[[pa speaker / box woodworking]] [[Draft of 'switched mode power supply (SMPS)']] [[Horn Theorie]] TableOfContents" modified="20201216132059449" title="$:/StoryList">
+<div created="20201215230808141" list="Midi [[Draft of 'Open Source modular DJ-Controller']] [[Draft of 'switched mode power supply (SMPS)']] [[Horn Theorie]] TableOfContents" modified="20201216202322469" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201126115059615" title="$:/temp/advancedsearch">
@@ -11962,8 +11964,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" modified="20201216132057593" title="$:/temp/search">
-<pre>wood</pre>
+<div created="20200512223214443" modified="20201216202316616" title="$:/temp/search">
+<pre>midi</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13045,6 +13047,50 @@ galvanometers and their controllers are expensive
 * https://hackaday.io/project/28573-laser-xy-scanner
 * https://stanleyprojects.com/projects/laser/laserscanner has two (or more) versions
 * </pre>
+</div>
+<div created="20200908120601760" draft.of="Open Source modular DJ-Controller" draft.title="Open Source modular DJ-Controller" modified="20201216202313139" tags="Projects [[digital audio]] [[Open Audio Hardware]]" title="Draft of 'Open Source modular DJ-Controller'">
+<pre>a DJ-Controller is a device that mimics turntables, it's basically just a input and controll device for humans, all of the work is done on PC.
+
+it's basically just a bunch of encoders with optical feedback (LEDs).
+
+the controller interfaces with the pc via:
+
+* USB HID - is a clusterfuck
+* Midi (over USB) - is pretty nice i think, very universal
+
+and most controllers also inlcude an audio interface out of convenience, so the user doesn't need a separate one, but that is optional.
+
+it would be nice to build an open source design which is modular, so you can mix and match a dj-mixer, several turntables and a launchpad for example.
+
+examples (commercial, proprietary)
+
+* palette controller / https://monogramcc.com/ - very modular
+* 
+
+ideas:
+
+* there are several microcontrollers (arduino, esp) which can be USB input devices, and also Midi devices/controllers over usb
+** https://www.arduino.cc/en/Reference/MIDIUSB
+** https://github.com/lathoub/Arduino-USBMIDI
+** many &quot;arduino midi controller&quot; videos and tutorials
+** https://www.pjrc.com/teensy/td_midi.html
+* need to find the right encoders for the job
+** encoders for the jogwheels
+** encoders for the other knobs
+** https://de.wikipedia.org/wiki/Inkrementalgeber
+* feedback is pretty easy with LED rings arround the encoders (adafruit neo-pixel style)
+* need to find a nice, open interface through which the single devices can be connected (maybe chaining midi?)
+* has to be compatible and supported by open source mixing software like https://www.mixxx.org/
+
+reverse engineering and monifying existing outdated controllers
+
+* https://djtechtools.com/2020/02/09/kontrol-s1-djdoubleyou-sawed-a-deck-off-a-kontrol-s4-to-make-a-new-diy-controller/
+* https://willwillems.com/projects/s1.html
+* https://github.com/NickolasBoyer/KontrolS1
+* https://s1.willwillems.com/
+* https://forum.djtechtools.com/showthread.php?t=96697
+
+</pre>
 </div>
 <div created="20201110021349133" draft.of="switched mode power supply (SMPS)" draft.title="switched mode power supply (SMPS)" modified="20201216131808888" tags="Electronics" title="Draft of 'switched mode power supply (SMPS)'">
 <pre>switched mode power supplies very efficient power supply designs rectifying the AC Voltage and stepping it down/up to the desired DC voltage; but DC-to-DC Converters are also often SMPS.
@@ -14646,13 +14692,14 @@ DIY
 <div created="20201003213242809" modified="20201109025336560" tags="[[Recording Audio]]" title="microphone stuff">
 <pre>* https://www.youtube.com/watch?v=ts-JqEVzvDo</pre>
 </div>
-<div created="20201109023609167" modified="20201109024541239" tags="[[digital audio]]" title="Midi">
+<div created="20201109023609167" modified="20201216202331804" tags="[[digital audio]]" title="Midi">
 <pre>* over cable
 * over ethernet
 * RTP-midi - https://en.wikipedia.org/wiki/RTP-MIDI
 * https://www.midi.org/midi-articles/rtp-midi-or-midi-over-networks
 * it is very simple to diy midi controllers with microcontrollers, potentiometers, buttons and stuff
-* [[Open Source modular DJ-Controller]]</pre>
+* [[Open Source modular DJ-Controller]]
+* https://willwillems.com/posts/midi-mki-build-log.html</pre>
 </div>
 <div created="20200514125632062" modified="20201126224440171" tags="TableOfContents" title="Misc">
 <pre>some miscelaneous stuff
