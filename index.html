@@ -10950,7 +10950,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201217162205643" list="[[Bresser / Meade motorized Telescope completion]] TableOfContents" modified="20201217162205643" title="$:/StoryList">
+<div created="20201217162205643" list="[[Bresser / Meade motorized Telescope completion]] TableOfContents" modified="20201217191107449" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201126115059615" title="$:/temp/advancedsearch">
@@ -11964,8 +11964,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" modified="20201217162228177" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" modified="20201217191105874" title="$:/temp/search">
+<pre>Teles</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -12512,7 +12512,7 @@ Modules
 * https://www.qualcomm.com/products/bluetooth
 * ...</pre>
 </div>
-<div created="20201030122411900" modified="20201217172857547" tags="Projects repairs" title="Bresser / Meade motorized Telescope completion">
+<div created="20201030122411900" modified="20201217192846156" tags="Projects repairs" title="Bresser / Meade motorized Telescope completion">
 <pre>Telescope: Bresser &quot;Electronic Digital Series&quot; Refractor-Telescope with Meade Motors and Motor Controll
 
 * Art.-Nr.: 46-25000
@@ -12535,12 +12535,13 @@ Modules
 Electronic controll
 
 * the electronics seem to be the //#492 Dual-Motor Electronic Control System//
-* but for the computer controll the //#493 Autostar Computer Control System// or just the //#495 Autostar Handbox// is needed
+** remote
+*** includes a mistery chip and a linear regulator chip as power source as well as some other components, no information about the computer connection there
+** even though this remote does not support the computer connection it does send something via the serial connection
+** logic levels seem to be 0V low and ~5.4V high
+* but for the computer controll the //#493 Autostar Computer Control System// or just the //#495 Autostar Handbox// (if you allready got the motors ans stuff) is needed
+* the whole system could be relatively easy reverse engineered, modified and controlled using microcontrollers, there is even good open source software like stellarium which supports controlling telescopes
 
-Remote
-
-* includes a mistery chip and a linear regulator chip as power source as well as some other components
-* no information about the computer connection there
 
 Cable
 
@@ -12549,13 +12550,17 @@ Cable
 * seems to be a pretty simple USB to UART/RS232 Adapter Cable (information deducted from the ebay listings)
 ** there are much cheaper options which only have other connections
 ** a cheaper adapter could be easily connected to a cheap cable with 4C4P connector
-* i bought a PL-2303HX based adapter which only supports 3.3V logiklevel, it didn't work, because the telescope controller has around 5-6V logiklevel
-
+* ~~i bought a PL-2303HX based adapter which only supports 3.3V logiklevel, it didn't work, because the telescope controller has around 5-6V logiklevel
+~~
 Software
 
-* likely Meade Autostar
-* https://meade.com/support/auto.html
-* https://www.meade.com/category/support/downloads/software/autostar-suite/
+* Meade Autostar (requires the right remote)
+** https://meade.com/support/auto.html
+** https://www.meade.com/category/support/downloads/software/autostar-suite/
+* if one builds something custom with microcontrollers the whole system could be controlled using stellarium or others
+** https://en.wikipedia.org/wiki/ASCOM_(standard)
+** https://www.ascom-standards.org/
+* https://www.indilib.org/
 
 Manual
 * https://www.meade.com/pub/media/downloads/51/DS.pdf</pre>
