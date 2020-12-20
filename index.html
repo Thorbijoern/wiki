@@ -727,6 +727,8 @@ Error message and password prompt
 
 <li>diy xy laserscanner / laser projector</li>
 
+<li>Draft of 'Powerpack from Smartphone batteries'</li>
+
 <li>Draft of 'speaker / audio Dummy Load (Ersatzlast)'</li>
 
 <li>drawing</li>
@@ -11012,7 +11014,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201217162205643" list="[[reusing huawei smartphone batteries]] [[inverter (Wechselrichter)]] [[Draft of 'speaker / audio Dummy Load (Ersatzlast)']] TableOfContents" modified="20201220214114660" title="$:/StoryList">
+<div created="20201217162205643" list="[[DIY PCBs (DIY Circuit Boards)]] [[Draft of 'Powerpack from Smartphone batteries']] [[inverter (Wechselrichter)]] [[Draft of 'speaker / audio Dummy Load (Ersatzlast)']] TableOfContents" modified="20201220214631184" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12026,8 +12028,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" modified="20201220214107124" title="$:/temp/search">
-<pre>smart</pre>
+<div created="20200512223214443" modified="20201220214629337" title="$:/temp/search">
+<pre>pcb</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13032,7 +13034,7 @@ SBC: Rock64 Pro? Odroid H1/H2?</pre>
 * https://www.youtube.com/watch?v=zFnbY0f2998
 * http://www.hifi-forum.de/viewthread-127-3354.html</pre>
 </div>
-<div created="20200929120651853" modified="20201130224440830" tags="Electronics" title="DIY PCBs (DIY Circuit Boards)">
+<div created="20200929120651853" modified="20201220214805761" tags="Electronics" title="DIY PCBs (DIY Circuit Boards)">
 <pre>Steps:
 
 # design the circuit and layout of the board
@@ -13063,6 +13065,11 @@ ordering boards (i don't endorse any of these services, i just list some, search
 guides:
 
 * [[From Idea to Schematic to PCB - How to do it easily!|https://www.youtube.com/watch?v=35YuILUlfGs]]
+
+stuff
+
+* https://www.4pcb.com/trace-width-calculator.html
+* https://www.4pcb.com/trace-width-calculator.html
 
 Soldering:
 
@@ -13148,6 +13155,22 @@ galvanometers and their controllers are expensive
 * https://hackaday.io/project/28573-laser-xy-scanner
 * https://stanleyprojects.com/projects/laser/laserscanner has two (or more) versions
 * </pre>
+</div>
+<div created="20200908114306960" draft.of="Powerpack from Smartphone batteries" draft.title="Powerpack from Smartphone batteries" modified="20201220214607194" tags="Projects [[accumulator - battery]]" title="Draft of 'Powerpack from Smartphone batteries'">
+<pre>insights in the working of batterypacks / [[&quot;smart&quot;-batteries]]
+
+[[reusing huawei smartphone batteries]]
+
+* made a pcb desisng using ~EasyEDA (because i wasn't as familiar with kicad)
+* ordered the pcb's at jlcpcb
+* orderes the BM25 connectors from LCSC
+
+getting data from all cells:
+
+* multiplexing (shift register)
+** https://www.instructables.com/Multiplexing-with-Arduino-and-the-74HC595/
+** https://www.elektronik-kompendium.de/sites/kom/0211292.htm
+** https://forum.arduino.cc/index.php?topic=640382.0</pre>
 </div>
 <div created="20201112171400352" draft.of="speaker / audio Dummy Load (Ersatzlast)" draft.title="speaker / audio Dummy Load (Ersatzlast)" modified="20201220183710061" tags="[[audio testing and measurement]] amplifiers" title="Draft of 'speaker / audio Dummy Load (Ersatzlast)'">
 <pre>testing amps without speakers, measuring the power of amps; see also [[amplifier power meassurement]]
