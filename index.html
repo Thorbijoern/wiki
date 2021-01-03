@@ -11022,7 +11022,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210103201417058" list="[[rechts, rechtsextremismus]] [[inverter (Wechselrichter)]] TableOfContents" modified="20210103201435216" title="$:/StoryList">
+<div created="20210103201417058" list="[[inverter (Wechselrichter)]] TableOfContents" modified="20210103201435216" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -14275,12 +14275,12 @@ germany:
 * https://en.wikipedia.org/wiki/2019%E2%80%9320_Hong_Kong_protests
 * https://pen.gg/</pre>
 </div>
-<div created="20200515113845015" modified="20201220193926860" tags="[[Solar  / renewable energy]] [[power electronics (Leistungselektronik)]]" title="inverter (Wechselrichter)">
+<div created="20200515113845015" modified="20210103210009403" tags="[[Solar  / renewable energy]] [[power electronics (Leistungselektronik)]]" title="inverter (Wechselrichter)">
 <pre>this focusses on solar inverters or inverters using multibles of 12V as input
 
 see also [[switched mode power supply (SMPS)]] and [[power electronics (Leistungselektronik)]]
 
-inverters can be defined by
+!! inverters can be defined by
 
 * the produced waveform
 ** square wave - just a coarse square wave with two steps, only suited for low-sensitivity applications, pretty seldom, not suitable for most applications
@@ -14299,7 +14299,7 @@ inverters can be defined by
 ** UPS (Uninteruptible Power Supply) - inverters with integrated chargers which charge the battery when there is power on the grid, but switch on in case there is an outage
 ** included MPPT - solar panals can be directly connected to the inverter featuring an [[MPPT - Maximum Power Point Tracking]] charge controller
 
-general information:
+!! general information:
 
 * https://de.wikipedia.org/wiki/Wechselrichter
 * https://en.wikipedia.org/wiki/Power_inverter
@@ -14317,16 +14317,48 @@ general information:
 ** https://www.theengineeringprojects.com/2012/11/modified-sine-wave-design-with-code.html
 * https://www.eevblog.com/forum/beginners/asking-for-resources-on-power-electronics-inverters-and-chargers/msg3306904/#msg3306904
 
-circuit designs:
+!! circuit designs:
 
-# switching the DC and using a transformer for stepping up - most basic/simple design but finding high power transformers can be hard, due to the transformer working with 50/60Hz not the most efficient (around 80%)
-# &quot;transformerless&quot;; using a step-up/boost circuit stepping up the DC Voltage (stepping down the current) and then switching the higher DC to produce the AC - uses smaller transformers in the boost circuit, more efficient due to the boost circuit using kHz frequencies, needs more filtering to filter the high freuencies
-## the boost-circuit works like in [[switched mode power supply (SMPS)]]s
+# switching the DC and using a transformer for stepping up - most basic/simple design, but finding high power transformers can be hard, due to the transformer working with 50/60Hz not the most efficient (around 80%)
+# &quot;transformerless&quot;; using a step-up/boost circuit stepping up the DC Voltage and then switching the higher DC to produce the AC - uses smaller transformers in the boost circuit, more efficient due to the boost circuit using kHz frequencies, needs more filtering to filter the high freuencies
 # z-source?
 * a common method of achieving a pretty good sine wave is sPWM, there are prebuild spwm driver modules which can be bought for a few euros at ebay, but there are similar projects using uC's like Arduinos for the SPWM and these can be easily modified to have more functions
 ** https://github.com/MartinStokroos/openMicroInverter
 
-some diy:
+
+
+!! security
+
+* galvanic isolated: good practice when using such high voltages, no shorts when devices of the low-voltage and high-voltage side get connected or so (like cheap inverters for the car and some device connected to the aux in of the car radio), no loop currents (on some cheap designs the N is connected to + or - on the low-voltage side)
+
+
+
+!! &quot;transformerless&quot; inverter design
+
+input -&gt; caps -&gt; push-pull converter -&gt; big caps -&gt; h-bridge switched by 50Hz sPWM -&gt; filtering
+
+* stepping up the DC Voltage
+** should be galvanicly isolated (see &quot;security&quot;)
+** the design depends on the required power
+** push/pull-converter (Flusswandler) very common
+*** https://de.wikipedia.org/wiki/Gegentaktflusswandler
+** EMV problems?, noise?
+** efficiency?
+** Fluss- und Sperrwandler. Und davon dann, Eintakt, Gegentakt und Mehrtakt/Mehrphasig
+** converts the 12/24/48V into 350V DC + reserve 
+* switching the higher DC to produce the AC
+** using an H-Bridge
+*** H5 design by SMA is a modification of the standard h-bridge
+
+parts
+
+* igbt's are useful above 100V
+* SIC-MOSFETs are a good choice but expensive (might hurt more when they blow up)
+
+
+
+
+!! some diy:
 
 * https://hackaday.io/search?term=inverter
 * [[Example of three-level PWM single phase power inverter design (full-bridge)|http://postreh.com/vmichal/papers/three-level-PWM-power-inverter.pdf]]
