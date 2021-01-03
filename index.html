@@ -729,6 +729,8 @@ Error message and password prompt
 
 <li>diy xy laserscanner / laser projector</li>
 
+<li>Draft of 'Midi'</li>
+
 <li>Dresden</li>
 
 <li>dsp / digital crossover</li>
@@ -11028,7 +11030,7 @@ Youtube:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210103201417058" list="[[open source graphics software]] microcontroller [[diy weather station, air quality monitor, environmental data]] TableOfContents" modified="20210103224004999" title="$:/StoryList">
+<div created="20210103201417058" list="[[Draft of 'Midi']] [[Open Source modular DJ-Controller]] microcontroller [[diy weather station, air quality monitor, environmental data]] TableOfContents" modified="20210103224413443" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12042,8 +12044,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" modified="20210103223550329" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" modified="20210103224252081" title="$:/temp/search">
+<pre>midi</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13179,6 +13181,18 @@ galvanometers and their controllers are expensive
 * https://hackaday.io/project/28573-laser-xy-scanner
 * https://stanleyprojects.com/projects/laser/laserscanner has two (or more) versions
 * </pre>
+</div>
+<div created="20201109023609167" draft.of="Midi" draft.title="Midi" modified="20210103224411686" tags="[[digital audio]]" title="Draft of 'Midi'">
+<pre>* over cable
+* over network
+** RTP-midi - https://en.wikipedia.org/wiki/RTP-MIDI
+** https://www.midi.org/midi-articles/rtp-midi-or-midi-over-networks
+* it is very simple to diy midi controllers with microcontrollers, potentiometers, buttons and stuff
+** https://github.com/btrepp/usbd-midi - rust midi library for STM32
+** arduinos can be used too
+* [[Open Source modular DJ-Controller]]
+* https://willwillems.com/posts/midi-mki-build-log.html
+* http://midi.org</pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
@@ -15574,7 +15588,7 @@ thoughts
 * https://www.epson.de/for-home/ecotank maybe good?
 * https://www.newegg.com/p/0WX-0006-00042</pre>
 </div>
-<div created="20200908120601760" modified="20201216210554544" tags="Projects [[digital audio]] [[Open Audio Hardware]]" title="Open Source modular DJ-Controller">
+<div created="20200908120601760" modified="20210103224503220" tags="Projects [[digital audio]] [[Open Audio Hardware]]" title="Open Source modular DJ-Controller">
 <pre>a DJ-Controller is a device that mimics turntables, it's basically just a input and controll device for humans, all of the work is done on PC.
 
 it's basically just a bunch of encoders with optical feedback (LEDs).
@@ -15596,10 +15610,7 @@ examples (commercial, proprietary)
 ideas:
 
 * there are several microcontrollers (arduino, esp) which can be USB input devices, and also Midi devices/controllers over usb
-** https://www.arduino.cc/en/Reference/MIDIUSB
-** https://github.com/lathoub/Arduino-USBMIDI
-** many &quot;arduino midi controller&quot; videos and tutorials
-** https://www.pjrc.com/teensy/td_midi.html
+** see [[Midi]]
 * need to find the right encoders for the job
 ** encoders for the jogwheels
 ** encoders for the other knobs
