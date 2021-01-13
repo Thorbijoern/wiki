@@ -739,7 +739,9 @@ Error message and password prompt
 
 <li>diy weather station, air quality monitor, environmental data</li>
 
-<li>diy xy laserscanner / laser projector</li>
+<li>diy xy animation laser / laser xy-scanner / laser projector</li>
+
+<li>Draft of ''</li>
 
 <li>Dresden</li>
 
@@ -11066,7 +11068,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210112222243462" list="[[diy xy laserscanner / laser projector]] About [[(old) stuff i can give away]] TableOfContents" modified="20210113000522074" title="$:/StoryList">
+<div created="20210112222243462" list="[[inverter (Wechselrichter)]] [[Draft of '']] About [[(old) stuff i can give away]] TableOfContents" modified="20210113002222799" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12080,8 +12082,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210113000519606" modifier="Thorbijoern" title="$:/temp/search">
-<pre>az conn</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210113002220198" modifier="Thorbijoern" title="$:/temp/search">
+<pre>inverter</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13316,7 +13318,7 @@ modules from china use either some lithium battery or big mains transformers (mo
 ** https://www.researchgate.net/post/What-are-the-open-source-software-available-for-noise-pollution-modeling
 ** https://noise-planet.org/noisemodelling.html</pre>
 </div>
-<div created="20200614221912261" modified="20210113002002926" tags="Electronics" title="diy xy laserscanner / laser projector">
+<div created="20200614221912261" modified="20210113002039350" tags="Electronics" title="diy xy animation laser / laser xy-scanner / laser projector">
 <pre>galvanometers and their controllers are expensive
 
 pps, points per second, is the meassure of how many individual dots an animation-laser can display
@@ -13342,6 +13344,9 @@ other projects
 * https://hackaday.com/tag/projector/
 * https://makezine.com/2012/01/04/homemade-full-color-hdtv-laser-projector/
 * http://laser-tv.eu/</pre>
+</div>
+<div created="20210113002121395" draft.of="" draft.title="h-bridge" modified="20210113002214699" tags="[[power electronics (Leistungselektronik)]]" title="Draft of ''">
+<pre>important part of power electrtonics... used in some (class-d) (audio-)amplifiers, inverters</pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
@@ -14517,8 +14522,8 @@ germany:
 * https://en.wikipedia.org/wiki/2019%E2%80%9320_Hong_Kong_protests
 * https://pen.gg/</pre>
 </div>
-<div created="20200515113845015" modified="20210104215957635" tags="[[Solar  / renewable energy]] [[power electronics (Leistungselektronik)]]" title="inverter (Wechselrichter)">
-<pre>this focusses on solar inverters or inverters using multibles of 12V as input
+<div created="20200515113845015" modified="20210113002604319" tags="[[Solar  / renewable energy]] [[power electronics (Leistungselektronik)]]" title="inverter (Wechselrichter)">
+<pre>this focusses on solar inverters or inverters using low DC voltages like 12V, 24V or 48V as input
 
 see also [[switched mode power supply (SMPS)]] and [[power electronics (Leistungselektronik)]]
 
@@ -14593,6 +14598,9 @@ input -&gt; caps -&gt; push-pull converter -&gt; big caps -&gt; h-bridge switche
 * switching the higher DC to produce the AC
 ** using an H-Bridge
 *** H5 design by SMA is a modification of the standard h-bridge
+* basicaly includes 2 [[h-bridge]]s for switching, one switches a transformer rapidly for stepping up, one switches the 50Hz SPWM sine wave
+** basically just powerful Class-D amps designed to only produce a 50Hz sinewave
+
 
 parts
 
