@@ -147,6 +147,8 @@ Error message and password prompt
 
 <li>&quot;smart&quot;-batteries</li>
 
+<li>(diy) spot welder</li>
+
 <li>(old) stuff i can give away</li>
 
 <li>(space) frame / truss contruction, calculation, analysis; engineering, mechanics</li>
@@ -667,8 +669,6 @@ Error message and password prompt
 
 <li>Bell VS 3T repair</li>
 
-<li>bio robotics</li>
-
 <li>bio-degradeable plastics and alternatives</li>
 
 <li>Bluetooth Audio</li>
@@ -736,8 +736,6 @@ Error message and password prompt
 <li>DIY Soundsystem</li>
 
 <li>diy speakers</li>
-
-<li>diy spot welder</li>
 
 <li>diy weather station, air quality monitor, environmental data</li>
 
@@ -990,6 +988,8 @@ Error message and password prompt
 <li>Open Source Audio Software</li>
 
 <li>open source based business models</li>
+
+<li>open source bio robotics</li>
 
 <li>open source CAD software</li>
 
@@ -1263,6 +1263,54 @@ stuff:
 
 * https://media.blackhat.com/bh-us-11/Miller/BH_US_11_Miller_Battery_Firmware_Public_WP.pdf
 * http://sbs-forum.org/</pre>
+</div>
+<div created="20201104234629051" modified="20210113163003370" tags="[[accumulator - battery]]" title="(diy) spot welder">
+<pre>you need a pretty high current for spot welding, voltage ist not as importand.
+modules from china use either some lithium battery or big mains transformers (modified microwave transformers) as main supply.
+
+* [[Make your own Crude Battery Spot Welder with a Car Battery!|https://www.youtube.com/watch?v=VrcmvmM7h3Y]]
+* [[DIY Lithium Battery - What could go wrong??|https://www.youtube.com/watch?v=KUmlCH7bTO8]]
+* [[EBike Battery Pack ~ DIY or Buy ~ Electric Bike Conversion (Part 2)|https://www.youtube.com/watch?v=b2sBhDxmPmA]]
+* [[I spent $100 to save 20 bucks... and it was TOTALLY worth it!|https://www.youtube.com/watch?v=aHNmVV7THBs]]
+* [[Battery Spot Welder (CD Welder) -- DIY or Buy|https://www.youtube.com/watch?v=5TVNdMqVZpk]]
+* [[BitBastelei #412 - Sunkko 737G Punktschweißgerät|https://www.youtube.com/watch?v=I8dtf0ydr2U]]
+* [[HACKED!: Microwave Transformer becomes a High Current Transformer|https://www.youtube.com/watch?v=fQXBNkaB1tU]]
+* [[DIY Spot Welder From Microwave Transformer - HOW TO|https://www.youtube.com/watch?v=UseccvORpk8]]
+* [[Voltlog #207 - Making a DIY Spot Welder From A Microwave Transformer|https://www.youtube.com/watch?v=nUR-giwn4z0]]
+* https://avdweb.nl/popular/spotwelder/diy-spot-welder
+* [[Building a Spot Welder from a Microwave Transformer!|https://www.youtube.com/watch?v=dRTplGUzw28]]
+** [[Don't Build a Spot Welder Without Watching This First!|https://www.youtube.com/watch?v=PW-RbgmcPHo]]
+* [[DIY Spot Welding Machine|https://www.youtube.com/watch?v=hTaGa93lOGU]]
+* [[Awesome $50 Tiny Spot Welder - Better than Expected - 1031|https://www.youtube.com/watch?v=TI_ZV-5WHi4]]
+* [[Spot Welder from microwave - how to increase the power|https://www.youtube.com/watch?v=A7CHQbWcFZ0]]
+* [[Voltlog #198 - SUNKKO 737G Battery Spot Welding Machine Review &amp; Teardown|https://www.youtube.com/watch?v=FPTofhPgHqY]]
+
+!! my build:
+
+''WARNING: This build uses mains voltage which can be lethal if not handled correctly; make sure mains connections are isolated correctly and use an propperly isolated or grounded case''
+
+* parts
+** &quot;NY-D01&quot; 100A Thyristor-based controll board
+** microwave transformer
+** old footswitch with 6.3mm jack from audio equipment
+** 9-12V trafo als versorgung für das board
+** some copper-like welding rod as electrodes
+** 2m thick copper cable, like 25mm² (AWG 3)
+** mains cable and plug
+** some insulated crimp-on connectors
+* remove the high-voltage secondary winding of the transformer
+* replace it with thick cable as secondary winding
+** how many windings are needed has to be tested
+** 2cm height means 2 windings max for 25mm² (AWG3)
+** it seems 2 windings aren't enough, so thinner cable has to be tested
+* i used insulated crimp connectors to connect the mains cable to the transformer primary and board
+** the plug i used is a CEE 7/7 that means live an neutral can be mixed up and are not as important to follow
+** i connected one mains wire directly to the transformer primary and one to the Thyristor pin labeled &quot;1&quot;
+** then the thyristor pin &quot;2&quot; to the transformer primary with a single cable
+* improvements:
+** meassure mains inrush current and add a fuse for the transformer
+** case, maybe case of a broken PC PSU
+*** cheap furniture glider as feet for the lab bench</pre>
 </div>
 <div created="20201218163130276" modified="20210113003610838" tags="Misc [[My Setup]]" title="(old) stuff i can give away">
 <pre>see also [[zeug das ich gebrauchen könnte]]
@@ -11079,7 +11127,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210112222243462" list="[[MPPT (Maximum Power Point Tracking) charge controller]] [[open source / smart / small soldering iron]] About TableOfContents" modified="20210113152216187" title="$:/StoryList">
+<div created="20210112222243462" list="[[(diy) spot welder]] [[open source bio robotics]] [[open source / smart / small soldering iron]] About TableOfContents" modified="20210113160656991" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12093,8 +12141,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210113151556937" modifier="Thorbijoern" title="$:/temp/search">
-<pre>MPPT</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210113160655066" modifier="Thorbijoern" title="$:/temp/search">
+<pre>spot</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -12669,23 +12717,6 @@ Tweeter information:
 * Freq. Range: 1,0 - 16kHz
 * SPL: 104.5dB (+-2dB)
 * Gewicht: 2400gr</pre>
-</div>
-<div created="20200802152927105" modified="20201126215949308" tags="Electronics [[computer science / IT stuff]]" title="bio robotics">
-<pre>robots inspired by nature
-
-opencat
-
-* https://www.hackster.io/petoi/opencat-845129
-* https://github.com/PetoiCamp/OpenCat
-
-opendog
-
-* https://www.youtube.com/watch?v=ten2T1Pq_z8
-
-MIT cheetah and mini cheetah
-
-* https://biomimetics.mit.edu/
-* https://robots.ieee.org/robots/minicheetah/</pre>
 </div>
 <div created="20200521132046732" modified="20201126225652296" tags="[[sustainability / nachhaltigkeit]]" title="bio-degradeable plastics and alternatives">
 <pre>* https://wedocs.unep.org/bitstream/handle/20.500.11822/7468/-Biodegradable_Plastics_and_Marine_Litter_Misconceptions,_concerns_and_impacts_on_marine_environments-2015BiodegradablePlasticsAndMarineLitter.pdf.pdf</pre>
@@ -13278,53 +13309,6 @@ needed:
 * punched plate (lochblech/gitter)
 * input-plugs or terminals
 * ...</pre>
-</div>
-<div created="20201104234629051" modified="20210113004422577" tags="[[accumulator - battery]]" title="diy spot welder">
-<pre>you need a pretty high current for spot welding, voltage ist not as importand.
-modules from china use either some lithium battery or big mains transformers (modified microwave transformers) as main supply.
-
-* [[Make your own Crude Battery Spot Welder with a Car Battery!|https://www.youtube.com/watch?v=VrcmvmM7h3Y]]
-* [[DIY Lithium Battery - What could go wrong??|https://www.youtube.com/watch?v=KUmlCH7bTO8]]
-* [[EBike Battery Pack ~ DIY or Buy ~ Electric Bike Conversion (Part 2)|https://www.youtube.com/watch?v=b2sBhDxmPmA]]
-* [[I spent $100 to save 20 bucks... and it was TOTALLY worth it!|https://www.youtube.com/watch?v=aHNmVV7THBs]]
-* [[Battery Spot Welder (CD Welder) -- DIY or Buy|https://www.youtube.com/watch?v=5TVNdMqVZpk]]
-* [[BitBastelei #412 - Sunkko 737G Punktschweißgerät|https://www.youtube.com/watch?v=I8dtf0ydr2U]]
-* [[HACKED!: Microwave Transformer becomes a High Current Transformer|https://www.youtube.com/watch?v=fQXBNkaB1tU]]
-* [[DIY Spot Welder From Microwave Transformer - HOW TO|https://www.youtube.com/watch?v=UseccvORpk8]]
-* [[Voltlog #207 - Making a DIY Spot Welder From A Microwave Transformer|https://www.youtube.com/watch?v=nUR-giwn4z0]]
-* https://avdweb.nl/popular/spotwelder/diy-spot-welder
-* [[Building a Spot Welder from a Microwave Transformer!|https://www.youtube.com/watch?v=dRTplGUzw28]]
-** [[Don't Build a Spot Welder Without Watching This First!|https://www.youtube.com/watch?v=PW-RbgmcPHo]]
-* [[DIY Spot Welding Machine|https://www.youtube.com/watch?v=hTaGa93lOGU]]
-* [[Awesome $50 Tiny Spot Welder - Better than Expected - 1031|https://www.youtube.com/watch?v=TI_ZV-5WHi4]]
-* [[Spot Welder from microwave - how to increase the power|https://www.youtube.com/watch?v=A7CHQbWcFZ0]]
-
-!! my build:
-
-''WARNING: This build uses mains voltage which can be lethal if not handled correctly; make sure mains connections are isolated correctly and use an propperly isolated or grounded case''
-
-* parts
-** &quot;NY-D01&quot; 100A Thyristor-based controll board
-** microwave transformer
-** old footswitch with 6.3mm jack from audio equipment
-** 9-12V trafo als versorgung für das board
-** some copper-like welding rod as electrodes
-** 2m thick copper cable, like 25mm² (AWG 3)
-** mains cable and plug
-** some insulated crimp-on connectors
-* remove the high-voltage secondary winding of the transformer
-* replace it with thick cable as secondary winding
-** how many windings are needed has to be tested
-** 2cm height means 2 windings max for 25mm² (AWG3)
-** it seems 2 windings aren't enough, so thinner cable has to be tested
-* i used insulated crimp connectors to connect the mains cable to the transformer primary and board
-** the plug i used is a CEE 7/7 that means live an neutral can be mixed up and are not as important to follow
-** i connected one mains wire directly to the transformer primary and one to the Thyristor pin labeled &quot;1&quot;
-** then the thyristor pin &quot;2&quot; to the transformer primary with a single cable
-* improvements:
-** meassure mains inrush current and add a fuse for the transformer
-** case, maybe case of a broken PC PSU
-*** cheap furniture glider as feet for the lab bench</pre>
 </div>
 <div created="20200522114815769" modified="20210112232912232" tags="[[sustainability / nachhaltigkeit]] Science" title="diy weather station, air quality monitor, environmental data">
 <pre>* https://www.tomshardware.com/news/raspberry-pi-air-pollution-monitor
@@ -15855,6 +15839,23 @@ Other
 * https://opensource.org/osforbusiness
 * https://www.de.digital/DIGITAL/Redaktion/DE/Digital-Gipfel/Video/2020/20201130-digital-gipfel-forum-a-tag1-1135-neue-geschaeftsmodelle.html
 * https://opencircularity.info/talks/</pre>
+</div>
+<div created="20200802152927105" modified="20210113160646029" tags="Electronics [[computer science / IT stuff]] [[Free / Open / Libre *]]" title="open source bio robotics">
+<pre>robots inspired by nature
+
+opencat
+
+* https://www.hackster.io/petoi/opencat-845129
+* https://github.com/PetoiCamp/OpenCat
+
+opendog
+
+* https://www.youtube.com/watch?v=ten2T1Pq_z8
+
+MIT cheetah and mini cheetah
+
+* https://biomimetics.mit.edu/
+* https://robots.ieee.org/robots/minicheetah/</pre>
 </div>
 <div created="20201209125510423" modified="20210103223622199" tags="[[Free / Open / Libre Software]]" title="open source CAD software">
 <pre>* FreeCAD
