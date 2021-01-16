@@ -16564,7 +16564,7 @@ information about the Connector
 * https://www.eevblog.com/forum/projects/reversing-engineering-serial-protocol/
 * https://stackoverflow.com/questions/45865628/reverse-engineering-protocol</pre>
 </div>
-<div created="20210104200936236" modified="20210116023049746" tags="" title="reverse engineering of 1kW ective pure sine inverter">
+<div created="20210104200936236" modified="20210116024957516" tags="" title="reverse engineering of 1kW ective pure sine inverter">
 <pre>* push-pull converter
 **  vertical-mount daughterboards
 *** 3843B by TI - https://www.alldatasheet.com/datasheet-pdf/pdf/168280/TI/3843B.html on a small power supply module?
@@ -16579,11 +16579,11 @@ information about the Connector
 *** from source to FTP04N04ND-source
 ** &quot;ks-1kwp-12v2&quot; transformer labeling
 ** full-bridge rectifier
-*** MUR1660CT - ON Semi &quot;Power Rectifier, Ultra-Fast Recovery, Switch-mode, 16 A, 600 V&quot;
+*** (4x) MUR1660CT - ON Semi &quot;Power Rectifier, Ultra-Fast Recovery, Switch-mode, 16 A, 600 V&quot;
 * inverter part
 ** cap + choke
 ** 500V, 330uF electrolytic cap
-** h-bridge: 4x IKW30N60H3 IGBT
+** h-bridge: (4x) IKW30N60H3 IGBT
 *** vertical daughterboard: EG8010 based EGS002-like but very simplified SPWM controller module (only doing the SPWM switching, maybe a bit of feedback but no LED controll or so)
 *** 2 mosfets (?), switched by the EG8010, switching the IGBTs
 *** https://www.infineon.com/dgdl/Infineon-IKW30N60H3-DS-v02_02-en.pdf?fileId=db3a3043266237920126bc80c5f041c9
