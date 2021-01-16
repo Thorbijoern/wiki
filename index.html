@@ -16564,9 +16564,8 @@ information about the Connector
 * https://www.eevblog.com/forum/projects/reversing-engineering-serial-protocol/
 * https://stackoverflow.com/questions/45865628/reverse-engineering-protocol</pre>
 </div>
-<div created="20210104200936236" modified="20210115233450814" tags="" title="reverse engineering of 1kW ective pure sine inverter">
-<pre>* 3 vertical-mount daughterboards
-** EG8010 based EGS002-like SPWM controller module
+<div created="20210104200936236" modified="20210116021931227" tags="" title="reverse engineering of 1kW ective pure sine inverter">
+<pre>*  vertical-mount daughterboards
 ** 3843B by TI - https://www.alldatasheet.com/datasheet-pdf/pdf/168280/TI/3843B.html on a small power supply module?
 ** SG3525AP on a board with buzzer
 * push-pull converter
@@ -16577,9 +16576,19 @@ information about the Connector
 *** https://www.ceipsa.com/datasheet/YMP230N55.pdf
 *** from source to FTP04N04ND-source
 ** &quot;ks-1kwp-12v2&quot; transformer labeling
-** MUR1660CT - ON Semi &quot;Power Rectifier, Ultra-Fast Recovery, Switch-mode, 16 A, 600 V&quot;
-
-bat+ to 4x 35A fuse-box to 4x45A fuse (internal),</pre>
+** full-bridge rectifier
+*** MUR1660CT - ON Semi &quot;Power Rectifier, Ultra-Fast Recovery, Switch-mode, 16 A, 600 V&quot;
+* inverter part
+** cap + choke
+** 500V, 330uF electrolytic cap
+** h-bridge: 4x IKW30N60H3 IGBT
+*** vertical daughterboard: EG8010 based EGS002-like but very simplified SPWM controller module (only doing the SPWM switching, maybe a bit of feedback but no LED controll or so)
+*** 2 mosfets (?), switched by the EG8010, switching the IGBTs
+*** https://www.infineon.com/dgdl/Infineon-IKW30N60H3-DS-v02_02-en.pdf?fileId=db3a3043266237920126bc80c5f041c9
+** big cap + big choke
+* EMI
+** common mode supression choke + cap
+* outlet</pre>
 </div>
 <div created="20201031135836212" modified="20201031142133889" tags="Projects" title="reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;">
 <pre>it's basically a small server/client to connect Serial devices (RS-232; DB9 connectors) too and communicate to them over ethernet.
