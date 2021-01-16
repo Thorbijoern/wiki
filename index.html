@@ -16564,11 +16564,13 @@ information about the Connector
 * https://www.eevblog.com/forum/projects/reversing-engineering-serial-protocol/
 * https://stackoverflow.com/questions/45865628/reverse-engineering-protocol</pre>
 </div>
-<div created="20210104200936236" modified="20210116021931227" tags="" title="reverse engineering of 1kW ective pure sine inverter">
-<pre>*  vertical-mount daughterboards
-** 3843B by TI - https://www.alldatasheet.com/datasheet-pdf/pdf/168280/TI/3843B.html on a small power supply module?
-** SG3525AP on a board with buzzer
-* push-pull converter
+<div created="20210104200936236" modified="20210116022839425" tags="" title="reverse engineering of 1kW ective pure sine inverter">
+<pre>* push-pull converter
+**  vertical-mount daughterboards
+*** 3843B by TI - https://www.alldatasheet.com/datasheet-pdf/pdf/168280/TI/3843B.html on a small power supply module?
+*** board with buzzer
+**** unmarked mystery chip - maybe overall controller?
+**** SG3525AP - push-pull controller https://www.mouser.com/ProductDetail/STMicroelectronics/SG3525AP/?qs=lgHKUCmDFtgKpGE934d0CQ%3D%3D
 ** FTP04N04ND - n-channel Mosfet (x4)
 *** https://datasheetspdf.com/pdf/1306044/IPS/FTP04N04ND/1 --- https://datasheetspdf.com/pdf-file/1306044/IPS/FTP04N04ND/1
 *** bat- directly on drain, source to YMP230N55-source
