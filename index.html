@@ -16564,8 +16564,10 @@ information about the Connector
 * https://www.eevblog.com/forum/projects/reversing-engineering-serial-protocol/
 * https://stackoverflow.com/questions/45865628/reverse-engineering-protocol</pre>
 </div>
-<div created="20210104200936236" modified="20210116024957516" tags="" title="reverse engineering of 1kW ective pure sine inverter">
-<pre>* push-pull converter
+<div created="20210104200936236" modified="20210116031446663" tags="" title="reverse engineering of 1kW ective pure sine inverter">
+<pre>probably just a rebrand of chinese products, like from Kosun https://www.kosunpower.com/ (a lot of china-originated special components)
+
+* push-pull converter
 **  vertical-mount daughterboards
 *** 3843B by TI - https://www.alldatasheet.com/datasheet-pdf/pdf/168280/TI/3843B.html on a small power supply module?
 *** board with buzzer
@@ -16578,10 +16580,11 @@ information about the Connector
 *** https://www.ceipsa.com/datasheet/YMP230N55.pdf
 *** from source to FTP04N04ND-source
 ** &quot;ks-1kwp-12v2&quot; transformer labeling
+** 2x caps (CBB21 400V 684)
 ** full-bridge rectifier
 *** (4x) MUR1660CT - ON Semi &quot;Power Rectifier, Ultra-Fast Recovery, Switch-mode, 16 A, 600 V&quot;
 * inverter part
-** cap + choke
+** cap (cbb21 630V 104) + choke
 ** 500V, 330uF electrolytic cap
 ** h-bridge: (4x) IKW30N60H3 IGBT
 *** vertical daughterboard: EG8010 based EGS002-like but very simplified SPWM controller module (only doing the SPWM switching, maybe a bit of feedback but no LED controll or so)
@@ -16589,8 +16592,13 @@ information about the Connector
 *** https://www.infineon.com/dgdl/Infineon-IKW30N60H3-DS-v02_02-en.pdf?fileId=db3a3043266237920126bc80c5f041c9
 ** big cap + big choke for high-frequency filtering (smothing spwm to sinewave)
 * EMI
-** common mode supression choke + cap
-* outlet</pre>
+** common mode supression choke + cap (cbb21 630V 104)
+* outlet
+
+
+additional:
+
+* several 222 3kV ceramic caps to ground</pre>
 </div>
 <div created="20201031135836212" modified="20201031142133889" tags="Projects" title="reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;">
 <pre>it's basically a small server/client to connect Serial devices (RS-232; DB9 connectors) too and communicate to them over ethernet.
