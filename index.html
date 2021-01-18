@@ -743,6 +743,8 @@ Error message and password prompt
 
 <li>diy xy animation laser / laser xy-scanner / laser projector</li>
 
+<li>Draft of 'Battery Management System (BMS)'</li>
+
 <li>Dresden</li>
 
 <li>dsp / digital crossover</li>
@@ -1047,7 +1049,7 @@ Error message and password prompt
 
 <li>power electronics (Leistungselektronik)</li>
 
-<li>powerlogging / power meter / AC power analysis</li>
+<li>powerlogging / power meter / AC power analysis / energy monitor</li>
 
 <li>Powerpack from Smartphone batteries</li>
 
@@ -11137,7 +11139,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210115230221635" list="[[MPPT (Maximum Power Point Tracking) charge controller]] About TableOfContents" modified="20210118144516049" title="$:/StoryList">
+<div created="20210115230221635" list="[[powerlogging / power meter / AC power analysis / energy monitor]] [[Draft of 'Battery Management System (BMS)']] About TableOfContents" modified="20210118145703412" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12151,8 +12153,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210118144514469" modifier="Thorbijoern" title="$:/temp/search">
-<pre>mppt</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210118145655827" modifier="Thorbijoern" title="$:/temp/search">
+<pre>moni</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13372,6 +13374,48 @@ other projects
 * https://hackaday.com/tag/projector/
 * https://makezine.com/2012/01/04/homemade-full-color-hdtv-laser-projector/
 * http://laser-tv.eu/</pre>
+</div>
+<div created="20200514200114631" draft.of="Battery Management System (BMS)" draft.title="Battery Management System (BMS)" modified="20210118145637325" tags="[[accumulator - battery]] [[power electronics (Leistungselektronik)]]" title="Draft of 'Battery Management System (BMS)'">
+<pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
+
+a BMS does these important tasks:
+
+* monitor cell voltage when chargin to prevent overcharging and overvoltage protection
+* monitor cell voltage when discharging to prevent overdischarging
+* balancing the cells when charging/discharging
+* overcurrent protection, to protect the batteries from short circuits
+* monitoring cell themp to prevent overheating (thermal cutout) (not as important in low power applications)
+* some might have serial connections so you can use a microcontroller to read the voltage and some might have build-in visible charge readouts or you can set them to only charge or discharge to a specific percentage
+
+some cell technologies might have special needs, e.g. LiFePO4 doesn't like beeing charged with themps under 0°C
+
+all this is so the cells are protected, live longer and faults like thermal runaways are prevented
+
+there are cheap bms boards from asia which should work perfectly fine fir smaller, low power applications, but with bigger high power projects you might need something better.
+
+open BMS:
+
+* https://openbms.net/
+* http://scienceenvy.com/open-bms/
+* https://github.com/Teslafly/OpenBMS
+* https://hackaday.io/project/25512-open-bms
+* https://hackaday.io/search?term=BMS
+* https://wiki.opensourceecology.de/LibreSolar_BMS_%E2%80%93_Batterie_Management_System
+* https://libre.solar/devices/bms-overview
+** https://learn.libre.solar/system/bms.html
+** https://electrodacus.com/
+** [[Electrodacus -Open Source- Solar Battery Management System: Introduction and Setup|https://www.youtube.com/watch?v=eCspxDLZR9U]]
+* https://github.com/EnnoidMe/ENNOID-BMS
+* https://endless-sphere.com/forums/viewtopic.php?t=92952
+* https://github.com/Teslafly/OpenBMS
+
+
+stuff
+
+* [[BMS (Battery Management System) DIY or Buy - Properly protecting Li-Ion/Li-Po Battery Packs|https://www.youtube.com/watch?v=rT-1gvkFj60]]
+* [[Small BMS Vs Large BMS|https://www.youtube.com/watch?v=0gmSMfeDpZ0]]
+* https://en.wikipedia.org/wiki/Battery_management_system
+* https://www.eevblog.com/forum/manufacture/smart-bms-design/msg3300940/#msg3300940</pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
@@ -16226,7 +16270,7 @@ https://www.bpb.de/</pre>
 * https://learn.libre.solar/development/
 * [[Leistungselektronik playlist by Elektrotechnik in 5 Minuten|https://www.youtube.com/playlist?list=PLjkreDBz1mhBdC8AnNin3kRGO2w-F_aa_]]</pre>
 </div>
-<div created="20201126214130712" modified="20201220175528339" tags="Electronics" title="powerlogging / power meter / AC power analysis">
+<div created="20201126214130712" modified="20210118145717909" tags="Electronics" title="powerlogging / power meter / AC power analysis / energy monitor">
 <pre>* [[Electronic Basics #38: True, Reactive, Apparent &amp; Deformed Power|https://www.youtube.com/watch?v=cxXmWZDwNEs]]
 * power factor (Leistungsfaktor)
 ** https://de.wikipedia.org/wiki/Leistungsfaktor
