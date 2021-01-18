@@ -745,11 +745,13 @@ Error message and password prompt
 
 <li>diy xy animation laser / laser xy-scanner / laser projector</li>
 
+<li>Draft of 'Audio streaming'</li>
+
 <li>Draft of 'push-pull converter (DC-DC converter)'</li>
 
 <li>Dresden</li>
 
-<li>dsp / digital crossover</li>
+<li>dsp (digital signal processor) / digital crossover</li>
 
 <li>e-bike / pedelec</li>
 
@@ -11147,7 +11149,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210115230221635" list="[[plastic recycling]] [[Draft of 'push-pull converter (DC-DC converter)']] About TableOfContents" modified="20210118182954938" title="$:/StoryList">
+<div created="20210115230221635" list="[[dsp (digital signal processor) / digital crossover]] [[Draft of 'Audio streaming']] [[Draft of 'push-pull converter (DC-DC converter)']] About TableOfContents" modified="20210118185351984" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12161,8 +12163,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210118184125980" modifier="Thorbijoern" title="$:/temp/search">
-<pre>recy</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210118185349531" modifier="Thorbijoern" title="$:/temp/search">
+<pre>dsp</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13395,6 +13397,47 @@ other projects
 * https://makezine.com/2012/01/04/homemade-full-color-hdtv-laser-projector/
 * http://laser-tv.eu/</pre>
 </div>
+<div created="20200516205914729" draft.of="Audio streaming" draft.title="Audio streaming" modified="20210118184344098" tags="[[digital audio]]" title="Draft of 'Audio streaming'">
+<pre>* DLNA/~UPnP
+* VBAN - https://vb-audio.com/Voicemeeter/vban.htm
+** [[VBAN Protocol Specification|https://vb-audio.com/Voicemeeter/VBANProtocol_Specifications.pdf]]
+** https://github.com/quiniouben/vban - open source linux implementation
+* https://duckduckgo.com/?q=linux+stream+wav+audio&amp;t=ffab&amp;ia=web
+* [[RTP|https://en.wikipedia.org/wiki/Real-time_Transport_Protocol]], [[RTSP|https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol]], [[RTCP|https://en.wikipedia.org/wiki/RTCP]]
+* https://en.wikipedia.org/wiki/Audio_over_IP
+* https://en.wikipedia.org/wiki/Comparison_of_audio_network_protocols
+* Ethernet AVB
+** https://www.linux-magazin.de/ausgaben/2013/11/avb/
+** https://de.wikipedia.org/wiki/Audio/Video_Bridging
+** https://en.wikipedia.org/wiki/Audio_Video_Bridging
+* [[AES: Audio Networking Resources|https://secure.aes.org/members/insidetrack/201810/]]
+** [[AES67-2018: AES standard for audio applications of networks - High-performance streaming audio-over-IP interoperability|https://www.aes.org/publications/standards/search.cfm?docID=96]]
+* https://trac.ffmpeg.org/wiki/StreamingGuide
+* https://stackoverflow.com/questions/11644625/rtp-streaming-with-ffmpeg
+* https://www.youtube.com/watch?v=ZXz-u1f-uw0
+* https://www.linux.com/training-tutorials/weekend-project-using-pulseaudio-share-sound-across-all-your-computers/
+* https://stackoverflow.com/questions/2795031/synchronizing-audio-over-a-network
+* https://stmllr.net/blog/streaming-audio-with-mpd-and-icecast2-on-raspberry-pi/
+* https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks#HTTP_streaming
+* https://www.musicpd.org/doc/html/user.html#satellite
+* https://wiki.archlinux.org/index.php/Icecast
+* https://wiki.archlinux.org/index.php/Music_Player_Daemon#Multi-MPD_setup
+* https://www.musicpd.org/
+* https://wiki.ubuntuusers.de/MPD/
+* https://gstreamer.freedesktop.org/
+** https://github.com/matthew1000/gstreamer-cheat-sheet
+** https://arunraghavan.net/2016/11/gstreamer-and-synchronisation-made-easy/
+** https://gstreamer.freedesktop.org/documentation/application-development/advanced/clocks.html?gi-language=c
+** [[Synchronised multi-room multimedia playback and synchronised live media processing and mixing with G|https://www.youtube.com/watch?v=C7sH4TSc054]]
+* https://archive.org/details/lca2020-Synchronised_Playback_with_GStreamer
+* https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Music_Player_Daemon_based
+* https://www.linux.com/topic/desktop/how-stream-audio-your-linux-pc-android/
+* https://blog.michael.franzl.name/2013/11/25/audio-streaming/
+* https://www.linuxquestions.org/questions/linux-software-2/linux-audio-streaming-server-4175441805/
+* https://www.linux.com/topic/desktop/5-streaming-audio-players-linux/
+* proprietary, professional:
+** Dante</pre>
+</div>
 <div created="20201220015016942" draft.of="push-pull converter (DC-DC converter)" draft.title="push-pull converter (DC-DC converter)" modified="20210118183603075" tags="[[switched mode power supply (SMPS)]]" title="Draft of 'push-pull converter (DC-DC converter)'">
 <pre>type of high power dc-dc converter/[[SMPS|switched mode power supply (SMPS)]]
 
@@ -13434,9 +13477,11 @@ stuff
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
 </div>
-<div created="20201219213750672" modified="20201219214117720" tags="[[Audio Reproduction and amplification]]" title="dsp / digital crossover">
+<div created="20201219213750672" modified="20210118185611932" tags="[[Audio Reproduction and amplification]]" title="dsp (digital signal processor) / digital crossover">
 <pre>* [[free/open/cheap DSP]]
-* [[#DIGITAL #FREQUENZWEICHE DCX2496 -- Grundsätzliche Funktionen bei Verwendung für HiFi-Boxen|https://www.youtube.com/watch?v=c2PUJX0vfeA]]</pre>
+* [[#DIGITAL #FREQUENZWEICHE DCX2496 -- Grundsätzliche Funktionen bei Verwendung für HiFi-Boxen|https://www.youtube.com/watch?v=c2PUJX0vfeA]]
+* https://xilica.com/
+* https://www.xmos.ai/</pre>
 </div>
 <div created="20210104214035250" modified="20210105205223175" tags="[[Fahrrad (bicycle)]]" title="e-bike / pedelec">
 <pre>* motors?
