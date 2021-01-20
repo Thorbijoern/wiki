@@ -749,6 +749,8 @@ Error message and password prompt
 
 <li>diy xy animation laser / laser xy-scanner / laser projector</li>
 
+<li>Draft of 'VE.Direct'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -10891,8 +10893,8 @@ TableOfContents</pre>
 <div created="20200519111119402" modified="20200519111122585" title="$:/state/toc/TableOfContents-bus(/car) electric conversion-497309061">
 <pre>close</pre>
 </div>
-<div created="20201126225658900" modified="20201216224101157" title="$:/state/toc/TableOfContents-computer science / IT stuff--118161433">
-<pre>close</pre>
+<div created="20201126225658900" modified="20210120154756153" title="$:/state/toc/TableOfContents-computer science / IT stuff--118161433">
+<pre>open</pre>
 </div>
 <div created="20200614214926788" modified="20201112222000078" title="$:/state/toc/TableOfContents-computer science / IT--118161433">
 <pre>close</pre>
@@ -10900,7 +10902,7 @@ TableOfContents</pre>
 <div created="20201106001147477" modified="20210113004237400" title="$:/state/toc/TableOfContents-Dresden--118161433">
 <pre>close</pre>
 </div>
-<div created="20201104230255182" modified="20210118205134383" title="$:/state/toc/TableOfContents-Electronics--118161433">
+<div created="20201104230255182" modified="20210120154754094" title="$:/state/toc/TableOfContents-Electronics--118161433">
 <pre>close</pre>
 </div>
 <div created="20201112235352506" modified="20201113000256699" title="$:/state/toc/TableOfContents-Electronics-497309061">
@@ -11149,7 +11151,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210115230221635" list="[[reverse engineering of 1kW ective pure sine inverter]] [[component testers]] About TableOfContents" modified="20210120004842370" title="$:/StoryList">
+<div created="20210115230221635" list="[[inter IC or inter device communication, networking]] [[Draft of 'VE.Direct']] [[component testers]] About TableOfContents" modified="20210120154807298" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12163,8 +12165,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210120004840739" modifier="Thorbijoern" title="$:/temp/search">
-<pre>ecti</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210120154803207" modifier="Thorbijoern" title="$:/temp/search">
+<pre>netwo</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13416,6 +13418,26 @@ other projects
 * https://makezine.com/2012/01/04/homemade-full-color-hdtv-laser-projector/
 * http://laser-tv.eu/</pre>
 </div>
+<div created="20200514194902792" draft.of="VE.Direct" draft.title="Victron Energy Communication Protocols (VE.Direct, VE.Bus, VE.Can)" modified="20210120154745661" tags="[[Solar  / renewable energy]] Sonnensystem Electronics" title="Draft of 'VE.Direct'">
+<pre>* https://www.victronenergy.com/live/start?do=index
+
+some information here focusses on the VE 
+
+* das kostenlose VRM portal mit API würde benötigen das das controll panel am netzwerk hängt (ethernet (kabel), wlan-usb-adapter oder mobilfunk adapter mit sim)
+    * wenn es aber keine netzwerkverbindung hat kann es die daten auch intern, auf usb oder sd speichern
+* das VE.Direct protokoll ist offen, aber die beiden ports werden schon vom charge controller und inverter belegt (&quot;Wenn mehr als zwei VE.Direkt Produkte angeschlossen werden müssen, kann ein USB-Anschluss verwendet werden.&quot;???)
+* das VE.Bus protokoll ist irgendwas weirdes und proprietäres wozu ich nichts finde
+* VE.Can ist proprietär und hat ein anderes Pinout, aber ist mehr oder weniger CANBus compatibel und könnte benutzt werden (diverse sachen sind bei SimpBMS bzw. dem VEcan repo schon reverse engineered)
+* &quot;USB device&quot; ist wohl nicht belegt
+* &quot;Venus OS&quot;, das betriebssystem des panels ist linux-basiert und open source... da könnte man basteln...
+
+
+man könnte was basteln (kleiner PC/Mikrocontroller) was die daten nochmal abgreift und nochmal extra behandelt, aber ein WLAN-stick oder ein mobilfunk-stick (was so oder so benötigt wäre) für den color controll wäre wohl das einfachste... dann schiebt das die daten automatisch auf das VRM portal und wir könnten die easy über die offene json api abgreifen und auf die webseite packen
+
+VE.Direct
+
+* https://beta.ivc.no/wiki/index.php/Victron_VE_Direct_DIY_Cable</pre>
+</div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
 </div>
@@ -14590,8 +14612,9 @@ germany:
 * if you use an existing frame of a car and you don't do big modifications to that it seems that you only have to do EMC checks at TÜV
 ** https://www.tuv.com/world/en/electromagnetic-compatibility-%28emc%29.html</pre>
 </div>
-<div created="20210112234744893" modified="20210118144356224" tags="Electronics" title="inter IC or inter device communication, networking">
+<div created="20210112234744893" modified="20210120154827216" tags="Electronics" title="inter IC or inter device communication, networking">
 <pre>* https://en.wikipedia.org/wiki/List_of_network_buses
+* CANBus
 * I²C / [[I²S]]
 * https://github.com/twischer/esp-link</pre>
 </div>
