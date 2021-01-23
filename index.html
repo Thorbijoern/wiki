@@ -749,8 +749,6 @@ Error message and password prompt
 
 <li>diy xy animation laser / laser xy-scanner / laser projector</li>
 
-<li>Draft of 'making your own / a good Open Hardware Projects'</li>
-
 <li>Draft of 'open source CAD software'</li>
 
 <li>Dresden</li>
@@ -11168,7 +11166,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210115230221635" list="[[reverse engineering]] [[Draft of 'making your own / a good Open Hardware Projects']] [[telegram spambots]] [[telegram scraping for good]] [[open source web based 3D model/file viewer]] [[open source based business models]] [[Weg zu einer nachhaltigeren Gesellschaft]] [[component testers]] About TableOfContents" modified="20210123170551132" title="$:/StoryList">
+<div created="20210115230221635" list="[[reverse engineering]] [[making your own / a good Open Hardware Projects]] [[telegram spambots]] [[telegram scraping for good]] [[open source web based 3D model/file viewer]] [[open source based business models]] [[Weg zu einer nachhaltigeren Gesellschaft]] [[component testers]] About TableOfContents" modified="20210123170551132" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -13437,40 +13435,6 @@ other projects
 * https://makezine.com/2012/01/04/homemade-full-color-hdtv-laser-projector/
 * http://laser-tv.eu/</pre>
 </div>
-<div created="20210120220559625" draft.of="making your own / a good Open Hardware Projects" draft.title="making your own / a good Open Hardware Projects" modified="20210123170518827" tags="[[Open Hardware]]" title="Draft of 'making your own / a good Open Hardware Projects'">
-<pre>if you have a project or idea and want to make it open hardware there are some ideas you can follow to make it as much open as possible:
-
-this guide is a draft for noting my ideas on the topic... some legal stuff (see the parts about licences and the Part libraries) might be wrong, i'm not a lawyer.
-
-* use open source software, so everyone has access to the software
-** [[open source CAD software]] like FreeCAD
-** [[open source graphics software]]
-** and open EDA software like KiCAD for PCBs
-* file types wich are good to use
-** FreeCAD files - easily editable
-** KiCAD's filetypes
-** STEP - as transport to other software, supported by all other CAD software, not easily editable
-*** simple, standardised parts such as bolts and fasteners, nuts, washers and similar small hardware can be kept only as step because they don't need to be editable
-** STL - as transport for 3D-prints, supported by all slicers/printers
-** SVG - for 2D designs/drawings
-** PDF - as 2nd version of 2D drawings in SVG
-** OpenSCAD - more specialized, steep learning curve, not as supported
-* Licences and crediting
-** each project should include a licence file detailing the Licence it is under
-** see [[Open Hardware Licences]]
-** see [[problems with non-commercial licences]]
-** list the tools/addons you used (also good as documentation or other users)
-** check and note the licences of parts from CAD Part Libraries and catalogues (see below)
-* Documentation
-** each project should atleast include a Readme file
-** document which tools/addons you used to design the project (also good for crediting the work of others)
-* CAD Part Libraries and catalogues
-** FreeCAD examples: 3DfindIT, BOLTSFC, Fasteners Workbench, Parts Library or Symbols Library
-** can drastically speed up the design, aid with tedious tasks
-** you have to check the licences of the parts, can be sometimes dificult...
-** 3DfindIT - proprietary service providing 3D files from manufacturers, can help with design but i don't think the files are allowed to be part of the design due to being IP of the manufacturers; might be compatible with the CERN licence though; reverse engineering of the design from the files might be possible and legal?
-** </pre>
-</div>
 <div modified="20210122144906730" title="Draft of 'open source CAD software'">
 <pre></pre>
 </div>
@@ -15200,8 +15164,10 @@ lrad /sound protection
 * https://www.youtube.com/watch?v=3sqIvak-4Ek - LRADs and Sound Cannons Are NOT Safe. Here's How To Minimize Their Effects.
 * [[DEFEATING LRAD|https://www.youtube.com/watch?v=CXKTBQBugIA]]</pre>
 </div>
-<div created="20210120220559625" modified="20210120231045242" tags="[[Open Hardware]]" title="making your own / a good Open Hardware Projects">
+<div created="20210120220559625" modified="20210123171612870" tags="[[Open Hardware]]" title="making your own / a good Open Hardware Projects">
 <pre>if you have a project or idea and want to make it open hardware there are some ideas you can follow to make it as much open as possible:
+
+this guide is a draft for noting my ideas on the topic... some legal stuff (see the parts about licences and the Part libraries) might be wrong, i'm not a lawyer.
 
 * use open source software, so everyone has access to the software
 ** [[open source CAD software]] like FreeCAD
@@ -15216,7 +15182,24 @@ lrad /sound protection
 ** SVG - for 2D designs/drawings
 ** PDF - as 2nd version of 2D drawings in SVG
 ** OpenSCAD - more specialized, steep learning curve, not as supported
-</pre>
+* Licences and crediting
+** each project should include a licence file detailing the Licence it is under
+** see [[Open Hardware Licences]]
+** see [[problems with non-commercial licences]]
+** list the tools/addons you used (also good as documentation or other users)
+** check and note the licences of parts from CAD Part Libraries and catalogues (see below)
+* Documentation
+** each project should atleast include a Readme file
+** document which tools/addons you used to design the project (also good for crediting the work of others)
+* CAD Part Libraries and catalogues
+** FreeCAD examples: 3DfindIT, BOLTSFC, Fasteners Workbench, Parts Library or Symbols Library
+** can drastically speed up the design, aid with tedious tasks
+** you have to check the licences of the parts, can be sometimes dificult...
+** 3DfindIT - proprietary service providing 3D files from manufacturers, can help with design but i don't think the files are allowed to be part of the design due to being IP of the manufacturers; might be compatible with the CERN licence though; reverse engineering of the design from the files might be possible and legal?
+** Fasteners Workbench - seems to be a clever way: standards are defined in the code and the parts are dynamically generated, not requiring a licence for each part
+** BOLTS - uses public domain or CC0 for parts and some parts get dynamically generated by code; maintainer made a good writeup about the issues: https://www.bolts-library.org/en/docs/0.3/document/general/licensing.html
+** Parts Library - it seems there are plans to integrate it into freecad per default, but there are no hints about the licence in the repo or the wiki... i opened a github issue: https://github.com/FreeCAD/FreeCAD-library/issues/295
+** Symbols Library uses CC-BY 3.0 for every svg symbol</pre>
 </div>
 <div created="20201107220808654" modified="20201126220343728" tags="[[audio testing and measurement]] [[microphone stuff]]" title="Measurement Microphones">
 <pre>* sonarworks xref: pretty cheap mic with measurement protocol and downloadable calibration profile
