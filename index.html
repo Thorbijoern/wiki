@@ -11168,7 +11168,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210115230221635" list="[[problems with non-commercial licences]] [[Draft of 'making your own / a good Open Hardware Projects']] [[telegram spambots]] [[telegram scraping for good]] [[open source web based 3D model/file viewer]] [[open source based business models]] [[Weg zu einer nachhaltigeren Gesellschaft]] [[component testers]] About TableOfContents" modified="20210123165128562" title="$:/StoryList">
+<div created="20210115230221635" list="[[reverse engineering]] [[Draft of 'making your own / a good Open Hardware Projects']] [[telegram spambots]] [[telegram scraping for good]] [[open source web based 3D model/file viewer]] [[open source based business models]] [[Weg zu einer nachhaltigeren Gesellschaft]] [[component testers]] About TableOfContents" modified="20210123170551132" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12182,8 +12182,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210123165037222" modifier="Thorbijoern" title="$:/temp/search">
-<pre>licen</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210123170549360" modifier="Thorbijoern" title="$:/temp/search">
+<pre>revers</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13437,8 +13437,10 @@ other projects
 * https://makezine.com/2012/01/04/homemade-full-color-hdtv-laser-projector/
 * http://laser-tv.eu/</pre>
 </div>
-<div created="20210120220559625" draft.of="making your own / a good Open Hardware Projects" draft.title="making your own / a good Open Hardware Projects" modified="20210123165126293" tags="[[Open Hardware]]" title="Draft of 'making your own / a good Open Hardware Projects'">
+<div created="20210120220559625" draft.of="making your own / a good Open Hardware Projects" draft.title="making your own / a good Open Hardware Projects" modified="20210123170518827" tags="[[Open Hardware]]" title="Draft of 'making your own / a good Open Hardware Projects'">
 <pre>if you have a project or idea and want to make it open hardware there are some ideas you can follow to make it as much open as possible:
+
+this guide is a draft for noting my ideas on the topic... some legal stuff (see the parts about licences and the Part libraries) might be wrong, i'm not a lawyer.
 
 * use open source software, so everyone has access to the software
 ** [[open source CAD software]] like FreeCAD
@@ -13455,12 +13457,19 @@ other projects
 ** OpenSCAD - more specialized, steep learning curve, not as supported
 * Licences and crediting
 ** each project should include a licence file detailing the Licence it is under
-** see [[Open HArdware Licences]]
+** see [[Open Hardware Licences]]
 ** see [[problems with non-commercial licences]]
+** list the tools/addons you used (also good as documentation or other users)
+** check and note the licences of parts from CAD Part Libraries and catalogues (see below)
 * Documentation
-** each project should atleast include a Readme
-** document which tools/addons you used to design the 
-</pre>
+** each project should atleast include a Readme file
+** document which tools/addons you used to design the project (also good for crediting the work of others)
+* CAD Part Libraries and catalogues
+** FreeCAD examples: 3DfindIT, BOLTSFC, Fasteners Workbench, Parts Library or Symbols Library
+** can drastically speed up the design, aid with tedious tasks
+** you have to check the licences of the parts, can be sometimes dificult...
+** 3DfindIT - proprietary service providing 3D files from manufacturers, can help with design but i don't think the files are allowed to be part of the design due to being IP of the manufacturers; might be compatible with the CERN licence though; reverse engineering of the design from the files might be possible and legal?
+** </pre>
 </div>
 <div modified="20210122144906730" title="Draft of 'open source CAD software'">
 <pre></pre>
@@ -15902,7 +15911,7 @@ bike sharing
 <div created="20200621191701445" modified="20210118144025595" tags="[[bus(/car) electric conversion]] [[Open Hardware]] [[power electronics (Leistungselektronik)]]" title="open hardware EV charger">
 <pre>* https://en.wikipedia.org/wiki/OpenEVSE</pre>
 </div>
-<div created="20201112224154374" modified="20201113001255905" tags="[[Open Hardware]]" title="Open Hardware Licences">
+<div created="20201112224154374" modified="20210123165313831" tags="[[Open Hardware]]" title="Open Hardware Licences">
 <pre>* https://en.wikipedia.org/wiki/Open_Hardware_License
 * https://en.wikipedia.org/wiki/TAPR_Open_Hardware_License
 * https://de.wikipedia.org/wiki/CERN_Open_Hardware_Licence
@@ -15910,7 +15919,7 @@ bike sharing
 ** https://ohwr.org/project/cernohl
 * http://www.inmojo.com/licenses/
 * https://opensource.com/law/15/2/intro-open-hardware-licensing
-* </pre>
+* see [[problems with non-commercial licences]]</pre>
 </div>
 <div created="20210114193512411" modified="20210114194524485" tags="Science [[Free / Open / Libre *]]" title="Open Knowledge / Open Science">
 <pre>see also [[Open education, open learning, open university]]
@@ -16780,13 +16789,15 @@ information about the Connector
 * searching for FPC connector huawei on ebay only returns other connectors
 * BM25 https://www.hirose.com/product/series/BM25?lang=de</pre>
 </div>
-<div created="20201111194632209" modified="20201126220651670" tags="Misc [[computer science / IT stuff]] Electronics" title="reverse engineering">
+<div created="20201111194632209" modified="20210123170636682" tags="Misc [[computer science / IT stuff]] Electronics" title="reverse engineering">
 <pre>* https://syonyk.blogspot.com/2018/01/reverse-engineering-tec-06-serial.html
 * http://jcjc-dev.com/2016/04/08/reversing-huawei-router-1-find-uart/
 * http://www.devttys0.com/2012/11/reverse-engineering-serial-ports/
 * https://www.virtual-serial-port.org/articles/reverse-engeneering-tools/
 * https://www.eevblog.com/forum/projects/reversing-engineering-serial-protocol/
-* https://stackoverflow.com/questions/45865628/reverse-engineering-protocol</pre>
+* https://stackoverflow.com/questions/45865628/reverse-engineering-protocol
+
+* legality of reverse engineering?</pre>
 </div>
 <div created="20210104200936236" modified="20210120010243325" tags="" title="reverse engineering of 1kW ective pure sine inverter">
 <pre>probably just a rebrand of chinese products, like from Kosun https://www.kosunpower.com/ (a lot of china-originated special components)
