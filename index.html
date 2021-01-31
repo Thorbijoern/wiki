@@ -755,6 +755,8 @@ Error message and password prompt
 
 <li>diy xy animation laser / laser xy-scanner / laser projector</li>
 
+<li>Draft of '(diy) spot welder'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -924,6 +926,8 @@ Error message and password prompt
 <li>links</li>
 
 <li>Linux Laptop / PC</li>
+
+<li>LiPo</li>
 
 <li>Lithium</li>
 
@@ -11002,8 +11006,8 @@ TableOfContents</pre>
 <div created="20200803010823521" modified="20210131142820646" title="$:/state/toc/TableOfContents/accumulator - battery-cell technology--118161433">
 <pre>open</pre>
 </div>
-<div created="20201109024932378" modified="20201109024935312" title="$:/state/toc/TableOfContents/accumulator - battery/cell technology-Lithium--118161433">
-<pre>close</pre>
+<div created="20201109024932378" modified="20210131151425334" title="$:/state/toc/TableOfContents/accumulator - battery/cell technology-Lithium--118161433">
+<pre>open</pre>
 </div>
 <div created="20200520131340632" modified="20200520131427181" title="$:/state/toc/TableOfContents/accumulator-cell technology--118161433">
 <pre>close</pre>
@@ -11197,7 +11201,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210115230221635" list="[[flow cell / Brennstoffzelle]] [[(diy) spot welder]] About TableOfContents" modified="20210131150233972" title="$:/StoryList">
+<div created="20210115230221635" list="LiPo [[Draft of '(diy) spot welder']] About TableOfContents" modified="20210131151428032" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -13473,6 +13477,61 @@ other projects
 * https://makezine.com/2012/01/04/homemade-full-color-hdtv-laser-projector/
 * http://laser-tv.eu/</pre>
 </div>
+<div created="20201104234629051" draft.of="(diy) spot welder" draft.title="(diy) spot welder" modified="20210131151415524" tags="[[accumulator - battery]]" title="Draft of '(diy) spot welder'">
+<pre>you need a pretty high current for spot welding, voltage ist not as importand.
+modules from china use either some lithium battery or big mains transformers (modified microwave transformers) as main supply.
+
+* [[Make your own Crude Battery Spot Welder with a Car Battery!|https://www.youtube.com/watch?v=VrcmvmM7h3Y]]
+* [[DIY Lithium Battery - What could go wrong??|https://www.youtube.com/watch?v=KUmlCH7bTO8]]
+* [[I spent $100 to save 20 bucks... and it was TOTALLY worth it!|https://www.youtube.com/watch?v=aHNmVV7THBs]]
+* [[Battery Spot Welder (CD Welder) -- DIY or Buy|https://www.youtube.com/watch?v=5TVNdMqVZpk]]
+* [[BitBastelei #412 - Sunkko 737G Punktschweißgerät|https://www.youtube.com/watch?v=I8dtf0ydr2U]]
+* https://avdweb.nl/popular/spotwelder/diy-spot-welder
+
+** [[Don't Build a Spot Welder Without Watching This First!|https://www.youtube.com/watch?v=PW-RbgmcPHo]]
+* [[DIY Spot Welding Machine|https://www.youtube.com/watch?v=hTaGa93lOGU]]
+* [[Awesome $50 Tiny Spot Welder - Better than Expected - 1031|https://www.youtube.com/watch?v=TI_ZV-5WHi4]]
+* [[Voltlog #198 - SUNKKO 737G Battery Spot Welding Machine Review &amp; Teardown|https://www.youtube.com/watch?v=FPTofhPgHqY]]
+
+LiPo-based
+
+* [[EBike Battery Pack ~ DIY or Buy ~ Electric Bike Conversion (Part 2)|https://www.youtube.com/watch?v=b2sBhDxmPmA]] - using k-weld
+
+Microwave transformer-based
+
+* [[Building a Spot Welder from a Microwave Transformer!|https://www.youtube.com/watch?v=dRTplGUzw28]]
+* [[DIY Spot Welder From Microwave Transformer - HOW TO|https://www.youtube.com/watch?v=UseccvORpk8]]
+* [[HACKED!: Microwave Transformer becomes a High Current Transformer|https://www.youtube.com/watch?v=fQXBNkaB1tU]]
+* [[Voltlog #207 - Making a DIY Spot Welder From A Microwave Transformer|https://www.youtube.com/watch?v=nUR-giwn4z0]]
+* [[Spot Welder from microwave - how to increase the power|https://www.youtube.com/watch?v=A7CHQbWcFZ0]]
+
+!! my attempt:
+
+''WARNING: This build uses mains voltage which can be lethal if not handled correctly; make sure mains connections are isolated correctly and use an propperly isolated or grounded case''
+
+* parts
+** &quot;NY-D01&quot; 100A Thyristor-based controll board
+** microwave transformer
+** old footswitch with 6.3mm jack from audio equipment
+** 9-12V trafo als versorgung für das board
+** some copper-like welding rod as electrodes
+** 2m thick copper cable, like 25mm² (AWG 3)
+** mains cable and plug
+** some insulated crimp-on connectors
+* remove the high-voltage secondary winding of the transformer
+* replace it with thick cable as secondary winding
+** how many windings are needed has to be tested
+** 2cm height means 2 windings max for 25mm² (AWG3)
+** it seems 2 windings aren't enough, so thinner cable has to be tested
+* i used insulated crimp connectors to connect the mains cable to the transformer primary and board
+** the plug i used is a CEE 7/7 that means live an neutral can be mixed up and are not as important to follow
+** i connected one mains wire directly to the transformer primary and one to the Thyristor pin labeled &quot;1&quot;
+** then the thyristor pin &quot;2&quot; to the transformer primary with a single cable
+* improvements:
+** meassure mains inrush current and add a fuse for the transformer
+** case, maybe case of a broken PC PSU
+*** cheap furniture glider as feet for the lab bench</pre>
+</div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
 </div>
@@ -15240,6 +15299,9 @@ tuxedo verkauft nur linux laptops auf clevo basis, wenn da linux schlecht läuft
 
 [Simon_offiziell]
 die laptops aus dem shop clevo deutschland sind auch bei tuxedo verfügbar</pre>
+</div>
+<div created="20210131151435584" modified="20210131151447558" tags="Lithium" title="LiPo">
+<pre></pre>
 </div>
 <div created="20200514200006247" modified="20201105234407673" tags="[[cell technology]]" title="Lithium">
 <pre>cell voltage: 3.6/3.7 V
