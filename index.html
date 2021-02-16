@@ -18373,7 +18373,7 @@ some other sources
 * https://community.victronenergy.com/questions/48924/can-bms-protocol-specification.html
 * https://community.victronenergy.com/questions/47702/vecan-and-vebus.html</pre>
 </div>
-<div created="20200519162913812" modified="20210216160900315" tags="[[computer science / IT stuff]]" title="video streaming">
+<div created="20200519162913812" modified="20210216161924889" tags="[[computer science / IT stuff]]" title="video streaming">
 <pre>* ~OpenBroadcasterStudio (OBS) - https://obsproject.com/
 ** https://obsproject.com/wiki/
 *** [[Quickstart|https://obsproject.com/wiki/OBS-Studio-Quickstart]]
@@ -18389,6 +18389,8 @@ some other sources
 *** https://ffmpeg.org/ffmpeg-formats.html
 *** https://ffmpeg.org/ffmpeg-protocols.html
 ** VLC and all formats/codecs and streams supported by can be used as OBS Source
+** Tools
+*** Outfield (Fernsteuerung für Open Broadcaster Software (OBS).) - https://f-droid.org/packages/com.matt.outfield
 
 
 * https://en.wikipedia.org/wiki/Software_vision_mixer#Open_source
@@ -18398,10 +18400,15 @@ some other sources
 * https://en.wikipedia.org/wiki/Audio_Video_Bridging
 * https://github.com/Avnu/libavtp
 * https://github.com/Avnu/OpenAvnu
-* [[FreeDeck - Open Source Stream Deck Alternative - HID, Arduino|https://www.youtube.com/watch?v=-3Zw8hbpVq4]]
 * https://opensource.com/article/19/1/basic-live-video-streaming-server
 * https://opensource.com/article/20/6/obs-websockets-streaming
-* https://hackaday.com/2019/09/27/a-raspberry-pi-4-video-streaming-backpack/
+* https://alternativeto.net/software/streamster/about/
+* https://bozhang-26963.medium.com/low-latency-dash-streaming-using-open-source-tools-f93142ece69d
+
+
+* Hardware
+** https://hackaday.com/2019/09/27/a-raspberry-pi-4-video-streaming-backpack/
+** [[FreeDeck - Open Source Stream Deck Alternative - HID, Arduino|https://www.youtube.com/watch?v=-3Zw8hbpVq4]]
 
 
 * Protocols
@@ -18419,14 +18426,63 @@ some other sources
 *** https://ffmpeg.org/ffmpeg-formats.html#dash-2
 
 
-* Android apps
+* Android Streaming apps
 ** https://github.com/fyhertz/spydroid-ipcamera
 ** https://github.com/begeekmyfriend/yasea ?
 ** https://github.com/hypeapps/Endoscope
+*** Endoscope (Live-Video-Streaming zwischen Android-Geräten über WLAN) - https://f-droid.org/packages/pl.hypeapp.endoscope
 
 * full conference
 ** https://opensource.com/article/20/5/conference-free-software
-** rc3 vom CCC</pre>
+** rc3 vom CCC
+
+
+
+eine idee für streaming von einem lokalen computer mit eriner lokalen und einer mobilen kamera:
+
+~WhiteKIBA
+Also für Stationär kann man OBS gut benutzen. Unterwegs gibt es ne hand voll Apps
+
+nginx rtmp Server
+
+https://github.com/arut/ngin
+
+https://www.nginx.com/products/nginx/modules/rtmp-media-streaming/
+
+Das geht mit minimaler Config auf kleinster Hardware
+
+Den RTMP Stream holt man sich dann halt als Source in OBS
+
+Also in OBS richtet man sich eine VLC Videoquelle ein
+
+Und VLC zieht dann halt den RTMP Stream
+
+Thorbijoern
+ok, danke, das hilft mir auf jeden fall schon mal weiter.
+könnt ihr mir noch eine gute, am besten open source, app empfehlen?
+
+~WhiteKIBA
+[Antwort auf Thorbijoern]
+Als quelle? Da würde ich mir nicht so viele Gedanken machen. Da gibt es so ungefähr 100. Einfach mal durchprobieren
+
+Brauchst halt irgendwas was RTMP senden kann
+
+Ich denke da kommt es auf persönliche Präferenz an.
+
+Ich weiß dass es auf F-Droid ein paar RTMP Camera Apps gibt
+
+Oh und beachten solltest du dass RTMP nicht so gut auf hohe Latenz und Netzwerkprobleme reagiert
+
+Eventuell willst du ne App die HLS kann
+
+Das eliminiert auch noch den letzten Faktor eines proprietären Protokolls. RTMP ist nämlich technisch gesehen proprietär
+
+Wie wärs mit VLC auf Android?
+
+Ist jetzt grad ne Idee. VLC auf Desktop OS kann HLS und RTMP Streamen von lokalen Quellen
+
+Thorbijoern
+ich glaube die app kann das nicht</pre>
 </div>
 <div created="20200515114726520" modified="20201128222634821" tags="[[digital audio]]" title="Virtual Audio Cable alternative / pipe audio between linux applications">
 <pre>maybe ~PulseAudio with an appropriate frontend/GUI for easy configuration?
