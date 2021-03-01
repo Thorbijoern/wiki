@@ -787,6 +787,8 @@ Error message and password prompt
 
 <li>Draft of '19&quot; Rack'</li>
 
+<li>Draft of 'open lab instrumentation, meassuring / testing equipment'</li>
+
 <li>Draft of 'Open Source Astronomy'</li>
 
 <li>Dresden</li>
@@ -11353,7 +11355,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210301140425213" list="[[Open education, open learning, open university]] [[open lab instrumentation, meassuring / testing equipment]] [[Draft of 'Open Source Astronomy']] [[powerlogging / power meter / AC power analysis / energy monitor]] tools Tonstudio [[electronic load]] [[testing batteries]] [[&quot;transistor tester&quot; (avr) component tester]] sourcing/buying [[LiFePO4 (LFP)]] About TableOfContents" modified="20210301222716506" title="$:/StoryList">
+<div created="20210301140425213" list="[[scientific software]] [[Draft of 'open lab instrumentation, meassuring / testing equipment']] [[Draft of 'Open Source Astronomy']] [[powerlogging / power meter / AC power analysis / energy monitor]] tools Tonstudio [[electronic load]] [[testing batteries]] [[&quot;transistor tester&quot; (avr) component tester]] sourcing/buying [[LiFePO4 (LFP)]] About TableOfContents" modified="20210301222816786" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12367,8 +12369,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210301222714165" modifier="Thorbijoern" title="$:/temp/search">
-<pre>educa</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210301222815108" modifier="Thorbijoern" title="$:/temp/search">
+<pre>octave</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13750,6 +13752,64 @@ stuff
 </div>
 <div modified="20210301213728973" title="Draft of '19&quot; Rack'">
 <pre></pre>
+</div>
+<div created="20210128210315721" draft.of="open lab instrumentation, meassuring / testing equipment" draft.title="open lab instrumentation, meassuring / testing equipment" modified="20210301222801165" tags="[[testing &amp; measuring]] [[Free / Open / Libre *]] Science [[Open Hardware]] [[Free / Open / Libre Software]]" title="Draft of 'open lab instrumentation, meassuring / testing equipment'">
+<pre>my idea is do build modules based on the eurocard standard, similar to eurorack modules, (&quot;Systemgehäuse&quot;) which can be freely aranged and combined and can be mounted in different types of tabletop housings or racks.
+
+* each module has a specific purpose
+* modules communicate via a bus
+* everything is open source and open hardware
+* there are modules for controlling other modules, displaying data or for connecting to a PC or other devices
+* a module could provide a description on the type of data
+* simple display-modules could just provide the option to diplay the data in real-time, but other display-modules with more options could display graphs bases on the data type definitions of other modules
+* interfacing with a computer can easily be used for datalogging and piping the data in other applications, e.g. for heavier real-time analysis
+
+lab software (open source)
+
+* http://xoscope.sourceforge.net/
+* https://sigrok.org/
+* https://myopenlab.org/inicio/ - dead it seems
+** https://sourceforge.net/projects/myopenlab3/
+* https://github.com/MyLibreLab/MyLibreLab - fork of ~MyOpenLab
+* https://www.theremino.com/
+* https://alternativeto.net/software/labview/ - ~LabView is a kind-of standard but proprietary
+** https://de.wikipedia.org/wiki/LabVIEW
+** https://en.wikipedia.org/wiki/LabVIEW
+
+
+Tools:
+
+open hardware (and software)
+
+* https://www.eevblog.com/forum/oshw/open-source-oscilloscope/
+* https://www.lab-nation.com/ - design files not accessible anymore?
+* https://github.com/drandyhaas/Haasoscope
+* https://hackaday.com/2020/05/07/open-source-2-ghz-oscilloscope-probe/
+* https://osciprime.com/index.php?p=project
+* https://hackaday.io/project/165964-60mhz-bandwidth-250msps-probe-scope
+* https://baylibre.com/acme/
+* https://physicsopenlab.org/
+* https://www.theremino.com/
+* https://physicsopenlab.org/low-cost-diy-scientific-equipment/
+* https://pslab.io/ - Pocket Science Lab, includes 4-Ch Osci, Voltmeter, I²C for sensors
+
+only open software
+
+* https://www.redpitaya.com/ - Osci, signal generator, logic analyzer, LCR Meter
+* https://openhantek.org/ - Software for Hantek and compatible (Voltcraft/Darkwire/Protek/Acetech) USB digital signal oscilloscopes
+* https://github.com/ardyesp/DLO-138
+* digilent ~OpenScope MZ /~OpenLogger - discontinued
+** https://reference.digilentinc.com/reference/instrumentation/openscope-mz/start
+
+
+open?
+
+* miniware - http://www.miniware.com.cn/products/
+** Digital tweezers
+** mini oscilloscopes
+** logic analyzers
+* https://www.earthpeopletechnology.com/digital_storage_oscilloscope_dso_100m
+** https://www.tindie.com/products/Earth_People_Technology/open-source-digital-storage-oscilloscope-4-ch/</pre>
 </div>
 <div created="20201217193153738" draft.of="Open Source Astronomy" draft.title="Open Source Astronomy" modified="20210301222325710" tags="Science [[Free / Open / Libre *]]" title="Draft of 'Open Source Astronomy'">
 <pre>* stellarium
@@ -17773,7 +17833,7 @@ brauche ich speziell für projekte:
 * [[NurdRage|https://www.youtube.com/user/NurdRage]]
 * [[NightHawkInLight|https://www.youtube.com/c/Nighthawkinlight]]</pre>
 </div>
-<div created="20201216004243516" modified="20210214183625474" tags="Science" title="scientific software">
+<div created="20201216004243516" modified="20210301222855328" tags="Science" title="scientific software">
 <pre>* https://www.ctcms.nist.gov/fipy/
 * https://alternativeto.net/software/scipy--numpy/
 * https://www.sagemath.org/
@@ -17786,7 +17846,9 @@ brauche ich speziell für projekte:
 * https://www.featool.com/tutorial/2017/06/16/python-fem-and-multiphysics-simulations-with-fenics-and-featool
 * http://www.math.pitt.edu/~sussmanm/3040Summer14/FEM1D.pdf
 * https://github.com/jjcremmers/PyFEM
-* https://salome-platform.org/</pre>
+* https://salome-platform.org/
+* https://apps.kde.org/en/cantor
+* https://apps.kde.org/en/labplot2</pre>
 </div>
 <div created="20210214195513366" modified="20210214195857045" tags="Electronics" title="SDR - Software Defined Radio">
 <pre>i hoped i could use an old DVB-T USB-Stick as SDR, but i had to find out it only contains a dib7770pa from ~DiBcom for which no documentation can be found and is not supported by RTL-SDR.
