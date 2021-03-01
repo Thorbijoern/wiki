@@ -801,6 +801,8 @@ Error message and password prompt
 
 <li>electronic basics</li>
 
+<li>electronic load</li>
+
 <li>electronic suppliers</li>
 
 <li>Electronics</li>
@@ -1302,6 +1304,10 @@ Error message and password prompt
 <li>the R's of sustainability</li>
 
 <li>Thiele &amp; Small Parameters</li>
+
+<li>Tonstudio</li>
+
+<li>tools</li>
 
 <li>Transparency</li>
 
@@ -11308,7 +11314,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210301140425213" list="[[Draft of ' 3']] [[testing &amp; measuring]] [[Draft 2 of ' 2']] [[Draft of ' 1']] sourcing/buying [[LiFePO4 (LFP)]] About TableOfContents" modified="20210301141005888" title="$:/StoryList">
+<div created="20210301140425213" list="tools Tonstudio [[electronic load]] [[testing batteries]] [[Draft of ' 3']] [[Draft 2 of ' 2']] [[Draft of ' 1']] sourcing/buying [[LiFePO4 (LFP)]] About TableOfContents" modified="20210301141642876" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12322,8 +12328,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210301141001400" modifier="Thorbijoern" title="$:/temp/search">
-<pre>transistor</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210301143909034" modifier="Thorbijoern" title="$:/temp/search">
+<pre>tools</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13693,8 +13699,17 @@ stuff
 <div modified="20210214150356242" title="Draft of ' 2'">
 <pre></pre>
 </div>
-<div created="20210301141022088" draft.of=" 3" draft.title="&quot;transistor tester&quot; component tester" modified="20210301141039050" tags="[[testing &amp; measuring]]" title="Draft of ' 3'">
-<pre></pre>
+<div created="20210301141022088" draft.of=" 3" draft.title="&quot;transistor tester&quot; (avr) component tester" modified="20210301143855492" tags="[[testing &amp; measuring]]" title="Draft of ' 3'">
+<pre>* Gm328 Transistor / component tester with encoder (seems to be an improved version of the single button one, more features)
+** https://www.youtube.com/watch?v=C38eSPOF1o0
+** bought one (kit)
+** might reverse engineer it
+** might be possible to read the flash contents of the atmega328p and 
+* https://github.com/search?q=transistortester
+** https://github.com/maugsburger/avr-component-tester
+** https://github.com/BackupGGCode/avr-component-tester
+* https://www.mikrocontroller.net/articles/AVR_Transistortester#Einleitung_.28deutsch.29
+* </pre>
 </div>
 <div created="20210220122028070" draft.of="" draft.title="LFP pack build" modified="20210220122148674" tags="[[accumulator - battery]]" title="Draft of ''">
 <pre>requirements:
@@ -13847,6 +13862,28 @@ for Cars and Trucks
 ** [[Electronic Basics #37: What is Impedance? (AC Resistance?)|https://www.youtube.com/watch?v=W2VwAL7-8-o]]
 ** [[Tutorial: Electrical impedance made easy - Part 1|https://www.youtube.com/watch?v=xyMH8wKK-Ag]]
 * https://www.allaboutcircuits.com/textbook/</pre>
+</div>
+<div created="20210301142208740" modified="20210301143839783" tags="[[power electronics (Leistungselektronik)]] [[testing &amp; measuring]]" title="electronic load">
+<pre>* https://hackaday.com/tag/electronic-load/
+* https://www.youtube.com/results?search_query=diy+electronic+load
+** [[DIY Adjustable Constant Load (Current &amp; Power) -- GreatScott!|https://www.youtube.com/watch?v=VwCHtwskzLA]]
+** [[Homemade Digital Electronic Load - Multiple Modes -- Electronoobs|https://www.youtube.com/watch?v=3XEf05flC4Q]]
+** [[EEVblog #102​ - DIY Constant Current Dummy Load for Power Supply and Battery Testing|https://www.youtube.com/watch?v=8xX2SVcItOA]]
+** [[Quick and Powerful IGBT Electronic Load|https://www.youtube.com/watch?v=acAuW0IVXKw]]
+
+smaller loads for small power supplies or batteries:
+
+* https://syonyk.blogspot.com/2015/10/tec-02-ver-30-semiconductor-battery.html
+** https://syonyk.blogspot.com/2018/01/tec-06-serial-battery-tester-review.html
+*** https://syonyk.blogspot.com/2018/01/reverse-engineering-tec-06-serial.html
+** https://syonyk.blogspot.com/2018/12/the-ebd-m05-battery-tester-195v-5a-30w.html
+
+TEC-06 and EBD-M05 seem to be very good.
+i bought the TEC-06 for now.
+the ZB206 seems to be an older design and isn't sold a lot anymore.
+
+* http://www.kolloquia.de/?p=477 - about the tec-06
+</pre>
 </div>
 <div created="20200514203641753" modified="20210104221236769" tags="Electronics" title="electronic suppliers">
 <pre>* mouser
@@ -18357,15 +18394,10 @@ cheap testing tools:
 * https://www.youtube.com/watch?v=YdUsomCH5eE
 * https://www.youtube.com/watch?v=BK7gnJavW28</pre>
 </div>
-<div created="20201111194816570" modified="20210128214538807" tags="[[accumulator - battery]] [[testing &amp; measuring]]" title="testing batteries">
-<pre>* https://syonyk.blogspot.com/2015/10/tec-02-ver-30-semiconductor-battery.html
-** https://syonyk.blogspot.com/2018/01/tec-06-serial-battery-tester-review.html
-*** https://syonyk.blogspot.com/2018/01/reverse-engineering-tec-06-serial.html
-** https://syonyk.blogspot.com/2018/12/the-ebd-m05-battery-tester-195v-5a-30w.html
+<div created="20201111194816570" modified="20210301143845602" tags="[[accumulator - battery]] [[testing &amp; measuring]]" title="testing batteries">
+<pre>battery capacity can be meassured using [[electronic load]]s with such features build in or with a shunt or  and matching meassuring circuit
 
-TEC-06 and EBD-M05 seem to be very good.
-i bought the TEC-06 for now.
-the ZB206 seems to be an older design and isn't sold a lot anymore.</pre>
+* [[EEVblog #140​ - Battery Capacity Tutorial|https://www.youtube.com/watch?v=R8hTQXqURB4]]</pre>
 </div>
 <div created="20201215214134264" modified="20201215214155272" tags="[[computer science / IT stuff]]" title="Text-to-Speech">
 <pre>* https://simulationcorner.net/index.php?page=sam</pre>
@@ -18401,6 +18433,13 @@ links
 * https://en.wikipedia.org/wiki/Audio_system_measurements
 * https://en.wikipedia.org/wiki/Electrical_characteristics_of_dynamic_loudspeakers
 * https://www.epanorama.net/documents/audio/speaker_impedance.html</pre>
+</div>
+<div created="20210301143616000" modified="20210301143834648" tags="[[Recording Audio]]" title="Tonstudio">
+<pre>* [[Tonstudio bauen - Heimwerkerking Fynn Kliemann|https://www.youtube.com/watch?v=yUhnwmvSFb0]]
+* [[Oben ohne, unten offen - Der Studiobau - Kliemannsland|https://www.youtube.com/watch?v=qEZM_ANORcA]]</pre>
+</div>
+<div created="20210301143911507" modified="20210301143954881" tags="Electronics Misc" title="tools">
+<pre>tools needed for different stuff</pre>
 </div>
 <div created="20200724172314309" modified="20201110021959137" tags="Politics" title="Transparency">
 <pre>Example:
