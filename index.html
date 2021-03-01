@@ -785,12 +785,6 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of 'electronic load'</li>
-
-<li>Draft of 'measure voltage'</li>
-
-<li>Draft of 'measuring current'</li>
-
 <li>Draft of 'powerlogging / power meter / AC power analysis / energy monitor'</li>
 
 <li>Draft of 'testing batteries'</li>
@@ -11353,7 +11347,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210301140425213" list="[[Draft of ' 1']] [[Draft of 'measure voltage']] [[Draft of 'measuring current']] [[component testers / LRC meter]] [[Draft of 'powerlogging / power meter / AC power analysis / energy monitor']] tools Tonstudio [[Draft of 'electronic load']] [[Draft of 'testing batteries']] [[&quot;transistor tester&quot; (avr) component tester]] [[PC troubleshooting tools]] [[multiboot usb tools]] sourcing/buying [[LiFePO4 (LFP)]] About TableOfContents" modified="20210301153740949" title="$:/StoryList">
+<div created="20210301140425213" list="[[diy weather station, air quality monitor, environmental data]] [[Draft of ' 1']] [[measure voltage]] [[measuring current]] [[Draft of 'powerlogging / power meter / AC power analysis / energy monitor']] tools Tonstudio [[electronic load]] [[Draft of 'testing batteries']] [[&quot;transistor tester&quot; (avr) component tester]] [[PC troubleshooting tools]] [[multiboot usb tools]] sourcing/buying [[LiFePO4 (LFP)]] About TableOfContents" modified="20210301154446230" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12367,8 +12361,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210301153732688" modifier="Thorbijoern" title="$:/temp/search">
-<pre>lab</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210301154440234" modifier="Thorbijoern" title="$:/temp/search">
+<pre>sensor</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13323,7 +13317,7 @@ brennstoffzell / fuel cell
 
 * https://www.ose-germany.de/projekte/zac/</pre>
 </div>
-<div created="20210118205030582" modified="20210301152721267" tags="[[testing &amp; measuring]] tools" title="component testers / LRC meter">
+<div created="20210118205030582" modified="20210301154119769" tags="[[testing &amp; measuring]] tools" title="component testers / LRC meter">
 <pre>* there are cheap component testers from china on ebay but they are most usefull for getting a sense of the type of some components, not all meassurements are really acurate
 * LRC meters are used for meassuring inductance (L), capacitance (C) and resistance (R)
 ** one meassuring true inductance, true capacitance, ESR and maybe Q factor is most useful, but there are meters specialized in ESR for example
@@ -13332,7 +13326,9 @@ brennstoffzell / fuel cell
 ** https://en.wikipedia.org/wiki/Q_meter
 * https://electronoobs.com/eng_arduino_tut10.php - arduino Resistence meter
 * https://electronoobs.com/eng_arduino_tut10_1.php - arduino Capacitance meter
+** [[Arduino capacitane meter with LCD screen|https://www.youtube.com/watch?v=8yGbOlJ7ZWM]]
 * https://electronoobs.com/eng_arduino_tut10_3.php - arduino Inductance meter
+** [[Inductance meter with Arduino|https://www.youtube.com/watch?v=BGjV5vUvGPc]]
 
 
 ESR
@@ -13656,7 +13652,7 @@ needed:
 * input-plugs or terminals
 * ...</pre>
 </div>
-<div created="20200522114815769" modified="20210214203410445" tags="[[sustainability / nachhaltigkeit]] Science" title="diy weather station, air quality monitor, environmental data">
+<div created="20200522114815769" modified="20210301154609591" tags="[[sustainability / nachhaltigkeit]] Science [[testing &amp; measuring]]" title="diy weather station, air quality monitor, environmental data">
 <pre>* air quality
 ** https://www.tomshardware.com/news/raspberry-pi-air-pollution-monitor
 ** https://www.luft.sachsen.de/aktuelle-messwerte-15045.html
@@ -13676,7 +13672,9 @@ needed:
 * seismic data (earthquakes)
 ** https://openeew.com/
 * radiation (geiger-counter)
-** https://safecast.org/devices/bgeigie-nano/</pre>
+** https://safecast.org/devices/bgeigie-nano/
+* light
+** [[#322​ 12 Light Sensors Tested: Measuring Light with Microcontrollers (Arduino or ESP8266, ESP32)|https://www.youtube.com/watch?v=r6mof_5w0rU]]</pre>
 </div>
 <div created="20200614221912261" modified="20210113002039350" tags="Electronics" title="diy xy animation laser / laser xy-scanner / laser projector">
 <pre>galvanometers and their controllers are expensive
@@ -13739,50 +13737,6 @@ stuff
 * 12V
 * 1,5kW inverter
 * [[LiFePO4 cells</pre>
-</div>
-<div created="20210301142208740" draft.of="electronic load" draft.title="electronic load" modified="20210301145859776" tags="[[power electronics (Leistungselektronik)]] [[testing &amp; measuring]]" title="Draft of 'electronic load'">
-<pre>* https://hackaday.com/tag/electronic-load/
-** https://hackaday.com/2020/06/06/a-diy-electronic-load-with-a-twist/
-* https://www.youtube.com/results?search_query=diy+electronic+load
-** [[DIY Adjustable Constant Load (Current &amp; Power) -- GreatScott!|https://www.youtube.com/watch?v=VwCHtwskzLA]]
-** [[Analog Constant Load/Current Controller Circuit - Electronoobs|https://www.youtube.com/watch?v=88xuhR30-dY]]
-** [[Homemade Digital Electronic Load - Multiple Modes -- Electronoobs|https://www.youtube.com/watch?v=3XEf05flC4Q]]
-** [[EEVblog #102​ - DIY Constant Current Dummy Load for Power Supply and Battery Testing|https://www.youtube.com/watch?v=8xX2SVcItOA]]
-** [[Quick and Powerful IGBT Electronic Load|https://www.youtube.com/watch?v=acAuW0IVXKw]]
-** [[Voltlog #119​ - 150W Dummy Load Review|https://www.youtube.com/watch?v=_uNfyM8TJl8]]
-* https://www.instructables.com/DIY-Adjustable-Electronic-DC-Load/
-* http://www.kerrywong.com/2013/10/24/building-a-constant-currentconstant-power-electronic-load/
-* https://www.codrey.com/electronic-circuits/simple-electronic-dc-load/
-
-smaller loads for small power supplies or batteries:
-
-* https://syonyk.blogspot.com/2015/10/tec-02-ver-30-semiconductor-battery.html
-** https://syonyk.blogspot.com/2018/01/tec-06-serial-battery-tester-review.html
-*** https://syonyk.blogspot.com/2018/01/reverse-engineering-tec-06-serial.html
-** https://syonyk.blogspot.com/2018/12/the-ebd-m05-battery-tester-195v-5a-30w.html
-
-TEC-06 and EBD-M05 seem to be very good.
-i bought the TEC-06 for now.
-the ZB206 seems to be an older design and isn't sold a lot anymore.
-
-* http://www.kolloquia.de/?p=477 - about the tec-06
-</pre>
-</div>
-<div created="20210301153014441" draft.of="measure voltage" draft.title="measure voltage" modified="20210301153230041" tags="[[testing &amp; measuring]]" title="Draft of 'measure voltage'">
-<pre>* [[#340​ How good are the ADCs inside Arduinos, ESP8266, and ESP32? And extenal ADCs (ADS1115) - how to meassure voltage|https://www.youtube.com/watch?v=UAJMLTzrM9Q]]
-* [[#347​ Measuring Mains Voltage, Current, and Power for Home Automation|https://www.youtube.com/watch?v=Vb9-pbLdsfQ]]</pre>
-</div>
-<div created="20210301152845714" draft.of="measuring current" draft.title="measuring current" modified="20210301153231775" tags="[[testing &amp; measuring]]" title="Draft of 'measuring current'">
-<pre>* [[#321​ 7 Sensors tested: Measuring Current with Microcontrollers (Arduino, ESP32, ESP8266)|https://www.youtube.com/watch?v=cG8moaufmQs]]
-* INA219 
-** [[10 Minute Arduino Project - INA219 Current Sensor|https://www.youtube.com/watch?v=PZ7imiIIf_k]]
-** [[Make your own Power Meter/Logger|https://www.youtube.com/watch?v=lrugreN2K4w]]
-* shunts
-** [[What is a SHUNT? (Used to measure Current) + How to make a DIY version|https://www.youtube.com/watch?v=_3GPaFuqrxs]]
-** [[How to Make a Shunt Current Sense Resistor|https://www.youtube.com/watch?v=j4u8fl31sgQ]]
-* using shunts
-** [[DIY Arduino power/energy meter|https://www.youtube.com/watch?v=_PKQdEUam6Y]]
-** [[Arduino based current meter with i2c LCD screen|https://www.youtube.com/watch?v=mcDITdXGZDc]]</pre>
 </div>
 <div created="20201126214130712" draft.of="powerlogging / power meter / AC power analysis / energy monitor" draft.title="powerlogging / power meter / AC power analysis / energy monitor" modified="20210301153224057" tags="tools [[testing &amp; measuring]]" title="Draft of 'powerlogging / power meter / AC power analysis / energy monitor'">
 <pre>* [[Electronic Basics #38: True, Reactive, Apparent &amp; Deformed Power|https://www.youtube.com/watch?v=cxXmWZDwNEs]]
@@ -13965,13 +13919,19 @@ for Cars and Trucks
 ** [[Tutorial: Electrical impedance made easy - Part 1|https://www.youtube.com/watch?v=xyMH8wKK-Ag]]
 * https://www.allaboutcircuits.com/textbook/</pre>
 </div>
-<div created="20210301142208740" modified="20210301143839783" tags="[[power electronics (Leistungselektronik)]] [[testing &amp; measuring]]" title="electronic load">
+<div created="20210301142208740" modified="20210301153839304" tags="[[power electronics (Leistungselektronik)]] [[testing &amp; measuring]]" title="electronic load">
 <pre>* https://hackaday.com/tag/electronic-load/
+** https://hackaday.com/2020/06/06/a-diy-electronic-load-with-a-twist/
 * https://www.youtube.com/results?search_query=diy+electronic+load
 ** [[DIY Adjustable Constant Load (Current &amp; Power) -- GreatScott!|https://www.youtube.com/watch?v=VwCHtwskzLA]]
+** [[Analog Constant Load/Current Controller Circuit - Electronoobs|https://www.youtube.com/watch?v=88xuhR30-dY]]
 ** [[Homemade Digital Electronic Load - Multiple Modes -- Electronoobs|https://www.youtube.com/watch?v=3XEf05flC4Q]]
 ** [[EEVblog #102​ - DIY Constant Current Dummy Load for Power Supply and Battery Testing|https://www.youtube.com/watch?v=8xX2SVcItOA]]
 ** [[Quick and Powerful IGBT Electronic Load|https://www.youtube.com/watch?v=acAuW0IVXKw]]
+** [[Voltlog #119​ - 150W Dummy Load Review|https://www.youtube.com/watch?v=_uNfyM8TJl8]]
+* https://www.instructables.com/DIY-Adjustable-Electronic-DC-Load/
+* http://www.kerrywong.com/2013/10/24/building-a-constant-currentconstant-power-electronic-load/
+* https://www.codrey.com/electronic-circuits/simple-electronic-dc-load/
 
 smaller loads for small power supplies or batteries:
 
@@ -15826,8 +15786,9 @@ related to the OSEG Open Hardware Standards DIN SPEC 3105
 *** Symbols Library uses CC-BY 3.0 for every svg symbol
 ** i currently only use BOLTS and Fasteners Workbench</pre>
 </div>
-<div created="20210301153014441" modified="20210301153152608" tags="[[testing &amp; measuring]]" title="measure voltage">
-<pre>* [[#340​ How good are the ADCs inside Arduinos, ESP8266, and ESP32? And extenal ADCs (ADS1115) - how to meassure voltage|https://www.youtube.com/watch?v=UAJMLTzrM9Q]]</pre>
+<div created="20210301153014441" modified="20210301154132444" tags="[[testing &amp; measuring]]" title="measure voltage">
+<pre>* [[#340​ How good are the ADCs inside Arduinos, ESP8266, and ESP32? And extenal ADCs (ADS1115) - how to meassure voltage|https://www.youtube.com/watch?v=UAJMLTzrM9Q]]
+* [[#347​ Measuring Mains Voltage, Current, and Power for Home Automation|https://www.youtube.com/watch?v=Vb9-pbLdsfQ]]</pre>
 </div>
 <div created="20201107220808654" modified="20201126220343728" tags="[[audio testing and measurement]] [[microphone stuff]]" title="Measurement Microphones">
 <pre>* sonarworks xref: pretty cheap mic with measurement protocol and downloadable calibration profile
@@ -15836,7 +15797,7 @@ related to the OSEG Open Hardware Standards DIN SPEC 3105
 * https://hifi-selbstbau.de/grundlagen-mainmenu-35/softwaremesstechnik-mainmenu-66/100-mikrofonkalibrierung-wie-geht-das
 * http://www.jobst-audio.de/techniktut/158-messtechnik-messmikrofone-einstieg</pre>
 </div>
-<div created="20210301152845714" modified="20210301153156641" tags="[[testing &amp; measuring]]" title="measuring current">
+<div created="20210301152845714" modified="20210301154126623" tags="[[testing &amp; measuring]]" title="measuring current">
 <pre>* [[#321​ 7 Sensors tested: Measuring Current with Microcontrollers (Arduino, ESP32, ESP8266)|https://www.youtube.com/watch?v=cG8moaufmQs]]
 * INA219 
 ** [[10 Minute Arduino Project - INA219 Current Sensor|https://www.youtube.com/watch?v=PZ7imiIIf_k]]
