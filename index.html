@@ -793,8 +793,6 @@ Error message and password prompt
 
 <li>Draft of '19&quot; Rack'</li>
 
-<li>Draft of 'push-pull converter (DC-DC converter)'</li>
-
 <li>Draft of 'switched mode power supply (SMPS)'</li>
 
 <li>Dresden</li>
@@ -11376,7 +11374,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210302174930536" list="[[inverter (Wechselrichter)]] [[Draft of 'push-pull converter (DC-DC converter)']] About TableOfContents" modified="20210302215717485" title="$:/StoryList">
+<div created="20210302174930536" list="[[inverter (Wechselrichter)]] About TableOfContents" modified="20210302220325470" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12390,8 +12388,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210302215715472" modifier="Thorbijoern" title="$:/temp/search">
-<pre>safety</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210302220324119" modifier="Thorbijoern" title="$:/temp/search">
+<pre>inverter</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13816,66 +13814,6 @@ stuff
 <div modified="20210301213728973" title="Draft of '19&quot; Rack'">
 <pre></pre>
 </div>
-<div created="20201220015016942" draft.of="push-pull converter (DC-DC converter)" draft.title="push-pull converter (DC-DC converter)" modified="20210302215122457" tags="[[switched mode power supply (SMPS)]]" title="Draft of 'push-pull converter (DC-DC converter)'">
-<pre>type of high power dc-dc converter/[[SMPS|switched mode power supply (SMPS)]]
-
-uses:
-
-* [[inverter (Wechselrichter)]]
-* (car) [[amplifiers]]
-** https://web.archive.org/web/20190717131310/https://sound.whsites.net/project89.htm - Switchmode Power Supply For Car Audio
-
-the naming seems to be very unclear/inconsistent and is pretty confusing... i find circuits for similar uses under different names
-
-* english:
-** push-pull-converter
-** Full Bridge Converters
-* german:
-** Flusswandler
-** Gegentaktwandler
-** Gegentaktflusswandler
-
-info
-
-* https://en.wikipedia.org/wiki/Push%E2%80%93pull_converter
-* https://de.wikipedia.org/wiki/Gegentaktflusswandler
-** //&quot;Speziell der Gegentaktflusswandler mit Vollbrückenansteuerung eignet sich für Gleichspannungswandler der höheren Leistungsklasse bis mehrere Kilowatt.&quot;//
-** //&quot;&quot;Umgekehrt findet der Gegentaktflusswandler auch bei Wechselrichtern höherer Leistung Anwendung. Dabei transformiert der Wandler die Kleingleichspannung (beispielsweise 12 V einer Starterbatterie) in die für den Wechselrichter benötigte Zwischenkreisspannung von etwa 325 V, welche anschließend mittels Hochvoltbrücke trapezförmig oder sinusförmig zu Netzspannung moduliert wird.&quot;&quot;//
-* push-pull converter
-** https://www.quora.com/What-is-the-working-principle-of-a-push-pull-converter
-** https://circuitdigest.com/tutorial/how-to-design-a-push-pull-converter
-** [[Halbbrücken Gegentaktwandler single ended push-pull converter|https://www.youtube.com/watch?v=oCOKR4sKGtg]]
-** [[Vollbrücke Gegentaktwandler Funktionsweise|https://www.youtube.com/watch?v=B7Kibpfnyts]]
-** [[Vollbrücke Querkurzschluss Gegentaktwandler|https://www.youtube.com/watch?v=3L2pqRgbNZo]]
-** https://u.dianyuan.com/bbs/u/71/2714871227765266.pdf - SWITCHING POWER SUPPLY DESIGN: LM5030 PUSH-PULL CONVERTER
-* [[LE4_6h DC/DC Wandler - Eintaktflusswandler - Zeitverläufe - Simulation LTSpice|https://www.youtube.com/watch?v=iXdYjXd_UJA]]
-* http://schmidt-walter-schaltnetzteile.de/smps/smps.html
-* https://www.joretronik.de/Web_NT_Buch/Kap8_2/Kapitel8_2.html#8.3
-* full bridge converter
-** https://www.rfwireless-world.com/Terminology/Advantages-and-Disadvantages-of-Full-bridge-converter.html
-** https://www.ti.com/lit/ug/tidu248/tidu248.pdf - Phase-Shifted Full Bridge DC/DC Power Converter Design Guide
-** https://www.edn.com/isolated-full-bridge-converters/
-* the english wikipedia article has an external link to the &quot;solar freaks&quot; forum which is just a archived copy where the file is not downloadable, here are still functioning options:
-** https://web.archive.org/web/20170208022848/http://www.solarfreaks.com/dc-dc-converter-tutorial-t149.html
-** http://electronique.marcel.free.fr/VAE/Docs/OT1%20Controleur/Conv%20DC-DC/National/cascade_tutorial_0710.pdf
-* there are some special designs wich are meant to funktion in both directions, DC to AC and AC to DC. the gaol seems to simplify design and reduce component count and maybe also the losses can be reduced...
-** [[2-kW isolated bidirectional DC-DC converter reference design for UPS|https://www.youtube.com/watch?v=CYb6ZJCIyOs]]
-
-projects
-
-* https://github.com/twischer/PushPullConverter
-* https://hackaday.io/project/158057-ts50-true-sine-inverter
-* https://hackaday.io/project/159575-ts350-true-sine-inverter
-* https://hackaday.io/project/10079-power-inverter-google-little-box
-* https://www.ijstr.org/final-print/may2020/Soft-Switched-Current-Fed-Modified-Push-Pull-Converter-For-Pv-Application.pdf
-* https://www.researchgate.net/publication/266522114_DESIGN_PROCEDURE_OF_A_PUSH_PULL_CURRENT-FED_DC-DC_CONVERTER
-
-
-stuff
-
-* https://www.cettechnology.com/push-pull-switching-transformer-design/
-* https://www.analog.com/en/technical-articles/high-frequency-push-pull-dc-dc-converter.html - design only based on their own chips, proprietary</pre>
-</div>
 <div modified="20210302214734134" title="Draft of 'switched mode power supply (SMPS)'">
 <pre></pre>
 </div>
@@ -15275,7 +15213,7 @@ germany:
 * https://en.wikipedia.org/wiki/2019%E2%80%9320_Hong_Kong_protests
 * https://pen.gg/</pre>
 </div>
-<div created="20200515113845015" modified="20210302220256190" tags="[[Solar  / renewable energy]] [[switched mode power supply (SMPS)]]" title="inverter (Wechselrichter)">
+<div created="20200515113845015" modified="20210302221158985" tags="[[Solar  / renewable energy]] [[switched mode power supply (SMPS)]]" title="inverter (Wechselrichter)">
 <pre>see also [[switched mode power supply (SMPS)]] and [[power electronics (Leistungselektronik)]]
 
 !! inverters can be defined by
@@ -15480,7 +15418,9 @@ stuff
 * https://www.ti.com/solution/string-inverter
 * https://www.ti.com/solution/micro-inverter
 * https://www.ti.com/solution/central-inverter
-
+* teardowns - might give some information, might also be examples for good or bad design
+** https://www.youtube.com/watch?v=P4JAYeKo1Z4
+** https://www.eevblog.com/forum/other-blog-specific/teardown-of-the-flamezum-2000w-psw-inverter/
 
 
 * [[Why are these Danfoss SOLAR Inverters So Inexpensive?|https://www.youtube.com/watch?v=mYQ3QQoeGsk]]
@@ -17604,7 +17544,7 @@ it has some benefits:
 
 there are societies like the Chaos Computer Club who like and probably would help authorieties transitioning to open source.</pre>
 </div>
-<div created="20201220015016942" modified="20210118194803422" tags="[[switched mode power supply (SMPS)]]" title="push-pull converter (DC-DC converter)">
+<div created="20201220015016942" modified="20210302220259975" tags="[[switched mode power supply (SMPS)]]" title="push-pull converter (DC-DC converter)">
 <pre>type of high power dc-dc converter/[[SMPS|switched mode power supply (SMPS)]]
 
 uses:
@@ -17613,20 +17553,41 @@ uses:
 * (car) [[amplifiers]]
 ** https://web.archive.org/web/20190717131310/https://sound.whsites.net/project89.htm - Switchmode Power Supply For Car Audio
 
+the naming seems to be very unclear/inconsistent and is pretty confusing... i find circuits for similar uses under different names
+
+* english:
+** push-pull-converter
+** Full Bridge Converters
+* german:
+** Flusswandler
+** Gegentaktwandler
+** Gegentaktflusswandler
+
 info
 
 * https://en.wikipedia.org/wiki/Push%E2%80%93pull_converter
 * https://de.wikipedia.org/wiki/Gegentaktflusswandler
 ** //&quot;Speziell der Gegentaktflusswandler mit Vollbrückenansteuerung eignet sich für Gleichspannungswandler der höheren Leistungsklasse bis mehrere Kilowatt.&quot;//
 ** //&quot;&quot;Umgekehrt findet der Gegentaktflusswandler auch bei Wechselrichtern höherer Leistung Anwendung. Dabei transformiert der Wandler die Kleingleichspannung (beispielsweise 12 V einer Starterbatterie) in die für den Wechselrichter benötigte Zwischenkreisspannung von etwa 325 V, welche anschließend mittels Hochvoltbrücke trapezförmig oder sinusförmig zu Netzspannung moduliert wird.&quot;&quot;//
-* https://www.quora.com/What-is-the-working-principle-of-a-push-pull-converter?share=1
-* https://circuitdigest.com/tutorial/how-to-design-a-push-pull-converter
-* [[Halbbrücken Gegentaktwandler single ended push-pull converter|https://www.youtube.com/watch?v=oCOKR4sKGtg]]
-* [[Vollbrücke Gegentaktwandler Funktionsweise|https://www.youtube.com/watch?v=B7Kibpfnyts]]
-* [[Vollbrücke Querkurzschluss Gegentaktwandler|https://www.youtube.com/watch?v=3L2pqRgbNZo]]
+* push-pull converter
+** https://www.quora.com/What-is-the-working-principle-of-a-push-pull-converter
+** https://circuitdigest.com/tutorial/how-to-design-a-push-pull-converter
+** [[Halbbrücken Gegentaktwandler single ended push-pull converter|https://www.youtube.com/watch?v=oCOKR4sKGtg]]
+** [[Vollbrücke Gegentaktwandler Funktionsweise|https://www.youtube.com/watch?v=B7Kibpfnyts]]
+** [[Vollbrücke Querkurzschluss Gegentaktwandler|https://www.youtube.com/watch?v=3L2pqRgbNZo]]
+** https://u.dianyuan.com/bbs/u/71/2714871227765266.pdf - SWITCHING POWER SUPPLY DESIGN: LM5030 PUSH-PULL CONVERTER
 * [[LE4_6h DC/DC Wandler - Eintaktflusswandler - Zeitverläufe - Simulation LTSpice|https://www.youtube.com/watch?v=iXdYjXd_UJA]]
 * http://schmidt-walter-schaltnetzteile.de/smps/smps.html
 * https://www.joretronik.de/Web_NT_Buch/Kap8_2/Kapitel8_2.html#8.3
+* full bridge converter
+** https://www.rfwireless-world.com/Terminology/Advantages-and-Disadvantages-of-Full-bridge-converter.html
+** https://www.ti.com/lit/ug/tidu248/tidu248.pdf - Phase-Shifted Full Bridge DC/DC Power Converter Design Guide
+** https://www.edn.com/isolated-full-bridge-converters/
+* the english wikipedia article has an external link to the &quot;solar freaks&quot; forum which is just a archived copy where the file is not downloadable, here are still functioning options:
+** https://web.archive.org/web/20170208022848/http://www.solarfreaks.com/dc-dc-converter-tutorial-t149.html
+** http://electronique.marcel.free.fr/VAE/Docs/OT1%20Controleur/Conv%20DC-DC/National/cascade_tutorial_0710.pdf
+* there are some special designs wich are meant to funktion in both directions, DC to AC and AC to DC. the gaol seems to simplify design and reduce component count and maybe also the losses can be reduced...
+** [[2-kW isolated bidirectional DC-DC converter reference design for UPS|https://www.youtube.com/watch?v=CYb6ZJCIyOs]]
 
 projects
 
