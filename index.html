@@ -795,6 +795,8 @@ Error message and password prompt
 
 <li>Draft of 'inverter (Wechselrichter)'</li>
 
+<li>Draft of 'MPPT (Maximum Power Point Tracking) charge controller'</li>
+
 <li>Draft of 'push-pull converter (DC-DC converter)'</li>
 
 <li>Draft of 'switched mode power supply (SMPS)'</li>
@@ -11378,7 +11380,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210302174930536" list="[[Battery Management System (BMS)]] [[Draft of 'inverter (Wechselrichter)']] [[Draft of 'push-pull converter (DC-DC converter)']] About TableOfContents" modified="20210302214755394" title="$:/StoryList">
+<div created="20210302174930536" list="[[solar system safety]] [[Draft of 'MPPT (Maximum Power Point Tracking) charge controller']] [[Draft of 'inverter (Wechselrichter)']] [[Draft of 'push-pull converter (DC-DC converter)']] About TableOfContents" modified="20210302215717485" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12392,8 +12394,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210302214753990" modifier="Thorbijoern" title="$:/temp/search">
-<pre>bms</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210302215715472" modifier="Thorbijoern" title="$:/temp/search">
+<pre>safety</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13818,7 +13820,7 @@ stuff
 <div modified="20210301213728973" title="Draft of '19&quot; Rack'">
 <pre></pre>
 </div>
-<div created="20200515113845015" draft.of="inverter (Wechselrichter)" draft.title="inverter (Wechselrichter)" modified="20210302210445245" tags="[[Solar  / renewable energy]] [[switched mode power supply (SMPS)]]" title="Draft of 'inverter (Wechselrichter)'">
+<div created="20200515113845015" draft.of="inverter (Wechselrichter)" draft.title="inverter (Wechselrichter)" modified="20210302215129944" tags="[[Solar  / renewable energy]] [[switched mode power supply (SMPS)]]" title="Draft of 'inverter (Wechselrichter)'">
 <pre>see also [[switched mode power supply (SMPS)]] and [[power electronics (Leistungselektronik)]]
 
 !! inverters can be defined by
@@ -14015,15 +14017,36 @@ stuff
 * https://www.researchgate.net/publication/316456154_Grid_Connected_Inverter_Design_Guide
 * https://www.digikey.de/reference-designs/de/ac-dc-and-dc-dc-conversion/dc-ac-inverter/539
 * [[LE6_4a DC/AC Wandler - Dreiphasiger Wechselrichter|https://www.youtube.com/watch?v=rONYs_10mE8]]
-* UPS designs might be a useful source of information and data
-** 
+* reference designs
+** UPS designs might be a useful source of information and data
+*** https://www.ti.com/solution/single-phase-online-ups
+*** https://www.ti.com/solution/single-phase-offline-UPS
+*** https://www.ti.com/solution/three-phase-ups
+* https://www.ti.com/solution/string-inverter
+
 
 
 * [[Why are these Danfoss SOLAR Inverters So Inexpensive?|https://www.youtube.com/watch?v=mYQ3QQoeGsk]]
 * https://www.youtube.com/watch?v=x-_PD2OzXuY
 * https://www.microchip.com/design-centers/intelligent-power/applications/solar</pre>
 </div>
-<div created="20201220015016942" draft.of="push-pull converter (DC-DC converter)" draft.title="push-pull converter (DC-DC converter)" modified="20210302213353389" tags="[[switched mode power supply (SMPS)]]" title="Draft of 'push-pull converter (DC-DC converter)'">
+<div created="20200724232508182" draft.of="MPPT (Maximum Power Point Tracking) charge controller" draft.title="MPPT (Maximum Power Point Tracking) charge controller" modified="20210302215155714" tags="[[Solar  / renewable energy]] [[switched mode power supply (SMPS)]]" title="Draft of 'MPPT (Maximum Power Point Tracking) charge controller'">
+<pre>* https://en.wikipedia.org/wiki/Maximum_power_point_tracking
+* https://hackaday.io/search?term=mppt
+* https://github.com/search?q=mppt
+* https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking
+* https://libre.solar/devices/cc-overview
+** https://learn.libre.solar/system/charge_controller.html
+* https://www.instructables.com/ARDUINO-SOLAR-CHARGE-CONTROLLER-Version-30/
+* type of power optimizer: https://en.wikipedia.org/wiki/Power_optimizer
+* [[MPPT Solar Charger Prototype - 12V Lead-Acid Battery - Bulk Absorption Float|https://www.youtube.com/watch?v=28WZRZiZuS4]]
+* https://github.com/twischer/MPPTCharger - MPPT Charge Controller for ESP8266
+* https://github.com/twischer/MPPTCharger
+* reference designs
+** https://www.ti.com/solution/solar-power-optimizer
+** https://www.ti.com/solution/solar-charge-controller</pre>
+</div>
+<div created="20201220015016942" draft.of="push-pull converter (DC-DC converter)" draft.title="push-pull converter (DC-DC converter)" modified="20210302215122457" tags="[[switched mode power supply (SMPS)]]" title="Draft of 'push-pull converter (DC-DC converter)'">
 <pre>type of high power dc-dc converter/[[SMPS|switched mode power supply (SMPS)]]
 
 uses:
@@ -14067,9 +14090,6 @@ info
 ** http://electronique.marcel.free.fr/VAE/Docs/OT1%20Controleur/Conv%20DC-DC/National/cascade_tutorial_0710.pdf
 * there are some special designs wich are meant to funktion in both directions, DC to AC and AC to DC. the gaol seems to simplify design and reduce component count and maybe also the losses can be reduced...
 ** [[2-kW isolated bidirectional DC-DC converter reference design for UPS|https://www.youtube.com/watch?v=CYb6ZJCIyOs]]
-*** https://www.ti.com/solution/single-phase-online-ups
-*** https://www.ti.com/solution/single-phase-offline-UPS
-*** https://www.ti.com/solution/three-phase-ups
 
 projects
 
@@ -16358,7 +16378,7 @@ smaller:
 
 * [[Make your own ESC -- BLDC Motor Driver (Part 1)|https://www.youtube.com/watch?v=W9IHEqlGG1s]]</pre>
 </div>
-<div created="20200724232508182" modified="20210118145515115" tags="[[Solar  / renewable energy]] [[switched mode power supply (SMPS)]]" title="MPPT (Maximum Power Point Tracking) charge controller">
+<div created="20200724232508182" modified="20210302214905314" tags="[[Solar  / renewable energy]] [[switched mode power supply (SMPS)]]" title="MPPT (Maximum Power Point Tracking) charge controller">
 <pre>* https://en.wikipedia.org/wiki/Maximum_power_point_tracking
 * https://hackaday.io/search?term=mppt
 * https://github.com/search?q=mppt
@@ -16369,7 +16389,9 @@ smaller:
 * type of power optimizer: https://en.wikipedia.org/wiki/Power_optimizer
 * [[MPPT Solar Charger Prototype - 12V Lead-Acid Battery - Bulk Absorption Float|https://www.youtube.com/watch?v=28WZRZiZuS4]]
 * https://github.com/twischer/MPPTCharger - MPPT Charge Controller for ESP8266
-* https://github.com/twischer/MPPTCharger</pre>
+* https://github.com/twischer/MPPTCharger
+* reference designs
+** https://www.ti.com/solution/solar-power-optimizer</pre>
 </div>
 <div created="20210301140518859" modified="20210301174858908" tags="[[computer science / IT stuff]]" title="multiboot usb tools">
 <pre>* see also [[PC troubleshooting tools]]
@@ -18417,14 +18439,16 @@ informations:
 * https://wiki.opensourceecology.de/SolarBox
 * [[https://wiki.opensourceecology.de/Solarspeicher_(station%C3%A4r)]]</pre>
 </div>
-<div created="20210301144825459" modified="20210301145418667" tags="[[Solar  / renewable energy]] [[electronics safety]]" title="solar system safety">
+<div created="20210301144825459" modified="20210302215735658" tags="[[Solar  / renewable energy]] [[electronics safety]]" title="solar system safety">
 <pre>* see [[battery pack safety]]
 * see [[electronics safety]]
 * see [[Schutzschaltungen]]
 * fuses
 * [[Fuses - Solar Safety Part 1 - 12v Solar Shed|https://www.youtube.com/watch?v=GyzrxAwxtgA]]
 * [[Breakers AC, DC &amp; AC/DC - Solar Safety Part 2 - 12v Solar Shed|https://www.youtube.com/watch?v=S0diAeysxVo]]
-* [[300 Amp Fuse Blowing with 4KW of Load from an Inverter - Safety Mechanism Prepare for the Unexpected|https://www.youtube.com/watch?v=gMvrMemPxrg]]</pre>
+* [[300 Amp Fuse Blowing with 4KW of Load from an Inverter - Safety Mechanism Prepare for the Unexpected|https://www.youtube.com/watch?v=gMvrMemPxrg]]
+* high DC systems
+** https://diysolarforum.com/resources/solar-array-arc-fault-protection-summary.145/</pre>
 </div>
 <div created="20200519105218926" modified="20200909215127749" tags="[[bus(/car) electric conversion]]" title="Solaris Urbino 18 Hybrid complete electric">
 <pre>* http://www.stadtbus2.de/magazin/m_tut_solaris-hybrid.htm
