@@ -795,8 +795,6 @@ Error message and password prompt
 
 <li>Draft of 'inverter (Wechselrichter)'</li>
 
-<li>Draft of 'open source Grid management'</li>
-
 <li>Draft of 'push-pull converter (DC-DC converter)'</li>
 
 <li>Draft of 'switched mode power supply (SMPS)'</li>
@@ -11380,7 +11378,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210302174930536" list="[[powerlogging / power meter / AC power analysis / energy monitor]] [[Draft of 'open source Grid management']] [[Draft of 'inverter (Wechselrichter)']] [[Draft of 'push-pull converter (DC-DC converter)']] [[Draft of 'switched mode power supply (SMPS)']] About TableOfContents" modified="20210302213958655" title="$:/StoryList">
+<div created="20210302174930536" list="[[Battery Management System (BMS)]] [[Draft of 'inverter (Wechselrichter)']] [[Draft of 'push-pull converter (DC-DC converter)']] About TableOfContents" modified="20210302214755394" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12394,8 +12392,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210302214122910" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210302214753990" modifier="Thorbijoern" title="$:/temp/search">
+<pre>bms</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -12875,7 +12873,7 @@ plots:
 * [[Li-Ion battery short circuit,overcharge,undervoltage EXPERIMENT|https://www.youtube.com/watch?v=bNNWbm681AI&amp;t=43s]]
 * [[Testing LCBs (Lithium Ceramic Batteries) ~ The Future of Battery Technology?|https://www.youtube.com/watch?v=kJXRyWQgOY4]]</pre>
 </div>
-<div created="20200514200114631" modified="20210302213303212" tags="[[accumulator - battery]] [[power electronics (Leistungselektronik)]]" title="Battery Management System (BMS)">
+<div created="20200514200114631" modified="20210302214807026" tags="[[accumulator - battery]] [[power electronics (Leistungselektronik)]]" title="Battery Management System (BMS)">
 <pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
 
 a BMS does these important tasks:
@@ -12930,6 +12928,7 @@ stuff
 * reference designs
 ** https://www.ti.com/solution/battery-management-system-bms
 ** https://www.ti.com/applications/industrial/power-delivery/overview.html -&gt; battery packs
+** https://www.ti.com/solution/energy-storage-battery-packs-with-bms
 
 
 Proprietary high-power BMS
@@ -14024,17 +14023,6 @@ stuff
 * https://www.youtube.com/watch?v=x-_PD2OzXuY
 * https://www.microchip.com/design-centers/intelligent-power/applications/solar</pre>
 </div>
-<div created="20201208231113535" draft.of="open source Grid management" draft.title="open source Grid management" modified="20210302214016675" tags="Electronics [[Solar  / renewable energy]]" title="Draft of 'open source Grid management'">
-<pre>* https://opensource.com/article/16/12/open-smart-grid-platform
-* https://github.com/OpenEMS/openems
-* https://www.zdnet.com/article/open-source-takes-on-managing-and-securing-the-electrical-grid/
-* see also [[powerlogging / power meter / AC power analysis / energy monitor]]
-* https://media.ccc.de/v/32c3-7323-wie_man_einen_blackout_verursacht
-
-stuff
-
-* https://www.ti.com/applications/industrial/grid-infrastructure/overview.html</pre>
-</div>
 <div created="20201220015016942" draft.of="push-pull converter (DC-DC converter)" draft.title="push-pull converter (DC-DC converter)" modified="20210302213353389" tags="[[switched mode power supply (SMPS)]]" title="Draft of 'push-pull converter (DC-DC converter)'">
 <pre>type of high power dc-dc converter/[[SMPS|switched mode power supply (SMPS)]]
 
@@ -14098,56 +14086,8 @@ stuff
 * https://www.cettechnology.com/push-pull-switching-transformer-design/
 * https://www.analog.com/en/technical-articles/high-frequency-push-pull-dc-dc-converter.html - design only based on their own chips, proprietary</pre>
 </div>
-<div created="20201110021349133" draft.of="switched mode power supply (SMPS)" draft.title="switched mode power supply (SMPS)" modified="20210302213638497" tags="[[power electronics (Leistungselektronik)]]" title="Draft of 'switched mode power supply (SMPS)'">
-<pre>switched mode power supplies very efficient power supply designs rectifying the AC Voltage and stepping it down/up to the desired DC voltage; but DC-to-DC Converters are also often SMPS.
-you should know the [[electronic basics]] first
-
-* EEVblog
-**[[EEVblog: Power Supply Design|https://www.youtube.com/playlist?list=PLBF35875F73B5C9B5]]
-** [[EEVblog #139 - Let's Select a DC-DC Boost Converter|https://www.youtube.com/watch?v=-V_p1GBH4pk]]
-* [[The Post Apocalyptic Inventor: SMPS Tutorial|https://www.youtube.com/playlist?list=PLxaGnte1Dq0lgNtfA9H5Hd_YDyjylThJJ]]
-** [[SMPS Tutorial (1): Introduction - Switched Mode Power Supplies and Power Conversion|https://www.youtube.com/watch?v=nbKwUSH9NiY]]
-** [[SMPS Tutorial (2): Linear Regulators, Voltage References, Switched Mode Power Supplies|https://www.youtube.com/watch?v=BjTD9EVs9v8]]
-* [[Power Supply Design #8 How Much Power?|https://www.youtube.com/watch?v=0A49MIG1HrU]]
-* [[How SMPS works ~ What Components We Need? Switched Mode Power Supply|https://www.youtube.com/watch?v=cK5WLMFSGnw]]
-* https://en.wikipedia.org/wiki/Switched-mode_power_supply
-* https://de.wikipedia.org/wiki/Schaltnetzteil
-* [[How SMPS works ~ What Components We Need? Switched Mode Power Supply|https://www.youtube.com/watch?v=cK5WLMFSGnw]]
-* [[FLYBACK DC - DC Converter Theory And Example|https://www.youtube.com/watch?v=HOXgOWoN0EY]]
-* [[Power Supply Troubleshooting and Repair Tips|https://www.youtube.com/watch?v=pffOJdCQ7kw]]
-
-* [[Switch mode power supply tutorial: DC-DC buck converters|https://www.youtube.com/watch?v=CEhBN5_fO5o]]
-* https://libre.solar/docs/dcdc_control/
-** https://learn.libre.solar/development/dcdc_converter.html
-* [[DIY Buck/Boost Converter (Flyback) -- How to step up/down DC voltage efficiently|https://www.youtube.com/watch?v=ZiD_X-uo_TQ]]
-* [[DIY LiPo Charge/Protect/5V Boost Circuit|https://www.youtube.com/watch?v=Fj0XuYiE7HU]]
-* [[Solar Battery Charger (LiPo/Li-Ion) -- DIY or Buy|https://www.youtube.com/watch?v=kEttqWJrdww]]
-* [[EEVblog #272 - Manson 9400 40A 3-15V Switchmode PSU Teardown|https://www.youtube.com/watch?v=bX8IIjf15qY]]
-* [[Solar Panel, SuperCapacitors and a Buck/Boost|https://www.youtube.com/watch?v=ITsmOBdBKzk]]
-* [[DIY Buck converter - TUTORIAL|https://www.youtube.com/watch?v=SM5qPrOrDrc]]
-* https://circuitdigest.com/smps-power-supply-circuits
-* https://en.wikipedia.org/wiki/DC-to-DC_converter
-** https://en.wikipedia.org/wiki/Category:DC-to-DC_converters
-* https://web.archive.org/web/20190717131310/https://sound.whsites.net/project89.htm - Switchmode Power Supply For Car Audio
-* https://www.youtube.com/watch?v=Edel3eduRj4
-* https://sound-au.com/articles.htm#psud
-* [[AC/DC Switch Mode Power Supply (SMPS) Intro and Demo|https://www.youtube.com/watch?v=NZcfn413s0A]]
-* https://de.wikipedia.org/wiki/Gleichspannungswandler
-* https://de.wikipedia.org/wiki/Kategorie:Gleichspannungswandler
-* https://www.ti.com/solution/automotive-dc-dc-converter
-
-running AC SMPS from DC
-
-* https://electronics.stackexchange.com/questions/262645/using-dc-voltage-instead-of-ac-to-supply-smps
-* https://www.heise.de/select/ct/2016/2/1452238205894722?hg=1&amp;hgi=2&amp;hgf=false
-
-design:
-
-* Simulation Software can help a lot with designing
-** https://de.wikipedia.org/wiki/LTspice
-** https://de.wikipedia.org/wiki/SPICE_(Software)
-** https://en.wikipedia.org/wiki/SPICE
-* https://www.joretronik.de/Web_NT_Buch/Vorwort/Vorwort.html</pre>
+<div modified="20210302214734134" title="Draft of 'switched mode power supply (SMPS)'">
+<pre></pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
@@ -17279,12 +17219,22 @@ stuff:
 ** https://github.com/Diolinux/PhotoGIMP - making gimp a bit more like photoshop
 * Krita - https://krita.org/</pre>
 </div>
-<div created="20201208231113535" modified="20201208232127300" tags="Electronics [[Solar  / renewable energy]]" title="open source Grid management">
+<div created="20201208231113535" modified="20210302214710508" tags="Electronics [[Solar  / renewable energy]]" title="open source Grid management">
 <pre>* https://opensource.com/article/16/12/open-smart-grid-platform
 * https://github.com/OpenEMS/openems
 * https://www.zdnet.com/article/open-source-takes-on-managing-and-securing-the-electrical-grid/
-* see also [[powerlogging / power meter / AC power analysis]]
-* https://media.ccc.de/v/32c3-7323-wie_man_einen_blackout_verursacht</pre>
+* see also [[powerlogging / power meter / AC power analysis / energy monitor]]
+* https://media.ccc.de/v/32c3-7323-wie_man_einen_blackout_verursacht
+
+stuff
+
+* https://www.ti.com/applications/industrial/grid-infrastructure/overview.html
+
+power quality
+
+* https://www.ti.com/solution/power-quality-analyzer
+* https://de.wikipedia.org/wiki/Spannungsqualit%C3%A4t
+* https://en.wikipedia.org/wiki/Electric_power_quality</pre>
 </div>
 <div created="20200622093703265" modified="20201112223657519" tags="[[Open Hardware]]" title="open source inkjet printer">
 <pre>* https://reprap.org/wiki/InkJet
@@ -18942,7 +18892,7 @@ some stuff
 water usage in production?
 microplastics?</pre>
 </div>
-<div created="20201110021349133" modified="20210201233429090" tags="[[power electronics (Leistungselektronik)]]" title="switched mode power supply (SMPS)">
+<div created="20201110021349133" modified="20210302214732324" tags="[[power electronics (Leistungselektronik)]]" title="switched mode power supply (SMPS)">
 <pre>switched mode power supplies very efficient power supply designs rectifying the AC Voltage and stepping it down/up to the desired DC voltage; but DC-to-DC Converters are also often SMPS.
 you should know the [[electronic basics]] first
 
@@ -18976,6 +18926,10 @@ you should know the [[electronic basics]] first
 * https://www.youtube.com/watch?v=Edel3eduRj4
 * https://sound-au.com/articles.htm#psud
 * [[AC/DC Switch Mode Power Supply (SMPS) Intro and Demo|https://www.youtube.com/watch?v=NZcfn413s0A]]
+* https://de.wikipedia.org/wiki/Gleichspannungswandler
+* https://de.wikipedia.org/wiki/Kategorie:Gleichspannungswandler
+* https://www.ti.com/solution/automotive-dc-dc-converter
+* https://www.ti.com/solution/energy-storage-power-conversion-system
 
 running AC SMPS from DC
 
@@ -18987,7 +18941,8 @@ design:
 * Simulation Software can help a lot with designing
 ** https://de.wikipedia.org/wiki/LTspice
 ** https://de.wikipedia.org/wiki/SPICE_(Software)
-** https://en.wikipedia.org/wiki/SPICE</pre>
+** https://en.wikipedia.org/wiki/SPICE
+* https://www.joretronik.de/Web_NT_Buch/Vorwort/Vorwort.html</pre>
 </div>
 <div created="20210121211146788" modified="20210201004645393" tags="Electronics [[music creation]]" title="synth, modular synth">
 <pre>* https://mutable-instruments.net/ - open modular synth modules</pre>
