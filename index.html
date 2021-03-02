@@ -793,6 +793,8 @@ Error message and password prompt
 
 <li>Draft of '19&quot; Rack'</li>
 
+<li>Draft of 'Battery Management System (BMS)'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -1281,7 +1283,7 @@ Error message and password prompt
 
 <li>sourcing parts (Sonnensystem)</li>
 
-<li>sourcing/buying</li>
+<li>sourcing/buying batteries</li>
 
 <li>speaker / audio Dummy Load (Ersatzlast)</li>
 
@@ -11060,7 +11062,7 @@ TableOfContents</pre>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
 </div>
-<div created="20200802181559032" modified="20210301145147358" title="$:/state/toc/TableOfContents-accumulator - battery--118161433">
+<div created="20200802181559032" modified="20210302192955801" title="$:/state/toc/TableOfContents-accumulator - battery--118161433">
 <pre>close</pre>
 </div>
 <div created="20200727154700045" modified="20200727204057884" title="$:/state/toc/TableOfContents-accumulator - battery-497309061">
@@ -11372,7 +11374,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210302174930536" list="sourcing/buying About TableOfContents" modified="20210302192654505" title="$:/StoryList">
+<div created="20210302174930536" list="[[telegram bot/mtproto frameworks]] [[Draft of 'Battery Management System (BMS)']] About TableOfContents" modified="20210302195044541" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12386,8 +12388,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210302192651881" modifier="Thorbijoern" title="$:/temp/search">
-<pre>sourci</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210302195041573" modifier="Thorbijoern" title="$:/temp/search">
+<pre>telegram</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13799,6 +13801,66 @@ stuff
 </div>
 <div modified="20210301213728973" title="Draft of '19&quot; Rack'">
 <pre></pre>
+</div>
+<div created="20200514200114631" draft.of="Battery Management System (BMS)" draft.title="Battery Management System (BMS)" modified="20210302193131064" tags="[[accumulator - battery]] [[power electronics (Leistungselektronik)]]" title="Draft of 'Battery Management System (BMS)'">
+<pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
+
+a BMS does these important tasks:
+
+* monitor cell voltage when chargin to prevent overcharging and overvoltage protection
+* monitor cell voltage when discharging to prevent overdischarging
+* balancing the cells when charging/discharging
+* overcurrent protection, to protect the batteries from short circuits
+* monitoring cell themp to prevent overheating (thermal cutout) (not as important in low power applications)
+* some might have serial connections so you can use a microcontroller to read the voltage and some might have build-in visible charge readouts or you can set them to only charge or discharge to a specific percentage
+
+some cell technologies might have special needs, e.g. LiFePO4 doesn't like beeing charged with themps under 0°C
+
+all this is so the cells are protected, live longer and faults like thermal runaways are prevented
+
+there are cheap bms boards from asia which should work perfectly fine fir smaller, low power applications, but with bigger high power projects you might need something better.
+
+balancing?
+
+* passive
+** is the most common and simplest type of cell balancing
+* active
+** benefits?
+
+open BMS:
+
+* https://openbms.net/
+* http://scienceenvy.com/open-bms/
+* https://github.com/Teslafly/OpenBMS
+* https://hackaday.io/project/25512-open-bms
+* https://hackaday.io/search?term=BMS
+* https://wiki.opensourceecology.de/LibreSolar_BMS_%E2%80%93_Batterie_Management_System
+* https://libre.solar/devices/bms-overview
+** https://learn.libre.solar/system/bms.html
+** https://electrodacus.com/
+** [[Electrodacus -Open Source- Solar Battery Management System: Introduction and Setup|https://www.youtube.com/watch?v=eCspxDLZR9U]]
+* https://github.com/EnnoidMe/ENNOID-BMS
+* https://endless-sphere.com/forums/viewtopic.php?t=92952
+* https://github.com/Teslafly/OpenBMS
+* https://foxbms.org/
+* https://github.com/Tom-evnut/TeslaBMS
+** https://github.com/Tom-evnut/SimpBMS
+* https://github.com/stuartpittaway/diyBMSv4
+
+
+stuff
+
+* [[BMS (Battery Management System) DIY or Buy - Properly protecting Li-Ion/Li-Po Battery Packs|https://www.youtube.com/watch?v=rT-1gvkFj60]]
+* [[Small BMS Vs Large BMS|https://www.youtube.com/watch?v=0gmSMfeDpZ0]]
+* https://en.wikipedia.org/wiki/Battery_management_system
+* https://www.eevblog.com/forum/manufacture/smart-bms-design/msg3300940/#msg3300940
+
+
+Proprietary high-power BMS
+
+* Daly BMS
+** https://www.dalyelec.eu/
+** Aliexpress/alibaba/ebay</pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
@@ -18270,7 +18332,7 @@ ironmongery
 
 </pre>
 </div>
-<div created="20200518085758718" modified="20210302192853230" tags="[[accumulator - battery]]" title="sourcing/buying">
+<div created="20200518085758718" modified="20210302192931259" tags="[[accumulator - battery]]" title="sourcing/buying batteries">
 <pre>ebay?
 alibaba?
 aliexpress?
@@ -18654,12 +18716,14 @@ i couldn't replicate the stopping of playback or recording neither before nor af
 The electronics might be dated in it, but the console still runs and has a really good build quality. Every cable is managed in some way and there are nice reusable wire cableties fastened to the frame and boards which made servicing easy and it looks super clean.
 nowadays you probably would have much less pcb's in there, maybe everything on one pcb and would need much less cables for interconnecting.</pre>
 </div>
-<div created="20201126132422965" modified="20210206201704455" tags="[[computer science / IT stuff]]" title="telegram bot/mtproto frameworks">
+<div created="20201126132422965" modified="20210302195108111" tags="[[computer science / IT stuff]]" title="telegram bot/mtproto frameworks">
 <pre>* madelineproto (php)
 * pyrogramm (python) - https://github.com/pyrogram/pyrogram
 * telethon (python)
 * https://github.com/eternnoir/pyTelegramBotAPI
-* https://python-telegram-bot.org/</pre>
+* https://python-telegram-bot.org/
+* https://t.me/BotTalk
+* https://telegra.ph/Introduction-to-bot-programming-02-21</pre>
 </div>
 <div created="20200605111730573" modified="20210219200513503" tags="[[My Setup]]" title="Telegram Moderation">
 <pre>* https://t.me/AtAdminBot
