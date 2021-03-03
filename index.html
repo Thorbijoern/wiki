@@ -793,6 +793,10 @@ Error message and password prompt
 
 <li>Draft of '19&quot; Rack'</li>
 
+<li>Draft of 'inverter (Wechselrichter)'</li>
+
+<li>Draft of 'motor controller / motor inverter'</li>
+
 <li>Draft of 'switched mode power supply (SMPS)'</li>
 
 <li>Dresden</li>
@@ -11378,7 +11382,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210302174930536" list="[[Real Time Operating System (RTOS)]] About TableOfContents" modified="20210303013925200" title="$:/StoryList">
+<div created="20210302174930536" list="[[push-pull converter (DC-DC converter)]] [[Draft of 'motor controller / motor inverter']] [[Draft of 'inverter (Wechselrichter)']] About TableOfContents" modified="20210303015057879" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20201217193346290" title="$:/temp/advancedsearch">
@@ -12392,8 +12396,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210303013923273" modifier="Thorbijoern" title="$:/temp/search">
-<pre>openenergy</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210303015134503" modifier="Thorbijoern" title="$:/temp/search">
+<pre>https://wiki.opensourceecology.org/wiki/Inverter</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13817,6 +13821,259 @@ stuff
 </div>
 <div modified="20210301213728973" title="Draft of '19&quot; Rack'">
 <pre></pre>
+</div>
+<div created="20200515113845015" draft.of="inverter (Wechselrichter)" draft.title="inverter (Wechselrichter)" modified="20210303014734951" tags="[[Solar  / renewable energy]] [[switched mode power supply (SMPS)]]" title="Draft of 'inverter (Wechselrichter)'">
+<pre>see also [[switched mode power supply (SMPS)]] and [[power electronics (Leistungselektronik)]]
+
+!! inverters can be defined by
+
+* the produced waveform
+** square wave - just a coarse square wave with two steps, only suited for low-sensitivity applications, pretty seldom, not suitable for most applications
+** modified sine wave - very coarse stepped rectangular waveform (thre steps: zero, + full power, zero and - full power); not the best for all appliances
+** sine wave - finer stepped wave wich is not perfect but much closer to a real sine wave; should work with all appliances just fine; often work with (S)PWM similar to a Class-D audio Amp(?)
+* type/input voltages
+** &quot;normal&quot; solar inverter
+*** using low DC voltages like 12V, 24V or 48V as input
+** microinverters - meant to be used for single solar panels with 100W or more - https://en.wikipedia.org/wiki/Solar_micro-inverter
+*** also include a Boost-stage with MPPT
+*** nanoinverters - meant for small solar panels or single photovoltaic cells
+** string or bigger inverters with other namings
+*** often have input voltages from 300V to 400V
+*** are often grid-tie
+*** they are meant to be used on large arrays of solar panels connected in series (and parallel) and supply power directly to the mains grid
+*** mostly comprised of the mains-switching h-bridge
+* output phases
+** single phase
+** three-phase
+* additional features appart from converting DC to AC (some features overlap)
+** integrated charger - just an integrated charger for the connected batteries
+** grid-tie - can feed the standard electrical grid and works alongside the grid or other inverters
+** some kind of UPS (Uninteruptible Power Supply) functions
+*** inverters with integrated chargers which charge the battery when there is power on the grid, but switch on in case there is an outage
+*** netzvorangschaltung
+** included MPPT - solar panals can be directly connected to the inverter featuring an [[MPPT - Maximum Power Point Tracking]] charge controller
+
+!! general information:
+
+* https://de.wikipedia.org/wiki/Wechselrichter
+* https://en.wikipedia.org/wiki/Power_inverter
+* https://de.wikipedia.org/wiki/Solarwechselrichter
+* https://en.wikipedia.org/wiki/Solar_inverter
+* https://www.lifewire.com/what-is-a-car-power-inverter-534721
+* https://openei.org/wiki/Definition:Inverter
+* https://en.wikipedia.org/wiki/Category:Inverters
+* [[YTPower Inverters Explained - How do they work working principle IGBT|https://www.youtube.com/watch?v=iIqhAX0I7lI]]
+* TEP
+** https://www.theengineeringprojects.com/2012/11/basics-of-inverters-with-topology.html
+** https://www.theengineeringprojects.com/2012/11/major-components-of-inverters.html
+** https://www.theengineeringprojects.com/2014/12/introduction-multilevel-inverters.html
+** https://www.theengineeringprojects.com/2012/11/pure-sine-wave-inter-design-with-code.html
+** https://www.theengineeringprojects.com/2012/11/modified-sine-wave-design-with-code.html
+* https://www.eevblog.com/forum/beginners/asking-for-resources-on-power-electronics-inverters-and-chargers/msg3306904/#msg3306904
+* https://www.elprocus.com/what-is-an-inverter-types-circuit-diagram-applications/
+
+!! circuit designs:
+
+# switching the DC and using a transformer for stepping up - most basic/simple design, but finding high power transformers can be hard, due to the transformer working with 50/60Hz not the most efficient (around 80%)
+# &quot;transformerless&quot;; using a step-up/boost circuit stepping up the DC Voltage and then switching the higher DC to produce the AC - uses smaller transformers in the boost circuit, more efficient due to the boost circuit using kHz frequencies, needs more filtering to filter the high freuencies
+# z-source?
+* a common method of achieving a pretty good sine wave is sPWM, there are prebuild spwm driver modules which can be bought for a few euros at ebay, but there are similar projects using uC's like Arduinos for the SPWM and these can be easily modified to have more functions
+** https://github.com/MartinStokroos/openMicroInverter
+** EGS002 boards with EG8010 Single Phase Sinus inverter ASIC and mosfet drivers
+*** https://www.lz2gl.com/data/power-inverter-3kw/eg8010_datasheet_en.pdf
+** https://github.com/Irev-Dev/Arduino-Atmel-sPWM
+* there are some special designs wich are meant to funktion in both directions, DC to AC and AC to DC. the gaol seems to simplify design and reduce component count and maybe also the losses can be reduced...
+** [[2-kW isolated bidirectional DC-DC converter reference design for UPS|https://www.youtube.com/watch?v=CYb6ZJCIyOs]]
+*** https://www.ti.com/solution/single-phase-online-ups
+
+
+
+!! security
+
+* galvanic isolated: good practice when using such high voltages, no shorts when devices of the low-voltage and high-voltage side get connected or so (like cheap inverters for the car and some device connected to the aux in of the car radio), no loop currents (on some cheap designs the N is connected to + or - on the low-voltage side)
+
+
+
+!! &quot;transformerless&quot; inverter design
+
+input -&gt; caps -&gt; push-pull converter -&gt; big caps -&gt; h-bridge switched by 50Hz sPWM -&gt; filtering
+
+* stepping up the DC Voltage
+** should be galvanicly isolated (see &quot;security&quot;)
+** the design depends on the required power
+** push/pull-converter (Flusswandler) very common
+*** see [[push-pull converter (DC-DC converter)]]
+** EMV problems?, noise?
+** efficiency?
+** Fluss- und Sperrwandler. Und davon dann, Eintakt, Gegentakt und Mehrtakt/Mehrphasig
+** converts the 12/24/48V into 350V DC + reserve
+** for 230V RMS a peak voltage of around 325V is needed
+*** 
+* switching the higher DC to produce the AC
+** using an H-Bridge
+*** H5 design by SMA is a modification of the standard h-bridge
+* basicaly includes 2 [[h-bridge]]s for switching, one switches a transformer rapidly for stepping up, one switches the 50Hz SPWM sine wave
+** basically just powerful Class-D amps designed to only produce a 50Hz sinewave
+
+https://sound-au.com/articles/inverters.htm
+
+
+parts
+
+* mosfets - general choice for switching
+** SIC-MOSFETs are a good choice but expensive (might hurt more when they blow up)
+* igbt's are useful above 100V (maybe for the mains-producing h-bridge)
+
+
+
+
+!! some diy: (needs ordering)
+
+* https://hackaday.io/search?term=inverter
+* [[Example of three-level PWM single phase power inverter design (full-bridge)|http://postreh.com/vmichal/papers/three-level-PWM-power-inverter.pdf]]
+* https://openenergymonitor.org/
+* https://www.electronics-lab.com/open-inverter-an-open-source-micro-solar-inverter/
+* https://sustburbia.blogspot.com/2015/10/openinverter-open-source-micro-solar.html?m=1 - https://sustburbia.blogspot.com/2015/10/open-inverter-part-6-thinking-allowed.html?m=1
+* https://www.opensourceecology.org/call-out-for-inverter-project/
+* https://wiki.opensourceecology.org/wiki/Inverter
+* http://arduino42.com/
+* https://github.com/gadgets-on-github/solar-inverter
+* https://github.com/MartinStokroos/openMicroInverter
+* maybe similar to [[motor controller / motor inverter]]
+* https://github.com/SDI-SoftwareDefinedInverter/TAPAS/
+* https://github.com/gonzojive/solar
+* https://github.com/transistorgrab/OSSI - not finished, but explains a lot of the parts
+* https://sourceforge.net/projects/os-si/
+* https://github.com/tvixen/4KW-230V-Inverter
+* https://github.com/texane/power_inverter
+* https://github.com/PV-Log/Open-Photovoltaic-Inverter-Database
+* https://github.com/pohsu/MIT-Pico-Grid
+* https://github.com/jaw0/littlebox-power-inverter
+* https://github.com/ThingEngineer/ReactorForge/wiki/ReactorForge-Hybrid-Driver
+* https://github.com/cyysu/Inverter
+* https://github.com/hildogjr/easyinverter
+* https://github.com/hussamaldean/sPWM-ATMEL
+* https://github.com/narongk/Arduino-Inverter-3-Phase
+* https://github.com/kelvingakuo/Power-Electronics
+* https://github.com/revyakin/avr-inverter-drive
+* https://github.com/Jeet1994/MATLAB-SIMULATION-FOR-PWM-INVERTERS-IN-POWER-ELECTRONICS
+* https://github.com/jpmatsci/INVERTER
+* https://github.com/sibyjackgrove/SolarPV-DER-simulation-utility
+* https://github.com/dfantonio/Single-Phase-Inverter-with-STM32F411
+* https://github.com/Levitrevisan/STM32_Inverter
+* https://github.com/charlieshao5189/Inverter_STM32/blob/master/README.md
+* https://github.com/CREST-APV/InverterModelling
+* https://github.com/atick-faisal/sPWM-Sine-Wave-Inverter-Arduino
+* https://github.com/oOflowOo/inverter
+* https://github.com/rusmanr/inverter
+* https://github.com/Narendra-Walawalkar/Inverter
+* https://github.com/mswati/inverter
+* https://github.com/jerkey/inverter
+* [[Does it suck? Chinese DIY Pure Sine Wave Inverter - Sinusoidal PWM (SPWM) Tutorial|https://www.youtube.com/watch?v=Dn2PFebi2ww]]
+* https://sustburbia.blogspot.com/2016/01/open-inverter-part-8-general-purpose.html
+* [[How to convert a Modified /Square wave inverter to Pure Sine|https://www.youtube.com/watch?v=GIsgjr0CU6Q]]
+* https://sustburbia.blogspot.com/2016/01/open-inverter-part-8-general-purpose.html - a series of blog posts building some inverter it seems?
+
+projects
+
+* https://github.com/twischer/SineWaveGen - ?
+* https://github.com/transistorgrab/OSSI - still in development but great docs
+** ~~https://sourceforge.net/projects/os-si/~~ - old repo, moved to github
+* http://www.arduino42.com/ - micro inverter design?
+** https://github.com/gadgets-on-github/solar-inverter
+
+stuff
+
+* https://ieeexplore.ieee.org/document/7530373
+* http://www.jetir.org/papers/JETIR1612001.pdf
+* https://www.sciencedirect.com/science/article/abs/pii/S0038092X19301999
+* https://www.edaboard.com/threads/bridge-inverter.395431/
+
+* https://en.m.wikipedia.org/wiki/Little_Box_Challenge
+* https://en.m.wikipedia.org/wiki/Solar_micro-inverter
+* https://github.com/opengd/solar-sis
+* https://github.com/www1374094/Three_Phase_Inverter_Base_dsp28335
+* https://github.com/meltaxa/solariot
+* https://github.com/slkakad?
+* https://github.com/mitxela/phase-locked-inverter
+* https://github.com/soldernerd/InverterControllerSoftware
+* https://github.com/revyakin/acid
+* https://github.com/motion55/SPWM.X
+* https://github.com/slkakad/sine-PWM-
+*https://www.ti.com/lit/an/slaa602a/slaa602a.pdf
+* http://arduino42.com/intro.shtml does not output 240VAC
+* [[YT: Electronic Basics #28: IGBT and when to use them|https://www.youtube.com/watch?v=RxRJW09A_XA]]
+* [[YT: MOSFET BJT or IGBT - Brief comparison Basic components #004|https://www.youtube.com/watch?v=VlMdSCI29A0]]
+* [[YT: Variable Frequency Drives Explained - VFD Basics IGBT inverter|https://www.youtube.com/watch?v=yEPe7RDtkgo]]
+* [[Variable Frequency Driver | Variable Inverter|https://www.youtube.com/watch?v=FElPFGyNI3k]]
+* [[Cheap 2000W Pure Sine Inverter Review and Teardown|https://www.youtube.com/watch?v=oLHQnnZSysQ]]
+* https://circuitdigest.com/tutorial/three-phase-inverter-circuit-diagram-120-degree-and-180-degree-conduction-mode
+* https://circuitdigest.com/tutorial/different-types-of-inverters
+* https://www.digikey.de/reference-designs/en/ac-dc-and-dc-dc-conversion/dc-ac-inverter/2334
+* https://www.digikey.de/reference-designs/en/ac-dc-and-dc-dc-conversion/dc-ac-inverter/539
+* https://hackaday.com/tag/little-box-challenge/
+** https://www.semanticscholar.org/topic/Little-Box-Challenge/2694125
+** https://en.wikipedia.org/wiki/Little_Box_Challenge
+* https://www.ti.com/reference-designs/index.html#search?keyword=inverter
+* http://www.elkraft.ntnu.no/eno/Papers2008/Schimpf-norpie08.pdf
+* https://web.archive.org/web/20131203011311/http://cms.uni-kassel.de/unicms/fileadmin/bilder/FB16/KDEE/PDF/Poster/DC_DC_AC.pdf
+* https://www.solarchoice.net.au/blog/conventional-and-transformerless-inverters/
+* https://ieeexplore.ieee.org/document/8684241
+* https://de.wikipedia.org/wiki/H5-Topologie
+* https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=inverter&amp;highlight=true&amp;returnFacets=ALL&amp;returnType=SEARCH&amp;matchPubs=true&amp;openAccess=true
+* https://www.researchgate.net/publication/316456154_Grid_Connected_Inverter_Design_Guide
+* https://www.digikey.de/reference-designs/de/ac-dc-and-dc-dc-conversion/dc-ac-inverter/539
+* [[LE6_4a DC/AC Wandler - Dreiphasiger Wechselrichter|https://www.youtube.com/watch?v=rONYs_10mE8]]
+* reference designs
+** UPS designs might be a useful source of information and data
+*** https://www.ti.com/solution/single-phase-online-ups
+*** https://www.ti.com/solution/single-phase-offline-UPS
+*** https://www.ti.com/solution/three-phase-ups
+* https://www.ti.com/solution/string-inverter
+* https://www.ti.com/solution/micro-inverter
+* https://www.ti.com/solution/central-inverter
+* teardowns - might give some information, might also be examples for good or bad design
+** https://www.youtube.com/watch?v=P4JAYeKo1Z4
+** https://www.eevblog.com/forum/other-blog-specific/teardown-of-the-flamezum-2000w-psw-inverter/
+
+
+* [[Why are these Danfoss SOLAR Inverters So Inexpensive?|https://www.youtube.com/watch?v=mYQ3QQoeGsk]]
+* https://www.youtube.com/watch?v=x-_PD2OzXuY
+* https://www.microchip.com/design-centers/intelligent-power/applications/solar
+* [https://www.akamaiuniversity.us/PJST8_1_4.pdf - Characterizations and Performance of a Solid-State Inverter and its  Applications in Photovoltaics  ?</pre>
+</div>
+<div created="20200521091318084" draft.of="motor controller / motor inverter" draft.title="motor controller / motor inverter" modified="20210303014915954" tags="[[bus(/car) electric conversion]] [[power electronics (Leistungselektronik)]]" title="Draft of 'motor controller / motor inverter'">
+<pre>* https://github.com/jsphuebner/inverter-hardware
+* https://www.patreon.com/openinverter
+* https://m.youtube.com/watch?v=47UbqTG6Cfo
+* https://github.com/damienmaguire/Inverter
+* https://github.com/dimecho/Open-Inverter-Dashboard
+* https://openinverter.org/docs/index.html%3Fen_home,3.html
+* https://github.com/SDI-SoftwareDefinedInverter/TAPAS/
+* https://github.com/osannolik/MotCtrl
+* https://github.com/tumanako
+* https://github.com/damienmaguire/Nissan-Leaf-Inverter-Controller
+* https://github.com/damienmaguire/Prius-Gen3-Inverter
+* https://github.com/xxJian/STM32_Based_SVPWM
+* https://github.com/tomdebree/Volt-Inverter
+* https://github.com/hakansrc/mlv_inv
+* https://github.com/hildogjr/easyinverter
+* https://github.com/damienmaguire/Lexus-GS450H-Inverter-Controller
+* https://github.com/TUMFTM/Reliability_Models_of_Inverters
+* https://github.com/sajtostaller89/Szakdoga_Ctrl_Software
+* https://github.com/L-Orsi/Three-Phase-Inverter-PWM-Generator?
+* https://github.com/damienmaguire/Prius-Gen-2-Inverter
+* http://www.powerdesigns.ca/
+* https://hackaday.io/project/27421-ev-powershield
+* https://www.ti.com/solution/hev-ev-inverter-motor-control
+* http://eet.etec.wwu.edu/ahmanna/project/docs/Prodject%20description.pdf - Open Source 100kW Electric Vehicle Controller/Inverter
+* https://web.wpi.edu/Pubs/E-project/Available/E-project-042507-092653/unrestricted/MQP_D_1_2.pdf - DC/AC Pure Sine Wave Inverter
+* 
+
+
+smaller:
+
+* [[Make your own ESC -- BLDC Motor Driver (Part 1)|https://www.youtube.com/watch?v=W9IHEqlGG1s]]</pre>
 </div>
 <div modified="20210302214734134" title="Draft of 'switched mode power supply (SMPS)'">
 <pre></pre>
@@ -17573,7 +17830,7 @@ it has some benefits:
 
 there are societies like the Chaos Computer Club who like and probably would help authorieties transitioning to open source.</pre>
 </div>
-<div created="20201220015016942" modified="20210302234855710" tags="[[switched mode power supply (SMPS)]]" title="push-pull converter (DC-DC converter)">
+<div created="20201220015016942" modified="20210303015140052" tags="[[switched mode power supply (SMPS)]]" title="push-pull converter (DC-DC converter)">
 <pre>type of high power dc-dc converter/[[SMPS|switched mode power supply (SMPS)]]
 
 uses:
@@ -17620,6 +17877,7 @@ info
 * EEVBlog
 ** https://www.eevblog.com/forum/projects/48vdc-to-160vdc-(for-inverter)/
 ** https://www.eevblog.com/forum/projects/how-is-this-topologycircuit-called-(solar-inverter)/
+* https://web.wpi.edu/Pubs/E-project/Available/E-project-042507-151144/unrestricted/High_Voltage_DC_Converter.pdf - High Voltage DC-DC Converter
 
 
 projects
