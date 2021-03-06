@@ -763,6 +763,8 @@ Error message and password prompt
 
 <li>digital audio</li>
 
+<li>Disk / drive (HDD/SSD/Flash) / filesystem Rescue</li>
+
 <li>DIY amps</li>
 
 <li>diy analog mixing console</li>
@@ -799,7 +801,7 @@ Error message and password prompt
 
 <li>Draft of '19&quot; Rack'</li>
 
-<li>Draft of 'HDD Rescue'</li>
+<li>Draft of 'backup'</li>
 
 <li>Draft of 'open source solar generator'</li>
 
@@ -920,8 +922,6 @@ Error message and password prompt
 <li>Hausdurchsuchung</li>
 
 <li>Hausdurchsuchung (search and seizure)</li>
-
-<li>HDD Rescue</li>
 
 <li>high-current cabling and connectors</li>
 
@@ -11401,7 +11401,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210304172139335" list="[[DIY FLOSS home NAS]] [[Draft of 'HDD Rescue']] About TableOfContents" modified="20210306202239823" title="$:/StoryList">
+<div created="20210304172139335" list="[[Disk / drive (HDD/SSD/Flash) / filesystem Rescue]] About TableOfContents" modified="20210306202330838" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12415,7 +12415,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210306202237804" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20210306202329191" modifier="Thorbijoern" title="$:/temp/search">
 <pre>nas</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -12869,7 +12869,7 @@ plots:
 * https://sourceforge.net/projects/ltfat/
 * https://ltfat.github.io/</pre>
 </div>
-<div created="20210304172225400" modified="20210306195734577" tags="[[computer science / IT stuff]]" title="backup">
+<div created="20210304172225400" modified="20210306202322384" tags="[[computer science / IT stuff]]" title="backup">
 <pre>Tools
 
 * https://en.wikipedia.org/wiki/Comparison_of_backup_software
@@ -12887,6 +12887,7 @@ information
 
 * https://media.ccc.de/search/?q=backup
 * https://www.howtogeek.com/346907/backups-vs.-redundancy-what%E2%80%99s-the-difference/
+* see [[DIY FLOSS home NAS]]
 
 commercial services:
 
@@ -13566,6 +13567,73 @@ connectors
 <div created="20200615221708894" modified="20200615221722697" tags="Audio" title="digital audio">
 <pre></pre>
 </div>
+<div created="20200512223154841" modified="20210306202509215" tags="[[computer science / IT stuff]]" title="Disk / drive (HDD/SSD/Flash) / filesystem Rescue">
+<pre>see also [[PC troubleshooting tools]] and maybe [[digital / computer forensic]]
+
+Tools:
+
+* open-source (mostly linux)
+** dd
+*** if you're not experienced with dd it's very easy to fuck thins up, use gdiskdump which provides a GUI
+**** https://helpdeskgeek.com/linux-tips/use-the-linux-%E2%80%98dd%E2%80%99-command-with-a-simple-gui/
+**** https://ostechnix.com/kindd-a-graphical-frontend-to-dd-command/
+*** https://wiki.ubuntuusers.de/dd/
+*** https://unix.stackexchange.com/questions/180330/resuming-a-dd-of-an-entire-disk
+** ddrescue (dd_rescue?)
+*** https://wiki.ubuntuusers.de/gddrescue/
+*** https://de.wikipedia.org/wiki/Ddrescue
+*** https://www.030-datenrettung.de/datenrettung-linux-ddrescue-anleitung
+*** https://www.gnu.org/software/ddrescue/
+*** speed
+**** https://superuser.com/questions/413650/is-there-any-way-to-speed-up-ddrescue
+**** https://unix.stackexchange.com/questions/366901/faster-disk-recovery-ddrescue-running-slow
+* https://www.pcwelt.de/ratgeber/dd-und-dd-rescue-Datenrettung-fuer-Windows-und-Linux-171679.html
+** ~PhotoRec
+*** https://www.cgsecurity.org/wiki/PhotoRec
+*** https://de.wikipedia.org/wiki/PhotoRec
+** Testdisk
+*** https://www.cgsecurity.org/wiki/TestDisk
+*** https://de.wikipedia.org/wiki/TestDisk
+** GParted
+** fsck
+** linux live ISOs (for CD/USB)
+*** http://www.datenrettung-etc.de/datenrettung-live-cd.htm (example for possible software)
+*** see [[PC troubleshooting tools]]
+*** https://distrowatch.com/search.php?category=Data+Rescue
+** fdisk
+*** https://de.wikipedia.org/wiki/Fdisk
+*** https://wiki.ubuntuusers.de/fdisk/
+** Fight Flash Fraud
+*** https://fight-flash-fraud.readthedocs.io/en/stable/index.html
+*** https://github.com/AltraMayor/f3
+
+* proprietary/closed-source
+** [[HDDSuperClone|http://www.sdcomputingservice.com/hddsuperclone]]
+** diskpart (windows tool)
+* https://www.heise.de/ct/artikel/c-t-Systeminfo-2859100.html
+** https://www.heise.de/download/product/h2testw-50539
+
+infos
+
+* https://forensicswiki.xyz/page/Main_Page
+* https://www.lifewire.com/what-are-read-and-write-speeds-2640236
+* https://linuxhandbook.com/linux-list-disks/
+* https://www.cyberciti.biz/faq/linux-getting-scsi-ide-harddisk-information/
+* https://www.tecmint.com/check-linux-hard-disk-bad-sectors-bad-blocks/
+* SMART
+* https://media.ccc.de/search/?q=datenrettung
+* https://www.tecmint.com/manage-ext2-ext3-and-ext4-health-in-linux/
+* https://www.dedoimedo.com/computers/linux-data-recovery.html
+* https://www.linux.com/training-tutorials/get-your-data-back-linux-based-data-recovery-tools/
+* https://www.linux.com/news/recovering-linux-files-and-filesystems/
+* https://www.ubuntupit.com/top-15-linux-data-recovery-tools-the-professionals-choice/
+* https://www.techrepublic.com/blog/10-things/10-linux-rescue-tools-for-recovering-linux-windows-or-mac-machines/
+* https://www.lifewire.com/free-data-recovery-software-tools-2622893
+* https://itsfoss.com/recover-deleted-files-linux/
+* https://www.fossmint.com/linux-rescue-recovery-tools/
+* https://www.maketecheasier.com/recover-data-linux-tools/
+* https://fossbytes.com/top-best-free-data-recovery-software-2016/</pre>
+</div>
 <div created="20201104164448012" modified="20210214222712396" tags="amplifiers" title="DIY amps">
 <pre>* http://www.devtome.com/an_open_source_hi-fi_amplifier
 * [[HiFi Elektronik Selbstbauprojekte: Do it yourself (DIY) Tipps|http://www.hifi-forum.de/viewforum-103.html]]
@@ -13641,8 +13709,8 @@ Class A
 <pre>* http://fuzzcraft.com/flightcasediy.html
 * https://www.instructables.com/Making-of-a-DIY-Flightcase/</pre>
 </div>
-<div created="20200512224957532" modified="20210306202259950" tags="[[My Setup]] [[Free / Open / Libre *]]" title="DIY FLOSS home NAS">
-<pre>using an [[SBC|single board computer (SBC)]]
+<div created="20200512224957532" modified="20210306202341916" tags="[[My Setup]] [[Free / Open / Libre *]]" title="DIY FLOSS home NAS">
+<pre>using an [[SBC|single board computer (SBC)]], see [[backup]]
 
 * OS: ~OpenMediaVault? (~FreeNAS and ZFS need way more RAM)
 ** https://docs.nextcloud.com/server/16/admin_manual/installation/system_requirements.html
@@ -13874,72 +13942,8 @@ stuff
 <div modified="20210301213728973" title="Draft of '19&quot; Rack'">
 <pre></pre>
 </div>
-<div created="20200512223154841" draft.of="HDD Rescue" draft.title="Disk / drive (HDD/SSD/Flash) / filesystem Rescue" modified="20210306202225125" tags="[[computer science / IT stuff]]" title="Draft of 'HDD Rescue'">
-<pre>see also [[PC troubleshooting tools]] and maybe [[digital / computer forensic]]
-
-Tools:
-
-* open-source (mostly linux)
-** dd
-*** if you're not experienced with dd it's very easy to fuck thins up, use gdiskdump which provides a GUI
-**** https://helpdeskgeek.com/linux-tips/use-the-linux-%E2%80%98dd%E2%80%99-command-with-a-simple-gui/
-**** https://ostechnix.com/kindd-a-graphical-frontend-to-dd-command/
-*** https://wiki.ubuntuusers.de/dd/
-*** https://unix.stackexchange.com/questions/180330/resuming-a-dd-of-an-entire-disk
-** ddrescue (dd_rescue?)
-*** https://wiki.ubuntuusers.de/gddrescue/
-*** https://de.wikipedia.org/wiki/Ddrescue
-*** https://www.030-datenrettung.de/datenrettung-linux-ddrescue-anleitung
-*** https://www.gnu.org/software/ddrescue/
-*** speed
-**** https://superuser.com/questions/413650/is-there-any-way-to-speed-up-ddrescue
-**** https://unix.stackexchange.com/questions/366901/faster-disk-recovery-ddrescue-running-slow
-* https://www.pcwelt.de/ratgeber/dd-und-dd-rescue-Datenrettung-fuer-Windows-und-Linux-171679.html
-** ~PhotoRec
-*** https://www.cgsecurity.org/wiki/PhotoRec
-*** https://de.wikipedia.org/wiki/PhotoRec
-** Testdisk
-*** https://www.cgsecurity.org/wiki/TestDisk
-*** https://de.wikipedia.org/wiki/TestDisk
-** GParted
-** fsck
-** linux live ISOs (for CD/USB)
-*** http://www.datenrettung-etc.de/datenrettung-live-cd.htm (example for possible software)
-*** see [[PC troubleshooting tools]]
-*** https://distrowatch.com/search.php?category=Data+Rescue
-** fdisk
-*** https://de.wikipedia.org/wiki/Fdisk
-*** https://wiki.ubuntuusers.de/fdisk/
-** Fight Flash Fraud
-*** https://fight-flash-fraud.readthedocs.io/en/stable/index.html
-*** https://github.com/AltraMayor/f3
-
-* proprietary/closed-source
-** [[HDDSuperClone|http://www.sdcomputingservice.com/hddsuperclone]]
-** diskpart (windows tool)
-* https://www.heise.de/ct/artikel/c-t-Systeminfo-2859100.html
-** https://www.heise.de/download/product/h2testw-50539
-
-infos
-
-* https://forensicswiki.xyz/page/Main_Page
-* https://www.lifewire.com/what-are-read-and-write-speeds-2640236
-* https://linuxhandbook.com/linux-list-disks/
-* https://www.cyberciti.biz/faq/linux-getting-scsi-ide-harddisk-information/
-* https://www.tecmint.com/check-linux-hard-disk-bad-sectors-bad-blocks/
-* SMART
-* https://media.ccc.de/search/?q=datenrettung
-* https://www.tecmint.com/manage-ext2-ext3-and-ext4-health-in-linux/
-* https://www.dedoimedo.com/computers/linux-data-recovery.html
-* https://www.linux.com/training-tutorials/get-your-data-back-linux-based-data-recovery-tools/
-* https://www.linux.com/news/recovering-linux-files-and-filesystems/
-* https://www.ubuntupit.com/top-15-linux-data-recovery-tools-the-professionals-choice/
-* https://www.techrepublic.com/blog/10-things/10-linux-rescue-tools-for-recovering-linux-windows-or-mac-machines/
-* https://www.lifewire.com/free-data-recovery-software-tools-2622893
-* https://itsfoss.com/recover-deleted-files-linux/
-* https://www.fossmint.com/linux-rescue-recovery-tools/
-* https://www.maketecheasier.com/recover-data-linux-tools/
-* https://fossbytes.com/top-best-free-data-recovery-software-2016/</pre>
+<div modified="20210306202323854" title="Draft of 'backup'">
+<pre></pre>
 </div>
 <div modified="20210303021418226" title="Draft of 'open source solar generator'">
 <pre></pre>
@@ -14908,23 +14912,6 @@ diy inverter generator:
 * https://media.ccc.de/v/np14-20-it_durchsuchungen
 * https://media.ccc.de/v/35c3-10018-verhalten_bei_hausdurchsuchungen
 * https://media.ccc.de/v/23C3-1346-de-sie_haben_das_recht_zu_schweigen
-</pre>
-</div>
-<div created="20200512223154841" modified="20201126215624989" tags="[[computer science / IT stuff]]" title="HDD Rescue">
-<pre>Tools:
-
-* open-source (mostly linux)
-** dd
-** ddrescue
-** ~PhotoRec
-** Testdisk
-** GParted
-** fsck
-** linux live ISOs (for CD/USB), especially Knoppix
-*** http://www.datenrettung-etc.de/datenrettung-live-cd.htm (example for possible software)
-* proprietary/closed-source
-** [[HDDSuperClone|http://www.sdcomputingservice.com/hddsuperclone]]
-** diskpart (windows tool)
 </pre>
 </div>
 <div created="20210210195119504" modified="20210306190627555" tags="[[accumulator - battery]]" title="high-current cabling and connectors">
