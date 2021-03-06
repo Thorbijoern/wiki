@@ -759,6 +759,8 @@ Error message and password prompt
 
 <li>DC microgrid / nanogrid</li>
 
+<li>digital / computer forensic</li>
+
 <li>digital audio</li>
 
 <li>DIY amps</li>
@@ -790,8 +792,6 @@ Error message and password prompt
 <li>diy xy animation laser / laser xy-scanner / laser projector</li>
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
-
-<li>Draft of ' 1'</li>
 
 <li>Draft of ' 2'</li>
 
@@ -11054,8 +11054,8 @@ TableOfContents</pre>
 <div created="20200629133847897" modified="20200629133847897" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200512220934152" modified="20210306192132777" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20200512220934152" modified="20210306201405562" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20200512221743504" modified="20200512221811755" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
@@ -11399,7 +11399,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210304172139335" list="backup [[Draft of ' 1']] [[Draft of 'HDD Rescue']] About TableOfContents" modified="20210306195338950" title="$:/StoryList">
+<div created="20210304172139335" list="[[digital / computer forensic]] [[Draft of 'HDD Rescue']] About TableOfContents" modified="20210306201155335" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12413,8 +12413,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210306195306104" modifier="Thorbijoern" title="$:/temp/search">
-<pre>backup</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210306201154022" modifier="Thorbijoern" title="$:/temp/search">
+<pre>foren</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13554,6 +13554,13 @@ connectors
 * anderson sbe, powerpole?
 * harting?</pre>
 </div>
+<div created="20210306195212071" modified="20210306201408377" tags="[[computer science / IT stuff]]" title="digital / computer forensic">
+<pre>* https://forensicswiki.xyz/page/Main_Page
+* https://media.ccc.de/search/?q=forensik
+* https://de.wikipedia.org/wiki/IT-Forensik
+* https://www.computer-forensik.org/tools/
+* https://www.cleverfiles.com/howto/de/computer-forensic.html</pre>
+</div>
 <div created="20200615221708894" modified="20200615221722697" tags="Audio" title="digital audio">
 <pre></pre>
 </div>
@@ -13850,10 +13857,6 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
-<div created="20210306195212071" draft.of=" 1" draft.title="digital / computer forensic" modified="20210306195233644" tags="[[computer science / IT stuff]]" title="Draft of ' 1'">
-<pre>* https://forensicswiki.xyz/page/Main_Page
-* https://media.ccc.de/search/?q=forensik</pre>
-</div>
 <div modified="20210214150356242" title="Draft of ' 2'">
 <pre></pre>
 </div>
@@ -13868,12 +13871,16 @@ stuff
 <div modified="20210301213728973" title="Draft of '19&quot; Rack'">
 <pre></pre>
 </div>
-<div created="20200512223154841" draft.of="HDD Rescue" draft.title="Disk / drive (HDD/SSD/Flash) Rescue" modified="20210306195251777" tags="[[computer science / IT stuff]]" title="Draft of 'HDD Rescue'">
-<pre>Tools:
+<div created="20200512223154841" draft.of="HDD Rescue" draft.title="Disk / drive (HDD/SSD/Flash) Rescue" modified="20210306201135654" tags="[[computer science / IT stuff]]" title="Draft of 'HDD Rescue'">
+<pre>see also [[PC troubleshooting tools]]
+
+Tools:
 
 * open-source (mostly linux)
 ** dd
 *** if you're not experienced with dd it's very easy to fuck thins up, use gdiskdump which provides a GUI
+**** https://helpdeskgeek.com/linux-tips/use-the-linux-%E2%80%98dd%E2%80%99-command-with-a-simple-gui/
+**** https://ostechnix.com/kindd-a-graphical-frontend-to-dd-command/
 *** https://wiki.ubuntuusers.de/dd/
 *** https://unix.stackexchange.com/questions/180330/resuming-a-dd-of-an-entire-disk
 ** ddrescue (dd_rescue?)
@@ -13886,14 +13893,28 @@ stuff
 **** https://unix.stackexchange.com/questions/366901/faster-disk-recovery-ddrescue-running-slow
 * https://www.pcwelt.de/ratgeber/dd-und-dd-rescue-Datenrettung-fuer-Windows-und-Linux-171679.html
 ** ~PhotoRec
+*** https://www.cgsecurity.org/wiki/PhotoRec
+*** https://de.wikipedia.org/wiki/PhotoRec
 ** Testdisk
+*** https://www.cgsecurity.org/wiki/TestDisk
+*** https://de.wikipedia.org/wiki/TestDisk
 ** GParted
 ** fsck
-** linux live ISOs (for CD/USB), especially Knoppix
+** linux live ISOs (for CD/USB)
 *** http://www.datenrettung-etc.de/datenrettung-live-cd.htm (example for possible software)
+*** see [[PC troubleshooting tools]]
+** fdisk
+*** https://de.wikipedia.org/wiki/Fdisk
+*** https://wiki.ubuntuusers.de/fdisk/
+** Fight Flash Fraud
+*** https://fight-flash-fraud.readthedocs.io/en/stable/index.html
+*** https://github.com/AltraMayor/f3
+
 * proprietary/closed-source
 ** [[HDDSuperClone|http://www.sdcomputingservice.com/hddsuperclone]]
 ** diskpart (windows tool)
+* https://www.heise.de/ct/artikel/c-t-Systeminfo-2859100.html
+** https://www.heise.de/download/product/h2testw-50539
 
 infos
 
@@ -17415,7 +17436,7 @@ diy passive radiators?
 * using off-the-shelf speaker suspensions? (sicken)
 * making own out of silicone?</pre>
 </div>
-<div created="20210301140624480" modified="20210301180009253" tags="[[computer science / IT stuff]]" title="PC troubleshooting tools">
+<div created="20210301140624480" modified="20210306200219142" tags="[[computer science / IT stuff]]" title="PC troubleshooting tools">
 <pre>* see also [[multiboot usb tools]]
 * https://www.hirensbootcd.org/
 * https://www.knopper.net/knoppix-info/index-en.html
@@ -17424,11 +17445,13 @@ diy passive radiators?
 ** still gets updates but not much further development
 ** https://sourceforge.net/projects/ubcd/ (dead here)
 * https://partedmagic.com/
+** https://de.wikipedia.org/wiki/Parted_Magic
 * gparted
 ** gparted live
 * https://unetbootin.github.io/
 * https://wiki.syslinux.org/wiki/index.php?title=Hdt_(Hardware_Detection_Tool)
-* https://alternativeto.net/software/ultimate-boot-cd/about/</pre>
+* https://alternativeto.net/software/ultimate-boot-cd/about/
+* see also [[Disk / drive (HDD/SSD/Flash) Rescue]]</pre>
 </div>
 <div created="20201209004247782" modified="20201209004321147" tags="[[IT / Computer security and digital / internet privacy]]" title="PGP / GPG / e-mail encryption">
 <pre>* https://www.heise.de/ct/artikel/Einfach-erklaert-E-Mail-Verschluesselung-mit-PGP-4006652.html</pre>
