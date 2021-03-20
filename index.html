@@ -11179,7 +11179,7 @@ TableOfContents</pre>
 <div created="20201106001147477" modified="20210303165720038" title="$:/state/toc/TableOfContents-Dresden--118161433">
 <pre>close</pre>
 </div>
-<div created="20201104230255182" modified="20210320203031081" title="$:/state/toc/TableOfContents-Electronics--118161433">
+<div created="20201104230255182" modified="20210320203649951" title="$:/state/toc/TableOfContents-Electronics--118161433">
 <pre>open</pre>
 </div>
 <div created="20201112235352506" modified="20201113000256699" title="$:/state/toc/TableOfContents-Electronics-497309061">
@@ -11467,7 +11467,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210312193302444" list="[[synth: hardware, software]] [[LFP pack build]] [[measuring current]] About TableOfContents" modified="20210320203158845" title="$:/StoryList">
+<div created="20210312193302444" list="[[electronic basics]] [[LFP pack build]] [[measuring current]] About TableOfContents" modified="20210320203651743" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12481,8 +12481,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210320203055661" modifier="Thorbijoern" title="$:/temp/search">
-<pre>https://www.youtube.com/watch?v=d-E12DlzGGc</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210320203645712" modifier="Thorbijoern" title="$:/temp/search">
+<pre>https://www.youtube.com/watch?v=XMsb_qFy5sc</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14144,7 +14144,7 @@ for Cars and Trucks
 * https://www.bosch-mobility-solutions.com/de/produkte-und-services/pkw-und-leichte-nutzfahrzeuge/antriebssysteme/elektroantrieb/
 * https://www.n-tv.de/auto/Motoren-in-Elektroautos-sind-nicht-gleich-article21970051.html</pre>
 </div>
-<div created="20201126214215324" modified="20201208215451554" tags="Electronics" title="electronic basics">
+<div created="20201126214215324" modified="20210320204052256" tags="Electronics" title="electronic basics">
 <pre>* [[EEVblog: Fundamentals Friday|https://www.youtube.com/playlist?list=PLvOlSehNtuHtWlH0UOZNtOn-FlFCn1GYw]]
 * [[GreatScott!: Electronic Basics|https://www.youtube.com/playlist?list=PLAROrg3NQn7cyu01HpOv5BWo217XWBZu0]]
 * https://en.khanacademy.org/science/electrical-engineering
@@ -14162,7 +14162,10 @@ for Cars and Trucks
 *** [[Electronic Basics #12: Coils / Inductors (Part 1)|https://www.youtube.com/watch?v=kdrP9WbJIb8]]
 *** [[Electronic Basics #13: Coils / Inductors (Part 2) ~~ Reactance|https://www.youtube.com/watch?v=XCnI6ZOYKes]]
 *** [[How to choose the right coil type (inductor)?!|https://www.youtube.com/watch?v=hYOtx_2hYTU]]
-** [[How INDUCTOR's work &amp; How to make your own|https://www.youtube.com/watch?v=d-E12DlzGGc]]
+*** [[How INDUCTOR's work &amp; How to make your own|https://www.youtube.com/watch?v=d-E12DlzGGc]]
+*** transformers
+**** [[Transformers 101: How They Work &amp; How To Wire Them|https://www.youtube.com/watch?v=XMsb_qFy5sc]]
+**** [[How To: Rewind Microwave Oven Transformer, Trash To Treasure!|https://www.youtube.com/watch?v=I3fQjlInC44]]
 * Tools
 ** [[Essential Tools that you will need for creating electronics projects!|https://www.youtube.com/watch?v=7-djg27lJyQ]]
 ** [[EEVblog #168 - How To Set Up An Electronics Lab|https://www.youtube.com/watch?v=R_PbjbRaO2E]]
@@ -16238,15 +16241,19 @@ i can't find the megaphone parts separately....
 
 * https://www.soundlazer.com/how-does-a-long-range-acoustic-device-lrad-work-teardown/</pre>
 </div>
-<div created="20210103222540142" modified="20210306193744605" tags="Electronics [[computer science / IT stuff]]" title="microcontroller">
+<div created="20210103222540142" modified="20210320203553062" tags="Electronics [[computer science / IT stuff]]" title="microcontroller">
 <pre>needed/used for many kinds of projects/devices
 
 see [[embedded device development]]
 
 * Arduino
 ** Adafruit and other compatible
+* PIC
+** old industry standard, many compatible chips still on the marked, but outdated
+** basic programming is pretty easy due to the simple architecture, but it's processing power and capabilities are pretty limited
 * STM32
 ** cheap, pretty powerful (more than arduino)
+** new industry standard
 ** debugging using ~OpenOCD and gdb
 ** https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html
 ** [[Easy &amp; Powerful Arduino Alternative? STM32 Beginner's Guide|https://www.youtube.com/watch?v=EaZuKRSvwdo]]
