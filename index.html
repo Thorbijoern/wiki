@@ -813,6 +813,8 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
+<li>Draft of 'switched mode power supply (SMPS)'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -11208,8 +11210,8 @@ TableOfContents</pre>
 <div created="20200514124856830" modified="20200621203723723" title="$:/state/toc/TableOfContents-My Setup-497309061">
 <pre>close</pre>
 </div>
-<div created="20200621183106418" modified="20210312154006581" title="$:/state/toc/TableOfContents-Politics--118161433">
-<pre>close</pre>
+<div created="20200621183106418" modified="20210321223102596" title="$:/state/toc/TableOfContents-Politics--118161433">
+<pre>open</pre>
 </div>
 <div created="20200621200618101" modified="20201104233014903" title="$:/state/toc/TableOfContents-Politics-497309061">
 <pre>close</pre>
@@ -11469,7 +11471,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210312193302444" list="[[synth: hardware, software]] [[LFP pack build]] [[measuring current]] About TableOfContents" modified="20210321214146666" title="$:/StoryList">
+<div created="20210312193302444" list="[[powerlogging / power meter / AC power analysis / energy monitor]] [[Draft of 'switched mode power supply (SMPS)']] [[LFP pack build]] [[measuring current]] About TableOfContents" modified="20210321222929015" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12483,8 +12485,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210321214144247" modifier="Thorbijoern" title="$:/temp/search">
-<pre>tools</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210321223058655" modifier="Thorbijoern" title="$:/temp/search">
+<pre>https://fragdenstaat.de/</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14033,6 +14035,73 @@ stuff
 * https://physicsopenlab.org/wp-content/uploads/2015/11/Spettrometro_ENG.pdf
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
+</div>
+<div created="20201110021349133" draft.of="switched mode power supply (SMPS)" draft.title="switched mode power supply (SMPS)" modified="20210321222801986" tags="[[power electronics (Leistungselektronik)]]" title="Draft of 'switched mode power supply (SMPS)'">
+<pre>switched mode power supplies very efficient power supply designs rectifying the AC Voltage and stepping it down/up to the desired DC voltage; but DC-to-DC Converters are also often SMPS.
+you should know the [[electronic basics]] first
+
+types:
+
+* Boost/Step-Up (Aufwärtswandler)
+* Buck/Step-Down (Abwärtswandler)
+* Buck–boost
+* Ćuk
+* single-ended primary-inductor converter (SEPIC)
+* Split-pi topology
+* Flyback (Sperrwandler)
+* Forward (Eintaktflusswandler)
+** 2 Switch forward
+* Push-Pull (Gegentaktflusswandler)
+
+
+* EEVblog
+**[[EEVblog: Power Supply Design|https://www.youtube.com/playlist?list=PLBF35875F73B5C9B5]]
+** [[EEVblog #139 - Let's Select a DC-DC Boost Converter|https://www.youtube.com/watch?v=-V_p1GBH4pk]]
+* [[The Post Apocalyptic Inventor: SMPS Tutorial|https://www.youtube.com/playlist?list=PLxaGnte1Dq0lgNtfA9H5Hd_YDyjylThJJ]]
+** [[SMPS Tutorial (1): Introduction - Switched Mode Power Supplies and Power Conversion|https://www.youtube.com/watch?v=nbKwUSH9NiY]]
+** [[SMPS Tutorial (2): Linear Regulators, Voltage References, Switched Mode Power Supplies|https://www.youtube.com/watch?v=BjTD9EVs9v8]]
+* [[Power Supply Design #8 How Much Power?|https://www.youtube.com/watch?v=0A49MIG1HrU]]
+* [[How SMPS works ~ What Components We Need? Switched Mode Power Supply|https://www.youtube.com/watch?v=cK5WLMFSGnw]]
+* https://en.wikipedia.org/wiki/Switched-mode_power_supply
+* https://de.wikipedia.org/wiki/Schaltnetzteil
+* [[How SMPS works ~ What Components We Need? Switched Mode Power Supply|https://www.youtube.com/watch?v=cK5WLMFSGnw]]
+* [[FLYBACK DC - DC Converter Theory And Example|https://www.youtube.com/watch?v=HOXgOWoN0EY]]
+* [[Power Supply Troubleshooting and Repair Tips|https://www.youtube.com/watch?v=pffOJdCQ7kw]]
+
+* [[Switch mode power supply tutorial: DC-DC buck converters|https://www.youtube.com/watch?v=CEhBN5_fO5o]]
+* https://libre.solar/docs/dcdc_control/
+** https://learn.libre.solar/development/dcdc_converter.html
+* [[DIY Buck/Boost Converter (Flyback) -- How to step up/down DC voltage efficiently|https://www.youtube.com/watch?v=ZiD_X-uo_TQ]]
+* [[DIY LiPo Charge/Protect/5V Boost Circuit|https://www.youtube.com/watch?v=Fj0XuYiE7HU]]
+* [[Solar Battery Charger (LiPo/Li-Ion) -- DIY or Buy|https://www.youtube.com/watch?v=kEttqWJrdww]]
+* [[EEVblog #272 - Manson 9400 40A 3-15V Switchmode PSU Teardown|https://www.youtube.com/watch?v=bX8IIjf15qY]]
+* [[Solar Panel, SuperCapacitors and a Buck/Boost|https://www.youtube.com/watch?v=ITsmOBdBKzk]]
+* [[DIY Buck converter - TUTORIAL|https://www.youtube.com/watch?v=SM5qPrOrDrc]]
+* https://circuitdigest.com/smps-power-supply-circuits
+* https://en.wikipedia.org/wiki/DC-to-DC_converter
+** https://en.wikipedia.org/wiki/Category:DC-to-DC_converters
+* https://web.archive.org/web/20190717131310/https://sound.whsites.net/project89.htm - Switchmode Power Supply For Car Audio
+* https://www.youtube.com/watch?v=Edel3eduRj4
+* https://sound-au.com/articles.htm#psud
+* [[AC/DC Switch Mode Power Supply (SMPS) Intro and Demo|https://www.youtube.com/watch?v=NZcfn413s0A]]
+* https://de.wikipedia.org/wiki/Gleichspannungswandler
+* https://de.wikipedia.org/wiki/Kategorie:Gleichspannungswandler
+* https://www.ti.com/solution/automotive-dc-dc-converter
+* https://www.ti.com/solution/energy-storage-power-conversion-system
+* mean well sells some pretty good supplies https://www.meanwell.com/index.html
+
+running AC SMPS from DC
+
+* https://electronics.stackexchange.com/questions/262645/using-dc-voltage-instead-of-ac-to-supply-smps
+* https://www.heise.de/select/ct/2016/2/1452238205894722?hg=1&amp;hgi=2&amp;hgf=false
+
+design:
+
+* Simulation Software can help a lot with designing
+** https://de.wikipedia.org/wiki/LTspice
+** https://de.wikipedia.org/wiki/SPICE_(Software)
+** https://en.wikipedia.org/wiki/SPICE
+* https://www.joretronik.de/Web_NT_Buch/Vorwort/Vorwort.html</pre>
 </div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
@@ -17749,11 +17818,13 @@ https://www.bpb.de/</pre>
 * https://learn.libre.solar/development/
 * [[Leistungselektronik playlist by Elektrotechnik in 5 Minuten|https://www.youtube.com/playlist?list=PLjkreDBz1mhBdC8AnNin3kRGO2w-F_aa_]]</pre>
 </div>
-<div created="20201126214130712" modified="20210317221754638" tags="tools [[testing &amp; measuring]] [[Internet of Things (IoT), Home automation]]" title="powerlogging / power meter / AC power analysis / energy monitor">
+<div created="20201126214130712" modified="20210321223104691" tags="tools [[testing &amp; measuring]] [[Internet of Things (IoT), Home automation]]" title="powerlogging / power meter / AC power analysis / energy monitor">
 <pre>* [[Electronic Basics #38: True, Reactive, Apparent &amp; Deformed Power|https://www.youtube.com/watch?v=cxXmWZDwNEs]]
 * power factor (Leistungsfaktor)
 ** https://de.wikipedia.org/wiki/Leistungsfaktor
 ** https://en.wikipedia.org/wiki/Power_factor
+** https://de.aliexpress.com/item/4000210840139.html
+** https://www.youtube.com/watch?v=Vb9-pbLdsfQ
 * https://learn.openenergymonitor.org/electricity-monitoring/ac-power-theory/introduction
 * https://www.allaboutcircuits.com/textbook/alternating-current/chpt-11/true-reactive-and-apparent-power/
 * https://de.wikipedia.org/wiki/Spannungsqualit%C3%A4t
