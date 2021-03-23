@@ -815,10 +815,6 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
-<li>Draft of 'efficient (12&quot;, 10&quot; or 8&quot;) Tops/fullrange'</li>
-
-<li>Draft of 'Soundboks Internals (Teardown)'</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -11482,7 +11478,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210312193302444" list="[[component testers / LRC / LC meter]] [[Draft of 'efficient (12&quot;, 10&quot; or 8&quot;) Tops/fullrange']] [[efficient, modular, battery powered mobile speaker]] [[Draft of 'Soundboks Internals (Teardown)']] [[LFP pack build]] [[measuring current]] About TableOfContents" modified="20210323002844190" title="$:/StoryList">
+<div created="20210312193302444" list="[[efficient, modular, battery powered mobile speaker]] [[Soundboks Internals (Teardown)]] [[LFP pack build]] [[measuring current]] About TableOfContents" modified="20210323002844190" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -14050,62 +14046,6 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
-<div created="20210322235110913" draft.of="efficient (12&quot;, 10&quot; or 8&quot;) Tops/fullrange" draft.title="efficient (12&quot;, 10&quot; or 8&quot;) Tops/fullrange" modified="20210323002648959" tags="speakers" title="Draft of 'efficient (12&quot;, 10&quot; or 8&quot;) Tops/fullrange'">
-<pre>&lt;&lt;&lt;
-Grundsätzlich würde ich sagen, Kauf dir nen 12&quot; koax Lautsprecher mit 1,4er oder so in der Mitte, dann hast du eine Schallquelle was der Sprachverständlichkeit zu gute kommt. Trennfrequenz von tmt zu HT musst du auf den coax Anpassen, dann nen Recht großes BR Gehäuse mit großen Ports und 80-120hz Abstimmung um Recht viel Wirkungsgrad zu bekommen. Reicht für Sprache locker als standalone
-&lt;&lt;&lt;
-
-* ported, bass reflex, see [[ports / vents]]
-* abstimmung
-** fullrange:
-*** je nach größe des basstreiber 50-65hz
-** tops:
-*** eher bei 100-200Hz</pre>
-</div>
-<div created="20200514144908281" draft.of="Soundboks Internals (Teardown)" draft.title="Soundboks Internals (Teardown)" modified="20210322232541577" tags="Soundsystem" title="Draft of 'Soundboks Internals (Teardown)'">
-<pre>* Teardown: https://www.youtube.com/watch?v=WYk2dAuHJWo (Russian?)
-* https://www.soundboks.com/de/products/soundboks-2/techspecs/
-* https://www.soundboks.com/products/soundboks-2/techspecs/
-* https://www.soundboks.com/products/new-soundboks/compare/
-* https://github.com/alexgorbatchev/boominator
-* https://www.diyaudio.com/forums/class-d/104402-boominator-stab-ultimate-party-machine.html
-
-tecspecs:
-
-* power supply
-** battery: 12.8V, 7.8Ah Lithium Iron Phosphate (LiFePO4) with [[BMS|Battery Management System (BMS)]] (with indicator)
-** &quot;Dynamic DC/DC Boost Converter&quot; - just a step-up/boost [[SMPS|switched mode power supply (SMPS)]]
-* amplifier:
-** &quot;Merus Audio eximo® amp switching (Merus Audio eximo® Amp-Schaltung)&quot;
-** &quot;3 x 72Wrms class D amplifier&quot;
-** ~~216Wrms combined, ~90W per woofer and 35-40W for the tweeter?~~
-** https://www.infineon.com/cms/en/product/power/class-d-audio-amplifier-ic/
-** [[PDF-Copy of an AudioXPress Article, published by Infineon|https://www.infineon.com/dgdl/Infineon-Infineon_Article_AudioXpress_SOUNDBOKS_ridiculously_large_portable_bluetooth_speaker_powered_by_merus_audio_eximo_amplifier_technology_EN-ART-v01_00-EN.pdf?fileId=5546d46265f064ff016658aa18890d1f]]
-*** stating the soundboks 2 uses 2 MA12070P ICs
-*** that it uses an amp IC with digital input was not unexpected because the soundboks utilises a DSP
-** using both MA12070P in BTL mode but only using 3 outputs? the datasheet states 60W peak with no heatsink at THD+N = 1%, how do they want to get 72Wrms out of that?
-** Merus eximo amps aren't more efficient than other manufacturers amps
-* drivers:
-** 2
-*** &quot;1 x 96dB 1” (Ø25mm) neodymium silk dome tweeter&quot;
-*** &quot;2 x 96dB 10” (Ø254mm) woofers&quot;
-** new
-*** 1” 104 dB Compression Driver Tweeter
-*** 2 × 10” 96dB woofers
-** bass reflex port
-*** 2 × Ø56mm Ports (2)
-*** &quot;Pulse Reflex Port&quot;, just some proprietary ports (new)
-* bluetooth chip/functions:
-** soundboks 2: Bt v3.0
-** new soundboks: Bt v5.0
-** DSP (probably just some EQ and active crossover)
-*** there are bluetooth receiver (boards) with integrated DSP functionality
-*** the version 3 seems to have fore functions there
-* misc:
-** &quot;Effective frequency range: 40Hz - 20kHz (Effektiver Frequenzbereich: 40Hz - 20kHz)&quot;
-** max SPL: 122 dB (2), 126 dB (new)
-** &quot;1 x Ø35mm Pole mount (Ø35mm Stangenhalterung)&quot;</pre>
-</div>
 <div created="20201104201703044" modified="20201104201818672" tags="TableOfContents" title="Dresden">
 <pre>https://en.wikipedia.org/wiki/Dresden</pre>
 </div>
@@ -14135,12 +14075,17 @@ stuff
 
 * https://hackaday.com/blog/page/4/?s=e%20bike</pre>
 </div>
-<div created="20210322235110913" modified="20210323001845073" tags="speakers" title="efficient (12&quot;, 10&quot; or 8&quot;) Tops/fullrange">
+<div created="20210322235110913" modified="20210323002925408" tags="speakers" title="efficient (12&quot;, 10&quot; or 8&quot;) Tops/fullrange">
 <pre>&lt;&lt;&lt;
 Grundsätzlich würde ich sagen, Kauf dir nen 12&quot; koax Lautsprecher mit 1,4er oder so in der Mitte, dann hast du eine Schallquelle was der Sprachverständlichkeit zu gute kommt. Trennfrequenz von tmt zu HT musst du auf den coax Anpassen, dann nen Recht großes BR Gehäuse mit großen Ports und 80-120hz Abstimmung um Recht viel Wirkungsgrad zu bekommen. Reicht für Sprache locker als standalone
 &lt;&lt;&lt;
 
-* ported, bass reflex</pre>
+* ported, bass reflex, see [[ports / vents]]
+* abstimmung
+** fullrange:
+*** je nach größe des basstreiber 50-65hz
+** tops:
+*** eher bei 100-200Hz</pre>
 </div>
 <div created="20200818121626609" modified="20210323001944173" tags="speakers [[Audio Projects]]" title="efficient, modular, battery powered mobile speaker">
 <pre>the goal of this project is to build an open and modular platform combining good features of different &quot;competitors&quot;
@@ -18866,7 +18811,7 @@ _____
 <div created="20210126004435980" modified="20210126004457475" tags="Audio" title="sound physics basics">
 <pre>* https://www.physicsclassroom.com/class/sound</pre>
 </div>
-<div created="20200514144908281" modified="20201129232443344" tags="Soundsystem" title="Soundboks Internals (Teardown)">
+<div created="20200514144908281" modified="20210323003040216" tags="Soundsystem" title="Soundboks Internals (Teardown)">
 <pre>* Teardown: https://www.youtube.com/watch?v=WYk2dAuHJWo (Russian?)
 * https://www.soundboks.com/de/products/soundboks-2/techspecs/
 * https://www.soundboks.com/products/soundboks-2/techspecs/
@@ -18888,7 +18833,7 @@ tecspecs:
 *** stating the soundboks 2 uses 2 MA12070P ICs
 *** that it uses an amp IC with digital input was not unexpected because the soundboks utilises a DSP
 ** using both MA12070P in BTL mode but only using 3 outputs? the datasheet states 60W peak with no heatsink at THD+N = 1%, how do they want to get 72Wrms out of that?
-Merus eximo amps aren't more efficient than other manufacturers amps
+** Merus eximo amps aren't more efficient than other manufacturers amps
 * drivers:
 ** 2
 *** &quot;1 x 96dB 1” (Ø25mm) neodymium silk dome tweeter&quot;
@@ -18902,9 +18847,11 @@ Merus eximo amps aren't more efficient than other manufacturers amps
 * bluetooth chip/functions:
 ** soundboks 2: Bt v3.0
 ** new soundboks: Bt v5.0
+** DSP (probably just some EQ and active crossover)
+*** there are bluetooth receiver (boards) with integrated DSP functionality
+*** the version 3 seems to have fore functions there
 * misc:
 ** &quot;Effective frequency range: 40Hz - 20kHz (Effektiver Frequenzbereich: 40Hz - 20kHz)&quot;
-** DSP (probably just some EQ and active crossover)
 ** max SPL: 122 dB (2), 126 dB (new)
 ** &quot;1 x Ø35mm Pole mount (Ø35mm Stangenhalterung)&quot;</pre>
 </div>
