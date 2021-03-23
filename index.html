@@ -829,6 +829,8 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
+<li>Draft of 'backup'</li>
+
 <li>Draft of 'tools'</li>
 
 <li>Dresden</li>
@@ -11515,7 +11517,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210312193302444" list="backup About TableOfContents" modified="20210323141358884" title="$:/StoryList">
+<div created="20210312193302444" list="[[Battery Management System (BMS)]] [[Draft of 'backup']] About TableOfContents" modified="20210323200000147" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12529,8 +12531,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210323141356444" modifier="Thorbijoern" title="$:/temp/search">
-<pre>sate</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210323195958817" modifier="Thorbijoern" title="$:/temp/search">
+<pre>bms</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13169,7 +13171,7 @@ sources:
 * [[Li-Ion battery short circuit,overcharge,undervoltage EXPERIMENT|https://www.youtube.com/watch?v=bNNWbm681AI&amp;t=43s]]
 * [[Testing LCBs (Lithium Ceramic Batteries) ~ The Future of Battery Technology?|https://www.youtube.com/watch?v=kJXRyWQgOY4]]</pre>
 </div>
-<div created="20200514200114631" modified="20210302214807026" tags="[[accumulator - battery]] [[power electronics (Leistungselektronik)]]" title="Battery Management System (BMS)">
+<div created="20200514200114631" modified="20210323200557317" tags="[[accumulator - battery]] [[power electronics (Leistungselektronik)]]" title="Battery Management System (BMS)">
 <pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
 
 a BMS does these important tasks:
@@ -13230,8 +13232,10 @@ stuff
 Proprietary high-power BMS
 
 * Daly BMS
-** https://www.dalyelec.eu/
-** Aliexpress/alibaba/ebay</pre>
+** https://www.dalyelec.eu/ - reseller, not official
+** Aliexpress/alibaba/ebay
+** https://dalyelec.en.alibaba.com/
+** https://diysolarforum.com/resources/daly-smart-bms-manual-and-documentation.48/</pre>
 </div>
 <div created="20201104185550842" modified="20210301145134012" tags="[[accumulator - battery]] [[electronics safety]]" title="battery pack safety">
 <pre>(mainly meant for lithium battery packs)
@@ -14223,6 +14227,134 @@ stuff
 * https://physicsopenlab.org/wp-content/uploads/2015/11/Spettrometro_ENG.pdf
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
+</div>
+<div created="20210304172225400" draft.of="backup" draft.title="backup" modified="20210323195041218" tags="[[computer science / IT stuff]]" title="Draft of 'backup'">
+<pre>Tools
+
+* https://en.wikipedia.org/wiki/Comparison_of_backup_software
+* https://en.wikipedia.org/wiki/List_of_backup_software
+* https://www.bacula.org/
+** https://de.wikipedia.org/wiki/Bacula
+** https://wiki.ubuntuusers.de/Bacula/
+* https://en.wikipedia.org/wiki/Proxmox_Backup_Server
+** https://pbs.proxmox.com/wiki/index.php/Main_Page
+* https://www.borgbackup.org/
+** https://github.com/borgbackup/borg
+* Attic
+* https://restic.net/
+* http://duplicity.nongnu.org/
+** https://help.ubuntu.com/community/DuplicityBackupHowto
+** http://duplicity.nongnu.org/duplicity.1.html
+** https://wiki.gnome.org/Apps/DejaDup
+
+information
+
+* https://media.ccc.de/search/?q=backup
+* https://www.howtogeek.com/346907/backups-vs.-redundancy-what%E2%80%99s-the-difference/
+* see [[DIY FLOSS home NAS]]
+
+commercial services:
+
+* https://en.wikipedia.org/wiki/Backblaze - is said to be cheap and pretty good
+** Backblaze B2
+*** https://www.backblaze.com/b2/docs/quick_account.html
+*** https://help.backblaze.com/hc/en-us/articles/217664628-How-does-Backblaze-support-Linux-Users-
+*** Restic on linux: https://help.backblaze.com/hc/en-us/articles/115002880514-How-to-configure-Backblaze-B2-with-Restic-on-Linux
+*** Duplicity on Linux:
+**** https://help.backblaze.com/hc/en-us/articles/115001518354-How-to-configure-Backblaze-B2-with-Duplicity-on-Linux
+**** https://www.loganmarchione.com/2017/07/backblaze-b2-backup-setup/
+* https://duplicacy.com/guide.html - shared source, still proprietary
+** https://github.com/gilbertchen/duplicacy
+
+
+!!! docker backup
+
+
+&lt;&lt;&lt;
+~WhiteKIBA, [23.03.21 15:30]
+Du kannst halt docker volumes exportieren und dann sichern. Alternativ vermeidest du volumes und mountest die Pfade auf deinem lokalen Dateisystem was das grundsätzliche handling sehr vereinfacht
+
+Wenn du die volumes exportierst wirst du dir ziemlich einen abbrechen die inkrementell zu sichern
+
+Ich würde grundsätzlich empfehlen nur Dinge in volumes zu speichern die potentiell für den Betrieb nicht essentiell sind und für alles was sichernswerte Daten enthält volume mounts zu nutzen die auf dem lokalen Dateisystem liegen. Das macht Backups wesentlich angenehmer und falls man an den Dateien mal was manuell basteln muss muss man nicht erst nen temporären ordner starten in dem man die nötigen tools hat
+
+&lt;&lt;&lt;
+
+
+
+
+!!! Backblaze B2 backup using duplicity
+
+1. install
+
+```
+sudo apt update -y
+sudo apt install -y duplicity
+```
+2. [[Setup GPG|https://www.loganmarchione.com/2015/12/a-brief-introduction-to-gpg/#generate-a-key-pair]]; backup the GPG keys and passphrases somewhere else
+
+3. create script in a folder where you store your configs or other scripts
+
+```
+#!/bin/sh
+
+# Backblaze B2 configuration variables
+B2_ACCOUNT=&quot;AAA&quot;
+B2_KEY=&quot;BBB&quot;
+B2_BUCKET=&quot;CCC&quot;
+B2_DIR=&quot;backups&quot;
+
+# Local directory to backup
+LOCAL_DIR=&quot;/var/lib/docker/volumes/&quot;
+
+# GPG key (last 8 characters)
+ENC_KEY=&quot;EEEEEEEE&quot;
+SGN_KEY=&quot;FFFFFFFF&quot;
+export PASSPHRASE=&quot;GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG&quot;
+export SIGN_PASSPHRASE=&quot;HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH&quot; 
+
+# Remove files older than 90 days
+duplicity \
+ --sign-key $SGN_KEY --encrypt-key $ENC_KEY \
+ remove-older-than 90D --force \
+ b2://${B2_ACCOUNT}:${B2_KEY}@${B2_BUCKET}/${B2_DIR}
+
+# Perform the backup, make a full backup if it's been over 30 days
+duplicity \
+ --sign-key $SGN_KEY --encrypt-key $ENC_KEY \
+ --full-if-older-than 30D \
+ ${LOCAL_DIR} b2://${B2_ACCOUNT}:${B2_KEY}@${B2_BUCKET}/${B2_DIR}
+
+# Cleanup failures
+duplicity \
+ cleanup --force \
+ --sign-key $SGN_KEY --encrypt-key $ENC_KEY \
+ b2://${B2_ACCOUNT}:${B2_KEY}@${B2_BUCKET}/${B2_DIR}
+
+# Show collection-status
+duplicity collection-status \
+ --sign-key $SGN_KEY --encrypt-key $ENC_KEY \
+  b2://${B2_ACCOUNT}:${B2_KEY}@${B2_BUCKET}/${B2_DIR}
+
+# Unset variables
+unset B2_ACCOUNT
+unset B2_KEY
+unset B2_BUCKET
+unset B2_DIR
+unset LOCAL_DIR
+unset ENC_KEY
+unset SGN_KEY
+unset PASSPHRASE
+unset SIGN_PASSPHRASE
+```
+
+sources:
+
+* https://help.backblaze.com/hc/en-us/articles/115001518354-How-to-configure-Backblaze-B2-with-Duplicity-on-Linux
+* https://www.loganmarchione.com/2017/07/backblaze-b2-backup-setup/
+* https://help.ubuntu.com/community/DuplicityBackupHowto
+* http://duplicity.nongnu.org/duplicity.1.html
+</pre>
 </div>
 <div modified="20210323122300091" title="Draft of 'tools'">
 <pre></pre>
