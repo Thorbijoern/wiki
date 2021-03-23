@@ -11515,7 +11515,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210312193302444" list="chemistry backup About TableOfContents" modified="20210323141358884" title="$:/StoryList">
+<div created="20210312193302444" list="backup About TableOfContents" modified="20210323141358884" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -13014,7 +13014,7 @@ plots:
 * https://sourceforge.net/projects/ltfat/
 * https://ltfat.github.io/</pre>
 </div>
-<div created="20210304172225400" modified="20210323150853064" tags="[[computer science / IT stuff]]" title="backup">
+<div created="20210304172225400" modified="20210323163452224" tags="[[computer science / IT stuff]]" title="backup">
 <pre>Tools
 
 * https://en.wikipedia.org/wiki/Comparison_of_backup_software
@@ -13071,9 +13071,8 @@ Ich würde grundsätzlich empfehlen nur Dinge in volumes zu speichern die potent
 1. install
 
 ```
-sudo add-apt-repository ppa:duplicity-team/ppa
-sudo apt-get update
-sudo apt-get --only-upgrade install duplicity
+sudo apt update -y
+sudo apt install -y duplicity
 ```
 2. [[Setup GPG|https://www.loganmarchione.com/2015/12/a-brief-introduction-to-gpg/#generate-a-key-pair]]; backup the GPG keys and passphrases somewhere else
 
