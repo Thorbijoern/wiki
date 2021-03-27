@@ -153,6 +153,8 @@ Error message and password prompt
 
 <li>&quot;transistor tester&quot; (avr) component tester</li>
 
+<li>&quot;transistor tester&quot; reverse engineering</li>
+
 <li>(diy) spot welder</li>
 
 <li>(mechanical) engineering</li>
@@ -837,9 +839,7 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
-<li>Draft of ''</li>
-
-<li>Draft of 'component testers / LRC / LC meter'</li>
+<li>Draft of '&quot;transistor tester&quot; reverse engineering'</li>
 
 <li>Draft of 'tools'</li>
 
@@ -1554,7 +1554,7 @@ stuff:
 * https://media.blackhat.com/bh-us-11/Miller/BH_US_11_Miller_Battery_Firmware_Public_WP.pdf
 * http://sbs-forum.org/</pre>
 </div>
-<div created="20210301141022088" modified="20210327194954443" tags="[[testing &amp; measuring]]" title="&quot;transistor tester&quot; (avr) component tester">
+<div created="20210301141022088" modified="20210327202951506" tags="[[testing &amp; measuring]]" title="&quot;transistor tester&quot; (avr) component tester">
 <pre>* Gm328 Transistor / component tester with encoder (seems to be an improved version of the single button one, more features)
 ** https://www.youtube.com/watch?v=C38eSPOF1o0
 ** bought one (kit)
@@ -1566,7 +1566,28 @@ stuff:
 * https://www.mikrocontroller.net/articles/AVR_Transistortester#Einleitung_.28deutsch.29
 * https://www.slideshare.net/dpavlin/cheap-good-hackable-tools-from-china-avr-component-tester
 * https://www.instructables.com/AVR-Transistor-Tester/
-* https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/</pre>
+* https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/
+* [[Full Circuit Schematic Draft 2017 AVR Transistor Tester Component ESR LCR Meter Frequency Generator|https://www.youtube.com/watch?v=T8Fl7HL0c0c]]
+* [[#290​ How do Transistor Testers work (and some other insights)|https://www.youtube.com/watch?v=4Xsg8lpP75s]]</pre>
+</div>
+<div created="20210327193626391" modified="20210327200914673" tags="[[reverse engineering]]" title="&quot;transistor tester&quot; reverse engineering">
+<pre>* [[&quot;transistor tester&quot; (avr) component tester]]
+* uses atmega328p
+* might be possible to read the flash contents of the atmega328p and disassemble it
+** [[atmega/atmel/avr/arduino disassembling]]
+* silkscreen: &quot;K120263BSJH&quot; and &quot;2578AY-AT&quot;
+* some presumably chinese characters are on the copper layers
+* some unknown/unsure components
+** 6-pin smd chip; marked SVR5-04 on silkscreen; marked .V05 on chip
+** 7550A-1 (marked on component), TO-92 package
+*** maybe: https://pdf1.alldatasheet.com/datasheet-pdf/view/1139972/BOOKLY/7550.html?
+** not sure of what type the small capacitors are... ceramic?
+** S9014 (C331) (2x); TO-92 package; npn transistor?
+** S9012 (H331); TO-92 package; PNP transistor?
+** WS TL431A 1535SD in TO-92 package
+*** maybe http://www.ti.com/lit/ds/symlink/tl431.pdf
+** some diode-like 2-pin package (marked 6V8C with some logo) parallel a ceramic smd cap next to the SVR5-04
+* [[Full Circuit Schematic Draft 2017 AVR Transistor Tester Component ESR LCR Meter Frequency Generator|https://www.youtube.com/watch?v=T8Fl7HL0c0c]]</pre>
 </div>
 <div created="20201104234629051" modified="20210320201555061" tags="[[accumulator - battery]]" title="(diy) spot welder">
 <pre>you need a pretty high current for spot welding, voltage ist not as importand.
@@ -11540,7 +11561,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210323212304113" list="[[&quot;transistor tester&quot; (avr) component tester]] [[Draft of 'component testers / LRC / LC meter']] [[Draft of '']] About TableOfContents" modified="20210327194901088" title="$:/StoryList">
+<div created="20210323212304113" list="[[&quot;transistor tester&quot; (avr) component tester]] [[Draft of '&quot;transistor tester&quot; reverse engineering']] About TableOfContents" modified="20210327200850284" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12554,8 +12575,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210327194846230" modifier="Thorbijoern" title="$:/temp/search">
-<pre>compo</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210327200738280" modifier="Thorbijoern" title="$:/temp/search">
+<pre>transist</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13763,8 +13784,9 @@ brennstoffzell / fuel cell
 ** https://framagit.org/framasoft/framadate/framadate/wikis/home
 * framasoft</pre>
 </div>
-<div created="20210118205030582" modified="20210323122616882" tags="[[testing &amp; measuring]] tools" title="component testers / LRC / LC meter">
+<div created="20210118205030582" modified="20210327200511277" tags="[[testing &amp; measuring]] tools" title="component testers / LRC / LC meter">
 <pre>* there are cheap component testers from china on ebay but they are most usefull for getting a sense of the type of some components, not all meassurements are really acurate
+** [[&quot;transistor tester&quot; (avr) component tester]]
 * LRC meters are used for meassuring inductance (L), capacitance (C) and resistance (R)
 ** one meassuring true inductance, true capacitance, ESR and maybe Q factor is most useful, but there are meters specialized in ESR for example
 ** https://en.wikipedia.org/wiki/LCR_meter
@@ -14308,38 +14330,29 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
-<div created="20210327193626391" draft.of="" draft.title="&quot;transistor tester&quot; reverse engineering" modified="20210327194039342" tags="[[reverse engineering]]" title="Draft of ''">
-<pre>* might be possible to read the flash contents of the atmega328p and disassemble it
+<div created="20210327193626391" draft.of="&quot;transistor tester&quot; reverse engineering" draft.title="&quot;transistor tester&quot; reverse engineering" modified="20210327202937152" tags="[[reverse engineering]]" title="Draft of '&quot;transistor tester&quot; reverse engineering'">
+<pre>* [[&quot;transistor tester&quot; (avr) component tester]]
+* uses atmega328p
+* might be possible to read the flash contents of the atmega328p and disassemble it
 ** [[atmega/atmel/avr/arduino disassembling]]
-* silkscreen: &quot;K120263BSJH&quot;
+* silkscreen: &quot;K120263BSJH&quot; and &quot;2578AY-AT&quot;
+* some presumably chinese characters are on the copper layers
 * some unknown/unsure components
 ** 6-pin smd chip; marked SVR5-04 on silkscreen; marked .V05 on chip
-**</pre>
-</div>
-<div created="20210118205030582" draft.of="component testers / LRC / LC meter" draft.title="component testers / LRC / LC meter" modified="20210327194935271" tags="[[testing &amp; measuring]] tools" title="Draft of 'component testers / LRC / LC meter'">
-<pre>* there are cheap component testers from china on ebay but they are most usefull for getting a sense of the type of some components, not all meassurements are really acurate
-** [[&quot;transistor tester&quot; (avr) component tester]]
-* LRC meters are used for meassuring inductance (L), capacitance (C) and resistance (R)
-** one meassuring true inductance, true capacitance, ESR and maybe Q factor is most useful, but there are meters specialized in ESR for example
-** https://en.wikipedia.org/wiki/LCR_meter
-** https://de.wikipedia.org/wiki/Wechselspannungsbr%C3%BCcke
-** https://en.wikipedia.org/wiki/Q_meter
-** https://hackaday.com/2021/03/22/build-it-yourself-lc-meter/
-* https://electronoobs.com/eng_arduino_tut10.php - arduino Resistence meter
-* https://electronoobs.com/eng_arduino_tut10_1.php - arduino Capacitance meter
-** [[Arduino capacitane meter with LCD screen|https://www.youtube.com/watch?v=8yGbOlJ7ZWM]]
-* https://electronoobs.com/eng_arduino_tut10_3.php - arduino Inductance meter
-** [[Inductance meter with Arduino|https://www.youtube.com/watch?v=BGjV5vUvGPc]]
-* https://www.qsl.net/dl2lux/pdf/lcmeter_dl.pdf
-* https://hackaday.com/2021/03/22/build-it-yourself-lc-meter/
-** https://hackaday.io/project/178081-build-an-lc-meter
-** https://github.com/coreWeaver/LC-Meter
-
-
-ESR
-
-* https://www.youtube.com/watch?v=ivVSq0IiZGo
-* https://en.wikipedia.org/wiki/ESR_meter</pre>
+** 7550A-1 (marked on component), TO-92 package
+*** maybe: https://pdf1.alldatasheet.com/datasheet-pdf/view/1139972/BOOKLY/7550.html?
+** not sure of what type the small capacitors are... ceramic?
+** S9014 (C331) (2x); TO-92 package; npn transistor?
+** S9012 (H331); TO-92 package; PNP transistor?
+** WS TL431A 1535SD in TO-92 package; voltage reference
+*** maybe http://www.ti.com/lit/ds/symlink/tl431.pdf
+** some diode-like 2-pin package (marked 6V8C with some logo) parallel a ceramic smd cap next to the SVR5-04
+* display assembly
+** display glued directly to a pcb, flat-flex soldered directly to the back
+** 8 pins/connections for interfacing with main-board
+** AMS1117, probably 3.3V linear regulator
+* [[Full Circuit Schematic Draft 2017 AVR Transistor Tester Component ESR LCR Meter Frequency Generator|https://www.youtube.com/watch?v=T8Fl7HL0c0c]]
+* [[#290​ How do Transistor Testers work (and some other insights)|https://www.youtube.com/watch?v=4Xsg8lpP75s]]</pre>
 </div>
 <div modified="20210323122300091" title="Draft of 'tools'">
 <pre></pre>
