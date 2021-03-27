@@ -833,7 +833,9 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
-<li>Draft of 'digispark'</li>
+<li>Draft of ''</li>
+
+<li>Draft of '&quot;transistor tester&quot; (avr) component tester'</li>
 
 <li>Draft of 'tools'</li>
 
@@ -11530,7 +11532,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210323212304113" list="[[Setting up a Wiki like this]] [[collaboration tools]] [[Powerpack from Smartphone batteries]] [[Draft of 'digispark']] About TableOfContents" modified="20210327182354842" title="$:/StoryList">
+<div created="20210323212304113" list="[[flat file/static site generator wikis / note taking]] [[Draft of '']] [[Draft of '&quot;transistor tester&quot; (avr) component tester']] About TableOfContents" modified="20210327182807761" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12544,8 +12546,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210327182348935" modifier="Thorbijoern" title="$:/temp/search">
-<pre>wiki</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210327182806109" modifier="Thorbijoern" title="$:/temp/search">
+<pre>obsidi</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13877,11 +13879,18 @@ connectors
 * anderson sbe, powerpole?
 * harting?</pre>
 </div>
-<div created="20210323122835299" modified="20210323123146426" tags="microcontroller" title="digispark">
+<div created="20210323122835299" modified="20210327182424263" tags="microcontroller" title="digispark">
 <pre>* small microcontroller-boards
 * usb connector for programming or as USB device
 * several GPIOs
-* attiny85</pre>
+* attiny85
+* https://www.reichelt.de/digispark-mini-attiny85-usb-mit-stiftleiste-digispark-mini-p192128.html
+* http://digistump.com/wiki/digispark
+
+setup
+
+* https://github.com/digistump/DigistumpArduino/
+* http://digistump.com/wiki/digispark/tutorials/connecting</pre>
 </div>
 <div created="20210306195212071" modified="20210306201408377" tags="[[computer science / IT stuff]]" title="digital / computer forensic">
 <pre>* https://forensicswiki.xyz/page/Main_Page
@@ -14261,18 +14270,22 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
-<div created="20210323122835299" draft.of="digispark" draft.title="digispark" modified="20210327181524253" tags="microcontroller" title="Draft of 'digispark'">
-<pre>* small microcontroller-boards
-* usb connector for programming or as USB device
-* several GPIOs
-* attiny85
-* https://www.reichelt.de/digispark-mini-attiny85-usb-mit-stiftleiste-digispark-mini-p192128.html
-* http://digistump.com/wiki/digispark
-
-setup
-
-* https://github.com/digistump/DigistumpArduino/
-* http://digistump.com/wiki/digispark/tutorials/connecting</pre>
+<div created="20210327182459859" draft.of="" draft.title="atmega/atmel disassembling" modified="20210327182522971" tags="" title="Draft of ''">
+<pre></pre>
+</div>
+<div created="20210301141022088" draft.of="&quot;transistor tester&quot; (avr) component tester" draft.title="&quot;transistor tester&quot; (avr) component tester" modified="20210327182457859" tags="[[testing &amp; measuring]]" title="Draft of '&quot;transistor tester&quot; (avr) component tester'">
+<pre>* Gm328 Transistor / component tester with encoder (seems to be an improved version of the single button one, more features)
+** https://www.youtube.com/watch?v=C38eSPOF1o0
+** bought one (kit)
+** might reverse engineer it
+** might be possible to read the flash contents of the atmega328p and disassemble it
+** marked svr5-04
+* https://github.com/search?q=transistortester
+** https://github.com/maugsburger/avr-component-tester
+** https://github.com/BackupGGCode/avr-component-tester
+* https://www.mikrocontroller.net/articles/AVR_Transistortester#Einleitung_.28deutsch.29
+* https://www.slideshare.net/dpavlin/cheap-good-hackable-tools-from-china-avr-component-tester
+* https://www.instructables.com/AVR-Transistor-Tester/</pre>
 </div>
 <div modified="20210323122300091" title="Draft of 'tools'">
 <pre></pre>
@@ -14803,7 +14816,7 @@ for f in *.mp3; do ffmpeg -i &quot;$f&quot; &quot;$(basename $f).wav&quot;; done
 * gitlab
 * https://alternativeto.net/</pre>
 </div>
-<div created="20201126115041345" modified="20210327180753330" tags="[[Free / Open / Libre *]] [[computer science / IT stuff]]" title="flat file/static site generator wikis / note taking">
+<div created="20201126115041345" modified="20210327182829146" tags="[[Free / Open / Libre *]] [[computer science / IT stuff]]" title="flat file/static site generator wikis / note taking">
 <pre>* https://github.com/tankywoo/simiki
 * https://docs.readthedocs.io/en/stable/index.html
 * using a normal static site generator for wiki/documentation like tasks probably needs a lot of setup and special templates
@@ -14828,7 +14841,7 @@ lists:
 
 more like notes / knowledge bases
 
-* https://obsidian.md/
+* ~~https://obsidian.md/~~ closed source
 * https://foambubble.github.io/foam/
 * https://zettelkasten.de/introduction/
 * https://www.zettlr.com/</pre>
