@@ -841,6 +841,8 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
+<li>Draft of 'high-current cabling and connectors'</li>
+
 <li>Draft of 'tools'</li>
 
 <li>Dresden</li>
@@ -11579,7 +11581,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210323212304113" list="[[MPPT (Maximum Power Point Tracking) charge controller]] [[battery packs]] [[serial connection stuff]] [[collaboration tools]] [[maker, lab, repair, etc. spaces in dresden]] [[high-current cabling and connectors]] About TableOfContents" modified="20210330144403072" title="$:/StoryList">
+<div created="20210323212304113" list="[[solar system safety]] [[maker, lab, repair, etc. spaces in dresden]] [[Draft of 'high-current cabling and connectors']] About TableOfContents" modified="20210330154022851" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12593,8 +12595,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210330150740577" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210330154011065" modifier="Thorbijoern" title="$:/temp/search">
+<pre>fuse</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14358,6 +14360,51 @@ stuff
 * https://physicsopenlab.org/wp-content/uploads/2015/11/Spettrometro_ENG.pdf
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
+</div>
+<div created="20210210195119504" draft.of="high-current cabling and connectors" draft.title="high-current cable and connectors" modified="20210330153454445" tags="[[accumulator - battery]]" title="Draft of 'high-current cabling and connectors'">
+<pre>general information
+* [[Off-grid Solar Buyer's Guide: DC Wire and Connectors|https://www.youtube.com/watch?v=Mb0LQ19DEaI]]
+
+cables
+
+* battery cables as used in cars (batteriekabel, fahrzeugleitung)
+** pure copper! cheap cables might be aluminium or only copper-coated aluminium and have poor performance (higher resistance and bigger fire-risk)
+* welding cables (schweißkabel)
+** much more flexible than standard copper cables with the same performance
+* [[How to Select and Purchase Battery Inverter Cables Part1|https://www.youtube.com/watch?v=p1bnHu14SMs]]
+* [[How to Select and Purchase Battery Inverter Cables Part2|https://www.youtube.com/watch?v=YCUpMJEn2Zw]]
+* [[Electric Cable &amp; Fuse Sizing - Camper Van Conversion Series|https://www.youtube.com/watch?v=koFg6oFs0RU]]
+* AWG (the american inch-based standard wire sizes) can me easily converted using 'calculators' or charts found online, but the sizes don't match exactly, if you are unsure better use a size higher
+
+cable terminals / copper lugs
+
+* some people diy them
+** https://www.youtube.com/watch?v=_saiwmG9zEc
+** https://www.youtube.com/watch?v=CccZY6vnpo4
+** https://www.youtube.com/watch?v=DVjzv_UUmE4
+** https://www.youtube.com/watch?v=uNKfDVAtI_A
+* soldering or crimping
+** i don't quite know which is better, but in professional environments crimping seems to be prefered, because the cold welding might be better and it's faster... there are many different ways of crimping though...
+** solding should only be used for amplications where there is no stress on the cable and crimping is prefered...
+** i've seen videos where they crimp and then solder as additional meassure, but that seems overkill and might even have contra-productive effects
+** soldering
+*** https://www.youtube.com/watch?v=UMeGCQa-oCI
+** crimping
+
+connectors
+
+* XT30, XT60, XT90, XT150
+* EC5, EC3
+* MT30, MT60, MT90 / AS120
+* TRX/Traxxas
+* T-Plug/Deans connector
+* Anderson
+** SB50, SB175, SB350
+** Powerpole
+* din battery connector (&quot;ravioli&quot;, &quot;forklift&quot;) - hard to disconnect
+* connectors used for welding equimpent
+
+</pre>
 </div>
 <div modified="20210323122300091" title="Draft of 'tools'">
 <pre></pre>
@@ -19140,7 +19187,7 @@ stuff:
 <div created="20210323220750199" modified="20210323220833837" tags="[[Solar / renewable energy]]" title="solar panels">
 <pre>* [[Testing Solar Panel Defects|https://www.youtube.com/watch?v=YZ8_Xk9aYTE]]</pre>
 </div>
-<div created="20210301144825459" modified="20210317221958743" tags="[[Solar / renewable energy]] [[electronics safety]]" title="solar system safety">
+<div created="20210301144825459" modified="20210330154158652" tags="[[Solar / renewable energy]] [[electronics safety]]" title="solar system safety">
 <pre>* see [[battery pack safety]]
 * see [[electronics safety]]
 * see [[Schutzschaltungen]]
@@ -19149,7 +19196,9 @@ stuff:
 * [[Breakers AC, DC &amp; AC/DC - Solar Safety Part 2 - 12v Solar Shed|https://www.youtube.com/watch?v=S0diAeysxVo]]
 * [[300 Amp Fuse Blowing with 4KW of Load from an Inverter - Safety Mechanism Prepare for the Unexpected|https://www.youtube.com/watch?v=gMvrMemPxrg]]
 * high DC systems
-** https://diysolarforum.com/resources/solar-array-arc-fault-protection-summary.145/</pre>
+** https://diysolarforum.com/resources/solar-array-arc-fault-protection-summary.145/
+* [[Electric Cable &amp; Fuse Sizing - Camper Van Conversion Series|https://www.youtube.com/watch?v=koFg6oFs0RU]]
+* [[Fuses EXPLAINED! What size do YOU need &amp; MORE!|https://www.youtube.com/watch?v=0H005TcKHKo]]</pre>
 </div>
 <div created="20210303020611476" modified="20210317221958745" tags="[[sustainability / nachhaltigkeit]] [[Solar / renewable energy]]" title="solar thermal">
 <pre>* https://en.wikipedia.org/wiki/Solar_thermal_energy
