@@ -847,6 +847,12 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
+<li>Draft of ' 1'</li>
+
+<li>Draft of ''</li>
+
+<li>Draft of 'serial connection stuff'</li>
+
 <li>Draft of 'tools'</li>
 
 <li>Dresden</li>
@@ -11600,7 +11606,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210323212304113" list="[[professionell Audio lernen]] About TableOfContents" modified="20210330170921244" title="$:/StoryList">
+<div created="20210323212304113" list="[[inter IC or inter device communication, networking]] [[Draft of ' 1']] [[Draft of '']] [[Draft of 'serial connection stuff']] About TableOfContents" modified="20210330172741579" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210306192612925" title="$:/temp/advancedsearch">
@@ -12614,8 +12620,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210330170919327" modifier="Thorbijoern" title="$:/temp/search">
-<pre>smps</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210330172738708" modifier="Thorbijoern" title="$:/temp/search">
+<pre>https://hackaday.io/project/178271-i2c-master-mode-emulator</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14388,6 +14394,64 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
+<div created="20210330172518672" draft.of=" 1" draft.title="software oscilloscope / signal analysis tools" modified="20210330172622188" tags="" title="Draft of ' 1'">
+<pre>* https://wiki.analog.com/university/tools/m2k/scopy
+** https://github.com/analogdevicesinc/scopy</pre>
+</div>
+<div created="20210330171540824" draft.of="" draft.title="repair/reverse engineering of 3s drill battery BMS" modified="20210330172007151" tags="[[reverse engineering]] repairs" title="Draft of ''">
+<pre>* chips/components
+** IRLR8726 Mosfets
+*** https://www.infineon.com/dgdl/irlr8726pbf.pdf?fileId=5546d462533600a40153567181dd26f7
+** L78L05 5V linear regulator
+*** https://www.alldatasheet.com/datasheet-pdf/pdf/22687/STMICROELECTRONICS/78L05.html
+** LGT8P22 mystery 16 Pin chip, maybe MCU
+* board has a serial connection, probably I2C or SMBus, see [[serial connection stuff]]</pre>
+</div>
+<div created="20210212170411905" draft.of="serial connection stuff" draft.title="serial connection stuff" modified="20210330172819020" tags="Electronics [[computer science / IT stuff]] [[inter IC or inter device communication, networking]]" title="Draft of 'serial connection stuff'">
+<pre>* https://github.com/pyserial/pyserial
+* see also [[hardware hacking]]
+
+RS-232
+
+* https://electronics.stackexchange.com/questions/117241/baud-rate-calculation
+* https://www.eevblog.com/forum/projects/debugging-a-unknown-rs232/
+
+SPI
+
+* https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
+** https://de.wikipedia.org/wiki/Serial_Peripheral_Interface
+
+I²C or IIC
+
+* https://en.wikipedia.org/wiki/I%C2%B2C
+** https://de.wikipedia.org/wiki/I%C2%B2C
+* https://i2c.wiki.kernel.org/index.php/Main_Page
+** https://i2c.wiki.kernel.org/index.php/I2C_Tools
+* https://www.kernel.org/doc/html/latest/i2c/index.html
+* https://onion.io/2bt-digging-into-i2cget-and-i2cset/
+* https://www.ti.com/lit/an/slva704/slva704.pdf
+* https://petermolnar.net/article/linux-i2c-iio-collectd/
+* https://stackoverflow.com/questions/505023/reading-writing-from-using-i2c-on-linux
+* https://github.com/harbaum/I2C-Tiny-USB
+** https://github.com/torvalds/linux/blob/master/drivers/i2c/busses/i2c-tiny-usb.c
+* https://github.com/gschorcht/i2c-ch341-usb
+* https://www.fischl.de/i2c-mp-usb/
+* https://wiki.analog.com/university/courses/electronics/m2k-i2c-debug
+* https://www.ti.com/lit/an/slyt770/slyt770.pdf
+* https://www.instructables.com/Use-I2CLCD-to-debug-your-project/
+* https://hackaday.com/blog/page/2/?s=i2c
+* https://swharden.com/blog/2017-02-04-logging-i2c-data-with-bus-pirate-and-python/
+
+SMBus - subset of I²C
+
+* https://en.wikipedia.org/wiki/System_Management_Bus
+** https://de.wikipedia.org/wiki/System_Management_Bus
+
+1-Wire
+
+* https://en.wikipedia.org/wiki/1-Wire
+** https://de.wikipedia.org/wiki/1-Wire</pre>
+</div>
 <div modified="20210323122300091" title="Draft of 'tools'">
 <pre></pre>
 </div>
@@ -15864,8 +15928,10 @@ germany:
 * if you use an existing frame of a car and you don't do big modifications to that it seems that you only have to do EMC checks at TÜV
 ** https://www.tuv.com/world/en/electromagnetic-compatibility-%28emc%29.html</pre>
 </div>
-<div created="20210112234744893" modified="20210324170739051" tags="Electronics" title="inter IC or inter device communication, networking">
-<pre>* https://en.wikipedia.org/wiki/List_of_network_buses
+<div created="20210112234744893" modified="20210330172842791" tags="Electronics" title="inter IC or inter device communication, networking">
+<pre>see [[serial connection stuff]]
+
+* https://en.wikipedia.org/wiki/List_of_network_buses
 * CANBus
 * I²C / [[I²S]]
 ** https://hackaday.com/tag/i2c/
