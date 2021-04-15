@@ -857,8 +857,6 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
-<li>Draft of ''</li>
-
 <li>Draft of 'low power electronics'</li>
 
 <li>Draft of 'tools'</li>
@@ -1092,6 +1090,8 @@ Error message and password prompt
 <li>measuring inductance</li>
 
 <li>measuring voltage</li>
+
+<li>megaphone reverse engineering</li>
 
 <li>megaphones</li>
 
@@ -11660,7 +11660,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210409102302229" list="[[Draft of '']] megaphones About TableOfContents" modified="20210415112830923" title="$:/StoryList">
+<div created="20210409102302229" list="[[megaphone reverse engineering]] megaphones About TableOfContents" modified="20210415112830923" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14510,25 +14510,6 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
-<div created="20210415111441636" draft.of="" draft.title="megaphone reverse engineering" modified="20210415113250932" tags="[[reverse engineering]] [[horn speakers]] [[audio amplifiers]]" title="Draft of ''">
-<pre>i bought a used Speaka ER-66S Megaphone with claimed 25W Power.
-uses 8x Size C 1.5V batteries, so 12V (DC).
-the megaphone also has marking saying &quot;transistor megaphone&quot; and &quot;UM-2&quot;, it's obviously produced in china but i don't know if there are different versions with different internals sold under the same speaka model.
-
-i reverse engineered the circuit of the one i got (not jet online)
-
-* http://www.szczkjgs.com/ - manufacturer/seller of the amplifier board and the amplifier chip
-* CS8622
-** 24 W / 14 V / 4 Ω
-** ESOP-16
-** 6,5 V - 18,5 V
-** Geeignet für Blei-Säure Batteriestablautsprecher 25 W Mono Class D Audio-Leistungsverstärker-IC
-** https://rtccn4awrjpnvp7r35un3ijr2a--www-szczkjgs-com.translate.goog/products_3674.htm
-** https://www.alldatasheet.com/datasheet-pdf/pdf/1143314/YONGFUKANG/CS8622E.html
-* amplifier chip is SO-Package with Exposed heat-sink pad on the bottom (which is also the main ground)
-** https://de.wikipedia.org/wiki/SO-Bauform
-** https://en.wikipedia.org/wiki/Small_outline_integrated_circuit</pre>
-</div>
 <div modified="20210415111325301" title="Draft of 'low power electronics'">
 <pre></pre>
 </div>
@@ -16895,6 +16876,31 @@ related to the OSEG Open Hardware Standards DIN SPEC 3105
 * https://startingelectronics.org/articles/arduino/measuring-voltage-with-arduino/
 * https://www.instructables.com/Voltage-Measurement-Using-Arduino/
 * https://simple-circuit.com/measure-ac-voltage-arduino-ac-voltmeter/</pre>
+</div>
+<div created="20210415111441636" modified="20210415114121775" tags="[[reverse engineering]] [[horn speakers]] [[audio amplifiers]]" title="megaphone reverse engineering">
+<pre>i bought a used Speaka ER-66S Megaphone with claimed 25W Power.
+uses 8x Size C 1.5V batteries, so 12V (DC).
+the megaphone also has marking saying &quot;transistor megaphone&quot; and &quot;UM-2&quot;, it's obviously produced in china but i don't know if there are different versions with different internals sold under the same speaka model.
+
+i reverse engineered the circuit of the one i got (not jet online)
+
+* http://www.szczkjgs.com/ - manufacturer/seller of the amplifier board and the amplifier chip
+* CS8622
+** 24 W / 14 V / 4 Ω
+** ESOP-16
+*** amplifier chip is SO-Package with Exposed heat-sink pad on the bottom (which is also the main ground)
+**** https://de.wikipedia.org/wiki/SO-Bauform
+**** https://en.wikipedia.org/wiki/Small_outline_integrated_circuit
+** 6,5 V - 18,5 V
+** Geeignet für Blei-Säure Batteriestablautsprecher 25 W Mono Class D Audio-Leistungsverstärker-IC
+** https://rtccn4awrjpnvp7r35un3ijr2a--www-szczkjgs-com.translate.goog/products_3674.htm
+** https://www.alldatasheet.com/datasheet-pdf/pdf/1143314/YONGFUKANG/CS8622E.html
+
+horn
+
+* folded horn design
+* 21,7cm mouth
+* ''TODO''</pre>
 </div>
 <div created="20200615222738005" modified="20210415113318829" tags="[[horn speakers]]" title="megaphones">
 <pre>Megaphones
