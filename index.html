@@ -873,6 +873,8 @@ Error message and password prompt
 
 <li>Draft of 'DIY PCBs (DIY Circuit Boards)'</li>
 
+<li>Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station'</li>
+
 <li>Draft of 'low power electronics'</li>
 
 <li>Draft of 'solar thermal'</li>
@@ -11720,7 +11722,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210409102302229" list="[[Lenovo IdeaPad S10-2 (Netbook) as portable Audio station]] About TableOfContents" modified="20210426102343644" title="$:/StoryList">
+<div created="20210409102302229" list="[[audio interface / soundcard]] [[Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station']] About TableOfContents" modified="20210426141718043" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12734,8 +12736,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210426102340971" modifier="Thorbijoern" title="$:/temp/search">
-<pre>idea</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210426141715480" modifier="Thorbijoern" title="$:/temp/search">
+<pre>sound</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13130,8 +13132,26 @@ class a
 <div created="20200811232650248" modified="20200811232736532" tags="Audio" title="Audio IC's">
 <pre>* https://www.ti.com/audio-ic/overview.html</pre>
 </div>
-<div created="20201121211605860" modified="20201123211420298" tags="[[digital audio]]" title="audio interface / soundcard">
-<pre>* [[YT: RELOADED #BEHRINGER #SOUNDKARTE günstige Lösung ~ Reicht das kleine Audio Interface zum Messen?|https://www.youtube.com/watch?v=eUeGrMvYb2c]]</pre>
+<div created="20201121211605860" modified="20210426143638616" tags="[[digital audio]]" title="audio interface / soundcard">
+<pre>most external audio interfaces use USB, you should pay attention to the class compliance of the interface. if the manufacturer followed the USB specifications the interface should use the USB audio device class. devices following this are mostly marketed as &quot;class compliant&quot;, but any interfaces not requiring drivers might be supported.
+
+* https://en.wikipedia.org/wiki/Sound_card
+** https://de.wikipedia.org/wiki/Soundkarte
+* [[YT: RELOADED #BEHRINGER #SOUNDKARTE günstige Lösung ~ Reicht das kleine Audio Interface zum Messen?|https://www.youtube.com/watch?v=eUeGrMvYb2c]]
+* https://www.alsa-project.org/wiki/Main_Page
+** https://www.alsa-project.org/wiki/SoundcardTesting
+** https://alsa.opensrc.org/
+* https://source.android.com/devices/audio/usb
+* https://noterepeat.com/articles/pc-troubleshooting/95-troubleshooting-class-compliant-usb-computer-peripherals
+
+linux support of the interfaces i have:
+
+* creative e-mu 0202 - seems to be supported, not fully tested yet
+** https://www.alsa-project.org/wiki/Matrix:Module-emu10k1-fpga
+* Tascam US-122L - doesn't work yet
+** not to be confused with the US-122
+** https://www.alsa-project.org/wiki/Matrix:Module-usb-us122l
+* Yamaha MG10 XU - not tested yet</pre>
 </div>
 <div created="20200615210710237" modified="20201220175826026" tags="Audio" title="Audio Links">
 <pre>* http://www.sengpielaudio.com/index.html - Tontechnik
@@ -14658,6 +14678,37 @@ stuff
 </div>
 <div modified="20210415120524810" title="Draft of 'DIY PCBs (DIY Circuit Boards)'">
 <pre></pre>
+</div>
+<div created="20210425205159659" draft.of="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station" draft.title="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station" modified="20210426141820474" tags="[[computer science / IT stuff]]" title="Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station'">
+<pre>netbook with a weird old Atom N270, i686 instruction set, not much power, 2GB RAM?
+
+i first wanted to try out different OS (the i686/i386 images) from a multiboot usb, could only get Linux Mint to boot into live system but it didn't boot after installation, then tried again with debian 10.8.0 i386 netinstall and it worked.
+
+i installed debian with XFCE4, followed the instructions for the bcm4312 wifi adapter here: https://wiki.debian.org/bcm43xx
+
+installed some software:
+
+
+```
+apt update
+apt install vlc ffmpeg pavumeter clementine python3-pip
+pip3 install tidal-dl --upgrade
+```
+
+customized the xfce panels a bit
+
+the official [[Behringer X Air (XR12)]] Software is only compiled for x86 or so and therefor doesn't run on this i686 system. have to find alternatives
+
+audio interfaces
+
+* see [[
+* included ones seem to work fine
+* creative e-mu 0202 - seems to be supported, not fully tested yet
+** https://www.alsa-project.org/wiki/Matrix:Module-emu10k1-fpga
+* Tascam US-122L - doesn't work yet
+** not to be confused with the US-122
+** https://www.alsa-project.org/wiki/Matrix:Module-usb-us122l
+* Yamaha MG10 XU - not tested yet</pre>
 </div>
 <div modified="20210415111325301" title="Draft of 'low power electronics'">
 <pre></pre>
