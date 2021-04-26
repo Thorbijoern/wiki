@@ -11731,7 +11731,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210409102302229" list="[[Draft of 'frequency response webapp']] [[audio programming]] [[Web Audio API, Web Midi API - Websites with advanced audio functionality]] About TableOfContents" modified="20210426152336672" title="$:/StoryList">
+<div created="20210409102302229" list="[[Draft of 'frequency response webapp']] [[frequency response / spectrum analysis/Measurements]] About TableOfContents" modified="20210426153743726" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14700,7 +14700,7 @@ stuff
 <div modified="20210415120524810" title="Draft of 'DIY PCBs (DIY Circuit Boards)'">
 <pre></pre>
 </div>
-<div created="20210426145449633" draft.of="frequency response webapp" draft.title="frequency response webapp" modified="20210426153032786" tags="[[audio testing and measurement]] [[digital audio]]" title="Draft of 'frequency response webapp'">
+<div created="20210426145449633" draft.of="frequency response webapp" draft.title="frequency response webapp" modified="20210426153504368" tags="[[audio testing and measurement]] [[digital audio]]" title="Draft of 'frequency response webapp'">
 <pre>goal is to build a small webapp that is able to make frequency response meassurements using the [[Web Audio API|Web Audio API, Web Midi API - Websites with advanced audio functionality]] and the Canvas.
 
 see [[frequency response / spectrum analysis/Measurements]]
@@ -14708,7 +14708,11 @@ see [[frequency response / spectrum analysis/Measurements]]
 * create noise/frequency sweep, output that to speakers
 ** noise
 *** https://noisehack.com/generate-noise-web-audio-api/
+*** https://github.com/zacharydenton/noise.js
+*** https://github.com/search?q=web+audio+noise
 * record a mic that captures the response from the speaker
+** https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices
+*** https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 * analyze the recorded audio and display a frequency response graph with canvas
 ** https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode doing [[Fast Fourier Transform (FFT)]]
 
@@ -15546,10 +15550,14 @@ collection of useful stuff:
 * https://coma-emerald.de/
 * https://mwk.baden-wuerttemberg.de/de/kunst-kultur/kulturfoerderung/freiraeume/</pre>
 </div>
-<div created="20210330161034050" modified="20210426150326670" tags="[[audio testing and measurement]]" title="frequency response / spectrum analysis/Measurements">
+<div created="20210330161034050" modified="20210426153843504" tags="[[audio testing and measurement]]" title="frequency response / spectrum analysis/Measurements">
 <pre>* [[DIYRM: Basic REW Frequency Response Measurements....|https://www.youtube.com/watch?v=RW5v9KM8fwA]]
 * uses [[Fast Fourier Transform (FFT)]]
-* [[frequency response webapp]]</pre>
+* [[frequency response webapp]]
+
+# create noise/frequency sweep, output that to speakers
+# record a mic that captures the response from the speaker
+# analyze the recorded audio using [[Fast Fourier Transform (FFT)]] and display a frequency response graph</pre>
 </div>
 <div created="20210426145449633" modified="20210426151120196" tags="[[audio testing and measurement]] [[digital audio]]" title="frequency response webapp">
 <pre>goal is to build a small webapp that is able to make frequency response meassurements using the [[Web Audio API|Web Audio API, Web Midi API - Websites with advanced audio functionality]] and the Canvas.
