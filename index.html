@@ -873,7 +873,11 @@ Error message and password prompt
 
 <li>Draft of 'algorithmic / generative / computer art'</li>
 
+<li>Draft of 'audio testing and measurement'</li>
+
 <li>Draft of 'DIY PCBs (DIY Circuit Boards)'</li>
+
+<li>Draft of 'frequency response webapp'</li>
 
 <li>Draft of 'low power electronics'</li>
 
@@ -11731,7 +11735,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210409102302229" list="[[frequency response webapp]] [[Web Audio API, Web Midi API - Websites with advanced audio functionality]] About TableOfContents" modified="20210427132958374" title="$:/StoryList">
+<div created="20210409102302229" list="[[Draft of 'audio testing and measurement']] [[Draft of 'frequency response webapp']] [[Web Audio API, Web Midi API - Websites with advanced audio functionality]] About TableOfContents" modified="20210427133308719" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12745,8 +12749,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210427133231963" modifier="Thorbijoern" title="$:/temp/search">
-<pre>https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210427133318233" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14705,8 +14709,92 @@ stuff
 <div modified="20210416142404776" title="Draft of 'algorithmic / generative / computer art'">
 <pre></pre>
 </div>
+<div created="20201107220632630" draft.of="audio testing and measurement" draft.title="audio testing and measurement" modified="20210427133413307" tags="Audio [[testing &amp; measuring]]" title="Draft of 'audio testing and measurement'">
+<pre>* https://en.wikipedia.org/wiki/Electrical_characteristics_of_dynamic_loudspeakers
+* https://en.wikipedia.org/wiki/Audio_system_measurements
+* https://www.youtube.com/watch?v=ninFs1HWcMs&amp;list=PLupjt2J2x38fUAiUFobzyJwUvy_Uq8ToW
+* [[YT: #BEHRINGER #SOUNDKARTE günstige Lösung ~ Reicht das kleine Audio Interface zum Messen?|https://www.youtube.com/watch?v=JsDxViPYhOc]]
+* https://en.wikipedia.org/wiki/Smaart
+** https://www.rationalacoustics.com/smaart/about-smaart/
+* REW Room EQ Wizard
+* Theremino
+** [[WaveAnalyzer|https://www.theremino.com/en/downloads/uncategorized#waveanalyzer]]
+** [[WaveGenerator|https://www.theremino.com/en/downloads/uncategorized#wavegenerator]]
+** [[Audio Input with Vumeter|https://www.theremino.com/en/downloads/multimedia#audioinput]]
+** [[AudioExamples (playing, various)|https://www.theremino.com/en/downloads/multimedia#audioexamples]]
+** [[AudioAnalyzer|https://www.theremino.com/en/downloads/multimedia#audioanalyzer]]
+** [[DAA – audio analyzer and oscilloscope|https://www.theremino.com/en/downloads/uncategorized#daa]]
+* https://en.wikipedia.org/wiki/Category:Acoustic_measurement
+* https://en.wikipedia.org/wiki/Category:Signal_processing
+* https://en.wikipedia.org/wiki/Category:Time%E2%80%93frequency_analysis
+* https://en.wikipedia.org/wiki/Category:Time_domain_analysis
+* https://en.wikipedia.org/wiki/Impulse_response
+* https://en.wikipedia.org/wiki/Waterfall_plot
+* https://en.wikipedia.org/wiki/Loudspeaker_acoustics
+* https://en.wikipedia.org/wiki/Loudspeaker_measurement
+* https://en.wikipedia.org/wiki/Category:Sound_measurements
+* https://en.wikipedia.org/wiki/Category:Acoustic_measurement
+* http://spectrum3d.sourceforge.net/
+* https://github.com/YongChingTee/spectrogram_gtk/
+* https://octave.sourceforge.io/signal/function/specgram.html
+* https://sourceforge.net/projects/ltfat/
+* https://ltfat.github.io/
+* https://www.nti-audio.com/en/support/know-how/lets-clear-up-some-things-about-sweeps
+* https://www.audiocheck.net/index.php
+* https://onlinetonegenerator.com/
+
+plots:
+
+* 2d/3d spectrogram
+* sound level meter (db SPL (peak))
+* just the &quot;normal&quot; audio waveform
+</pre>
+</div>
 <div modified="20210415120524810" title="Draft of 'DIY PCBs (DIY Circuit Boards)'">
 <pre></pre>
+</div>
+<div created="20210426145449633" draft.of="frequency response webapp" draft.title="frequency response webapp" modified="20210427134056432" tags="[[audio testing and measurement]] [[digital audio]]" title="Draft of 'frequency response webapp'">
+<pre>goal is to build a small webapp that is able to make frequency response meassurements using the [[Web Audio API|Web Audio API, Web Midi API - Websites with advanced audio functionality]] and the Canvas.
+
+see [[frequency response / spectrum analysis/Measurements]]
+
+* create noise/frequency sweep, output that to speakers
+** noise
+*** https://noisehack.com/generate-noise-web-audio-api/
+*** https://github.com/zacharydenton/noise.js
+*** https://github.com/search?q=web+audio+noise
+** frequency sweep
+*** https://teropa.info/blog/2016/08/10/frequency-and-pitch.html
+* record a mic that captures the response from the speaker
+** https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices
+*** https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+** https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer
+** https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
+** https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode
+* analyze the recorded audio and display a frequency response graph with canvas
+** https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode doing [[Fast Fourier Transform (FFT)]]
+
+useful examples/guides
+
+* https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
+* https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques
+* https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
+* https://webaudioapi.com/samples/frequency-response/
+* https://github.com/hughsk/web-audio-analyser
+* https://github.com/sepans/webaudio-analyzer
+* https://github.com/hvianna/audioMotion.js
+* https://github.com/mdn/violent-theremin - frequency sweep
+* https://github.com/mdn/web-dictaphone - record (and playback)
+* https://github.com/mdn/voice-change-o-matic - record and visualize, simple basis
+* https://github.com/mdn/webaudio-examples/tree/master/audio-buffer - buffer &amp; white noise
+** https://mdn.github.io/webaudio-examples/audio-buffer/
+* https://github.com/mdn/webaudio-examples/tree/master/audio-analyser
+** https://mdn.github.io/webaudio-examples/audio-analyser/
+
+progressive web app stuff:
+
+* manifest.webapp and install-button like in MDN examples
+* https://developer.mozilla.org/en-US/docs/Web/Manifest#browser_compatibility</pre>
 </div>
 <div modified="20210415111325301" title="Draft of 'low power electronics'">
 <pre></pre>
@@ -21271,7 +21359,7 @@ only for windows:
 * Synchronous Audio Router - http://sar.audio/
 * https://www.reddit.com/r/software/comments/3dup5u/request_freeopen_source_virtual_sound_card_for/</pre>
 </div>
-<div created="20210425000851821" modified="20210427133256875" tags="Art [[audio programming]]" title="Web Audio API, Web Midi API - Websites with advanced audio functionality">
+<div created="20210425000851821" modified="20210427134126316" tags="Art [[audio programming]]" title="Web Audio API, Web Midi API - Websites with advanced audio functionality">
 <pre>Audio
 
 * https://www.w3.org/TR/webaudio/
@@ -21285,6 +21373,7 @@ only for windows:
 * https://www.html5rocks.com/en/tutorials/webaudio/intro/
 * https://dzone.com/articles/exploring-html5-web-audio
 * https://noisehack.com/
+* https://teropa.info/blog/2016/08/10/frequency-and-pitch.html
 * https://github.com/mdn/webaudio-examples
 * https://github.com/mdn?q=audio
 * https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices
