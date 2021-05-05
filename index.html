@@ -875,6 +875,8 @@ Error message and password prompt
 
 <li>Draft of 'DIY PCBs (DIY Circuit Boards)'</li>
 
+<li>Draft of 'frequency response webapp'</li>
+
 <li>Draft of 'low power electronics'</li>
 
 <li>Draft of 'solar thermal'</li>
@@ -11740,7 +11742,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210428151513538" list="python [[Lenovo IdeaPad S10-2 (Netbook) as portable Audio station]] [[amplifier repairs]] About TableOfContents" modified="20210505225515065" title="$:/StoryList">
+<div created="20210428151513538" list="[[open source intelligence]] [[telegram scraping for good (osint)]] [[Draft of 'frequency response webapp']] python [[Lenovo IdeaPad S10-2 (Netbook) as portable Audio station]] [[amplifier repairs]] About TableOfContents" modified="20210505230108842" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12754,8 +12756,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210505225517044" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210505230047935" modifier="Thorbijoern" title="$:/temp/search">
+<pre>intell</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14723,6 +14725,81 @@ stuff
 </div>
 <div modified="20210415120524810" title="Draft of 'DIY PCBs (DIY Circuit Boards)'">
 <pre></pre>
+</div>
+<div created="20210426145449633" draft.of="frequency response webapp" draft.title="frequency response webapp" modified="20210505230007671" tags="[[audio testing and measurement]] [[digital audio]] [[audio programming]]" title="Draft of 'frequency response webapp'">
+<pre>goal is to build a small webapp that is able to make frequency response meassurements using the [[Web Audio API|Web Audio API, Web Midi API - Websites with advanced audio functionality]] and the Canvas.
+
+!! TODO:
+
+* sound generation
+** include different noise
+** make frequency sweep better + settings
+** simple oscilator with settings
+* visualisations
+** frequency domain settings
+** frequency domain over a recording as one graph
+** time domain (waveform)
+** spectrogram
+* make it look nicer
+** tabs for visualizations and other features
+** help tab with descriptions
+* 
+
+!! info:
+
+see [[frequency response / spectrum analysis/Measurements]]
+
+* create noise/frequency sweep, output that to speakers
+** noise
+*** https://noisehack.com/generate-noise-web-audio-api/
+*** https://github.com/zacharydenton/noise.js
+*** https://github.com/search?q=web+audio+noise
+** frequency sweep
+*** https://teropa.info/blog/2016/08/10/frequency-and-pitch.html
+*** [[OscillatorNode|https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode]]
+**** [[OscillatorNode.frequency|https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/frequency]] - [[AudioParam|https://developer.mozilla.org/en-US/docs/Web/API/AudioParam]]
+***** [[AudioParam.linearRampToValueAtTime()|https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime]]
+* record a mic that captures the response from the speaker
+** [[MediaDevices|https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices]]
+*** [[getUserMedia|https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia]]
+** [[AudioBuffer|https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer]]
+** [[MediaStreamTrackAudioSourceNode|https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode]]
+** [[MediaStreamAudioSourceNode|https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode]]
+* analyze the recorded audio and display a frequency response graph with canvas
+** [[AnalyserNode|https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode]] doing [[Fast Fourier Transform (FFT)]]
+* [[web design]]
+* spectrogram
+** https://github.com/borismus/spectrogram
+*** https://academo.org/demos/spectrum-analyzer/
+* waveform
+** https://academo.org/demos/virtual-oscilloscope/
+* https://dead-beef.github.io/webaudio-spectrum-analyser/#/
+
+!! useful examples/guides
+
+* https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
+* https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques
+* https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
+* https://webaudioapi.com/samples/frequency-response/
+* https://github.com/hughsk/web-audio-analyser
+* https://github.com/sepans/webaudio-analyzer
+* https://github.com/hvianna/audioMotion.js
+* https://github.com/mdn/violent-theremin - frequency sweep
+* https://github.com/mdn/web-dictaphone - record (and playback)
+* https://github.com/mdn/voice-change-o-matic - record and visualize, simple basis
+* https://github.com/mdn/webaudio-examples/tree/master/audio-buffer - buffer &amp; white noise
+** https://mdn.github.io/webaudio-examples/audio-buffer/
+* https://github.com/mdn/webaudio-examples/tree/master/audio-analyser
+** https://mdn.github.io/webaudio-examples/audio-analyser/
+
+!! progressive web app stuff:
+
+* manifest.webapp and install-button like in MDN examples
+* https://developer.mozilla.org/en-US/docs/Web/Manifest#browser_compatibility
+
+!! rants
+
+why tf does `&lt;button&gt;` behave like a f* `&lt;input type=&quot;submit&quot;&gt;`?!? WHY?!? why doesn't it just do nothing like an `&lt;input type=&quot;button&quot;&gt;`?!? why does one have to do `&lt;button type=&quot;button&quot;&gt;` for it to work like the name implies?! wasted quite some time on that...</pre>
 </div>
 <div modified="20210415111325301" title="Draft of 'low power electronics'">
 <pre></pre>
@@ -18537,12 +18614,13 @@ thoughts
 * https://www.epson.de/for-home/ecotank maybe good?
 * https://www.newegg.com/p/0WX-0006-00042</pre>
 </div>
-<div created="20210312154033666" modified="20210312154458085" tags="Misc [[Free / Open / Libre *]]" title="open source intelligence">
+<div created="20210312154033666" modified="20210505230117449" tags="Misc [[Free / Open / Libre *]]" title="open source intelligence">
 <pre>* ~TinEye - reverse image search
 * google reverse image search
 * https://de.wikipedia.org/wiki/Open_Source_Intelligence
 * https://en.wikipedia.org/wiki/Open-source_intelligence
-* [[telegram scraping for good (osint)]]</pre>
+* [[telegram scraping for good (osint)]]
+* https://sector035.nl/articles</pre>
 </div>
 <div created="20200908120601760" modified="20210320202732356" tags="[[digital audio]] [[Open Audio Hardware]] [[Audio Projects]]" title="Open Source modular DJ-Controller">
 <pre>a DJ-Controller is a device that mimics turntables, it's basically just a input and controll device for humans, all of the work is done on PC.
