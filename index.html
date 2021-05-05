@@ -13048,7 +13048,7 @@ stuff
 * https://andydoz.blogspot.com/2016/04/arduino-audio-wattmeter.html
 * https://www.youtube.com/watch?v=hA12uYxHBXM</pre>
 </div>
-<div created="20210415125740720" modified="20210415133429848" tags="[[audio repairs]]" title="amplifier repairs">
+<div created="20210415125740720" modified="20210505235536832" tags="[[audio repairs]]" title="amplifier repairs">
 <pre>Denon dra-201sa
 
 * symptom: water damage, amplifier goes into protect after switching on
@@ -13056,11 +13056,17 @@ stuff
 * manual
 ** https://www.eserviceinfo.com/downloadsm/95618/DENON_dra201sa.html
 ** https://www.manualslib.com/manual/1036642/Denon-Dra-201sa.html?page=37#manual
-* parts on ebay very expensive, 
+* parts on ebay are very expensive, bought at digikey
 * dead chips
 ** [[2SC4495 - NPN 50V 3A 40MHz 25W|https://www.semicon.sanken-ele.co.jp/sk_content/2sc4495_ds_en.pdf]]
 ** [[2SD2083 - NPN - Darlington 120V 25A 20MHz 120W|https://www.semicon.sanken-ele.co.jp/sk_content/2sd2083_ds_en.pdf]]
 ** [[2SB1383 - PNP - Darlington 120V 25A 50MHz 120W|https://www.semicon.sanken-ele.co.jp/sk_content/2sb1383_ds_en.pdf]]
+* changing the main amplification chips didn't work, there is a problem somewhere else
+* signal path
+** [[LC72720N - Single-Chip RDS Signal-Processing System LSI; decoding the radio signal|https://www.alldatasheet.com/datasheet-pdf/pdf/127988/SANYO/LC72720N.html]], just one of the inputs, connected to the radio receiver module
+** [[TC9273N - Analog Switch Array IC, selecting the inputs|https://www.alldatasheet.com/datasheet-pdf/pdf/32129/TOSHIBA/TC9273N.html]]
+** [[TC9184AP - Electronic Tone (treble/bass) Control, over serial|https://www.alldatasheet.com/datasheet-pdf/pdf/32110/TOSHIBA/TC9184AP.html]]
+** [[tc9459f -  Electronic Volume Control, controled using serial|https://www.alldatasheet.com/datasheet-pdf/pdf/85187/TOSHIBA/TC9459F.html]]
 
 Pioneer X-HM20-S
 
