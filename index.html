@@ -875,6 +875,8 @@ Error message and password prompt
 
 <li>Draft of 'DIY PCBs (DIY Circuit Boards)'</li>
 
+<li>Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station'</li>
+
 <li>Draft of 'low power electronics'</li>
 
 <li>Draft of 'solar thermal'</li>
@@ -11740,7 +11742,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210428151513538" list="[[&quot;automatic&quot; gardening]] [[static site generator]] Medienkompetenz [[frequency response webapp]] About TableOfContents" modified="20210505161219757" title="$:/StoryList">
+<div created="20210428151513538" list="Dresden [[Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station']] About TableOfContents" modified="20210505225319725" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12754,8 +12756,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210505161217792" modifier="Thorbijoern" title="$:/temp/search">
-<pre>garden</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210505225318004" modifier="Thorbijoern" title="$:/temp/search">
+<pre>dresden</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14724,6 +14726,43 @@ stuff
 <div modified="20210415120524810" title="Draft of 'DIY PCBs (DIY Circuit Boards)'">
 <pre></pre>
 </div>
+<div created="20210425205159659" draft.of="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station" draft.title="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station" modified="20210505222024770" tags="[[computer science / IT stuff]] [[Audio Projects]]" title="Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station'">
+<pre>netbook with a weird old Atom N270, i686 instruction set, not much power, 2GB RAM... enough to use for playing audio
+
+!! setup
+
+i first wanted to try out different OS (the i686/i386 images) from a multiboot usb, could only get Linux Mint to boot into live system but it didn't boot after installation, then tried again with debian 10.8.0 i386 netinstall and it worked.
+
+i installed debian with XFCE4, followed the instructions for the bcm4312 wifi adapter here: https://wiki.debian.org/bcm43xx
+
+installed some software:
+
+
+```
+apt update
+apt install vlc ffmpeg pavumeter clementine python3-pip
+pip3 install tidal-dl --upgrade
+```
+
+customized the xfce panels a bit
+
+the official [[Behringer X Air (XR12)]] Software is only compiled for arm and x86 or so and therefor doesn't run on this i686 system. have to find alternatives
+
+!! audio interfaces
+
+* see [[audio interface / soundcard]]
+* included ones seem to work fine
+* creative e-mu 0202 - seems to be supported, not fully tested yet
+** https://www.alsa-project.org/wiki/Matrix:Module-emu10k1-fpga
+* Tascam US-122L - doesn't work yet
+** not to be confused with the US-122
+** https://www.alsa-project.org/wiki/Matrix:Module-usb-us122l
+* Yamaha MG10 XU - not tested yet, should be class compliant
+
+!! MTP support
+
+debian and xfce didn't come with MTP support for transfering file to and from my smartphone out of the box. my device showed up with lsusb. i made sure that libmtp ist installed and it's the latest available version, then i installed mtp-tools and checked with mtp-detect if the device gets detected. mtp-detect detected the device and printed out a lot of information, everything fine, so i had to check further. installed gmtp, it needs some time to load, but works... it's just not as practical as the file manager thunar. i then found that i need gvfs-backends and gvfs-fuse for the mtp support in thunar: `apt install gvfs-backends gvfs-fuse`</pre>
+</div>
 <div modified="20210415111325301" title="Draft of 'low power electronics'">
 <pre></pre>
 </div>
@@ -14733,7 +14772,7 @@ stuff
 <div modified="20210323122300091" title="Draft of 'tools'">
 <pre></pre>
 </div>
-<div created="20201104201703044" modified="20210426144327330" tags="TableOfContents" title="Dresden">
+<div created="20201104201703044" modified="20210505225329708" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
 * https://en.wikipedia.org/wiki/Dresden
@@ -14741,6 +14780,7 @@ stuff
 * https://dresden.network/ - mastodon
 * https://www.piraten-dresden.de/daten-aller-kommunalen-grundstuecke-sind-frei/
 ** https://www.piraten-dresden.de/grundstuckkarte/
+* https://www.radwatch-dresden.de
 
 Förderungen
 
@@ -15762,12 +15802,13 @@ WLAN könnte eine gute lösung sein:
 * [[ESP32 high-quality audio transmitter]]
 * https://www.youtube.com/watch?v=ZXz-u1f-uw0</pre>
 </div>
-<div created="20210214202318752" modified="20210425232547875" tags="[[sustainability / nachhaltigkeit]]" title="gardening">
+<div created="20210214202318752" modified="20210505161238291" tags="[[sustainability / nachhaltigkeit]]" title="gardening">
 <pre>* https://wikifactory.com/+dronecoria
 ** https://wikifactory.com/@aeracoop/dronecoria
 * https://wikifactory.com/@luzleanne/community-composter
 * https://wikifactory.com/@till-w/diy-micro-biogas-systems
-* [[&quot;automatic&quot; gardening]]</pre>
+* [[&quot;automatic&quot; gardening]]
+* https://farmos.org/</pre>
 </div>
 <div created="20210217171522471" modified="20210330203916739" tags="[[Politics (Politik)]]" title="gedanken zur &quot;jugendstrategie&quot; der bundesregierung und allgemein zur politik">
 <pre>generelle punkte zum &quot;jugendbudget&quot;
