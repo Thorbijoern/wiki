@@ -875,8 +875,6 @@ Error message and password prompt
 
 <li>Draft of 'DIY PCBs (DIY Circuit Boards)'</li>
 
-<li>Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station'</li>
-
 <li>Draft of 'low power electronics'</li>
 
 <li>Draft of 'solar thermal'</li>
@@ -11400,8 +11398,8 @@ TableOfContents</pre>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
 </div>
-<div created="20200802181559032" modified="20210501210330015" title="$:/state/toc/TableOfContents-accumulator - battery--118161433">
-<pre>open</pre>
+<div created="20200802181559032" modified="20210505225352090" title="$:/state/toc/TableOfContents-accumulator - battery--118161433">
+<pre>close</pre>
 </div>
 <div created="20200727154700045" modified="20200727204057884" title="$:/state/toc/TableOfContents-accumulator - battery-497309061">
 <pre>close</pre>
@@ -11469,7 +11467,7 @@ TableOfContents</pre>
 <div created="20210330163251642" modified="20210415114820304" title="$:/state/toc/TableOfContents-nature--118161433">
 <pre>close</pre>
 </div>
-<div created="20210330231333724" modified="20210410161052351" title="$:/state/toc/TableOfContents-Politics (Politik)--118161433">
+<div created="20210330231333724" modified="20210505225453987" title="$:/state/toc/TableOfContents-Politics (Politik)--118161433">
 <pre>close</pre>
 </div>
 <div created="20200621183106418" modified="20210321223411523" title="$:/state/toc/TableOfContents-Politics--118161433">
@@ -11742,7 +11740,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210428151513538" list="Dresden [[Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station']] About TableOfContents" modified="20210505225319725" title="$:/StoryList">
+<div created="20210428151513538" list="python [[Lenovo IdeaPad S10-2 (Netbook) as portable Audio station]] [[amplifier repairs]] About TableOfContents" modified="20210505225515065" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12756,8 +12754,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210505225318004" modifier="Thorbijoern" title="$:/temp/search">
-<pre>dresden</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210505225517044" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14726,43 +14724,6 @@ stuff
 <div modified="20210415120524810" title="Draft of 'DIY PCBs (DIY Circuit Boards)'">
 <pre></pre>
 </div>
-<div created="20210425205159659" draft.of="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station" draft.title="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station" modified="20210505222024770" tags="[[computer science / IT stuff]] [[Audio Projects]]" title="Draft of 'Lenovo IdeaPad S10-2 (Netbook) as portable Audio station'">
-<pre>netbook with a weird old Atom N270, i686 instruction set, not much power, 2GB RAM... enough to use for playing audio
-
-!! setup
-
-i first wanted to try out different OS (the i686/i386 images) from a multiboot usb, could only get Linux Mint to boot into live system but it didn't boot after installation, then tried again with debian 10.8.0 i386 netinstall and it worked.
-
-i installed debian with XFCE4, followed the instructions for the bcm4312 wifi adapter here: https://wiki.debian.org/bcm43xx
-
-installed some software:
-
-
-```
-apt update
-apt install vlc ffmpeg pavumeter clementine python3-pip
-pip3 install tidal-dl --upgrade
-```
-
-customized the xfce panels a bit
-
-the official [[Behringer X Air (XR12)]] Software is only compiled for arm and x86 or so and therefor doesn't run on this i686 system. have to find alternatives
-
-!! audio interfaces
-
-* see [[audio interface / soundcard]]
-* included ones seem to work fine
-* creative e-mu 0202 - seems to be supported, not fully tested yet
-** https://www.alsa-project.org/wiki/Matrix:Module-emu10k1-fpga
-* Tascam US-122L - doesn't work yet
-** not to be confused with the US-122
-** https://www.alsa-project.org/wiki/Matrix:Module-usb-us122l
-* Yamaha MG10 XU - not tested yet, should be class compliant
-
-!! MTP support
-
-debian and xfce didn't come with MTP support for transfering file to and from my smartphone out of the box. my device showed up with lsusb. i made sure that libmtp ist installed and it's the latest available version, then i installed mtp-tools and checked with mtp-detect if the device gets detected. mtp-detect detected the device and printed out a lot of information, everything fine, so i had to check further. installed gmtp, it needs some time to load, but works... it's just not as practical as the file manager thunar. i then found that i need gvfs-backends and gvfs-fuse for the mtp support in thunar: `apt install gvfs-backends gvfs-fuse`</pre>
-</div>
 <div modified="20210415111325301" title="Draft of 'low power electronics'">
 <pre></pre>
 </div>
@@ -15338,7 +15299,7 @@ Löschversuche bzw. Tests
 Feuersichere Behältnisse
 * metallboxen?</pre>
 </div>
-<div created="20200714211312781" modified="20201126225652303" tags="[[sustainability / nachhaltigkeit]]" title="Fahrrad (bicycle)">
+<div created="20200714211312781" modified="20210505225343883" tags="[[sustainability / nachhaltigkeit]]" title="Fahrrad (bicycle)">
 <pre>stuff with bicycles
 
 * https://www.stadtradeln.de/
@@ -15354,7 +15315,8 @@ Feuersichere Behältnisse
 
 * https://www.wired.com/2010/12/diy-cargo-bike-mods/
 *http://www.copenhagencyclechic.com/2016/12/diy-cargo-bike-whats-that-like.html
-* [[Electric Bike Conversion (Part 3) ~ Final Assembly &amp; Test Ride|https://www.youtube.com/watch?v=ALU8j7BTXnI]]</pre>
+* [[Electric Bike Conversion (Part 3) ~ Final Assembly &amp; Test Ride|https://www.youtube.com/watch?v=ALU8j7BTXnI]]
+* https://www.radwatch-dresden.de</pre>
 </div>
 <div created="20201108232305568" modified="20201109002121801" tags="[[Fahrrad (bicycle)]]" title="Fahrradanhänger kupplung">
 <pre>hier geht es erstmal nicht um ein-achsige, - spurige, -rädrige fahrradanhänger.
@@ -15930,7 +15892,7 @@ diy inverter generator:
 * genderpaygap schließen
 * transparenz der ponlitische organe, ihres budgets/ausgaben/einnahmen und der entscheidungsfindung</pre>
 </div>
-<div created="20200624191018219" modified="20210330203916742" tags="[[Politics (Politik)]]" title="Handlungsbedarf in Deutschland und so ziemlich überall sonst">
+<div created="20200624191018219" modified="20210505225412898" tags="[[Politics (Politik)]]" title="Handlungsbedarf in Deutschland und so ziemlich überall sonst">
 <pre>* Vernünftige Klimapolitik, auf die Wissenschaft hören!
 * Rechte strukturen in Bundeswehr und Polizei aufspüren und zerschlagen, rechtsextreme entlassen
 * alternative zum Verfassungsschutz
@@ -15950,7 +15912,8 @@ diy inverter generator:
 * soziale ungleichheit abbauen
 ** https://www.youtube.com/watch?v=NfBSQ0Sbtwo
 ** [[bedingungsloses Grundeinkommen]]
-* https://sound-au.com/manufacture.htm</pre>
+* https://sound-au.com/manufacture.htm
+* https://www.radwatch-dresden.de</pre>
 </div>
 <div created="20210212165456317" modified="20210318223603372" tags="hacking [[Open Hardware]]" title="hardware hacking">
 <pre>* [[Intro to Hardware Reversing: Finding a UART and getting a shell|https://www.youtube.com/watch?v=ZmZuKA-Rst0]]
@@ -16948,8 +16911,10 @@ there's also recycled leather using ground-up old leather and synthetics...
 
 but most leathers don't seem to fit... seems like i have to still use nylon and/or neopren</pre>
 </div>
-<div created="20210425205159659" modified="20210426144421292" tags="[[computer science / IT stuff]]" title="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station">
-<pre>netbook with a weird old Atom N270, i686 instruction set, not much power, 2GB RAM?
+<div created="20210425205159659" modified="20210505225421082" tags="[[computer science / IT stuff]] [[Audio Projects]]" title="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station">
+<pre>netbook with a weird old Atom N270, i686 instruction set, not much power, 2GB RAM... enough to use for playing audio
+
+!! setup
 
 i first wanted to try out different OS (the i686/i386 images) from a multiboot usb, could only get Linux Mint to boot into live system but it didn't boot after installation, then tried again with debian 10.8.0 i386 netinstall and it worked.
 
@@ -16966,9 +16931,9 @@ pip3 install tidal-dl --upgrade
 
 customized the xfce panels a bit
 
-the official [[Behringer X Air (XR12)]] Software is only compiled for x86 or so and therefor doesn't run on this i686 system. have to find alternatives
+the official [[Behringer X Air (XR12)]] Software is only compiled for arm and x86 or so and therefor doesn't run on this i686 system. have to find alternatives
 
-audio interfaces
+!! audio interfaces
 
 * see [[audio interface / soundcard]]
 * included ones seem to work fine
@@ -16977,7 +16942,11 @@ audio interfaces
 * Tascam US-122L - doesn't work yet
 ** not to be confused with the US-122
 ** https://www.alsa-project.org/wiki/Matrix:Module-usb-us122l
-* Yamaha MG10 XU - not tested yet, should be class compliant</pre>
+* Yamaha MG10 XU - not tested yet, should be class compliant
+
+!! MTP support
+
+debian and xfce didn't come with MTP support for transfering file to and from my smartphone out of the box. my device showed up with lsusb. i made sure that libmtp ist installed and it's the latest available version, then i installed mtp-tools and checked with mtp-detect if the device gets detected. mtp-detect detected the device and printed out a lot of information, everything fine, so i had to check further. installed gmtp, it needs some time to load, but works... it's just not as practical as the file manager thunar. i then found that i need gvfs-backends and gvfs-fuse for the mtp support in thunar: `apt install gvfs-backends gvfs-fuse`</pre>
 </div>
 <div created="20210123180848957" modified="20210219203040073" tags="[[Free / Open / Libre *]]" title="Licences and Licencing">
 <pre>this is just a small guide on how licences work in most legislations to help people not familiar with it understand the matter, it can be quite confusing. i'm not a lawyer an these informations might be inaccurate or wrong, it is just a mirror of what i understood during working with different works.
@@ -19414,14 +19383,15 @@ projects:
 * https://www.instructables.com/DIY-Arduino-PWM5-Solar-Charge-Controller-PCB-Files/
 * https://github.com/TheDIYGuy999/PWM5</pre>
 </div>
-<div created="20210218233408995" modified="20210410153725225" tags="[[computer science / IT stuff]]" title="python">
+<div created="20210218233408995" modified="20210505225529809" tags="[[computer science / IT stuff]]" title="python">
 <pre>* https://docs.python-guide.org/
 * https://www.python.org/dev/peps/pep-0008/
 * https://www.python.org/dev/peps/pep-0020/
 * https://www.diegor.it/2017/06/15/the-must-read-pythons-peps/
 * https://realpython.com/
 * https://www.fullstackpython.com/
-* https://github.com/vinta/awesome-python</pre>
+* https://github.com/vinta/awesome-python
+* https://realpython.com/async-io-python/</pre>
 </div>
 <div created="20210201233501049" modified="20210202000432177" tags="Electronics" title="quality Electrolytic Capacitors">
 <pre>failing electrolytic caps (elcos, Elkos) are a common failure mode of consumer electronics.
