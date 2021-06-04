@@ -877,8 +877,6 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
-<li>Draft of ''</li>
-
 <li>Draft of 'algorithmic / generative / computer art'</li>
 
 <li>Draft of 'DIY PCBs (DIY Circuit Boards)'</li>
@@ -1378,6 +1376,8 @@ Error message and password prompt
 <li>reverse engineering</li>
 
 <li>reverse engineering of 1kW ective pure sine inverter</li>
+
+<li>reverse engineering of electric cargo bike electronics</li>
 
 <li>reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;</li>
 
@@ -11755,7 +11755,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210603111103786" list="[[Draft of '']] [[rebuild of e-scooter battery pack]] About TableOfContents" modified="20210603111103786" title="$:/StoryList">
+<div created="20210603111103786" list="[[12V 280Ah LFP pack build]] [[reverse engineering of electric cargo bike electronics]] [[rebuild of e-scooter battery pack]] About TableOfContents" modified="20210604162041240" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12769,8 +12769,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210604152658120" modifier="Thorbijoern" title="$:/temp/search">
-<pre>bike</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210604162038915" modifier="Thorbijoern" title="$:/temp/search">
+<pre>pack</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -12887,7 +12887,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20210220122028070" modified="20210323010059332" tags="[[accumulator - battery]] [[Electronic Projects]]" title="12V 280Ah LFP pack build">
+<div created="20210220122028070" modified="20210604163030402" tags="[[accumulator - battery]] [[Electronic Projects]]" title="12V 280Ah LFP pack build">
 <pre>requirements:
 
 * ~200Ah
@@ -12898,9 +12898,15 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 bought:
 
 * 4x 280Ah LFP cells
-** should include busbars
+** should include busbars and screws
 * 200A Daly 4s LFP BMS
-* 1,5kW inverter</pre>
+* 1,5kW inverter
+* handy battery monitor
+* 20A 14.6V charger
+
+the cells took quite some time to arrive, and after testing 2 of the cells where of lower quality and i was only able to pull arround 255Ah of capacity. they where advertised als 280Ah.
+
+i intent to use a 40x30cm euro container as case but the 22cm versions are a little to small, i need atleast 24cm height. the next standard height would be 27cm.</pre>
 </div>
 <div created="20201112201438351" modified="20210301213727042" tags="[[storing, mounting, housing (hardware)]]" title="19&quot; Rack">
 <pre>Information:
@@ -14765,9 +14771,6 @@ stuff
 * https://physicsopenlab.org/wp-content/uploads/2015/11/Spettrometro_ENG.pdf
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
-</div>
-<div created="20210604152615292" draft.of="" draft.title="reverse engineering of electric cargo bike controller" modified="20210604152713557" tags="repairs [[Fahrrad (bicycle)]] [[reverse engineering]]" title="Draft of ''">
-<pre></pre>
 </div>
 <div modified="20210416142404776" title="Draft of 'algorithmic / generative / computer art'">
 <pre></pre>
@@ -19528,7 +19531,7 @@ here are some good quality brands for replacing:
 ** https://freertos.org/
 * [[How to work with a Real Time Operating System and is it any good? (FreeRTOS, ESP32)|https://www.youtube.com/watch?v=684KSAvYbw4]]</pre>
 </div>
-<div created="20210603205524441" modified="20210604152722739" tags="repairs [[accumulator - battery]] [[reverse engineering]]" title="rebuild of e-scooter battery pack">
+<div created="20210603205524441" modified="20210604162027316" tags="repairs [[accumulator - battery]] [[reverse engineering]]" title="rebuild of e-scooter battery pack">
 <pre>battery pack Data:
 
 * Manufacturer: Go-Tech Energy Co., Ltd.
@@ -19541,6 +19544,7 @@ here are some good quality brands for replacing:
 * battery case dimensions:
 * inner: 22,5x14x46
 ** outer: 24,5x15,5x47
+* cells: ICR18650-2... (not fully visible)
 
 BMS data:
 
@@ -19834,6 +19838,52 @@ information about the Connector
 additional:
 
 * several 222 3kV ceramic caps to ground</pre>
+</div>
+<div created="20210604152615292" modified="20210604161222480" tags="repairs [[Fahrrad (bicycle)]] [[reverse engineering]]" title="reverse engineering of electric cargo bike electronics">
+<pre>Components of the drivetrain:
+
+* 38V battery pack
+** 4 connections: +, - and 2 data pins (not used by controller)
+* controller with motor driver
+* PAS-Sensor
+* throttle control
+* display with a few controlls
+* 250W rear-wheel motor 
+
+PAS-Sensor and throttle controll are Hall-Sensor based
+
+connections on the controller:
+
+* power +38V
+* GND/ power -
+* 3pin connector for throttle control (female)
+** 5V (red)
+** GND (black)
+** hall-sensor 'data' (green)
+* 6pin connector for PAS-Sensor (female)
+** 5V
+** NC
+** data?
+** GND
+** data?
+** NC
+* 5pin connector for display (male)
+** 38V power (red)
+** GND (black)
+** data?
+** data?
+** data?
+** grey cable is data
+** white, yellow?
+* 2pin connector (female) - not used
+** voltage?
+** GND
+* 5pin connector (male) - not used
+** ?
+** GND
+** ?
+** ?
+** ?</pre>
 </div>
 <div created="20201031135836212" modified="20210323124055328" tags="[[Electronic Projects]] [[reverse engineering]]" title="reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;">
 <pre>it's basically a small server/client to connect Serial devices (RS-232; DB9 connectors) too and communicate to them over ethernet.
