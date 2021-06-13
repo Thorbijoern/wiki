@@ -891,6 +891,8 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
+<li>Draft of 'e-bike / pedelec'</li>
+
 <li>Draft of 'e-bike PAS-Sensor'</li>
 
 <li>Dresden</li>
@@ -11436,8 +11438,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20200512220852593" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20200512220838244" modified="20210613140622787" title="$:/state/tab/sidebar--595412856">
-<pre>TableOfContents</pre>
+<div created="20200512220838244" modified="20210613150753034" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -11784,7 +11786,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210613135658898" list="[[PA technik]] [[e-bike throttle control]] [[Draft of 'e-bike PAS-Sensor']] [[e-bike / pedelec]] About TableOfContents" modified="20210613143923434" title="$:/StoryList">
+<div created="20210613135658898" list="[[Draft of 'e-bike PAS-Sensor']] [[Draft of 'e-bike / pedelec']] [[e-bike motor]] About TableOfContents" modified="20210613150748824" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14848,10 +14850,42 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
-<div created="20210613142331942" draft.of="e-bike PAS-Sensor" draft.title="e-bike PAS-Sensor" modified="20210613143840698" tags="[[e-bike / pedelec]]" title="Draft of 'e-bike PAS-Sensor'">
+<div created="20210104214035250" draft.of="e-bike / pedelec" draft.title="e-bike / pedelec" modified="20210613150659537" tags="[[Fahrrad (bicycle, bike)]]" title="Draft of 'e-bike / pedelec'">
+<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
+
+
+general
+
+* https://www.pedelecforum.de/wiki/doku.php?id=start
+* https://circular.bike/
+** https://blog.formf.de/2020/12/rc3/
+** https://blog.formf.de/circular-bike/
+
+in some legislations (like the EU) the e-bike is only allowed to accelerate to a certain speed only with motor power. in the EU e-bikes are only allowed to accelerate up to 6km/h on motor power, for higher speeds the person driving the bike has to pedal and the motor is only assisting.
+in the EU the max speed is 25km/h and the max allowed motor power is 250W.
+
+electronics
+
+* https://www.pedelecforum.de/wiki/doku.php?id=e-motor:start
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:start
+* [[motor|e-bike motor]]
+* [[controller, motor driver|e-bike controller, motor driver]] 
+* [[regenerative breaking (rekuperation)]]
+* [[battery packs]]
+** mostly normal Li-Ion battery packs
+** mostly 36V or 48V nominal
+* standards/normen
+** EN15194?
+
+stuff
+
+* https://hackaday.com/blog/page/4/?s=e%20bike
+* [[Electronic Basics #18: DC &amp; Brushless DC Motor + ESC|https://www.youtube.com/watch?v=UteZJ_7C4Mg]]</pre>
+</div>
+<div created="20210613142331942" draft.of="e-bike PAS-Sensor" draft.title="e-bike PAS-Sensor" modified="20210613150606844" tags="[[e-bike / pedelec]]" title="Draft of 'e-bike PAS-Sensor'">
 <pre>Pedal Assist Sensor, used to detect pedaling of the driving person.
 
-in some legislations (like the EU) the e-bike is only allowed to accelerate to a certain speed only with motor power. in the EU e-bikes are only allowed to accelerate up to 6km/h on motor power, for higher speeds the person driving the bike has to pedal and the motor is only assisting. </pre>
+in some legislations (like the EU) the e-bike is only allowed to accelerate to a certain speed only with motor power. in the EU e-bikes are only allowed to accelerate up to 6km/h on motor power, for higher speeds the person driving the bike has to pedal and the motor is only assisting. this requires a PAS-Sensor</pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -14930,8 +14964,8 @@ stuff
 * see [[ESC / BLDC motor driver]]
 * [[regenerative breaking (rekuperation)]]</pre>
 </div>
-<div created="20210613140333450" modified="20210613142318721" tags="[[e-bike / pedelec]]" title="e-bike motor">
-<pre>* they all seem to be BLDC motors
+<div created="20210613140333450" modified="20210613150816719" tags="[[e-bike / pedelec]]" title="e-bike motor">
+<pre>* they all seem to be 3-phase BLDC motors
 ** https://en.wikipedia.org/wiki/Brushless_DC_electric_motor
 ** https://de.wikipedia.org/wiki/B%C3%BCrstenloser_Gleichstrommotor
 * the power of the motor also depends on the voltage of the system.
