@@ -897,8 +897,6 @@ Error message and password prompt
 
 <li>Draft of 'e-bike / pedelec'</li>
 
-<li>Draft of 'e-bike controller, motor driver'</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -11798,7 +11796,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210613135658898" list="[[Draft of 'e-bike / pedelec']] [[e-bike PAS-Sensor]] [[Draft of 'e-bike controller, motor driver']] About TableOfContents" modified="20210613182153938" title="$:/StoryList">
+<div created="20210613135658898" list="[[Draft of 'e-bike / pedelec']] [[e-bike motor]] [[e-bike controller, motor driver]] About TableOfContents" modified="20210613182304069" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14923,38 +14921,6 @@ stuff
 * https://hackaday.com/blog/page/4/?s=e%20bike
 * [[Electronic Basics #18: DC &amp; Brushless DC Motor + ESC|https://www.youtube.com/watch?v=UteZJ_7C4Mg]]</pre>
 </div>
-<div created="20210613140511485" draft.of="e-bike controller, motor driver" draft.title="e-bike controller, motor driver" modified="20210613182018704" tags="[[e-bike / pedelec]] [[power electronics (Leistungselektronik)]]" title="Draft of 'e-bike controller, motor driver'">
-<pre>* essentially just a [[ESC / BLDC motor driver]] with some connections and features for external hardware and controlls
-* most controllers include the controller and the motor driver in one package
-
-controller only, without motor driver
-
-* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:forumscontroller
-* https://github.com/thorlancaster/electric-bike-controller - seems to be meant to simultaneusly controll 2 motors (front&amp;rear) on one bike
-
-controller + driver
-
-* cheap ones from china can be found on ebay, aliexpress/alibaba, bangood, etc., bmc-world.com also sells them
-** some wiring diagrams:
-*** https://www.elecycles.com/blog/post/what-you-need-to-know-about-electric-bike-controller/
-*** https://ricardolevinsmorales.com/e-bike-controller-wiring-diagram/
-** https://www.pedelecforum.de/wiki/doku.php?id=antriebsstrang:specialbike_lsdzs_com - some more information
-* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:barmalcontroller
-* the VESC can be easily used for bikes - open source
-* https://www.pedelecforum.de/forum/index.php?threads/eigenbau-universalcontroller-250-1000w.45553/ - open source
-
-open firmware for common controllers
-
-* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:open_source_firmware_fuer_sxxs_ktxx_-controller
-stuff
-* https://www.pedelecforum.de/forum/index.php?threads/open-source-firmware-f%C3%BCr-lishui-controller.61113/
-
-* some support [[regenerative breaking (rekuperation)]]
-* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:controller-reparaturanleitung
-* https://www.pedelecforum.de/wiki/doku.php?id=tipps:start#controllerfunktion_reparatur
-
-</pre>
-</div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -15047,17 +15013,39 @@ stuff
 * https://hackaday.com/blog/page/4/?s=e%20bike
 * [[Electronic Basics #18: DC &amp; Brushless DC Motor + ESC|https://www.youtube.com/watch?v=UteZJ_7C4Mg]]</pre>
 </div>
-<div created="20210613140511485" modified="20210613170812449" tags="[[e-bike / pedelec]] [[power electronics (Leistungselektronik)]]" title="e-bike controller, motor driver">
+<div created="20210613140511485" modified="20210613182257097" tags="[[e-bike / pedelec]] [[power electronics (Leistungselektronik)]]" title="e-bike controller, motor driver">
 <pre>* essentially just a [[ESC / BLDC motor driver]] with some connections and features for external hardware and controlls
-* open source designs?
 * most controllers include the controller and the motor driver in one package
-* controller only, without motor driver
-** https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:forumscontroller
-** https://github.com/thorlancaster/electric-bike-controller - seems to be meant to simultaneusly controll 2 motors (front&amp;rear) on one bike
-* the VESC can be easily used for bikes
-* some support [[regenerative breaking (rekuperation)]]</pre>
+
+controller only, without motor driver
+
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:forumscontroller
+* https://github.com/thorlancaster/electric-bike-controller - seems to be meant to simultaneusly controll 2 motors (front&amp;rear) on one bike
+
+controller + driver
+
+* cheap ones from china can be found on ebay, aliexpress/alibaba, bangood, etc., bmc-world.com also sells them
+** some wiring diagrams:
+*** https://www.elecycles.com/blog/post/what-you-need-to-know-about-electric-bike-controller/
+*** https://ricardolevinsmorales.com/e-bike-controller-wiring-diagram/
+** https://www.pedelecforum.de/wiki/doku.php?id=antriebsstrang:specialbike_lsdzs_com - some more information
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:barmalcontroller
+* the VESC can be easily used for bikes - open source
+* https://www.pedelecforum.de/forum/index.php?threads/eigenbau-universalcontroller-250-1000w.45553/ - open source
+
+open firmware for common controllers
+
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:open_source_firmware_fuer_sxxs_ktxx_-controller
+stuff
+* https://www.pedelecforum.de/forum/index.php?threads/open-source-firmware-f%C3%BCr-lishui-controller.61113/
+
+* some support [[regenerative breaking (rekuperation)]]
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:controller-reparaturanleitung
+* https://www.pedelecforum.de/wiki/doku.php?id=tipps:start#controllerfunktion_reparatur
+
+</pre>
 </div>
-<div created="20210613140333450" modified="20210613175028099" tags="[[e-bike / pedelec]]" title="e-bike motor">
+<div created="20210613140333450" modified="20210613182359924" tags="[[e-bike / pedelec]]" title="e-bike motor">
 <pre>* they all seem to be 3-phase BLDC motors
 ** https://en.wikipedia.org/wiki/Brushless_DC_electric_motor
 ** https://de.wikipedia.org/wiki/B%C3%BCrstenloser_Gleichstrommotor
@@ -15066,7 +15054,8 @@ stuff
 ** 48V systems have motors with 500W, 1kW or even more
 * https://www.pedelecforum.de/wiki/doku.php?id=antriebsstrang:specialbike_suzhou-bafang-motor
 * https://www.pedelecforum.de/wiki/doku.php?id=e-motor:start
-https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:epacsim</pre>
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:epacsim
+* https://www.pedelecforum.de/wiki/doku.php?id=tipps:start#formeln_zur_berechnung_des_maximalen_anfahrdrehmoments_von_naben-_und_tretlagermotoren</pre>
 </div>
 <div created="20210613142331942" modified="20210613182228035" tags="[[e-bike / pedelec]]" title="e-bike PAS-Sensor">
 <pre>Pedal Assist Sensor, used to detect pedaling of the driving person.
