@@ -157,7 +157,7 @@ Error message and password prompt
 
 <li>&quot;transistor tester&quot; reverse engineering</li>
 
-<li>(diy) spot welder</li>
+<li>(diy) spot welder (punktschweißgerät)</li>
 
 <li>(linux) terminal tools</li>
 
@@ -1756,12 +1756,13 @@ stuff:
 * [[Full Circuit Schematic Draft 2017 AVR Transistor Tester Component ESR LCR Meter Frequency Generator|https://www.youtube.com/watch?v=T8Fl7HL0c0c]]
 * [[#290​ How do Transistor Testers work (and some other insights)|https://www.youtube.com/watch?v=4Xsg8lpP75s]]</pre>
 </div>
-<div created="20201104234629051" modified="20210604171256983" tags="[[accumulator - battery - rechargeable energy storage]]" title="(diy) spot welder">
+<div created="20201104234629051" modified="20210613171913698" tags="[[accumulator - battery - rechargeable energy storage]]" title="(diy) spot welder (punktschweißgerät)">
 <pre>you need a pretty high current for spot welding, voltage ist not as importand.
 modules from china use either some lithium battery or big mains transformers (modified microwave transformers) as main supply.
 
 * [[BitBastelei #412 - Sunkko 737G Punktschweißgerät|https://www.youtube.com/watch?v=I8dtf0ydr2U]]
 * [[Voltlog #198 - SUNKKO 737G Battery Spot Welding Machine Review &amp; Teardown|https://www.youtube.com/watch?v=FPTofhPgHqY]]
+* https://www.pedelecforum.de/wiki/doku.php?id=akku:eigenbau-punktschweissgeraete
 
 lead acid &quot;car&quot; battery based
 
@@ -11790,7 +11791,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210613135658898" list="[[Battery Management System (BMS)]] transistors [[Draft of 'e-bike / pedelec']] [[Draft of 'e-bike controller, motor driver']] About TableOfContents" modified="20210613171154002" title="$:/StoryList">
+<div created="20210613135658898" list="[[(diy) spot welder (punktschweißgerät)]] [[Draft of 'e-bike / pedelec']] [[Draft of 'e-bike controller, motor driver']] About TableOfContents" modified="20210613171853999" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12804,8 +12805,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210613171151093" modifier="Thorbijoern" title="$:/temp/search">
-<pre>bms</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210613171851431" modifier="Thorbijoern" title="$:/temp/search">
+<pre>punkt</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14901,14 +14902,16 @@ stuff
 * https://hackaday.com/blog/page/4/?s=e%20bike
 * [[Electronic Basics #18: DC &amp; Brushless DC Motor + ESC|https://www.youtube.com/watch?v=UteZJ_7C4Mg]]</pre>
 </div>
-<div created="20210613140511485" draft.of="e-bike controller, motor driver" draft.title="e-bike controller, motor driver" modified="20210613170929961" tags="[[e-bike / pedelec]] [[power electronics (Leistungselektronik)]]" title="Draft of 'e-bike controller, motor driver'">
+<div created="20210613140511485" draft.of="e-bike controller, motor driver" draft.title="e-bike controller, motor driver" modified="20210613171619755" tags="[[e-bike / pedelec]] [[power electronics (Leistungselektronik)]]" title="Draft of 'e-bike controller, motor driver'">
 <pre>* essentially just a [[ESC / BLDC motor driver]] with some connections and features for external hardware and controlls
-* open source designs?
 * most controllers include the controller and the motor driver in one package
 * controller only, without motor driver
 ** https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:forumscontroller
 ** https://github.com/thorlancaster/electric-bike-controller - seems to be meant to simultaneusly controll 2 motors (front&amp;rear) on one bike
-* the VESC can be easily used for bikes
+* controller + driver
+** cheap ones from china can be found on ebay, aliexpress/alibaba, bangood, etc., bmc-world.com also sells them
+** https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:barmalcontroller
+** the VESC can be easily used for bikes
 * some support [[regenerative breaking (rekuperation)]]
 * some wiring diagrams from cheap controllers from china:
 * https://www.elecycles.com/blog/post/what-you-need-to-know-about-electric-bike-controller/
