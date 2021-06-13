@@ -897,10 +897,6 @@ Error message and password prompt
 
 <li>Draft of 'e-bike controller, motor driver'</li>
 
-<li>Draft of 'e-bike motor'</li>
-
-<li>Draft of 'reverse engineering of electric cargo bike electronics'</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -11795,7 +11791,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210613135658898" list="[[Battery Management System (BMS)]] [[Draft of 'e-bike / pedelec']] [[Draft of 'reverse engineering of electric cargo bike electronics']] [[Draft of 'e-bike motor']] [[Draft of 'e-bike controller, motor driver']] About TableOfContents" modified="20210613174821682" title="$:/StoryList">
+<div created="20210613135658898" list="[[Draft of 'e-bike / pedelec']] [[reverse engineering of electric cargo bike electronics]] [[Draft of 'e-bike controller, motor driver']] About TableOfContents" modified="20210613175006612" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14868,7 +14864,7 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
-<div created="20210104214035250" draft.of="e-bike / pedelec" draft.title="e-bike / pedelec" modified="20210613174244867" tags="[[Fahrrad (bicycle, bike)]]" title="Draft of 'e-bike / pedelec'">
+<div created="20210104214035250" draft.of="e-bike / pedelec" draft.title="e-bike / pedelec" modified="20210613174949031" tags="[[Fahrrad (bicycle, bike)]]" title="Draft of 'e-bike / pedelec'">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
 
@@ -14879,6 +14875,7 @@ general
 * https://circular.bike/
 ** https://blog.formf.de/2020/12/rc3/
 ** https://blog.formf.de/circular-bike/
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:komponenten_eines_pedelecantriebes
 
 in some legislations (like the EU) the e-bike is only allowed to accelerate to a certain speed only with motor power. in the EU e-bikes are only allowed to accelerate up to 6km/h on motor power, for higher speeds the person driving the bike has to pedal and the motor is only assisting.
 in the EU the max speed is 25km/h and the max allowed motor power is 250W.
@@ -14910,6 +14907,7 @@ electronics
 finding problems:
 
 * https://www.pedelecforum.de/wiki/doku.php?id=antriebsstrang:specialbike_serviceinfos-lsdzs_com
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:fehlersuche_beim_pedelec
 
 stuff
 
@@ -14932,67 +14930,6 @@ stuff
 ** the VESC can be easily used for bikes
 * some support [[regenerative breaking (rekuperation)]]
 </pre>
-</div>
-<div created="20210613140333450" draft.of="e-bike motor" draft.title="e-bike motor" modified="20210613173959827" tags="[[e-bike / pedelec]]" title="Draft of 'e-bike motor'">
-<pre>* they all seem to be 3-phase BLDC motors
-** https://en.wikipedia.org/wiki/Brushless_DC_electric_motor
-** https://de.wikipedia.org/wiki/B%C3%BCrstenloser_Gleichstrommotor
-* the power of the motor also depends on the voltage of the system.
-** 36V systems mostly have 250W motors, but 500W motors are allso available
-** 48V systems have motors with 500W, 1kW or even more
-* https://www.pedelecforum.de/wiki/doku.php?id=antriebsstrang:specialbike_suzhou-bafang-motor
-* https://www.pedelecforum.de/wiki/doku.php?id=e-motor:start</pre>
-</div>
-<div created="20210604152615292" draft.of="reverse engineering of electric cargo bike electronics" draft.title="reverse engineering of electric cargo bike electronics" modified="20210613174037471" tags="repairs [[reverse engineering]] [[cargo bike, bike trailers]] [[e-bike / pedelec]]" title="Draft of 'reverse engineering of electric cargo bike electronics'">
-<pre>Components of the drivetrain:
-
-* 38V battery pack
-** 4 connections: +, - and 2 data pins (not used by controller)
-* controller with motor driver
-* PAS-Sensor
-* throttle control
-* display with a few controlls
-* 250W rear-wheel motor 
-
-PAS-Sensor and throttle controll are Hall-Sensor based
-
-connections on the controller:
-
-* power +38V
-* GND/ power -
-* 3pin connector for throttle control (female)
-** 5V (red)
-** GND (black)
-** hall-sensor 'data' (green)
-* 6pin connector for PAS-Sensor (female)
-** 5V
-** NC
-** data?
-** GND
-** data?
-** NC
-* 5pin connector for display (male)
-** 38V power (red)
-** GND (black)
-** data?
-** data?
-** data?
-** grey cable is data
-** white, yellow?
-* 2pin connector (female) - not used
-** voltage?
-** GND
-* 5pin connector (male) - not used
-** ?
-** GND
-** ?
-** ?
-** ?
-
-
-more information:
-
-* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:forumscontroller:peripherie</pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -15094,13 +15031,16 @@ stuff
 * the VESC can be easily used for bikes
 * some support [[regenerative breaking (rekuperation)]]</pre>
 </div>
-<div created="20210613140333450" modified="20210613150816719" tags="[[e-bike / pedelec]]" title="e-bike motor">
+<div created="20210613140333450" modified="20210613175028099" tags="[[e-bike / pedelec]]" title="e-bike motor">
 <pre>* they all seem to be 3-phase BLDC motors
 ** https://en.wikipedia.org/wiki/Brushless_DC_electric_motor
 ** https://de.wikipedia.org/wiki/B%C3%BCrstenloser_Gleichstrommotor
 * the power of the motor also depends on the voltage of the system.
 ** 36V systems mostly have 250W motors, but 500W motors are allso available
-** 48V systems have motors with 500W, 1kW or even more</pre>
+** 48V systems have motors with 500W, 1kW or even more
+* https://www.pedelecforum.de/wiki/doku.php?id=antriebsstrang:specialbike_suzhou-bafang-motor
+* https://www.pedelecforum.de/wiki/doku.php?id=e-motor:start
+https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:epacsim</pre>
 </div>
 <div created="20210613142331942" modified="20210613154643433" tags="[[e-bike / pedelec]]" title="e-bike PAS-Sensor">
 <pre>Pedal Assist Sensor, used to detect pedaling of the driving person.
@@ -20168,7 +20108,7 @@ additional:
 
 * several 222 3kV ceramic caps to ground</pre>
 </div>
-<div created="20210604152615292" modified="20210613140019743" tags="repairs [[reverse engineering]] [[cargo bike, bike trailers]] [[e-bike / pedelec]]" title="reverse engineering of electric cargo bike electronics">
+<div created="20210604152615292" modified="20210613175050336" tags="repairs [[reverse engineering]] [[cargo bike, bike trailers]] [[e-bike / pedelec]]" title="reverse engineering of electric cargo bike electronics">
 <pre>Components of the drivetrain:
 
 * 38V battery pack
@@ -20212,7 +20152,12 @@ connections on the controller:
 ** GND
 ** ?
 ** ?
-** ?</pre>
+** ?
+
+
+more information:
+
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:forumscontroller:peripherie</pre>
 </div>
 <div created="20201031135836212" modified="20210323124055328" tags="[[Electronic Projects]] [[reverse engineering]]" title="reverse engineering of Moxa DE-304 &quot;NPort Server Lite&quot;">
 <pre>it's basically a small server/client to connect Serial devices (RS-232; DB9 connectors) too and communicate to them over ethernet.
