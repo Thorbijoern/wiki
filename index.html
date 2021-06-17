@@ -1403,6 +1403,8 @@ Error message and password prompt
 
 <li>reverse engineering</li>
 
+<li>reverse engineering of 1.5kW &quot;Renoster&quot; Inverter</li>
+
 <li>reverse engineering of 1kW ective pure sine inverter</li>
 
 <li>reverse engineering of electric cargo bike electronics</li>
@@ -11796,7 +11798,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210613135658898" list="[[Computer Accessibility]] [[rebuild of e-scooter battery pack]] About TableOfContents" modified="20210617184431441" title="$:/StoryList">
+<div created="20210613135658898" list="[[reverse engineering of 1.5kW &quot;Renoster&quot; Inverter]] About TableOfContents" modified="20210617184431441" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12810,8 +12812,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210617184429987" modifier="Thorbijoern" title="$:/temp/search">
-<pre>access</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210617203225287" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -20083,6 +20085,24 @@ information about the Connector
 * reverse engineering and publishing the documents seems legal as long as you made the documents all yourself, but patents are a problem
 * best is to publish your documents under an open licence, so deletion requests are not as easy for the companies 
 * https://en.wikipedia.org/wiki/Youtube-dl#RIAA_takedown_request</pre>
+</div>
+<div created="20210617193521055" modified="20210617203229135" tags="" title="reverse engineering of 1.5kW &quot;Renoster&quot; Inverter">
+<pre>
+
+remote controll panel
+
+* color LCD
+* 3 buttons: &quot;Reset&quot;, &quot;Power Switching&quot;, &quot;On/Off&quot;
+* internal LiPo battery, charged through micro usb port
+* chips/boards
+** main board
+*** 4056E (wscp34) - battery cahrging chip
+*** Nuvoton N76E003AT20 - 8-bit low power 8051 CISC MCU
+**** https://microcontrollerslab.com/n76e003at20-microcontroller-pinout-features-programming-and-peripherals/
+**** https://microcontrollerslab.com/8051-microcontroller/
+*** Holtek ht1621b - &quot;RAM Mapping 32x4 LCD Controller for I/O MCU&quot;
+**** https://www.alldatasheet.com/datasheet-pdf/pdf/96976/HOLTEK/ht1621b.html
+*** nrf24l01+ on daughterboard</pre>
 </div>
 <div created="20210104200936236" modified="20210120010243325" tags="" title="reverse engineering of 1kW ective pure sine inverter">
 <pre>probably just a rebrand of chinese products, like from Kosun https://www.kosunpower.com/ (a lot of china-originated special components)
