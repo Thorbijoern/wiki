@@ -897,6 +897,10 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
+<li>Draft of 'LD Systems Stinger 15A / LDE 152 / LDEB 152 / LDEB 152A repair'</li>
+
+<li>Draft of 'passive crossover'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -1545,6 +1549,8 @@ Error message and password prompt
 
 <li>SVG, Canvas and WebGL - advanced graphics on websites</li>
 
+<li>Swisstone BX 600 (bluetooth speaker) micro usb repair / reverse engineering</li>
+
 <li>switched mode power supply (SMPS)</li>
 
 <li>synth: hardware, software</li>
@@ -1909,7 +1915,7 @@ DIY
 ** MSI K8T Neo-V (MS-7032) (ATX, Socket 754, DDR SDRAM, SATA, PCIe)
 ** Asus P5QL Pro (ATX, LGA775, DDR2, PCIe, Sata)</pre>
 </div>
-<div created="20201208231113535" modified="20210330230052610" tags="[[Solar / renewable energy]] [[sustainability / nachhaltigkeit]] [[Politics (Politik)]] [[power electronics (Leistungselektronik)]]" title="(open source) Power Grid management">
+<div created="20201208231113535" modified="20210704215235188" tags="[[Solar / renewable energy]] [[sustainability / nachhaltigkeit]] [[Politics (Politik)]] [[power electronics (Leistungselektronik)]]" title="(open source) Power Grid management">
 <pre>general information
 
 * https://www.youtube.com/playlist?list=PLTZM4MrZKfW-ftqKGSbO-DwDiOGqNmq53
@@ -1922,6 +1928,7 @@ DIY
 * see also [[powerlogging / power meter / AC power analysis / energy monitor]]
 * https://media.ccc.de/v/32c3-7323-wie_man_einen_blackout_verursacht
 * https://www.hackster.io/mehrsun/smart-microgrid-monitoring-b80c58
+* https://hackaday.com/2021/06/26/emulating-a-power-grid/
 
 stuff
 
@@ -11802,7 +11809,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210622134409960" list="[[Telegram Moderation]] About [[(old) stuff i can give away]] TableOfContents" modified="20210627201327441" title="$:/StoryList">
+<div created="20210622134409960" list="[[speaker design software / calculators]] [[Draft of 'passive crossover']] [[Draft of 'LD Systems Stinger 15A / LDE 152 / LDEB 152 / LDEB 152A repair']] About TableOfContents" modified="20210704231632043" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12816,8 +12823,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210630152952217" modifier="Thorbijoern" title="$:/temp/search">
-<pre>simula</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210704231628762" modifier="Thorbijoern" title="$:/temp/search">
+<pre>calc</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14904,6 +14911,94 @@ stuff
 * https://physicsopenlab.org/wp-content/uploads/2015/11/Spettrometro_ENG.pdf
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
+</div>
+<div created="20200705175327558" draft.of="LD Systems Stinger 15A / LDE 152 / LDEB 152 / LDEB 152A repair" draft.title="LD Systems Stinger 15A / LDE 152 / LDEB 152 / LDEB 152A repair" modified="20210704214855751" tags="[[audio repairs]] [[reverse engineering]]" title="Draft of 'LD Systems Stinger 15A / LDE 152 / LDEB 152 / LDEB 152A repair'">
+<pre>(i don't know how these speakers are actually called but there's different names stated on the speakers and on the web)
+
+Information:
+
+* Fullrange/Tops
+* Combination of one passive and one active Box with additional Output for the passive one
+* Power: 500W RMS
+* Impedance: 8 Ohm
+* Connections: Speakon
+* Woofer: 15&quot; (8 Ohm, Neodymium)
+** seems to be an Eminence Kappalite 3015? [[(Specs)|https://www.eminence.com/speakers/speaker-detail/?model=Kappalite_3015]]
+* Tweeter: 1&quot; Compression Driver
+** original seems to be the BMS 4524 (25W, 8 Ohm) [[(Specs)|http://www.bmsspeakers.com/index.php?id=4524_specification]]
+* https://www.bonedo.de/artikel/einzelansicht/ld-systems-stinger-series-ldeb-152-und-ldeb-152a/4.html
+
+! 1st Repair
+
+Symptoms: no high frequencies in the active box; amplifier cuts out with second, passive box connected
+
+Problems: Tweeter burnt-out/blown; amplifier transistors might need to be replaced
+
+These Speakers allready have seen much use... the owner fixed some bad soldering... but they where probably allready repaired before he got them... the passive one got an Eminence PSD2002-8 (8 Ohm, 80W) (Specs: [[Site|https://www.eminence.com/speakers/driver-detail/?model=PSD2002]]; [[PDF|https://www.eminence.com/pdf/PSD2002.pdf]]) with a CD Horn, the active got a BMS with a strange radial/exponential? horn. The passive Speaker is also missing the internal supports for the compression driver and only got vents where the active one atleast got a bit of reflex ports.
+The Eminence PSD2002-8 doesn't sound as good as the BMS4524, it's not as crisp (due to the lower sensitivity).
+
+These Speakers where pretty cheap, but use quality hardware, like a Bang&amp;Olufsen amp. The boxes are a bit cobbled together and reflect the pricepoint more...
+for example the passive crossovers are pretty different in both boxes
+
+The BMS 4524 (25W, 8 Ohm) seems to be the original Tweeter
+
+Solution: replacing the Diaphragm (can be bought separately); Problem: suppliers are rare and the best one let us wait 2 weeks just to refund us because they didn't have it in stock anymore.
+
+Owners of the speakers decided to buy a new BMS 4524 and test the speakers... the tests went great and the amp seems fine too, no problems... now we wait for another BMS 4524 to replace the Eminence PSD2002-8.
+
+i secured the big inductor for the woofer some more to the circuit board of the crossover, because it was broken before and was still not propperly secured. i just used a zip-tie which fit through 2 of 4 small holes left over from small broken pecks of the plastic inductor-carrier.
+
+! 2nd Repair
+
+Problems:
+
+* woofer in the passive box without sound (probably the crossover again)
+* compression driver in the active speaker is burned out again
+
+repair:
+
+the first repair was pretty easy, because only the big inductor in series with the woofer on the crossover was broken again. the zip-tie i used through the existing holes was to weak.
+I carefully drilled these holes bigger and deburred them. then i used two zip-ties which are also bigger to secure the inductor again to the pcb. i hope these are able to withstand the rough handling. lastly i soldered the cable wich ripped out and tested continuity.
+
+the burned out tweeter is a bigger problem though, because a new BMS 4524 is 80€+ again. The diaphragm is also available as replacement for around 40€ which is way cheaper... but the problem is, why does the tweeter blow at all?
+i believe the owners do not use the speakers poorly, but i don't know if one can trust the passive crossovers used in both speakers... so I decided to reverse engineer the crossovers...
+more info: [[passive crossover]]
+
+</pre>
+</div>
+<div created="20200705191307119" draft.of="passive crossover" draft.title="passive crossover" modified="20210704231602461" tags="speakers" title="Draft of 'passive crossover'">
+<pre>* [[Does a DIY Audio Crossover make sense? How passive filters work! -- EB#41|https://www.youtube.com/watch?v=1wzUqVFyQ7o]]
+* [[BASICS 1 - Frequenzweiche. Grober Überblick wozu eine Frequenzweiche benutzt wird.|https://www.youtube.com/watch?v=IhcUqJwvaY8]]
+* [[BASICS 4 - Frequenzweiche. Die Spule - Funktionsweise|https://www.youtube.com/watch?v=QWCHrI8bnUE]]
+* [[BASICS 3 - Frequenzweiche. Der Kondensator - Aufbau und Funktionsweise|https://www.youtube.com/watch?v=EyXzoZQNIr8]]
+* [[Wie ist eine Lautsprecher Frequenzweiche aufgebaut?|https://www.youtube.com/watch?v=o95Pu3sC8hQ]]
+* [[https://de.wikipedia.org/wiki/Frequenzweiche_(Lautsprecher)]]
+* https://de.wikipedia.org/wiki/Hochpass
+* https://de.wikipedia.org/wiki/Tiefpass
+* [[Passive Crossover Design Part 1: Tweeters|https://youtu.be/kUrxAU7f78c]]
+
+components:
+
+* inductors
+* high power resistors
+* capacitors
+** Foil capacitor
+** bipolar electrolytic capacitors
+* protection
+** PTC elements
+*** as resetting/recovering fuses or
+*** as resistors whose resistance rises with higher power
+** incandescent lamps
+** fuses
+
+calculators / simulation tools:
+
+* https://www.micka.de/en/2weg_en.php
+* ** http://www.jobst-audio.de/tools-frequenzweiche/frequenzweiche
+** http://www.jobst-audio.de/tools-frequenzweiche/zobel-glied
+** http://www.jobst-audio.de/tools-frequenzweiche/saugkreis
+** http://www.jobst-audio.de/tools-frequenzweiche/l-pad
+** http://www.jobst-audio.de/tools-frequenzweiche/sperrkreis</pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -19161,17 +19256,35 @@ do they have good bass?
 * https://www.instructables.com/id/Ultrasonic-Sound-Gun-Parametric-Speaker/
 * https://github.com/NiklasFauth/ParametricSpeaker</pre>
 </div>
-<div created="20200705191307119" modified="20210318201037698" tags="speakers" title="passive crossover">
+<div created="20200705191307119" modified="20210704214757777" tags="speakers" title="passive crossover">
 <pre>* [[Does a DIY Audio Crossover make sense? How passive filters work! -- EB#41|https://www.youtube.com/watch?v=1wzUqVFyQ7o]]
 * [[BASICS 1 - Frequenzweiche. Grober Überblick wozu eine Frequenzweiche benutzt wird.|https://www.youtube.com/watch?v=IhcUqJwvaY8]]
 * [[BASICS 4 - Frequenzweiche. Die Spule - Funktionsweise|https://www.youtube.com/watch?v=QWCHrI8bnUE]]
 * [[BASICS 3 - Frequenzweiche. Der Kondensator - Aufbau und Funktionsweise|https://www.youtube.com/watch?v=EyXzoZQNIr8]]
 * [[Wie ist eine Lautsprecher Frequenzweiche aufgebaut?|https://www.youtube.com/watch?v=o95Pu3sC8hQ]]
-* https://de.wikipedia.org/wiki/Frequenzweiche_(Lautsprecher)
+* [[https://de.wikipedia.org/wiki/Frequenzweiche_(Lautsprecher)]]
 * https://de.wikipedia.org/wiki/Hochpass
 * https://de.wikipedia.org/wiki/Tiefpass
 * http://www.jobst-audio.de/tools-frequenzweiche/frequenzweiche
-* [[Passive Crossover Design Part 1: Tweeters|https://youtu.be/kUrxAU7f78c]]</pre>
+* [[Passive Crossover Design Part 1: Tweeters|https://youtu.be/kUrxAU7f78c]]
+
+components:
+
+* inductors
+* high power resistors
+* capacitors
+** Foil capacitor
+** bipolar electrolytic capacitors
+* protection
+** PTC elements
+*** as resetting/recovering fuses or
+*** as resistors whose resistance rises with higher power
+** incandescent lamps
+** fuses
+
+calculators / simulation tools:
+
+* https://www.micka.de/en/2weg_en.php</pre>
 </div>
 <div created="20200516213044095" modified="20210323002105215" tags="[[ports / vents]]" title="passive radiators">
 <pre>*many small bluetooth speakers use them to improve bass
@@ -20999,7 +21112,7 @@ instructions:
 * https://audiokarma.org/forums/index.php?threads/dummy-load-resistor-question.30694/
 * https://www.youtube.com/watch?v=HeQH0ZQTMtU</pre>
 </div>
-<div created="20200603201724871" modified="20201117202108869" tags="speakers" title="speaker design software / calculators">
+<div created="20200603201724871" modified="20210704231645612" tags="speakers" title="speaker design software / calculators">
 <pre>list of software to design speakers, preferably open source
 
 * WinISD - http://www.linearteam.org/ - atleast freeware
@@ -21031,7 +21144,8 @@ instructions:
 * https://sourceforge.net/projects/gspeakers/
 * https://sourceforge.net/projects/xlds/
 * https://sourceforge.net/projects/kfilter/
-* https://github.com/molke-productions/qloud</pre>
+* https://github.com/molke-productions/qloud
+* http://www.jobst-audio.de/tools-frequenzweiche/cbgehaeuse</pre>
 </div>
 <div created="20200516202737601" modified="20200518095404443" tags="speakers" title="speaker efficiency">
 <pre>* less power required
@@ -21265,6 +21379,40 @@ microplastics?</pre>
 * [[open source web based 3D model/file viewer]]
 * SVG
 ** https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#svg_interfaces</pre>
+</div>
+<div created="20210704214847515" modified="20210704223931950" tags="[[reverse engineering]] [[audio repairs]] repairs" title="Swisstone BX 600 (bluetooth speaker) micro usb repair / reverse engineering">
+<pre>(not realy an audio repair but whatever)
+
+! repair
+
+the micro usb port is completely broken and has to be replaced...
+
+opening the device:
+
+# the fabric cover of the speakers can be pried off pretty easily
+# now you can see the two speakers and 9 screw-holes, the screws have to be removed
+# now the back-side can be pried open
+# you can slide the plastic case out of the metal-frame to the front, be careful with the cables
+# the board with all the connections is glued into a small compartment at the backside of the plastic case, is is also held shut by two screws which might be hidden by the glue
+
+while opening be careful with the flex cable, if you break it, you need a ~16cm FFC (Flat flex cable) with 15 pins and 1mm pitch (connections on the same side)... cables for the raspberry pi cameras are also 15pin and 1mm pitch
+
+! reverse engineering
+
+in the reverse engineering i just focused on the main parts:
+
+2x 18650 cells in series(?)
+
+uses a CSR8635 bluetooth audio chip by broadcom on a module ([[manufacturer page|https://www.qualcomm.com/products/csr8635]], [[independent wiki page|https://www.electrodragon.com/w/CSR8635]])
+
+N79E814AT20 8051-based microcontroller by nuvoton
+
+NPCA110B &quot;Audio Enhancing Engine and CODEC&quot; - [[Datasheet|https://www.nuvoton.com/resource-files/DA03-NPCA110B1.pdf]]
+
+TPA3130 &quot;15-W stereo, 30-W mono, 4.5- to 26-V supply, analog input Class-D audio amplifier w/ filter free&quot; - [[manufacturer page|https://www.ti.com/product/TPA3130D2]], [[datasheet|https://www.ti.com/lit/ds/symlink/tpa3130d2.pdf]]
+
+not known: some 8-pin IC labeled SUN4004BS
+</pre>
 </div>
 <div created="20201110021349133" modified="20210330170957587" tags="[[power electronics (Leistungselektronik)]]" title="switched mode power supply (SMPS)">
 <pre>switched mode power supplies very efficient power supply designs rectifying the AC Voltage and stepping it down/up to the desired DC voltage; but DC-to-DC Converters are also often SMPS.
