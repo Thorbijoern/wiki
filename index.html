@@ -215,6 +215,8 @@ Error message and password prompt
 
 <li>$:/state/image-picker/system--1549551366</li>
 
+<li>$:/state/image-picker/system--524052576</li>
+
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
@@ -11429,10 +11431,13 @@ TableOfContents</pre>
 <div created="20200604212238116" modified="20200604212240090" title="$:/state/image-picker/system--1549551366">
 <pre>hide</pre>
 </div>
+<div created="20210711210502968" modified="20210711210505069" title="$:/state/image-picker/system--524052576">
+<pre>hide</pre>
+</div>
 <div created="20200629133847897" modified="20200629133847897" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200512220934152" modified="20210613185755655" title="$:/state/sidebar">
+<div created="20200512220934152" modified="20210711210512091" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200512221743504" modified="20200512221811755" title="$:/state/tab--1498284803">
@@ -20248,7 +20253,7 @@ additional:
 
 * several 222 3kV ceramic caps to ground</pre>
 </div>
-<div created="20210604152615292" modified="20210711180819387" tags="repairs [[reverse engineering]] [[cargo bike, bike trailers]] [[e-bike / pedelec]]" title="reverse engineering of electric cargo bike electronics">
+<div created="20210604152615292" modified="20210712233835944" tags="repairs [[reverse engineering]] [[cargo bike, bike trailers]] [[e-bike / pedelec]]" title="reverse engineering of electric cargo bike electronics">
 <pre>Components of the drivetrain:
 
 * 38V battery pack
@@ -20258,6 +20263,7 @@ additional:
 * throttle control
 * display with a few controlls
 * 250W rear-wheel motor 
+* JST-SM connectors ([[Datasheet|https://www.jst-mfg.com/product/pdf/eng/eSM.pdf]])
 
 PAS-Sensor and throttle controll are Hall-Sensor based
 
@@ -20265,34 +20271,53 @@ connections on the controller:
 
 * power +38V
 * GND/ power -
-* 3pin connector for PAS-Sensor (female)
+* 3pin connector for PAS-Sensor (plug)
 ** 5V (red)
 ** GND (black)
 ** hall-sensor 'data' (green)
-* 6pin connector for throttle control (female)
+* 6pin connector for throttle control (plug)
 ** 5V
 ** NC
 ** data?
 ** GND
 ** data?
 ** NC
-* 5pin connector for display (male)
-** 38V power (red)
+** only one data cable gets used, so only 3 standed wire
+* 5pin connector for display (Receptacle)
+** 36V power (red)
 ** GND (black)
-** data?
-** data?
-** data?
-** grey cable is data
-** white, yellow?
-* 2pin connector (female) - not used
+** Control (blue?)
+** Data1 (green?)
+** Data2 (yellow?)
+** blue, green and yellow are on this version white, yellow, grey
+* 2pin connector (plug) - not used
 ** voltage?
 ** GND
-* 5pin connector (female) - not used
+* 5pin connector (plug) - not used
 ** ?
 ** GND
 ** ?
 ** ?
 ** ?
+
+info from ebay listings of chinese controllers:
+
+* 2 Anschlüsse für 36V Lichter, 3 Anschlüsse für Motor, 1 Anschluss für das Daumengas, 2 Anschlüsse für die Batterie (+ und -), 1 Anschluss für das Display, 1 Anschluss für Hallsensor und Geschwindigkeitssensor, 2 Anschlüsse für die Bremse, 1 Anschluss für PAS (pedal assist systems) 
+* displays use fully populated 5-pin connector, but some displays have an additional 2-pin connector
+* connections (controller-side):
+** &quot;low-potential brake&quot;/&quot;brake&quot; 2pin plug (gray, black), 2 plugs on one cable
+** &quot;electric lock&quot;/&quot;master switch&quot; 2pin connector (not JST SM) with bridged connector (red from display Receptacle and violet from controller)
+** &quot;lamp&quot; 2pin plug (yellow, black) - for connecting lamps
+** &quot;intelligent identification&quot;
+*** 2pin Receptacle (only 1 green wire)
+*** 2 pin plug (only 1 green wire)
+** display connection 5pin Receptacle
+** &quot;electric brake&quot; white 3pin Receptacle (black, grey, red) - maybe regenerative breaking?
+** &quot;speed throttle&quot; black 3pin Receptacle (black, white, red)
+** 2 thick leads, red and black for battery
+** 3 thick leads (colored, might be blue, yellow, green) motor phases
+** &quot;hall sensors&quot; weird double row 6-pin connector - motor hall sensors
+** &quot;1:1 accelerator&quot; 3pin plug (black, red, blue) - maybe torque sensor?
 
 
 more information:
