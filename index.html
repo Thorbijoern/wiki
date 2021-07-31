@@ -685,7 +685,7 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>12V 280Ah LFP pack build</li>
+<li>12V 250Ah LFP battery pack build</li>
 
 <li>19&quot; Rack</li>
 
@@ -897,8 +897,6 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
-<li>Draft of ''</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -1026,6 +1024,8 @@ Error message and password prompt
 <li>gender, sexuality - geschlecht, sexualität</li>
 
 <li>generator</li>
+
+<li>generator vs battery pack</li>
 
 <li>Genossenschaften</li>
 
@@ -11814,7 +11814,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210713095842261" list="[[Draft of '']] generator [[rebuild of e-scooter battery pack]] [[passive crossover]] About TableOfContents" modified="20210731162823896" title="$:/StoryList">
+<div created="20210713095842261" list="[[12V 250Ah LFP battery pack build]] [[generator vs battery pack]] generator [[rebuild of e-scooter battery pack]] [[passive crossover]] About TableOfContents" modified="20210731170118584" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12828,8 +12828,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210731162817543" modifier="Thorbijoern" title="$:/temp/search">
-<pre>acc</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210731170114107" modifier="Thorbijoern" title="$:/temp/search">
+<pre>LFP</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -12946,7 +12946,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20210220122028070" modified="20210604171256990" tags="[[accumulator - battery - rechargeable energy storage]] [[Electronic Projects]]" title="12V 280Ah LFP pack build">
+<div created="20210220122028070" modified="20210731173635537" tags="[[accumulator - battery - rechargeable energy storage]] [[Electronic Projects]]" title="12V 250Ah LFP battery pack build">
 <pre>requirements:
 
 * ~200Ah
@@ -12963,16 +12963,29 @@ bought:
 * handy battery monitor
 * 20A 14.6V charger
 
-the cells took quite some time to arrive, and after testing 2 of the cells where of lower quality and i was only able to pull arround 255Ah of capacity. they where advertised als 280Ah.
+the cells took quite some time to arrive, and after testing 2 of the cells where of lower quality and i was only able to pull arround 250Ah of capacity. they where advertised als 280Ah, but thats not too bad.
 
-i intent to use a 40x30cm euro container as case but the 22cm versions are a little to small, i need atleast 24cm height. the next standard height would be 27cm.
+i intent to use a 40x30cm euro container as case but the 22cm versions are a little to small, i need atleast 24cm height. the next standard height would be 27cm. i ordered a ED 43/27 from Auer packaging.
 
 i may add an anderson connector to power DC-devices directly
 
 i could order the charger with different connectors, i ordered it with an XT60 connector and ordered some XT60 connectors for the battery. panel-mount XT60 are rare and more expensive but I could 3D print a some panel-mount hardware later to mount the connector propperly
 
 * https://www.thingiverse.com/search?q=xt60&amp;type=things&amp;sort=relevant&amp;page=2
-</pre>
+
+build
+
+* to mount/secure the cells inside the box i needed a baseplate which i can screw inside the euro container, also the floor of the box is a bit narrower than the rest and i need a bit of height to propperly screw it in. i got a 36x26cm wood plate with 2cm thickness, plenty enough to clear the narrower part and enough to propperly screw into.
+* i hat to make the edges round to fit the plate into the bottom of the container and i carved out tracks where 12mm zipties are flush with the wood, i drilled some holes to be able to pull zipties through
+* i propperly sanded the whole plate to be smooth
+* i test-fitted the battery cells, so i can adjust the zipties at the bottom, cut off the excess and fit the plate with the ties into the container
+* the inverter i got fitts well next to the cells inside the box, i removed the side-plate with the mains sockets and power switch from the inverter, i removed the mains sockets and switch assembly from the plate.
+* i meassured the switch assembly and the mains sockets and made holes in the side of the container in order to facilitate the sockets and the switch. i made sure the holes are not too small and they got a snugg fit, because they are clipped in and i don't want them to fall out. the sockets will get a 3d-printed shroud, which will sit inside the box and will prevent beeing able to touch the mains cables and connections, also the fit of the sockets will be better with them
+* i also made a hole to mount a air grill for additional ventilation. i have fans with matching size i could mount there if needed
+* i drilled holes every 5cm into the lower side of the box and angled them down to propperly drill into the wood base, then i screwed the wood-base to the container with 30*4mm wood screws with countersunk TORX head
+* i got some foam rubber (moosgummi) to fit under the battery cells to protect them some more and dampen shocks and then fitted the cells
+* i've got a bit of cardboard protecting the edges of the cells from the zip-ties and pulled the zip-ties so they had perfect fit arround the cells. i tied the cells as hard as i was able to with bare hands, they are mounted good and sturdy
+* </pre>
 </div>
 <div created="20201112201438351" modified="20210301213727042" tags="[[storing, mounting, housing (hardware)]]" title="19&quot; Rack">
 <pre>Information:
@@ -14885,11 +14898,6 @@ stuff
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
 </div>
-<div created="20210731161927350" draft.of="" draft.title="generator vs battery pack" modified="20210731162900363" tags="" title="Draft of ''">
-<pre>[[generators|generator]] vs. [[battery packs|accumulator - battery - rechargeable energy storage]]
-
-</pre>
-</div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -16152,6 +16160,11 @@ von da aus kann man dann weiteres machen.
 * https://permies.com/t/59981/DIY-Inverter-Generator
 * https://extremehowto.com/inverter-generators-for-diyers-and-more/
 * </pre>
+</div>
+<div created="20210731161927350" modified="20210731164544891" tags="Electronics [[Solar / renewable energy]]" title="generator vs battery pack">
+<pre>[[generators|generator]] vs. [[battery packs|accumulator - battery - rechargeable energy storage]]
+
+</pre>
 </div>
 <div created="20200724172718801" modified="20210420123100411" tags="[[Wirtschaftssystem / economics]]" title="Genossenschaften">
 <pre>* https://de.wikipedia.org/wiki/Europ%C3%A4ische_Genossenschaft
@@ -21423,7 +21436,7 @@ microplastics?</pre>
 * SVG
 ** https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#svg_interfaces</pre>
 </div>
-<div created="20210704214847515" modified="20210704223931950" tags="[[reverse engineering]] [[audio repairs]] repairs" title="Swisstone BX 600 (bluetooth speaker) micro usb repair / reverse engineering">
+<div created="20210704214847515" modified="20210731170032855" tags="[[reverse engineering]] [[audio repairs]] repairs" title="Swisstone BX 600 (bluetooth speaker) micro usb repair / reverse engineering">
 <pre>(not realy an audio repair but whatever)
 
 ! repair
@@ -21436,9 +21449,19 @@ opening the device:
 # now you can see the two speakers and 9 screw-holes, the screws have to be removed
 # now the back-side can be pried open
 # you can slide the plastic case out of the metal-frame to the front, be careful with the cables
-# the board with all the connections is glued into a small compartment at the backside of the plastic case, is is also held shut by two screws which might be hidden by the glue
+# the board with all the connections is glued into a small compartment at the backside of the plastic case, is is also held shut by two screws which might be hidden by the glue, carefully remove the glue without damaging the FFC
 
-while opening be careful with the flex cable, if you break it, you need a ~16cm FFC (Flat flex cable) with 15 pins and 1mm pitch (connections on the same side)... cables for the raspberry pi cameras are also 15pin and 1mm pitch
+you need a pretty specific micro usb port, others won't fit propperly, but soldering it is pretty easy once you have the correct one. i soldered with a tiny bit of solderpaste and a hot air soldering statioin.
+
+while opening be careful with the flex cable, if you break it, you need a ~16cm FFC (Flat flex cable) with 15 pins and 1mm pitch (connections on the same side)... but beware: cables for the raspberry pi cameras are also 15pin and 1mm pitch but not same side, which mixes up the pins
+
+repair of FFC
+
+* pretty much all of the glue has to be removed
+* you have to remove the PCB at the top of the plastic housing, carefully disconnect the cables and also remove the glue from the wires and the port through the case
+* take the damaged FFC out, i carefully removed the foam from the FFC and glued it on the new one, because i didn't have similar foam and din't know where to get it, it might improve accoustics, prevent rattling of the FFC on the case or other cables
+* carefully fit the new FFC
+* you have to completely close the through-hole to the PCB with glue or else you will have very poor bass performance and bad sounds from the air escaping through the hole
 
 ! reverse engineering
 
