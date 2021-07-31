@@ -11812,7 +11812,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210622134409960" list="tools [[open lab instrumentation, meassuring / testing equipment]] [[reverse engineering of electric cargo bike electronics]] [[fucking big portable battery]] [[LD Systems Stinger 15A / LDE 152 / LDEB 152 / LDEB 152A repair]] [[passive crossover]] About TableOfContents" modified="20210712234229216" title="$:/StoryList">
+<div created="20210713095842261" list="[[rebuild of e-scooter battery pack]] [[passive crossover]] About TableOfContents" modified="20210725193345948" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12826,8 +12826,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210712234224489" modifier="Thorbijoern" title="$:/temp/search">
-<pre>tool</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210725193344179" modifier="Thorbijoern" title="$:/temp/search">
+<pre>scoot</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -19922,7 +19922,7 @@ here are some good quality brands for replacing:
 ** https://freertos.org/
 * [[How to work with a Real Time Operating System and is it any good? (FreeRTOS, ESP32)|https://www.youtube.com/watch?v=684KSAvYbw4]]</pre>
 </div>
-<div created="20210603205524441" modified="20210604171257010" tags="repairs [[accumulator - battery - rechargeable energy storage]] [[reverse engineering]]" title="rebuild of e-scooter battery pack">
+<div created="20210603205524441" modified="20210731155822445" tags="repairs [[accumulator - battery - rechargeable energy storage]] [[reverse engineering]]" title="rebuild of e-scooter battery pack">
 <pre>battery pack Data:
 
 * Manufacturer: Go-Tech Energy Co., Ltd.
@@ -19935,7 +19935,9 @@ here are some good quality brands for replacing:
 * battery case dimensions:
 * inner: 22,5x14x46
 ** outer: 24,5x15,5x47
-* cells: ICR18650-2... (not fully visible)
+* cells: ICR18650-20f (originals)
+** https://secondlifestorage.com/index.php?threads/samsung-icr18650-20f-cell-specifications.1757/
+** there was prior work done on this battery pack, but only 22 cells in one of the serial rows got changed, they are still good, but different from the other, original cells, also the spotwelding isn't done very well
 
 BMS data:
 
@@ -19953,9 +19955,10 @@ BMS data:
 rebuild options:
 
 * 440 new 18650 Li-Ion cells?
-** old ones have 1.8Ah per cell, could be replaced with ones with more capacity
-* 22 or 23 LFP cells in series
-* LiPo - unsure about security</pre>
+** old ones have 1.8Ah per cell, could be replaced with ones with more capacity, lowering the weight of the pack
+** owner wants to buy used but tested 18650 cells which will be the replacement for the old ones
+* 22 or 23 LFP cells in series - possible, but more research about the other components of the scooter required, search for fitting cells, different BMS and possibly different casing for the cells required
+* LiPo - unsure about security, owner wanted to use cheap LiPo pouch cells meant for cheap chinese smartphones</pre>
 </div>
 <div created="20200514133113113" modified="20210407111605202" tags="[[Politics (Politik)]]" title="rechts, rechtsextremismus">
 <pre>Rechte und Rechtsextreme sind schon lange nicht mehr durch Springer Stiefel und Bomberjacke erkennbar... auch Kleidung wie Thor Steinar ist nicht deckend vorzufinden bzw. wird unauffälliger gestaltet... Rechtsextreme die die Identitäre Bewegung versuchen mit einem modernen Hippster-image junge leute zu fangen und viele rechtsextreme bestrebungen gehen sehr in eine querfront richtung, indem linke themen oder aktionsformen aufgegriffen oder adaptiert werden oder auch über die esotherische szene eine bindung gesucht wird... mit der AFD sitzen rechtsextreme offen im Bundestag.
@@ -20200,8 +20203,7 @@ information about the Connector
 * https://en.wikipedia.org/wiki/Youtube-dl#RIAA_takedown_request</pre>
 </div>
 <div created="20210617193521055" modified="20210617203229135" tags="" title="reverse engineering of 1.5kW &quot;Renoster&quot; Inverter">
-<pre>
-remote controll panel
+<pre>remote controll panel
 
 * color LCD
 * 3 buttons: &quot;Reset&quot;, &quot;Power Switching&quot;, &quot;On/Off&quot;
