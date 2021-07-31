@@ -897,8 +897,6 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
-<li>Draft of 'rebuild of e-scooter battery pack'</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -11814,7 +11812,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210713095842261" list="[[Draft of 'rebuild of e-scooter battery pack']] [[passive crossover]] About TableOfContents" modified="20210731160614080" title="$:/StoryList">
+<div created="20210713095842261" list="[[rebuild of e-scooter battery pack]] [[passive crossover]] About TableOfContents" modified="20210731160614080" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14884,50 +14882,6 @@ stuff
 * https://physicsopenlab.org/wp-content/uploads/2015/11/Spettrometro_ENG.pdf
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
-</div>
-<div created="20210603205524441" draft.of="rebuild of e-scooter battery pack" draft.title="rebuild of e-scooter battery pack" modified="20210731160842088" tags="repairs [[accumulator - battery - rechargeable energy storage]] [[reverse engineering]]" title="Draft of 'rebuild of e-scooter battery pack'">
-<pre>battery pack Data:
-
-* Manufacturer: Go-Tech Energy Co., Ltd.
-* Model Name: GV7240
-* nominal voltage: 72V
-* max voltage: 84V (4,2V per cell)
-* min voltage: ~55V (2,75V per cell)
-* nominal capacity: 40Ah
-* 22p20s 18650 cells
-* battery case dimensions:
-* inner: 22,5x14x46
-** outer: 24,5x15,5x47
-* cells: ICR18650-20f (originals)
-** https://secondlifestorage.com/index.php?threads/samsung-icr18650-20f-cell-specifications.1757/
-** there was prior work done on this battery pack, but only 22 cells in one of the serial rows got changed, they are still good, but different from the other, original cells, also the spotwelding isn't done very well
-
-BMS data:
-
-* switched minus port
-* 2 separate pcbs
-* data/communication
-** 5 headers for themp sensors
-** 2x 12pin headers for balancing and voltage sensing
-** 5pin serial (I²C) header (GND, SCL, SDA, 3.3V)
-** 10pin header for serial (RS232?) connection + 3 other cables to the outside of pack
-** unknown 6pin header on smaller board
-** unknows 5pin header on larger board
-* completely coated in lacquer (whaterproofing)
-
-rebuild options:
-
-* 440 new 18650 Li-Ion cells?
-** old ones have 1.8Ah per cell, could be replaced with ones with more capacity, lowering the weight of the pack
-** __owner wants to buy used but tested 18650 cells which will be the replacement for the old ones__
-* 22 or 23 LFP cells in series - possible, but more research about the other components of the scooter required, search for fitting cells, different BMS and possibly different casing for the cells required
-* LiPo - unsure about security, owner wanted to use cheap LiPo pouch cells meant for cheap chinese smartphones
-
-rebuild
-
-* required
-** 440 &quot;new&quot; 18650 cells
-** ~10m of </pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -19968,7 +19922,7 @@ here are some good quality brands for replacing:
 ** https://freertos.org/
 * [[How to work with a Real Time Operating System and is it any good? (FreeRTOS, ESP32)|https://www.youtube.com/watch?v=684KSAvYbw4]]</pre>
 </div>
-<div created="20210603205524441" modified="20210731155822445" tags="repairs [[accumulator - battery - rechargeable energy storage]] [[reverse engineering]]" title="rebuild of e-scooter battery pack">
+<div created="20210603205524441" modified="20210731161811322" tags="repairs [[accumulator - battery - rechargeable energy storage]] [[reverse engineering]]" title="rebuild of e-scooter battery pack">
 <pre>battery pack Data:
 
 * Manufacturer: Go-Tech Energy Co., Ltd.
@@ -20002,9 +19956,19 @@ rebuild options:
 
 * 440 new 18650 Li-Ion cells?
 ** old ones have 1.8Ah per cell, could be replaced with ones with more capacity, lowering the weight of the pack
-** owner wants to buy used but tested 18650 cells which will be the replacement for the old ones
+** __owner wants to buy used but tested 18650 cells which will be the replacement for the old ones__
 * 22 or 23 LFP cells in series - possible, but more research about the other components of the scooter required, search for fitting cells, different BMS and possibly different casing for the cells required
-* LiPo - unsure about security, owner wanted to use cheap LiPo pouch cells meant for cheap chinese smartphones</pre>
+* LiPo - unsure about security, owner wanted to use cheap LiPo pouch cells meant for cheap chinese smartphones
+
+rebuild
+
+* required
+** 440 &quot;new&quot; 18650 cells
+** ~10m of 2-row nickel ribbon
+** spotwelder
+** a bit of solder for the balancing leads
+** a bit of silicone sealant
+** kapton tape (3cm, and mabe 2 or 1cm)</pre>
 </div>
 <div created="20200514133113113" modified="20210407111605202" tags="[[Politics (Politik)]]" title="rechts, rechtsextremismus">
 <pre>Rechte und Rechtsextreme sind schon lange nicht mehr durch Springer Stiefel und Bomberjacke erkennbar... auch Kleidung wie Thor Steinar ist nicht deckend vorzufinden bzw. wird unauffälliger gestaltet... Rechtsextreme die die Identitäre Bewegung versuchen mit einem modernen Hippster-image junge leute zu fangen und viele rechtsextreme bestrebungen gehen sehr in eine querfront richtung, indem linke themen oder aktionsformen aufgegriffen oder adaptiert werden oder auch über die esotherische szene eine bindung gesucht wird... mit der AFD sitzen rechtsextreme offen im Bundestag.
