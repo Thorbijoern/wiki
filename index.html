@@ -903,6 +903,8 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
+<li>Draft of 'microcontroller decompile/disassemble (firmware reverse engineering)'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -1538,6 +1540,8 @@ Error message and password prompt
 <li>sourcing/buying batteries</li>
 
 <li>speaker / audio Dummy Load (Ersatzlast)</li>
+
+<li>speaker arrangement/set-ups/positioning</li>
 
 <li>speaker design software / calculators</li>
 
@@ -11835,7 +11839,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210713095842261" list="[[open source battery monitor]] [[battery monitors]] [[microcontroller decompile/disassemble (firmware reverse engineering)]] [[common microcontrollers]] [[PSU repair]] [[Harman/Kardon HK990 repair]] [[small repairs]] About TableOfContents" modified="20210804212336157" title="$:/StoryList">
+<div created="20210713095842261" list="[[speaker arrangement/set-ups/positioning]] [[open source battery monitor]] [[battery monitors]] [[Draft of 'microcontroller decompile/disassemble (firmware reverse engineering)']] [[common microcontrollers]] [[PSU repair]] [[Harman/Kardon HK990 repair]] [[small repairs]] About TableOfContents" modified="20210804212336157" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14935,6 +14939,40 @@ stuff
 * https://physicsopenlab.org/wp-content/uploads/2015/11/Spettrometro_ENG.pdf
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
+</div>
+<div created="20210805001547058" draft.of="microcontroller decompile/disassemble (firmware reverse engineering)" draft.title="microcontroller decompile/disassemble (firmware reverse engineering)" modified="20210805113954446" tags="" title="Draft of 'microcontroller decompile/disassemble (firmware reverse engineering)'">
+<pre>for hacking (i.e. extending the functionality) of devices, like cheap tools/parts from china or other things, it is quite often required to take a look on or modify the firmware of microcontrollers. this article focuses on [[common microcontrollers]]
+
+disassembling from binary to assembly is pretty easy, but decompiling to higher languages is harder
+
+* https://onlinedisassembler.com/odaweb/
+* https://www.break-ic.com/Disassembler_software_mcu_reverse_engineer.htm
+* https://www.break-ic.com/microprocessor-read/Dcc_binary_decompiler.htm
+* http://boomerang.sourceforge.net/
+
+STM32 (ARM)
+
+* https://medium.com/techmaker/reverse-engineering-stm32-firmware-578d53e79b3 - Reverse engineering STM32 firmware with radare2
+* https://github.com/Codewaves/mdisasm - Basic disassembler for Cortex M0/M3 (from binary to assembly
+* https://stackoverflow.com/questions/59802528/stm32-decompiler
+* https://reverseengineering.stackexchange.com/questions/17099/entry-point-for-stm32-firmware
+* https://stackoverflow.com/questions/13468766/arm-disassembly
+* https://wrongbaud.github.io/posts/writing-a-ghidra-loader/
+* https://www.eevblog.com/forum/microcontrollers/arm-v7-disassembler-opensource-free-windows/
+
+STM8
+
+* https://github.com/baruch/STM8_reverse_engineering_aid
+* https://hackaday.io/project/4381-stm-reverse-engineering-aid
+
+Atmel AVR (Arduino)
+
+* https://stackoverflow.com/questions/5141177/atmel-avr-disassembler
+* https://community.atmel.com/projects/simple-avr-disassembler
+* https://github.com/vsergeev/vAVRdisasm
+* https://www.johannes-bauer.com/mcus/avrdisas/
+* https://community.atmel.com/projects/reavr
+* </pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -21273,6 +21311,19 @@ instructions:
 * https://audiokarma.org/forums/index.php?threads/dummy-load-resistor-question.30694/
 * https://www.youtube.com/watch?v=HeQH0ZQTMtU
 * https://www.prosoundtraining.com/2011/08/09/dummy-load-testing-large-amplifiers/</pre>
+</div>
+<div created="20210805114007615" modified="20210805114717569" tags="" title="speaker arrangement/set-ups/positioning">
+<pre>* stereo
+** classic
+
+bass/subwoofer
+
+* https://eaw.com/directional-subwoofer-arrays-a-practical-approach/
+
+* double bass array
+** https://de.wikipedia.org/wiki/Double_Bass_Array
+** https://en.wikipedia.org/wiki/Double_bass_array
+* end-fire</pre>
 </div>
 <div created="20200603201724871" modified="20210704231645612" tags="speakers" title="speaker design software / calculators">
 <pre>list of software to design speakers, preferably open source
