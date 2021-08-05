@@ -905,6 +905,10 @@ Error message and password prompt
 
 <li>DIY/open hardware spectroscope / spectrometer</li>
 
+<li>Draft of 'generator'</li>
+
+<li>Draft of 'oscilloscope'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -1474,6 +1478,8 @@ Error message and password prompt
 <li>sharing / finding music / podcats / etc.</li>
 
 <li>show control</li>
+
+<li>sicherheit von mobilen stromerzeugern</li>
 
 <li>signal / logic analysis tools</li>
 
@@ -11846,7 +11852,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210713095842261" list="[[&quot;transistor tester&quot; (avr) component tester]] [[professionell Audio lernen]] [[speaker arrangement/set-ups/positioning]] [[open source battery monitor]] [[battery monitors]] [[microcontroller decompile/disassemble (firmware reverse engineering)]] [[common microcontrollers]] [[PSU repair]] [[Harman/Kardon HK990 repair]] [[small repairs]] About TableOfContents" modified="20210805125812860" title="$:/StoryList">
+<div created="20210713095842261" list="[[Draft of 'generator']] [[sicherheit von mobilen stromerzeugern]] [[Draft of 'oscilloscope']] [[professionell Audio lernen]] [[speaker arrangement/set-ups/positioning]] [[open source battery monitor]] [[battery monitors]] [[microcontroller decompile/disassemble (firmware reverse engineering)]] [[common microcontrollers]] [[PSU repair]] [[Harman/Kardon HK990 repair]] [[small repairs]] About TableOfContents" modified="20210805131419154" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12860,8 +12866,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210805130024055" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210805131416403" modifier="Thorbijoern" title="$:/temp/search">
+<pre>generator</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14949,6 +14955,58 @@ stuff
 * https://physicsopenlab.org/wp-content/uploads/2015/11/Spettrometro_ENG.pdf
 * [[How to make a High Resolution Spectrometer|https://www.youtube.com/watch?v=DXkHjGL9CaA]]
 * https://en.wikipedia.org/wiki/Optical_spectrometer</pre>
+</div>
+<div created="20200727191457852" draft.of="generator" draft.title="generator" modified="20210805131805779" tags="Electronics" title="Draft of 'generator'">
+<pre>* generators use fossil fuels and the exaust is pretty dirty, they polute the environment and constribute to global warming
+* [[Hybrid Drone Generator|https://www.youtube.com/watch?v=1yB49G756OI]]
+* [[Which Motor Type is the Best Generator? - DC, BLDC or Stepper? (Experiment)|https://www.youtube.com/watch?v=cJ_vDA7xsGs]]
+* [[How to rewind a BLDC Motor (as a Generator)|https://www.youtube.com/watch?v=KZ4cylB114E]]
+* [[HACKED!: Turning an Induction Motor into a Generator?!|https://www.youtube.com/watch?v=05qJM-zZ4ng]]
+* some generators can be converted to be powered by gas like propane and there are a few gas powered generators on the marged, but they are very expensive.
+* [[generator vs battery pack]]
+* https://de.wikipedia.org/wiki/Stromerzeugungsaggregat
+* https://en.wikipedia.org/wiki/Emergency_power_system
+* https://en.wikipedia.org/wiki/Engine-generator
+
+(diy) inverter generator:
+
+* inverter generators are more efficient because they don't produce the 230V directly but have a intermediary voltage and an inverter boosts the voltage up and produces the mains sinewave. the motor can run on lower speeds depending on the power consumption on the load and only if more power is consumed it ramps up, thus being more efficient, reducing fuel consumption and exhaust. normal generators have a fixed speed they run on.
+* inverter generators are more expensive but they also often run much quieter than normal ones
+* https://thegeneratorplace.com/how-to-build-an-inverter-generator-diy-your-emergency-power-source/
+* https://permies.com/t/59981/DIY-Inverter-Generator
+* https://extremehowto.com/inverter-generators-for-diyers-and-more/
+* </pre>
+</div>
+<div created="20210330211920197" draft.of="oscilloscope" draft.title="oscilloscope" modified="20210805131134426" tags="[[testing &amp; measuring]] tools" title="Draft of 'oscilloscope'">
+<pre>* [[see signal / logic analysis tools]]
+* pc soundcards can be used as crude oscilloscopes, but they only have a very limited capability and can be easily destroid when connecting to to high voltages
+** https://makezine.com/projects/sound-card-oscilloscope/
+** https://hackaday.com/2014/05/27/an-audio-based-usb-oscilloscope-and-signal-generator-for-20/
+** http://www.zeitnitz.de/Christian/scope_en
+* https://hackaday.com/2018/08/06/review-a-20-mhz-pocket-scope-for-not-a-lot/
+* https://hackaday.com/2016/01/27/a-tale-of-two-sub-100-oscilloscopes/
+* hantek
+** https://github.com/doctormord/OpenBuudai
+** https://openhantek.org
+*** https://github.com/OpenHantek/openhantek
+** https://www.eevblog.com/forum/oshw/opensource-oscilloscope-with-tabletphone-display-based-on-hantek-6022be/
+* cheap chinese scopes
+** https://github.com/ardyesp/DLO-138
+* https://www.crowdsupply.com/andy-haas/haasoscope
+* https://hackaday.io/project/167292-8-ghz-sampling-oscilloscope
+* https://www.tindie.com/products/Earth_People_Technology/open-source-digital-storage-oscilloscope-4-ch/
+
+open source oscis
+
+* https://www.scopefun.com/
+** https://hackaday.com/2016/10/06/open-design-oscilloscope-could-be-almost-free/
+
+probes
+
+* [[EEVblog #1367​ - 5 Types of Oscilloscope Passive Probes COMPARED|https://www.youtube.com/watch?v=rzo4Ntxqu1E]]
+* [[EEVblog #1368​ - Active Oscilloscope Probes COMPARED (Part 2)|https://www.youtube.com/watch?v=WlSb8hdFtTY]]
+* [[EEVblog #1178​ - Build a $10 DIY EMC Probe|https://www.youtube.com/watch?v=2xy3Hm1_ZqI]]
+** [[EEVblog #1188​ - $10 DIY EMC Probe using Scope FFT|https://www.youtube.com/watch?v=nImoQcoqkuQ]]</pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -20823,6 +20881,20 @@ tools
 <pre>* [[Open Sound Control (protocol)]]
 * https://en.wikipedia.org/wiki/Show_control
 * [[Audio streaming]]</pre>
+</div>
+<div created="20210805131334722" modified="20210805133839675" tags="[[Solar / renewable energy]] [[electronics safety]]" title="sicherheit von mobilen stromerzeugern">
+<pre>* see [[generator]]
+* https://de.wikipedia.org/wiki/Stromerzeugungsaggregat#Betriebssicherheit
+* https://de.wikipedia.org/wiki/Isolationsw%C3%A4chter
+* https://de.wikipedia.org/wiki/IT-Netz
+** lokale Niederspannungsnetze ohne betriebsmäßig geerdeten Sternpunkt
+** https://de.wikipedia.org/wiki/Sternpunkt
+* generatoren müssen in gut belüfteten umgebungen betrieben werden
+* https://de.wikipedia.org/wiki/Netzform
+* http://www.netzmafia.de/skripten/hardware/Elektro/Netzformen.html
+* https://www.stromaggregate-portal.de/Stromaggregate_Wissenswertes/Erdspiess-Stromerzeuger.html
+* https://www.stromaggregate-portal.de/Stromaggregate_Wissenswertes/Isolationswaechter.html
+* https://www.elektro.net/praxisprobleme/stromerzeuger-schutztrennung-mit-isolationsueberwachung-und-abschaltung/</pre>
 </div>
 <div created="20210330172518672" modified="20210330203810573" tags="[[testing &amp; measuring]] tools" title="signal / logic analysis tools">
 <pre>* https://wiki.analog.com/university/tools/m2k/scopy
