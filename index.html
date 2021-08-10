@@ -11854,7 +11854,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210713095842261" list="[[sodium-ion accumulator (natrium-ionen)]] [[Harman/Kardon HK990 repair]] [[small repairs]] About TableOfContents" modified="20210810192719101" title="$:/StoryList">
+<div created="20210713095842261" list="[[Harman/Kardon HK990 repair]] [[small repairs]] About TableOfContents" modified="20210810192825601" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12868,8 +12868,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210810192716002" modifier="Thorbijoern" title="$:/temp/search">
-<pre>natri</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210810192822722" modifier="Thorbijoern" title="$:/temp/search">
+<pre>cnc</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14277,10 +14277,10 @@ electromagnetics:
 * [[Solar / renewable energy]]
 * don't use sand</pre>
 </div>
-<div created="20210805115445466" modified="20210810124632937" tags="tools Electronics" title="CNC">
+<div created="20210805115445466" modified="20210810192842097" tags="tools Electronics" title="CNC">
 <pre>* https://lcamtuf.coredump.cx/gcnc/ - Guerrilla guide to CNC machining, mold making, and resin casting
 * https://www.linuxcnc.org/
-* see also 3D printer</pre>
+* see also [[3D printer]]</pre>
 </div>
 <div created="20200810131838602" modified="20201126225652301" tags="[[sustainability / nachhaltigkeit]]" title="CO²-neutrale Energiespeicher">
 <pre>Co²-neutralität ist schwierig... meist wird zumindest bei der herstellung der komponenten der systeme CO² poduziert... das kann man aber minimieren indem in der produktion auch CO² neutraler strom, also strom aus u.a. windkraft und solar, genutzt wird.
@@ -16369,12 +16369,12 @@ the honda EU inverter series starts at ~1.500€ (EU 20i or EU 22i)</pre>
 * [[Samy Kamkar's Crash Course in How to Be a Hardware Hacker|https://www.youtube.com/watch?v=tlwXmNnXeSY]]
 * see also [[serial connection stuff]]</pre>
 </div>
-<div created="20210804212809014" modified="20210810134431350" tags="[[audio repairs]] [[audio amplifiers]]" title="Harman/Kardon HK990 repair">
+<div created="20210804212809014" modified="20210810193034461" tags="[[audio repairs]] [[audio amplifiers]]" title="Harman/Kardon HK990 repair">
 <pre>the HK990 is a quite beefy HIFI AMP with 150W at 8Ohms and 300W at 4Ohms. It has two separate PCBs with chunky heatsinks for the channels and main power supply, two big toroidial transformers for each channel and an additional small supply for the logic and input boards. [[additional information|https://www.cnet.com/products/harman-kardon-hk-990-amplifier-series/]]
 
 the one i got had problems with the right channel getting pretty hot even when not in use. the proplem is probably that the idling voltage is not adjusted, but that should be an easy fix. I quickly found a service manual [[here|https://www.eserviceinfo.com/downloadsm/40753/HARMAN-KARDON_HK990.html]] and [[here|https://www.eserviceinfo.com/downloadsm/47031/Harman/Kardon_HK990.html]], they describe the amp adjustment and it seems pretty easy.
 
-i started with opening the amp, removed the top of the case and then the side panels. i like the small cutouts they made on either of the side panels for the adjustment potentiometer, but there is no way to propperly reach the testpoints to meassure the idling voltage. it would've been very helpful to provide additional cutouts for those, but without them one has to pretty much disassemble the whole amp and take out both PCBs of the channels to reach them.
+i started with opening the amp, removed the top of the case and then the side panels. i like the small cutouts they made on either of the side panels for the adjustment potentiometer, but there is no way to propperly reach the testpoints to meassure the idling voltage. it would've been very helpful to provide additional cutouts for those, but without them one has to pretty much disassemble the whole amp and take out both PCBs of the channels to reach them. the fact that there is no easy access for the testpoints is a big designflaw in my oppinion.
 
 while disassembling i noticed that someone must have worked on this amp before, the wires supplying power to one of the amp board weren't cable tied, also the two amp boards looked slightly different, they had some different komponents on them. uppon closer inspection after i completely removed both amp boards from the amp i could see, that the boards have different revisions. one is an original revision 0 board and the other is revision 2. they seem pretty similar appart from some components from other manufacturers, with other coloring, but they all got the same values except for two resistors. they seem to have changed the resistors R96 and R97 (2.4kOhms 5%) from 2W ones to 3W ones. the original 2W resistors look a bit toasty and discoloured, they are probably a bit on the edge with their spec, so the 3W ceramic/cement ones from the newer revision will help with that.
 Also while inspecting the boards i found a missing SMD part from one of the edges. It was ripped of the solderpads and the soldermask had a scratch in it. Because i was very careful while disassembling and i could not find that SMD part anywhere on my workbench i figgured it was probably the person before me. either way the solder pads are not damaged and it was pretty easy to find in the part labeled D8 in the service manual, it's a BAS20 diode. Because I allready wanted to order other parts from a distributor, i decided to search for matching resistors and the diode. I found the diode and i found 5W resistors. 5W is even more than the 3W replacements from the 2nd revision, but it shouldn't hurt.
@@ -16383,7 +16383,9 @@ after i recieved the parts i soldered the BAS20 Diode with a hot air soldering s
 
 after soldering i connected testleads to the test pads 4 and 8 on the amp boards to do the AMP Iding Adjustment like descriped in the serivce manual. i carefully fitted the amp boards back into the case and connected all wires. after 5 minutes (or a bit more) of warm up time i adjusted the R53 labeled potentiometer so the voltage between the test points meassures +38mV on my multimeter.
 I reapeated the adjustments several times with a couple of minutes in between, because the voltage would still drift a bit after adjusting.
-You need to find a bit of a sweet spot, because it is always drifting a bit more after your adjustment, so it is best to adjust a bit less and let it settle out to 38mV.</pre>
+You need to find a bit of a sweet spot, because it is always drifting a bit more after your adjustment, so it is best to adjust a bit less and let it settle out to 38mV.
+
+as last step i assembled the whole amp and ziptied a couple of wires again.</pre>
 </div>
 <div created="20200521125827289" modified="20210604170237034" tags="[[IT / Computer security and digital / internet privacy]] Misc [[Politics (Politik)]]" title="Hausdurchsuchung (search and seizure)">
 <pre>* https://media.ccc.de/v/eh19-111-die-zwiebelfreunde-riseup-durchsuchungen
