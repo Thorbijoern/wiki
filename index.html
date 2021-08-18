@@ -1617,6 +1617,8 @@ Error message and password prompt
 
 <li>time / phase alignment</li>
 
+<li>TOA SC-35L Horn Speakers and Amplifier design</li>
+
 <li>Tonstudio</li>
 
 <li>tools</li>
@@ -11503,8 +11505,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20200512220852593" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20200512220838244" modified="20210805120632155" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20200512220838244" modified="20210818122316815" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -11854,7 +11856,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210713095842261" list="[[hifi amplifier repairs]] About TableOfContents" modified="20210810195206177" title="$:/StoryList">
+<div created="20210818122325640" list="[[TOA SC-35L Horn Speakers and Amplifier design]] About TableOfContents" modified="20210818122325640" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12868,8 +12870,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20210810195203897" modifier="Thorbijoern" title="$:/temp/search">
-<pre>deno</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20210818122314961" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -22126,6 +22128,25 @@ links
 </div>
 <div created="20210330161518530" modified="20210330161639198" tags="[[audio testing and measurement]]" title="time / phase alignment">
 <pre>[[REW Home Theater Subwoofer And Main Speaker Time Alignment And New House Curve Method|https://www.youtube.com/watch?v=RNzcRTTZt5M]]</pre>
+</div>
+<div created="20210818122329618" modified="20210818235031125" tags="[[horn speakers]] [[audio amplifiers]]" title="TOA SC-35L Horn Speakers and Amplifier design">
+<pre>a friend of mine wants to start a repair bussiness and got me a pair of nice TOA SC-35L horn speakers (mid-high frequency) from is broken electronics supplier. these speakers came with mounting brakets and a mounting plate with suction cups. I don't know how or where they have been used, they had a pretty long cable with an old DIN 41529 Plug (they where connected in parallel). They are in very good condition and only have one defect, where they must have been dropped and the edge of the back housing is slightly deformed and cracked, but not mayor.
+
+! TOA SC-35L data:
+
+* rated power: 35W
+* max power: 53W
+* horn mouth diameter: 355x224mm
+* impedance: 16Ohms
+*
+
+! amplifier design
+
+because these speakers are 16 Ohms and are not meant for low frequencies it's not as easy as just hooking them up to an amp and playing musik. The amp should be able to propperly work with these Speakers and deliver enough voltage to drive them, also it is best to use a crossover with a high pass to filter out lower frequencies. These horns use a high freuency compression driver which is really inefficient for low frequencies, these mostly get converted to heat and that can easily damage the drivers and destroy them.
+
+I've allready got a cheap chinese amplifier board with an [[TPA7498|https://www.st.com/en/audio-ics/tda7498.html]] amplifier chip on it. I started with basically copying the Test circuit/Application circuit from the datasheet with KiCAD. But i had problems because different parts are not or not propperly documented. choosing the values for the low pass filter at the output and the frequency shift circuit is pretty much undocumented and the likelyhood of getting answers in the communityforums seems pretty low.
+
+I then changed my plan to use other integrated amplifier chips.</pre>
 </div>
 <div created="20210301143616000" modified="20210301225559787" tags="[[Recording Audio]]" title="Tonstudio">
 <pre>* [[Tonstudio bauen - Heimwerkerking Fynn Kliemann|https://www.youtube.com/watch?v=yUhnwmvSFb0]]
