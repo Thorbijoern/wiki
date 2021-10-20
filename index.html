@@ -931,8 +931,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of ''</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -1466,6 +1464,8 @@ Error message and password prompt
 <li>repair / &quot;restauration&quot; of rusted electric bass (marathon Replay Series)</li>
 
 <li>Repair Manifesto</li>
+
+<li>Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller</li>
 
 <li>repair of Renkforce EQ/Amp</li>
 
@@ -11911,7 +11911,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20211020181416067" list="[[LM3915N Dot/Bar Display Driver]] [[mixing consoles / mischpulte]] [[TV streaming]] [[Draft of '']] About TableOfContents" modified="20211020204840813" title="$:/StoryList">
+<div created="20211020181416067" list="[[LM3915N Dot/Bar Display Driver]] [[mixing consoles / mischpulte]] [[TV streaming]] [[Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller]] About TableOfContents" modified="20211020204840813" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -15170,93 +15170,6 @@ stuff
 </div>
 <div created="20211011223357809" modified="20211011223422374" tags="[[IT / Computer security and digital / internet privacy]] [[computer science / IT stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
-</div>
-<div created="20211020181403248" draft.of="" draft.title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller" modified="20211020215017390" tags="[[audio repairs]]" title="Draft of ''">
-<pre>People I know have got a full PA System made by the former german Company Klotz.
-
-* Klotz P-A 1200 Ampifier
-* Klotz RPC/2 Controller including the Connector Interface
-* and two Klotz Nano 800 Speakers
-
-! Klotz Nano 800 Speakers
-
-* 400W RMS
-* 4 Ohm
-
-they are heavy, like really heavy. You need atleast two people to transport them.
-They feature two 12&quot; woofers (i think) and a quite big high frequency horn with two compression drivers joined by a Y-part going into the horn.
-
-The Klotz Nano 800 have NL4 Speakons but they use 2 of those lines for the Sense signals from the Speakers. To not run into problems you need all 4 wires connected to the Speakers and the Controller-Interface.
-
-! Klotz P-A 1200 Amplifier
-
-!! Information
-
-* 600W per channel
-* i got told or read somewhere that the Klotz amps are rebranded from a different manufacturer
-* [put more information here]
-
-!! Repair
-
-''Problem: most of the LEDs were broken/not lighting up anymore, even the power LEDs even though the amp was working fine.''
-
-The Problem is that the Pins of most LEDs broke. The LEDs are soldered to a small board which is mounted with some space behind the front panel. The LEDs are put through some standoffs/spacers and are soldered to the board. The spacers are aproximately 16mm in length which is quite long. The Pins of the LEDs all broke at the solder joints or at the plastic lense-body of the LED from vibration and stress. The standoffs have pretty narrow holes which likely is also a bad design choice. A better option would have been to solder the LEDs directly to the PCB, not to rely on the long pins and to use lightpipes instead, but changing it up now would be more hastle i think.
-I decided to buy all new LEDs (not the original ones, but all colors from the same series of the same manufacturer) and 15,90mm long standoffs with more spacious oval holes which should reduce stress. Also i'm going to use small daps of elastic glue onto the standoffs and LEDs to maybe reduce vibrations but the Spacers are also from PVC which should be more elastic than the old ones. the front plate also features holes which are like countersunk for the LEDs which lasted the longest, i will countersink all holes to maybe reduce stress.
-
-The LEDs of the dB output-display are driven by the [[LM3915N Dot/Bar Display Driver]] ([[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]]) which is a quite interresting chip also for DIY stuff.
-
-!  Klotz RPC/2 &quot;Selective Band RMS Power Controller&quot;
-
-!! Information
-
-* Model: RPC/2-1
-* Version: NA810
-
-One function of the controller is to protect the drivers in the speaker cabinet, as to not supply them with too much power and have them go up in smoke. But the Controller also can get the most out of the Drivers.
-
-the Controller i got to repair only has the main functionality of being able to &quot;process&quot; two channels (stereo), the subwoofer/sub-bass parts are left out and there are only a cover for the hole of the connector in the back and some dummy LEDs which are not connected in the front.
-
-the controller requires an Interface, which is a smaller 19&quot; Rack Enclosure featuring the nessesarry cabling on the backside and Speakon (for connecting the speaker cabinets) and XLR Connectors (Audio In and Thru) in the front.
-Inside the Interface is a PCB with all of the connectors and a small audio transformer for each Speakon output.
-
-The controller has a DA-15 socket (D-subminiature) for each Channel with all the inputs and outputs.
-The audio input comes, along with the sense lines from the Speakers and the transformer isolated sense signal from the power send to the speakers into the Controller through the DA-15 connector. Directly out of the DA-15 plug comes the XLR Audio output which can be directly plugged into the AMP.
-
-The Controller works completely using analog circuitry. Opamps are present as different DIP packages, but everything else is discrete.
-There is a Power Supply PCB with a small toroidial transformer, some filtering and Linear regulators as well as the two &quot;Main Board Fullrange&quot; with each havin a &quot;Fullrange Processing Card&quot; daughterboard.
-The space for the sub-bass processing is pretty empty because this is the fullrange version, but board has to be more narrow than the fullrange boards.
-
-!! Repair
-
-''Problem: The controller does not work and the &quot;Aktive&quot; LEDs remain off when switched on''
-
-The LEDs are different from the ones used in the amp, they are 90° angled ones whith different spacers and the other LEDs woth just fine. I could not test the LEDs yet, but they probably aren't faulty.
-
-I decided to change a couple of capacitors on the Power Supply board. The Class Y input Filter caps are visibly puffed up and probbably don't do the job anymore, the Class X Filter Cap looks fine but is old too. I'll change all of them with new ones from Kemet.
-Also there are a couple of aluminium electrolytic caps which are know for their limited lifetime.
-One of the bigger smoothing caps after the rectifiers looks slightly puffed up and all of the aluminium electrolytics are only 85°C rated. Most of them are near the Heat sink of the linear regulators wich only gets a little bit of passive convection cooling. The two 1A LDO linear regulators probably don't produce much heat, but i'll change all to new Rubycon caps rated at 105°C.
-But all of this is probably not the problem.
-
-The Processing boards use a lot of film capacitors which look like Epcos/TDK ~SilverCap Series which is uncoated/without case. I don't know much about film caps and what to look out for, but 2 or 3 of these caps look cracked and none of them have labeling wether they are 5% or 10% tolerance or so. Also i don't know if the production date of the controller was before Epcos started producing the ~SilverCap series or if other manufacturers had similar products. The trademark seems to be registered sinse 2002 or so. Epcos ended production of the Silvercap series in late 2020.
-
-I have to do further testing and reverse engineering to find the problem. I started reverse engineering the Power Supply module.
-
-! Power supply
-
-Semiconductors used:
-
-* full bridge rectifier packages with little marking
-* LM2940CT-12
-** 12V 1A fixed voltage low dropout linear voltage regulator
-** [[Datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/8856/NSC/LM2940CT-12.html]]
-* BC140
-** medium power silicon NPN transistor (marked &quot;MEV BC 140&quot;)
-** V,,CBO,,=80V; V,,CEO,,=40V; TO-39 Package
-** still in production by many different manufacturers
-* C547B
-** NPN general purpose transistor
-** [[Datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/16106/PHILIPS/C547B.html]]
-** Philips datasheet from 2004 could match with production date and stuff</pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -20802,6 +20715,104 @@ the bass has a black body and white pickguard, the screws seem to have been blac
 * https://www.ifixit.com/Manifesto
 * https://www.1000manifestos.com/platform-21-repair-manifesto/
 * https://repair.eu/</pre>
+</div>
+<div created="20211020181403248" modified="20211020220027221" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
+<pre>People I know have got a full PA System made by the former german Company Klotz.
+
+* Klotz P-A 1200 Ampifier
+* Klotz RPC/2 Controller including the Connector Interface
+* and two Klotz Nano 800 Speakers
+
+! Klotz Nano 800 Speakers
+
+* 400W RMS
+* 4 Ohm
+
+they are heavy, like really heavy. You need atleast two people to transport them.
+They feature two 12&quot; woofers (i think) and a quite big high frequency horn with two compression drivers joined by a Y-part going into the horn.
+
+The Klotz Nano 800 have NL4 Speakons but they use 2 of those lines for the Sense signals from the Speakers. To not run into problems you need all 4 wires connected to the Speakers and the Controller-Interface.
+
+! Klotz P-A 1200 Amplifier
+
+!! Information
+
+* 600W per channel
+* i got told or read somewhere that the Klotz amps are rebranded from a different manufacturer
+* [put more information here]
+
+!! Repair
+
+''Problem: most of the LEDs were broken/not lighting up anymore, even the power LEDs even though the amp was working fine.''
+
+The Problem is that the Pins of most LEDs broke. The LEDs are soldered to a small board which is mounted with some space behind the front panel. The LEDs are put through some standoffs/spacers and are soldered to the board. The spacers are aproximately 16mm in length which is quite long. The Pins of the LEDs all broke at the solder joints or at the plastic lense-body of the LED from vibration and stress. The standoffs have pretty narrow holes which likely is also a bad design choice. A better option would have been to solder the LEDs directly to the PCB, not to rely on the long pins and to use lightpipes instead, but changing it up now would be more hastle i think.
+I decided to buy all new LEDs (not the original ones, but all colors from the same series of the same manufacturer) and 15,90mm long standoffs with more spacious oval holes which should reduce stress. Also i'm going to use small daps of elastic glue onto the standoffs and LEDs to maybe reduce vibrations but the Spacers are also from PVC which should be more elastic than the old ones. the front plate also features holes which are like countersunk for the LEDs which lasted the longest, i will countersink all holes to maybe reduce stress.
+
+The LEDs of the dB output-display are driven by the [[LM3915N Dot/Bar Display Driver]] ([[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]]) which is a quite interresting chip also for DIY stuff.
+
+!  Klotz RPC/2 &quot;Selective Band RMS Power Controller&quot;
+
+!! Information
+
+* Model: RPC/2-1
+* Version: NA810
+
+One function of the controller is to protect the drivers in the speaker cabinet, as to not supply them with too much power and have them go up in smoke. But the Controller also can get the most out of the Drivers.
+
+the Controller i got to repair only has the main functionality of being able to &quot;process&quot; two channels (stereo), the subwoofer/sub-bass parts are left out and there are only a cover for the hole of the connector in the back and some dummy LEDs which are not connected in the front.
+
+the controller requires an Interface, which is a smaller 19&quot; Rack Enclosure featuring the nessesarry cabling on the backside and Speakon (for connecting the speaker cabinets) and XLR Connectors (Audio In and Thru) in the front.
+Inside the Interface is a PCB with all of the connectors and a small audio transformer for each Speakon output.
+
+The controller has a DA-15 socket (D-subminiature) for each Channel with all the inputs and outputs.
+The audio input comes, along with the sense lines from the Speakers and the transformer isolated sense signal from the power send to the speakers into the Controller through the DA-15 connector. Directly out of the DA-15 plug comes the XLR Audio output which can be directly plugged into the AMP.
+
+The Controller works completely using analog circuitry. Opamps are present as different DIP packages, but everything else is discrete.
+There is a Power Supply PCB with a small toroidial transformer, some filtering and Linear regulators as well as the two &quot;Main Board Fullrange&quot; with each havin a &quot;Fullrange Processing Card&quot; daughterboard.
+The space for the sub-bass processing is pretty empty because this is the fullrange version, but board has to be more narrow than the fullrange boards.
+
+!! Repair
+
+''Problem: The controller does not work and the &quot;Aktive&quot; LEDs remain off when switched on''
+
+The LEDs are different from the ones used in the amp, they are 90° angled ones whith different spacers and the other LEDs woth just fine. I could not test the LEDs yet, but they probably aren't faulty.
+
+I decided to change a couple of capacitors on the Power Supply board. The Class Y input Filter caps are visibly puffed up and probbably don't do the job anymore, the Class X Filter Cap looks fine but is old too. I'll change all of them with new ones from Kemet.
+Also there are a couple of aluminium electrolytic caps which are know for their limited lifetime.
+One of the bigger smoothing caps after the rectifiers looks slightly puffed up and all of the aluminium electrolytics are only 85°C rated. Most of them are near the Heat sink of the linear regulators wich only gets a little bit of passive convection cooling. The two 1A LDO linear regulators probably don't produce much heat, but i'll change all to new Rubycon caps rated at 105°C.
+But all of this is probably not the problem.
+
+The Processing boards use a lot of film capacitors which look like Epcos/TDK ~SilverCap Series which is uncoated/without case. I don't know much about film caps and what to look out for, but 2 or 3 of these caps look cracked and none of them have labeling wether they are 5% or 10% tolerance or so. Also i don't know if the production date of the controller was before Epcos started producing the ~SilverCap series or if other manufacturers had similar products. The trademark seems to be registered sinse 2002 or so. Epcos ended production of the Silvercap series in late 2020.
+
+I have to do further testing and reverse engineering to find the problem. I started reverse engineering the Power Supply module.
+
+!! Power supply
+
+Semiconductors used:
+
+* full bridge rectifier packages with little marking
+* LM2940CT-12
+** 12V 1A fixed voltage low dropout linear voltage regulator
+** [[Datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/8856/NSC/LM2940CT-12.html]]
+* BC140
+** medium power silicon NPN transistor (marked &quot;MEV BC 140&quot;)
+** V,,CBO,,=80V; V,,CEO,,=40V; TO-39 Package
+** still in production by many different manufacturers
+* C547B
+** NPN general purpose transistor
+** [[Datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/16106/PHILIPS/C547B.html]]
+** Philips datasheet from 2004 could match with production date and stuff
+
+...
+
+!! Processing boards
+
+semiconductors used:
+
+* CA3086
+** general purpose NPN transistor array
+** [[datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/97179/INTERSIL/CA3086.html]]
+* ...</pre>
 </div>
 <div created="20210419223302045" modified="20210419225546138" tags="[[audio repairs]]" title="repair of Renkforce EQ/Amp">
 <pre>* says &quot;Spectrum Analyzer/Graphic Equalizer Computer Control System&quot;
