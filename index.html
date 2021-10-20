@@ -15171,7 +15171,7 @@ stuff
 <div created="20211011223357809" modified="20211011223422374" tags="[[IT / Computer security and digital / internet privacy]] [[computer science / IT stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20211020181403248" draft.of="" draft.title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller" modified="20211020214819044" tags="[[audio repairs]]" title="Draft of ''">
+<div created="20211020181403248" draft.of="" draft.title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller" modified="20211020215017390" tags="[[audio repairs]]" title="Draft of ''">
 <pre>People I know have got a full PA System made by the former german Company Klotz.
 
 * Klotz P-A 1200 Ampifier
@@ -15203,7 +15203,7 @@ The Klotz Nano 800 have NL4 Speakons but they use 2 of those lines for the Sense
 The Problem is that the Pins of most LEDs broke. The LEDs are soldered to a small board which is mounted with some space behind the front panel. The LEDs are put through some standoffs/spacers and are soldered to the board. The spacers are aproximately 16mm in length which is quite long. The Pins of the LEDs all broke at the solder joints or at the plastic lense-body of the LED from vibration and stress. The standoffs have pretty narrow holes which likely is also a bad design choice. A better option would have been to solder the LEDs directly to the PCB, not to rely on the long pins and to use lightpipes instead, but changing it up now would be more hastle i think.
 I decided to buy all new LEDs (not the original ones, but all colors from the same series of the same manufacturer) and 15,90mm long standoffs with more spacious oval holes which should reduce stress. Also i'm going to use small daps of elastic glue onto the standoffs and LEDs to maybe reduce vibrations but the Spacers are also from PVC which should be more elastic than the old ones. the front plate also features holes which are like countersunk for the LEDs which lasted the longest, i will countersink all holes to maybe reduce stress.
 
-The LEDs of the dB output-display are driven by the LM3915N Dot/Bar Display Driver ([[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]]) which is a quite interresting chip also for DIY stuff.
+The LEDs of the dB output-display are driven by the [[LM3915N Dot/Bar Display Driver]] ([[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]]) which is a quite interresting chip also for DIY stuff.
 
 !  Klotz RPC/2 &quot;Selective Band RMS Power Controller&quot;
 
@@ -15245,6 +15245,7 @@ I have to do further testing and reverse engineering to find the problem. I star
 
 Semiconductors used:
 
+* full bridge rectifier packages with little marking
 * LM2940CT-12
 ** 12V 1A fixed voltage low dropout linear voltage regulator
 ** [[Datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/8856/NSC/LM2940CT-12.html]]
@@ -18011,9 +18012,15 @@ optaining lithium and other rare materials used in these batteries is a hard thi
 
 * https://www.elektronik-kompendium.de/sites/bau/0810281.htm</pre>
 </div>
-<div created="20211020214502652" modified="20211020214845244" tags="" title="LM3915N Dot/Bar Display Driver">
-<pre>* [[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]]
-</pre>
+<div created="20211020214502652" modified="20211020215828548" tags="" title="LM3915N Dot/Bar Display Driver">
+<pre>*can display logarithmic voltage levels ind 3dB steps
+* [[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]] or on [[alldatasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/558235/TI/LM3915N-1.html]]
+* some links
+** https://tronixstuff.com/2013/12/09/tutorial-lm3915-logarithmic-dotbar-display-driver-ic/
+** https://www.homemade-circuits.com/lm3915-ic-datasheet-pinout-application-circuits/
+** 
+* LM3914 can display linear voltage ranges
+** https://tronixstuff.com/2013/09/14/tutorial-lm3914-dotbar-display-driver-ic/</pre>
 </div>
 <div created="20200729191731431" modified="20210415111323023" tags="[[sustainability / nachhaltigkeit]] Electronics" title="low power electronics">
 <pre>* [[The best low power display? E-Paper Tutorial|https://www.youtube.com/watch?v=kAmnU5Y96MA]]
