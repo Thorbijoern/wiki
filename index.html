@@ -11588,8 +11588,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20200512220852593" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20200512220838244" modified="20211020181412616" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20200512220838244" modified="20211029195722097" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -11942,7 +11942,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20211024132510680" list="[[fucking big portable battery]] [[big (portable) battery]] [[Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller]] About TableOfContents" modified="20211029121606670" title="$:/StoryList">
+<div created="20211024132510680" list="[[Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller]] About TableOfContents" modified="20211029153005326" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12956,8 +12956,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20211029121547341" modifier="Thorbijoern" title="$:/temp/search">
-<pre>batt</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20211029195719224" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -20844,12 +20844,15 @@ the bass has a black body and white pickguard, the screws seem to have been blac
 * https://www.1000manifestos.com/platform-21-repair-manifesto/
 * https://repair.eu/</pre>
 </div>
-<div created="20211020181403248" modified="20211025204727633" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
+<div created="20211020181403248" modified="20211029203351461" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
 <pre>People I know have got a full PA System made by the former german Company Klotz.
 
 * Klotz P-A 1200 Ampifier
 * Klotz RPC/2 Controller including the Connector Interface
 * and two Klotz Nano 800 Speakers
+
+some components are not made by Klotz and only rebranded i believe, but its still unclear to me which were made by Klotz.
+Klotz nowadays only manufactures Cables and Cabling systems for big installations. I've read in forum posts that people have tried getting information from Klotz but didn't have any luck.
 
 ! Klotz Nano 800 Speakers
 
@@ -20867,8 +20870,15 @@ The Klotz Nano 800 have NL4 Speakons but they use 2 of those lines for the Sense
 
 !! Information
 
-* 600W per channel
-* i got told or read somewhere that the Klotz amps are rebranded from a different manufacturer
+* 2x 600W RMS @ 4 Ohm
+* 21 kg
+* 3.460.- DM new
+* 1,8kVA transformer
+* Power transistors: Sanken 2SC3264 and 2SA1295
+* power preamps/drivers: Sanken 2SC3263 and 2SA1294
+* originally made by spanish company &quot;aeq&quot; but rebranded as Klotz it seems
+* a set of two 3k3 Ohms power resistors per channel might also be a common problem
+* http://www.roehrenklingklang.de/LightNEasy.php?page=Klotz
 * [put more information here]
 
 !! Repair
@@ -20886,6 +20896,11 @@ The LEDs of the dB output-display are driven by the [[LM3915N Dot/Bar Display Dr
 
 * Model: RPC/2-1
 * Version: NA810
+* version for NANO 800 speakers (it seems only the program boards are different)
+
+the PCBs inside the controller all have &quot;Klotz&quot; written on them, but entries in online forums state that the controller is made by Renkus-Heinz.
+
+ * https://en.wikipedia.org/wiki/Renkus-Heinz
 
 One function of the controller is to protect the drivers in the speaker cabinet, as to not supply them with too much power and have them go up in smoke. But the Controller also can get the most out of the Drivers.
 
