@@ -11508,7 +11508,8 @@ TableOfContents</pre>
     &quot;tiddlers&quot;: {
         &quot;Untitled&quot;: {
             &quot;title&quot;: &quot;Untitled&quot;,
-            &quot;text&quot;: &quot;&lt;span&gt;&lt;h2 class=\&quot;tc-title\&quot;&gt;open source CAD softwa&lt;/h2&gt;&lt;/span&gt;&quot;
+            &quot;text&quot;: &quot;schaltplan&quot;,
+            &quot;type&quot;: &quot;text/plain&quot;
         }
     }
 }</pre>
@@ -20844,7 +20845,7 @@ the bass has a black body and white pickguard, the screws seem to have been blac
 * https://www.1000manifestos.com/platform-21-repair-manifesto/
 * https://repair.eu/</pre>
 </div>
-<div created="20211020181403248" modified="20211029203351461" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
+<div created="20211020181403248" modified="20211029221122930" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
 <pre>People I know have got a full PA System made by the former german Company Klotz.
 
 * Klotz P-A 1200 Ampifier
@@ -20853,6 +20854,12 @@ the bass has a black body and white pickguard, the screws seem to have been blac
 
 some components are not made by Klotz and only rebranded i believe, but its still unclear to me which were made by Klotz.
 Klotz nowadays only manufactures Cables and Cabling systems for big installations. I've read in forum posts that people have tried getting information from Klotz but didn't have any luck.
+
+the original company &quot;Klotz Digital AG&quot; does not exist anymore but the following companies are the newer companies related or seem related
+
+* https://www.klotz-ais.de/ - somehow related?
+* https://klotzcommunications.com/ - has actually bought the original assets and stuff back from Klotz Digital AG
+* https://en.wikipedia.org/wiki/Klotz_Digital - some information about the company, history and legacy
 
 ! Klotz Nano 800 Speakers
 
@@ -20877,9 +20884,25 @@ The Klotz Nano 800 have NL4 Speakons but they use 2 of those lines for the Sense
 * Power transistors: Sanken 2SC3264 and 2SA1295
 * power preamps/drivers: Sanken 2SC3263 and 2SA1294
 * originally made by spanish company &quot;aeq&quot; but rebranded as Klotz it seems
-* a set of two 3k3 Ohms power resistors per channel might also be a common problem
+** more obvious with this newer? design: https://www.diy-hifi-forum.eu/forum/showthread.php?9385-Klotz-PA1200-Reanimierung
 * http://www.roehrenklingklang.de/LightNEasy.php?page=Klotz
 * [put more information here]
+
+some sources:
+
+* https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/
+* http://www.hifi-forum.de/bild/klotz-pa-1200_1060911.html
+* https://www.diy-hifi-forum.eu/forum/showthread.php?9385-Klotz-PA1200-Reanimierung
+
+common problems:
+
+* pins of LEDs break
+** because the standoffs have very small holes and are very unflexible. the pins are under stress by vibrations because the LEDs are so far from the PCB. new LEDs are required and new, better standoffs with wider, oval holes for the LEDs pins
+** i describe the same repair below
+** same problem described here: https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/&amp;postID=294032#post294032
+* a set of two 3k3 Ohms power resistors per channel burning out might also be a common problem
+** https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/&amp;postID=290391#post290391
+
 
 !! Repair
 
