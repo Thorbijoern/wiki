@@ -11942,7 +11942,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20211024132510680" list="podcasts [[Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller]] About TableOfContents" modified="20211028084220747" title="$:/StoryList">
+<div created="20211024132510680" list="[[fucking big portable battery]] [[big (portable) battery]] [[Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller]] About TableOfContents" modified="20211029121606670" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12956,8 +12956,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20211028084203614" modifier="Thorbijoern" title="$:/temp/search">
-<pre>podc</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20211029121547341" modifier="Thorbijoern" title="$:/temp/search">
+<pre>batt</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13977,22 +13977,56 @@ Tweeter information:
 * SPL: 104.5dB (+-2dB)
 * Gewicht: 2400gr</pre>
 </div>
-<div created="20211004153126204" modified="20211005145942816" tags="[[accumulator - battery - rechargeable energy storage]]" title="big (portable) battery">
+<div created="20211004153126204" modified="20211029124935689" tags="[[accumulator - battery - rechargeable energy storage]]" title="big (portable) battery">
 <pre>* based on a electic car battery pack 
 * build to a similar standard like high power generators
 
-battery pack
+battery cells
 
 * most electric cars use Li-Ion wich comes with some fire risk
 * some cars use [[LiFePO4|LiFePO4 (LFP)]] cells which are much safer because they don't burn, they come with a bit less energy density though
 * lead acid batteries are out of question because it would be to heavy for portability
 * having Sodium-ion cells would be great, but the first manufacturers are just building production lines and ramping up production and it might take quite some time till these cells can be seen in cars or purchased by private people from sellers
 
+Electronics
+
+* inverter
+** a propper, professionsl inverter with 10-25kW from companies like SMA
+** 3 phase
+** most of these inverters are string inverters with integrated MPPT functions for Solar panels, has to be checked if that is a problem or can be turned off as to not interfere with the battery/BMS
+** probably also has some useful safety features, maybe a built in insulation monitor or other features which require less extra parts
+** do they work well with changing loads and fluctuating power draw or are they only designed for constant loads?
+* BMS
+** is probably the best to use the bms designed for the packs we got, might come with the battery
+** probably has an insulation monitor for the DC side built in, else one has to be added inside the DC breaker panel
+* Charger
+** is also best if we get the charger module from the same car as the batteries
+** chraging from 230V home outlet or car charging station
+** fast charge?
+* breaker panels
+** separate Panels for DC and AC
+** should be waterproof and more accessible, like through doors in the enclosure
+** 3 phase insulation monitor in the breaker panel for AC because then we don't have to worry about having a propper earth connection or earthing rod. with a regular RCD there has to be a propper impedance to earth or the FI will not trigger or trigger too late, disabling the security
+*** https://en.wikipedia.org/wiki/Insulation_monitoring_device
+*** https://de.wikipedia.org/wiki/Isolationsw%C3%A4chter
+* communication/controll
+** the BMS, charger, Inverter and other components might/should have serial communication like CAN Bus, modbus or RS232/RS485
+** there should be a small controll panel giving data fom all important parts of the battery pack and inverter
+** displaying power draw, voltages, charging state, errors and stuff
+** depending on the featureset of other equipment (like the data the inverter provides) a shelly 3em or similar is useful for meassuring AC power
+*** https://shop.shelly.cloud/shelly-3em-wifi-smart-home-automation
+* waterproof
+** everything should be propperly waterproof or mounted inside the enclosure in a way it can't be reached by water
+* cooling
+** do we have to worry about cooling?
+
 case/chassis
 
 * maybe similar like medium size power generators with a metal frame and case
 * size like an [[EPAL|EUR-pallet / Europoolpalette]] and with holes for transport with a Pallet-Jack or forklift
-
+* wood chassis is probably not the best option
+* aluminium for the side panels to save weight? steel for the base?
+* the enclosure should be pretty good waterproof/splashproof
 </pre>
 </div>
 <div created="20210604174256739" modified="20210604174846925" tags="[[Fahrrad (bicycle, bike)]]" title="bike sensors">
