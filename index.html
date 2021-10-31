@@ -11951,7 +11951,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20211024132510680" list="podcasts [[ADCs / DACs]] About TableOfContents" modified="20211031181030184" title="$:/StoryList">
+<div created="20211024132510680" list="[[Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller]] About TableOfContents" modified="20211031181107374" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -20888,15 +20888,16 @@ the bass has a black body and white pickguard, the screws seem to have been blac
 * https://www.1000manifestos.com/platform-21-repair-manifesto/
 * https://repair.eu/</pre>
 </div>
-<div created="20211020181403248" modified="20211029221122930" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
+<div created="20211020181403248" modified="20211031192841775" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
 <pre>People I know have got a full PA System made by the former german Company Klotz.
 
 * Klotz P-A 1200 Ampifier
-* Klotz RPC/2 Controller including the Connector Interface
+* Klotz RPC/2 Controller (for Nano 800) including the Connector Interface
 * and two Klotz Nano 800 Speakers
 
-some components are not made by Klotz and only rebranded i believe, but its still unclear to me which were made by Klotz.
-Klotz nowadays only manufactures Cables and Cabling systems for big installations. I've read in forum posts that people have tried getting information from Klotz but didn't have any luck.
+this is a complete Klotz PA system which fits inside a 4U Rack.
+some components are not made by Klotz and only rebranded i believe, more on that in the dedicated parts below.
+Klotz nowadays only manufactures Cables and Cabling systems for big installations. I've read in forum posts that people have tried getting information from Klotz one didn't have any luck but others got some documents that still existed.
 
 the original company &quot;Klotz Digital AG&quot; does not exist anymore but the following companies are the newer companies related or seem related
 
@@ -20904,15 +20905,21 @@ the original company &quot;Klotz Digital AG&quot; does not exist anymore but the
 * https://klotzcommunications.com/ - has actually bought the original assets and stuff back from Klotz Digital AG
 * https://en.wikipedia.org/wiki/Klotz_Digital - some information about the company, history and legacy
 
+information online is really scarse and here are sources i dindn't check yet:
+
+* https://forum.speakerplans.com/klotz-pa1200-schematic_topic35205_page2.html
+
+
 ! Klotz Nano 800 Speakers
 
 * 400W RMS
 * 4 Ohm
+* they weigh 65kg each, atleast to what i found online, but i can tell you that they are fucking heavy.
 
 they are heavy, like really heavy. You need atleast two people to transport them.
 They feature two 15&quot; woofers and a quite big high frequency horn with two compression drivers joined by a Y-part going into the horn.
 possibly 3-way crossover so that the 15&quot; drivers have different dedicated frequency ranges?
-Renkus Heinz compression drivers?
+at least the compression drivers might be made by Renkus Heinz, but maybe also the woofers or the whole cabinet is made by Renkus Heinz.
 
 The Klotz Nano 800 have NL4 Speakons but they use 2 of those lines for the Sense signals from the Speakers. To not run into problems you need all 4 wires connected to the Speakers and the Controller-Interface.
 
@@ -20924,18 +20931,14 @@ The Klotz Nano 800 have NL4 Speakons but they use 2 of those lines for the Sense
 * 21 kg
 * 3.460.- DM new
 * 1,8kVA transformer
+* 2U rackmount
 * Power transistors: Sanken 2SC3264 and 2SA1295
 * power preamps/drivers: Sanken 2SC3263 and 2SA1294
 * originally made by spanish company &quot;aeq&quot; but rebranded as Klotz it seems
 ** more obvious with this newer? design: https://www.diy-hifi-forum.eu/forum/showthread.php?9385-Klotz-PA1200-Reanimierung
 * http://www.roehrenklingklang.de/LightNEasy.php?page=Klotz
+** https://web.archive.org/web/20200208190259/http://www.roehrenklingklang.de/LightNEasy.php?page=Klotz
 * [put more information here]
-
-some sources:
-
-* https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/
-* http://www.hifi-forum.de/bild/klotz-pa-1200_1060911.html
-* https://www.diy-hifi-forum.eu/forum/showthread.php?9385-Klotz-PA1200-Reanimierung
 
 common problems:
 
@@ -20945,6 +20948,19 @@ common problems:
 ** same problem described here: https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/&amp;postID=294032#post294032
 * a set of two 3k3 Ohms power resistors per channel burning out might also be a common problem
 ** https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/&amp;postID=290391#post290391
+
+it seems that there were multible versions of these amps. i believe the one i got is an older version which uses normal 3mm LEDs in a vertical layout, but there are also pictures online which show a version with square LEDs in horizontal arangement.
+i've also seen ones on pictures with &quot;SAAVS - made by Klotz&quot; branding.
+
+smaller versions of these amps, like the P-A900 basically have the same PCB layout. in some forum messages i could find that the PCBs have even have 1200 written on them even though they are the 900 version.
+the differences are mainly in the power transistors being a smaller number and the main capacitors being of a smaller size.
+The 900 has an output of &quot;only&quot; 2x 450W @4Ohms
+
+some sources:
+
+* https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/
+* http://www.hifi-forum.de/bild/klotz-pa-1200_1060911.html
+* https://www.diy-hifi-forum.eu/forum/showthread.php?9385-Klotz-PA1200-Reanimierung
 
 
 !! Repair
@@ -20962,18 +20978,21 @@ The LEDs of the dB output-display are driven by the [[LM3915N Dot/Bar Display Dr
 
 * Model: RPC/2-1
 * Version: NA810
-* version for NANO 800 speakers (it seems only the program boards are different)
+* version for NANO 800 speakers
+** it seems only the program boards are different and depending
+* no sub-bass functionality
+* 1U rackmount
 
 the PCBs inside the controller all have &quot;Klotz&quot; written on them, but entries in online forums state that the controller is made by Renkus-Heinz.
 
  * https://en.wikipedia.org/wiki/Renkus-Heinz
+* https://renkus-heinz.com/
 
-One function of the controller is to protect the drivers in the speaker cabinet, as to not supply them with too much power and have them go up in smoke. But the Controller also can get the most out of the Drivers.
+i could not find equipment that is similar to the controller in their &quot;legacy&quot; products page.
 
-the Controller i got to repair only has the main functionality of being able to &quot;process&quot; two channels (stereo), the subwoofer/sub-bass parts are left out and there are only a cover for the hole of the connector in the back and some dummy LEDs which are not connected in the front.
+One function of the controller is to protect the drivers in the speaker cabinet, as to not supply them with too much power and have them go up in smoke. But the Controller also can get the most out of the Drivers to drive the speakers in the optimal way somehow.
 
-the controller requires an Interface, which is a smaller 19&quot; Rack Enclosure featuring the nessesarry cabling on the backside and Speakon (for connecting the speaker cabinets) and XLR Connectors (Audio In and Thru) in the front.
-Inside the Interface is a PCB with all of the connectors and a small audio transformer for each Speakon output.
+the Controller i got to repair only has the main functionality of being able to &quot;process&quot; two channels (stereo), the subwoofer/sub-bass parts are left out and there are only a cover for the hole of the connector in the back and some dummy LEDs which are not connected in the front. I'm unshure if a system including the sub-bass functionality would only like a 2.1 system because the sub-bass has just one DA-15 interface
 
 The controller has a DA-15 socket (D-subminiature) for each Channel with all the inputs and outputs.
 The audio input comes, along with the sense lines from the Speakers and the transformer isolated sense signal from the power send to the speakers into the Controller through the DA-15 connector. Directly out of the DA-15 plug comes the XLR Audio output which can be directly plugged into the AMP.
@@ -20981,6 +21000,8 @@ The audio input comes, along with the sense lines from the Speakers and the tran
 The Controller works completely using analog circuitry. Opamps are present as different DIP packages, but everything else is discrete.
 There is a Power Supply PCB with a small toroidial transformer, some filtering and Linear regulators as well as the two &quot;Main Board Fullrange&quot; with each havin a &quot;Fullrange Processing Card&quot; daughterboard.
 The space for the sub-bass processing is pretty empty because this is the fullrange version, but board has to be more narrow than the fullrange boards.
+
+descriptions about the interface see below.
 
 !! Repair
 
@@ -21023,7 +21044,18 @@ semiconductors used:
 * CA3086
 ** general purpose NPN transistor array
 ** [[datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/97179/INTERSIL/CA3086.html]]
-* ...</pre>
+* ...
+
+!! Interface
+
+the controller requires an Interface, which is just a small 1U rackmount Enclosure with no active circuitry inside, it does not need an extra power connection.
+It features the nessesarry cabling on the backside for connecting to the amp and the Controller.
+in the front are Speakon connectors for each channel and 2 for the sub-bass (which aren't used in this system) as well as XLR Connectors for input and one which is wired in parallel with the input as throu.
+the connectors are soldered to a PCB inside the controller and for each speakon connector/amplifier output is a transformer.
+i have not looked at it much, but the input signal goes directly to the DA-15 cable and the cables connecting to the amp go directly to the speakon.
+The transformers have multible windings and might step down the voltage? they at least isolate the amp and controller.
+On the end of the DA-15 Cable, directly at the DA-15 connector there is a small XLR cable going to the amps inputs.
+The NL4 Speakon Outputs have the power form the amp and two sense lines connected.</pre>
 </div>
 <div created="20210419223302045" modified="20210419225546138" tags="[[audio repairs]]" title="repair of Renkforce EQ/Amp">
 <pre>* says &quot;Spectrum Analyzer/Graphic Equalizer Computer Control System&quot;
