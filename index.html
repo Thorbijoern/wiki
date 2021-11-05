@@ -11580,8 +11580,8 @@ TableOfContents</pre>
 <div created="20200629133847897" modified="20200629133847897" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200512220934152" modified="20210711210512091" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20200512220934152" modified="20211105162844412" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20200512221743504" modified="20200512221811755" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
@@ -20936,7 +20936,7 @@ the bass has a black body and white pickguard, the screws seem to have been blac
 * https://www.1000manifestos.com/platform-21-repair-manifesto/
 * https://repair.eu/</pre>
 </div>
-<div created="20211020181403248" modified="20211105122039938" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
+<div created="20211020181403248" modified="20211105165246725" tags="[[audio repairs]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
 <pre>People I know have got a full PA System made by the former german Company Klotz.
 
 * Klotz P-A 1200 Ampifier
@@ -21112,32 +21112,32 @@ The NL4 Speakon Outputs have the power form the amp and two sense lines connecte
 Interface
 
 DA-15 - Channel A/B
-1 - (black)
-2 -
-3 - (black)
-4 - (blue)
-5 - (black)
-6 - nc
-7 - nc
-8 - audio out +(rot)
-9 - (white)
-10 - (black)
-11 - (green)
-12 - 
-13 - (red)
-14 - audio out gnd/mass
-15 - audio out - (blue)
-
-audio out is the processed signal from the controller and goes through a microphone cable to the XLR for the amp.
 
 
-for each amp output a power resistor 25W 0.1 ohm 1%
+```
+====  ===================  ==========
+Pins  Description          Wire Color
+====  ===================  ==========
+1     Transformer sec. -   black
+2     cable shield         unisolated
+3     sense - (voltage?)   black
+4     speaker sense +      blue
+5     audio in -           black
+6     nc		   -
+7     nc     		   -
+8     audio out +          red
+9     Transformer sec. +   white
+10    speaker sense -      black
+11    sense + (voltage?)   green
+12    audio in gnd/mass    unisolated
+13    audio in +           red
+14    audio out gnd/mass   unisolated
+15    audio out -          blue
+```
 
-amp out + to resistor and transformator
-
-amp out - to speakon 1-
-
-speakon 1+?</pre>
+* audio out is the processed signal from the controller and goes through a microphone cable to the XLR of the amp.
+* for each amp output a power resistor 25W 0.1 ohm 1%
+* the speaker sense is implemented in the crossover of the speakers, a complete 4-wire NL4 speakon cable is needed for it to work</pre>
 </div>
 <div created="20210419223302045" modified="20210419225546138" tags="[[audio repairs]]" title="repair of Renkforce EQ/Amp">
 <pre>* says &quot;Spectrum Analyzer/Graphic Equalizer Computer Control System&quot;
