@@ -15323,7 +15323,7 @@ stuff
 <div modified="20211111093629090" title="Draft of 'Klotz P-A 1200 Amplifier'">
 <pre></pre>
 </div>
-<div created="20211020181403248" draft.of="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller" draft.title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller" modified="20211111101229823" tags="[[audio repairs]]" title="Draft of 'Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller'">
+<div created="20211020181403248" draft.of="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller" draft.title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller" modified="20211111101334452" tags="[[audio repairs]]" title="Draft of 'Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller'">
 <pre>People I know have got a full PA System made by the former german Company Klotz.
 
 * Klotz P-A 1200 Ampifier
@@ -15347,40 +15347,6 @@ information online is really scarse and here are sources i dindn't check yet:
 
 * https://forum.speakerplans.com/klotz-pa1200-schematic_topic35205_page2.html
 
-
-
-
-common problems:
-
-* pins of LEDs break
-** because the standoffs have very small holes and are very unflexible. the pins are under stress by vibrations because the LEDs are so far from the PCB. new LEDs are required and new, better standoffs with wider, oval holes for the LEDs pins
-** i describe the same repair below
-** same problem described here: https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/&amp;postID=294032#post294032
-* a set of two 3k3 Ohms power resistors per channel burning out might also be a common problem
-** https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/&amp;postID=290391#post290391
-
-it seems that there were multible versions of these amps. i believe the one i got is an older version which uses normal 3mm LEDs in a vertical layout, but there are also pictures online which show a version with square LEDs in horizontal arangement.
-i've also seen ones on pictures with &quot;SAAVS - made by Klotz&quot; branding.
-
-smaller versions of these amps, like the P-A900 basically have the same PCB layout. in some forum messages i could find that the PCBs have even have 1200 written on them even though they are the 900 version.
-the differences are mainly in the power transistors being a smaller number and the main capacitors being of a smaller size.
-The 900 has an output of &quot;only&quot; 2x 450W @4Ohms
-
-some sources:
-
-* https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/
-* http://www.hifi-forum.de/bild/klotz-pa-1200_1060911.html
-* https://www.diy-hifi-forum.eu/forum/showthread.php?9385-Klotz-PA1200-Reanimierung
-
-
-!! Repair
-
-''Problem: most of the LEDs were broken/not lighting up anymore, even the power LEDs even though the amp was working fine.''
-
-The Problem is that the Pins of most LEDs broke. The LEDs are soldered to a small board which is mounted with some space behind the front panel. The LEDs are put through some standoffs/spacers and are soldered to the board. The spacers are aproximately 16mm in length which is quite long. The Pins of the LEDs all broke at the solder joints or at the plastic lense-body of the LED from vibration and stress. The standoffs have pretty narrow holes which likely is also a bad design choice. A better option would have been to solder the LEDs directly to the PCB, not to rely on the long pins and to use lightpipes instead, but changing it up now would be more hastle i think.
-I decided to buy all new LEDs (not the original ones, but all colors from the same series of the same manufacturer) and 15,90mm long standoffs with more spacious oval holes which should reduce stress. Also i'm going to use small daps of elastic glue onto the standoffs and LEDs to maybe reduce vibrations but the Spacers are also from PVC which should be more elastic than the old ones. the front plate also features holes which are like countersunk for the LEDs which lasted the longest, i will countersink all holes to maybe reduce stress.
-
-The LEDs of the dB output-display are driven by the [[LM3915N Dot/Bar Display Driver]] ([[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]]) which is a quite interresting chip also for DIY stuff.
 
 !  Klotz RPC/2 &quot;Selective Band RMS Power Controller&quot;
 
@@ -17883,8 +17849,55 @@ the smaller version is the Klotz Nano 400 and may be used with a Nano Bass 500 s
 The Nano 400 seems to originally have a 1&quot; Compression driver Rhenkus Heinz SSD1800), 15&quot; woofer (Electrovoice EVM-15L), total power of 300W by 35kg.
 The Nano Bass 500 might be originally fitted with a 18&quot; RCF-L18 woofer being able to consume 900W at 40kg.</pre>
 </div>
-<div created="20211111093438401" modified="20211111093628608" tags="[[audio amplifiers]] [[audio repairs]]" title="Klotz P-A 1200 Amplifier">
-<pre></pre>
+<div created="20211111093438401" modified="20211111101354430" tags="[[audio amplifiers]] [[audio repairs]]" title="Klotz P-A 1200 Amplifier">
+<pre>!! Information
+
+* 2x 600W RMS @ 4 Ohm
+* 21 kg
+* 3.460.- DM new
+* 1,8kVA transformer
+* 2U rackmount
+* Power transistors: Sanken 2SC3264 and 2SA1295
+* power preamps/drivers: Sanken 2SC3263 and 2SA1294
+* originally made by spanish company &quot;aeq&quot; but rebranded as Klotz it seems
+** namely aeq 1201 and [[aeq 901|https://en.audiofanzine.com/dual-channel-power-amp/aeq/901/]] amps
+** more obvious with this newer? design: https://www.diy-hifi-forum.eu/forum/showthread.php?9385-Klotz-PA1200-Reanimierung
+* http://www.roehrenklingklang.de/LightNEasy.php?page=Klotz
+** https://web.archive.org/web/20200208190259/http://www.roehrenklingklang.de/LightNEasy.php?page=Klotz
+* [put more information here]
+
+common problems:
+
+* pins of LEDs break
+** because the standoffs have very small holes and are very unflexible. the pins are under stress by vibrations because the LEDs are so far from the PCB. new LEDs are required and new, better standoffs with wider, oval holes for the LEDs pins
+** i describe the same repair below
+** same problem described here: https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/&amp;postID=294032#post294032
+* a set of two 3k3 Ohms power resistors per channel burning out might also be a common problem
+** https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/&amp;postID=290391#post290391
+
+it seems that there were multible versions of these amps. i believe the one i got is an older version which uses normal 3mm LEDs in a vertical layout, but there are also pictures online which show a version with square LEDs in horizontal arangement.
+i've also seen ones on pictures with &quot;SAAVS - made by Klotz&quot; branding.
+
+smaller versions of these amps, like the P-A900 basically have the same PCB layout. in some forum messages i could find that the PCBs have even have 1200 written on them even though they are the 900 version.
+the differences are mainly in the power transistors being a smaller number and the main capacitors being of a smaller size.
+The 900 has an output of &quot;only&quot; 2x 450W @4Ohms
+
+
+some sources:
+
+* https://paforum.de/forum/index.php?thread/32070-schaltplan-f%C3%BCr-klotz-pa-1200/
+* http://www.hifi-forum.de/bild/klotz-pa-1200_1060911.html
+* https://www.diy-hifi-forum.eu/forum/showthread.php?9385-Klotz-PA1200-Reanimierung
+
+
+!! Repair
+
+''Problem: most of the LEDs were broken/not lighting up anymore, even the power LEDs even though the amp was working fine.''
+
+The Problem is that the Pins of most LEDs broke. The LEDs are soldered to a small board which is mounted with some space behind the front panel. The LEDs are put through some standoffs/spacers and are soldered to the board. The spacers are aproximately 16mm in length which is quite long. The Pins of the LEDs all broke at the solder joints or at the plastic lense-body of the LED from vibration and stress. The standoffs have pretty narrow holes which likely is also a bad design choice. A better option would have been to solder the LEDs directly to the PCB, not to rely on the long pins and to use lightpipes instead, but changing it up now would be more hastle i think.
+I decided to buy all new LEDs (not the original ones, but all colors from the same series of the same manufacturer) and 15,90mm long standoffs with more spacious oval holes which should reduce stress. Also i'm going to use small daps of elastic glue onto the standoffs and LEDs to maybe reduce vibrations but the Spacers are also from PVC which should be more elastic than the old ones. the front plate also features holes which are like countersunk for the LEDs which lasted the longest, i will countersink all holes to maybe reduce stress.
+
+The LEDs of the dB output-display are driven by the [[LM3915N Dot/Bar Display Driver]] ([[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]]) which is a quite interresting chip also for DIY stuff.</pre>
 </div>
 <div created="20211111093451109" modified="20211111093650079" tags="[[mixing / signal processing]] [[audio repairs]]" title="Klotz RPC/2 Controller">
 <pre></pre>
