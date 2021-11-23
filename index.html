@@ -963,6 +963,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of 'Battery Management System (BMS)'</li>
+
 <li>Draft of 'Klotz P-A 1200 Amplifier'</li>
 
 <li>Draft of 'video streaming'</li>
@@ -1158,6 +1160,8 @@ Error message and password prompt
 <li>I²S</li>
 
 <li>Ikarus 280.94T battery addition</li>
+
+<li>improving room acoustics</li>
 
 <li>independend, open Communication (-Infrastructure), mesh network</li>
 
@@ -12082,7 +12086,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20211111171327814" list="[[cell technology]] [[digital audio connections]] About TableOfContents" modified="20211123230548730" title="$:/StoryList">
+<div created="20211111171327814" list="[[improving room acoustics]] [[Draft of 'Battery Management System (BMS)']] [[digital audio connections]] About TableOfContents" modified="20211123230729320" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13096,8 +13100,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20211123230645953" modifier="Thorbijoern" title="$:/temp/search">
-<pre>https://www.youtube.com/watch?v=qRVEJjk5B_g</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20211123230942670" modifier="Thorbijoern" title="$:/temp/search">
+<pre>acous</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15447,6 +15451,78 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
+<div created="20200514200114631" draft.of="Battery Management System (BMS)" draft.title="Battery Management System (BMS)" modified="20211123230804075" tags="[[accumulator - battery - rechargeable energy storage]] [[power electronics (Leistungselektronik)]]" title="Draft of 'Battery Management System (BMS)'">
+<pre>there are programmable battery management systems which are more expensive, but there are also simpler ones which are only for specific battery technologies and for a specific number of cells in series / for a specific voltage.
+
+a BMS does these important tasks:
+
+* monitor cell voltage when chargin to prevent overcharging and overvoltage protection
+* monitor cell voltage when discharging to prevent overdischarging
+* balancing the cells when charging/discharging
+* overcurrent protection, to protect the batteries from short circuits
+* monitoring cell themp to prevent overheating (thermal cutout) (not as important in low power applications)
+* some might have serial connections so you can use a microcontroller to read the voltage and some might have build-in visible charge readouts or you can set them to only charge or discharge to a specific percentage
+
+some cell technologies might have special needs, e.g. LiFePO4 doesn't like beeing charged with themps under 0°C
+
+all this is so the cells are protected, live longer and faults like thermal runaways are prevented
+
+there are cheap bms boards from asia which should work perfectly fine fir smaller, low power applications, but with bigger high power projects you might need something better.
+
+balancing?
+
+* passive
+** is the most common and simplest type of cell balancing
+* active
+** benefits?
+
+open hardware BMS:
+
+* https://openbms.net/
+** http://scienceenvy.com/open-bms/
+** https://github.com/Teslafly/OpenBMS
+** https://hackaday.io/project/25512-open-bms
+* https://hackaday.io/search?term=BMS
+* https://libre.solar/devices/bms-overview
+** https://wiki.opensourceecology.de/LibreSolar_BMS_%E2%80%93_Batterie_Management_System
+** https://learn.libre.solar/system/bms.html
+** https://electrodacus.com/
+** [[Electrodacus -Open Source- Solar Battery Management System: Introduction and Setup|https://www.youtube.com/watch?v=eCspxDLZR9U]]
+* https://github.com/EnnoidMe/ENNOID-BMS
+* https://endless-sphere.com/forums/viewtopic.php?t=92952
+* https://github.com/Teslafly/OpenBMS
+* https://foxbms.org/
+* https://github.com/Tom-evnut/TeslaBMS
+** https://github.com/Tom-evnut/SimpBMS
+* diyBMS
+** https://github.com/stuartpittaway/diyBMSv4
+** [[diyBMS Upgrade|https://www.youtube.com/watch?v=0iOya8RvJ_k]]
+** [[DIYBMS - How to order and build it|https://www.youtube.com/watch?v=ErxDBzra15A]]
+
+
+stuff
+
+* [[BMS (Battery Management System) DIY or Buy - Properly protecting Li-Ion/Li-Po Battery Packs|https://www.youtube.com/watch?v=rT-1gvkFj60]]
+* [[Small BMS Vs Large BMS|https://www.youtube.com/watch?v=0gmSMfeDpZ0]]
+* https://en.wikipedia.org/wiki/Battery_management_system
+* https://www.eevblog.com/forum/manufacture/smart-bms-design/msg3300940/#msg3300940
+* reference designs
+** https://www.ti.com/solution/battery-management-system-bms
+** https://www.ti.com/applications/industrial/power-delivery/overview.html -&gt; battery packs
+** https://www.ti.com/solution/energy-storage-battery-packs-with-bms
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:bms
+* [[Homemade BMS - Balanced LiPo Charger Multiple Cells and Current Limit|https://www.youtube.com/watch?v=qRVEJjk5B_g]]
+
+
+Proprietary BMS
+
+* Daly BMS
+** https://www.dalyelec.eu/ - reseller, not official
+** Aliexpress/alibaba/ebay
+** https://dalyelec.en.alibaba.com/
+** https://diysolarforum.com/resources/daly-smart-bms-manual-and-documentation.48/
+* https://www.energusps.com/shop/product/tiny-bms-s516-150a-750a-36</pre>
+</div>
 <div modified="20211111093629090" title="Draft of 'Klotz P-A 1200 Amplifier'">
 <pre></pre>
 </div>
@@ -17468,6 +17544,10 @@ Hardware vendors:
 
 * https://www.kiepe.knorr-bremse.com/service_komponenten/vkproduktordner.2009-02-10.5149940469/vkproduktordner.2008-05-19.5586801525
 * https://www.zf.com/products/en/buses/productfinder/driveline.html?filterLang=en</pre>
+</div>
+<div created="20211123230932834" modified="20211123231112174" tags="Audio" title="improving room acoustics">
+<pre>* absorbers/acoustic panels
+* difusors</pre>
 </div>
 <div created="20200811214835142" modified="20211025222505766" tags="[[computer science / IT stuff]] [[Free / Open / Libre *]]" title="independend, open Communication (-Infrastructure), mesh network">
 <pre>* DIY ISP
