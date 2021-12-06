@@ -12095,7 +12095,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20211129225339595" list="[[audio marken von denen man die finger lassen sollte]] RISC-V About TableOfContents" modified="20211203142102039" title="$:/StoryList">
+<div created="20211129225339595" list="[[Klotz RPC/2 Controller and Interface]] RISC-V About TableOfContents" modified="20211205141239711" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13112,8 +13112,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20211203142100274" modifier="Thorbijoern" title="$:/temp/search">
-<pre>auna</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20211205141226956" modifier="Thorbijoern" title="$:/temp/search">
+<pre>klotz</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -17992,7 +17992,7 @@ I decided to buy all new LEDs (not the original ones, but all colors from the sa
 
 The LEDs of the dB output-display are driven by the [[LM3915N Dot/Bar Display Driver]] ([[Datasheet|https://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM3915.pdf]]) which is a quite interresting chip also for DIY stuff.</pre>
 </div>
-<div created="20211111093451109" modified="20211114150238951" tags="[[mixing / signal processing]] [[audio repairs]]" title="Klotz RPC/2 Controller and Interface">
+<div created="20211111093451109" modified="20211206085217329" tags="[[mixing / signal processing]] [[audio repairs]]" title="Klotz RPC/2 Controller and Interface">
 <pre>!! Information
 
 * Model: RPC/2-1
@@ -18046,23 +18046,24 @@ I have to do further testing and reverse engineering to find the problem. I star
 Semiconductors used:
 
 * full bridge rectifier packages with little marking
-* LM2940CT-12
+* 2x LM2940CT-12
 ** 12V 1A fixed voltage low dropout linear voltage regulator
 ** [[Datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/8856/NSC/LM2940CT-12.html]]
 * BC140
 ** medium power silicon NPN transistor (marked &quot;MEV BC 140&quot;)
 ** V,,CBO,,=80V; V,,CEO,,=40V; TO-39 Package
 ** still in production by many different manufacturers
-* C547B
+* 3x C547B
 ** NPN general purpose transistor
 ** [[Datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/16106/PHILIPS/C547B.html]]
 ** Philips datasheet from 2004 could match with production date and stuff
-* * 1N4148 - signal diode
+* 1N4148
+**signal diode
 ** https://en.wikipedia.org/wiki/1N4148_signal_diode
 
 ...
 
-!! Processing boards
+!! Main Board
 
 semiconductors used:
 
@@ -18084,6 +18085,22 @@ capacitors
 * there are also a few orange tantalum electrolytic caps marked 1 35V maybe 1uF
 ** if they are bad they are likely to burn
 * and some different common ceramic caps
+
+!! Programm Card
+
+The processing boards are smaller daughterboards which are mounted to the main boards with standoffs and connected with a normal header bar. The Boards i got have 3 stickers each. A sticker for (presumably) the serial number &quot;#0043&quot; and &quot;#0044&quot;, stickers for a manufacturing date &quot;3/92&quot; (might be 3rd quarter of 1992) and a sticker reading &quot;NA 800&quot; indicating they are meant for the Nano 800 Speakers.
+
+semiconductors used:
+
+* 2x LM837 (LM837N)
+** Low Noise Quad Opamp, by National Semi
+** [[Datasheet|https://www.alldatasheet.com/datasheet-pdf/pdf/9059/NSC/LM837N.html]]
+* TL074CN
+** Low-Noise JFET-Input Opamp by TI
+** [[old Datasheet|https://www.alldatasheet.com/datasheet-pdf/pdf/206612/TI/TL074CN.html]], [[new Datasheet|https://www.alldatasheet.com/datasheet-pdf/pdf/1333096/TI/TL074CN.html]]
+* 3x RC4227 (RC4227FN)
+** dual precission Opamp
+** [[Datasheet|https://www.datasheetarchive.com/pdf/download.php?id=f780ec1a175ae45cb9109c3867b50abd1e61ae&amp;type=M&amp;term=RC4227]]
 
 ! Interface
 
