@@ -981,8 +981,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of ''</li>
-
 <li>Draft of 'Klotz P-A 1200 Amplifier'</li>
 
 <li>Draft of 'mobile stromversorgung'</li>
@@ -1240,6 +1238,8 @@ Error message and password prompt
 <li>leather alternatives for collars and bracelet</li>
 
 <li>Lenovo IdeaPad S10-2 (Netbook) as portable Audio station</li>
+
+<li>Lenovo Yoga Tablet 2-1051F Linux (Fedora)</li>
 
 <li>Licences and Licencing</li>
 
@@ -12125,7 +12125,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220116220309385" list="[[Behringer X Air (XR12)]] [[Draft of '']] About TableOfContents" modified="20220116220309385" title="$:/StoryList">
+<div created="20220116220309385" list="[[Behringer X Air (XR12)]] [[Lenovo Yoga Tablet 2-1051F Linux (Fedora)]] About TableOfContents" modified="20220116220309385" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -15589,24 +15589,6 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220116214229354" draft.of="" draft.title="Lenovo Yoga Tablet 2-1051F Linux (Fedora)" modified="20220116220055879" tags="[[My Setup]] [[computer science / IT stuff]]" title="Draft of ''">
-<pre>I got a used Yoga Tablet 2 and wanted to use it as Linux Tablet/Convertible. The best part is that i got it with the matching bluetooth keyboard.
-
-* Data: https://www.notebookcheck.net/Lenovo-Yoga-2-1051F.138465.0.html
-
-!! Install
-
-only a USB OTG adapter is needed so you can connect a USB stick and maybe a keyboard.
-Kreata a boot USB-stick with the image you want and connect it with the USB OTG adapter, the installation doesn't differ from any other PC.
-
-The first problem that i encountered was the Welcome/Start Window on the first boot of the freshly installed OS. Gnome uses 200% scaling by default and some applications or windows are not compatible, so some Text or Inputs might be off-screen. Thats also the case for that first window, you cant press the button to start the account creation. But that is easily solved using a USB keyboard. Just connect the Keyboard to the USB-OTG-Adapter and press enter. The button which is off-screen is convieniently pre-selected (because its the only input element on the page).
-Then you can carry on the initial setup the normal way.
-
-!! Drivers
-
-Everything pretty much works out of the box because the device is a couple of years old and Linux has catched up.
-WIFI works, </pre>
-</div>
 <div modified="20211111093629090" title="Draft of 'Klotz P-A 1200 Amplifier'">
 <pre></pre>
 </div>
@@ -18550,6 +18532,45 @@ the official [[Behringer X Air (XR12)]] Software is only compiled for arm and x8
 !! MTP support
 
 debian and xfce didn't come with MTP support for transfering file to and from my smartphone out of the box. my device showed up with lsusb. i made sure that libmtp ist installed and it's the latest available version, then i installed mtp-tools and checked with mtp-detect if the device gets detected. mtp-detect detected the device and printed out a lot of information, everything fine, so i had to check further. installed gmtp, it needs some time to load, but works... it's just not as practical as the file manager thunar. i then found that i need gvfs-backends and gvfs-fuse for the mtp support in thunar: `apt install gvfs-backends gvfs-fuse`</pre>
+</div>
+<div created="20220116214229354" modified="20220116232632178" tags="[[My Setup]] [[computer science / IT stuff]]" title="Lenovo Yoga Tablet 2-1051F Linux (Fedora)">
+<pre>I got a used Yoga Tablet 2 and wanted to use it as Linux Tablet/Convertible. The best part is that i got it with the matching bluetooth keyboard.
+
+* Data: https://www.notebookcheck.net/Lenovo-Yoga-2-1051F.138465.0.html
+
+!! Install
+
+only a USB OTG adapter is needed so you can connect a USB stick and maybe a keyboard.
+Kreata a boot USB-stick with the image you want and connect it with the USB OTG adapter, the installation doesn't differ from any other PC.
+
+The first problem that i encountered was the Welcome/Start Window on the first boot of the freshly installed OS. Gnome uses 200% scaling by default and some applications or windows are not compatible, so some Text or Inputs might be off-screen. Thats also the case for that first window, you cant press the button to start the account creation. But that is easily solved using a USB keyboard. Just connect the Keyboard to the USB-OTG-Adapter and press enter. The button which is off-screen is convieniently pre-selected (because its the only input element on the page).
+Then you can carry on the initial setup the normal way.
+
+!! Drivers
+
+Everything pretty much works out of the box because the device is a couple of years old and Linux has catched up.
+WIFI, Battery Indicator, Sleep/Suspend and Screen Brightness work. Bluetooth seems to work mostly out of the box, but connecting the Keyboard does not work.
+
+!!! setting up bluetooth drivers
+
+The chip used in the yoga tablet 2 seems to be a weird UART connected one, so it will not show up with `lsusb` or `lspci`.
+The Chip is a Broadcom BCM43241 and if you check dmesg (`dmesg | egrep -i &quot;blue|firm&quot;`) you can see that brcmfmac can't find the BCM4324B3.hcd Firmware/Patch File.
+
+The following list contains Links that helped me. Sadly it's not as easy as installing the `broadcom-bt-firmware` package from rpmfusion nonfree-tainted, but it's not much complicated.
+Either you download the cab archive from microsoft like provided in the github issue and extract the file or you just download the single file from the daduke-blog.
+Assuming the last digits of the filename is some version number the `BCM4324B3_*************.0161.hcd` is the most recent i could find and the file from the Blog and exctacted from the microsoft.archive are the same.
+so
+
+
+```
+sudo cp BCM4324B3_002.004.006.0130.0161.hcd /lib/firmware/brcm/BCM4324B3.hcd 
+```
+
+and a reboot is needed an you should be able to pair the keyboard.
+
+* https://daduke.org/linux/yoga.html
+* https://github.com/winterheart/broadcom-bt-firmware/issues/6
+* https://pcsupport.lenovo.com/de/en/products/tablets/yoga-series/yoga-tablet-2-1051/solutions/ht102593-bluetooth-keyboard-pairing-method-yoga-tablet-2-1050-2-1051-2-1371</pre>
 </div>
 <div created="20210123180848957" modified="20210219203040073" tags="[[Free / Open / Libre *]]" title="Licences and Licencing">
 <pre>this is just a small guide on how licences work in most legislations to help people not familiar with it understand the matter, it can be quite confusing. i'm not a lawyer an these informations might be inaccurate or wrong, it is just a mirror of what i understood during working with different works.
