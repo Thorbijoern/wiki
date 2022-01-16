@@ -18533,7 +18533,7 @@ the official [[Behringer X Air (XR12)]] Software is only compiled for arm and x8
 
 debian and xfce didn't come with MTP support for transfering file to and from my smartphone out of the box. my device showed up with lsusb. i made sure that libmtp ist installed and it's the latest available version, then i installed mtp-tools and checked with mtp-detect if the device gets detected. mtp-detect detected the device and printed out a lot of information, everything fine, so i had to check further. installed gmtp, it needs some time to load, but works... it's just not as practical as the file manager thunar. i then found that i need gvfs-backends and gvfs-fuse for the mtp support in thunar: `apt install gvfs-backends gvfs-fuse`</pre>
 </div>
-<div created="20220116214229354" modified="20220116232632178" tags="[[My Setup]] [[computer science / IT stuff]]" title="Lenovo Yoga Tablet 2-1051F Linux (Fedora)">
+<div created="20220116214229354" modified="20220116234418371" tags="[[My Setup]] [[computer science / IT stuff]]" title="Lenovo Yoga Tablet 2-1051F Linux (Fedora)">
 <pre>I got a used Yoga Tablet 2 and wanted to use it as Linux Tablet/Convertible. The best part is that i got it with the matching bluetooth keyboard.
 
 * Data: https://www.notebookcheck.net/Lenovo-Yoga-2-1051F.138465.0.html
@@ -18556,7 +18556,7 @@ WIFI, Battery Indicator, Sleep/Suspend and Screen Brightness work. Bluetooth see
 The chip used in the yoga tablet 2 seems to be a weird UART connected one, so it will not show up with `lsusb` or `lspci`.
 The Chip is a Broadcom BCM43241 and if you check dmesg (`dmesg | egrep -i &quot;blue|firm&quot;`) you can see that brcmfmac can't find the BCM4324B3.hcd Firmware/Patch File.
 
-The following list contains Links that helped me. Sadly it's not as easy as installing the `broadcom-bt-firmware` package from rpmfusion nonfree-tainted, but it's not much complicated.
+The following list contains Links that helped me. Sadly it's not as easy as installing the `broadcom-bt-firmware` package from rpmfusion nonfree-tainted because the required device is not supported by the package maintainer, but it's not much complicated.
 Either you download the cab archive from microsoft like provided in the github issue and extract the file or you just download the single file from the daduke-blog.
 Assuming the last digits of the filename is some version number the `BCM4324B3_*************.0161.hcd` is the most recent i could find and the file from the Blog and exctacted from the microsoft.archive are the same.
 so
