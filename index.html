@@ -1451,6 +1451,8 @@ Error message and password prompt
 
 <li>other software</li>
 
+<li>PA Amplifier Repairs</li>
+
 <li>pa speaker / box woodworking</li>
 
 <li>pa speakers</li>
@@ -1725,7 +1727,7 @@ Error message and password prompt
 
 <li>SVG, Canvas and WebGL - advanced graphics on websites</li>
 
-<li>Swisstone BX 600 (bluetooth speaker) micro usb repair / reverse engineering</li>
+<li>Swisstone BX 600 (bluetooth speaker) micro usb repair</li>
 
 <li>switched mode power supply (SMPS)</li>
 
@@ -12121,7 +12123,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220116220309385" list="[[audio repairs]] [[Ersatzteile die ich übrig habe bzw. Teile für Projekte]] [[usb oscilloscopes]] [[untagged tiddlers]] About TableOfContents" modified="20220118140743710" title="$:/StoryList">
+<div created="20220116220309385" list="[[PA Amplifier Repairs]] [[audio repairs]] [[usb oscilloscopes]] [[untagged tiddlers]] About TableOfContents" modified="20220118140817465" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -20988,6 +20990,35 @@ stuff
 * http://spek.cc/ - Acoustic Spectrum Analyser, helps to analyse your audio files by showing their spectrogram
 </pre>
 </div>
+<div created="20220118140949675" modified="20220118143759066" tags="[[audio repairs]]" title="PA Amplifier Repairs">
+<pre>!! DAP Mission 900
+
+Problem: Left channel was overheating, owner tried setting the bias current didn't really change the problem, owner tried swapping the channels for refurbished ones but no luck either.
+The Amp was previously given to a repair shop that does not repair Amps and i don't quite know if anyone there has done something, because screws went missing there (it was still open from the owner).
+
+the amp boards should have been fine, but when i switched it on something shorted.
+i later found uppon inspection a spring washer like the one holding the power transistors to the heatsink. there was no washer missing so i suspect its leftover from the refurbishement. It probably shorted out one or several of the transistors. I have to check that later.
+
+had to reverse engineer the Amp because there are no schematics. The refurbished Bords are a newer version it seems, i'm gonna compare them later.
+
+!! DAP Palladium 1200 Vintage
+
+Problem: Fuse Blown, didn't look into it any further yet
+
+!! EE Systems V-800
+
+Problem: no sound, just noise on one channel in stereo mode
+
+I opened the amp um, cleaned it a bit and checked if i could see any obvious problems. did a quick check if on of the channels might be shorted but found nothing, so i connected two speakers for testing and it worked fine. i could not find any issues.
+But i think the transformer is pretty small for a 450W stereo Class AB amp.
+
+!! reloop RA-1500 Pro
+
+Problem: previous owner did some stuff, ripped out one of the transformer and something shorted out on a PCB that is part of the power supply circuitry. transformer missing
+
+i have to check the data on the other transformer and check the prices of new ones. also should check if the ramaining transformer is good.
+</pre>
+</div>
 <div created="20201216131839062" modified="20211114001958200" tags="speakers [[storing, mounting, housing (hardware)]] Wood" title="pa speaker / box woodworking">
 <pre>* https://www.jobst-audio.de/selbstbautut/181-howto_lautsprecherbau1
 * special joins not allways needed...
@@ -23533,7 +23564,7 @@ microplastics?</pre>
 ** https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#svg_interfaces
 * https://hubs.mozilla.com/</pre>
 </div>
-<div created="20210704214847515" modified="20210731170032855" tags="[[reverse engineering]] [[audio repairs]] repairs" title="Swisstone BX 600 (bluetooth speaker) micro usb repair / reverse engineering">
+<div created="20210704214847515" modified="20220118140832275" tags="[[reverse engineering]] [[audio repairs]] repairs" title="Swisstone BX 600 (bluetooth speaker) micro usb repair">
 <pre>(not realy an audio repair but whatever)
 
 ! repair
