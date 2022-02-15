@@ -12135,7 +12135,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220214204219311" list="[[force save]] [[Behringer Ultradrive Pro DCX2496]] About TableOfContents" modified="20220215003522410" title="$:/StoryList">
+<div created="20220214204219311" list="[[Behringer Ultradrive Pro DCX2496]] About TableOfContents" modified="20220215003522410" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14181,10 +14181,25 @@ stuff
 * Airlineschiene / airline rails
 * &quot;Stud Ring&quot;</pre>
 </div>
-<div created="20220214204439094" modified="20220214215028222" tags="repairs [[audio repairs]] [[reverse engineering]] [[mixing / signal processing]]" title="Behringer Ultradrive Pro DCX2496">
-<pre>Problem: Fuse blown, maybe dead power supply
+<div created="20220214204439094" modified="20220215011236231" tags="repairs [[audio repairs]] [[reverse engineering]] [[mixing / signal processing]]" title="Behringer Ultradrive Pro DCX2496">
+<pre>Problems:
 
-Chips &quot;Main&quot; Board
+* Fuse blown, maybe dead power supply
+* Display somehow cloudy
+
+Date Code: 1105
+original Firmware version 1.17
+
+Hardware Revisions:
+
+* Main Board: H
+* I/O Board: H
+* HID Board: E
+* LCD Board: C
+
+!! Chips
+
+&quot;Main&quot; Board
 
 * Cirrus Logic CS8420-CSZ - [[DIGITAL AUDIO SAMPLE RATE CONVERTER|https://www.alldatasheet.com/datasheet-pdf/pdf/198989/CIRRUS/CS8420-CSZ.html]]
 * AKM AK5393VS - [[Enhanced Dual bit ΔΣ 96 kHz 24-bit ADC|https://pdf1.alldatasheet.com/datasheet-pdf/view/54969/AKM/AK5393-VS.html]]
@@ -14195,13 +14210,35 @@ Chips &quot;Main&quot; Board
 * AMIC A29040B-70F - [[512K X 8 Bit CMOS 5.0 Volt-only, Uniform Sector Flash Memory|https://www.alldatasheet.com/datasheet-pdf/pdf/118487/AMICC/A29040B-70F.html]]
 * Analog Devices ADSP-21065L - [[DSP Microcomputer|https://www.analog.com/media/en/technical-documentation/data-sheets/ADSP-21065L.pdf]]
 
-Chips I/O Board
+I/O Board
 
 * 6x JRC 4580 - [[dual opamp|https://www.alldatasheet.com/datasheet-pdf/pdf/1159324/HMSEMI/JRC4580.html]]
 
-Chips power supply
+Power Supply
 
-* 4N35 - [[GENERAL PURPOSE 6-PIN PHOTOTRANSISTOR OPTOCOUPLERS|https://www.alldatasheet.com/datasheet-pdf/pdf/542519/FAIRCHILD/4N35.html]]</pre>
+* 4N35 - [[GENERAL PURPOSE 6-PIN PHOTOTRANSISTOR OPTOCOUPLERS|https://www.alldatasheet.com/datasheet-pdf/pdf/542519/FAIRCHILD/4N35.html]]
+
+LCD Board
+
+* Avant SBN6400G - [[64-COMMON Driver for Dot-Matrix STN LCD|https://www.crystalfontz.com/controllers/Avant/SBN6400G/65]]
+
+HID Board
+
+* 2x TI TPIC6B273 - [[Power Logic Octal D-Type Latch|https://www.ti.com/lit/ds/symlink/tpic6b273.pdf]]
+* TI SNx4HC244 - [[Octal Buffers and Line Drivers With 3-State Outputs|https://www.ti.com/lit/ds/symlink/sn74hc244.pdf]]
+* 74hc574d - [[Octal D-type flip-flop; positive edge-trigger; 3-state|https://www.alldatasheet.com/datasheet-pdf/pdf/15644/PHILIPS/74HC574D.html]]
+
+!! Fuse blown / Power Supply
+
+Fuse: T 1A H 250V
+
+!! Fixing cloudy display
+
+removing the front PCB with the display module soldered onto was a bitt challenging because it was held in by rubber strips which were glued to the aluminium case.
+
+I carefully bent the metal tabs of the display-housing bac and lifted the housing. I then carefully separated the silicone-style conducting-pads from the pcb, because they were slightly sticking. I allways was very careful to not bent the thin ribbon cable to much or to tear it. I lifted and turned the display over to the left side. between the backlight and the LCD was some mineral-oil like substance. I carefully cleaned it away, first with tissue to get the bulk and then also with rubbing alcohol and a micro fibre cloth to get it completely clean. After i was satisfied and there was no oil or dust left, i carefully assembled the display again and bent back the tabs of the display housing
+
+Before reassembling i cleaned the leftover glue from the case and the rubber strips. But i had to add glue again to secure the PCB back into the case.</pre>
 </div>
 <div created="20210212170847440" modified="20220116224244028" tags="[[digital audio]] [[mixing / signal processing]]" title="Behringer X Air (XR12)">
 <pre>USB Player
