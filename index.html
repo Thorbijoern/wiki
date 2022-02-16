@@ -12137,7 +12137,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220214204219311" list="[[LED lamp repair]] repairs About TableOfContents" modified="20220215180748288" title="$:/StoryList">
+<div created="20220214204219311" list="[[LED lamp repair]] [[Behringer Ultradrive Pro DCX2496]] About TableOfContents" modified="20220216172848871" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -14183,7 +14183,7 @@ stuff
 * Airlineschiene / airline rails
 * &quot;Stud Ring&quot;</pre>
 </div>
-<div created="20220214204439094" modified="20220215011353606" tags="repairs [[audio repairs]] [[reverse engineering]] [[mixing / signal processing]]" title="Behringer Ultradrive Pro DCX2496">
+<div created="20220214204439094" modified="20220216173953602" tags="repairs [[audio repairs]] [[reverse engineering]] [[mixing / signal processing]]" title="Behringer Ultradrive Pro DCX2496">
 <pre>Problems:
 
 * Fuse blown, maybe dead power supply
@@ -14234,6 +14234,21 @@ HID Board
 !! Fuse blown / Power Supply
 
 Fuse: T 1A H 250V
+
+i had to buy new fuses. I checked the chips on the power supply if they are shorted and tested the transistors with the diode tester. i also checked some diodes for shorts. because i didn't find anything wrong i assembled the power supply back into the case and went on to check the voltages.
+
+# +15V (Red)
+# -15V (Blk)
+# +9V (Blk)
+# AGND (Blk)
+# DGND (Blk)
+# +5V (Blk)
+# +3.3V (Blk)
+
+Source: https://never.net/powersupply/PSInstallation.html
+
+the voltages were all fine. as last step i checked if there are any obvious shorts on the Main-PCB. I only measured continuity between all the pins of the connector for the power supply. But apart from the two ground rails which are connected there is no short.
+So i connected everything again and powered up the unit. It booted fine and there didn't seem to be any issue.
 
 !! Fixing cloudy display
 
