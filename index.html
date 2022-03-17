@@ -1821,7 +1821,7 @@ Error message and password prompt
 
 <li>Virtual Audio Cable alternative / pipe audio between linux applications</li>
 
-<li>war defence /guerrilla</li>
+<li>war defence / guerrilla</li>
 
 <li>Web Audio API, Web Midi API - Websites with advanced audio functionality</li>
 
@@ -12145,7 +12145,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220223193346550" list="[[Krieg / War]] [[war defence /guerrilla]] [[professional manufacturers of audio hardware]] [[Behringer X Air (XR12)]] About TableOfContents" modified="20220227214133120" title="$:/StoryList">
+<div created="20220223193346550" list="[[Behringer Ultradrive Pro DCX2496]] About TableOfContents" modified="20220317231744360" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13165,8 +13165,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220227214108959" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220317231742352" modifier="Thorbijoern" title="$:/temp/search">
+<pre>behr</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14202,11 +14202,10 @@ stuff
 * Airlineschiene / airline rails
 * &quot;Stud Ring&quot;</pre>
 </div>
-<div created="20220214204439094" modified="20220216173953602" tags="repairs [[audio repairs]] [[reverse engineering]] [[mixing / signal processing]]" title="Behringer Ultradrive Pro DCX2496">
-<pre>Problems:
+<div created="20220214204439094" modified="20220317234326968" tags="repairs [[audio repairs]] [[reverse engineering]] [[mixing / signal processing]]" title="Behringer Ultradrive Pro DCX2496">
+<pre>This article is not a complete guide and just gives an overview
 
-* Fuse blown, maybe dead power supply
-* Display somehow cloudy
+! Overview:
 
 Date Code: 1105
 
@@ -14219,7 +14218,7 @@ Hardware Revisions:
 * HID Board: E
 * LCD Board: C
 
-!! Chips
+!! Chips / main components
 
 &quot;Main&quot; Board
 
@@ -14231,24 +14230,39 @@ Hardware Revisions:
 * 2x ISSI IC42s16100F-7Tl - [[512K Words x 16 Bits x 2 Banks 16Mb SDRAM|https://www.issi.com/WW/pdf/42-45S-VS16100F.pdf]]
 * AMIC A29040B-70F - [[512K X 8 Bit CMOS 5.0 Volt-only, Uniform Sector Flash Memory|https://www.alldatasheet.com/datasheet-pdf/pdf/118487/AMICC/A29040B-70F.html]]
 * Analog Devices ADSP-21065L - [[DSP Microcomputer|https://www.analog.com/media/en/technical-documentation/data-sheets/ADSP-21065L.pdf]]
+* 3 different quarz oscillators
+* 2x ISSI ic42s16100f-7tl - [[512K x 16 Bits x 2 Banks (16-MBit) Synchronous Dynamic RAM|https://www.alldatasheet.com/datasheet-pdf/pdf/146448/ICSI/IC42S16100.html]]
+* Pulse Transformer - for AES/EBU (AES3)
 
 I/O Board
 
 * 6x JRC 4580 - [[dual opamp|https://www.alldatasheet.com/datasheet-pdf/pdf/1159324/HMSEMI/JRC4580.html]]
+* 2x Bestar BT-5S - 5VDC - switching inputs between analog and AES/EBU
 
 Power Supply
 
-* 4N35 - [[GENERAL PURPOSE 6-PIN PHOTOTRANSISTOR OPTOCOUPLERS|https://www.alldatasheet.com/datasheet-pdf/pdf/542519/FAIRCHILD/4N35.html]]
+* 4N35 - [[General Purpose 6-Pin Phototransistors Optocouplers|https://www.alldatasheet.com/datasheet-pdf/pdf/542519/FAIRCHILD/4N35.html]]
+* several diodes
+* several transistors
 
 LCD Board
 
-* Avant SBN6400G - [[64-COMMON Driver for Dot-Matrix STN LCD|https://www.crystalfontz.com/controllers/Avant/SBN6400G/65]]
+* Avant SBN6400G - [[64-Common Driver for Dot-Matrix STN LCD|https://www.crystalfontz.com/controllers/Avant/SBN6400G/65]]
 
 HID Board
 
 * 2x TI TPIC6B273 - [[Power Logic Octal D-Type Latch|https://www.ti.com/lit/ds/symlink/tpic6b273.pdf]]
 * TI SNx4HC244 - [[Octal Buffers and Line Drivers With 3-State Outputs|https://www.ti.com/lit/ds/symlink/sn74hc244.pdf]]
 * 74hc574d - [[Octal D-type flip-flop; positive edge-trigger; 3-state|https://www.alldatasheet.com/datasheet-pdf/pdf/15644/PHILIPS/74HC574D.html]]
+
+
+
+! Repairs
+
+Problems:
+
+* Fuse blown, maybe dead power supply
+* Display somehow cloudy
 
 !! Fuse blown / Power Supply
 
@@ -14273,7 +14287,7 @@ So i connected everything again and powered up the unit. It booted fine and ther
 
 removing the front PCB with the display module soldered onto was a bitt challenging because it was held in by rubber strips which were glued to the aluminium case.
 
-I carefully bent the metal tabs of the display-housing bac and lifted the housing. I then carefully separated the silicone-style conducting-pads from the pcb, because they were slightly sticking. I allways was very careful to not bent the thin ribbon cable to much or to tear it. I lifted and turned the display over to the left side. between the backlight and the LCD was some mineral-oil like substance. I carefully cleaned it away, first with tissue to get the bulk and then also with rubbing alcohol and a micro fibre cloth to get it completely clean. After i was satisfied and there was no oil or dust left, i carefully assembled the display again and bent back the tabs of the display housing
+I carefully bent the metal tabs of the display-housing bac and lifted the housing. I then carefully separated the silicone-style conducting-pads from the pcb, because they were slightly sticking. I allways was very careful to not bent the thin ribbon cable to much or to tear it. I lifted and turned the display over to the left side. between the backlight and the LCD was some mineral-oil like substance. I carefully cleaned it away, first with tissue to get the bulk and then also with rubbing alcohol and a micro fibre cloth to get it completely clean. I also cleaned the zebra strips and the PCB connections with rubbing alcohol and acetone. After i was satisfied and there was no oil or dust left, i carefully assembled the display again and bent back the tabs of the display housing
 
 Before reassembling i cleaned the leftover glue from the case and the rubber strips. But i had to add glue again to secure the PCB back into the case.</pre>
 </div>
@@ -24538,7 +24552,7 @@ only for windows:
 * Synchronous Audio Router - http://sar.audio/
 * https://www.reddit.com/r/software/comments/3dup5u/request_freeopen_source_virtual_sound_card_for/</pre>
 </div>
-<div created="20220226193242123" modified="20220227214215425" tags="[[Krieg / War]]" title="war defence /guerrilla">
+<div created="20220226193242123" modified="20220227214220965" tags="[[Krieg / War]]" title="war defence / guerrilla">
 <pre>* similar tactics to the hong kong protests or guerilla groups?
 ** decentralize
 ** secure communication without internet, use mesh networks and similar
