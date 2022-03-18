@@ -743,6 +743,8 @@ Error message and password prompt
 
 <li>ADCs / DACs</li>
 
+<li>AES/EBU,  AES3</li>
+
 <li>Akku PA-Anlage / Akku Beschallungsanlage</li>
 
 <li>algorithmic / generative / computer art</li>
@@ -12145,7 +12147,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220223193346550" list="[[mixing / signal processing]] [[ADCs / DACs]] [[Behringer Ultradrive Pro DCX2496]] About TableOfContents" modified="20220318000130346" title="$:/StoryList">
+<div created="20220223193346550" list="[[AES/EBU,  AES3]] [[mixing / signal processing]] [[Behringer Ultradrive Pro DCX2496]] About TableOfContents" modified="20220318000130346" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13165,8 +13167,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220317231742352" modifier="Thorbijoern" title="$:/temp/search">
-<pre>behr</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220318000220362" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -13447,6 +13449,34 @@ used by behringer ultradrive:
 * AKM AK5383VS - Enhanced Dual bit ΔΣ 96 kHz 24-bit ADC
 * AKM AK4393VF - Advanced Multi-Bit 96kHz 24-Bit ΔΣ DAC 
 </pre>
+</div>
+<div created="20220318000218975" modified="20220318013155955" tags="[[mixing / signal processing]]" title="AES/EBU,  AES3">
+<pre>AES/EBU is the most used name, AES3 is the standard.
+
+used for digital transfer of audio data between to points over a single cable.
+serial, unidirectional, selfsynchronising
+audio can be stereo/two channels or mono 32-192kHz, 16-24Bit PCM.
+cable can be balanced 110Ohm XLR, unbalanced BNC 75Ohm coax or twisted pair cable or optical fiber.
+
+* AES-2id includes guidelines for using AES3
+* MADI (AES10) and AES50 are digital protocols which can transport AES3
+* AES42 is a standard for digital audio for microfones which builds upon AES3
+* S/PDIF (IEC 60958) is a consumer grade variant build upon AES3
+* AES47 transports AES3 over ATM (obsolete)
+
+Hardware implementation:
+using
+
+* pulse transformers for isolation
+* sample rate converters
+
+links
+
+* https://de.wikipedia.org/wiki/AES/EBU
+* https://en.wikipedia.org/wiki/AES3
+* https://tech.ebu.ch/docs/tech/tech3250.pdf
+* https://tech.ebu.ch/docs/other/aes-ebu-eg.pdf
+* https://www.nti-audio.com/Portals/0/data/en/NTi-Audio-AppNote-AES3-AES-EBU.pdf</pre>
 </div>
 <div created="20220112153745695" modified="20220112154923513" tags="[[Audio Reproduction and amplification]] demotechnik" title="Akku PA-Anlage / Akku Beschallungsanlage">
 <pre>save aus FFF wiki - https://wiki.fridaysforfuture.is/wiki/Akku_PA-Anlage_/_Akku_Beschallungsanlage
