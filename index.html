@@ -995,6 +995,10 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of ' 1'</li>
+
+<li>Draft of ' 3'</li>
+
 <li>Draft of ''</li>
 
 <li>Dresden</li>
@@ -1088,6 +1092,8 @@ Error message and password prompt
 <li>federated social networking</li>
 
 <li>ffmpeg stuff</li>
+
+<li>filters</li>
 
 <li>finding open hardware or DIY projects</li>
 
@@ -12147,7 +12153,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220223193346550" list="[[professional manufacturers of audio hardware]] [[dsp (digital signal processor) / digital crossover]] [[free/open/cheap DSP]] [[AES/EBU,  AES3]] [[mixing / signal processing]] [[Behringer Ultradrive Pro DCX2496]] About TableOfContents" modified="20220318013352914" title="$:/StoryList">
+<div created="20220223193346550" list="[[Draft of ' 3']] filters [[Draft of ' 1']] [[Web Audio API, Web Midi API - Websites with advanced audio functionality]] [[dsp (digital signal processor) / digital crossover]] [[free/open/cheap DSP]] [[AES/EBU,  AES3]] [[mixing / signal processing]] [[Behringer Ultradrive Pro DCX2496]] About TableOfContents" modified="20220326150910111" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -12211,7 +12217,7 @@ TableOfContents</pre>
     }
 }</pre>
 </div>
-<div created="20200512222650149" modified="20220227113011114" title="$:/temp/NewTagName">
+<div created="20200512222650149" modified="20220326151513734" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div created="20211123231832791" modified="20211123231833012" title="$:/temp/NewTagName--1402702591">
@@ -13167,8 +13173,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220318013347538" modifier="Thorbijoern" title="$:/temp/search">
-<pre>profe</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220326160023595" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15763,6 +15769,39 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
+<div created="20220326151456050" draft.of=" 1" draft.title="web audio frequency response" modified="20220326160008931" tags="[[Web Audio API, Web Midi API - Websites with advanced audio functionality]] [[audio programming]]" title="Draft of ' 1'">
+<pre>!1. recording
+* https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
+* https://github.com/streamproc/MediaStreamRecorder
+* https://www.webrtc-experiment.com/msr/audio-recorder.html
+* http://w3c.github.io/mediacapture-record/MediaRecorder.html
+* https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
+* https://stackoverflow.com/questions/21234902/record-sound-of-a-webaudio-apis-audio-context
+* https://www.sitepoint.com/mediastream-api-record-audio/
+* https://webaudioapi.com/samples/microphone/
+
+related [[web audio api|https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API]] objects:
+
+* https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode
+* https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode
+* https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode
+
+!2. noise
+
+!3. fft / analysing / display
+
+* https://webaudioapi.com/samples/visualizer/
+* https://webaudiodemos.appspot.com/oscilloscope/index.html
+
+!5. controlls
+
+* https://webaudioapi.com/samples/metering/
+* https://webaudiodemos.appspot.com/volume-meter/index.html</pre>
+</div>
+<div created="20220326160950946" draft.of=" 3" draft.title="awesome web audio games" modified="20220326161021754" tags="Art [[audio programming]]" title="Draft of ' 3'">
+<pre>* https://plink.in/
+** http://labs.dinahmoe.com/plink/</pre>
+</div>
 <div created="20220125173100090" draft.of="" draft.title="Fairphone 3(+), Android stuff" modified="20220125173642038" tags="[[My Setup]] [[computer science / IT stuff]]" title="Draft of ''">
 <pre>I got myself a used Fairphone 3+ as replacement for my old Nexus 5.
 
@@ -16698,6 +16737,11 @@ for f in *.mp3; do ffmpeg -i &quot;$f&quot; &quot;$(basename $f).wav&quot;; done
 
 * https://askubuntu.com/questions/919788/convert-mp3-file-to-wav-using-the-command-line
 * https://wiki.ubuntuusers.de/FFmpeg/</pre>
+</div>
+<div created="20220326154752075" modified="20220326161050082" tags="[[audio programming]]" title="filters">
+<pre>* https://webaudioapi.com/samples/frequency-response/
+* https://webaudioapi.com/samples/filter/
+* https://webaudiodemos.appspot.com/TouchPad/index.html</pre>
 </div>
 <div created="20200519155629257" modified="20210410153443445" tags="[[Open Hardware]]" title="finding open hardware or DIY projects">
 <pre>* https://www.instructables.com/
