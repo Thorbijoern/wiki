@@ -12163,7 +12163,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220223193346550" list="[[electronics repair knowledge]] [[web audio frequency response]] [[frequency response webapp]] About TableOfContents" modified="20220406231306488" title="$:/StoryList">
+<div created="20220223193346550" list="[[PA Amplifier Repairs]] [[web audio frequency response]] [[frequency response webapp]] About TableOfContents" modified="20220407183605598" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13183,8 +13183,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220406231305256" modifier="Thorbijoern" title="$:/temp/search">
-<pre>repair kno</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220407183608104" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -21406,16 +21406,40 @@ stuff
 * http://spek.cc/ - Acoustic Spectrum Analyser, helps to analyse your audio files by showing their spectrogram
 </pre>
 </div>
-<div created="20220118140949675" modified="20220206213517967" tags="[[audio repairs]]" title="PA Amplifier Repairs">
+<div created="20220118140949675" modified="20220407221831872" tags="[[audio repairs]]" title="PA Amplifier Repairs">
 <pre>!! DAP Mission 900
+
+Info
+
+* 2x 400W RMS(?)
+* the amp uses a primary-secondary design, where a lot of stuff is on the 
 
 Problem: Left channel was overheating, owner tried setting the bias current didn't really change the problem, owner tried swapping the channels for refurbished ones but no luck either.
 The Amp was previously given to a repair shop that does not repair Amps and i don't quite know if anyone there has done something, because screws went missing there (it was still open from the owner).
 
 the amp boards should have been fine, but when i switched it on something shorted.
-i later found uppon inspection a spring washer like the one holding the power transistors to the heatsink. there was no washer missing so i suspect its leftover from the refurbishement. It probably shorted out one or several of the transistors. I have to check that later.
+i later found uppon inspection a spring washer like the one holding the power transistors to the heatsink. there was no washer missing so i suspect its leftover from the refurbishement. It shorted out one or several of the transistors, which are now dead. So the refurbished Channel A is dead now.
 
-had to reverse engineer the Amp because there are no schematics. The refurbished Bords are a newer version it seems, i'm gonna compare them later.
+had to reverse engineer the Amp because there are no schematics. The refurbished Bords are a newer version it seems.
+
+Comparison of the different Board Versions:
+
+* Original Boards have Markings &quot;PSA-3000-L&quot;, &quot;06,06,K1'&quot; and &quot;PSA-3000-R&quot;, &quot;07,28,K1'&quot;
+* refurbished Boards have markings &quot;PSA-3000-L&quot;, &quot;VER031117 and &quot;PSA-3000-R&quot;, &quot;&quot;
+* L being Channel A and R being Channel B
+* the original Boards have better PCB quality than the refurbished ones: the main material is of better quality and the solder resist coating is much better
+* the Parts BOM has changed a bit, but there are no obvious quality differences
+* both channels of the refurbished PCBs have a GND connection which connects the middle-potential between &quot;+VCC&quot; and &quot;-VCC&quot; of both channels, i'm not shure about the benefit
+* small parts of the refurbished PCBs have small layout changed to make them more compact. the changes are pretty superficial and don't make the PCB footprint much smaller, i don't think it makes much difference in production.
+* both channels have two thermistor-like parts, but one of them marked &quot;R36&quot; on the pcb is mounted to the power transistors on the refurbished versions. on the original versions it is just on the board. the part is &quot;uei 090&quot;
+* the opamps are different. original version uses JRC NJM2068D; refurbished version uses TI NE5532P
+
+a NJM13700 is used which is a prette new part to me
+
+while comparing, inspecting and reverse engineering i found some small solder balls which i removed and i re soldered some parts which looked a bit poorly soldered.
+
+
+
 
 !! DAP Palladium 1200 Vintage
 
