@@ -12172,7 +12172,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220425134618763" list="[[phantom power]] RISC-V [[Draft of ' 1']] [[noise in audio systems]] About TableOfContents" modified="20220430183323386" title="$:/StoryList">
+<div created="20220425134618763" list="microcontroller [[Harman/Kardon HK990 repair]] RISC-V [[Draft of ' 1']] [[noise in audio systems]] About TableOfContents" modified="20220430185222455" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13192,8 +13192,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220430183321588" modifier="Thorbijoern" title="$:/temp/search">
-<pre>phant</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220430185218322" modifier="Thorbijoern" title="$:/temp/search">
+<pre>micr</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15849,7 +15849,7 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220430171103499" draft.of=" 1" draft.title="small noise xlr stick" modified="20220430183433373" tags="[[mixing / signal processing]] [[digital audio]] [[Open Audio Hardware]] [[audio testing and measurement]]" title="Draft of ' 1'">
+<div created="20220430171103499" draft.of=" 1" draft.title="small noise xlr stick" modified="20220430185147712" tags="[[mixing / signal processing]] [[digital audio]] [[Open Audio Hardware]] [[audio testing and measurement]]" title="Draft of ' 1'">
 <pre>inspiration
 
 * https://www.youtube.com/watch?v=KTvVS8guBsY
@@ -15858,7 +15858,28 @@ stuff
 * https://mitxela.com/projects/silly_synth
 * https://mitxela.com/projects/smallest_midi_synth
 
-</pre>
+idea:
+building a tiny noise generator, maybe with different noise options, for use in a PA setting. The whole circuit should be powered by phantompower like from any ordinary mixing console and fit in an ordinary 3 pin XLR connector.
+
+the pcb can be directly soldered to the solder cups, like between them.
+the pcb has to be arround 13.5mm wide to fit the connectors i got.
+
+i'll probably also use the STM32L432KC like [[in this project|https://mitxela.com/projects/flash_synth]].
+
+some stuff that might come in handy:
+
+* https://www.st.com/en/embedded-software/stm32-audio100a.html
+* https://www.st.com/resource/en/application_note/cd00259245-audio-and-waveform-generation-using-the-dac-in-stm32-microcontrollers-stmicroelectronics.pdf
+* https://www.digikey.de/en/blog/audio-processing-with-stm32
+* https://pcbartists.com/firmware/stm32-firmware/stm32-audio-tutorial-part-2-codec-i2c-setup/
+* https://forum.allaboutcircuits.com/threads/producing-sound-using-stm32.89810/
+* https://www.st.com/en/microcontrollers-microprocessors/stm32l432kc.html#overview
+* https://deepbluembedded.com/stm32-dac-tutorial-example-hal-code-analog-signal-genreation/
+* https://stm32world.com/wiki/STM32L432
+
+programming:
+
+* c/c++ or rust?</pre>
 </div>
 <div created="20220125173100090" draft.of="" draft.title="Fairphone 3(+), Android stuff" modified="20220125173642038" tags="[[My Setup]] [[computer science / IT stuff]]" title="Draft of ''">
 <pre>I got myself a used Fairphone 3+ as replacement for my old Nexus 5.
@@ -19500,7 +19521,7 @@ i can't find the megaphone parts separately....
 * https://www.youtube.com/watch?v=-9kNSR4ozT4
 * https://www.youtube.com/watch?v=tMh3nFYaI_Q</pre>
 </div>
-<div created="20210103222540142" modified="20220430172047624" tags="[[Hardware stuff]] [[digital electronics]]" title="microcontroller">
+<div created="20210103222540142" modified="20220430185237951" tags="[[Hardware stuff]] [[digital electronics]]" title="microcontroller">
 <pre>needed/used for many kinds of projects/devices
 
 see [[embedded device development]]
@@ -19516,6 +19537,7 @@ see [[embedded device development]]
 ** debugging using ~OpenOCD and gdb
 ** https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html
 ** [[Easy &amp; Powerful Arduino Alternative? STM32 Beginner's Guide|https://www.youtube.com/watch?v=EaZuKRSvwdo]]
+** https://stm32world.com/wiki/
 * ESP8266 &amp; ESP32
 * MSP430/ähnliche von TI
 * Raspberry Pi Pico
