@@ -1001,8 +1001,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of ' 1'</li>
-
 <li>Draft of ''</li>
 
 <li>Dresden</li>
@@ -1680,6 +1678,8 @@ Error message and password prompt
 <li>slingshot, sling &amp; similar</li>
 
 <li>small bass speakers</li>
+
+<li>small noise xlr stick</li>
 
 <li>small repairs</li>
 
@@ -12172,7 +12172,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220425134618763" list="microcontroller [[Harman/Kardon HK990 repair]] RISC-V [[Draft of ' 1']] [[noise in audio systems]] About TableOfContents" modified="20220430185222455" title="$:/StoryList">
+<div created="20220425134618763" list="RISC-V [[small noise xlr stick]] [[noise in audio systems]] About TableOfContents" modified="20220430185222455" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -15849,38 +15849,6 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220430171103499" draft.of=" 1" draft.title="small noise xlr stick" modified="20220430185147712" tags="[[mixing / signal processing]] [[digital audio]] [[Open Audio Hardware]] [[audio testing and measurement]]" title="Draft of ' 1'">
-<pre>inspiration
-
-* https://www.youtube.com/watch?v=KTvVS8guBsY
-* https://mitxela.com/projects/flash_synth
-* https://mitxela.com/projects/rumbler
-* https://mitxela.com/projects/silly_synth
-* https://mitxela.com/projects/smallest_midi_synth
-
-idea:
-building a tiny noise generator, maybe with different noise options, for use in a PA setting. The whole circuit should be powered by phantompower like from any ordinary mixing console and fit in an ordinary 3 pin XLR connector.
-
-the pcb can be directly soldered to the solder cups, like between them.
-the pcb has to be arround 13.5mm wide to fit the connectors i got.
-
-i'll probably also use the STM32L432KC like [[in this project|https://mitxela.com/projects/flash_synth]].
-
-some stuff that might come in handy:
-
-* https://www.st.com/en/embedded-software/stm32-audio100a.html
-* https://www.st.com/resource/en/application_note/cd00259245-audio-and-waveform-generation-using-the-dac-in-stm32-microcontrollers-stmicroelectronics.pdf
-* https://www.digikey.de/en/blog/audio-processing-with-stm32
-* https://pcbartists.com/firmware/stm32-firmware/stm32-audio-tutorial-part-2-codec-i2c-setup/
-* https://forum.allaboutcircuits.com/threads/producing-sound-using-stm32.89810/
-* https://www.st.com/en/microcontrollers-microprocessors/stm32l432kc.html#overview
-* https://deepbluembedded.com/stm32-dac-tutorial-example-hal-code-analog-signal-genreation/
-* https://stm32world.com/wiki/STM32L432
-
-programming:
-
-* c/c++ or rust?</pre>
-</div>
 <div created="20220125173100090" draft.of="" draft.title="Fairphone 3(+), Android stuff" modified="20220125173642038" tags="[[My Setup]] [[computer science / IT stuff]]" title="Draft of ''">
 <pre>I got myself a used Fairphone 3+ as replacement for my old Nexus 5.
 
@@ -17506,10 +17474,12 @@ the honda EU inverter series starts at ~1.500€ (EU 20i or EU 22i)</pre>
 <div created="20211122003827470" modified="20211122003838638" tags="[[computer science / IT stuff]]" title="Hardware stuff">
 <pre></pre>
 </div>
-<div created="20210804212809014" modified="20210810193034461" tags="[[audio repairs]] [[audio amplifiers]]" title="Harman/Kardon HK990 repair">
+<div created="20210804212809014" modified="20220430185315575" tags="[[audio repairs]] [[audio amplifiers]]" title="Harman/Kardon HK990 repair">
 <pre>the HK990 is a quite beefy HIFI AMP with 150W at 8Ohms and 300W at 4Ohms. It has two separate PCBs with chunky heatsinks for the channels and main power supply, two big toroidial transformers for each channel and an additional small supply for the logic and input boards. [[additional information|https://www.cnet.com/products/harman-kardon-hk-990-amplifier-series/]]
 
 the one i got had problems with the right channel getting pretty hot even when not in use. the proplem is probably that the idling voltage is not adjusted, but that should be an easy fix. I quickly found a service manual [[here|https://www.eserviceinfo.com/downloadsm/40753/HARMAN-KARDON_HK990.html]] and [[here|https://www.eserviceinfo.com/downloadsm/47031/Harman/Kardon_HK990.html]], they describe the amp adjustment and it seems pretty easy.
+
+* https://www.eserviceinfo.com/downloadsm/225516/Harman%20Kardon_HK-990%20&amp;%20230.html
 
 i started with opening the amp, removed the top of the case and then the side panels. i like the small cutouts they made on either of the side panels for the adjustment potentiometer, but there is no way to propperly reach the testpoints to meassure the idling voltage. it would've been very helpful to provide additional cutouts for those, but without them one has to pretty much disassemble the whole amp and take out both PCBs of the channels to reach them. the fact that there is no easy access for the testpoints is a big designflaw in my oppinion.
 
@@ -23277,6 +23247,41 @@ tools
 <pre>* [[Dynavox PS-137 (4Ohm, 6W, 79dB)|https://www.dynavox-audio.de/produkte/spalte3/lautsprecher/ps-137-minibass-4-ohm.html]]
 * [[Dynavox PS-138 (8Ohm, 14W, 80dB)|https://www.dynavox-audio.de/produkte/spalte3/lautsprecher/ps-138-minibass-8-ohm.html]]
 * Tangband e.g. W3-1876S (3&quot;, 15W)</pre>
+</div>
+<div created="20220430171103499" modified="20220430185735288" tags="[[mixing / signal processing]] [[digital audio]] [[Open Audio Hardware]] [[audio testing and measurement]]" title="small noise xlr stick">
+<pre>inspiration
+
+* https://www.youtube.com/watch?v=KTvVS8guBsY
+* https://mitxela.com/projects/flash_synth
+* https://mitxela.com/projects/rumbler
+* https://mitxela.com/projects/silly_synth
+* https://mitxela.com/projects/smallest_midi_synth
+
+idea:
+building a tiny noise generator, maybe with different noise options, for use in a PA setting. The whole circuit should be powered by phantompower like from any ordinary mixing console and fit in an ordinary 3 pin XLR connector.
+
+the pcb can be directly soldered to the solder cups, like between them.
+the pcb has to be arround 13.5mm wide to fit the connectors i got.
+
+i'll probably also use the STM32L432KC like [[in this project|https://mitxela.com/projects/flash_synth]].
+i've got a small ST Nucleo32 board 
+i was thinking about using a risc-v MCU like one of the Gigadevices GD32L103, but i'm not quite experienced enough i think.
+
+some stuff that might come in handy:
+
+* https://www.st.com/en/embedded-software/stm32-audio100a.html
+* https://www.st.com/resource/en/application_note/cd00259245-audio-and-waveform-generation-using-the-dac-in-stm32-microcontrollers-stmicroelectronics.pdf
+* https://www.digikey.de/en/blog/audio-processing-with-stm32
+* https://pcbartists.com/firmware/stm32-firmware/stm32-audio-tutorial-part-2-codec-i2c-setup/
+* https://forum.allaboutcircuits.com/threads/producing-sound-using-stm32.89810/
+* https://www.st.com/en/microcontrollers-microprocessors/stm32l432kc.html#overview
+* https://deepbluembedded.com/stm32-dac-tutorial-example-hal-code-analog-signal-genreation/
+* https://stm32world.com/wiki/STM32L432
+* https://www.st.com/en/evaluation-tools/nucleo-l432kc.html#documentation
+
+programming:
+
+* c/c++ or rust?</pre>
 </div>
 <div created="20201031142150987" modified="20210804212805373" tags="repairs [[audio repairs]]" title="small repairs">
 <pre>someone came with a Sennheiser Wireless Microphone where the cables leading to the Microphone Capsule were ripped of, i opened the Mic, removed the old wires (were to short to just resolder) and soldered new, slightly longer wires to the capsule (to also help the cables not to get ripped off again)
