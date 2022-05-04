@@ -1773,6 +1773,8 @@ Error message and password prompt
 
 <li>SVG, Canvas and WebGL - advanced graphics on websites</li>
 
+<li>Swissonic SA 125</li>
+
 <li>Swisstone BX 600 (bluetooth speaker) micro usb repair</li>
 
 <li>switched mode power supply (SMPS)</li>
@@ -12176,7 +12178,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220425134618763" list="[[coole Mikronationen]] [[professional manufacturers of audio hardware]] [[Harman/Kardon HK990 repair]] [[small noise xlr stick]] About TableOfContents" modified="20220430234701075" title="$:/StoryList">
+<div created="20220425134618763" list="[[Swissonic SA 125]] [[professional manufacturers of audio hardware]] [[Harman/Kardon HK990 repair]] [[small noise xlr stick]] About TableOfContents" modified="20220430234701075" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13196,7 +13198,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220430234703179" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20220504160204220" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -24145,6 +24147,17 @@ microplastics?</pre>
 * SVG
 ** https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#svg_interfaces
 * https://hubs.mozilla.com/</pre>
+</div>
+<div created="20220504160141193" modified="20220504163810894" tags="[[audio repairs]]" title="Swissonic SA 125">
+<pre>120W Mono PA mixing amplifier.
+it is meant for installed PA systems but because of it's 24V DC Power option was used with batteries for non-professional mobile use. While using it with a battery a cable with a 3.5mm jack dropped down and shorted on the battery terminals.
+After the incident the amp didn't work with either Battery or mains power.
+It is not known which of the contacts shorted out but due to the people mentioning sparks i guessed it was the ground of the jack to 24V battery plus. there would've been no sparks if it had hit the ground connection and if it hit the signal connections then the opamps would have totaly clipped (they probably run on +-15V or +-18V) and there would have been caps in line to prevent DC from having a big effect.
+
+I'm going to reverse engineer the whole circuit in order to learn a bit more.
+
+I pretty quickly found the culprit: a blown ground track on the amp-PCB, next to the linear voltage regulator section supplying the mixing circuitry of the amp.
+And i also found kind of an design error: only the poweramplifier section is protected by a fuse, the mixing circuitry is not protected by any fuse.</pre>
 </div>
 <div created="20210704214847515" modified="20220118140832275" tags="[[reverse engineering]] [[audio repairs]] repairs" title="Swisstone BX 600 (bluetooth speaker) micro usb repair">
 <pre>(not realy an audio repair but whatever)
