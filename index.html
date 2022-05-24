@@ -1009,6 +1009,8 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
+<li>Draft of 'meine PA technik'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -11805,7 +11807,7 @@ TableOfContents</pre>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
 </div>
-<div created="20211008121247365" modified="20220430183250966" title="$:/state/toc/TableOfContents-accumulator - battery - rechargeable energy storage--118161433">
+<div created="20211008121247365" modified="20220524144725432" title="$:/state/toc/TableOfContents-accumulator - battery - rechargeable energy storage--118161433">
 <pre>close</pre>
 </div>
 <div created="20200802181559032" modified="20210505225352090" title="$:/state/toc/TableOfContents-accumulator - battery--118161433">
@@ -12180,7 +12182,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220519113603803" list="[[Peavey PV8 8-Channel Mixing Console repair]] [[manufacturers of speaker drivers]] About TableOfContents" modified="20220524115553904" title="$:/StoryList">
+<div created="20220519113603803" list="[[audio repairs]] [[repair of Renkforce EQ/Amp]] [[Concord CA50.2 repair]] [[Draft of 'meine PA technik']] [[manufacturers of speaker drivers]] About TableOfContents" modified="20220524145424007" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13200,8 +13202,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220524115552039" modifier="Thorbijoern" title="$:/temp/search">
-<pre>peav</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220524145025497" modifier="Thorbijoern" title="$:/temp/search">
+<pre>audio</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15200,8 +15202,10 @@ If you want to develop tools it's pretty much mandatory to be in constant consul
 * https://github.com/prakhar1989/awesome-courses
 * https://bios-pw.org/</pre>
 </div>
-<div created="20220404153845368" modified="20220404154308988" tags="[[audio repairs]]" title="Concord CA50.2 repair">
-<pre>high switching noise, probably dead electrolytic caps
+<div created="20220404153845368" modified="20220524145439339" tags="[[audio repairs]]" title="Concord CA50.2 repair">
+<pre>cheap car hifi amp, 2x ~70W@4Ohms
+
+high switching noise, probably dead electrolytic caps
 
 * https://www.amp-performance.de/455-Concord-CA50-2.html</pre>
 </div>
@@ -15892,6 +15896,76 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
+</div>
+<div created="20210613145111400" draft.of="meine PA technik" draft.title="meine PA technik" modified="20220524145302994" tags="Audio [[My Setup]]" title="Draft of 'meine PA technik'">
+<pre>* Lautsprecher
+** 2x RCF Art 310A - ~350W RMS, aktiv
+** 2x Reloop RSP-10 - 100W RMS, 8 Ohm
+*** https://www.reloop.com/reloop-rsp-10
+** Speaka ER-66S - 25W Megafon
+** 2x [[TOA SC-35L Horn Speakers|TOA SC-35L Horn Speakers and Amplifier design]]
+
+
+* Verstärker
+** günstige car hifi amps
+*** Sinuslive 504 - 4x 50W@4Ohm (wahrscheinlich; bridging possible to 2x100W@8Ohm für RSP-10
+*** Condor MB 5 - 2x TA8210AH, 4x 20W@4Ohm (&quot;200W&quot;)
+
+
+* LFP Akku 12V 200Ah mit 1,5kW Inverter
+* Boxenstative (comming soon), DIY Mikrostativ
+
+
+* Mikros
+** Sennheiser XS1 (Kabel)
+** thomann billigmikro
+** 2x beyerdynamic Opus300 und SDM 369 (Funk)
+*** https://www.manualslib.com/manual/765816/Beyerdynamic-Opus-300.html
+** beyerdynamic Opus600 und TS 600 Headset-Mikro (Funk)
+** [[Superlux ECM999|https://www.thomann.de/de/superlux_ecm999.htm]] - Messmikrofon
+
+
+* Digitalmixer-Setup
+** GL.iNet GL-MT300N-V2 &quot;Mango&quot; als WLAN AP/Router
+** Behringer XAir XR18
+*** ethernet verbindung zu Router, da wlan karte vom mixer zu schlecht und anfällig
+** Netbook
+*** Clementine (fernsteuerbar) oder VLC
+*** Debian mit xfce mit ~PulseAudio und Jack
+** Tablet
+** XR18 und Clementine sind über die Smartphone Apps steuerbar
+** oder einfach flac library aufm handy
+
+
+* analog-Mischpulte
+** kleines no-name
+** Conrad &quot;Sound Craft&quot; SA-100 - alter Stereo DJ-Mixer
+** [[the t.mix micromix 2 usb|https://www.thomann.de/de/the_t.mix_micromix_2_usb.htm]] - sehr kleines Mischpult, Betrieb von 5V USB, Integriertes Interface, brauch noch chinch-xlr adapter
+
+
+* Interfaces
+** E-MU 0202
+** Tascam US-122L
+** the t.mix micromix 2 usb
+
+
+* thomann DSP 4x4 Mini
+* diverse XLR Kabel, Adapterkabel, Stromkabel
+
+!! Bedarf reperatur:
+
+* Behringer DJ Mixer
+* mittleres no-name Mischpult
+* [[Peavey PV8 USB - 8 Kanal mit USB Interface|Peavey PV8 8-Channel Mixing Console repair]]
+* 2. Behringer DJ mixer - 18V AC netzteil fehlt
+* Tascam US-428 - 7,5VAC 1A Netzteil fehlt - Mischpult/DAW-Controller/Audio-interface
+* ultra billiger schrott Mischverstärker - gut zum bisschen lernen
+* Eric NA9201 amp
+* 2x Klippel Pruduction Analyser - gehen wohl noch aber ohne software und zubehör
+* 3 alte HK Actor (u.a. AT 115A) aktivmodule
+* [[günstiger car hifi amp - Concord CA50-2 (&quot;100W RMS&quot;); 2x ~70W@4Ohms|Concord CA50.2 repair]]
+* [[&quot;Hollywood&quot; Mischverstärker - super billiger Schrott, aber war geschenkt und ist gut zum basics lernen|cheap mixing amp repair, reverse engineering]]
+</pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
