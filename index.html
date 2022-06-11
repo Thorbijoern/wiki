@@ -12265,7 +12265,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220603012423692" list="[[audio repairs]] [[cheap mixing amp repair, reverse engineering]] About TableOfContents" modified="20220611232457716" title="$:/StoryList">
+<div created="20220603012423692" list="[[audio repairs]] [[Swissonic SA 125]] About TableOfContents" modified="20220611232855526" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -24597,16 +24597,17 @@ microplastics?</pre>
 ** https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#svg_interfaces
 * https://hubs.mozilla.com/</pre>
 </div>
-<div created="20220504160141193" modified="20220504163810894" tags="[[audio repairs]]" title="Swissonic SA 125">
+<div created="20220504160141193" modified="20220611234311782" tags="[[audio repairs]]" title="Swissonic SA 125">
 <pre>120W Mono PA mixing amplifier.
 it is meant for installed PA systems but because of it's 24V DC Power option was used with batteries for non-professional mobile use. While using it with a battery a cable with a 3.5mm jack dropped down and shorted on the battery terminals.
 After the incident the amp didn't work with either Battery or mains power.
-It is not known which of the contacts shorted out but due to the people mentioning sparks i guessed it was the ground of the jack to 24V battery plus. there would've been no sparks if it had hit the ground connection and if it hit the signal connections then the opamps would have totaly clipped (they probably run on +-15V or +-18V) and there would have been caps in line to prevent DC from having a big effect.
+It is not known which of the contacts shorted out but due to the people mentioning sparks i guessed it was the ground of the jack to 24V battery plus. there would've been no sparks if it had hit the ground connection and if it hit the signal connections then the opamps would have just clipped shortly but there would have been caps in line to prevent DC from having a big effect.
 
-I'm going to reverse engineer the whole circuit in order to learn a bit more.
+I have reverse engineered the whole circuit in order to learn a bit more.
 
 I pretty quickly found the culprit: a blown ground track on the amp-PCB, next to the linear voltage regulator section supplying the mixing circuitry of the amp.
-And i also found kind of an design error: only the poweramplifier section is protected by a fuse, the mixing circuitry is not protected by any fuse.</pre>
+And I also found kind of an design error: only the poweramplifier section is protected by a fuse, the mixing circuitry is not protected by any fuse.
+It's more unlikely that the mixing part will cause a short, but there also is no good place to add a fuse for it.</pre>
 </div>
 <div created="20210704214847515" modified="20220118140832275" tags="[[reverse engineering]] [[audio repairs]] repairs" title="Swisstone BX 600 (bluetooth speaker) micro usb repair">
 <pre>(not realy an audio repair but whatever)
@@ -24854,7 +24855,7 @@ i couldn't replicate the stopping of playback or recording neither before nor af
 The electronics might be dated in it, but the console still runs and has a really good build quality. Every cable is managed in some way and there are nice reusable wire cableties fastened to the frame and boards which made servicing easy and it looks super clean.
 nowadays you probably would have much less pcb's in there, maybe everything on one pcb and would need much less cables for interconnecting.</pre>
 </div>
-<div created="20220524145718669" modified="20220524145913329" tags="[[audio repairs]]" title="Tascam US-428 Power Supply">
+<div created="20220524145718669" modified="20220611232846464" tags="[[audio repairs]] [[current projects]]" title="Tascam US-428 Power Supply">
 <pre>Tascam US-428 - 7,5VAC 1A Netzteil fehlt - Mischpult/DAW-Controller/Audio-interface</pre>
 </div>
 <div created="20201126132422965" modified="20211122003945220" tags="[[Software stuff]]" title="telegram bot/mtproto frameworks">
