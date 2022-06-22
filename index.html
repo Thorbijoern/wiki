@@ -1039,6 +1039,8 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
+<li>Draft of 'switched mode power supply (SMPS)'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -12277,7 +12279,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220619165225695" list="[[AES/EBU, AES3]] [[digital audio]] [[Carver PM-1.5 repair]] [[the t.racks DSP 4x4 Mini reverse engineering]] About TableOfContents" modified="20220622225743207" title="$:/StoryList">
+<div created="20220619165225695" list="[[bipolar, dual, symmetrical power supply designs, negative voltage]] [[Draft of 'switched mode power supply (SMPS)']] [[digital audio]] [[Carver PM-1.5 repair]] [[the t.racks DSP 4x4 Mini reverse engineering]] About TableOfContents" modified="20220622230709218" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13297,8 +13299,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220622225739439" modifier="Thorbijoern" title="$:/temp/search">
-<pre>aes</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220622230734654" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14698,7 +14700,7 @@ case/chassis
 * https://www.glowee.com/
 * https://www.treehugger.com/bioluminescent-fungi-mushrooms-that-glow-in-the-dark-4868794</pre>
 </div>
-<div created="20211206100018388" modified="20220430191542136" tags="[[power electronics (Leistungselektronik)]]" title="bipolar, dual, symmetrical power supply designs, negative voltage">
+<div created="20211206100018388" modified="20220622231113558" tags="[[power electronics (Leistungselektronik)]]" title="bipolar, dual, symmetrical power supply designs, negative voltage">
 <pre>goal is to get +V, 0V and -V
 https://de.wikipedia.org/wiki/Spannungsquelle#Asymmetrische,_bipolare_und_symmetrische_Spannungsversorgungen
 
@@ -14719,7 +14721,7 @@ https://de.wikipedia.org/wiki/Spannungsquelle#Asymmetrische,_bipolare_und_symmet
 ** https://robu.in/what-is-dual-power-supply-circuit-construction-and-working/
 ** https://www.electronicsweekly.com/market-sectors/power/ten-best-ways-split-voltage-rail-2015-02/
 ** https://en.wikipedia.org/wiki/Charge_pump
-** </pre>
+* https://sound-au.com/project192.htm</pre>
 </div>
 <div created="20200516203237892" modified="20200615221804817" tags="[[digital audio]]" title="Bluetooth Audio">
 <pre>cheap bluetooth modules/adapters usually only support the most basic lossy compression
@@ -16068,6 +16070,112 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
+</div>
+<div created="20201110021349133" draft.of="switched mode power supply (SMPS)" draft.title="switched mode power supply (SMPS)" modified="20220622230354937" tags="[[power electronics (Leistungselektronik)]]" title="Draft of 'switched mode power supply (SMPS)'">
+<pre>switched mode power supplies very efficient power supply designs rectifying the AC Voltage and stepping it down/up to the desired DC voltage; but DC-to-DC Converters are also often SMPS.
+you should know the [[electronic basics]] first
+
+lists/general information
+
+* https://www.we-online.com/web/en/index.php/show/media/07_electronic_components/news_1/blog/midcom_blog_photos/SMPSChart.pdf
+* https://www.ti.com/seclit/ug/slyu036/slyu036.pdf
+* https://www.ieee.li/pdf/viewgraphs/topology_review_dc_dc_converters.pdf
+* https://www.maximintegrated.com/en/design/technical-documents/app-notes/6/6129.html
+* https://techweb.rohm.com/knowledge/acdc/acdc_pwm/acdc_pwm04/3551
+* https://www.monolithicpower.com/en/the-difference-between-ccm-and-dcm-explained
+
+types/topologies:
+
+* Boost/Step-Up (Aufwärtswandler)
+** [[DC-DC Boost converter tutorial|https://www.youtube.com/watch?v=wJU7AJgERG8]]
+** [[HACKED!: Adding a Current Limit Feature to a Buck/Boost Converter|https://www.youtube.com/watch?v=8uoo5pAeWZI]]
+
+* Buck/Step-Down (Abwärtswandler)
+** [[Switch mode power supply tutorial: DC-DC buck converters|https://www.youtube.com/watch?v=CEhBN5_fO5o]]
+** [[DIY Buck Converter -- How to step down DC voltage efficiently|https://www.youtube.com/watch?v=m8rK9gU30v4]]
+** https://www.ti.com/lit/an/snva038b/snva038b.pdf
+* https://sound-au.com/project220.htm
+
+* Buck–boost - combination/hybrid of above
+
+* single-ended primary-inductor converter (SEPIC) - most buck-boost are sepic
+** [[The Most Versatile Voltage Converter you never heard of! The (S)EPIC Converter|https://www.youtube.com/watch?v=XOcA7ijtlCY]]
+
+* Ćuk
+
+* Split-pi topology
+
+* Flyback (Sperrwandler)
+
+* Forward (Eintaktflusswandler)
+** 2 Switch forward
+
+* Push-Pull (Gegentaktflusswandler)
+
+* Synchronous Converter
+** [[Is this the BEST Voltage Converter? Trying to build a Synchronous Converter!|https://www.youtube.com/watch?v=W4i2FRZ8gXc]]
+
+general
+
+* [[How does a modern Power Supply work?! (230V AC to 5/12V DC) DIY Flyback Converter!|https://www.youtube.com/watch?v=ycT-PItAzNk]]
+* [[How does a mobile charger work? SMPS with Opto-Coupler. |https://www.youtube.com/watch?v=2N_T7VFymFg]]
+* EEVblog
+**[[EEVblog: Power Supply Design|https://www.youtube.com/playlist?list=PLBF35875F73B5C9B5]]
+** [[EEVblog #139 - Let's Select a DC-DC Boost Converter|https://www.youtube.com/watch?v=-V_p1GBH4pk]]
+* [[The Post Apocalyptic Inventor: SMPS Tutorial|https://www.youtube.com/playlist?list=PLxaGnte1Dq0lgNtfA9H5Hd_YDyjylThJJ]]
+** [[SMPS Tutorial (1): Introduction - Switched Mode Power Supplies and Power Conversion|https://www.youtube.com/watch?v=nbKwUSH9NiY]]
+** [[SMPS Tutorial (2): Linear Regulators, Voltage References, Switched Mode Power Supplies|https://www.youtube.com/watch?v=BjTD9EVs9v8]]
+* [[Power Supply Design #8 How Much Power?|https://www.youtube.com/watch?v=0A49MIG1HrU]]
+* [[How SMPS works ~ What Components We Need? Switched Mode Power Supply|https://www.youtube.com/watch?v=cK5WLMFSGnw]]
+* https://en.wikipedia.org/wiki/Switched-mode_power_supply
+* https://de.wikipedia.org/wiki/Schaltnetzteil
+* [[How SMPS works ~ What Components We Need? Switched Mode Power Supply|https://www.youtube.com/watch?v=cK5WLMFSGnw]]
+* [[FLYBACK DC - DC Converter Theory And Example|https://www.youtube.com/watch?v=HOXgOWoN0EY]]
+* [[Power Supply Troubleshooting and Repair Tips|https://www.youtube.com/watch?v=pffOJdCQ7kw]]
+
+* [[Switch mode power supply tutorial: DC-DC buck converters|https://www.youtube.com/watch?v=CEhBN5_fO5o]]
+* https://libre.solar/docs/dcdc_control/
+** https://learn.libre.solar/development/dcdc_converter.html
+* [[DIY Buck/Boost Converter (Flyback) -- How to step up/down DC voltage efficiently|https://www.youtube.com/watch?v=ZiD_X-uo_TQ]]
+* [[DIY LiPo Charge/Protect/5V Boost Circuit|https://www.youtube.com/watch?v=Fj0XuYiE7HU]]
+* [[Solar Battery Charger (LiPo/Li-Ion) -- DIY or Buy|https://www.youtube.com/watch?v=kEttqWJrdww]]
+* [[EEVblog #272 - Manson 9400 40A 3-15V Switchmode PSU Teardown|https://www.youtube.com/watch?v=bX8IIjf15qY]]
+* [[Solar Panel, SuperCapacitors and a Buck/Boost|https://www.youtube.com/watch?v=ITsmOBdBKzk]]
+* [[DIY Buck converter - TUTORIAL|https://www.youtube.com/watch?v=SM5qPrOrDrc]]
+* https://circuitdigest.com/smps-power-supply-circuits
+* https://en.wikipedia.org/wiki/DC-to-DC_converter
+** https://en.wikipedia.org/wiki/Category:DC-to-DC_converters
+* https://web.archive.org/web/20190717131310/https://sound.whsites.net/project89.htm - Switchmode Power Supply For Car Audio
+* https://www.youtube.com/watch?v=Edel3eduRj4
+* https://sound-au.com/articles.htm#psud
+* [[AC/DC Switch Mode Power Supply (SMPS) Intro and Demo|https://www.youtube.com/watch?v=NZcfn413s0A]]
+* https://de.wikipedia.org/wiki/Gleichspannungswandler
+* https://de.wikipedia.org/wiki/Kategorie:Gleichspannungswandler
+* https://www.ti.com/solution/automotive-dc-dc-converter
+* https://www.ti.com/solution/energy-storage-power-conversion-system
+* mean well sells some pretty good supplies https://www.meanwell.com/index.html
+* [[How Does a Switching Power Supply Work 1 (schematic, explanation, example, modifications)|https://www.youtube.com/watch?v=cX4q0e124C4]]
+* [[How Does a Switching Power Supply Work 3 (CCM vs. DCM)|https://www.youtube.com/watch?v=3ySlJ99OSN4]]
+* https://www.microchip.com/stellent/groups/SiteComm_sg/documents/Training_Tutorials/en528010.pdf
+* https://sound-au.com/project69.htm
+* https://sound-au.com/project77.htm
+* https://sound-au.com/project89.htm
+* https://sound-au.com/project95.htm
+* https://sound-au.com/project108.htm
+
+
+running AC SMPS from DC
+
+* https://electronics.stackexchange.com/questions/262645/using-dc-voltage-instead-of-ac-to-supply-smps
+* https://www.heise.de/select/ct/2016/2/1452238205894722?hg=1&amp;hgi=2&amp;hgf=false
+
+design:
+
+* Simulation Software can help a lot with designing
+** https://de.wikipedia.org/wiki/LTspice
+** https://de.wikipedia.org/wiki/SPICE_(Software)
+** https://en.wikipedia.org/wiki/SPICE
+* https://www.joretronik.de/Web_NT_Buch/Vorwort/Vorwort.html</pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
