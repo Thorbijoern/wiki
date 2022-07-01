@@ -961,6 +961,8 @@ Error message and password prompt
 
 <li>Cyber sovereignty / Datensouveränität</li>
 
+<li>DAP Mission 900 repair</li>
+
 <li>DAP Palladium 1200 Vintage</li>
 
 <li>data logging</li>
@@ -1037,13 +1039,9 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft 2 of ' 1'</li>
-
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
-
-<li>Draft of 'current projects'</li>
 
 <li>Dresden</li>
 
@@ -12291,7 +12289,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220625214831320" list="[[Draft 2 of ' 1']] [[Draft of 'current projects']] [[PA Amplifier Repairs]] [[show control]] [[controlling lights, light hardware]] [[audio visualisation]] [[audio repairs]] [[hifi amplifier repairs]] [[Behringer X Air (XR12/XR18)]] About TableOfContents" modified="20220701211735423" title="$:/StoryList">
+<div created="20220625214831320" list="[[Eric NA9201 repair]] [[PA Amplifier Repairs]] [[DAP Mission 900 repair]] [[current projects]] [[show control]] [[controlling lights, light hardware]] [[audio visualisation]] [[audio repairs]] [[hifi amplifier repairs]] [[Behringer X Air (XR12/XR18)]] About TableOfContents" modified="20220701213250565" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13311,8 +13309,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220701211623315" modifier="Thorbijoern" title="$:/temp/search">
-<pre>ee syste</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220701213343979" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15448,7 +15446,7 @@ proprietary stuff
 <div created="20211008124005972" modified="20220531011855637" tags="[[testing &amp; measuring]] [[electronics tools]]" title="current probe">
 <pre>* https://www.eevblog.com/product/cp2100b/</pre>
 </div>
-<div created="20220611232005560" modified="20220611232414716" tags="[[My Setup]]" title="current projects">
+<div created="20220611232005560" modified="20220701213227846" tags="[[My Setup]]" title="current projects">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;</pre>
 </div>
 <div created="20211008121356979" modified="20220531012244341" tags="[[testing &amp; measuring]] [[electronics tools]]" title="curve tracer">
@@ -15470,6 +15468,88 @@ proprietary stuff
 * https://en.wikipedia.org/wiki/Network_sovereignty
 * https://de.wikipedia.org/wiki/Digitale_Souver%C3%A4nit%C3%A4t
 * Datensouveränität</pre>
+</div>
+<div created="20220701211842311" modified="20220701213356815" tags="[[audio repairs]] [[current projects]] [[PA Amplifier Repairs]] [[audio amplifiers]]" title="DAP Mission 900 repair">
+<pre>!! Info
+
+* 2x 400W RMS(?)
+* the amp uses a primary-secondary design, where channel B contains parts of the circuitry for both channels
+
+!!Problem:
+
+Left channel was overheating, owner tried setting the bias current didn't really change the problem, owner tried swapping the channels for refurbished ones but no luck either.
+The Amp was previously given to a repair shop that does not repair Amps and i don't quite know if anyone there has done something, because screws went missing there (it was still open from the owner).
+
+the amp boards should have been fine, but when i switched it on something shorted.
+i later found uppon inspection a spring washer like the one holding the power transistors to the heatsink. there was no washer missing so i suspect its leftover from the refurbishement. It shorted out one or several of the transistors, which are now dead. So the refurbished Channel A is dead now.
+
+had to reverse engineer the Amp because there are no schematics. The refurbished Bords may be a newer version, they have some changes.
+
+!! Comparison of the different Board Versions:
+
+* Original Boards have Markings &quot;PSA-3000-L&quot;, &quot;06,06,K1'&quot; and &quot;PSA-3000-R&quot;, &quot;07,28,K1'&quot;
+* refurbished Boards have markings &quot;PSA-3000-L&quot;, &quot;VER031117 and &quot;PSA-3000-R&quot;, &quot;&quot;
+* (L being Channel A and R being Channel B)
+* the original Boards have better PCB quality than the refurbished ones: the main material is of better quality and the solder resist coating is much better
+* the Parts BOM has changed a bit, but there are no obvious quality differences
+* both channels of the refurbished PCBs have a GND connection which seems to be meant to connect the middle-potential between &quot;+VCC&quot; and &quot;-VCC&quot; of both channels, i'm not sure about the benefits
+* small parts of the refurbished PCBs have small layout changed to make them more compact. the changes are pretty superficial and don't make the PCB footprint much smaller, i don't think it makes much difference in production.
+* both channels have two thermistor-like parts, but one of them marked &quot;R36&quot; on the pcb is mounted to the power transistors on the refurbished versions. on the original versions it is just on the board. the part is &quot;uei 090&quot;
+* the opamps are different. original version uses JRC NJM2068D; refurbished version uses TI NE5532P
+
+a NJM13700 is used which is a pretty new part to me. it's part of the volume control circuitry.
+
+* https://www.mouser.com/datasheet/2/294/NJM13600_NJM13700_E-346722.pdf
+* https://en.wikipedia.org/wiki/Operational_transconductance_amplifier
+* https://de.wikipedia.org/wiki/Transkonduktanzverst%C3%A4rker
+
+Pots:
+
+* quiescent current / DC offset?
+* conducting angle?
+* ?
+
+!! What i did:
+
+* clean the amp from dust and stuff, clean the Fan
+* checking everything for obvious damaged/faulty parts or bad solder joints
+* check connections of the trafo to the power PCB
+* check power bridge rectifiers
+* check trafo voltage output
+** the transformer is wired to provide 2x 118V~
+** rectified and smothed it might be a bit more
+* some reverse engineering
+* while comparing, inspecting and reverse engineering i found some small solder balls which i removed and i resoldered some parts which looked a bit poorly soldered
+* change out the refurbished with the &quot;old&quot; Channel-Modules because refurbished channel A is blown
+* snug up the screw holding the tranformer
+* check all cabling for correctness and replug the cables
+* check power cables for good connection
+* connect Amp and hope it doesn't blow up
+** it didn't blow up
+* let it run some time in idle without audio playing
+** both channels pretty similar in warmth to the touch
+* test music
+** sounds fine
+* test idle/bias current
+** pretty much all 0,5mV, one side on channel b was 0,7mV
+* let it run some time with music at a lower level and meassure temps
+** both channels pretty spot on 35°C
+
+I don't really know what fixed the problem, but i can't replicate it, it works fine for me now.
+
+as a last step i checked the output of both channels on the oscilloscope and compared them to see if there are any differences, maybe the pots have to be adjusted, but i found nothing.
+
+!! repair of the shorted channel
+
+As explained earlier one of the refurbished channels was shorted when i got it. The owner opted to repair the channel.
+
+I checked if i could find any other parts on the pcb (apart from the power transistors) that might be damaged and compared the damaged channel a with the good channel b, but all seems fine.
+
+I desoldered the power transistors and preamp transitors to check them one by one. 3 power transistors are dead, 2 completely shorted and one is something inbetween but also not good anymore.
+The preamps seem fine, but its a good advice to change all transistors because their state is pretty unknown and they might be pre-damaged and might easily fail later.
+
+The Mission 900 uses 4x 2SC5200 and 4x 2SA1943 per channel, preamps are MJE15032G and MJE15033G.
+</pre>
 </div>
 <div created="20220701211656084" modified="20220701211731490" tags="[[current projects]] [[audio amplifiers]] [[PA Amplifier Repairs]] [[audio repairs]]" title="DAP Palladium 1200 Vintage">
 <pre>!! DAP Palladium 1200 Vintage
@@ -16078,88 +16158,6 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220701211842311" draft.of=" 1" draft.title="DAP Mission 900 repair" modified="20220701213203443" tags="[[audio repairs]] [[current projects]]" title="Draft 2 of ' 1'">
-<pre>!! Info
-
-* 2x 400W RMS(?)
-* the amp uses a primary-secondary design, where channel B contains parts of the circuitry for both channels
-
-!!Problem:
-
-Left channel was overheating, owner tried setting the bias current didn't really change the problem, owner tried swapping the channels for refurbished ones but no luck either.
-The Amp was previously given to a repair shop that does not repair Amps and i don't quite know if anyone there has done something, because screws went missing there (it was still open from the owner).
-
-the amp boards should have been fine, but when i switched it on something shorted.
-i later found uppon inspection a spring washer like the one holding the power transistors to the heatsink. there was no washer missing so i suspect its leftover from the refurbishement. It shorted out one or several of the transistors, which are now dead. So the refurbished Channel A is dead now.
-
-had to reverse engineer the Amp because there are no schematics. The refurbished Bords may be a newer version, they have some changes.
-
-!! Comparison of the different Board Versions:
-
-* Original Boards have Markings &quot;PSA-3000-L&quot;, &quot;06,06,K1'&quot; and &quot;PSA-3000-R&quot;, &quot;07,28,K1'&quot;
-* refurbished Boards have markings &quot;PSA-3000-L&quot;, &quot;VER031117 and &quot;PSA-3000-R&quot;, &quot;&quot;
-* (L being Channel A and R being Channel B)
-* the original Boards have better PCB quality than the refurbished ones: the main material is of better quality and the solder resist coating is much better
-* the Parts BOM has changed a bit, but there are no obvious quality differences
-* both channels of the refurbished PCBs have a GND connection which seems to be meant to connect the middle-potential between &quot;+VCC&quot; and &quot;-VCC&quot; of both channels, i'm not sure about the benefits
-* small parts of the refurbished PCBs have small layout changed to make them more compact. the changes are pretty superficial and don't make the PCB footprint much smaller, i don't think it makes much difference in production.
-* both channels have two thermistor-like parts, but one of them marked &quot;R36&quot; on the pcb is mounted to the power transistors on the refurbished versions. on the original versions it is just on the board. the part is &quot;uei 090&quot;
-* the opamps are different. original version uses JRC NJM2068D; refurbished version uses TI NE5532P
-
-a NJM13700 is used which is a pretty new part to me. it's part of the volume control circuitry.
-
-* https://www.mouser.com/datasheet/2/294/NJM13600_NJM13700_E-346722.pdf
-* https://en.wikipedia.org/wiki/Operational_transconductance_amplifier
-* https://de.wikipedia.org/wiki/Transkonduktanzverst%C3%A4rker
-
-Pots:
-
-* quiescent current / DC offset?
-* conducting angle?
-* ?
-
-!! What i did:
-
-* clean the amp from dust and stuff, clean the Fan
-* checking everything for obvious damaged/faulty parts or bad solder joints
-* check connections of the trafo to the power PCB
-* check power bridge rectifiers
-* check trafo voltage output
-** the transformer is wired to provide 2x 118V~
-** rectified and smothed it might be a bit more
-* some reverse engineering
-* while comparing, inspecting and reverse engineering i found some small solder balls which i removed and i resoldered some parts which looked a bit poorly soldered
-* change out the refurbished with the &quot;old&quot; Channel-Modules because refurbished channel A is blown
-* snug up the screw holding the tranformer
-* check all cabling for correctness and replug the cables
-* check power cables for good connection
-* connect Amp and hope it doesn't blow up
-** it didn't blow up
-* let it run some time in idle without audio playing
-** both channels pretty similar in warmth to the touch
-* test music
-** sounds fine
-* test idle/bias current
-** pretty much all 0,5mV, one side on channel b was 0,7mV
-* let it run some time with music at a lower level and meassure temps
-** both channels pretty spot on 35°C
-
-I don't really know what fixed the problem, but i can't replicate it, it works fine for me now.
-
-as a last step i checked the output of both channels on the oscilloscope and compared them to see if there are any differences, maybe the pots have to be adjusted, but i found nothing.
-
-!! repair of the shorted channel
-
-As explained earlier one of the refurbished channels was shorted when i got it. The owner opted to repair the channel.
-
-I checked if i could find any other parts on the pcb (apart from the power transistors) that might be damaged and compared the damaged channel a with the good channel b, but all seems fine.
-
-I desoldered the power transistors and preamp transitors to check them one by one. 3 power transistors are dead, 2 completely shorted and one is something inbetween but also not good anymore.
-The preamps seem fine, but its a good advice to change all transistors because their state is pretty unknown and they might be pre-damaged and might easily fail later.
-
-The Mission 900 uses 4x 2SC5200 and 4x 2SA1943 per channel, preamps are MJE15032G and MJE15033G.
-</pre>
-</div>
 <div created="20220503232048216" modified="20220503232048216" title="Draft of ' 1'">
 <pre>* https://www.youtube.com/watch?v=Gou2V33nByU
 * https://de.wikipedia.org/wiki/Bunte_Republik_Neustadt
@@ -16177,9 +16175,6 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
-</div>
-<div created="20220611232005560" draft.of="current projects" draft.title="current projects" modified="20220701213215854" tags="[[My Setup]]" title="Draft of 'current projects'">
-<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;</pre>
 </div>
 <div created="20201104201703044" modified="20210506001332011" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -16723,7 +16718,7 @@ tools
 * https://www.paulvdiyblogs.net/2015/12/demistifying-rotary-encoders.html
 * </pre>
 </div>
-<div created="20220604192946260" modified="20220611232334324" tags="[[audio repairs]] [[current projects]]" title="Eric NA9201 repair">
+<div created="20220604192946260" modified="20220701213316554" tags="[[audio repairs]] [[current projects]] [[PA Amplifier Repairs]] [[audio amplifiers]]" title="Eric NA9201 repair">
 <pre>Problem:
 
 * very high distortion + noise</pre>
