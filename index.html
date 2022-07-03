@@ -2219,7 +2219,7 @@ Microwave transformer-based
 ** case, maybe case of a broken PC PSU
 *** cheap furniture glider as feet for the lab bench</pre>
 </div>
-<div created="20220701230517790" modified="20220703001839110" tags="[[current projects]] Art" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
+<div created="20220701230517790" modified="20220703171152032" tags="[[current projects]] Art" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
 <pre>!! Idee
 
 ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
@@ -2241,10 +2241,13 @@ see also [[microcontroller]]
 als controller für leisten oder tolerave logo ziehe ich verschiedene microcontroller mit integriertem WLAN in betracht primar ESP8266/ESP32 (vlt. sogar die RISCV versionen) oder vlt. Raspberry Pi Pico W.  die stm32 fallen fast raus, weil die eh kaum zu bekommen sind momentan.
 für esp8266/esp32 gibt es auch schon gute auswahl an fertiger firmware.
 
+proprietär:
+
 * https://www.ulrichradig.de/home/index.php/dmx
 ** https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu
 * https://github.com/twischer/WLAN-IO
 * https://www.discohat.com/qlc/
+* https://www.advateklights.com/products/pixel-control
 
 !! LED Typen
 
@@ -2253,6 +2256,14 @@ die WS2811 streifen haben zwar einen externen chip, laufen aber auf 12V und sind
 es gibt SK2812 die auch noch einen weiß ton (entweder natur, warm, kalt oder &quot;bernstein&quot;) integrieren, laufen aber auch auf 5V und ich weiß nicht ob es einfach ist software darauf zu mappen.
 relativ neu und am besten scheinen WS2815, integrierter Chip aber laufen auf 12V, aber keine ahnung wie gut man die bekommt, habe die noch nicht viel gesehen.
 es könnte sein das das steuerprotokoll anfällig ist, aber da die so verbreitet sind und die Neon led streifen scheinbar nur mit solchen LEDs existieren werde ich das erstmal testen.
+
+* https://www.advateklights.com/knowledge-base/pixel-leds
+* https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu - has listing of common LED/controller types
+
+Neon
+
+* a lot of those neon LED strips use 3535 LEDs which require an external controller
+* but there are some using the WS2811 controller internally
 
 !! LED Alu Profile/Leisten
 
@@ -12360,7 +12371,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220625214831320" list="[[LiFePO4 (LFP)]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] Wishlist [[QSC Powerlight PL1.8 repair]] [[current projects]] [[audio repairs]] About TableOfContents" modified="20220703153104348" title="$:/StoryList">
+<div created="20220625214831320" list="[[(DMX) / ArtNet / sACN LED Leisten und Logos]] Wishlist [[QSC Powerlight PL1.8 repair]] [[current projects]] [[audio repairs]] About TableOfContents" modified="20220703153104348" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
