@@ -1289,6 +1289,8 @@ Error message and password prompt
 
 <li>KiCAD</li>
 
+<li>Klippel Production Analyser reverse enginering</li>
+
 <li>Klirrfaktor / THD</li>
 
 <li>Klotz Nano 800 Speakers</li>
@@ -12373,7 +12375,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220625214831320" list="[[(DMX) / ArtNet / sACN LED Leisten und Logos]] Wishlist [[QSC Powerlight PL1.8 repair]] [[current projects]] [[audio repairs]] About TableOfContents" modified="20220703153104348" title="$:/StoryList">
+<div created="20220625214831320" list="[[Klippel Production Analyser reverse enginering]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] Wishlist [[QSC Powerlight PL1.8 repair]] [[current projects]] [[audio repairs]] About TableOfContents" modified="20220703213205130" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13393,8 +13395,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220703153102748" modifier="Thorbijoern" title="$:/temp/search">
-<pre>lfp</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220703213147298" modifier="Thorbijoern" title="$:/temp/search">
+<pre>klippel</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -19056,6 +19058,28 @@ stuff
 ** https://github.com/xesscorp/KiCost
 * https://www.baldengineer.com/custom-kicad-schematic-symbol.html
 * https://hackaday.com/2021/08/03/tool-generates-interactive-pcb-diagrams-from-kicad/</pre>
+</div>
+<div created="20220703213222610" modified="20220703230624856" tags="[[audio testing and measurement]] [[reverse engineering]]" title="Klippel Production Analyser reverse enginering">
+<pre>i've got two units of these really expensive devices from an electronics recycling place.
+both have stickers &quot;cleared for scrapping&quot; but they look pretty find from the outside, some other gear i've seen from the recycling place looks much worse because it got thrown into containers.
+
+general information
+
+* https://klippel.de/products/qc-system/analyzer-hardware/pa-production-analyzer.html
+* Revision 1.1
+* Serial # 1307 and 1329
+* missing powersupply, but seems to need 12V 24W
+* power supply plug seems to be male 5-pin DIN connector with screw-locking (IEC 60130-9)
+** [[like this one|https://www.voelkner.de/products/151288/Lumberg-SV-50-DIN-Rundsteckverbinder-Stecker-gerade-Polzahl-num-5-Silber-1St..html]]
+* #1307 has a USB-B card option build in
+* fuses between poweramp input and speaker outputs are fine, but:
+** #1307 has 5A Fuses fitted instead of the sticker stating 15A fuses
+** #1329 has 15A fuses
+* firewire doesn't seem to ever been used
+* &quot;Digital I/O&quot; looks like DB25 RS232 serial
+* one of both has no feet, the other is missing one feet
+* judging from the stickers about the fuses i have the default versions, see: https://www.klippel.de/fileadmin/klippel/Bilder/Our_Products/QC_System/PDF/Klippel_QC_Hardware%20Selection%20Guide%20PA.pdf
+</pre>
 </div>
 <div created="20201120211635455" modified="20201126220343727" tags="[[audio testing and measurement]]" title="Klirrfaktor / THD">
 <pre>* https://www.amplifier.cd/Tutorial/Klirrfaktor/Klirrfaktor.htm
