@@ -1047,9 +1047,13 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft 2 of ' 1'</li>
+
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
+
+<li>Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'</li>
 
 <li>Dresden</li>
 
@@ -12375,7 +12379,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220625214831320" list="[[current projects]] [[Carver PM-1.5 repair]] [[audio repairs]] [[PA Amplifier Repairs]] About TableOfContents" modified="20220704010807164" title="$:/StoryList">
+<div created="20220625214831320" list="[[Soundboks Internals (Teardown)]] [[Draft 2 of ' 1']] [[current projects]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] About TableOfContents" modified="20220704223340892" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13395,8 +13399,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220704010657387" modifier="Thorbijoern" title="$:/temp/search">
-<pre>kli</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220704223334177" modifier="Thorbijoern" title="$:/temp/search">
+<pre>sound</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16288,6 +16292,9 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
+<div created="20220704222944624" draft.of=" 1" draft.title="mixed signal measurement/test devices" modified="20220704230539727" tags="[[testing &amp; measuring]]" title="Draft 2 of ' 1'">
+<pre>* https://www.geeky-gadgets.com/mixed-signal-frontend-29-01-2020/ ?</pre>
+</div>
 <div created="20220503232048216" modified="20220503232048216" title="Draft of ' 1'">
 <pre>* https://www.youtube.com/watch?v=Gou2V33nByU
 * https://de.wikipedia.org/wiki/Bunte_Republik_Neustadt
@@ -16305,6 +16312,74 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
+</div>
+<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220704223259410" tags="[[current projects]] Art" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
+<pre>!! Idee
+
+ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
+[[YT: bigclivedotcom: Make custom LED neon shapes|https://www.youtube.com/watch?v=y9bSzE9ir1Q]]
+mir waren dann einfarbige neon LED streifen zu einfach und zu langweilig, also wollte ich nach RGB und ansteuerbar schauen, gibts. und dann war veranstaltung mit dem sonnensystem in der robotron kantine und wir hatten DIY LED leisten von den Irrlichtern ausgeliehen und ich war ziemlich begeistert... nun meine ideensammlung:
+
+mit tipps und hilfe von https://irrlicht.uber.space/
+
+siehe https://irrlicht.uber.space/technik
+
+!! Protokolle überblick, kabelgebunden/kabellos
+
+DMX (richtiger DMX512) kann über 5-pol XLR Kabel transportiert werden, manchmal wird aber nur 3-pol XLR benutzt weil 2 leiter nicht wirklich genutzt sind. Es gibt auch systeme um DMX über CAT5 ethernet kabel zu leiten, das erhöht die reichweite. wireless systeme für DMX sind alle proprietär und es scheint da keine offenen standards zu geben, alles recht proprietär und das mag ich nicht. es gibt zwar ein recht großes monopol, aber das mag ich noch weniger.
+
+kabel möchte ich vermeiden weswegen DMX und RDM rausfallen. RDMNet (RDM über netzwerk) ist noch in entwicklung und nicht verbreitet.
+
+kontrollprotokolle die in frage kommen sind (s)ACN oder ~ArtNet, weil die sind IP basiert und funktionieren damit auch über Wlan, außerdem sind beide offene standards und es gibt offene implementationen, sie sind weit verbreitet. beide transportieren im grunde normale DMX steuersignale.
+
+!! Controller
+
+see also [[microcontroller]]
+
+als controller für leisten oder tolerave logo ziehe ich verschiedene microcontroller mit integriertem WLAN in betracht primar ESP8266/ESP32 (vlt. sogar die RISCV versionen) oder vlt. Raspberry Pi Pico W.  die stm32 fallen fast raus, weil die eh kaum zu bekommen sind momentan.
+für esp8266/esp32 gibt es auch schon gute auswahl an fertiger firmware.
+
+proprietär:
+
+* https://www.ulrichradig.de/home/index.php/dmx
+** https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu
+* https://github.com/twischer/WLAN-IO
+* https://www.discohat.com/qlc/
+* https://www.advateklights.com/products/pixel-control
+
+!! LED Typen
+
+was die LEDs angeht bin ich noch am schauen, am verbreitetsten sind die WS2812(x) und WS2813(x) rgb led streifen, der controll chip ist da in den led chips integriert, die laufen aber auf 5V und da ist die stromstärke schnell sehr groß.
+die WS2811 streifen haben zwar einen externen chip, laufen aber auf 12V und sind damit auch praktischer.
+es gibt SK2812 die auch noch einen weiß ton (entweder natur, warm, kalt oder &quot;bernstein&quot;) integrieren, laufen aber auch auf 5V und ich weiß nicht ob es einfach ist software darauf zu mappen.
+relativ neu und am besten scheinen WS2815, integrierter Chip aber laufen auf 12V, aber keine ahnung wie gut man die bekommt, habe die noch nicht viel gesehen.
+es könnte sein das das steuerprotokoll anfällig ist, aber da die so verbreitet sind und die Neon led streifen scheinbar nur mit solchen LEDs existieren werde ich das erstmal testen.
+
+* https://www.advateklights.com/knowledge-base/pixel-leds
+* https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu - has listing of common LED/controller types
+
+Neon
+
+* a lot of those neon LED strips use 3535 LEDs which require an external controller
+* but there are some using the WS2811 controller internally
+
+!! LED Alu Profile/Leisten
+
+es gibt viele kompakte profile für den einbau ins haus oder in/an möbel. stabile für professionelle nutzung scheinbar eher weniger
+
+für die neon led streifen reichen vlt auch einfache alu U-profile
+
+!! DMX/ACN/~ArtNet Steuersoftware
+
+software für den PC ist bisschen rar was open source angeht, aber QLC+ kann da scheinbar alles, ist denke ich auch eine spende an den entwickler wert.
+led/pixel mapping software gibts da weniger. es gibt zwar mapmap, aber das ist nur video projection mapping und supported keine einzelnen LEDs oder andere outputs als beamer, also nicht richtig vergleichbar zu ~MadMapper.
+
+see [[linux VJ, projection/Video Mapping]]
+
+
+
+* https://www.churchtechideas.com/qlc-led-matrix-tutorial/
+* https://en.wikipedia.org/wiki/Show_control</pre>
 </div>
 <div created="20201104201703044" modified="20220703113924138" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -24566,7 +24641,7 @@ i agreed with the owner to look for new cells that fit into the case when i got 
 i haven't looked at the bms jet, but it has a state of charge indicator and balancing.
 the label on the case indicates it jas data communication, maybe something like: https://www.maximintegrated.com/en/products/power/battery-management/battery-fuel-gauges.html/tab1?fam=batt_stat&amp;node=13600&amp;374=OR%7C1-Wire&amp;152=OR%7C1-10%20Cell%20Li-Ion%7C2-4%20Cell%20Li-Ion%7CMulti-Cell%20Li-Ion</pre>
 </div>
-<div created="20200514144908281" modified="20210323003040216" tags="Soundsystem" title="Soundboks Internals (Teardown)">
+<div created="20200514144908281" modified="20220704230544036" tags="Soundsystem" title="Soundboks Internals (Teardown)">
 <pre>* Teardown: https://www.youtube.com/watch?v=WYk2dAuHJWo (Russian?)
 * https://www.soundboks.com/de/products/soundboks-2/techspecs/
 * https://www.soundboks.com/products/soundboks-2/techspecs/
@@ -24577,11 +24652,17 @@ the label on the case indicates it jas data communication, maybe something like:
 tecspecs:
 
 * power supply
-** battery: 12.8V, 7.8Ah Lithium Iron Phosphate (LiFePO4) with [[BMS|Battery Management System (BMS)]] (with indicator)
+** battery: 12.8V, 7.8Ah, 99.84Wh Lithium Iron Phosphate (LiFePO4) with [[BMS|Battery Management System (BMS)]] (with 5-step indicator)
+*** normal LFP which doesn't like to get charged below 0°C, ABS case
+*** Go: 40h mid volume, 10h full volume
+*** 3: 40h mid volume, 5h full volume
 ** &quot;Dynamic DC/DC Boost Converter&quot; - just a step-up/boost [[SMPS|switched mode power supply (SMPS)]]
+
+
 * amplifier:
 ** &quot;Merus Audio eximo® amp switching (Merus Audio eximo® Amp-Schaltung)&quot;
-** &quot;3 x 72Wrms class D amplifier&quot;
+** 2&amp;3: &quot;3 x 72Wrms class D amplifier&quot;
+** Go: &quot;2 × 72 Watt continuous - Class D amplifiers&quot;
 ** ~~216Wrms combined, ~90W per woofer and 35-40W for the tweeter?~~
 ** https://www.infineon.com/cms/en/product/power/class-d-audio-amplifier-ic/
 ** [[PDF-Copy of an AudioXPress Article, published by Infineon|https://www.infineon.com/dgdl/Infineon-Infineon_Article_AudioXpress_SOUNDBOKS_ridiculously_large_portable_bluetooth_speaker_powered_by_merus_audio_eximo_amplifier_technology_EN-ART-v01_00-EN.pdf?fileId=5546d46265f064ff016658aa18890d1f]]
@@ -24589,26 +24670,45 @@ tecspecs:
 *** that it uses an amp IC with digital input was not unexpected because the soundboks utilises a DSP
 ** using both MA12070P in BTL mode but only using 3 outputs? the datasheet states 60W peak with no heatsink at THD+N = 1%, how do they want to get 72Wrms out of that?
 ** Merus eximo amps aren't more efficient than other manufacturers amps
+
+
 * drivers:
 ** 2
 *** &quot;1 x 96dB 1” (Ø25mm) neodymium silk dome tweeter&quot;
 *** &quot;2 x 96dB 10” (Ø254mm) woofers&quot;
-** new
+*** 2 × Ø56mm Ports
+** 3
 *** 1” 104 dB Compression Driver Tweeter
 *** 2 × 10” 96dB woofers
-** bass reflex port
-*** 2 × Ø56mm Ports (2)
-*** &quot;Pulse Reflex Port&quot;, just some proprietary ports (new)
+*** &quot;Pulse Reflex Port&quot;, just some proprietary bass reflex port
+** Go
+*** 1 × 10” woofer
+*** 1 × 1” silk dome tweeter
+
+
 * bluetooth chip/functions:
 ** soundboks 2: Bt v3.0
 ** new soundboks: Bt v5.0
 ** DSP (probably just some EQ and active crossover)
 *** there are bluetooth receiver (boards) with integrated DSP functionality
-*** the version 3 seems to have fore functions there
+*** the version 3 seems to have more functions there
+** &quot;~TeamUP connection (SKAA)&quot;
+
+
+* Dimensions
+** 3: 66 × 43 × 32 cm / 25.6 × 17 × 13 inches (H × W × D)
+
+
 * misc:
 ** &quot;Effective frequency range: 40Hz - 20kHz (Effektiver Frequenzbereich: 40Hz - 20kHz)&quot;
 ** max SPL: 122 dB (2), 126 dB (new)
-** &quot;1 x Ø35mm Pole mount (Ø35mm Stangenhalterung)&quot;</pre>
+** &quot;1 x Ø35mm Pole mount (Ø35mm Stangenhalterung)&quot;
+
+Price:
+
+* Go: 700€
+* 2: 700€, was 1000€
+* 3: 1000€</pre>
 </div>
 <div created="20200516205637809" modified="20201107220319446" tags="[[Audio Reproduction and amplification]]" title="Soundsystem">
 <pre>* https://www.sweetwater.com/insync/pa-speaker-buying-guide/
