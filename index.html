@@ -1053,8 +1053,6 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -1616,6 +1614,8 @@ Error message and password prompt
 <li>ports / vents</li>
 
 <li>potentiometers</li>
+
+<li>power analyzer</li>
 
 <li>power electronics (Leistungselektronik)</li>
 
@@ -2225,7 +2225,7 @@ Microwave transformer-based
 ** case, maybe case of a broken PC PSU
 *** cheap furniture glider as feet for the lab bench</pre>
 </div>
-<div created="20220701230517790" modified="20220703184223272" tags="[[current projects]] Art" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
+<div created="20220701230517790" modified="20220704230556278" tags="[[current projects]] Art" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
 <pre>!! Idee
 
 ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
@@ -2233,6 +2233,8 @@ ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bau
 mir waren dann einfarbige neon LED streifen zu einfach und zu langweilig, also wollte ich nach RGB und ansteuerbar schauen, gibts. und dann war veranstaltung mit dem sonnensystem in der robotron kantine und wir hatten DIY LED leisten von den Irrlichtern ausgeliehen und ich war ziemlich begeistert... nun meine ideensammlung:
 
 mit tipps und hilfe von https://irrlicht.uber.space/
+
+siehe https://irrlicht.uber.space/technik
 
 !! Protokolle überblick, kabelgebunden/kabellos
 
@@ -12379,7 +12381,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220625214831320" list="[[Soundboks Internals (Teardown)]] [[Draft 2 of ' 1']] [[current projects]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] About TableOfContents" modified="20220704223340892" title="$:/StoryList">
+<div created="20220625214831320" list="[[power analyzer]] [[Draft 2 of ' 1']] [[current projects]] About TableOfContents" modified="20220704230604609" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -16292,8 +16294,13 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220704222944624" draft.of=" 1" draft.title="mixed signal measurement/test devices" modified="20220704230539727" tags="[[testing &amp; measuring]]" title="Draft 2 of ' 1'">
-<pre>* https://www.geeky-gadgets.com/mixed-signal-frontend-29-01-2020/ ?</pre>
+<div created="20220704222944624" draft.of=" 1" draft.title="mixed signal measurement/test devices" modified="20220704231136767" tags="[[testing &amp; measuring]]" title="Draft 2 of ' 1'">
+<pre>* https://www.geeky-gadgets.com/mixed-signal-frontend-29-01-2020/ ?
+* https://eevblog.com/forum/beginners/any-good-alternative-to-the-agilent-analog-discovery-2-that-i-should-know-about/
+* ADALM1000 - discontinued, was 32€ it seems?
+** https://wiki.analog.com/university/tools/m1k
+* ADALM2000 - 170€ or so
+</pre>
 </div>
 <div created="20220503232048216" modified="20220503232048216" title="Draft of ' 1'">
 <pre>* https://www.youtube.com/watch?v=Gou2V33nByU
@@ -16312,74 +16319,6 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
-</div>
-<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220704223259410" tags="[[current projects]] Art" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
-<pre>!! Idee
-
-ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
-[[YT: bigclivedotcom: Make custom LED neon shapes|https://www.youtube.com/watch?v=y9bSzE9ir1Q]]
-mir waren dann einfarbige neon LED streifen zu einfach und zu langweilig, also wollte ich nach RGB und ansteuerbar schauen, gibts. und dann war veranstaltung mit dem sonnensystem in der robotron kantine und wir hatten DIY LED leisten von den Irrlichtern ausgeliehen und ich war ziemlich begeistert... nun meine ideensammlung:
-
-mit tipps und hilfe von https://irrlicht.uber.space/
-
-siehe https://irrlicht.uber.space/technik
-
-!! Protokolle überblick, kabelgebunden/kabellos
-
-DMX (richtiger DMX512) kann über 5-pol XLR Kabel transportiert werden, manchmal wird aber nur 3-pol XLR benutzt weil 2 leiter nicht wirklich genutzt sind. Es gibt auch systeme um DMX über CAT5 ethernet kabel zu leiten, das erhöht die reichweite. wireless systeme für DMX sind alle proprietär und es scheint da keine offenen standards zu geben, alles recht proprietär und das mag ich nicht. es gibt zwar ein recht großes monopol, aber das mag ich noch weniger.
-
-kabel möchte ich vermeiden weswegen DMX und RDM rausfallen. RDMNet (RDM über netzwerk) ist noch in entwicklung und nicht verbreitet.
-
-kontrollprotokolle die in frage kommen sind (s)ACN oder ~ArtNet, weil die sind IP basiert und funktionieren damit auch über Wlan, außerdem sind beide offene standards und es gibt offene implementationen, sie sind weit verbreitet. beide transportieren im grunde normale DMX steuersignale.
-
-!! Controller
-
-see also [[microcontroller]]
-
-als controller für leisten oder tolerave logo ziehe ich verschiedene microcontroller mit integriertem WLAN in betracht primar ESP8266/ESP32 (vlt. sogar die RISCV versionen) oder vlt. Raspberry Pi Pico W.  die stm32 fallen fast raus, weil die eh kaum zu bekommen sind momentan.
-für esp8266/esp32 gibt es auch schon gute auswahl an fertiger firmware.
-
-proprietär:
-
-* https://www.ulrichradig.de/home/index.php/dmx
-** https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu
-* https://github.com/twischer/WLAN-IO
-* https://www.discohat.com/qlc/
-* https://www.advateklights.com/products/pixel-control
-
-!! LED Typen
-
-was die LEDs angeht bin ich noch am schauen, am verbreitetsten sind die WS2812(x) und WS2813(x) rgb led streifen, der controll chip ist da in den led chips integriert, die laufen aber auf 5V und da ist die stromstärke schnell sehr groß.
-die WS2811 streifen haben zwar einen externen chip, laufen aber auf 12V und sind damit auch praktischer.
-es gibt SK2812 die auch noch einen weiß ton (entweder natur, warm, kalt oder &quot;bernstein&quot;) integrieren, laufen aber auch auf 5V und ich weiß nicht ob es einfach ist software darauf zu mappen.
-relativ neu und am besten scheinen WS2815, integrierter Chip aber laufen auf 12V, aber keine ahnung wie gut man die bekommt, habe die noch nicht viel gesehen.
-es könnte sein das das steuerprotokoll anfällig ist, aber da die so verbreitet sind und die Neon led streifen scheinbar nur mit solchen LEDs existieren werde ich das erstmal testen.
-
-* https://www.advateklights.com/knowledge-base/pixel-leds
-* https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu - has listing of common LED/controller types
-
-Neon
-
-* a lot of those neon LED strips use 3535 LEDs which require an external controller
-* but there are some using the WS2811 controller internally
-
-!! LED Alu Profile/Leisten
-
-es gibt viele kompakte profile für den einbau ins haus oder in/an möbel. stabile für professionelle nutzung scheinbar eher weniger
-
-für die neon led streifen reichen vlt auch einfache alu U-profile
-
-!! DMX/ACN/~ArtNet Steuersoftware
-
-software für den PC ist bisschen rar was open source angeht, aber QLC+ kann da scheinbar alles, ist denke ich auch eine spende an den entwickler wert.
-led/pixel mapping software gibts da weniger. es gibt zwar mapmap, aber das ist nur video projection mapping und supported keine einzelnen LEDs oder andere outputs als beamer, also nicht richtig vergleichbar zu ~MadMapper.
-
-see [[linux VJ, projection/Video Mapping]]
-
-
-
-* https://www.churchtechideas.com/qlc-led-matrix-tutorial/
-* https://en.wikipedia.org/wiki/Show_control</pre>
 </div>
 <div created="20201104201703044" modified="20220703113924138" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -19478,7 +19417,7 @@ Förderung
 ** https://www.lasuv.sachsen.de/foerderung-lastenfahrraeder-pedelecs-4581.html
 * https://www.fahrrad-xxl.de/beratung/lastenfahrrad/foerderung/</pre>
 </div>
-<div created="20220702213427217" modified="20220703005951247" tags="[[current projects]]" title="lautsprecher (selbstbau) pläne/projekte">
+<div created="20220702213427217" modified="20220704230633474" tags="[[current projects]]" title="lautsprecher (selbstbau) pläne/projekte">
 <pre>see [[speaker plan lists]], [[speaker plans/designs]] and [[popular speaker plans / speaker copies / selfbuild speaker designs]]
 
 !! 12&quot; / 10&quot; Tops
@@ -19486,6 +19425,8 @@ Förderung
 leistungsstark
 
 !! Akkubox(en)
+
+besser als [[soundboks|Soundboks Internals (Teardown)]].
 
 !! Horntops
 
@@ -22841,6 +22782,9 @@ cleaning:
 * https://hackaday.com/2022/01/19/giving-vintage-synths-new-life-in-a-potentiometer-cleaning-showdown/
 ** https://www.keithrobertmurray.com/articles/potentiometer-cleaning-showdown.html</pre>
 </div>
+<div created="20220704232209061" modified="20220704232220777" tags="[[testing &amp; measuring]]" title="power analyzer">
+<pre>* https://www.allaboutcircuits.com/news/the-rise-of-low-cost-test-and-measurement-equipment/</pre>
+</div>
 <div created="20201126130954993" modified="20211122231122276" tags="Electronics" title="power electronics (Leistungselektronik)">
 <pre>* https://en.wikipedia.org/wiki/H-bridge
 * [[motor controller / motor inverter]]
@@ -24641,7 +24585,7 @@ i agreed with the owner to look for new cells that fit into the case when i got 
 i haven't looked at the bms jet, but it has a state of charge indicator and balancing.
 the label on the case indicates it jas data communication, maybe something like: https://www.maximintegrated.com/en/products/power/battery-management/battery-fuel-gauges.html/tab1?fam=batt_stat&amp;node=13600&amp;374=OR%7C1-Wire&amp;152=OR%7C1-10%20Cell%20Li-Ion%7C2-4%20Cell%20Li-Ion%7CMulti-Cell%20Li-Ion</pre>
 </div>
-<div created="20200514144908281" modified="20220704230544036" tags="Soundsystem" title="Soundboks Internals (Teardown)">
+<div created="20200514144908281" modified="20220704230549368" tags="Soundsystem" title="Soundboks Internals (Teardown)">
 <pre>* Teardown: https://www.youtube.com/watch?v=WYk2dAuHJWo (Russian?)
 * https://www.soundboks.com/de/products/soundboks-2/techspecs/
 * https://www.soundboks.com/products/soundboks-2/techspecs/
