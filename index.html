@@ -1025,6 +1025,8 @@ Error message and password prompt
 
 <li>display stuff</li>
 
+<li>distortion analyzer</li>
+
 <li>DIY amps</li>
 
 <li>diy analog mixing console</li>
@@ -1064,6 +1066,10 @@ Error message and password prompt
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
+
+<li>Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'</li>
+
+<li>Draft of 'audio testing and measurement'</li>
 
 <li>Draft of 'ESC / BLDC motor driver / controller'</li>
 
@@ -12441,7 +12447,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220625214831320" list="[[Draft of 'linux VJ, projection/Video Mapping']] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[current projects]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220708005606471" title="$:/StoryList">
+<div created="20220625214831320" list="[[distortion analyzer]] [[audio analyzer]] [[Draft of 'audio testing and measurement']] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Draft of 'linux VJ, projection/Video Mapping']] [[current projects]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220708012324728" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13461,8 +13467,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220708005552949" modifier="Thorbijoern" title="$:/temp/search">
-<pre>linux vj</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220708012519989" modifier="Thorbijoern" title="$:/temp/search">
+<pre>distor</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16171,6 +16177,23 @@ infos
 * https://hackaday.com/2022/04/19/oled-display-kicks-knob-up-several-accurate-notches/
 * https://hackaday.com/2022/05/24/character-vfd-becomes-spectrum-analyzer/</pre>
 </div>
+<div created="20220708012509898" modified="20220708013152807" tags="[[audio testing and measurement]] [[testing &amp; measuring]]" title="distortion analyzer">
+<pre>Open hardware/DIY
+
+* https://www.nutsvolts.com/magazine/article/build-a-basic-audio-distortion-analyzer
+* https://www.reddit.com/r/diyaudio/comments/3wd5s6/diy_open_source_distortion_analyser_programmer/
+* https://www.diyaudio.com/community/threads/diy-distortion-analyzer-analysis.1565/
+
+
+stuff
+
+* https://eevblog.com/forum/testgear/distortion-analyzer-suggestions/
+
+
+proprietary:
+
+* https://www.reddit.com/r/diyaudio/comments/3wd5s6/diy_open_source_distortion_analyser_programmer/</pre>
+</div>
 <div created="20201104164448012" modified="20210331135326150" tags="[[audio amplifiers]]" title="DIY amps">
 <pre>* http://www.devtome.com/an_open_source_hi-fi_amplifier
 * [[HiFi Elektronik Selbstbauprojekte: Do it yourself (DIY) Tipps|http://www.hifi-forum.de/viewforum-103.html]]
@@ -16531,10 +16554,203 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
+<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220708012002157" tags="[[current projects]] Art" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
+<pre>!! Idee
+
+ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
+[[YT: bigclivedotcom: Make custom LED neon shapes|https://www.youtube.com/watch?v=y9bSzE9ir1Q]]
+mir waren dann einfarbige neon LED streifen zu einfach und zu langweilig, also wollte ich nach RGB und ansteuerbar schauen, gibts. und dann war veranstaltung mit dem sonnensystem in der robotron kantine und wir hatten DIY LED leisten von den Irrlichtern ausgeliehen und ich war ziemlich begeistert... nun meine ideensammlung:
+
+mit tipps und hilfe von https://irrlicht.uber.space/
+
+siehe https://irrlicht.uber.space/technik
+
+!! Protokolle überblick, kabelgebunden/kabellos
+
+DMX (richtiger DMX512) kann über 5-pol XLR Kabel transportiert werden, manchmal wird aber nur 3-pol XLR benutzt weil 2 leiter nicht wirklich genutzt sind. Es gibt auch systeme um DMX über CAT5 ethernet kabel zu leiten, das erhöht die reichweite. wireless systeme für DMX sind alle proprietär und es scheint da keine offenen standards zu geben, alles recht proprietär und das mag ich nicht. es gibt zwar ein recht großes monopol, aber das mag ich noch weniger.
+
+kabel möchte ich vermeiden weswegen DMX und RDM rausfallen. RDMNet (RDM über netzwerk) ist noch in entwicklung und nicht verbreitet.
+
+kontrollprotokolle die in frage kommen sind (s)ACN oder ~ArtNet, weil die sind IP basiert und funktionieren damit auch über Wlan, außerdem sind beide offene standards und es gibt offene implementationen, sie sind weit verbreitet. beide transportieren im grunde normale DMX steuersignale.
+
+* https://wiki.openlighting.org/index.php/Comparison_of_DMX_over_IP_protocols
+** https://wiki.openlighting.org/index.php/Category:ArtNet
+* https://wiki.openlighting.org/index.php/Category:E1.31
+
+
+!! Controller
+
+see also [[microcontroller]]
+
+als controller für leisten oder tolerave logo ziehe ich verschiedene microcontroller mit integriertem WLAN in betracht primar ESP8266/ESP32 (vlt. sogar die RISCV versionen) oder vlt. Raspberry Pi Pico W.  die stm32 fallen fast raus, weil die eh kaum zu bekommen sind momentan.
+für esp8266/esp32 gibt es auch schon gute auswahl an fertiger firmware.
+
+proprietär:
+
+* https://www.ulrichradig.de/home/index.php/dmx
+** https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu
+* https://github.com/twischer/WLAN-IO
+* https://www.discohat.com/qlc/
+* https://www.advateklights.com/products/pixel-control
+
+!! LED Typen
+
+was die LEDs angeht bin ich noch am schauen, am verbreitetsten sind die WS2812(x) und WS2813(x) rgb led streifen, der controll chip ist da in den led chips integriert, die laufen aber auf 5V und da ist die stromstärke schnell sehr groß.
+die WS2811 streifen haben zwar einen externen chip, laufen aber auf 12V und sind damit auch praktischer.
+es gibt SK2812 die auch noch einen weiß ton (entweder natur, warm, kalt oder &quot;bernstein&quot;) integrieren, laufen aber auch auf 5V und ich weiß nicht ob es einfach ist software darauf zu mappen.
+relativ neu und am besten scheinen WS2815, integrierter Chip aber laufen auf 12V, aber keine ahnung wie gut man die bekommt, habe die noch nicht viel gesehen.
+es könnte sein das das steuerprotokoll anfällig ist, aber da die so verbreitet sind und die Neon led streifen scheinbar nur mit solchen LEDs existieren werde ich das erstmal testen.
+
+* https://www.advateklights.com/knowledge-base/pixel-leds
+* https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu - has listing of common LED/controller types
+
+Neon
+
+* a lot of those neon LED strips use 3535 LEDs which require an external controller
+* but there are some using the WS2811 controller internally
+
+!! LED Alu Profile/Leisten
+
+es gibt viele kompakte profile für den einbau ins haus oder in/an möbel. stabile für professionelle nutzung scheinbar eher weniger
+
+für die neon led streifen reichen vlt auch einfache alu U-profile
+
+* https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-mini-24-flach/profi-led-set-4m-2x2m-aufbauprofil-mini-24-schwarz-mit-runder-opaler-abdeckung
+
+!! DMX/ACN/~ArtNet Steuersoftware
+
+software für den PC ist bisschen rar was open source angeht, aber QLC+ kann da scheinbar alles, ist denke ich auch eine spende an den entwickler wert.
+led/pixel mapping software gibts da weniger. es gibt zwar mapmap, aber das ist nur video projection mapping und supported keine einzelnen LEDs oder andere outputs als beamer, also nicht richtig vergleichbar zu ~MadMapper.
+
+see [[open VJ, projection/Video Mapping]]
+
+
+
+* https://www.churchtechideas.com/qlc-led-matrix-tutorial/
+* https://en.wikipedia.org/wiki/Show_control
+
+
+!! verkabelung/controller pcb design etc.
+
+* Level shifter für 3.3V uC
+** https://www.addicore.com/Logic-Level-Converter-Bi-Directional-5V-to-3-3V-p/227.htm
+** https://www.adafruit.com/product/1787
+** https://www.adafruit.com/product/1779
+* resistor für daten line an LEDs
+** https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels
+** https://forum.arduino.cc/t/arduino-ws2812b-data-pin-resistor/533031/3
+** https://forums.parallax.com/discussion/158590/ws2812b-and-series-resistor
+** tutorials with unknows quality suggest ~220-510Ohm
+** https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices
+** adafruit states 300-500 Ohm
+* elko für pufferung an LEDs
+
+!! controller firmware
+
+* https://fastled.io/
+** https://github.com/FastLED/FastLED/wiki/Overview
+** https://github.com/FastLED/FastLED/wiki/ESP8266-notes
+
+* https://www.youtube.com/results?search_query=esp32+artnet</pre>
+</div>
+<div created="20201107220632630" draft.of="audio testing and measurement" draft.title="audio testing and measurement" modified="20220708012438481" tags="Audio [[testing &amp; measuring]]" title="Draft of 'audio testing and measurement'">
+<pre>* https://en.wikipedia.org/wiki/Electrical_characteristics_of_dynamic_loudspeakers
+* https://en.wikipedia.org/wiki/Audio_system_measurements
+* https://www.youtube.com/watch?v=ninFs1HWcMs&amp;list=PLupjt2J2x38fUAiUFobzyJwUvy_Uq8ToW
+* [[YT: #BEHRINGER #SOUNDKARTE günstige Lösung ~ Reicht das kleine Audio Interface zum Messen?|https://www.youtube.com/watch?v=JsDxViPYhOc]]
+* https://en.wikipedia.org/wiki/Smaart
+** https://www.rationalacoustics.com/smaart/about-smaart/
+* REW Room EQ Wizard
+* Theremino
+** [[WaveAnalyzer|https://www.theremino.com/en/downloads/uncategorized#waveanalyzer]]
+** [[WaveGenerator|https://www.theremino.com/en/downloads/uncategorized#wavegenerator]]
+** [[Audio Input with Vumeter|https://www.theremino.com/en/downloads/multimedia#audioinput]]
+** [[AudioExamples (playing, various)|https://www.theremino.com/en/downloads/multimedia#audioexamples]]
+** [[AudioAnalyzer|https://www.theremino.com/en/downloads/multimedia#audioanalyzer]]
+** [[DAA – audio analyzer and oscilloscope|https://www.theremino.com/en/downloads/uncategorized#daa]]
+* https://en.wikipedia.org/wiki/Category:Acoustic_measurement
+* https://en.wikipedia.org/wiki/Category:Signal_processing
+* https://en.wikipedia.org/wiki/Category:Time%E2%80%93frequency_analysis
+* https://en.wikipedia.org/wiki/Category:Time_domain_analysis
+* https://en.wikipedia.org/wiki/Impulse_response
+* https://en.wikipedia.org/wiki/Waterfall_plot
+* https://en.wikipedia.org/wiki/Loudspeaker_acoustics
+* https://en.wikipedia.org/wiki/Loudspeaker_measurement
+* https://en.wikipedia.org/wiki/Category:Sound_measurements
+* https://en.wikipedia.org/wiki/Category:Acoustic_measurement
+* http://spectrum3d.sourceforge.net/
+* https://github.com/YongChingTee/spectrogram_gtk/
+* https://octave.sourceforge.io/signal/function/specgram.html
+* https://sourceforge.net/projects/ltfat/
+* https://ltfat.github.io/
+* https://www.nti-audio.com/en/support/know-how/lets-clear-up-some-things-about-sweeps
+* https://www.audiocheck.net/index.php
+* https://onlinetonegenerator.com/
+* https://satsignal.eu/software/audio.html - freeware, but can be pretty easily implemented as open source
+* https://theaudioprogrammer.com/signal-analysis-ii-linear-vs-logarithmic-sine-sweep/
+* https://www.paulvdiyblogs.net/2017/10/setting-up-fft-measuring-system.html
+* https://www.paulvdiyblogs.net/2015/05/simple-but-precisice-1khz-distortion.html
+* https://www.hifi-selbstbau.de/grundlagen-mainmenu-35/softwaremesstechnik-mainmenu-66
+* https://www.tolvan.com/index.php?page=/main/home.php
+* https://sound-au.com/project93.htm
+* https://sound-au.com/p-cat.htm#tst
+* https://ltfat.org/
+* https://sndtools.cs.princeton.edu/
+* https://www.academia.edu/33571411/ESTABLISHING_THE_PERFORMANCE_OF_A_DIY_TAPPED_HORN_LOUDSPEAKER?f_ri=1381325
+* https://www.academia.edu/33571535/ESTABLISHING_THE_PERFORMANCE_OF_A_DIY_TAPPED_HORN_SUBWOOFER?f_ri=1381325
+* https://en.wikipedia.org/wiki/Category:Time%E2%80%93frequency_analysis
+* https://en.wikipedia.org/wiki/Category:Acoustics_software
+* https://www.merlijnvanveen.nl/en/calculators
+* systune - expensive
+** https://www.afmg.eu/en/afmg-systune
+** https://paforum.de/forum/index.php?thread/136473-systune-vs-satlive-vs-smaart-di-rita-praxiserfahrungen-im-vergleich/
+** https://paforum.de/forum/index.php?thread/84673-neue-software-systune-oder-smaart-7/
+** https://www.mediterraneanacoustics.com/systune---professional-audio-measurement.html
+
+plots:
+
+* 2d/3d spectrogram
+* sound level meter (db SPL (peak))
+* just the &quot;normal&quot; audio waveform
+
+distortion (klirrfaktor)
+
+* http://www.jobst-audio.de/tools-nuetzliches/klirrfaktor
+* https://www.paulvdiyblogs.net/2015/05/simple-but-precisice-1khz-distortion.html
+
+
+linux/open source
+
+* https://www.linuxlinks.com/best-free-open-source-audio-analyzers/
+* https://www.linuxcompatible.org/story/9-best-free-and-open-source-audio-analyzers/
+* https://www.reddit.com/r/livesound/comments/fvfbo9/open_source_audio_analyzer/
+* https://awesomeopensource.com/projects/audio/spectrum-analyzer
+* https://github.com/topics/audio-analyzer
+* https://friture.org/
+* https://opensource.com/article/19/9/audio-processing-machine-learning-python
+** https://pubmed.ncbi.nlm.nih.gov/26656189/
+* https://www.opensourceagenda.com/projects/audio-spectrum-analyzer-in-python
+* https://en.wikipedia.org/wiki/Comparison_of_free_software_for_audio#Audio_analysis
+** https://en.wikipedia.org/wiki/BRP-PACU
+** ~~https://en.wikipedia.org/wiki/Baudline~~ - not open source, but useful feature list
+* https://sonicvisualiser.org/
+** https://en.wikipedia.org/wiki/Sonic_Visualiser
+* https://github.com/alexkay/spek
+** https://web.archive.org/web/20210729045511/http://spek.cc/
+** https://www.hecticgeek.com/spek-free-acoustic-spectrum-analyzer/
+* https://sourceforge.net/projects/audmes/
+* see [[open source spectrum analysis software]]
+* https://opensoundmeter.com/en/
+** https://github.com/psmokotnin/osm
+** https://opensoundmeter.com/en/tools
+*** https://github.com/psmokotnin/SubAlign
+
+</pre>
+</div>
 <div modified="20220705015906540" title="Draft of 'ESC / BLDC motor driver / controller'">
 <pre></pre>
 </div>
-<div created="20220702224938457" draft.of="linux VJ, projection/Video Mapping" draft.title="open VJ, projection/Video Mapping" modified="20220708005601600" tags="Art" title="Draft of 'linux VJ, projection/Video Mapping'">
+<div created="20220702224938457" draft.of="linux VJ, projection/Video Mapping" draft.title="open VJ, projection/Video Mapping" modified="20220708011627383" tags="Art" title="Draft of 'linux VJ, projection/Video Mapping'">
 <pre>general info
 
 * https://en.wikipedia.org/wiki/VJing
@@ -16589,6 +16805,10 @@ light controll software
 ** https://www.openlighting.org/openlightingproject/projects/
 ** https://opendmx.net/index.php/Open_Lighting_Project
 ** https://wiki.openlighting.org/index.php/Open_Lighting_Project
+* https://xlights.org/
+** https://www.nutcracker123.com/wk/index.php/Main_Page
+* https://github.com/neophob/PixelController
+** https://www.ledstyles.de/index.php?thread/17655-open-source-led-matrix-steuerung-pixelcontroller/&amp;pageNo=1
 
 video/projection mapping/mixing software
 
@@ -16603,6 +16823,23 @@ video/projection mapping/mixing software
 * https://mapmapteam.github.io/
 * https://sourceforge.net/projects/glmixer/ - discontinued
 * https://brunoherbelin.github.io/vimix/
+* https://www.opensourceimaging.org/project/structured-light-3d-scanner/
+
+
+led mapping
+
+* https://github.com/bertspaan/led-strip-mapper
+* https://github.com/vivedo/ledmapper
+* https://hackaday.com/2022/03/23/finally-a-mapping-tool-for-addressable-led-strings/
+* https://opensourcelibs.com/lib/lightwork
+* https://www.reddit.com/r/led/comments/eqlq9q/software_for_mapping_leds_open_source/
+* https://alltd.org/led-mapping-gpu-pipelines-with-lucas-morgan-2/
+* https://github.com/neophob/PixelController
+** https://www.ledstyles.de/index.php?thread/17655-open-source-led-matrix-steuerung-pixelcontroller/&amp;pageNo=1
+* https://github.com/techtim/ofxLedMapper
+* https://github.com/hzeller/rpi-rgb-led-matrix
+** https://github.com/hzeller/rpi-matrix-pixelpusher
+
 
 proprietary controller stuff
 
@@ -24667,11 +24904,11 @@ tools
 
 * https://www.tunemymusic.com/ - convert playlists between platforms</pre>
 </div>
-<div created="20210425212620442" modified="20220703002214472" tags="[[digital audio]] Art [[Audio Reproduction and amplification]]" title="show control">
+<div created="20210425212620442" modified="20220708005644963" tags="[[digital audio]] Art [[Audio Reproduction and amplification]]" title="show control">
 <pre>* [[Open Sound Control (protocol)]]
 * https://en.wikipedia.org/wiki/Show_control
 * [[Audio streaming]]
-* [[linux VJ, projection/Video Mapping]]</pre>
+* [[open VJ, projection/Video Mapping]]</pre>
 </div>
 <div created="20210805131334722" modified="20210805133839675" tags="[[Solar / renewable energy]] [[electronics safety]]" title="sicherheit von mobilen stromerzeugern">
 <pre>* see [[generator]]
