@@ -1077,10 +1077,6 @@ Error message and password prompt
 
 <li>Draft of 'ESC / BLDC motor driver / controller'</li>
 
-<li>Draft of 'motor / motorized faders / potentiometers'</li>
-
-<li>Draft of 'universal Midi/OSC/DAW controller'</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -12484,7 +12480,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220710192910147" list="[[dsp (digital signal processor) / digital crossover]] [[Draft of 'motor / motorized faders / potentiometers']] [[input / control devices]] [[Open Source modular DJ-Controller]] [[bldc motor (as) encoder]] [[Draft of 'universal Midi/OSC/DAW controller']] [[pcb repair]] [[electronics thermal management, heat sinking]] [[pcb repair and electronics cleaning supplies]] [[professioneller boxenbau]] About TableOfContents" modified="20220714005123626" title="$:/StoryList">
+<div created="20220710192910147" list="[[input / control devices]] encoders [[Open Source modular DJ-Controller]] [[bldc motor (as) encoder]] [[pcb repair]] [[electronics thermal management, heat sinking]] [[pcb repair and electronics cleaning supplies]] [[professioneller boxenbau]] About TableOfContents" modified="20220714005418523" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13504,8 +13500,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220714005122165" modifier="Thorbijoern" title="$:/temp/search">
-<pre>dsp</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220714005326444" modifier="Thorbijoern" title="$:/temp/search">
+<pre>daw</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16673,41 +16669,6 @@ some android stuff for Fairphone 3:
 <div modified="20220705015906540" title="Draft of 'ESC / BLDC motor driver / controller'">
 <pre></pre>
 </div>
-<div created="20220714000955807" draft.of="motor / motorized faders / potentiometers" draft.title="motor / motorized faders / potentiometers" modified="20220714002540193" tags="[[input / control devices]] [[electronics parts/components]]" title="Draft of 'motor / motorized faders / potentiometers'">
-<pre>* https://www.youtube.com/results?search_query=motor+fader
-
-sourcing
-
-* ALPS is THE brand, but very expensive
-
-using
-
-* https://tttapa.github.io/Pages/Arduino/Control-Theory/Motor-Fader/
-* [[Custom Fader Board Project|https://www.youtube.com/watch?v=F_ABZ2ELtX0]]
-* https://blog.codyhazelwood.me/motorized-faders-and-the-arduino/</pre>
-</div>
-<div created="20220528151554850" draft.of="universal Midi/OSC/DAW controller" draft.title="universal Midi/OSC/DAW controller" modified="20220714002746847" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]]" title="Draft of 'universal Midi/OSC/DAW controller'">
-<pre>* as DAW Controller or control for Behringer XAir devices or so
-* https://hackaday.com/tag/digital-gauge/
-* see [[Midi]]
-* see [[Open Sound Control (protocol)]]
-* https://hackaday.com/2022/04/19/oled-display-kicks-knob-up-several-accurate-notches/
-* https://hackaday.com/tag/volume-knob/
-* https://forum.arduino.cc/t/arduino-daw-controller-motorized-fader/541497/4
-* https://recording.de/threads/ansteuerung-motorfader-potorpoti-diy-midi-controller.180379/
-* [[Arduino based MIDI remote controller with motorized faders|https://www.youtube.com/watch?v=L6clR0FPKQM]]
-
-using
-
-* normal [[encoders]] or [[potentiometers]] are great, but lack feedback
-* feedback can be provided using Displays or LED indicators, like bars or rings
-* [[bldc motor (as) encoder]]
-* [[motor / motorized faders / potentiometers]]
-
-* inspiration
-** https://www.thomann.de/de/daw_controller.html
-** https://www.thomann.de/de/computer_controller_etc.html</pre>
-</div>
 <div created="20201104201703044" modified="20220713150447300" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -17263,8 +17224,17 @@ i got recommended keratherm 86/60, i don't have much experience with other produ
 * see [[inter IC or inter device communication, networking]]
 * see [[single board computer (SBC)]]</pre>
 </div>
-<div created="20211008122052928" modified="20220714000605502" tags="[[electronics parts/components]] [[input / control devices]]" title="encoders">
-<pre>rotary encoder
+<div created="20211008122052928" modified="20220714010333320" tags="[[electronics parts/components]] [[input / control devices]]" title="encoders">
+<pre>optical linear encoders
+
+* like used in printers
+
+capacitive/inductive linear encoders
+
+* https://commons.wikimedia.org/wiki/File:Digital_caliper_capacitive_linear_encoder_on_bottom_of_slider.jpg
+* https://www.engineerlive.com/content/evaluation-kits-miniature-inductive-encoders
+
+rotary encoder
 
 * https://www.paulvdiyblogs.net/2016/11/demistifying-rotary-encoders-some-more.html
 * https://www.paulvdiyblogs.net/2015/12/rotary-encoders-raspberry-pi.html
@@ -21303,8 +21273,18 @@ stuff
 
 * [[Wie man ein Fahrrad baut - SWR Handwerkskunst|https://www.youtube.com/watch?v=ZUK7SKumutQ]]</pre>
 </div>
-<div created="20220714000955807" modified="20220714001149585" tags="[[input / control devices]] [[electronics parts/components]]" title="motor / motorized faders / potentiometers">
-<pre></pre>
+<div created="20220714000955807" modified="20220714005413830" tags="[[input / control devices]] [[electronics parts/components]]" title="motor / motorized faders / potentiometers">
+<pre>* https://www.youtube.com/results?search_query=motor+fader
+
+sourcing
+
+* ALPS is THE brand, but very expensive
+
+using
+
+* https://tttapa.github.io/Pages/Arduino/Control-Theory/Motor-Fader/
+* [[Custom Fader Board Project|https://www.youtube.com/watch?v=F_ABZ2ELtX0]]
+* https://blog.codyhazelwood.me/motorized-faders-and-the-arduino/</pre>
 </div>
 <div created="20220705015537311" modified="20220705015947112" tags="[[power electronics (Leistungselektronik)]]" title="motor controller / driver">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -26711,7 +26691,7 @@ closed, proprietary
 ** https://www.libinst.com/SynergyCalc/Synergy%20Calc%20V5.pdf
 * http://techtalk.parts-express.com/forum/tech-talk-forum/50902-buyouts-into-a-synergy?231569-Buyouts-into-a-Synergy=</pre>
 </div>
-<div created="20220528151554850" modified="20220714002319267" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]]" title="universal Midi/OSC/DAW controller">
+<div created="20220528151554850" modified="20220714005345767" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]] [[input / control devices]]" title="universal Midi/OSC/DAW controller">
 <pre>* as DAW Controller or control for Behringer XAir devices or so
 * https://hackaday.com/tag/digital-gauge/
 * see [[Midi]]
@@ -26719,6 +26699,9 @@ closed, proprietary
 * https://hackaday.com/2022/04/19/oled-display-kicks-knob-up-several-accurate-notches/
 * https://hackaday.com/tag/volume-knob/
 * https://forum.arduino.cc/t/arduino-daw-controller-motorized-fader/541497/4
+* https://recording.de/threads/ansteuerung-motorfader-potorpoti-diy-midi-controller.180379/
+* [[Arduino based MIDI remote controller with motorized faders|https://www.youtube.com/watch?v=L6clR0FPKQM]]
+* http://96khz.org/htm/midicontroller31.htm
 
 using
 
