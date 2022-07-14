@@ -1077,15 +1077,9 @@ Error message and password prompt
 
 <li>Draft of ' 2'</li>
 
-<li>Draft of ' 3'</li>
-
-<li>Draft of ' 4'</li>
-
 <li>Draft of ''</li>
 
 <li>Draft of 'ESC / BLDC motor driver / controller'</li>
-
-<li>Draft of 'Open Source modular DJ-Controller'</li>
 
 <li>Draft of 'universal midi/osc controller'</li>
 
@@ -1457,6 +1451,8 @@ Error message and password prompt
 
 <li>modular, open source bike designs</li>
 
+<li>motor / motorized faders / potentiometers</li>
+
 <li>motor controller / driver</li>
 
 <li>motor controller / motor inverter</li>
@@ -1622,6 +1618,8 @@ Error message and password prompt
 <li>PC troubleshooting tools</li>
 
 <li>pcb design</li>
+
+<li>pcb repair</li>
 
 <li>Peavey PV8 USB 8-Channel Mixing Console repair</li>
 
@@ -12082,8 +12080,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20200512220852593" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20200512220838244" modified="20220714000225973" title="$:/state/tab/sidebar--595412856">
-<pre>TableOfContents</pre>
+<div created="20200512220838244" modified="20220714001143820" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -12484,7 +12482,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220710192910147" list="[[Draft of ' 3']] [[input / control devices]] [[bldc motor (as) encoder]] [[Draft of 'Open Source modular DJ-Controller']] [[Draft of 'universal midi/osc controller']] [[Draft of ' 4']] [[electronics thermal management, heat sinking]] [[Draft of ' 2']] [[Draft 2 of ' 1']] About TableOfContents" modified="20220714001002674" title="$:/StoryList">
+<div created="20220710192910147" list="[[motor / motorized faders / potentiometers]] [[input / control devices]] [[bldc motor (as) encoder]] [[Open Source modular DJ-Controller]] [[Draft of 'universal midi/osc controller']] [[pcb repair]] [[electronics thermal management, heat sinking]] [[Draft of ' 2']] [[Draft 2 of ' 1']] About TableOfContents" modified="20220714001002674" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -16703,17 +16701,6 @@ cleaning
 * https://www.globus-baumarkt.de/spraytec-kontaktreiniger-400ml?fs=592332339
 ** https://www.auto-k.de/lacksprays/weitere-marken/spraytec/technische-sprays/kontaktreiniger-spray/</pre>
 </div>
-<div created="20220714000955807" draft.of=" 3" draft.title="motor / motorized faders / potentiometers" modified="20220714001058265" tags="[[input / control devices]] [[electronics parts/components]]" title="Draft of ' 3'">
-<pre></pre>
-</div>
-<div created="20220713205753685" draft.of=" 4" draft.title="pcb repair" modified="20220713211324454" tags="repairs" title="Draft of ' 4'">
-<pre>see [[pcb repair and electronics cleaning supplies]]
-
-* http://www.cryo-sonic.com/
-** https://hackaday.com/2014/11/13/extreme-repair-of-a-burnt-pcb/
-* [[PCB solder pad repair &amp; corrosion clean up - The epoxy method|https://www.youtube.com/watch?v=vx50YtEC2S8]]
-* [[EEVblog #682 - Ness D16X Alarm Panel Repair|https://www.youtube.com/watch?v=h6D4MMWjrmM|]]</pre>
-</div>
 <div created="20220125173100090" draft.of="" draft.title="Fairphone 3(+), Android stuff" modified="20220125173642038" tags="[[My Setup]] [[computer science / IT stuff]]" title="Draft of ''">
 <pre>I got myself a used Fairphone 3+ as replacement for my old Nexus 5.
 
@@ -16727,58 +16714,20 @@ some android stuff for Fairphone 3:
 <div modified="20220705015906540" title="Draft of 'ESC / BLDC motor driver / controller'">
 <pre></pre>
 </div>
-<div created="20200908120601760" draft.of="Open Source modular DJ-Controller" draft.title="Open Source modular DJ-Controller" modified="20220714000834009" tags="[[digital audio]] [[Open Audio Hardware]] [[Audio Projects]] [[current projects]] [[input / control devices]]" title="Draft of 'Open Source modular DJ-Controller'">
-<pre>a DJ-Controller is a device that mimics turntables, it's basically just a input and controll device for humans, all of the work is done on PC.
-
-it's basically just a bunch of encoders with optical feedback (LEDs).
-
-the controller interfaces with the pc via:&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
-
-* USB HID - is a clusterfuck
-* Midi (over USB) - is pretty nice i think, very universal
-
-and most controllers also inlcude an audio interface out of convenience, so the user doesn't need a separate one, but that is optional.
-
-it would be nice to build an open source design which is modular, so you can mix and match a dj-mixer, several turntables and a launchpad for example.
-
-examples (commercial, proprietary)
-
-* palette controller / https://monogramcc.com/ - very modular
-* 
-
-ideas:
-
-* there are several microcontrollers (arduino, esp) which can be USB input devices, and also Midi devices/controllers over usb
-** see [[Midi]]
-* need to find the right encoders for the job
-** encoders for the jogwheels
-** encoders for the other knobs
-** https://de.wikipedia.org/wiki/Inkrementalgeber
-** https://lastminuteengineers.com/rotary-encoder-arduino-tutorial/
-** https://www.mikrocontroller.net/articles/Drehgeber
-** ''[[bldc motor (as) encoder]] !!!''
-* feedback is pretty easy with LED rings arround the encoders (adafruit neo-pixel style)
-* need to find a nice, open interface through which the single devices can be connected (maybe chaining midi?)
-* has to be compatible and supported by open source mixing software like https://www.mixxx.org/
-* https://www.denondj.com/sc5000m%20prime-sc5000mprimexus - might also use BLDC motors for feedback and encoders
-
-reverse engineering and modifying existing (outdated) controllers
-
-* https://djtechtools.com/2020/02/09/kontrol-s1-djdoubleyou-sawed-a-deck-off-a-kontrol-s4-to-make-a-new-diy-controller/
-* https://willwillems.com/projects/s1.html
-* https://github.com/NickolasBoyer/KontrolS1
-* https://s1.willwillems.com/
-* https://forum.djtechtools.com/showthread.php?t=96697
-
-</pre>
-</div>
-<div created="20220528151554850" draft.of="universal midi/osc controller" draft.title="universal Midi/OSC/DAW controller" modified="20220713235527580" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]]" title="Draft of 'universal midi/osc controller'">
+<div created="20220528151554850" draft.of="universal midi/osc controller" draft.title="universal Midi/OSC/DAW controller" modified="20220714001450364" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]]" title="Draft of 'universal midi/osc controller'">
 <pre>* as DAW Controller or control for Behringer XAir devices or so
 * https://hackaday.com/tag/digital-gauge/
 * see [[Midi]]
 * see [[Open Sound Control (protocol)]]
 * https://hackaday.com/2022/04/19/oled-display-kicks-knob-up-several-accurate-notches/
 * https://hackaday.com/tag/volume-knob/
+
+using
+
+* normal [[encoders]] or [[potentiometers]] are great, but lack feedback
+* feedback can be provided using Displays or LED indicators, like bars or rings
+* [[bldc motor (as) encoder]]
+* [[motor / motorized faders / potentiometers]]
 
 * inspiration
 ** https://www.thomann.de/de/daw_controller.html
@@ -21376,6 +21325,9 @@ stuff
 
 * [[Wie man ein Fahrrad baut - SWR Handwerkskunst|https://www.youtube.com/watch?v=ZUK7SKumutQ]]</pre>
 </div>
+<div created="20220714000955807" modified="20220714001149585" tags="[[input / control devices]] [[electronics parts/components]]" title="motor / motorized faders / potentiometers">
+<pre></pre>
+</div>
 <div created="20220705015537311" modified="20220705015947112" tags="[[power electronics (Leistungselektronik)]]" title="motor controller / driver">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -22709,12 +22661,12 @@ thoughts
 * [[telegram scraping for good (osint)]]
 * https://sector035.nl/articles</pre>
 </div>
-<div created="20200908120601760" modified="20210320202732356" tags="[[digital audio]] [[Open Audio Hardware]] [[Audio Projects]]" title="Open Source modular DJ-Controller">
+<div created="20200908120601760" modified="20220714001209055" tags="[[digital audio]] [[Open Audio Hardware]] [[Audio Projects]] [[current projects]] [[input / control devices]]" title="Open Source modular DJ-Controller">
 <pre>a DJ-Controller is a device that mimics turntables, it's basically just a input and controll device for humans, all of the work is done on PC.
 
 it's basically just a bunch of encoders with optical feedback (LEDs).
 
-the controller interfaces with the pc via:
+the controller interfaces with the pc via:&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
 * USB HID - is a clusterfuck
 * Midi (over USB) - is pretty nice i think, very universal
@@ -22738,11 +22690,13 @@ ideas:
 ** https://de.wikipedia.org/wiki/Inkrementalgeber
 ** https://lastminuteengineers.com/rotary-encoder-arduino-tutorial/
 ** https://www.mikrocontroller.net/articles/Drehgeber
+** ''[[bldc motor (as) encoder]] !!!''
 * feedback is pretty easy with LED rings arround the encoders (adafruit neo-pixel style)
 * need to find a nice, open interface through which the single devices can be connected (maybe chaining midi?)
 * has to be compatible and supported by open source mixing software like https://www.mixxx.org/
+* https://www.denondj.com/sc5000m%20prime-sc5000mprimexus - might also use BLDC motors for feedback and encoders
 
-reverse engineering and monifying existing outdated controllers
+reverse engineering and modifying existing (outdated) controllers
 
 * https://djtechtools.com/2020/02/09/kontrol-s1-djdoubleyou-sawed-a-deck-off-a-kontrol-s4-to-make-a-new-diy-controller/
 * https://willwillems.com/projects/s1.html
@@ -23309,6 +23263,14 @@ stuff
 * https://www.youtube.com/watch?v=R_Ud-FxUw0g
 
 !! noise reduction</pre>
+</div>
+<div created="20220713205753685" modified="20220714001454688" tags="repairs" title="pcb repair">
+<pre>see [[pcb repair and electronics cleaning supplies]]
+
+* http://www.cryo-sonic.com/
+** https://hackaday.com/2014/11/13/extreme-repair-of-a-burnt-pcb/
+* [[PCB solder pad repair &amp; corrosion clean up - The epoxy method|https://www.youtube.com/watch?v=vx50YtEC2S8]]
+* [[EEVblog #682 - Ness D16X Alarm Panel Repair|https://www.youtube.com/watch?v=h6D4MMWjrmM|]]</pre>
 </div>
 <div created="20220406230035998" modified="20220709220957668" tags="[[audio repairs]] [[current projects]]" title="Peavey PV8 USB 8-Channel Mixing Console repair">
 <pre>* https://elektrotanya.com/peavey_pv8_mixer_sch.pdf/download.html
