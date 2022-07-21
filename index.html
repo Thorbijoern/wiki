@@ -1089,6 +1089,10 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
+<li>Draft of 'CD and DVD player repair'</li>
+
+<li>Draft of 'Numark CDN77 USB repair'</li>
+
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -1248,6 +1252,8 @@ Error message and password prompt
 <li>GNOME Nextcloud integration with OTP</li>
 
 <li>good, affordable LCR+ESR Meters</li>
+
+<li>grease / oil for repairs</li>
 
 <li>großes modulares Akkupack mit Wechselrichter</li>
 
@@ -12530,7 +12536,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220717161030583" list="[[ESC / BLDC motor driver / controller]] Projects [[current projects]] [[großes modulares Akkupack mit Wechselrichter]] About TableOfContents" modified="20220718232207858" title="$:/StoryList">
+<div created="20220717161030583" list="[[grease / oil for repairs]] [[Draft of 'Numark CDN77 USB repair']] [[Draft of 'CD and DVD player repair']] [[ESC / BLDC motor driver / controller]] Projects [[current projects]] [[großes modulares Akkupack mit Wechselrichter]] About TableOfContents" modified="20220721091325471" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13550,7 +13556,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220718232252153" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20220721092633944" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -16748,6 +16754,39 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
+<div created="20220702002055128" draft.of="CD and DVD player repair" draft.title="CD and DVD player repair" modified="20220721092624372" tags="repairs" title="Draft of 'CD and DVD player repair'">
+<pre>cd and dvd players seem to have common problems that they stop playing disc after some time, only accept certain disks, don't accept discs at all or similar. These problems seem to be related to aging laser diodes, were the light output of the diodes drops after some years of use and it can't propperly read discs anymore.
+
+maybe there is also some other buggy behavior that can be observed, like the controllers sometimes failing to eject the disks, but i don't have good data on that.
+
+most times there are small potentiometers next to the laser diode assembly or on the pcbs or flatflex cables with hold power and data lines for the laser assembly. those pots set the current with which the laser diode is driven. they can be adjusted to give the diode more output again, but that also means more power which is dissipated in the diode and makes it age. but adjustments have to be done very carefully in order to not overpower and burn the laser diode, rendering it useless.
+a good practice is to mark the factory setting of the potentiometers bevor going further. then trying to adjust them by very tiny amounts in either direction and testing for improvement.
+
+i was not jet able to test these infos on cheap devices.
+
+i don't jet know if it is possible or viable to replace laser diodes.
+
+i'm going to collect some links to tutorials here.
+
+
+</pre>
+</div>
+<div created="20220701213513771" draft.of="Numark CDN77 USB repair" draft.title="Numark CDN77 USB repair" modified="20220721091323239" tags="[[audio repairs]] [[current projects]]" title="Draft of 'Numark CDN77 USB repair'">
+<pre>i got this device because nobody at GTC had the knowledge to repair it and it was sitting untouched in a shelf for month. I took it on me to try to fix it, becaus it belong to coloradio, a great local crowdfunded community radio.
+
+problem: at first the player can play CDs fine on both decks, but after some warm-up time (~15min) one of the decks start to malfunction. it does not accept CDs and it is very buggy when you try to eject the disk, it fails on most tries to register.
+
+see [[CD and DVD player repair]] for some info.
+
+i found a fitting CD Laser Assembly on ebay which was advertised as new by a commercial seller and agreed with coloradio to try replacing the laser assembly of the malfunctioning player deck with the new one.
+
+* https://www.ebay.de/itm/144404738337 - listing of the replacement part
+* https://www.ebay.de/str/audiovideoexperte - sellers page, offers a lot of other laser-modules for many devices
+
+the seller provided a great guide together with the laser assembly, because most of them seem to have a solder bridge for ESD protection of the laser diode.
+replacing the laser assembly was a bit finnicky, but i managed it.
+The new laser assembly worked fine</pre>
+</div>
 <div created="20201104201703044" modified="20220713150447300" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -18534,6 +18573,23 @@ different:
 * [[Which Capacitor Tester Should I Buy?|https://www.youtube.com/watch?v=lLQThhf3Brc]]
 * [[Invention Release! Carlson LV Capacitor Leakage Tester.|https://www.youtube.com/watch?v=LhovRIM5xAo]]
 * [[#76 Tutorial: Why do electrolytic capacitors fail so often|https://www.youtube.com/watch?v=OH6U2SKQaOw]]</pre>
+</div>
+<div created="20220721092635584" modified="20220721092820329" tags="repairs" title="grease / oil for repairs">
+<pre>!! grease
+
+there are a lot of discussions (and confusion) and few decisive answers on forums about what grease to use for gears, plastic parts and linear ways in CD/DVD players.
+
+some examples
+
+* silicone grease
+* lithium grease
+* ptfe (teflon) grease
+
+some manufacturers sell mixtures and that might be why some people had problems with one or the other. i bought a universal silicone grease without any additives, it is food grade and can also be used for o-rings in coffee machines or similar. because silicone is pretty chemically inert i think its not going to react with any plastic parts and the manufacturer also states is is unreactive with plastics.
+
+other people report having had problems with ptfe or lithium greases, i think the lithium additives might be culprit. but to find the right answers one basically has to be a materials scientist, because every grease type behaves differently and ptfe or lithium might react with one plasic type but not with others.
+
+don't use grease with brass (slide) bushings like in some DC motors or so, these bearings are somewhat spongy and are infused with oil. if they ran dry one maybe could use some oils to get them going again but don't use grease.</pre>
 </div>
 <div created="20220717162850260" modified="20220717203858329" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="großes modulares Akkupack mit Wechselrichter">
 <pre>* gebrauchte 24V 100AH LFP akkupacks aus gabelstaplern
