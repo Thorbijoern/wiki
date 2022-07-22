@@ -12532,7 +12532,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220722222104156" list="[[current projects]] [[Voice Systems Contact CX MK2 repair]] About TableOfContents" modified="20220722223413627" title="$:/StoryList">
+<div created="20220722222104156" list="[[current projects]] [[sennheiser radio splitter power supply repair]] About TableOfContents" modified="20220722223450456" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -25092,7 +25092,7 @@ https://awesomeopensource.com/categories/science</pre>
 * https://humanstxt.org/
 ** example: https://lonami.dev/humans.txt</pre>
 </div>
-<div created="20220613221254361" modified="20220705231336909" tags="[[audio repairs]] [[current projects]]" title="sennheiser radio splitter power supply repair">
+<div created="20220613221254361" modified="20220722223707297" tags="[[audio repairs]]" title="sennheiser radio splitter power supply repair">
 <pre>Friends asked me if i could repair a powersupply from a sennheiser radio splitter for them.
 The splitter is used in a wireless microphone system from sennheiser, using only two antennas for 4 receivers or so.
 
@@ -25100,7 +25100,18 @@ The powersupply is pretty much an ordinary universal smps wall-plug with 13,8V 2
 But because this is from professional equipment the build quality and design is really good. The case is not glued or friction welded, but is held together with screws, so servicing is much more easy and possible without destroying the case. the components seem to be good quality and the anti-tracking cutouts to isolate the low-voltage side from the high voltage are pretty wide, much wider than in smaller and cheaper designs.
 
 The problem is a shorted bridge rectifier (DFL1506S) and also blown fuse (T2.0A).
-Other components don't seem damaged.</pre>
+Other components don't seem damaged.
+
+diode bridge was available and i bought a matching fuse.
+did some rather quick checks on the major semiconductors to check for shorts but everything seemed fine.
+Changed the rectifier bridge and the fuse. i reassembled it into the case and just plugged it in and checked the voltage with a multimeter.
+it was perfectly on 13.8V.
+
+https://www.alldatasheet.com/datasheet-pdf/pdf/414455/FAIRCHILD/FAN6300A.html - mains side
+https://www.alldatasheet.com/datasheet-pdf/pdf/1397518/NXP/TEA1791T_V01.html - output side
+
+the pcb has good anti-tracking slots, one longer one 3mm wide, another 5mm wide. the optocoupler is a pretty long package.
+and there are well designed spark gabs on the mains side.</pre>
 </div>
 <div created="20210212170411905" modified="20220430183120842" tags="[[inter IC or inter device communication, networking]] [[Hardware stuff]] [[digital electronics]]" title="serial connection stuff">
 <pre>* https://github.com/pyserial/pyserial
