@@ -1743,7 +1743,7 @@ Error message and password prompt
 
 <li>regenerative breaking (rekuperation)</li>
 
-<li>reloop digital jockey 2 repair</li>
+<li>reloop digital jockey 2 (dj controler) repair</li>
 
 <li>reloop RA-1500 Pro repair</li>
 
@@ -12532,7 +12532,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220722222104156" list="[[current projects]] [[M-Audio Axiom Air Mini 32 controller repair, reverse engineering]] About TableOfContents" modified="20220722224607150" title="$:/StoryList">
+<div created="20220722222104156" list="[[reloop digital jockey 2 (dj controler) repair]] [[current projects]] About TableOfContents" modified="20220724170122068" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13552,8 +13552,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220722224540060" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220724170119998" modifier="Thorbijoern" title="$:/temp/search">
+<pre>reloop</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -24484,7 +24484,7 @@ other
 ** accumulators
 ** [[caps/supercaps|capacitors]]</pre>
 </div>
-<div created="20220708151609748" modified="20220708211720297" tags="[[audio repairs]] [[current projects]]" title="reloop digital jockey 2 repair">
+<div created="20220708151609748" modified="20220724181829679" tags="[[audio repairs]] [[current projects]]" title="reloop digital jockey 2 (dj controler) repair">
 <pre>got this dj controller for free because it is broken, doesn't turn on.
 
 * https://www.reloop.com/reloop-digital-jockey-2-ie
@@ -24496,8 +24496,34 @@ opened it, bulged/dead electrolytic cap, replaced it with one from my collection
 the switching regulator, an MP1410es, right after the power input seems rough and doesn't output any voltage when testing at the testpoints for 5V and gnd on the &quot;IO-Codec-PCB&quot;.
 ordered a pack of new MP1410es from china, lets see.
 the markings on the chip where not easy to read, i made a dot on the chip with a white marker, spread that out with my finger and rubbed the exess of with a q-tip and isopropanol.
+It might be that the electrolytic cap died first, because of high esr and low capacitance it might have caused the switchmode chip to overheat.
 
-* https://www.alldatasheet.com/datasheet-pdf/pdf/1222892/MPS/MP1410.html</pre>
+i got the new MP1410es, a 5 pack, from china. I changed the chip out and checked the supply without screwing it back into the controler, 5V works. after that i reassembled the controller again and connected everything. i checked again and it seems like everything works again.
+
+Todos:
+
+* replace 1 missing pot cap
+* cleaning caps
+* right/side b fader is sticky, maybe needs some grease
+* cleaning the faders
+* jogweels had some matte coating which is disintegrating and became sticky, is uggly and not nice to the touch, has to get removed
+* cleaning the frontplate
+
+chips:
+
+IO-Codec-PCB - power, usb, stereo chinch out and in, 2 mode switches
+
+* https://www.alldatasheet.com/datasheet-pdf/pdf/1222892/MPS/MP1410.html - switchmode chip
+* https://www.alldatasheet.com/datasheet-pdf/pdf/862379/TI1/TUSB3200AC97.html - usb streaming controller
+* https://www.nxp.com/docs/en/data-sheet/UDA1345TS.pdf - audio codec (2x)
+* 15218 - ? soic-8 opamp? (3x)
+* 1117 - 3.3v linear regulator (sot-223)
+* couple small transistors (d1468; C114; A124; C1740
+* https://www.alldatasheet.com/datasheet-pdf/pdf/111555/ROHM/BA033T.html - low saturation 3.3v linear reulator
+
+Monitor PCB - headphone out
+
+* https://www.ti.com/product/TPA152 - 75mW headphone amp</pre>
 </div>
 <div created="20220701211355941" modified="20220714221337846" tags="[[audio amplifiers]] [[audio repairs]] [[current projects]] [[PA Amplifier Repairs]]" title="reloop RA-1500 Pro repair">
 <pre>!! reloop RA-1500 Pro
