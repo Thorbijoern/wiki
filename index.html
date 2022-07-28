@@ -12542,7 +12542,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220722222104156" list="[[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220728011757394" title="$:/StoryList">
+<div created="20220722222104156" list="[[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220728012650264" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13562,8 +13562,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220728011755678" modifier="Thorbijoern" title="$:/temp/search">
-<pre>qsc</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220728012652350" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -25357,15 +25357,53 @@ tools
 * [[Dynavox PS-138 (8Ohm, 14W, 80dB)|https://www.dynavox-audio.de/produkte/spalte3/lautsprecher/ps-138-minibass-8-ohm.html]]
 * Tangband e.g. W3-1876S (3&quot;, 15W)</pre>
 </div>
-<div created="20220726235757145" modified="20220727002519021" tags="[[current projects]] [[Solar / renewable energy]]" title="small cheap MPPT modules">
+<div created="20220726235757145" modified="20220728161303420" tags="[[current projects]] [[Solar / renewable energy]]" title="small cheap MPPT modules">
 <pre>the type numbers i use here are just vaguely in the order i bought them, i don't know if they have any model names
 
 !!Type 1:
 
+* 4 pots
+* Eigenschaften: Nicht isoliertes Buck-Modul (BUCK)
+* Eingangsspannung: 6-36V
+* Ausgangsspannung: 1,25-32 V stufenlos einstellbar (Standardausgang 5 V)
+* MPPT-Spannungseinstellbereich: 6-36V
+* Ausgangsstrombereich: 0,05-5A (Der Standardausgangsstrom beträgt 3A, für lange Zeit 3A)
+* Wende
+* Lichtausgangsbereich: 0,01-5 A (Standard 0,3 A) Der aktuelle Bereich ist a
+* kleiner Unterschied, weil der Teileparameterfehler.
+* Multifunktionale Doppelanzeige: Eingangsspannung, Ausgangsspannung, Ausgangsstrom, Ausgangsleistung
+* Betriebstemperatur: -40 bis + 85 Grad
+* Betriebsfrequenz: 180 kHz
+* Umwandlungswirkungsgrad: bis zu 95% (Wirkungsgrad hängt von Eingangsspannung, Ausgangsspannung, Strom und Spannungsdifferenz ab)
+* Kurzschlussschutz: Ja
+* Übertemperaturschutz: Ja (Ausgang nach Übertemperatur automatisch abschalten)
+* Eingangsverpolungsschutz: Keine (falls erforderlich, fügen Sie den String in die Diode ein)
+* Ausgabe
+* Anti-Bewässerungsschutz: Keine, der Ausgang muss an die angeschlossen werden Batterie plus Sperrdiode, sonst brennt das Modul!
+* Aufladen
+* Anzeige: Aufladen rot, voll aufgeladen grün. Lichterkennungsweg drehen Für Strom. Wenn Sonnenkollektoren zur Stromversorgung verwendet werden, die kleine Sonne
+* Ladestrom ist auch sehr klein, weniger als der Strom des Blinklichts, es
+wird grünes Licht, aber es ist nicht voll, bitte beachten Sie diese Unterscheidung.
+* Einbauhinweis: 3mm Schrauben (4)
+* Anschluss: Klemmen, IN wird eingegeben, OUT wird ausgegeben
+* Größe: 60 * 31 * 22 mm (L * B * H)
+
 !! Type 2:
 
 * 2 pots
-*
+* input voltage: DC 8 - 28V
+* Ausgangsspannung : DC5 - 26V stufenlos
+* Ausgangsstrom : 5A
+* Verwendbar f ü r : 6V oder 12V Batterie , 8 . 4V , 12 . 6V , 16 . 8V Lithiumbatterie , 7 . 2V , 10 . 8V , 14 . 4V Lithiumeisenphosphat - Geb ü hrenmanagementbrett
+* Niederdruck : 1V
+* Arbeitstemperatur : - 40 - + 85 ℃
+* Lasteinstellung : ± 1 %
+* Spannungsregelung : ± 0 , 5 %
+* Umwandlungseffizienz : Max : 93 % Spitze : 95 %
+* Leerlaufstrom : 3mA
+* MPPT Spannung : Einstellbar
+* Protections: input AC, input polarity reversal protection, reverse current protection
+* Size: ca. 1,57&quot;x0,79&quot;x1,97&quot; / 4 x 2 x 5 cm 
 
 main chip: https://www.alldatasheet.com/datasheet-pdf/pdf/1132128/CONSONANCE/CN3722.html - 5A, Multi-Chemistry Battery Charger IC 
 With Photovoltaic Cell MPPT Function
