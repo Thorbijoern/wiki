@@ -12542,7 +12542,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220722222104156" list="[[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220728012650264" title="$:/StoryList">
+<div created="20220722222104156" list="[[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220729203819138" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13562,8 +13562,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220728012652350" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220730133630472" modifier="Thorbijoern" title="$:/temp/search">
+<pre>qsc</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -20156,12 +20156,25 @@ but most leathers don't seem to fit... seems like i have to still use nylon and/
 <div created="20220717170240425" modified="20220717170254837" tags="[[electronics parts/components]]" title="LED">
 <pre>* https://www.circuitbread.com/ee-faq/the-forward-voltages-of-different-leds</pre>
 </div>
-<div created="20220215013612604" modified="20220216172838911" tags="repairs" title="LED lamp repair">
-<pre>got an LED lamp, the constant current LED driver is dead.
+<div created="20220215013612604" modified="20220730014642341" tags="repairs" title="LED lamp repair">
+<pre>I got two broken LED ceiling lamps, with one the LED driver was dead on arrival because the diode bridge shorted, with the other one the constant current LED driver has died.
+
+!! shorted diode bridge
+
+diodes were shorted, a track went up in smoke and the fuse was blown... ordered replacement parts and replaced the diodes and the fuse. I &quot;reconstructed&quot; the track with some thin insulated solid core wire.
+it also looked like there was a emi suppression capacitor but it just wasn't populated and didn't burn.
+
+after that i checked everything, to prevent another short and i connected it up and it worked.
+
+!! not revivable led driver
+
+i couldn't figure the problem out. the driver is pretty minimal but the chip is probably dead and it's not possible to find a real replacement.
+
 the original has DC 150mA, 70-140V output (no load &lt;= 150V)
 
 the lamp has 5 aluminium core PCBs with 6 LEDs each in series. so 14V to 28V per PCB. each module requiring around 18V (~3V per LED).
-max. 750mA if all PCBs are parallel.</pre>
+max. 750mA if all PCBs are parallel.
+the 150mA are reached at around 19,3V</pre>
 </div>
 <div created="20210425205159659" modified="20220528151844829" tags="[[Audio Projects]] [[Software stuff]]" title="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station">
 <pre>netbook with a weird old Atom N270, i686 instruction set, not much power, 2GB RAM... enough to use for playing audio
@@ -24307,7 +24320,7 @@ projects:
 * pyqtgraph
 * </pre>
 </div>
-<div created="20220611235706036" modified="20220728012642488" tags="[[current projects]] [[PA Amplifier Repairs]]" title="QSC Powerlight 1.8 repair">
+<div created="20220611235706036" modified="20220730141906108" tags="[[current projects]] [[PA Amplifier Repairs]]" title="QSC Powerlight 1.8 repair">
 <pre>bought 2 used QSC PL1.8 to repair them.
 
 * https://www.qsc.com/resource-files/productresources/amp/discontinued/powerlight/q_amp_powerlight_series_specs.pdf
@@ -24356,7 +24369,8 @@ i replaced them with 470uF 16V Rubycon ZLH series rated up to 105°C which shoul
 * screws are slightly bigger than M4 and have slightly different thread pitch it seems
 ** M4 0.7mm pitch and the original ones more like 0.8mm
 ** UNF 8-36 is very similar to M4 but probably doesn't match
-** UNC #8-32 looks like a good match, 0,794mm thread and 4,16mm diameter</pre>
+** UNC #8-32 looks like a good match, 0,794mm thread and 4,16mm diameter
+** 7.5mm long, approx. 5/16&quot;</pre>
 </div>
 <div created="20210201233501049" modified="20220716221043737" tags="[[electronics parts/components]]" title="quality Electrolytic Capacitors">
 <pre>failing electrolytic caps (elcos, Elkos) are a common failure mode of consumer electronics.
