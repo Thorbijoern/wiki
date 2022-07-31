@@ -1087,6 +1087,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft 2 of ' 1'</li>
+
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
@@ -1992,6 +1994,8 @@ Error message and password prompt
 <li>the R's of sustainability</li>
 
 <li>the t.racks DSP 4x4 Mini reverse engineering</li>
+
+<li>thermal imaging camera / wärmebildkamera</li>
 
 <li>Thiele &amp; Small Parameters</li>
 
@@ -12542,7 +12546,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220722222104156" list="[[DAP Palladium 1200 Vintage repair]] [[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220731004836312" title="$:/StoryList">
+<div created="20220722222104156" list="[[thermal imaging camera / wärmebildkamera]] [[Draft 2 of ' 1']] [[M-Audio Axiom Air Mini 32 controller repair, reverse engineering]] [[DAP Palladium 1200 Vintage repair]] [[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220731012915926" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13562,7 +13566,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220731004838625" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20220731160252167" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -16756,6 +16760,53 @@ stuff
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
+</div>
+<div created="20220731143428383" draft.of=" 1" draft.title="microcontroller IO expansion" modified="20220731160025018" tags="microcontroller" title="Draft 2 of ' 1'">
+<pre>* shift registers
+** TI 74HC595 / SN74HC595N - 8-bit shift register
+** serial to parallel - for outputs
+** parallel to serial - for inputs
+
+
+* multiplexers
+** 74HC4067 - 16 channel analog multiplexer/demultiplexer
+** 74HC4051- 8-channel analog multiplexer/demultiplexer
+** TCA9548A - 8 channel I2C multiplexer/switch
+*** https://randomnerdtutorials.com/tca9548a-i2c-multiplexer-esp32-esp8266-arduino/
+** there are also UART multiplexer
+** CD4051/CD4051B - 8-Channel Analog Multiplexer/Demultiplexer
+with Logic-Level Conversion
+*** https://www.ti.com/lit/ds/symlink/cd4051b.pdf
+
+
+* io expanders
+** PCF8574 - Remote 8-Bit I/O Expander for I2C Bus
+*** https://circuitsgeek.com/guides-and-how-to/expand-arduinos-io-interfacing-pcf8574-with-arduino/
+** I2C port expanders add digital ports, 8 or 16 (ports) at a time. You can also get I2C ADCs and DACs, many of them considerably superior to those in the Arduino itself
+** MCP23017 - 16-bit, general purpose parallel I/O expansion for I2C bus
+*** https://www.instructables.com/Extra-IO-Pins-For-Your-Arduino-Uno/
+*** https://www.kickstarter.com/projects/mantaspats/64-i-o-arduino-shield
+*** https://www.raspberrypi-spy.co.uk/2013/07/how-to-use-a-mcp23017-i2c-port-expander-with-the-raspberry-pi-part-1/
+*** https://tutorials-raspberrypi.de/raspberry-pi-gpios-erweitern-mittels-i2c-port-expander/
+*** https://www.instructables.com/Adding-an-MCP23017-IO-Extender-to-Arduino-or-ESP82/
+** MCP23016
+*** https://www.mattbrill.com/2017/01/06/mcp23016-mcp23017/
+*** https://picaxeforum.co.uk/threads/say-no-to-mcp23016-yes-to-mccp23017.3231/
+** MCP23018
+*** https://piers.rocks/i2c/mcp23016/mcp23017/gpio/2018/09/11/differences-between-mcp23017-and-mcp23018.html
+** MCP23S17 - 16-bit, general purpose parallel I/O expansion for SPI
+*** https://www.instructables.com/Raspberry-Pi-Port-Expander/
+** MCP3208 12-Bit, 100kSPS, 8-Channel ADC with SPI
+** MCP23008 - 8-bit, general purpose parallel I/O expansion for I2C bus
+
+
+using I2C is the most common option, SPI is much faster but not always needed
+
+info
+
+* https://maker.pro/arduino/tutorial/how-to-extend-the-number-of-io-lines-on-an-arduino - decoder, shift register, encoder
+* https://arduino.stackexchange.com/questions/21536/expanding-analog-inputs-to-the-arduino
+* https://raspberrypi.stackexchange.com/questions/120049/how-to-extend-more-io-from-a-raspberry-pi-board</pre>
 </div>
 <div created="20220503232048216" modified="20220503232048216" title="Draft of ' 1'">
 <pre>* https://www.youtube.com/watch?v=Gou2V33nByU
@@ -26990,6 +27041,9 @@ Device Descriptor:
         bInterval               1
 ```
 </pre>
+</div>
+<div created="20220731160052427" modified="20220731160316306" tags="tools" title="thermal imaging camera / wärmebildkamera">
+<pre>there are cheap IR thermal cams from china based on the 8x8 pixel AMG8833, costing around 60€</pre>
 </div>
 <div created="20200725122718618" modified="20220706233142170" tags="[[audio testing and measurement]] [[speaker drivers]]" title="Thiele &amp; Small Parameters">
 <pre>* https://en.wikipedia.org/wiki/Thiele/Small_parameters
