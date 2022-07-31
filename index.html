@@ -1095,7 +1095,7 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of 'motor / motorized faders / potentiometers'</li>
+<li>Draft of 'inter IC or inter device communication, networking'</li>
 
 <li>Dresden</li>
 
@@ -1722,6 +1722,8 @@ Error message and password prompt
 <li>Projektion an Gebäude</li>
 
 <li>proprietary and old audio software</li>
+
+<li>protecting microcontroller inputs</li>
 
 <li>prototype manufacturing / kleiserien/kleinstserien</li>
 
@@ -12552,7 +12554,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220722222104156" list="[[cool input/control components]] [[input / control devices]] [[Draft of 'motor / motorized faders / potentiometers']] [[Draft 2 of ' 1']] [[M-Audio Axiom Air Mini 32 controller repair, reverse engineering]] [[DAP Palladium 1200 Vintage repair]] [[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220731164401466" title="$:/StoryList">
+<div created="20220722222104156" list="[[protecting microcontroller inputs]] [[Draft of 'inter IC or inter device communication, networking']] [[Draft 2 of ' 1']] [[M-Audio Axiom Air Mini 32 controller repair, reverse engineering]] [[DAP Palladium 1200 Vintage repair]] [[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220731170036185" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13572,8 +13574,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220731164359715" modifier="Thorbijoern" title="$:/temp/search">
-<pre>bourn</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220731170307119" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16782,11 +16784,25 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220731143428383" draft.of=" 1" draft.title="microcontroller IO expansion" modified="20220731160025018" tags="microcontroller" title="Draft 2 of ' 1'">
-<pre>* shift registers
+<div created="20220731143428383" draft.of=" 1" draft.title="microcontroller IO expansion" modified="20220731165847368" tags="microcontroller [[electronics parts/components]]" title="Draft 2 of ' 1'">
+<pre>
+info
+
+* ''https://www.best-microcontroller-projects.com/digital-i-o.html''
+* https://maker.pro/arduino/tutorial/how-to-extend-the-number-of-io-lines-on-an-arduino - decoder, shift register, encoder
+* https://arduino.stackexchange.com/questions/21536/expanding-analog-inputs-to-the-arduino
+* https://raspberrypi.stackexchange.com/questions/120049/how-to-extend-more-io-from-a-raspberry-pi-board
+* https://resources.altium.com/p/how-expand-input-and-output-microcontroller
+* https://www.digikey.com/en/articles/solve-microcontroller-io-expansion-problems-applying-external-devices
+
+
+options
+
+* shift registers
 ** TI 74HC595 / SN74HC595N - 8-bit shift register
 ** serial to parallel - for outputs
 ** parallel to serial - for inputs
+** 75HC165 - 8 bit parallel in and serial out
 
 
 * multiplexers
@@ -16795,8 +16811,7 @@ stuff
 ** TCA9548A - 8 channel I2C multiplexer/switch
 *** https://randomnerdtutorials.com/tca9548a-i2c-multiplexer-esp32-esp8266-arduino/
 ** there are also UART multiplexer
-** CD4051/CD4051B - 8-Channel Analog Multiplexer/Demultiplexer
-with Logic-Level Conversion
+** CD4051/CD4051B - 8-Channel Analog Multiplexer/Demultiplexer with Logic-Level Conversion
 *** https://www.ti.com/lit/ds/symlink/cd4051b.pdf
 
 
@@ -16813,21 +16828,22 @@ with Logic-Level Conversion
 ** MCP23016
 *** https://www.mattbrill.com/2017/01/06/mcp23016-mcp23017/
 *** https://picaxeforum.co.uk/threads/say-no-to-mcp23016-yes-to-mccp23017.3231/
+*** https://www.instructables.com/IO-Expander-for-ESP32-ESP8266-and-Arduino/
 ** MCP23018
 *** https://piers.rocks/i2c/mcp23016/mcp23017/gpio/2018/09/11/differences-between-mcp23017-and-mcp23018.html
 ** MCP23S17 - 16-bit, general purpose parallel I/O expansion for SPI
 *** https://www.instructables.com/Raspberry-Pi-Port-Expander/
+*** https://electrosome.com/expanding-io-ports-of-pic-microcontroller/
 ** MCP3208 12-Bit, 100kSPS, 8-Channel ADC with SPI
 ** MCP23008 - 8-bit, general purpose parallel I/O expansion for I2C bus
+** PCF8574 - 8 bit io expander
+*** https://www.picmicrolab.com/pcf8574-i2c-8-bit-io-expander/
+** PCF8591 I2C 8-bit A/D and D/A converter
+*** https://www.picmicrolab.com/pcf8591-i2c-8-bit-ad-and-da-converter/
 
 
 using I2C is the most common option, SPI is much faster but not always needed
-
-info
-
-* https://maker.pro/arduino/tutorial/how-to-extend-the-number-of-io-lines-on-an-arduino - decoder, shift register, encoder
-* https://arduino.stackexchange.com/questions/21536/expanding-analog-inputs-to-the-arduino
-* https://raspberrypi.stackexchange.com/questions/120049/how-to-extend-more-io-from-a-raspberry-pi-board</pre>
+</pre>
 </div>
 <div created="20220503232048216" modified="20220503232048216" title="Draft of ' 1'">
 <pre>* https://www.youtube.com/watch?v=Gou2V33nByU
@@ -16847,35 +16863,34 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
-<div created="20220714000955807" draft.of="motor / motorized faders / potentiometers" draft.title="motor / motorized faders / potentiometers" modified="20220731164023940" tags="[[input / control devices]] [[electronics parts/components]]" title="Draft of 'motor / motorized faders / potentiometers'">
-<pre>* https://www.youtube.com/results?search_query=motor+fader
-* https://groupdiy.com/threads/motorized-fader.2899/
+<div created="20210112234744893" draft.of="inter IC or inter device communication, networking" draft.title="inter IC or inter device communication, networking" modified="20220731170048752" tags="[[digital electronics]]" title="Draft of 'inter IC or inter device communication, networking'">
+<pre>see [[serial connection stuff]]
 
-sourcing
+* https://en.wikipedia.org/wiki/List_of_network_buses
+* CANBus
+* I²C / [[I²S]]
+** https://hackaday.com/tag/i2c/
+** https://hackaday.io/project/178271-i2c-master-mode-emulator
+*** https://hackaday.com/2021/03/23/diy-i2c-tester/
+*** https://github.com/dilshan/i2c-test-terminal
+* https://github.com/twischer/esp-link
+* [[Victron Energy communication protocols (VE.Direct, VE.Bus, VE.Can)]]
+* serial ultrasound communication
+** using build-in speakers and microphones to transfer data between devices without disturbing users
+** https://www.anfractuosity.com/projects/ultrasound-networking/
+** can also be used for side-channel and other attacks
+* https://de.wikipedia.org/wiki/Modbus
+* https://en.wikipedia.org/wiki/UEXT
+* https://libre.solar/thingset/
+** https://libre.solar/thingset/1b_existing_solutions.html
+** https://libre.solar/thingset/1b_existing_solutions.html#protocols
+* https://learn.libre.solar/development/communication.html
+* https://de.wikipedia.org/wiki/EIA-422
+* [[Reliable data transmission|https://www.youtube.com/watch?v=eq5YpKHXJDM]]
 
-* ALPS is THE brand, but very expensive
-* https://de.aliexpress.com/item/32906456269.html
-* https://www.ebay.de/itm/254712111755
-* https://www.ebay.de/itm/185293627969
-* https://www.thomann.de/de/mixer_zubehoer.html?feature-590%5B%5D=Fader&amp;feature-590%5B%5D=Motorised%20Fader&amp;gk=PAMIZU&amp;filter=true
-* Yamaha Fader LS9 and Behringer X-Touch Motor-Fader MF100T look very similar
-* https://www.adafruit.com/product/5466
-** in datasheet: sm10001nka0x-ha1, sm10002nkb0x-ha2, sm10002nka1x-hw1
-** looks like faders from Soundwell Electronic Products Guangdong Co., Ltd.
-* https://soundwell.en.alibaba.com/index.html
-* https://www.alibaba.com/product-detail/high-quality-wholesale-winele-100mm-60mm_1600232722496.html
+stuff
 
-DIY?
-
-* DC motor
-* quality potentiometer
-* miniature timing belt and gears
-
-using
-
-* https://tttapa.github.io/Pages/Arduino/Control-Theory/Motor-Fader/
-* [[Custom Fader Board Project|https://www.youtube.com/watch?v=F_ABZ2ELtX0]]
-* https://blog.codyhazelwood.me/motorized-faders-and-the-arduino/</pre>
+* https://www.digikey.com/en/articles/mcu-serial-interfaces-can-link-a-broad-set-of-peripherals</pre>
 </div>
 <div created="20201104201703044" modified="20220726184559247" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -21599,7 +21614,7 @@ stuff
 
 * [[Wie man ein Fahrrad baut - SWR Handwerkskunst|https://www.youtube.com/watch?v=ZUK7SKumutQ]]</pre>
 </div>
-<div created="20220714000955807" modified="20220714022015103" tags="[[input / control devices]] [[electronics parts/components]]" title="motor / motorized faders / potentiometers">
+<div created="20220714000955807" modified="20220731164732628" tags="[[input / control devices]] [[electronics parts/components]]" title="motor / motorized faders / potentiometers">
 <pre>* https://www.youtube.com/results?search_query=motor+fader
 * https://groupdiy.com/threads/motorized-fader.2899/
 
@@ -21611,6 +21626,11 @@ sourcing
 * https://www.ebay.de/itm/185293627969
 * https://www.thomann.de/de/mixer_zubehoer.html?feature-590%5B%5D=Fader&amp;feature-590%5B%5D=Motorised%20Fader&amp;gk=PAMIZU&amp;filter=true
 * Yamaha Fader LS9 and Behringer X-Touch Motor-Fader MF100T look very similar
+* https://www.adafruit.com/product/5466
+** in datasheet: sm10001nka0x-ha1, sm10002nkb0x-ha2, sm10002nka1x-hw1
+** looks like faders from Soundwell Electronic Products Guangdong Co., Ltd.
+* https://soundwell.en.alibaba.com/index.html
+* https://www.alibaba.com/product-detail/high-quality-wholesale-winele-100mm-60mm_1600232722496.html
 
 DIY?
 
@@ -24293,6 +24313,9 @@ Solche &quot;Laserprojektoren&quot; arbeiten nicht wie herkömmliche Beamer, son
 * https://www.trueaudio.com/win_abt1.htm
 * https://www.stonessoundstudio.com.au/stone/leap_4.htm
 </pre>
+</div>
+<div created="20220731170205129" modified="20220731170318662" tags="microcontroller Electronics" title="protecting microcontroller inputs">
+<pre>* https://www.digikey.com/en/articles/protecting-inputs-in-digital-electronics</pre>
 </div>
 <div created="20220714212708407" modified="20220714220422189" tags="" title="prototype manufacturing / kleiserien/kleinstserien">
 <pre>* see 
