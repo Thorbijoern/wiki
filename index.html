@@ -1093,8 +1093,6 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of 'universal Midi/OSC/DAW controller'</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -12554,7 +12552,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220722222104156" list="[[Draft of 'universal Midi/OSC/DAW controller']] [[microcontroller IO expansion (shift register, multiplexer, io expander)]] [[M-Audio Axiom Air Mini 32 controller repair, reverse engineering]] [[DAP Palladium 1200 Vintage repair]] [[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220731181130064" title="$:/StoryList">
+<div created="20220722222104156" list="[[universal Midi/OSC/DAW controller]] [[microcontroller IO expansion (shift register, multiplexer, io expander)]] [[M-Audio Axiom Air Mini 32 controller repair, reverse engineering]] [[DAP Palladium 1200 Vintage repair]] [[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220731181130064" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -16801,43 +16799,6 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
-</div>
-<div created="20220528151554850" draft.of="universal Midi/OSC/DAW controller" draft.title="universal Midi/OSC/DAW controller" modified="20220731181222380" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]] [[input / control devices]] [[project ideas]]" title="Draft of 'universal Midi/OSC/DAW controller'">
-<pre>* as DAW Controller or control for Behringer XAir devices or so
-* https://hackaday.com/tag/digital-gauge/
-* see [[Midi]]
-* see [[Open Sound Control (OSC) (protocol)]]
-* https://hackaday.com/2022/04/19/oled-display-kicks-knob-up-several-accurate-notches/
-* https://hackaday.com/tag/volume-knob/
-
-using
-
-* normal [[encoders]] or [[potentiometers]] are great, but lack feedback
-* feedback can be provided using Displays or LED indicators, like bars or rings
-* [[bldc motor (as) encoder]]
-* [[motor / motorized faders / potentiometers]]
-* [[microcontroller IO expansion (shift register, multiplexer, io expander)]]
-
-* inspiration
-** https://www.thomann.de/de/daw_controller.html
-** https://www.thomann.de/de/computer_controller_etc.html
-
-other projects
-
-* http://www.instructables.com/id/A-Framework-For-Making-Affordable-Stylish-Modula/
-** https://www.reddit.com/r/arduino/comments/2linqg/my_custom_midi_controller/
-* https://forum.arduino.cc/t/arduino-daw-controller-motorized-fader/541497/4
-* https://recording.de/threads/ansteuerung-motorfader-potorpoti-diy-midi-controller.180379/
-* [[Arduino based MIDI remote controller with motorized faders|https://www.youtube.com/watch?v=L6clR0FPKQM]]
-* http://96khz.org/htm/midicontroller31.htm
-* http://wiki.midibox.org/doku.php?id=start
-** https://www.musiker-board.de/threads/diy-projekt-faderbox.537871/
-** http://ucapps.de/
-* monome - not all hardware is open, but there are &quot;clone&quot; projects
-** https://hackaday.com/blog/?s=monome
-** https://github.com/TheSlowGrowth/MonomeArcClone
-* https://gearspace.com/board/music-computers/1164315-build-yourself-daw-controllers.html
-* https://www.diyrecordingequipment.com/blogs/news/15851772-diy-daw-controller-part-1-choosing-a-midi-interface</pre>
 </div>
 <div created="20201104201703044" modified="20220726184559247" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -27314,7 +27275,7 @@ closed, proprietary
 ** https://www.libinst.com/SynergyCalc/Synergy%20Calc%20V5.pdf
 * http://techtalk.parts-express.com/forum/tech-talk-forum/50902-buyouts-into-a-synergy?231569-Buyouts-into-a-Synergy=</pre>
 </div>
-<div created="20220528151554850" modified="20220715180458817" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]] [[input / control devices]] [[project ideas]]" title="universal Midi/OSC/DAW controller">
+<div created="20220528151554850" modified="20220731181736902" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]] [[input / control devices]] [[project ideas]]" title="universal Midi/OSC/DAW controller">
 <pre>* as DAW Controller or control for Behringer XAir devices or so
 * https://hackaday.com/tag/digital-gauge/
 * see [[Midi]]
@@ -27328,10 +27289,21 @@ using
 * feedback can be provided using Displays or LED indicators, like bars or rings
 * [[bldc motor (as) encoder]]
 * [[motor / motorized faders / potentiometers]]
+* [[microcontroller IO expansion (shift register, multiplexer, io expander)]]
 
 * inspiration
 ** https://www.thomann.de/de/daw_controller.html
 ** https://www.thomann.de/de/computer_controller_etc.html
+
+
+first design primarily for behringr XR18
+
+* channel number in multibles of 2, atleast 4? maybe 6?
+* mute buttons
+* fader/encoder/potis for volume
+* display for information
+* led to show colour from scribble strip
+* volume indication (bargraph or so)
 
 other projects
 
