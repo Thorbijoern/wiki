@@ -13572,8 +13572,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220731180704884" modifier="Thorbijoern" title="$:/temp/search">
-<pre>osc</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220731193213283" modifier="Thorbijoern" title="$:/temp/search">
+<pre>axiom</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -21204,7 +21204,7 @@ Atmel AVR (Arduino)
 * https://community.atmel.com/projects/reavr
 * </pre>
 </div>
-<div created="20220731143428383" modified="20220731181226002" tags="microcontroller [[electronics parts/components]]" title="microcontroller IO expansion (shift register, multiplexer, io expander)">
+<div created="20220731143428383" modified="20220731233238272" tags="microcontroller [[electronics parts/components]]" title="microcontroller IO expansion (shift register, multiplexer, io expander)">
 <pre>
 info
 
@@ -21233,6 +21233,9 @@ options
 ** there are also UART multiplexer
 ** CD4051/CD4051B - 8-Channel Analog Multiplexer/Demultiplexer with Logic-Level Conversion
 *** https://www.ti.com/lit/ds/symlink/cd4051b.pdf
+** HCF4051 - single 8-channel analog multiplexer/demultiplexer
+*** https://www.st.com/resource/en/datasheet/hcf4051.pdf
+*** like used in [[M-Audio Axiom Air Mini 32|M-Audio Axiom Air Mini 32 controller repair, reverse engineering]]
 
 
 * io expanders
@@ -27275,7 +27278,7 @@ closed, proprietary
 ** https://www.libinst.com/SynergyCalc/Synergy%20Calc%20V5.pdf
 * http://techtalk.parts-express.com/forum/tech-talk-forum/50902-buyouts-into-a-synergy?231569-Buyouts-into-a-Synergy=</pre>
 </div>
-<div created="20220528151554850" modified="20220731181736902" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]] [[input / control devices]] [[project ideas]]" title="universal Midi/OSC/DAW controller">
+<div created="20220528151554850" modified="20220731181851531" tags="[[Audio Projects]] [[digital audio]] [[Open Audio Hardware]] [[current projects]] [[input / control devices]] [[project ideas]]" title="universal Midi/OSC/DAW controller">
 <pre>* as DAW Controller or control for Behringer XAir devices or so
 * https://hackaday.com/tag/digital-gauge/
 * see [[Midi]]
@@ -27299,8 +27302,10 @@ using
 first design primarily for behringr XR18
 
 * channel number in multibles of 2, atleast 4? maybe 6?
-* mute buttons
+* mute buttons with (red) leds
 * fader/encoder/potis for volume
+** motorized?
+** or just visual feedback
 * display for information
 * led to show colour from scribble strip
 * volume indication (bargraph or so)
