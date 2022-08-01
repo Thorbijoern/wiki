@@ -1343,6 +1343,8 @@ Error message and password prompt
 
 <li>Kapitalismus</li>
 
+<li>keypad / button matrix / keyboard</li>
+
 <li>KiCAD</li>
 
 <li>Klippel Production Analyser reverse enginering</li>
@@ -12556,7 +12558,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220722222104156" list="Midi [[Draft 2 of ' 1']] [[DAP Palladium 1200 Vintage repair]] [[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220801004829882" title="$:/StoryList">
+<div created="20220722222104156" list="[[Draft 2 of ' 1']] [[e-bike controller, motor driver]] [[e-bike / pedelec]] [[DAP Palladium 1200 Vintage repair]] [[LED lamp repair]] [[QSC Powerlight 1.8 repair]] [[Kultur Dresden]] Dresden [[cable drum repair]] [[small cheap MPPT modules]] [[current projects]] About TableOfContents" modified="20220801005117214" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13576,8 +13578,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220801004828101" modifier="Thorbijoern" title="$:/temp/search">
-<pre>midi</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220801005047142" modifier="Thorbijoern" title="$:/temp/search">
+<pre>e bike</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16786,18 +16788,12 @@ stuff
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220801002451472" draft.of=" 1" draft.title="keypad / button matrix / keyboard" modified="20220801004654932" tags="[[input / control devices]]" title="Draft 2 of ' 1'">
-<pre>* [[Launchpad -- DIY or Buy -- Keyboard Matrix &amp; MIDI Tutorial|https://www.youtube.com/watch?v=wyKStRyez5Y]]
-* https://hackaday.com/2019/05/17/diy-button-matrix-lights-up-and-speaks-i2c/
-** http://www.technoblogy.com/show?1YJO
-* by wiring each column and each row in series you can minimize the needed inputs on a microcontroller
-* small capacitors might be used to debounce, can be done in software too
-* common problems described here: https://en.wikipedia.org/wiki/Computer_keyboard#Control_processor
-* https://en.wikipedia.org/wiki/Keyboard_matrix_circuit
-* 
-** https://learn.adafruit.com/untztrument-trellis-midi-instrument
-** https://www.synthtopia.com/content/2014/08/02/diy-arduino-native-midi-controller-the-mini-oontz/
-** https://www.state-of-the-art.io/projects/matrix-midi-controller/</pre>
+<div created="20220801005223443" draft.of=" 1" draft.title="ebike computer / display" modified="20220801005521956" tags="[[e-bike / pedelec]]" title="Draft 2 of ' 1'">
+<pre>* using/spying on the serial connection of the display to log the data
+** e.g. using an esp32/esp8266 and phyphox
+* https://hackaday.com/2020/03/07/a-super-brain-for-an-e-bike/
+** https://makestuff4.fun/pyec/#
+** https://forum.micropython.org/viewtopic.php?f=5&amp;t=7828</pre>
 </div>
 <div created="20220503232048216" modified="20220503232048216" title="Draft of ' 1'">
 <pre>* https://www.youtube.com/watch?v=Gou2V33nByU
@@ -16940,14 +16936,9 @@ stuff
 * https://hackaday.com/blog/page/4/?s=e%20bike
 * [[Electronic Basics #18: DC &amp; Brushless DC Motor + ESC|https://www.youtube.com/watch?v=UteZJ_7C4Mg]]</pre>
 </div>
-<div created="20210613140511485" modified="20220705015657611" tags="[[e-bike / pedelec]] [[motor controller / driver]]" title="e-bike controller, motor driver">
+<div created="20210613140511485" modified="20220801005743090" tags="[[e-bike / pedelec]] [[motor controller / driver]]" title="e-bike controller, motor driver">
 <pre>* essentially just a [[ESC / BLDC motor driver / controller]] with some connections and features for external hardware and controlls
 * most controllers include the controller and the motor driver in one package
-
-controller only, without motor driver
-
-* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:forumscontroller
-* https://github.com/thorlancaster/electric-bike-controller - seems to be meant to simultaneusly controll 2 motors (front&amp;rear) on one bike
 
 controller + driver
 
@@ -19699,6 +19690,19 @@ stuff
 * https://de.wikipedia.org/wiki/Gerhard_Schick
 * siehe [[Genossenschaften]]
 * https://sound-au.com/manufacture.htm</pre>
+</div>
+<div created="20220801002451472" modified="20220801005021721" tags="[[input / control devices]]" title="keypad / button matrix / keyboard">
+<pre>* [[Launchpad -- DIY or Buy -- Keyboard Matrix &amp; MIDI Tutorial|https://www.youtube.com/watch?v=wyKStRyez5Y]]
+* https://hackaday.com/2019/05/17/diy-button-matrix-lights-up-and-speaks-i2c/
+** http://www.technoblogy.com/show?1YJO
+* by wiring each column and each row in series you can minimize the needed inputs on a microcontroller
+* small capacitors might be used to debounce, can be done in software too
+* common problems described here: https://en.wikipedia.org/wiki/Computer_keyboard#Control_processor
+* https://en.wikipedia.org/wiki/Keyboard_matrix_circuit
+* https://learn.adafruit.com/mini-untztrument-3d-printed-midi-controller
+** https://learn.adafruit.com/untztrument-trellis-midi-instrument
+** https://www.synthtopia.com/content/2014/08/02/diy-arduino-native-midi-controller-the-mini-oontz/
+** https://www.state-of-the-art.io/projects/matrix-midi-controller/</pre>
 </div>
 <div created="20210125160907608" modified="20211122005423754" tags="Electronics [[Free / Open / Libre Software]]" title="KiCAD">
 <pre>*https://www.kicad.org/
