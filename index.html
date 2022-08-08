@@ -1093,8 +1093,6 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of 'DAP Palladium 1200 Vintage repair'</li>
-
 <li>Dresden</li>
 
 <li>dsp (digital signal processor) / digital crossover</li>
@@ -12172,8 +12170,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20200512220852593" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20200512220838244" modified="20220803211754222" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20200512220838244" modified="20220808154442543" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -12580,7 +12578,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220803211427865" list="[[quality Electrolytic Capacitors]] [[QSC Powerlight 1.8 repair]] [[Draft of 'DAP Palladium 1200 Vintage repair']] [[DMX Interface]] About TableOfContents" modified="20220808153651683" title="$:/StoryList">
+<div created="20220803211427865" list="[[DAP Palladium 1200 Vintage repair]] [[DMX Interface]] About TableOfContents" modified="20220808154456030" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13597,8 +13595,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220808154006709" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220808154439272" modifier="Thorbijoern" title="$:/temp/search">
+<pre>curr</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16161,18 +16159,29 @@ The Mission 900 uses 4x 2SC5200 and 4x 2SA1943 per channel, preamps are MJE15032
 
 its a nice coincidence that the [[Palladium 1200|DAP Palladium 1200 Vintage repair]] i also have for repair uses the same power transistors. the transistors are hard to get, but now it saves a bit of time for both.</pre>
 </div>
-<div created="20220701211656084" modified="20220731012836291" tags="[[current projects]] [[audio amplifiers]] [[PA Amplifier Repairs]] [[audio repairs]]" title="DAP Palladium 1200 Vintage repair">
+<div created="20220701211656084" modified="20220808182536887" tags="[[current projects]] [[audio amplifiers]] [[PA Amplifier Repairs]] [[audio repairs]]" title="DAP Palladium 1200 Vintage repair">
 <pre>!! DAP Palladium 1200 Vintage
 
 Fuses of one Channel missing/Blown, one Channel is dead, other one has some charred resistors but seems fine otherwise.
 
-the DAP Palladium 1200 Vintage uses a Class G design. It uses Mosfets controlled by a comparator to switch between two voltage rails from the toroid transformer.
+the DAP Palladium 1200 Vintage uses a Class G design. It uses Mosfets controlled by a comparator to switch between two voltage rails from the linear supply/toroid transformer.
 
+First task i did was some cleaning to get all of the old dust out.
 
-* 2SA1837 - replaceable with NTE
+One of the Channels was shorted, the other one had some very charred resistors which also charred the pcb and a film cap next by. I'm also replacing an electrolytic cap next to the resistors just to be sure, because electrolytic ones can quickly degrade.
+
+It is hard to find out which power rating and type the original resistors had. I carefully scraped of the charred laquer on the old ones to see the construction and to guess the type. The type is Metal Oxide Film i guess, because it doesn't have wound wires and more like a metal film all around with cut in slots, also next to wire wound these are pretty mch the highest power resistors. I bought some of the highest value of that type that would still fit in small space were they belong. They ended up being 3W rated Yageo RSF3WSJT-73-10R. The caps are the Panasonic ECW-FD2W104J4 film cap and nichicon UPJ1E101MED1TD electrolytic, both should work fine.
+
+The shorted channel will get a replacement of all the power transistors and of the preamp transistors. The Toshiba 2SA1943 and 2SC5200 still being manufactured, so one can still get them. It is Important to check the Suffix/hfe rating of them and buy the right ones. In audio the O-Rating seems to be most common for these complimentary pair. If your electronic parts distributor of choice lists them with additional suffixes they only indicate the way of packaging (e.g. tray/tablet or tube) and not the package/case of the device itself.
+
+The preamp transistors 2SA1837/2SC4793 are not manufactured anymore and i could not find a source for original ones. But NTE Electronics manufactures clones/licenced alternatives(?) and i opted to buy these.
+
+Next Time i should try to check everything first, because i discovered more problems after i already placed a big order and hoped i had all replacement parts. I missed that on one channel some of the Mosfets were burned. Luckily i had some IRF640N laying around because i got them for cheap when the local conrad store closed.
+
+* 2SA1837 - replaceable with NTE2647
 * 2SC4793 - replaceable with NTE2648
-* 2SA1943
-* 2SC5200
+* 2SA1943-O - the O-suffix is very important
+* 2SC5200-O - the O-suffix is very important
 * IRF640 - replaceable with IRF640N</pre>
 </div>
 <div created="20210318203618739" modified="20210323123625536" tags="[[computer science / IT stuff]] Science [[testing &amp; measuring]] tools" title="data logging">
@@ -16832,31 +16841,6 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
-</div>
-<div created="20220701211656084" draft.of="DAP Palladium 1200 Vintage repair" draft.title="DAP Palladium 1200 Vintage repair" modified="20220808151739578" tags="[[current projects]] [[audio amplifiers]] [[PA Amplifier Repairs]] [[audio repairs]]" title="Draft of 'DAP Palladium 1200 Vintage repair'">
-<pre>!! DAP Palladium 1200 Vintage
-
-Fuses of one Channel missing/Blown, one Channel is dead, other one has some charred resistors but seems fine otherwise.
-
-the DAP Palladium 1200 Vintage uses a Class G design. It uses Mosfets controlled by a comparator to switch between two voltage rails from the linear supply/toroid transformer.
-
-First task i did was some cleaning to get all of the old dust out.
-
-One of the Channels was shorted, the other one had some very charred resistors which also charred the pcb and a film cap next by. I'm also replacing an electrolytic cap next to the resistors just to be sure, because electrolytic ones can quickly degrade.
-
-It is hard to find out which power rating and type the original resistors had. I carefully scraped of the charred laquer on the old ones to see the construction and to guess the type. The type is Metal Oxide Film i guess, because it doesn't have wound wires and more like a metal film all around with cut in slots, also next to wire wound these are pretty mch the highest power resistors. I bought some of the highest value of that type that would still fit in small space were they belong. They ended up being 3W rated Yageo RSF3WSJT-73-10R. The caps are the Panasonic ECW-FD2W104J4 film cap and nichicon UPJ1E101MED1TD electrolytic, both should work fine.
-
-The shorted channel will get a replacement of all the power transistors and of the preamp transistors. The Toshiba 2SA1943 and 2SC5200 still being manufactured, so one can still get them. It is Important to check the Suffix/hfe rating of them and buy the right ones. In audio the O-Rating seems to be most common for these complimentary pair.
-
-The preamp transistors 2SA1837/2SC4793 are not manufactured anymore and i could not find a source for original ones. But NTE Electronics manufactures clones/licenced alternatives(?) and i opted to buy these.
-
-Next Time i should try to check everything first, because i discovered more problems after i already placed a big order and hoped i had all replacement parts. I missed that on one channel some of the Mosfets were burned. Luckily i had some IRF640N laying around because i got them for cheap when the local conrad store closed.
-
-* 2SA1837 - replaceable with NTE2647
-* 2SC4793 - replaceable with NTE2648
-* 2SA1943-O - the O-suffix is very important
-* 2SC5200-O - the O-suffix is very important
-* IRF640 - replaceable with IRF640N</pre>
 </div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
