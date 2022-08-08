@@ -1089,8 +1089,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft 2 of ' 1'</li>
-
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
@@ -1822,6 +1820,8 @@ Error message and password prompt
 <li>rugged devices and device cases ideas</li>
 
 <li>SBC UPS</li>
+
+<li>Schenker VIA 15 Pro Power Supply/Battery Problems</li>
 
 <li>Schulsystem</li>
 
@@ -12585,7 +12585,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[mcmaster carr alternative for europe]] [[GTK graphs]] [[Draft 2 of ' 1']] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220808221032938" title="$:/StoryList">
+<div created="20220808201413192" list="[[Setting up a Wiki like this]] [[mcmaster carr alternative for europe]] [[GTK graphs]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220808225541397" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13602,8 +13602,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220808225413936" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220808225538334" modifier="Thorbijoern" title="$:/temp/search">
+<pre>wiki</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16886,24 +16886,6 @@ software
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
-</div>
-<div created="20220808223445153" draft.of=" 1" draft.title=" Schenker VIA 15 Pro Power Supply/Battery Problems" modified="20220808225349707" tags="" title="Draft 2 of ' 1'">
-<pre>I seem to have problems with the embeded controller in my Schenker notebook, it seems to look up/bug/freeze and not allow charging. When i first had the problem the schenker support suggested updating the firmware, which solved the problem for some time, but it happened again.
-this time the EC seems to have reset itself after some tries getting into the bios, so i didn't have to redo the update.
-
-i also seem to have problems with UPower - https://upower.freedesktop.org
-
-&quot;Ich konnte bisschen debuggen warum Gnome manchmal zufällig nicht mehr den aktuellen Akkustand anzeigt wenn der Akku entladen wird bzw. auch keine Warnung bei niedrigem Akkustand kommt.
-Scheinbar liegt das an UPower. Gnome nutzt UPower und UPower scheint sich bei mir ab und an aufzuhängen oder so. Wenn ich das Ladekabel anstecke updated es wieder.
-Das Gnome Power Manager Tool, welches die Daten auch von UPower bezieht, sowie das upower CLI Tool zeigen das selbe Verhalten.
-Wenn ich jedoch das acpi CLI Tool nutze oder per Kernel sysfs (/sys/class/power_supply/BAT0/uevent) checke dann finde ich dort aktuelle Daten auch wenn UPower noch falsch reported.
-Da UPower die Hardware-näheren Interfaces vom Kernel nochmal abstrahiert hat es vermutlich nichts mit der Hardware zu tun, also wohl nichts wo Sie viel Einfluss drauf haben.&quot;
-
-* https://gitlab.gnome.org/GNOME/gnome-power-manager
-** https://help.gnome.org/users/gnome-power-manager/stable/
-* https://www.simplified.guide/linux/view-battery-information
-* https://www.kernel.org/doc/html/latest/power/power_supply_class.html
-* https://www.geeksforgeeks.org/acpi-command-in-linux-with-examples/</pre>
 </div>
 <div created="20220503232048216" modified="20220503232048216" title="Draft of ' 1'">
 <pre>* https://www.youtube.com/watch?v=Gou2V33nByU
@@ -25366,6 +25348,25 @@ at last `raspi-config` has to be run and in the interfacing the serial interface
 * https://www.paulvdiyblogs.net/2015/05/simple-ups-for-raspberry-pi.html
 * https://www.paulvdiyblogs.net/2016/04/rpi-power-supply-with-1-button-start.html</pre>
 </div>
+<div created="20220808223445153" modified="20220808225527297" tags="" title="Schenker VIA 15 Pro Power Supply/Battery Problems">
+<pre>I seem to have problems with the embeded controller in my Schenker notebook, it seems to look up/bug/freeze and not allow charging. When i first had the problem the schenker support suggested updating the firmware, which solved the problem for some time, but it happened again.
+this time the EC seems to have reset itself after some tries getting into the bios, so i didn't have to redo the update.
+
+i also seem to have problems with UPower - https://upower.freedesktop.org
+
+&quot;Ich konnte bisschen debuggen warum Gnome manchmal zufällig nicht mehr den aktuellen Akkustand anzeigt wenn der Akku entladen wird bzw. auch keine Warnung bei niedrigem Akkustand kommt.
+Scheinbar liegt das an UPower. Gnome nutzt UPower und UPower scheint sich bei mir ab und an aufzuhängen oder so. Wenn ich das Ladekabel anstecke updated es wieder.
+Das Gnome Power Manager Tool, welches die Daten auch von UPower bezieht, sowie das upower CLI Tool zeigen das selbe Verhalten.
+Wenn ich jedoch das acpi CLI Tool nutze oder per Kernel sysfs (/sys/class/power_supply/BAT0/uevent) checke dann finde ich dort aktuelle Daten auch wenn UPower noch falsch reported.
+Da UPower die Hardware-näheren Interfaces vom Kernel nochmal abstrahiert hat es vermutlich nichts mit der Hardware zu tun, also wohl nichts wo Sie viel Einfluss drauf haben.&quot;
+
+* https://gitlab.gnome.org/GNOME/gnome-power-manager
+** https://help.gnome.org/users/gnome-power-manager/stable/
+* https://www.simplified.guide/linux/view-battery-information
+* https://www.kernel.org/doc/html/latest/power/power_supply_class.html
+* https://www.geeksforgeeks.org/acpi-command-in-linux-with-examples/
+* https://upower.freedesktop.org/docs/</pre>
+</div>
 <div created="20200810124623064" modified="20210330203916763" tags="[[Politics (Politik)]]" title="Schulsystem">
 <pre>* [[Warum das deutsche Schulsystem so schlecht ist - Simplicissimus|https://www.youtube.com/watch?v=fxvvMjDCo_4]]
 * [[Unser Schulsystem ist Mist! - Harald Lesch|https://www.youtube.com/watch?v=-q0Sm8Kldn0]]
@@ -25596,7 +25597,7 @@ USB
 * [[How does a USB keyboard work?|https://www.youtube.com/watch?v=wdgULBpRoXk]]
 * [[How does USB device discovery work?|https://www.youtube.com/watch?v=N0O5Uwc3C0o]]</pre>
 </div>
-<div created="20200512221832558" modified="20210327182409029" tags="[[My Setup]]" title="Setting up a Wiki like this">
+<div created="20200512221832558" modified="20220808225608568" tags="[[My Setup]]" title="Setting up a Wiki like this">
 <pre>this wiki is just an interim solution, for a better option see [[flat file/static site generator wikis / note taking]].
 i followed these guides to set this up:
 
@@ -25614,7 +25615,8 @@ stuff:
 
 stuff i could add:
 
-* http://tiddlymap.org/</pre>
+* http://tiddlymap.org/
+* nojekyll file</pre>
 </div>
 <div created="20210201004722911" modified="20211025214245607" tags="Art [[music creation]]" title="sharing / finding music / podcats / etc. (streaming)">
 <pre>open
