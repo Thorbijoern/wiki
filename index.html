@@ -1089,6 +1089,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft 2 of ' 1'</li>
+
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
@@ -1262,6 +1264,8 @@ Error message and password prompt
 <li>großes modulares Akkupack mit Wechselrichter</li>
 
 <li>gruppendynamik (Psychologie/Soziologie?)</li>
+
+<li>GTK graphs</li>
 
 <li>h-bridge</li>
 
@@ -12579,7 +12583,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220808221032938" title="$:/StoryList">
+<div created="20220808201413192" list="[[GTK graphs]] [[Draft 2 of ' 1']] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220808221032938" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13596,8 +13600,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220808201416871" modifier="Thorbijoern" title="$:/temp/search">
-<pre>dmx</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220808224254947" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16881,6 +16885,21 @@ software
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
+<div created="20220808223445153" draft.of=" 1" draft.title=" Schenker VIA 15 Pro Power Supply/Battery Problems" modified="20220808224243699" tags="" title="Draft 2 of ' 1'">
+<pre>I seem to have problems with the embeded controller in my Schenker notebook, it seems to look up/bug/freeze and not allow charging. When i first had the problem the schenker support suggested updating the firmware, which solved the problem for some time, but it happened again.
+this time the EC seems to have reset itself after some tries getting into the bios, so i didn't have to redo the update.
+
+i also seem to have problems with UPower - https://upower.freedesktop.org
+
+&quot;Ich konnte bisschen debuggen warum Gnome manchmal zufällig nicht mehr den aktuellen Akkustand anzeigt wenn der Akku entladen wird bzw. auch keine Warnung bei niedrigem Akkustand kommt.
+Scheinbar liegt das an UPower. Gnome nutzt UPower und UPower scheint sich bei mir ab und an aufzuhängen oder so. Wenn ich das Ladekabel anstecke updated es wieder.
+Das Gnome Power Manager Tool, welches die Daten auch von UPower bezieht, sowie das upower CLI Tool zeigen das selbe Verhalten.
+Wenn ich jedoch das acpi CLI Tool nutze oder per Kernel sysfs (/sys/class/power_supply/BAT0/uevent) checke dann finde ich dort aktuelle Daten auch wenn UPower noch falsch reported.
+Da UPower die Hardware-näheren Interfaces vom Kernel nochmal abstrahiert hat es vermutlich nichts mit der Hardware zu tun, also wohl nichts wo Sie viel Einfluss drauf haben.&quot;
+
+* https://gitlab.gnome.org/GNOME/gnome-power-manager
+** https://help.gnome.org/users/gnome-power-manager/stable/</pre>
+</div>
 <div created="20220503232048216" modified="20220503232048216" title="Draft of ' 1'">
 <pre>* https://www.youtube.com/watch?v=Gou2V33nByU
 * https://de.wikipedia.org/wiki/Bunte_Republik_Neustadt
@@ -18762,6 +18781,12 @@ info
 <div created="20210410165348724" modified="20210410165627363" tags="Misc" title="gruppendynamik (Psychologie/Soziologie?)">
 <pre>* [[Leadership From A Dancing Guy|https://www.youtube.com/watch?v=hO8MwBZl-Vc]]
 * [[Philip Schlaffer|https://www.youtube.com/channel/UCCcFnVUHZDKDUkghDspBKdQ]] beschreibt in einigen videos auch gruppendynamiken</pre>
+</div>
+<div created="20220808224253683" modified="20220808224851483" tags="" title="GTK graphs">
+<pre>examples
+
+* https://gitlab.gnome.org/GNOME/gnome-power-manager
+* https://wiki.gnome.org/Apps/SystemMonitor</pre>
 </div>
 <div created="20210113002121395" modified="20210113003126698" tags="[[power electronics (Leistungselektronik)]]" title="h-bridge">
 <pre>important part of power electrtonics... used in (class-d) (audio-)amplifiers, inverters, motor controllers, [[switched mode power supply (SMPS)]], ...
