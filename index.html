@@ -945,6 +945,8 @@ Error message and password prompt
 
 <li>cheap &quot;chinese&quot; amplifier boards</li>
 
+<li>cheap chinese thermal imaging camera reverse engineering</li>
+
 <li>cheap diy switchmode lab bench power supply (smps)</li>
 
 <li>cheap mixing amp repair, reverse engineering</li>
@@ -12587,7 +12589,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="resistors [[Big mobile Battery Project]] [[mcmaster carr alternative for europe]] [[GTK graphs]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220808233939243" title="$:/StoryList">
+<div created="20220808201413192" list="[[cheap chinese thermal imaging camera reverse engineering]] [[Big mobile Battery Project]] [[mcmaster carr alternative for europe]] [[GTK graphs]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220808233939243" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20210331152109689" title="$:/temp/advancedsearch">
@@ -13604,8 +13606,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220808233937770" modifier="Thorbijoern" title="$:/temp/search">
-<pre>resistor</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220810122841797" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15584,6 +15586,56 @@ using 12V batteries and step-up converters you can supply them with the needed v
 
 you can supply small 3W amplifiers with 5V directly from a common powerbank</pre>
 </div>
+<div created="20220810122843547" modified="20220810124504919" tags="tools [[reverse engineering]]" title="cheap chinese thermal imaging camera reverse engineering">
+<pre>* PCB marking* &quot;JM IR_Cam_V5.1.2&quot; and &quot;20200622&quot;
+* ~1.4&quot; screen (&quot;FP-133HSP05A&quot;)
+* 50-60€ version without battery or buttons
+* just 5V micro usb for power
+* AMG8833 sensor, 8x8 pixels
+* GigaDevice GD32E230F4P6TR ARM Microcotroller
+* small SOT-23-3 package, likely 3.3V LDO for the microcontroller or so
+* small 4-pin header
+* some smd passives
+
+
+&lt;&lt;&lt;
+Spezifikationen:
+
+* Material: Leiterplatte
+* Temperaturgenauigkeit:
+* Hochleistungsart mit hoher Verstärkung: typisch ± 2,5 ℃ ± 4,5 ℉
+* Hochleistungstyp mit geringer Verstärkung: typisch ± 3,0 ± 5,4 ±
+* Erkennungsentfernung beim Menschen: 7 m oder weniger (Referenzwert) 22.966 ft
+* NETD:
+** Typ. 0,05 ≤ 32,900 ≤ 1 Hz
+** Typ. 0,16 ≤ 32,288 ≤ 10 Hz
+* Betrachtungswinkel: typisch 60 °
+* Spalt der optischen Achse: innerhalb der typischen ± 5,6 °
+* Derzeitiger Verbrauch:
+* Typisch 4,5 mA (normaler Modus)
+* Typisch 0,2 mA (Schlafmodus)
+* Typische 0,8 mA (Standby-Modus)
+* Installationszeit:
+* Typische 50 ms (Zeit, um die Kommunikation nach dem Setup zu aktivieren)
+* Typische 15s (Zeit zur Stabilisierung der Ausgabe nach dem Setup)
+* Pixelanzahl: 64 (vertikale 8 * horizontale 8-Matrix)
+* Externe Schnittstelle: 1²C (schneller Modus)
+* Bildrate: typisch 10 Bilder / Sek. Oder 1 Bild / Sek
+* Betriebsart: Normal, Schlaf, Standby (10 Sek. Oder 60 Sek. Unterbrechung)
+* Ausgabemodus: Temperaturausgang
+* Berechnungsmodus: kein gleitender Durchschnitt oder zweimal gleitender Durchschnitt
+* Temperaturausgangsauflösung: 0,25 ℃ / 32,45 ℉
+* Nummer der Sensoradresse: 2 (1²C Slave-Adresse)
+* Thermistorausgangstemperaturbereich: -20 80 ~ 80 ℃ (-4 ℉ ~ 176 ℉)
+* Auflösung des Thermistorausgangs: 0,0625 ℃ / 32,1125 ℉
+* Artikelgröße: 38 * 36 * 17 mm / 1,5 * 1,4 * 0,7 Zoll
+* Artikelgewicht: 17 g
+* Packungsgröße: 90 * 80 * 20 mm / 3,5 * 3,1 * 0,8 Zoll
+* Verpackungsgewicht: 19 g 
+&lt;&lt;&lt;
+
+</pre>
+</div>
 <div created="20220715192150178" modified="20220731234800981" tags="[[Electronic Projects]] [[switched mode power supply (SMPS)]] tools [[project ideas]]" title="cheap diy switchmode lab bench power supply (smps)">
 <pre>using off the shelf power supplys like PC power supplies, power bricks and DC converter
 
@@ -16178,7 +16230,7 @@ The Mission 900 uses 4x 2SC5200 and 4x 2SA1943 per channel, preamps are MJE15032
 
 its a nice coincidence that the [[Palladium 1200|DAP Palladium 1200 Vintage repair]] i also have for repair uses the same power transistors. the transistors are hard to get, but now it saves a bit of time for both.</pre>
 </div>
-<div created="20220701211656084" modified="20220808214725370" tags="[[current projects]] [[audio amplifiers]] [[PA Amplifier Repairs]] [[audio repairs]]" title="DAP Palladium 1200 Vintage repair">
+<div created="20220701211656084" modified="20220808234247084" tags="[[current projects]] [[audio amplifiers]] [[PA Amplifier Repairs]] [[audio repairs]]" title="DAP Palladium 1200 Vintage repair">
 <pre>!! DAP Palladium 1200 Vintage
 
 Fuses of one Channel missing/Blown, one Channel is dead, other one has some charred resistors but seems fine otherwise.
@@ -16190,6 +16242,8 @@ First task i did was some cleaning to get all of the old dust out.
 One of the Channels was shorted, the other one had some very charred resistors which also charred the pcb and a film cap next by. I'm also replacing an electrolytic cap next to the resistors just to be sure, because electrolytic ones can quickly degrade.
 
 It is hard to find out which power rating and type the original resistors had. I carefully scraped of the charred laquer on the old ones to see the construction and to guess the type. The type is Metal Oxide Film i guess, because it doesn't have wound wires and more like a metal film all around with cut in slots, also next to wire wound these are pretty mch the highest power resistors. I bought some of the highest value of that type that would still fit in small space were they belong. They ended up being 3W rated Yageo RSF3WSJT-73-10R. The caps are the Panasonic ECW-FD2W104J4 film cap and nichicon UPJ1E101MED1TD electrolytic, both should work fine.
+
+see also [[resistors]]
 
 The shorted channel will get a replacement of all the power transistors and of the preamp transistors. The Toshiba 2SA1943 and 2SC5200 still being manufactured, so one can still get them. It is Important to check the Suffix/hfe rating of them and buy the right ones. In audio the O-Rating seems to be most common for these complimentary pair. If your electronic parts distributor of choice lists them with additional suffixes they only indicate the way of packaging (e.g. tray/tablet or tube) and not the package/case of the device itself.
 
