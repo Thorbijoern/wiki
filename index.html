@@ -1871,6 +1871,8 @@ Error message and password prompt
 
 <li>Siren</li>
 
+<li>Skoda radio/control panel repair attempt</li>
+
 <li>slime mold / schleimpilz</li>
 
 <li>slingshot, sling &amp; similar</li>
@@ -12596,7 +12598,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[diy xy animation laser / laser xy-scanner / laser projector]] optics [[Big mobile Battery Project]] [[mcmaster carr alternative for europe]] [[GTK graphs]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220812200754632" title="$:/StoryList">
+<div created="20220808201413192" list="[[Skoda radio/control panel repair attempt]] [[diy xy animation laser / laser xy-scanner / laser projector]] optics [[Big mobile Battery Project]] [[mcmaster carr alternative for europe]] [[GTK graphs]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220812200754632" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -25867,6 +25869,28 @@ Es gibt Anlagen, die das automatisch tun, zum Beispiel von e3/dc. Da wird im Fal
 <pre>* [[3D Printing a Siren from a Noctua A12x25......WILL IT WORK? - Biqu B1 Review|https://www.youtube.com/watch?v=wdoVBZRyUf8]]
 * [[CRAZY LOUD 3D Printed Tornado Siren - Elegoo Mars|https://www.youtube.com/watch?v=39OmzYyQ_dQ]]
 * https://de.wikipedia.org/wiki/Sirene_(Ger%C3%A4t)</pre>
+</div>
+<div created="20220814190332408" modified="20220814210222930" tags="repairs [[current projects]]" title="Skoda radio/control panel repair attempt">
+<pre>i've got a stock radio/control panel out of a not that old Skoda car, but the warranty is already over. Its nothing too fancy, e.g. it is a version without navigation system, but replacing it costs around 1k€. The problem is that it started having problems and they got worse over time. sometimes it wouldn't start, sometimes it would randomly crash and just be off and sometimes it would crash in a way that the audio output / built in sound system had just digital garbage noise on it.
+
+I suspect an electrolytic cap is to blame because when they start to go bad the internal resistance start to rise, resulting in the ripple they are meant to smothe heating them up more, which is a vicious cycle. Then the problems that causes start to increase.
+
+to remove the radio from the dashboard you need special hooks. the radio itself is pretty thin. It has the connectors, a 4 pin coax connector (5pin if you count the outer earth connection) and a 12 pin for power and data connections. opening it up is pretty easy, there are some screws and some pretty easy to unclip clips holding the metal back and the plastic front together.
+inside of the radio is a main pcb in the middle, with the display behind it and 3 smaller pcbs arround on the sides. the smaller pcbs only manage inputs/buttons and some LEDs, they are connected with Flat Flex Cables (FFC), be careful not to damage thos cables or the connectors on the PCB when removing.
+
+the part that got my attention first is a power supply section to the left of the 12pin connector. there is a big zener diode, an inductor, a TO-252 package and an electrolytic cap that stand out.
+i suspect the problem might be with the biggest electrolytic cap, the other one are all smaller. the cap doesn't have any totaly obvious sings of being degraded, but it bight be a bit bulged.
+
+the cap is a 25V 1000uF nippon chemi-con/united chemi-con MVE Series.
+
+* datasheet: https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/MVERA-e.PDF
+* looks like terminal code: A
+* the datasheet states LH0 or MH0 as size codes for 25V/1000uF, but that does not match with the part on the PCB i've got, the part matches size code KE0 like the 16V/1000uF version has, something it not matching here...
+* the MHS series has smaller sizes.
+
+finding a replacement doesn't seem that easy. due to the pcb footprint the footprint of the part is pretty fixed. the case is approx. 2mm above the cap
+
+one option i'll probably try is to solder a bodge capacitor parallel to the existing one to test if that one even is the culprit.</pre>
 </div>
 <div created="20210327192759033" modified="20210415114858271" tags="[[sustainability / nachhaltigkeit]] Science nature" title="slime mold / schleimpilz">
 <pre>* can easily provide approximate solutions to the [[Travelling salesman problem]]
