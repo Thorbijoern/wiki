@@ -1941,6 +1941,8 @@ Error message and password prompt
 
 <li>Sonnensystem documentation</li>
 
+<li>Sonnensystem Signalweg</li>
+
 <li>sound (physics) basics</li>
 
 <li>sound from spectra</li>
@@ -12627,7 +12629,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[circuit/pcb design and simulation]] [[Draft 2 of ' 1']] [[metall diy]] [[Peavey PV8 USB 8-Channel Mixing Console repair]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220830001454519" title="$:/StoryList">
+<div created="20220808201413192" list="[[Sonnensystem Signalweg]] [[circuit/pcb design and simulation]] [[Draft 2 of ' 1']] [[metall diy]] [[Peavey PV8 USB 8-Channel Mixing Console repair]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220831000931077" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13644,8 +13646,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220830002244085" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220831000929422" modifier="Thorbijoern" title="$:/temp/search">
+<pre>dsp</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -26693,6 +26695,50 @@ _____
 * need din rail CAD model
 * CAD model for isolationchecker and circuit breaker
 * ask local bussiness to donate needed parts</pre>
+</div>
+<div created="20220831000902777" modified="20220831004217554" tags="" title="Sonnensystem Signalweg">
+<pre>the whole signal chain of the current ~SoSy Setup has to be checked in order to get the best sound quality and as prerequisite to measuring the frequency response of the whole system.
+
+check gain chain
+
+!! inputs:
+
+* yamaha mg06 (?)
+** &quot;stereo out&quot; +4dBu (?)
+** to unbalanced 6.3mm jack
+* xlr to unbalanced 6.3mm jack
+
+!! [[the t.racks DSP 4x4 Mini reverse engineering]]
+
+* the gains, sensitivity and internal reference is a bit fucked up, the thomann reviews describe it pretty well it seems
+* the inputs and outputs don't seem to have overhead and clip sooner than given in the datasheet it seems
+* unbalanced inputs and outputs seem to have a bit more room till clipping, but better check the current setup for issues
+* i can also check the real performance with my 4x4 mini dsp
+* check
+** input sensitivity
+** input clipping point
+** input gain
+** gains inbetween, like excessive gain in EQ
+** output gain
+** output clipping point
+** output &quot;sensitivity&quot;/level
+** system gain
+** more/other gain?
+
+!!amps
+
+* sensitivity / gain?
+* 3x [[Eton POWER 450.2|https://www.eton-gmbh.com/produkte/car-hifi/verstaerker/product/power-4502/]]
+* [[manual|https://www.eton-gmbh.com/fileadmin/user_upload/Bedienungsanleitungen/Car-HiFi_Verstaerker/BDA_POWER_AMP.pdf]]
+* different setups: bridged mode for bass, stereo mode for small tops and bridged mode for big tops
+* gain might have to be checked manually using osci
+* gain settings of the amps was done rather arbitrary it seems, because the information i got and the settings i've seen the last time i touched the amps was very contradicting
+* line level inputs are used
+* internal filters are not used
+
+!! the other dsp
+
+* similar to the dsp 4x4 mini, but different</pre>
 </div>
 <div created="20210126004435980" modified="20220528164150776" tags="Audio" title="sound (physics) basics">
 <pre>* https://www.physicsclassroom.com/class/sound
