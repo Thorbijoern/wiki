@@ -1111,6 +1111,12 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
+<li>Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'</li>
+
+<li>Draft of 'transistors'</li>
+
+<li>Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz</li>
@@ -12206,8 +12212,8 @@ TableOfContents</pre>
 <div created="20200629133847897" modified="20200629133847897" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200512220934152" modified="20220903132819803" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20200512220934152" modified="20220905214655324" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20200512221743504" modified="20220810231549681" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
@@ -12641,7 +12647,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[DMX / DMX512]] [[small open W-DMX stick]] [[ESC / BLDC motor driver / controller]] [[good, affordable LCR+ESR Meters]] [[Skoda radio/control panel repair attempt]] [[Peavey PV8 USB 8-Channel Mixing Console repair]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220905211509822" title="$:/StoryList">
+<div created="20220808201413192" list="[[electronic suppliers / distributors]] [[Draft of 'transistors']] [[Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)']] [[small open W-DMX stick]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220905214417168" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13658,8 +13664,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220905211507354" modifier="Thorbijoern" title="$:/temp/search">
-<pre>dmx</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220905214414019" modifier="Thorbijoern" title="$:/temp/search">
+<pre>mouser</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -17172,6 +17178,239 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
+<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220905213127365" tags="[[current projects]] [[light / projection / visuals]]" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
+<pre>!! Idee
+
+ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
+[[YT: bigclivedotcom: Make custom LED neon shapes|https://www.youtube.com/watch?v=y9bSzE9ir1Q]]
+mir waren dann einfarbige neon LED streifen zu einfach und zu langweilig, also wollte ich nach RGB und ansteuerbar schauen, gibts. und dann war veranstaltung mit dem sonnensystem in der robotron kantine und wir hatten DIY LED leisten von den Irrlichtern ausgeliehen und ich war ziemlich begeistert... nun meine ideensammlung:
+
+mit tipps und hilfe von https://irrlicht.uber.space/
+
+siehe https://irrlicht.uber.space/technik
+
+!! Protokolle überblick, kabelgebunden/kabellos
+
+DMX (richtiger DMX512) kann über 5-pol XLR Kabel transportiert werden, manchmal wird aber nur 3-pol XLR benutzt weil 2 leiter nicht wirklich genutzt sind. Es gibt auch systeme um DMX über CAT5 ethernet kabel zu leiten, das erhöht die reichweite. wireless systeme für DMX sind alle proprietär und es scheint da keine offenen standards zu geben, alles recht proprietär und das mag ich nicht. es gibt zwar ein recht großes monopol, aber das mag ich noch weniger.
+
+kabel möchte ich vermeiden weswegen DMX und RDM rausfallen. RDMNet (RDM über netzwerk) ist noch in entwicklung und nicht verbreitet.
+
+kontrollprotokolle die in frage kommen sind (s)ACN oder ~ArtNet, weil die sind IP basiert und funktionieren damit auch über Wlan, außerdem sind beide offene standards und es gibt offene implementationen, sie sind weit verbreitet. beide transportieren im grunde normale DMX steuersignale.
+
+* https://wiki.openlighting.org/index.php/Comparison_of_DMX_over_IP_protocols
+** https://wiki.openlighting.org/index.php/Category:ArtNet
+* https://wiki.openlighting.org/index.php/Category:E1.31
+* see [[DMX / DMX512]]
+
+
+!! controller firmware
+
+writing specialized firmware for this task is possible, but i think WLED is just the best option. it supports pretty much every protocol and means of control and it completely customizeable through a ton of settings and features, if thats not enough there are allready existing usermods and it seems pretty easy to write mods. its just to versatile not to use.
+
+* ''https://github.com/Aircoookie/WLED''
+** https://electric-junkie.de/2020/08/wled-quickstart/
+** [[WLED for Beginners in 2022 (PLUG n' PLAY!)|https://www.youtube.com/watch?v=FvPuiWTE6ic]]
+* https://github.com/MartyMacGyver/ESP32-Digital-RGB-LED-Drivers
+
+writing own firmware:
+
+* https://fastled.io/
+** https://github.com/FastLED/FastLED/wiki/Overview
+** https://github.com/FastLED/FastLED/wiki/ESP8266-notes
+* https://github.com/mtongnz/ESP8266_ArtNetNode_v2
+* https://github.com/natcl/Artnet
+* https://github.com/rstephan/ArtnetWifi
+
+
+!! Controller
+
+see also [[microcontroller]]
+
+als controller für leisten oder tolerave logo ziehe ich verschiedene microcontroller mit integriertem WLAN in betracht primar ESP8266/ESP32 (vlt. sogar die RISCV versionen) oder vlt. Raspberry Pi Pico W.  die stm32 fallen fast raus, weil die eh kaum zu bekommen sind momentan.
+für esp8266/esp32 gibt es auch schon gute auswahl an fertiger firmware.
+
+proprietär:
+
+* https://www.ulrichradig.de/home/index.php/dmx
+** https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu
+* https://github.com/twischer/WLAN-IO
+* https://www.discohat.com/qlc/
+* https://www.advateklights.com/products/pixel-control
+* https://opendmx.net/index.php/KarateLight
+
+
+!! verkabelung/controller pcb design etc.
+
+es gibt schon einige hardware und controller designs die mit WLED kompatibel sind
+
+basics
+
+* esp32 oder esp8266
+* esp
+
+stuff
+
+* Level shifter für 3.3V uC
+** https://www.addicore.com/Logic-Level-Converter-Bi-Directional-5V-to-3-3V-p/227.htm
+** https://www.adafruit.com/product/1787
+** https://www.adafruit.com/product/1779
+* resistor für daten line an LEDs
+** https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels
+** https://forum.arduino.cc/t/arduino-ws2812b-data-pin-resistor/533031/3
+** https://forums.parallax.com/discussion/158590/ws2812b-and-series-resistor
+** tutorials with unknows quality suggest ~220-510Ohm
+** https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices
+** adafruit states 300-500 Ohm
+* elko für pufferung an LEDs
+* https://github.com/Hasenpups/WLED_ESP32_Controller
+
+
+!! LED Typen
+
+was die LEDs angeht bin ich noch am schauen, am verbreitetsten sind die WS2812(x) und WS2813(x) rgb led streifen, der controll chip ist da in den led chips integriert, die laufen aber auf 5V und da ist die stromstärke schnell sehr groß.
+die WS2811 streifen haben zwar einen externen chip, laufen aber auf 12V und sind damit auch praktischer.
+es gibt SK2812 die auch noch einen weiß ton (entweder natur, warm, kalt oder &quot;bernstein&quot;) integrieren, laufen aber auch auf 5V und ich weiß nicht ob es einfach ist software darauf zu mappen.
+relativ neu und am besten scheinen WS2815, integrierter Chip aber laufen auf 12V, aber keine ahnung wie gut man die bekommt, habe die noch nicht viel gesehen.
+es könnte sein das das steuerprotokoll anfällig ist, aber da die so verbreitet sind und die Neon led streifen scheinbar nur mit solchen LEDs existieren werde ich das erstmal testen.
+
+* https://www.advateklights.com/knowledge-base/pixel-leds
+* https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu - has listing of common LED/controller types
+* [[LED Strips, what's the difference? WS2811, WS2812B, 2812Eco, WS2813, WS2815, SK6812, SK9822.|https://www.youtube.com/watch?v=QnvircC22hU&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=5]]
+* [[7 Common LED Strip FAILS and How To Avoid Them|https://www.youtube.com/watch?v=Fu4qZW0pQm4&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=9]]
+
+Neon
+
+* a lot of those neon LED strips use 3535 LEDs which require an external controller
+* but there are some using the WS2811 controller internally
+
+!! LED Alu Profile/Leisten/Diffuser / Gehäuse
+
+es gibt viele kompakte profile für den einbau ins haus oder in/an möbel. stabile für professionelle nutzung scheinbar eher weniger
+
+für die neon led streifen reichen vlt auch einfache alu U-profile
+
+* https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-mini-24-flach/profi-led-set-4m-2x2m-aufbauprofil-mini-24-schwarz-mit-runder-opaler-abdeckung
+
+* [[I bought every LED Diffuser channel on Amazon to find the best one. Mission Accomplished.|https://www.youtube.com/watch?v=DKOWeuV1FWE]]
+
+polycarbonat rohr wäre sehr bruchfest. gibt es aber nicht oft diffus, milchglasfolie?
+
+!! DMX/ACN/~ArtNet Steuersoftware
+
+software für den PC ist bisschen rar was open source angeht, aber QLC+ kann da scheinbar alles, ist denke ich auch eine spende an den entwickler wert.
+led/pixel mapping software gibts da weniger. es gibt zwar mapmap, aber das ist nur video projection mapping und supported keine einzelnen LEDs oder andere outputs als beamer, also nicht richtig vergleichbar zu ~MadMapper.
+
+see [[open VJ, projection/Video Mapping]]
+
+
+
+* https://www.churchtechideas.com/qlc-led-matrix-tutorial/
+* https://en.wikipedia.org/wiki/Show_control
+
+
+!! Stromversorgung
+
+* [[The BEST way to join LED strips with no gaps or seams + make waterproof power injection connections.|https://www.youtube.com/watch?v=WGgzWWrCIhY]]
+* [[7 Common LED Strip FAILS and How To Avoid Them|https://www.youtube.com/watch?v=Fu4qZW0pQm4&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=9]]
+* [[Power LED Lights + Injection. Complete Walkthrough|https://www.youtube.com/watch?v=KFtjf5mD6tA]]
+* [[3 Quick Fixes for LED Color Issues - Power Injection, Voltage Drop, Brightness Regulation and More.|https://www.youtube.com/watch?v=apwQ5Jh4VyE]]
+
+
+stuff
+
+* https://www.youtube.com/results?search_query=esp32+artnet
+* https://www.instructables.com/Artnet-LED-Pixels-With-ESP8266/
+* https://github.com/polyfloyd/ledcat
+* [[Playlist: Individually Addressable RGB LEDs|https://www.youtube.com/playlist?list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m]]
+* [[SDG #048 DMX Controlled RGB Linear Light Strips|https://www.youtube.com/watch?v=bDFkVJ4jwTE]]</pre>
+</div>
+<div created="20210323215516164" draft.of="transistors" draft.title="transistors" modified="20220905213940614" tags="[[electronics parts/components]]" title="Draft of 'transistors'">
+<pre>basic transistors
+
+* [[Electronic Basics #22: Transistor (BJT) as a Switch|https://www.youtube.com/watch?v=WRm2oUw4owE]]
+* [[MOSFET BJT or IGBT - Brief comparison Basic components #004|https://www.youtube.com/watch?v=VlMdSCI29A0]]
+* [[SSTC pt. 2 - BJT vs MOSFET vs IGBT|https://www.youtube.com/watch?v=dRxBfXlIWiA]]
+* [[Transistors Explained - How transistors work|https://www.youtube.com/watch?v=J4oO7PT_nzQ]]
+* [[LE3_6f Integrierte Gate Treiber für Mosfet/IGBT|https://www.youtube.com/watch?v=OXm8SRZ46Fk]]
+* transistors are not just switches but current amplifiers
+* https://de.wikipedia.org/wiki/Transistorgrundschaltungen
+* [[Transistor Lied - Song about Bipolartransistors - lyrics by Sophia Transistor|https://www.youtube.com/watch?v=yFCnzuOLizw]]
+* BJT - bipolar junction transistor
+* JFET
+
+FET - Mosfet
+
+* https://www.mikrocontroller.net/articles/MOSFET-%C3%9Cbersicht
+* [[Electronic Basics #23: Transistor (MOSFET) as a Switch|https://www.youtube.com/watch?v=o4_NeqlJgOs]]
+* [[Here is why MOSFET drivers are sometimes essential! -- MOSFET Driver Part 1 (Driver, Bootstrapping)|https://www.youtube.com/watch?v=8swJ_Bnsgl4]]
+** [[Warum MOSFET Treiber manchmal essentiell sind?! - MOSFET Ansteuerung Teil 1 (Treiber, Bootstrapping)|https://www.youtube.com/watch?v=pdTRzBHOC5w]]
+* [[Here is why Gate-Drive Transformers are sometimes essential! - MOSFET Driver Part 2 (Potential-free)|https://www.youtube.com/watch?v=B7Eqrf2M-Iw]]
+* [[Should you buy a GaN Power Adapter? Or is it a scam? -- Testing GaN FETs!|https://www.youtube.com/watch?v=oTUZQDpQcU4]]
+* [[Designing Power MOSFET Circuits - Circuit Tips and Tricks|https://www.youtube.com/watch?v=56p3_aORiJ0]]
+* https://www.youtube.com/results?search_query=driving+mosfets
+* [[MOSFET – The Most significant invention of the 20th Century|https://www.youtube.com/watch?v=bHwl8TdEI6k]]
+* [[MOSFETs und Mikrocontroller - Grundlagen, Datenblätter, praktische Schaltungen &amp; Typen|https://www.youtube.com/watch?v=uxGzMDKNvTo]]
+* [[Arduino DC Motor mit MOSFET H-Brücke steuern - Einstellbare Drehrichtung &amp; Geschwindigkeit|https://www.youtube.com/watch?v=13bCzydTz8I]]
+
+IGBTs
+
+* [[Electronic Basics #28: IGBT and when to use them|https://www.youtube.com/watch?v=RxRJW09A_XA]]
+* [[SSTC pt. 3 - choosing IGBT transistors &amp; how to read datasheets|https://www.youtube.com/watch?v=hGQsfOeYhuc]]
+
+
+replacing
+
+* https://www.electronics-notes.com/articles/electronic_components/transistor/choosing-replacements-transistors.php</pre>
+</div>
+<div created="20211005221546149" draft.of="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)" draft.title="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)" modified="20220905213839233" tags="[[electronics parts/components]]" title="Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)'">
+<pre>https://en.wiktionary.org/wiki/jellybean_part
+
+other lists
+
+* https://www.eevblog.com/forum/chat/jellybean-list/
+* https://theknowledgeaccelerator.com/2016/04/16/jellybean-components/
+* https://forum.allaboutcircuits.com/threads/components-selection-guide.65137/
+* https://www.eevblog.com/forum/beginners/common-generic-cheap-easy-to-find-parts/
+* https://www.eevblog.com/forum/beginners/what-parts-to-get-at-the-store/
+* https://www.eevblog.com/forum/chat/dave_s-_jellybean_/
+* https://www.mikrocontroller.net/articles/Standardbauelemente
+
+transistors BJT
+
+* https://en.wikipedia.org/wiki/2N3906
+* https://en.wikipedia.org/wiki/2N3904
+* https://en.wikipedia.org/wiki/BC548
+* https://en.wikipedia.org/wiki/2N2907
+* https://en.wikipedia.org/wiki/2N2222
+* https://en.wikipedia.org/wiki/BC108_family
+* PN2907
+
+Diodes
+
+* https://en.wikipedia.org/wiki/Category:Diodes
+* https://en.wikipedia.org/wiki/1N400x_general-purpose_diode
+* https://en.wikipedia.org/wiki/1N58xx_Schottky_diodes
+
+* 1n4004
+* 1n4007
+* 1N4148
+** https://en.wikipedia.org/wiki/1N4148_signal_diode
+
+Chips general
+
+* [[Probably the most used component nobody knows of! TL431 Guide! EB#50|https://www.youtube.com/watch?v=isutYMU2HHU]]
+** [[This IC is Multifunctional - TL431 Circuits|https://www.youtube.com/watch?v=NecbHbGAkkc]]
+* 555 Timer IC
+* [[EEVblog 1438 - The TOP 5 Jellybean Regulators &amp; References|https://www.youtube.com/watch?v=YHRxvUqy3Uw]]
+* [[EEVblog 1464 - TOP 5 Jellybean Comparators|https://www.youtube.com/watch?v=c5M8P6oe9xY]]
+
+Opamps
+
+* https://components101.com/article/major-difference-between-lm358-op-amp-and-lm393-comparator
+* https://en.wikipedia.org/wiki/NE5532 - one of the best audio opamps
+* (RC/JRC)4558 - maybe a pretty sheap and not so good opamp
+* [[EEVBlog 1436 - The TOP 5 Jellybean OPAMP's|https://www.youtube.com/watch?v=uq1DMWtjL2U]]</pre>
+</div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -17593,7 +17832,7 @@ the ZB206 seems to be an older design and isn't sold a lot anymore.
 <div created="20210320202337030" modified="20210320202800537" tags="Projects Electronics" title="Electronic Projects">
 <pre></pre>
 </div>
-<div created="20200514203641753" modified="20220404141758151" tags="Electronics" title="electronic suppliers / distributors">
+<div created="20200514203641753" modified="20220905215044182" tags="Electronics" title="electronic suppliers / distributors">
 <pre>* mouser
 * [[digikey|https://www.digikey.de/]]
 * https://www.arrow.com/
@@ -17618,6 +17857,9 @@ the ZB206 seems to be an older design and isn't sold a lot anymore.
 
 other lists:
 
+* https://www.mikrocontroller.net/articles/Lokale_Elektroniklieferanten
+* https://www.mikrocontroller.net/articles/Elektronikversender
+* https://www.mikrocontroller.net/articles/Standardbauelemente#Lieferanten
 * https://caps.wiki/wiki/Distributors
 
 tools
