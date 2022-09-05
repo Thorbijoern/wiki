@@ -1113,6 +1113,8 @@ Error message and password prompt
 
 <li>Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'</li>
 
+<li>Draft of 'microcontroller'</li>
+
 <li>Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)'</li>
 
 <li>Dresden</li>
@@ -12647,7 +12649,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[bus(/car) electric conversion]] [[Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)']] [[small open W-DMX stick]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220905234526584" title="$:/StoryList">
+<div created="20220808201413192" list="[[measuring current]] [[Draft of 'microcontroller']] [[Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)']] [[small open W-DMX stick]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220905234701661" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13664,8 +13666,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220905234521090" modifier="Thorbijoern" title="$:/temp/search">
-<pre>bus</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220905234657679" modifier="Thorbijoern" title="$:/temp/search">
+<pre>curren</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -17381,6 +17383,78 @@ see [[open VJ, projection/Video Mapping]]
 * https://github.com/polyfloyd/ledcat
 * [[Playlist: Individually Addressable RGB LEDs|https://www.youtube.com/playlist?list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m]]
 * [[SDG #048 DMX Controlled RGB Linear Light Strips|https://www.youtube.com/watch?v=bDFkVJ4jwTE]]</pre>
+</div>
+<div created="20210103222540142" draft.of="microcontroller" draft.title="microcontroller" modified="20220905234644077" tags="[[Hardware stuff]] [[digital electronics]]" title="Draft of 'microcontroller'">
+<pre>needed/used for many kinds of projects/devices
+
+see [[embedded device development]]
+
+* Arduino
+** Adafruit and other compatible
+
+* PIC
+** old industry standard, many compatible chips still on the marked, but outdated
+** basic programming is pretty easy due to the simple architecture, but it's processing power and capabilities are pretty limited
+
+* STM32
+** cheap, pretty powerful (more than arduino)
+** new industry standard
+** debugging using ~OpenOCD and gdb
+** https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html
+** [[Easy &amp; Powerful Arduino Alternative? STM32 Beginner's Guide|https://www.youtube.com/watch?v=EaZuKRSvwdo]]
+** https://stm32world.com/wiki/
+** [[STM32 DMA and FreeRTOS Tutorial - Phil's Lab #14|https://www.youtube.com/watch?v=OyVemnshlQQ]]
+
+* ESP8266 &amp; ESP32
+** http://esp8266.net/ - overview
+** https://www.esp8266.com/ - forum
+** https://web.archive.org/web/20220702032606/http://esp32.net/ - overview (original currently offline)
+** https://esp32.com/ - forum
+** there are ESP32 Models with Risc-V cores
+** https://learnesp32.com/ ? 
+** https://esp32io.com/
+** https://en.wikipedia.org/wiki/ESP8266
+** https://en.wikipedia.org/wiki/ESP32
+
+* MSP430/ähnliche von TI
+
+* Raspberry Pi Pico
+** https://www.raspberrypi.com/products/rp2040/
+** https://www.raspberrypi.com/products/raspberry-pi-pico/
+** https://www.raspberrypi.com/news/raspberry-pi-pico-w-your-6-iot-platform/
+** [[Challenger RP2040 Wi-Fi: A better Raspberry Pi Pico W than the Raspberry Pi Pico W?|https://www.youtube.com/watch?v=eNjvjc0sMNE]]
+** [[Raspberry Pi Pico Clone with 16MB Flash, USB-C, Neopixel, and More!|https://www.youtube.com/watch?v=EChO4o4Z9v8]]
+
+* Teensy
+** https://www.pjrc.com/store/teensy41.html
+** https://www.youtube.com/watch?v=jDihQXEuhzI
+* [[RISC-V]]
+
+see [[single board computer (SBC)]] if more power/capabilities are needed
+
+on low power/current uCs
+
+* https://www.rs-online.com/designspark/which-low-power-mcu-is-really-the-lowest-power
+* https://www.mouser.com/applications/low_power_choosing_mcu/
+* https://electronics.stackexchange.com/questions/90602/parameters-to-compare-microcontrollers-for-low-power-consumption
+* STM32 are also marketed as low power?
+** https://www.st.com/en/microcontrollers-microprocessors/stm32-ultra-low-power-mcus.html
+* https://www.analog.com/en/products/processors-microcontrollers/microcontrollers/ultra-low-power-microcontrollers.html
+
+languages/frameworks
+
+* ~MicroPython (pretty slow?)
+* Rust Embedded (many things not stable or crates don't exist jet)
+* C/C++ (oldschool)
+* Arduino (C++)
+* see [[Real Time Operating System (RTOS)]]
+
+
+stuff
+
+* https://www.youtube.com/watch?v=UAJMLTzrM9Q
+* see [[inter IC or inter device communication, networking]]
+* https://components101.com/article/difference-between-8-bit-16-bit-and-32-bit-microcontrollers</pre>
 </div>
 <div created="20211005221546149" draft.of="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)" draft.title="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)" modified="20220905234237969" tags="[[electronics parts/components]]" title="Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)'">
 <pre>https://en.wiktionary.org/wiki/jellybean_part
@@ -21792,7 +21866,7 @@ stuff
 
 * https://www.paulvdiyblogs.net/2016/09/building-milli-ohm-meter.html</pre>
 </div>
-<div created="20210301152845714" modified="20210317233700722" tags="[[testing &amp; measuring]]" title="measuring current">
+<div created="20210301152845714" modified="20220905234718957" tags="[[testing &amp; measuring]]" title="measuring current">
 <pre>* see [[multimeter]]
 * [[#321​ 7 Sensors tested: Measuring Current with Microcontrollers (Arduino, ESP32, ESP8266)|https://www.youtube.com/watch?v=cG8moaufmQs]]
 * [[#347​ Measuring Mains Voltage, Current, and Power for Home Automation|https://www.youtube.com/watch?v=Vb9-pbLdsfQ]]
@@ -21824,7 +21898,8 @@ stuff
 ** [[#245​ Deep-Sleep Current: Which is better? µCurrent or CurrentRanger? (ESP32, ESP8266)|https://www.youtube.com/watch?v=HmXfyLyN38c]]
 * [[Ammeter for Workshop Battery (powers the lights)|https://www.youtube.com/watch?v=KEv0pnp9eCM]]
 * [[300 Volt, 100 Amp Meter for Solar Panel|https://www.youtube.com/watch?v=Yuna7CgLK7k]]
-* https://en.wikipedia.org/wiki/Current_sensing</pre>
+* https://en.wikipedia.org/wiki/Current_sensing
+* https://components101.com/article/comparison-between-shunt-hall-and-ic-based-current-sensing-designs</pre>
 </div>
 <div created="20210331135548503" modified="20220331123150774" tags="[[testing &amp; measuring]]" title="measuring inductance">
 <pre>* https://www.wikihow.com/Measure-Inductance
