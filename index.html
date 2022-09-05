@@ -1113,6 +1113,8 @@ Error message and password prompt
 
 <li>Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'</li>
 
+<li>Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz</li>
@@ -12645,7 +12647,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[small open W-DMX stick]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About [[my equipment]] TableOfContents" modified="20220905230400576" title="$:/StoryList">
+<div created="20220808201413192" list="[[bus(/car) electric conversion]] [[Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)']] [[small open W-DMX stick]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220905234526584" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13662,8 +13664,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220905230353726" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220905234521090" modifier="Thorbijoern" title="$:/temp/search">
+<pre>bus</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15434,7 +15436,7 @@ Motors
 * https://www.electrobus.hu/city-pioneer
 * https://www.crrcgc.cc/g7220.aspx</pre>
 </div>
-<div created="20200519104450808" modified="20220112153410679" tags="[[sustainability / nachhaltigkeit]] [[electric vehicles (EV)]]" title="bus(/car) electric conversion">
+<div created="20200519104450808" modified="20220905234540839" tags="[[sustainability / nachhaltigkeit]] [[electric vehicles (EV)]]" title="bus(/car) electric conversion">
 <pre>(Project idea: Erik from FFF DD)
 
 taking an old bus and rebuilding it to electric or adding more electric capability to hybrid or trolleybus
@@ -15463,6 +15465,7 @@ Needed:
 ** detailed technical information about the vehicle to convert
 ** trolleybus or hybrid bus allready have electric motor and a lot of stuff
 * electric motor
+** https://components101.com/articles/ev-traction-motor
 * battery
 ** which type to use? LiFePO4? LTO?
 ** how does the co2 footprint charge off (amortisieren)
@@ -17177,7 +17180,7 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
-<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220905225953530" tags="[[current projects]] [[light / projection / visuals]]" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
+<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220905233631863" tags="[[current projects]] [[light / projection / visuals]]" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
 <pre>!! Idee
 
 ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
@@ -17210,8 +17213,9 @@ writing specialized firmware for this task is possible, but i think WLED is just
 ** https://electric-junkie.de/2020/08/wled-quickstart/
 ** [[WLED for Beginners in 2022 (PLUG n' PLAY!)|https://www.youtube.com/watch?v=FvPuiWTE6ic]]
 * https://github.com/MartyMacGyver/ESP32-Digital-RGB-LED-Drivers
+* https://github.com/atuline/WLED - wled sound reactive fork
 
-supported programmers: https://kno.wled.ge/basics/compatible-hardware/#usbttl-adapters
+supported programmers: https://kno.wled.ge/basics/compatible-hardware/#usbttl-adapters habe einen kompatiblen
 
 writing own firmware:
 
@@ -17259,8 +17263,18 @@ basics
 ** 74AHCT32
 ** PCA9306?
 ** dicrete - not viable for small designs
-* LED data protection
-* strip input protection
+* LED data / strip input protection
+** resistor
+** https://wled.shop/produkt/ws2812-protect/
+*** https://wled.shop/wp-content/uploads/2021/11/SK6812_Datenv10.pdf
+* lamp input protection
+** fuse
+** capacitor
+** reverse polarity protection?
+* programming connector
+** only ground&amp;data lines to save space
+** maybe use pogo-pins to save space?
+
 
 stuff
 
@@ -17306,6 +17320,9 @@ es gibt viele kompakte profile für den einbau ins haus oder in/an möbel. stabi
 für die neon led streifen reichen vlt auch einfache alu U-profile
 
 * https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-mini-24-flach/profi-led-set-4m-2x2m-aufbauprofil-mini-24-schwarz-mit-runder-opaler-abdeckung
+** https://www.isolicht.com/catalogsearch/result/index/?p=2&amp;q=profi+led+set
+** https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile
+*** https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-maxi-24?product_list_limit=60&amp;product_list_order=price_asc
 
 * [[I bought every LED Diffuser channel on Amazon to find the best one. Mission Accomplished.|https://www.youtube.com/watch?v=DKOWeuV1FWE]]
 
@@ -17351,13 +17368,73 @@ see [[open VJ, projection/Video Mapping]]
 * [[3 Quick Fixes for LED Color Issues - Power Injection, Voltage Drop, Brightness Regulation and More.|https://www.youtube.com/watch?v=apwQ5Jh4VyE]]
 
 
-stuff
+!! &quot;dumme&quot; RGB(W) LEDs ansteuern
+
+* WLED hat die option PWM RGB(W) auszugeben
+* es gibt einfache mosfet module fertig aus china zu kaufen
+
+
+!! stuff
 
 * https://www.youtube.com/results?search_query=esp32+artnet
 * https://www.instructables.com/Artnet-LED-Pixels-With-ESP8266/
 * https://github.com/polyfloyd/ledcat
 * [[Playlist: Individually Addressable RGB LEDs|https://www.youtube.com/playlist?list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m]]
 * [[SDG #048 DMX Controlled RGB Linear Light Strips|https://www.youtube.com/watch?v=bDFkVJ4jwTE]]</pre>
+</div>
+<div created="20211005221546149" draft.of="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)" draft.title="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)" modified="20220905234237969" tags="[[electronics parts/components]]" title="Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)'">
+<pre>https://en.wiktionary.org/wiki/jellybean_part
+
+other lists
+
+* https://www.eevblog.com/forum/chat/jellybean-list/
+* https://theknowledgeaccelerator.com/2016/04/16/jellybean-components/
+* https://forum.allaboutcircuits.com/threads/components-selection-guide.65137/
+* https://www.eevblog.com/forum/beginners/common-generic-cheap-easy-to-find-parts/
+* https://www.eevblog.com/forum/beginners/what-parts-to-get-at-the-store/
+* https://www.eevblog.com/forum/chat/dave_s-_jellybean_/
+* https://www.mikrocontroller.net/articles/Standardbauelemente
+
+transistors BJT
+
+* https://en.wikipedia.org/wiki/2N3906
+* https://en.wikipedia.org/wiki/2N3904
+* https://en.wikipedia.org/wiki/BC548
+* https://en.wikipedia.org/wiki/2N2907
+* https://en.wikipedia.org/wiki/2N2222
+* https://en.wikipedia.org/wiki/BC108_family
+* PN2907
+
+mosfets
+
+* https://components101.com/articles/popular-mosfets-frequently-used-in-power-electronics-designs
+* https://www.mikrocontroller.net/articles/MOSFET-%C3%9Cbersicht
+
+Diodes
+
+* https://en.wikipedia.org/wiki/Category:Diodes
+* https://en.wikipedia.org/wiki/1N400x_general-purpose_diode
+* https://en.wikipedia.org/wiki/1N58xx_Schottky_diodes
+
+* 1n4004
+* 1n4007
+* 1N4148
+** https://en.wikipedia.org/wiki/1N4148_signal_diode
+
+Chips general
+
+* [[Probably the most used component nobody knows of! TL431 Guide! EB#50|https://www.youtube.com/watch?v=isutYMU2HHU]]
+** [[This IC is Multifunctional - TL431 Circuits|https://www.youtube.com/watch?v=NecbHbGAkkc]]
+* 555 Timer IC
+* [[EEVblog 1438 - The TOP 5 Jellybean Regulators &amp; References|https://www.youtube.com/watch?v=YHRxvUqy3Uw]]
+* [[EEVblog 1464 - TOP 5 Jellybean Comparators|https://www.youtube.com/watch?v=c5M8P6oe9xY]]
+
+Opamps
+
+* https://components101.com/article/major-difference-between-lm358-op-amp-and-lm393-comparator
+* https://en.wikipedia.org/wiki/NE5532 - one of the best audio opamps
+* (RC/JRC)4558 - maybe a pretty sheap and not so good opamp
+* [[EEVBlog 1436 - The TOP 5 Jellybean OPAMP's|https://www.youtube.com/watch?v=uq1DMWtjL2U]]</pre>
 </div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
