@@ -1113,10 +1113,6 @@ Error message and password prompt
 
 <li>Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'</li>
 
-<li>Draft of 'transistors'</li>
-
-<li>Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz</li>
@@ -1140,6 +1136,8 @@ Error message and password prompt
 <li>efficient (12&quot;, 10&quot; or 8&quot;) Tops/fullrange</li>
 
 <li>Effiziente Beschallung von Menschenmengen</li>
+
+<li>Eisenwaren</li>
 
 <li>electric motor and other parts</li>
 
@@ -12647,7 +12645,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[DIY PCBs (DIY Circuit Boards)]] [[Draft of 'transistors']] [[Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)']] [[small open W-DMX stick]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220905215052212" title="$:/StoryList">
+<div created="20220808201413192" list="[[finding open hardware or DIY projects]] [[small open W-DMX stick]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220905225545548" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13664,8 +13662,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220905215050318" modifier="Thorbijoern" title="$:/temp/search">
-<pre>pcb</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220905225546831" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -17179,7 +17177,7 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
-<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220905213127365" tags="[[current projects]] [[light / projection / visuals]]" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
+<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220905225042158" tags="[[current projects]] [[light / projection / visuals]]" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
 <pre>!! Idee
 
 ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
@@ -17247,7 +17245,17 @@ es gibt schon einige hardware und controller designs die mit WLED kompatibel sin
 basics
 
 * esp32 oder esp8266
-* esp
+* 3,3V stromversorgung für den ESP
+** e.g. AMS1117 oder kleiner
+* level converter/shifter
+** TXS0108(E), TXS0102, TXS0104 - verbreitet, 2 kanal version auch recht klein
+** SN74AHCT125(N)
+** SN74LVC2T45
+** 74AHCT32
+** PCA9306?
+** dicrete - not viable for small designs
+* LED data protection
+* strip input protection
 
 stuff
 
@@ -17264,6 +17272,7 @@ stuff
 ** adafruit states 300-500 Ohm
 * elko für pufferung an LEDs
 * https://github.com/Hasenpups/WLED_ESP32_Controller
+* mit wled ist es möglich mehrere strips mit den selben daten anzusteuern, aber bei WS2812 o.Ä. kann man auch die datenleitungen parallel schalten: https://www.reddit.com/r/arduino/comments/jvqkuq/addressing_ws2812b_strips_in_parallel_individually/
 
 
 !! LED Typen
@@ -17294,7 +17303,26 @@ für die neon led streifen reichen vlt auch einfache alu U-profile
 
 * [[I bought every LED Diffuser channel on Amazon to find the best one. Mission Accomplished.|https://www.youtube.com/watch?v=DKOWeuV1FWE]]
 
-polycarbonat rohr wäre sehr bruchfest. gibt es aber nicht oft diffus, milchglasfolie?
+die profile müssen auch genug platz für den controller haben
+
+schwarze channel innen am besten weiß ansprühen
+
+hab jemensch gefunden der LED röhren mit normalen LED strips und WLED controller in 5cm acrylglas rohr gebaut hat.
+
+polycarbonat rohr wäre sehr bruchfest. gibt es aber nicht diffus/milchig so wie es aussieht
+milchglasfolie oder schleifen könnte vlt. funktionieren, ist aber nicht perfekt
+
+rohr bauart, meine ideen:
+
+* 1m oder 0,5m länge
+* 3d gedruckte endkappen
+* 3d-gedruckte channel innen (am besten weißes filament oder ansprühen)
+* supports/standoffs/spacer die den channel in der mitte halten am besten aus transparentem acryl lasern/schneiden oder transparentem resin 3d drucken damit sie möglichst wenig auffallen
+* 3 oder 4 strips (testen) für gleichmäßige 360° beleuchtung, LEDs haben ja auch leuchtwinkel angaben
+* rohr dicke nicht unbedingt 5cm, sondern vlt. auch dünner, testen mit abständen LED-diffusor und jenachdem wie es mit den channeln möglich ist.
+* in channel können kabel für stromversorgung durchgeführt werden
+* controller könnte in channel versteckt werden
+* 60leds pro meter oder vlt. mehr
 
 !! DMX/ACN/~ArtNet Steuersoftware
 
@@ -17324,93 +17352,6 @@ stuff
 * https://github.com/polyfloyd/ledcat
 * [[Playlist: Individually Addressable RGB LEDs|https://www.youtube.com/playlist?list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m]]
 * [[SDG #048 DMX Controlled RGB Linear Light Strips|https://www.youtube.com/watch?v=bDFkVJ4jwTE]]</pre>
-</div>
-<div created="20210323215516164" draft.of="transistors" draft.title="transistors" modified="20220905213940614" tags="[[electronics parts/components]]" title="Draft of 'transistors'">
-<pre>basic transistors
-
-* [[Electronic Basics #22: Transistor (BJT) as a Switch|https://www.youtube.com/watch?v=WRm2oUw4owE]]
-* [[MOSFET BJT or IGBT - Brief comparison Basic components #004|https://www.youtube.com/watch?v=VlMdSCI29A0]]
-* [[SSTC pt. 2 - BJT vs MOSFET vs IGBT|https://www.youtube.com/watch?v=dRxBfXlIWiA]]
-* [[Transistors Explained - How transistors work|https://www.youtube.com/watch?v=J4oO7PT_nzQ]]
-* [[LE3_6f Integrierte Gate Treiber für Mosfet/IGBT|https://www.youtube.com/watch?v=OXm8SRZ46Fk]]
-* transistors are not just switches but current amplifiers
-* https://de.wikipedia.org/wiki/Transistorgrundschaltungen
-* [[Transistor Lied - Song about Bipolartransistors - lyrics by Sophia Transistor|https://www.youtube.com/watch?v=yFCnzuOLizw]]
-* BJT - bipolar junction transistor
-* JFET
-
-FET - Mosfet
-
-* https://www.mikrocontroller.net/articles/MOSFET-%C3%9Cbersicht
-* [[Electronic Basics #23: Transistor (MOSFET) as a Switch|https://www.youtube.com/watch?v=o4_NeqlJgOs]]
-* [[Here is why MOSFET drivers are sometimes essential! -- MOSFET Driver Part 1 (Driver, Bootstrapping)|https://www.youtube.com/watch?v=8swJ_Bnsgl4]]
-** [[Warum MOSFET Treiber manchmal essentiell sind?! - MOSFET Ansteuerung Teil 1 (Treiber, Bootstrapping)|https://www.youtube.com/watch?v=pdTRzBHOC5w]]
-* [[Here is why Gate-Drive Transformers are sometimes essential! - MOSFET Driver Part 2 (Potential-free)|https://www.youtube.com/watch?v=B7Eqrf2M-Iw]]
-* [[Should you buy a GaN Power Adapter? Or is it a scam? -- Testing GaN FETs!|https://www.youtube.com/watch?v=oTUZQDpQcU4]]
-* [[Designing Power MOSFET Circuits - Circuit Tips and Tricks|https://www.youtube.com/watch?v=56p3_aORiJ0]]
-* https://www.youtube.com/results?search_query=driving+mosfets
-* [[MOSFET – The Most significant invention of the 20th Century|https://www.youtube.com/watch?v=bHwl8TdEI6k]]
-* [[MOSFETs und Mikrocontroller - Grundlagen, Datenblätter, praktische Schaltungen &amp; Typen|https://www.youtube.com/watch?v=uxGzMDKNvTo]]
-* [[Arduino DC Motor mit MOSFET H-Brücke steuern - Einstellbare Drehrichtung &amp; Geschwindigkeit|https://www.youtube.com/watch?v=13bCzydTz8I]]
-
-IGBTs
-
-* [[Electronic Basics #28: IGBT and when to use them|https://www.youtube.com/watch?v=RxRJW09A_XA]]
-* [[SSTC pt. 3 - choosing IGBT transistors &amp; how to read datasheets|https://www.youtube.com/watch?v=hGQsfOeYhuc]]
-
-
-replacing
-
-* https://www.electronics-notes.com/articles/electronic_components/transistor/choosing-replacements-transistors.php</pre>
-</div>
-<div created="20211005221546149" draft.of="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)" draft.title="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)" modified="20220905213839233" tags="[[electronics parts/components]]" title="Draft of 'widely used/common or standard electronic parts and components (&quot;jellybean&quot;)'">
-<pre>https://en.wiktionary.org/wiki/jellybean_part
-
-other lists
-
-* https://www.eevblog.com/forum/chat/jellybean-list/
-* https://theknowledgeaccelerator.com/2016/04/16/jellybean-components/
-* https://forum.allaboutcircuits.com/threads/components-selection-guide.65137/
-* https://www.eevblog.com/forum/beginners/common-generic-cheap-easy-to-find-parts/
-* https://www.eevblog.com/forum/beginners/what-parts-to-get-at-the-store/
-* https://www.eevblog.com/forum/chat/dave_s-_jellybean_/
-* https://www.mikrocontroller.net/articles/Standardbauelemente
-
-transistors BJT
-
-* https://en.wikipedia.org/wiki/2N3906
-* https://en.wikipedia.org/wiki/2N3904
-* https://en.wikipedia.org/wiki/BC548
-* https://en.wikipedia.org/wiki/2N2907
-* https://en.wikipedia.org/wiki/2N2222
-* https://en.wikipedia.org/wiki/BC108_family
-* PN2907
-
-Diodes
-
-* https://en.wikipedia.org/wiki/Category:Diodes
-* https://en.wikipedia.org/wiki/1N400x_general-purpose_diode
-* https://en.wikipedia.org/wiki/1N58xx_Schottky_diodes
-
-* 1n4004
-* 1n4007
-* 1N4148
-** https://en.wikipedia.org/wiki/1N4148_signal_diode
-
-Chips general
-
-* [[Probably the most used component nobody knows of! TL431 Guide! EB#50|https://www.youtube.com/watch?v=isutYMU2HHU]]
-** [[This IC is Multifunctional - TL431 Circuits|https://www.youtube.com/watch?v=NecbHbGAkkc]]
-* 555 Timer IC
-* [[EEVblog 1438 - The TOP 5 Jellybean Regulators &amp; References|https://www.youtube.com/watch?v=YHRxvUqy3Uw]]
-* [[EEVblog 1464 - TOP 5 Jellybean Comparators|https://www.youtube.com/watch?v=c5M8P6oe9xY]]
-
-Opamps
-
-* https://components101.com/article/major-difference-between-lm358-op-amp-and-lm393-comparator
-* https://en.wikipedia.org/wiki/NE5532 - one of the best audio opamps
-* (RC/JRC)4558 - maybe a pretty sheap and not so good opamp
-* [[EEVBlog 1436 - The TOP 5 Jellybean OPAMP's|https://www.youtube.com/watch?v=uq1DMWtjL2U]]</pre>
 </div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -17713,6 +17654,10 @@ Jedoch sind Line Arrays sehr teuer und benötigen eine gewisse Höhe um auch Dis
 * [[LRAD]]
 * Große Demonstration beschallen: http://www.hifi-forum.de/viewthread-127-3333.html
 * demo / kundgebung mobil beschallen: http://www.hifi-forum.de/viewthread-182-7070.html</pre>
+</div>
+<div created="20220905215455512" modified="20220905215656206" tags="[[electronics parts/components]]" title="Eisenwaren">
+<pre>* https://www.mikrocontroller.net/articles/Eisenwarenversender
+* see [[mcmaster carr alternative for europe]]</pre>
 </div>
 <div created="20200519111215905" modified="20211123230427644" tags="[[bus(/car) electric conversion]]" title="electric motor and other parts">
 <pre>* out of old, crashed EVs?
@@ -18497,7 +18442,7 @@ for f in *.mp3; do ffmpeg -i &quot;$f&quot; &quot;$(basename $f).wav&quot;; done
 <div created="20220724204954576" modified="20220724205103600" tags="[[current projects]] [[PA Amplifier Repairs]]" title="Fidek FPA-10A repair">
 <pre></pre>
 </div>
-<div created="20200519155629257" modified="20220708221727985" tags="[[Open Hardware]]" title="finding open hardware or DIY projects">
+<div created="20200519155629257" modified="20220905225554510" tags="[[Open Hardware]]" title="finding open hardware or DIY projects">
 <pre>* https://www.instructables.com/
 * https://hackaday.com/
 * https://hackaday.io/
@@ -18509,7 +18454,8 @@ for f in *.mp3; do ffmpeg -i &quot;$f&quot; &quot;$(basename $f).wav&quot;; done
 * ~~https://en.oho.wiki/wiki/Home~~ - not really useful, a lot of crap... its a kind of search engine but totally unmoderated and its scraping a lot of bad, not open projects, tutorials and &quot;life hacks&quot;
 * https://www.hackster.io/ - having to log in to actually view projects is shit and excludes people
 * https://github.com/sindresorhus/awesome#hardware
-* https://certification.oshwa.org/directory.html</pre>
+* https://certification.oshwa.org/directory.html
+* https://www.openhardware.io/explore</pre>
 </div>
 <div created="20200519155751149" modified="20210822143440659" tags="[[Free / Open / Libre Software]]" title="finding open software projects">
 <pre>* github
@@ -21735,8 +21681,10 @@ cheap rebranded? stuff
 * https://umap.openstreetmap.fr/de
 * https://www.pedelecforum.de/wiki/doku.php?id=sonstige_interessante_links:openandromaps</pre>
 </div>
-<div created="20220808225415141" modified="20220829221022295" tags="[[electronics parts/components]] Misc" title="mcmaster carr alternative for europe">
-<pre>this is specifically not normal diy or hardware stores.
+<div created="20220808225415141" modified="20220905215659361" tags="[[electronics parts/components]] Misc" title="mcmaster carr alternative for europe">
+<pre>see [[Eisenwaren]]
+
+this is specifically not normal diy or hardware stores.
 
 * freight forwarders?
 * Radionics ? [[[#]|https://www.reddit.com/r/DIY/comments/bgjte/comment/c0mnze9/]]
@@ -28355,7 +28303,7 @@ guides etc.
 * [[EEVblog #1248 - INSANE! A 0.02% Process Meter for $9? WTF!|https://www.youtube.com/watch?v=y3h02BDPMJw]]
 * [[EEVblog 1378 - NEW Uni-T UT61E+ Multimeter - Still bang-per-buck king?|https://www.youtube.com/watch?v=ZxzQZFRznp0]]</pre>
 </div>
-<div created="20210323215516164" modified="20220821141612598" tags="[[electronics parts/components]]" title="transistors">
+<div created="20210323215516164" modified="20220905215847169" tags="[[electronics parts/components]]" title="transistors">
 <pre>basic transistors
 
 * [[Electronic Basics #22: Transistor (BJT) as a Switch|https://www.youtube.com/watch?v=WRm2oUw4owE]]
@@ -28371,6 +28319,7 @@ guides etc.
 
 FET - Mosfet
 
+* https://www.mikrocontroller.net/articles/MOSFET-%C3%9Cbersicht
 * [[Electronic Basics #23: Transistor (MOSFET) as a Switch|https://www.youtube.com/watch?v=o4_NeqlJgOs]]
 * [[Here is why MOSFET drivers are sometimes essential! -- MOSFET Driver Part 1 (Driver, Bootstrapping)|https://www.youtube.com/watch?v=8swJ_Bnsgl4]]
 ** [[Warum MOSFET Treiber manchmal essentiell sind?! - MOSFET Ansteuerung Teil 1 (Treiber, Bootstrapping)|https://www.youtube.com/watch?v=pdTRzBHOC5w]]
@@ -28381,6 +28330,7 @@ FET - Mosfet
 * [[MOSFET – The Most significant invention of the 20th Century|https://www.youtube.com/watch?v=bHwl8TdEI6k]]
 * [[MOSFETs und Mikrocontroller - Grundlagen, Datenblätter, praktische Schaltungen &amp; Typen|https://www.youtube.com/watch?v=uxGzMDKNvTo]]
 * [[Arduino DC Motor mit MOSFET H-Brücke steuern - Einstellbare Drehrichtung &amp; Geschwindigkeit|https://www.youtube.com/watch?v=13bCzydTz8I]]
+* LMG1210 - mosfet driver
 
 IGBTs
 
@@ -29050,7 +29000,7 @@ if you need to read the DB files:
 * https://www.transparency.de/
 * https://dickstinction.com/</pre>
 </div>
-<div created="20211005221546149" modified="20220612031438732" tags="[[electronics parts/components]]" title="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)">
+<div created="20211005221546149" modified="20220905215745546" tags="[[electronics parts/components]]" title="widely used/common or standard electronic parts and components (&quot;jellybean&quot;)">
 <pre>https://en.wiktionary.org/wiki/jellybean_part
 
 other lists
@@ -29061,8 +29011,9 @@ other lists
 * https://www.eevblog.com/forum/beginners/common-generic-cheap-easy-to-find-parts/
 * https://www.eevblog.com/forum/beginners/what-parts-to-get-at-the-store/
 * https://www.eevblog.com/forum/chat/dave_s-_jellybean_/
+* https://www.mikrocontroller.net/articles/Standardbauelemente
 
-transistors
+transistors BJT
 
 * https://en.wikipedia.org/wiki/2N3906
 * https://en.wikipedia.org/wiki/2N3904
