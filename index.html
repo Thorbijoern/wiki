@@ -12645,7 +12645,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[widely used/common or standard electronic parts and components (&quot;jellybean&quot;)]] [[small open W-DMX stick]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220906001500177" title="$:/StoryList">
+<div created="20220808201413192" list="[[ESC / BLDC motor driver / controller]] [[widely used/common or standard electronic parts and components (&quot;jellybean&quot;)]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220906004236495" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13662,8 +13662,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220906001458354" modifier="Thorbijoern" title="$:/temp/search">
-<pre>knowle</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220906004233827" modifier="Thorbijoern" title="$:/temp/search">
+<pre>bldc</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18015,7 +18015,7 @@ rotary encoder
 * kleiner sicherungskasten
 * 2x Klippel Production Analyzer - allerdings ohne Software und co, müsste reverse engineered werden</pre>
 </div>
-<div created="20210424233816923" modified="20220829220932948" tags="[[motor controller / driver]]" title="ESC / BLDC motor driver / controller">
+<div created="20210424233816923" modified="20220906005250509" tags="[[motor controller / driver]]" title="ESC / BLDC motor driver / controller">
 <pre>* often made for RC Vehicles, but also used in other vehicles like Scooters and E-Bikes
 * for bigger stuff see [[
 * [[LearnMore#3 - The ESCs - Brushless Motors - All Theory You Need To Know About ESCs|https://www.youtube.com/watch?v=erppWLMzw8I]]
@@ -18024,6 +18024,7 @@ rotary encoder
 * [[Make your own Sensored ESC -- Electric Bike Conversion (Part 1)|https://www.youtube.com/watch?v=YV-ee8wA5lI]]
 * [[Best BLDC Controller: ODrive vs MIT Mini Cheetah vs Moteus (MJBots)|https://www.youtube.com/watch?v=Wb1gsJ4K4pM]]
 * https://open-bldc.org/wiki/Open-BLDC
+* [[I followed a YouTube Electronics Video and Regret it! (Debunking a 500k video)|https://www.youtube.com/watch?v=SykfLBLP3xI]]
 
 
 VESC - Vedder ESC - open hardware
@@ -18042,6 +18043,41 @@ Electronoobs open hardware esc
 ** [[DIY Sensored ESC - full tutorial|https://www.youtube.com/watch?v=G9PHqN9vmVI]]
 ** [[My ARDUINO ESC - Better update version 3?|https://www.youtube.com/watch?v=-ymTE-Nivzw]]
 ** [[ESC electronic speed controller with arduino ALL EXPLAINED|https://www.youtube.com/watch?v=8LXPcJD6hEA]]
+
+Cheap FOCer (VESC redesign with TO-220 mosfets) - open hardware
+
+* old (V1)
+** https://github.com/shamansystems/Cheap-FOCer
+** https://endless-sphere.com/forums/viewtopic.php?f=7&amp;t=97699
+** https://vesc-project.com/node/706
+* current (V2)
+** https://github.com/shamansystems/Cheap-FOCer-2
+** https://vesc-project.com/Hardware
+** https://forum.esk8.news/t/cheap-focer-2-open-source-low-cost-vesc-6-based-esc-v0-9-release-beta-testing-ongoing
+* Little FOCer
+** https://forum.esk8.news/t/little-focer-84v-5kw-vesc-based-controller/50110
+* different modules
+** https://forum.esk8.news/t/some-new-focers-84v-vesc-6-based-controllers/1513 - old thread
+* in development (V3)
+** https://forum.esk8.news/t/cheap-focer-3-open-source-low-cost-vesc-6-based-esc-in-development/67432/48
+
+cheap chinese controller
+
+* https://de.aliexpress.com/item/4001142532908.html
+* speed input and speed output
+* using them with a cheap controller might be useful to make cheap ebike motor controllers
+* FOC versions available?
+
+
+commercial
+
+* https://flipsky.net/collections/electronic-products - Flipsky VESC or ODrive clones from china
+
+* ODrive
+** https://odriverobotics.com/
+** https://flipsky.net/collections/od-drive
+
+* https://vesc-project.com/Hardware
 
 stuff
 
@@ -18066,34 +18102,7 @@ stuff
 * [[My open source Arduino ESC - BEMF zero-cross|https://www.youtube.com/watch?v=VdkloigaxZo]]
 * [[How to control a BLDC with an Arduino|https://www.youtube.com/watch?v=qOzE5F5vFGs]]
 * [[Arduino DC Motor mit MOSFET H-Brücke steuern - Einstellbare Drehrichtung &amp; Geschwindigkeit|https://www.youtube.com/watch?v=13bCzydTz8I]]
-* https://forum.esk8.news/t/escs-based-on-the-vesc/60389
-
-Cheap FOCer (VESC redesign with TO-220 mosfets)
-
-* old (V1)
-** https://github.com/shamansystems/Cheap-FOCer
-** https://endless-sphere.com/forums/viewtopic.php?f=7&amp;t=97699
-** https://vesc-project.com/node/706
-* current (V2)
-** https://github.com/shamansystems/Cheap-FOCer-2
-** https://vesc-project.com/Hardware
-** https://forum.esk8.news/t/cheap-focer-2-open-source-low-cost-vesc-6-based-esc-v0-9-release-beta-testing-ongoing
-* Little FOCer
-** https://forum.esk8.news/t/little-focer-84v-5kw-vesc-based-controller/50110
-* different modules
-** https://forum.esk8.news/t/some-new-focers-84v-vesc-6-based-controllers/1513 - old thread
-* in development (V3)
-** https://forum.esk8.news/t/cheap-focer-3-open-source-low-cost-vesc-6-based-esc-in-development/67432/48
-
-commercial
-
-* https://flipsky.net/collections/electronic-products - Flipsky VESC or ODrive clones from china
-
-* ODrive
-** https://odriverobotics.com/
-** https://flipsky.net/collections/od-drive
-
-* https://vesc-project.com/Hardware</pre>
+* https://forum.esk8.news/t/escs-based-on-the-vesc/60389</pre>
 </div>
 <div created="20200522115726570" modified="20201111141730562" tags="[[digital audio]]" title="esp32 audio projects">
 <pre>* https://hackaday.io/project/164477-esp32-guitar-shield
