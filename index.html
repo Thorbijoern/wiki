@@ -1111,7 +1111,7 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'</li>
+<li>Draft of 'Kultur Dresden'</li>
 
 <li>Dresden</li>
 
@@ -2399,7 +2399,7 @@ Microwave transformer-based
 ** case, maybe case of a broken PC PSU
 *** cheap furniture glider as feet for the lab bench</pre>
 </div>
-<div created="20220701230517790" modified="20220829225403462" tags="[[current projects]] [[light / projection / visuals]]" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
+<div created="20220701230517790" modified="20220906005259187" tags="[[current projects]] [[light / projection / visuals]]" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
 <pre>!! Idee
 
 ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
@@ -2424,6 +2424,28 @@ kontrollprotokolle die in frage kommen sind (s)ACN oder ~ArtNet, weil die sind I
 * see [[DMX / DMX512]]
 
 
+!! controller firmware
+
+writing specialized firmware for this task is possible, but i think WLED is just the best option. it supports pretty much every protocol and means of control and it completely customizeable through a ton of settings and features, if thats not enough there are allready existing usermods and it seems pretty easy to write mods. its just to versatile not to use.
+
+* ''https://github.com/Aircoookie/WLED''
+** https://electric-junkie.de/2020/08/wled-quickstart/
+** [[WLED for Beginners in 2022 (PLUG n' PLAY!)|https://www.youtube.com/watch?v=FvPuiWTE6ic]]
+* https://github.com/MartyMacGyver/ESP32-Digital-RGB-LED-Drivers
+* https://github.com/atuline/WLED - wled sound reactive fork
+
+supported programmers: https://kno.wled.ge/basics/compatible-hardware/#usbttl-adapters habe einen kompatiblen
+
+writing own firmware:
+
+* https://fastled.io/
+** https://github.com/FastLED/FastLED/wiki/Overview
+** https://github.com/FastLED/FastLED/wiki/ESP8266-notes
+* https://github.com/mtongnz/ESP8266_ArtNetNode_v2
+* https://github.com/natcl/Artnet
+* https://github.com/rstephan/ArtnetWifi
+
+
 !! Controller
 
 see also [[microcontroller]]
@@ -2440,50 +2462,40 @@ proprietär:
 * https://www.advateklights.com/products/pixel-control
 * https://opendmx.net/index.php/KarateLight
 
-!! LED Typen
-
-was die LEDs angeht bin ich noch am schauen, am verbreitetsten sind die WS2812(x) und WS2813(x) rgb led streifen, der controll chip ist da in den led chips integriert, die laufen aber auf 5V und da ist die stromstärke schnell sehr groß.
-die WS2811 streifen haben zwar einen externen chip, laufen aber auf 12V und sind damit auch praktischer.
-es gibt SK2812 die auch noch einen weiß ton (entweder natur, warm, kalt oder &quot;bernstein&quot;) integrieren, laufen aber auch auf 5V und ich weiß nicht ob es einfach ist software darauf zu mappen.
-relativ neu und am besten scheinen WS2815, integrierter Chip aber laufen auf 12V, aber keine ahnung wie gut man die bekommt, habe die noch nicht viel gesehen.
-es könnte sein das das steuerprotokoll anfällig ist, aber da die so verbreitet sind und die Neon led streifen scheinbar nur mit solchen LEDs existieren werde ich das erstmal testen.
-
-* https://www.advateklights.com/knowledge-base/pixel-leds
-* https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu - has listing of common LED/controller types
-* [[LED Strips, what's the difference? WS2811, WS2812B, 2812Eco, WS2813, WS2815, SK6812, SK9822.|https://www.youtube.com/watch?v=QnvircC22hU&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=5]]
-* [[7 Common LED Strip FAILS and How To Avoid Them|https://www.youtube.com/watch?v=Fu4qZW0pQm4&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=9]]
-
-Neon
-
-* a lot of those neon LED strips use 3535 LEDs which require an external controller
-* but there are some using the WS2811 controller internally
-
-!! LED Alu Profile/Leisten/Diffuser / Gehäuse
-
-es gibt viele kompakte profile für den einbau ins haus oder in/an möbel. stabile für professionelle nutzung scheinbar eher weniger
-
-für die neon led streifen reichen vlt auch einfache alu U-profile
-
-* https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-mini-24-flach/profi-led-set-4m-2x2m-aufbauprofil-mini-24-schwarz-mit-runder-opaler-abdeckung
-
-* [[I bought every LED Diffuser channel on Amazon to find the best one. Mission Accomplished.|https://www.youtube.com/watch?v=DKOWeuV1FWE]]
-
-polycarbonat rohr wäre sehr bruchfest. gibt es aber nicht oft diffus, milchglasfolie?
-
-!! DMX/ACN/~ArtNet Steuersoftware
-
-software für den PC ist bisschen rar was open source angeht, aber QLC+ kann da scheinbar alles, ist denke ich auch eine spende an den entwickler wert.
-led/pixel mapping software gibts da weniger. es gibt zwar mapmap, aber das ist nur video projection mapping und supported keine einzelnen LEDs oder andere outputs als beamer, also nicht richtig vergleichbar zu ~MadMapper.
-
-see [[open VJ, projection/Video Mapping]]
-
-
-
-* https://www.churchtechideas.com/qlc-led-matrix-tutorial/
-* https://en.wikipedia.org/wiki/Show_control
-
 
 !! verkabelung/controller pcb design etc.
+
+es gibt schon einige hardware und controller designs die mit WLED kompatibel sind
+
+https://kno.wled.ge/basics/compatible-hardware/
+
+basics
+
+* esp32 oder esp8266
+* 3,3V stromversorgung für den ESP
+** e.g. AMS1117 oder kleiner
+* level converter/shifter
+** https://kno.wled.ge/basics/compatible-hardware/#levelshifters
+** TXS0108(E), TXS0102, TXS0104 - verbreitet, 2 kanal version auch recht klein
+** SN74AHCT125(N)
+** SN74LVC2T45
+** 74AHCT32
+** PCA9306?
+** dicrete - not viable for small designs
+* LED data / strip input protection
+** resistor
+** https://wled.shop/produkt/ws2812-protect/
+*** https://wled.shop/wp-content/uploads/2021/11/SK6812_Datenv10.pdf
+* lamp input protection
+** fuse
+** capacitor
+** reverse polarity protection?
+* programming connector
+** only ground&amp;data lines to save space
+** maybe use pogo-pins to save space?
+
+
+stuff
 
 * Level shifter für 3.3V uC
 ** https://www.addicore.com/Logic-Level-Converter-Bi-Directional-5V-to-3-3V-p/227.htm
@@ -2498,8 +2510,76 @@ see [[open VJ, projection/Video Mapping]]
 ** adafruit states 300-500 Ohm
 * elko für pufferung an LEDs
 * https://github.com/Hasenpups/WLED_ESP32_Controller
+* mit wled ist es möglich mehrere strips mit den selben daten anzusteuern, aber bei WS2812 o.Ä. kann man auch die datenleitungen parallel schalten: https://www.reddit.com/r/arduino/comments/jvqkuq/addressing_ws2812b_strips_in_parallel_individually/
 
-Stromversorgung
+
+!! LED Typen
+
+was die LEDs angeht bin ich noch am schauen, am verbreitetsten sind die WS2812(x) und WS2813(x) rgb led streifen, der controll chip ist da in den led chips integriert, die laufen aber auf 5V und da ist die stromstärke schnell sehr groß.
+die WS2811 streifen haben zwar einen externen chip, laufen aber auf 12V und sind damit auch praktischer.
+es gibt SK2812 die auch noch einen weiß ton (entweder natur, warm, kalt oder &quot;bernstein&quot;) integrieren, laufen aber auch auf 5V und ich weiß nicht ob es einfach ist software darauf zu mappen.
+relativ neu und am besten scheinen WS2815, integrierter Chip aber laufen auf 12V, aber keine ahnung wie gut man die bekommt, habe die noch nicht viel gesehen.
+es könnte sein das das steuerprotokoll anfällig ist, aber da die so verbreitet sind und die Neon led streifen scheinbar nur mit solchen LEDs existieren werde ich das erstmal testen.
+
+* https://www.advateklights.com/knowledge-base/pixel-leds
+* https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu - has listing of common LED/controller types
+* [[LED Strips, what's the difference? WS2811, WS2812B, 2812Eco, WS2813, WS2815, SK6812, SK9822.|https://www.youtube.com/watch?v=QnvircC22hU&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=5]]
+* [[7 Common LED Strip FAILS and How To Avoid Them|https://www.youtube.com/watch?v=Fu4qZW0pQm4&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=9]]
+* https://kno.wled.ge/basics/compatible-hardware/#addressable-led-strips
+
+Neon
+
+* a lot of those neon LED strips use 3535 LEDs which require an external controller
+* but there are some using the WS2811 controller internally
+
+!! LED Alu Profile/Leisten/Diffuser / Gehäuse
+
+es gibt viele kompakte profile für den einbau ins haus oder in/an möbel. stabile für professionelle nutzung scheinbar eher weniger
+
+für die neon led streifen reichen vlt auch einfache alu U-profile
+
+* https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-mini-24-flach/profi-led-set-4m-2x2m-aufbauprofil-mini-24-schwarz-mit-runder-opaler-abdeckung
+** https://www.isolicht.com/catalogsearch/result/index/?p=2&amp;q=profi+led+set
+** https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile
+*** https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-maxi-24?product_list_limit=60&amp;product_list_order=price_asc
+
+* [[I bought every LED Diffuser channel on Amazon to find the best one. Mission Accomplished.|https://www.youtube.com/watch?v=DKOWeuV1FWE]]
+
+die profile müssen auch genug platz für den controller haben
+
+schwarze channel innen am besten weiß ansprühen
+
+hab jemensch gefunden der LED röhren mit normalen LED strips und WLED controller in 5cm acrylglas rohr gebaut hat.
+
+polycarbonat rohr wäre sehr bruchfest. gibt es aber nicht diffus/milchig so wie es aussieht
+milchglasfolie oder schleifen könnte vlt. funktionieren, ist aber nicht perfekt
+
+rohr bauart, meine ideen:
+
+* 1m oder 0,5m länge
+* 3d gedruckte endkappen
+* 3d-gedruckte channel innen (am besten weißes filament oder ansprühen)
+* supports/standoffs/spacer die den channel in der mitte halten am besten aus transparentem acryl lasern/schneiden oder transparentem resin 3d drucken damit sie möglichst wenig auffallen
+* 3 oder 4 strips (testen) für gleichmäßige 360° beleuchtung, LEDs haben ja auch leuchtwinkel angaben
+* rohr dicke nicht unbedingt 5cm, sondern vlt. auch dünner, testen mit abständen LED-diffusor und jenachdem wie es mit den channeln möglich ist.
+* in channel können kabel für stromversorgung durchgeführt werden
+* controller könnte in channel versteckt werden
+* 60leds pro meter oder vlt. mehr
+
+!! DMX/ACN/~ArtNet Steuersoftware
+
+software für den PC ist bisschen rar was open source angeht, aber QLC+ kann da scheinbar alles, ist denke ich auch eine spende an den entwickler wert.
+led/pixel mapping software gibts da weniger. es gibt zwar mapmap, aber das ist nur video projection mapping und supported keine einzelnen LEDs oder andere outputs als beamer, also nicht richtig vergleichbar zu ~MadMapper.
+
+see [[open VJ, projection/Video Mapping]]
+
+
+
+* https://www.churchtechideas.com/qlc-led-matrix-tutorial/
+* https://en.wikipedia.org/wiki/Show_control
+
+
+!! Stromversorgung
 
 * [[The BEST way to join LED strips with no gaps or seams + make waterproof power injection connections.|https://www.youtube.com/watch?v=WGgzWWrCIhY]]
 * [[7 Common LED Strip FAILS and How To Avoid Them|https://www.youtube.com/watch?v=Fu4qZW0pQm4&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=9]]
@@ -2507,20 +2587,13 @@ Stromversorgung
 * [[3 Quick Fixes for LED Color Issues - Power Injection, Voltage Drop, Brightness Regulation and More.|https://www.youtube.com/watch?v=apwQ5Jh4VyE]]
 
 
-!! controller firmware
+!! &quot;dumme&quot; RGB(W) LEDs ansteuern
 
-* ''https://github.com/Aircoookie/WLED''
-** https://electric-junkie.de/2020/08/wled-quickstart/
-** [[WLED for Beginners in 2022 (PLUG n' PLAY!)|https://www.youtube.com/watch?v=FvPuiWTE6ic]]
-* https://fastled.io/
-** https://github.com/FastLED/FastLED/wiki/Overview
-** https://github.com/FastLED/FastLED/wiki/ESP8266-notes
-* https://github.com/mtongnz/ESP8266_ArtNetNode_v2
-* https://github.com/natcl/Artnet
-* https://github.com/rstephan/ArtnetWifi
-* https://github.com/MartyMacGyver/ESP32-Digital-RGB-LED-Drivers
+* WLED hat die option PWM RGB(W) auszugeben
+* es gibt einfache mosfet module fertig aus china zu kaufen
 
-stuff
+
+!! stuff
 
 * https://www.youtube.com/results?search_query=esp32+artnet
 * https://www.instructables.com/Artnet-LED-Pixels-With-ESP8266/
@@ -12645,7 +12718,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[ESC / BLDC motor driver / controller]] [[widely used/common or standard electronic parts and components (&quot;jellybean&quot;)]] [[Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos']] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[metall diy]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220906004236495" title="$:/StoryList">
+<div created="20220808201413192" list="[[nachhaltige/coole Initiativen in Dresden]] [[Draft of 'Kultur Dresden']] [[untagged tiddlers]] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220907005917899" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13662,8 +13735,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220906004233827" modifier="Thorbijoern" title="$:/temp/search">
-<pre>bldc</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220907005915867" modifier="Thorbijoern" title="$:/temp/search">
+<pre>init</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -17179,207 +17252,27 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
-<div created="20220701230517790" draft.of="(DMX) / ArtNet / sACN LED Leisten und Logos" draft.title="(DMX) / ArtNet / sACN LED Leisten und Logos" modified="20220905233631863" tags="[[current projects]] [[light / projection / visuals]]" title="Draft of '(DMX) / ArtNet / sACN LED Leisten und Logos'">
-<pre>!! Idee
+<div created="20220727202336365" draft.of="Kultur Dresden" draft.title="Kultur Dresden" modified="20220907010010309" tags="Dresden" title="Draft of 'Kultur Dresden'">
+<pre>siehe auch [[nachhaltige/coole Initiativen in Dresden]]
 
-ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
-[[YT: bigclivedotcom: Make custom LED neon shapes|https://www.youtube.com/watch?v=y9bSzE9ir1Q]]
-mir waren dann einfarbige neon LED streifen zu einfach und zu langweilig, also wollte ich nach RGB und ansteuerbar schauen, gibts. und dann war veranstaltung mit dem sonnensystem in der robotron kantine und wir hatten DIY LED leisten von den Irrlichtern ausgeliehen und ich war ziemlich begeistert... nun meine ideensammlung:
+* http://www.mukke-hilft.de/index.htm + https://spielraeume-dresden.de/
+* https://blauefabrik.de/
+* https://netzwerk-kultur-dresden.de/
+** https://netzwerk-kultur-dresden.de/mitglieder/
+* https://t.me/mittwochsdisko
+* https://t.me/palaispalett
+* https://t.me/objektkleina
+* https://t.me/azconni
+* https://t.me/VernetzungvonDresden/69
+* https://www.startnext.com/kashaysalon
+* rösslstube
+* https://hanse3.de/
+* https://www.rauze.de/ - mehr oder weniger inaktiv
+* http://zope6.free.de/terminal
 
-mit tipps und hilfe von https://irrlicht.uber.space/
+anderes:
 
-siehe https://irrlicht.uber.space/technik
-
-!! Protokolle überblick, kabelgebunden/kabellos
-
-DMX (richtiger DMX512) kann über 5-pol XLR Kabel transportiert werden, manchmal wird aber nur 3-pol XLR benutzt weil 2 leiter nicht wirklich genutzt sind. Es gibt auch systeme um DMX über CAT5 ethernet kabel zu leiten, das erhöht die reichweite. wireless systeme für DMX sind alle proprietär und es scheint da keine offenen standards zu geben, alles recht proprietär und das mag ich nicht. es gibt zwar ein recht großes monopol, aber das mag ich noch weniger.
-
-kabel möchte ich vermeiden weswegen DMX und RDM rausfallen. RDMNet (RDM über netzwerk) ist noch in entwicklung und nicht verbreitet.
-
-kontrollprotokolle die in frage kommen sind (s)ACN oder ~ArtNet, weil die sind IP basiert und funktionieren damit auch über Wlan, außerdem sind beide offene standards und es gibt offene implementationen, sie sind weit verbreitet. beide transportieren im grunde normale DMX steuersignale.
-
-* https://wiki.openlighting.org/index.php/Comparison_of_DMX_over_IP_protocols
-** https://wiki.openlighting.org/index.php/Category:ArtNet
-* https://wiki.openlighting.org/index.php/Category:E1.31
-* see [[DMX / DMX512]]
-
-
-!! controller firmware
-
-writing specialized firmware for this task is possible, but i think WLED is just the best option. it supports pretty much every protocol and means of control and it completely customizeable through a ton of settings and features, if thats not enough there are allready existing usermods and it seems pretty easy to write mods. its just to versatile not to use.
-
-* ''https://github.com/Aircoookie/WLED''
-** https://electric-junkie.de/2020/08/wled-quickstart/
-** [[WLED for Beginners in 2022 (PLUG n' PLAY!)|https://www.youtube.com/watch?v=FvPuiWTE6ic]]
-* https://github.com/MartyMacGyver/ESP32-Digital-RGB-LED-Drivers
-* https://github.com/atuline/WLED - wled sound reactive fork
-
-supported programmers: https://kno.wled.ge/basics/compatible-hardware/#usbttl-adapters habe einen kompatiblen
-
-writing own firmware:
-
-* https://fastled.io/
-** https://github.com/FastLED/FastLED/wiki/Overview
-** https://github.com/FastLED/FastLED/wiki/ESP8266-notes
-* https://github.com/mtongnz/ESP8266_ArtNetNode_v2
-* https://github.com/natcl/Artnet
-* https://github.com/rstephan/ArtnetWifi
-
-
-!! Controller
-
-see also [[microcontroller]]
-
-als controller für leisten oder tolerave logo ziehe ich verschiedene microcontroller mit integriertem WLAN in betracht primar ESP8266/ESP32 (vlt. sogar die RISCV versionen) oder vlt. Raspberry Pi Pico W.  die stm32 fallen fast raus, weil die eh kaum zu bekommen sind momentan.
-für esp8266/esp32 gibt es auch schon gute auswahl an fertiger firmware.
-
-proprietär:
-
-* https://www.ulrichradig.de/home/index.php/dmx
-** https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu
-* https://github.com/twischer/WLAN-IO
-* https://www.discohat.com/qlc/
-* https://www.advateklights.com/products/pixel-control
-* https://opendmx.net/index.php/KarateLight
-
-
-!! verkabelung/controller pcb design etc.
-
-es gibt schon einige hardware und controller designs die mit WLED kompatibel sind
-
-https://kno.wled.ge/basics/compatible-hardware/
-
-basics
-
-* esp32 oder esp8266
-* 3,3V stromversorgung für den ESP
-** e.g. AMS1117 oder kleiner
-* level converter/shifter
-** https://kno.wled.ge/basics/compatible-hardware/#levelshifters
-** TXS0108(E), TXS0102, TXS0104 - verbreitet, 2 kanal version auch recht klein
-** SN74AHCT125(N)
-** SN74LVC2T45
-** 74AHCT32
-** PCA9306?
-** dicrete - not viable for small designs
-* LED data / strip input protection
-** resistor
-** https://wled.shop/produkt/ws2812-protect/
-*** https://wled.shop/wp-content/uploads/2021/11/SK6812_Datenv10.pdf
-* lamp input protection
-** fuse
-** capacitor
-** reverse polarity protection?
-* programming connector
-** only ground&amp;data lines to save space
-** maybe use pogo-pins to save space?
-
-
-stuff
-
-* Level shifter für 3.3V uC
-** https://www.addicore.com/Logic-Level-Converter-Bi-Directional-5V-to-3-3V-p/227.htm
-** https://www.adafruit.com/product/1787
-** https://www.adafruit.com/product/1779
-* resistor für daten line an LEDs
-** https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels
-** https://forum.arduino.cc/t/arduino-ws2812b-data-pin-resistor/533031/3
-** https://forums.parallax.com/discussion/158590/ws2812b-and-series-resistor
-** tutorials with unknows quality suggest ~220-510Ohm
-** https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices
-** adafruit states 300-500 Ohm
-* elko für pufferung an LEDs
-* https://github.com/Hasenpups/WLED_ESP32_Controller
-* mit wled ist es möglich mehrere strips mit den selben daten anzusteuern, aber bei WS2812 o.Ä. kann man auch die datenleitungen parallel schalten: https://www.reddit.com/r/arduino/comments/jvqkuq/addressing_ws2812b_strips_in_parallel_individually/
-
-
-!! LED Typen
-
-was die LEDs angeht bin ich noch am schauen, am verbreitetsten sind die WS2812(x) und WS2813(x) rgb led streifen, der controll chip ist da in den led chips integriert, die laufen aber auf 5V und da ist die stromstärke schnell sehr groß.
-die WS2811 streifen haben zwar einen externen chip, laufen aber auf 12V und sind damit auch praktischer.
-es gibt SK2812 die auch noch einen weiß ton (entweder natur, warm, kalt oder &quot;bernstein&quot;) integrieren, laufen aber auch auf 5V und ich weiß nicht ob es einfach ist software darauf zu mappen.
-relativ neu und am besten scheinen WS2815, integrierter Chip aber laufen auf 12V, aber keine ahnung wie gut man die bekommt, habe die noch nicht viel gesehen.
-es könnte sein das das steuerprotokoll anfällig ist, aber da die so verbreitet sind und die Neon led streifen scheinbar nur mit solchen LEDs existieren werde ich das erstmal testen.
-
-* https://www.advateklights.com/knowledge-base/pixel-leds
-* https://www.ulrichradig.de/home/index.php/dmx/art-net-pixel-con-neu - has listing of common LED/controller types
-* [[LED Strips, what's the difference? WS2811, WS2812B, 2812Eco, WS2813, WS2815, SK6812, SK9822.|https://www.youtube.com/watch?v=QnvircC22hU&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=5]]
-* [[7 Common LED Strip FAILS and How To Avoid Them|https://www.youtube.com/watch?v=Fu4qZW0pQm4&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=9]]
-* https://kno.wled.ge/basics/compatible-hardware/#addressable-led-strips
-
-Neon
-
-* a lot of those neon LED strips use 3535 LEDs which require an external controller
-* but there are some using the WS2811 controller internally
-
-!! LED Alu Profile/Leisten/Diffuser / Gehäuse
-
-es gibt viele kompakte profile für den einbau ins haus oder in/an möbel. stabile für professionelle nutzung scheinbar eher weniger
-
-für die neon led streifen reichen vlt auch einfache alu U-profile
-
-* https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-mini-24-flach/profi-led-set-4m-2x2m-aufbauprofil-mini-24-schwarz-mit-runder-opaler-abdeckung
-** https://www.isolicht.com/catalogsearch/result/index/?p=2&amp;q=profi+led+set
-** https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile
-*** https://www.isolicht.com/led-streifen/led-profile/led-aufbauprofile-led-montageprofile/aufbauprofil-maxi-24?product_list_limit=60&amp;product_list_order=price_asc
-
-* [[I bought every LED Diffuser channel on Amazon to find the best one. Mission Accomplished.|https://www.youtube.com/watch?v=DKOWeuV1FWE]]
-
-die profile müssen auch genug platz für den controller haben
-
-schwarze channel innen am besten weiß ansprühen
-
-hab jemensch gefunden der LED röhren mit normalen LED strips und WLED controller in 5cm acrylglas rohr gebaut hat.
-
-polycarbonat rohr wäre sehr bruchfest. gibt es aber nicht diffus/milchig so wie es aussieht
-milchglasfolie oder schleifen könnte vlt. funktionieren, ist aber nicht perfekt
-
-rohr bauart, meine ideen:
-
-* 1m oder 0,5m länge
-* 3d gedruckte endkappen
-* 3d-gedruckte channel innen (am besten weißes filament oder ansprühen)
-* supports/standoffs/spacer die den channel in der mitte halten am besten aus transparentem acryl lasern/schneiden oder transparentem resin 3d drucken damit sie möglichst wenig auffallen
-* 3 oder 4 strips (testen) für gleichmäßige 360° beleuchtung, LEDs haben ja auch leuchtwinkel angaben
-* rohr dicke nicht unbedingt 5cm, sondern vlt. auch dünner, testen mit abständen LED-diffusor und jenachdem wie es mit den channeln möglich ist.
-* in channel können kabel für stromversorgung durchgeführt werden
-* controller könnte in channel versteckt werden
-* 60leds pro meter oder vlt. mehr
-
-!! DMX/ACN/~ArtNet Steuersoftware
-
-software für den PC ist bisschen rar was open source angeht, aber QLC+ kann da scheinbar alles, ist denke ich auch eine spende an den entwickler wert.
-led/pixel mapping software gibts da weniger. es gibt zwar mapmap, aber das ist nur video projection mapping und supported keine einzelnen LEDs oder andere outputs als beamer, also nicht richtig vergleichbar zu ~MadMapper.
-
-see [[open VJ, projection/Video Mapping]]
-
-
-
-* https://www.churchtechideas.com/qlc-led-matrix-tutorial/
-* https://en.wikipedia.org/wiki/Show_control
-
-
-!! Stromversorgung
-
-* [[The BEST way to join LED strips with no gaps or seams + make waterproof power injection connections.|https://www.youtube.com/watch?v=WGgzWWrCIhY]]
-* [[7 Common LED Strip FAILS and How To Avoid Them|https://www.youtube.com/watch?v=Fu4qZW0pQm4&amp;list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m&amp;index=9]]
-* [[Power LED Lights + Injection. Complete Walkthrough|https://www.youtube.com/watch?v=KFtjf5mD6tA]]
-* [[3 Quick Fixes for LED Color Issues - Power Injection, Voltage Drop, Brightness Regulation and More.|https://www.youtube.com/watch?v=apwQ5Jh4VyE]]
-
-
-!! &quot;dumme&quot; RGB(W) LEDs ansteuern
-
-* WLED hat die option PWM RGB(W) auszugeben
-* es gibt einfache mosfet module fertig aus china zu kaufen
-
-
-!! stuff
-
-* https://www.youtube.com/results?search_query=esp32+artnet
-* https://www.instructables.com/Artnet-LED-Pixels-With-ESP8266/
-* https://github.com/polyfloyd/ledcat
-* [[Playlist: Individually Addressable RGB LEDs|https://www.youtube.com/playlist?list=PL-51DG-VULPq5w_n4T6gVqc8q8TkA2B8m]]
-* [[SDG #048 DMX Controlled RGB Linear Light Strips|https://www.youtube.com/watch?v=bDFkVJ4jwTE]]</pre>
+https://www.bandbuero-chemnitz.de/</pre>
 </div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -21934,7 +21827,7 @@ i can't find the megaphone parts separately....
 * [[&quot;Hollywood&quot; Mischverstärker - super billiger Schrott, aber war geschenkt und ist gut zum basics lernen|cheap mixing amp repair, reverse engineering]]
 </pre>
 </div>
-<div created="20220828231506658" modified="20220829000128917" tags="" title="metall diy">
+<div created="20220828231506658" modified="20220906005345463" tags="" title="metall diy">
 <pre>tap wrench - windeisen
 
 * https://www.youtube.com/watch?v=ZTmjdvg_Td8
@@ -21943,7 +21836,9 @@ i can't find the megaphone parts separately....
 
 collet blocks
 
-https://www.youtube.com/watch?v=pUR7A1oxHg4</pre>
+https://www.youtube.com/watch?v=pUR7A1oxHg4
+
+see [[Eisenwaren]], [[mcmaster carr alternative for europe]]</pre>
 </div>
 <div created="20220117235933232" modified="20220118000655170" tags="repairs" title="Meterman 30XR - Multimeter repair">
 <pre>the pieso is constantly beeping on almost every setting and there is a warning singn in the display when the fuses are installed.
@@ -22986,8 +22881,10 @@ weiteres:
 * https://youtu.be/WGtRyESsCqc
 * https://de.wikipedia.org/wiki/Cradle_to_Cradle</pre>
 </div>
-<div created="20200604204512173" modified="20220902211513235" tags="[[sustainability / nachhaltigkeit]] Dresden" title="nachhaltige/coole Initiativen in Dresden">
-<pre>* https://ufer-projekte.de/
+<div created="20200604204512173" modified="20220907010026102" tags="[[sustainability / nachhaltigkeit]] Dresden" title="nachhaltige/coole Initiativen in Dresden">
+<pre>siehe auch [[Kultur Dresden]]
+
+* https://ufer-projekte.de/
 * https://quergedacht-dresden.de/
 * https://gruenesbrett.net/
 * https://sukuma.net/
@@ -23042,6 +22939,7 @@ weiteres:
 ** https://obt.world/
 ** https://tekno.party/
 * https://coloradio.org/
+* http://zope6.free.de/terminal
 
 
 weitere:
