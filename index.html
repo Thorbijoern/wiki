@@ -1119,7 +1119,9 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of 'DIY LED Par'</li>
+<li>Draft of 'DMX'</li>
+
+<li>Draft of 'USB DMX / RDM Interface'</li>
 
 <li>Dresden</li>
 
@@ -12734,7 +12736,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220911160740451" list="[[audio multicore cables]] [[light / projection / visuals]] [[Draft of 'DIY LED Par']] DMX [[DMX Tester]] [[DMX Connector]] [[small open W-DMX stick]] [[USB DMX / RDM Interface]] About TableOfContents" modified="20220911202805449" title="$:/StoryList">
+<div created="20220911160740451" list="[[DIY LED Par]] [[Draft of 'DMX']] [[DMX Tester]] [[DMX Connector]] [[small open W-DMX stick]] [[Draft of 'USB DMX / RDM Interface']] About TableOfContents" modified="20220911203941988" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13751,8 +13753,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220911203526422" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220911203937497" modifier="Thorbijoern" title="$:/temp/search">
+<pre>rs-485</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16935,7 +16937,7 @@ software
 * https://www.openmediavault.org/
 ** https://de.wikipedia.org/wiki/OpenMediaVault</pre>
 </div>
-<div created="20220821124329420" modified="20220911202814292" tags="[[current projects]] [[light / projection / visuals]] DMX" title="DIY LED Par">
+<div created="20220821124329420" modified="20220911210420880" tags="[[current projects]] [[light / projection / visuals]] DMX" title="DIY LED Par">
 <pre>!! Case
 
 !! Controller
@@ -16952,7 +16954,15 @@ see [[LED]]
 
 see [[transistors]]
 
-!! power supply / battery</pre>
+!! power supply / battery
+
+
+!! Stuff
+
+[[EEVblog #928 - Jaycar DMX RGB LED Lights Teardown|https://www.youtube.com/watch?v=QqPJJLkm46U]]
+* https://bikerglen.com/blog/homebrew-rgb-led-light/
+* https://www.epanorama.net/newepa/2019/10/21/led-dmx-512-lamp-teardown/
+* https://www.epanorama.net/newepa/2019/10/16/dmx-512-led-light-teardown/</pre>
 </div>
 <div created="20210217150026738" modified="20220810231156645" tags="Science [[testing &amp; measuring]] tools optics" title="DIY microscopy">
 <pre>* https://hackaday.com/2021/02/02/dvd-optics-power-this-scanning-laser-microscope/
@@ -17284,30 +17294,94 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
-<div created="20220821124329420" draft.of="DIY LED Par" draft.title="DIY LED Par" modified="20220911203459926" tags="[[current projects]] [[light / projection / visuals]] DMX" title="Draft of 'DIY LED Par'">
-<pre>!! Case
+<div created="20220803212202492" draft.of="DMX" draft.title="DMX" modified="20220911205315540" tags="[[light / projection / visuals]] [[digital electronics]]" title="Draft of 'DMX'">
+<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
-!! Controller
+* http://www.dmx512-online.com/whats_dmx512.html
+* https://hackaday.com/2021/10/15/learn-dmx512-basics/
+* https://de.wikipedia.org/wiki/DMX_(Lichttechnik)
+** https://en.wikipedia.org/wiki/DMX512
+* see also [[inter IC or inter device communication, networking]] for RS-485
 
-see [[DMX]], [[microcontroller]]
+other diy
 
-WLED?
+* https://wiki-de.dmxcontrol-projects.org/index.php?title=Kategorie:Selbstbau-Projekte
+* https://hackaday.com/blog/?s=DMX
+* https://www.electroschematics.com/arduino-dmx-and-rgbw-par-led-spotlight/
 
-!! Driver
+hardware:
 
-Constant Current
+* XLR 5pin or 3pin connector see [[DMX Connector]]
+* isolation using optocouplers or so
+* MAX485 and the SN75176 RS-485 to serial transceiver
+** or ADM483
+* [[microcontroller]]
+* drivers for light and stuff
 
-see [[LED]]
+software
 
-see [[transistors]]
+* https://www.qlcplus.org/ - active, really good
+* https://www.pcdimmer.de/index.php - active
+* https://sourceforge.net/projects/dmxdesk/ - abandoned
+* https://sourceforge.net/projects/qlc/ - abandoned
+* https://sourceforge.net/projects/lightsup/ - abandoned
 
-!! power supply / battery
+stuff
+
+* [[Inside a wireless DMX receiver|https://www.youtube.com/watch?v=CBUxwt6Vliw]]
+* [[https://www.youtube.com/watch?v=aIVqrAzrgEg]]
+* [[Inside a Showtec DB-1-4 DMX isolator, buffer, repeater.|https://www.youtube.com/watch?v=ajw5Dwtfd74]]
+* https://en.wikipedia.org/wiki/Lighting_control_console
+* SDG #048 DMX Controlled RGB Linear Light Strips|https://www.youtube.com/watch?v=bDFkVJ4jwTE]]
+* https://www.epanorama.net/newepa/2021/03/15/dmx-512-control-board-dmx-192-repair/
+* https://www.epanorama.net/newepa/2016/06/13/four-channel-dmx-512-light-dimmer/
+* https://www.epanorama.net/newepa/2016/06/14/from-dmx-512-to-artnet/
+* https://www.epanorama.net/newepa/2017/03/07/dmx-512-decoder-for-rgb-led/
+* [[inside a cheap eBay 1 to 8 way DMX buffer.|https://www.youtube.com/watch?v=kq4nU--hUAI]]
+* [[10W LED &quot;blunty&quot; moving head disco light teardown.|https://www.youtube.com/watch?v=i3dHP6ehGY0]]
+* [[Inside the DMX version of the LED dome disco light.|https://www.youtube.com/watch?v=tZLf6gObNIk]]
+* [[Teardown of a DMX controlled UV disco light.|https://www.youtube.com/watch?v=0bKzHjpYZUo]]</pre>
+</div>
+<div created="20220911150718530" draft.of="USB DMX / RDM Interface" draft.title="USB DMX / RDM Interface" modified="20220911205211632" tags="DMX" title="Draft of 'USB DMX / RDM Interface'">
+<pre>* XLR 5pin or 3pin connector see [[DMX Connector]]
+* isolation using optocouplers or so
+* MAX485 and the SN75176 RS-485 to serial transceiver
+** or ADM483
+* FT232RL adapter
+
+these adapters can be bought for around 20€ from china or for about 70€ from western manufacturers
+
+stuff
 
 
-!! Stuff
+* https://opendmx.net/index.php/Category:USB
+* FT232RL/FT232BM (USB to Serial/RS232) + SN75176 (RS-485 bus transceiver) - unbuffered, without protection
+** https://www.enttec.com/product/lighting-communication-protocols/dmx512/open-dmx-usb/
+** https://sourceforge.net/projects/opendmxusb/ ?
+** https://openschemes.com/homebrew-usb-dmx-interface-with-sparkfun/
+** https://opendmx.net/index.php/Open_DMX_USB
+** https://www.erwinrol.com/page/projects/op en-dmx-usb/
+* https://opendmx.net/index.php/Anyma_uDMX
+* https://opendmx.net/index.php/Digital_Enlightenment_USB-DMX
+* https://opendmx.net/index.php/KarateLight
+* https://opendmx.net/index.php/DMXking_USB_DMX512-A
+* https://wiki-de.dmxcontrol-projects.org/index.php?title=DMX-Sender_f%C3%BCr_weniger_als_10_Euro
+* https://sourceforge.net/projects/open-rdm/
+** http://www.hoelscher-hi.de/hendrik/light/openrdm.htm
+* https://sourceforge.net/projects/dmx485/ - abandoned
+* https://sourceforge.net/projects/avrdmx/ - abandoned
+* https://openschemes.com/homebrew-usb-dmx-interface-with-sparkfun/
+* maxim integrated has a big selection of rs485 transceiver chips
+* https://lienher.org/jean-marc/usb2dmx/index_en.html - very old design
+* https://www.epanorama.net/newepa/2019/10/20/enttec-open-dmx-diy/
 
-[[EEVblog #928 - Jaycar DMX RGB LED Lights Teardown|https://www.youtube.com/watch?v=QqPJJLkm46U]]
-* https://bikerglen.com/blog/homebrew-rgb-led-light/</pre>
+opto isolation
+
+* https://www.crazy-logic.co.uk/archives/171
+* https://www.maximintegrated.com/en/design/technical-documents/app-notes/2/2116.html
+* https://www.mathertel.de/Arduino/DMXShield.aspx
+* https://electronics.stackexchange.com/questions/472507/ft232r-for-rs-485-dmx512-with-isolation-tx-optocoupler
+* https://antwortenhier.me/q/wie-kann-dmx-512-mit-optokopplern-entkoppelt-werden-61692948001</pre>
 </div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -19974,7 +20048,7 @@ germany:
 * if you use an existing frame of a car and you don't do big modifications to that it seems that you only have to do EMC checks at TÜV
 ** https://www.tuv.com/world/en/electromagnetic-compatibility-%28emc%29.html</pre>
 </div>
-<div created="20210112234744893" modified="20220911195328094" tags="[[digital electronics]]" title="inter IC or inter device communication, networking">
+<div created="20210112234744893" modified="20220911204012542" tags="[[digital electronics]]" title="inter IC or inter device communication, networking">
 <pre>see [[serial connection stuff]]
 
 * https://en.wikipedia.org/wiki/List_of_network_buses
@@ -19993,7 +20067,8 @@ germany:
 * RS-458
 ** https://de.wikipedia.org/wiki/EIA-485
 ** https://en.wikipedia.org/wiki/RS-485
-* * https://de.wikipedia.org/wiki/EIA-422
+** https://hackaday.com/2022/04/05/hacker-dictionary-rs-485-will-go-the-distance/
+* https://de.wikipedia.org/wiki/EIA-422
 * https://de.wikipedia.org/wiki/Modbus
 * https://en.wikipedia.org/wiki/UEXT
 * https://libre.solar/thingset/
