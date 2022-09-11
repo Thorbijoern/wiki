@@ -551,8 +551,6 @@ Error message and password prompt
 
 <li>$:/temp/NewTagName</li>
 
-<li>$:/temp/NewTagName-1347362342</li>
-
 <li>$:/temp/NewTagName-370160150</li>
 
 <li>$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES</li>
@@ -1118,6 +1116,8 @@ Error message and password prompt
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
+
+<li>Draft of 'DMX'</li>
 
 <li>Dresden</li>
 
@@ -2409,7 +2409,7 @@ Microwave transformer-based
 ** case, maybe case of a broken PC PSU
 *** cheap furniture glider as feet for the lab bench</pre>
 </div>
-<div created="20220701230517790" modified="20220911151315445" tags="[[current projects]] [[light / projection / visuals]] DMX" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
+<div created="20220701230517790" modified="20220911200517749" tags="[[current projects]] [[light / projection / visuals]] DMX" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
 <pre>!! Idee
 
 ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
@@ -12732,7 +12732,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220911160740451" list="DMX [[DMX Tester]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX Connector]] [[small open W-DMX stick]] [[USB DMX / RDM Interface]] About TableOfContents" modified="20220911200037527" title="$:/StoryList">
+<div created="20220911160740451" list="[[DIY LED Par]] LED [[Draft of 'DMX']] [[DMX Tester]] [[DMX Connector]] [[small open W-DMX stick]] [[USB DMX / RDM Interface]] About TableOfContents" modified="20220911200624264" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -12797,9 +12797,6 @@ TableOfContents</pre>
 }</pre>
 </div>
 <div created="20200512222650149" modified="20220911150650349" title="$:/temp/NewTagName">
-<pre></pre>
-</div>
-<div created="20220911150531993" modified="20220911150536073" title="$:/temp/NewTagName-1347362342">
 <pre></pre>
 </div>
 <div created="20220125173125797" modified="20220125173130804" title="$:/temp/NewTagName-370160150">
@@ -13752,8 +13749,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220911195156455" modifier="Thorbijoern" title="$:/temp/search">
-<pre>netw</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220911200612638" modifier="Thorbijoern" title="$:/temp/search">
+<pre>led</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16932,7 +16929,7 @@ software
 * https://www.openmediavault.org/
 ** https://de.wikipedia.org/wiki/OpenMediaVault</pre>
 </div>
-<div created="20220821124329420" modified="20220911150423764" tags="[[current projects]] [[light / projection / visuals]]" title="DIY LED Par">
+<div created="20220821124329420" modified="20220911200648349" tags="[[current projects]] [[light / projection / visuals]]" title="DIY LED Par">
 <pre>!! Case
 
 !! Controller
@@ -16944,6 +16941,8 @@ WLED?
 !! Driver
 
 Constant Current
+
+see [[LED]]
 
 see [[transistors]]
 
@@ -17277,6 +17276,46 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
+</div>
+<div created="20220803212202492" draft.of="DMX" draft.title="DMX" modified="20220911200558971" tags="[[light / projection / visuals]] [[digital electronics]]" title="Draft of 'DMX'">
+<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
+
+* http://www.dmx512-online.com/whats_dmx512.html
+* https://hackaday.com/2021/10/15/learn-dmx512-basics/
+* https://de.wikipedia.org/wiki/DMX_(Lichttechnik)
+** https://en.wikipedia.org/wiki/DMX512
+* see also [[inter IC or inter device communication, networking]] for RS-485
+
+other diy
+
+* https://wiki-de.dmxcontrol-projects.org/index.php?title=Kategorie:Selbstbau-Projekte
+* https://hackaday.com/blog/?s=DMX
+* https://www.electroschematics.com/arduino-dmx-and-rgbw-par-led-spotlight/
+
+hardware:
+
+* XLR 5pin or 3pin connector see [[DMX Connector]]
+* isolation using optocouplers or so
+* MAX485 and the SN75176 RS-485 to serial transceiver
+** or ADM483
+* [[microcontroller]]
+* drivers for light and stuff
+
+software
+
+* https://www.qlcplus.org/ - active, really good
+* https://www.pcdimmer.de/index.php - active
+* https://sourceforge.net/projects/dmxdesk/ - abandoned
+* https://sourceforge.net/projects/qlc/ - abandoned
+* https://sourceforge.net/projects/lightsup/ - abandoned
+
+stuff
+
+* [[Inside a wireless DMX receiver|https://www.youtube.com/watch?v=CBUxwt6Vliw]]
+* [[https://www.youtube.com/watch?v=aIVqrAzrgEg]]
+* [[Inside a Showtec DB-1-4 DMX isolator, buffer, repeater.|https://www.youtube.com/watch?v=ajw5Dwtfd74]]
+* https://en.wikipedia.org/wiki/Lighting_control_console
+* SDG #048 DMX Controlled RGB Linear Light Strips|https://www.youtube.com/watch?v=bDFkVJ4jwTE]]</pre>
 </div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
