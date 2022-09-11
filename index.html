@@ -219,6 +219,8 @@ Error message and password prompt
 
 <li>$:/state/edit/references--409149435</li>
 
+<li>$:/state/edit/references--816820119</li>
+
 <li>$:/state/edit/references--894366575</li>
 
 <li>$:/state/edit/references-126101521</li>
@@ -1110,6 +1112,10 @@ Error message and password prompt
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
+
+<li>Draft of 'DMX / DMX512'</li>
+
+<li>Draft of 'small open W-DMX stick'</li>
 
 <li>Dresden</li>
 
@@ -2399,7 +2405,7 @@ Microwave transformer-based
 ** case, maybe case of a broken PC PSU
 *** cheap furniture glider as feet for the lab bench</pre>
 </div>
-<div created="20220701230517790" modified="20220911142030237" tags="[[current projects]] [[light / projection / visuals]]" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
+<div created="20220701230517790" modified="20220911150358130" tags="[[current projects]] [[light / projection / visuals]]" title="(DMX) / ArtNet / sACN LED Leisten und Logos">
 <pre>!! Idee
 
 ich hatte die Idee LED leisten die adressier- und ansteuerbar sind selbst zu bauen statt zu kaufen, vor allem weil ich die idee hatte ein logo für den Tolerave mit Neon-LED Streifen zu machen. siehe auch: 
@@ -2421,7 +2427,7 @@ kontrollprotokolle die in frage kommen sind (s)ACN oder ~ArtNet, weil die sind I
 * https://wiki.openlighting.org/index.php/Comparison_of_DMX_over_IP_protocols
 ** https://wiki.openlighting.org/index.php/Category:ArtNet
 * https://wiki.openlighting.org/index.php/Category:E1.31
-* see [[DMX / DMX512]]
+* see [[DMX]]
 
 
 !! controller firmware
@@ -12236,6 +12242,9 @@ TableOfContents</pre>
 <div created="20210302175538162" modified="20210302175538162" title="$:/state/edit/references--409149435">
 <pre>show</pre>
 </div>
+<div created="20220911150345126" modified="20220911150345126" title="$:/state/edit/references--816820119">
+<pre>show</pre>
+</div>
 <div created="20220529013623395" modified="20220529013623395" title="$:/state/edit/references--894366575">
 <pre>show</pre>
 </div>
@@ -12719,7 +12728,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220808201413192" list="[[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[DMX / DMX512]] [[light / projection / visuals]] [[controlling lights, light hardware]] [[small open W-DMX stick]] [[old DJ mixer repair]] [[untagged tiddlers]] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220911141107666" title="$:/StoryList">
+<div created="20220808201413192" list="[[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Draft of 'DMX / DMX512']] [[light / projection / visuals]] [[controlling lights, light hardware]] [[Draft of 'small open W-DMX stick']] [[old DJ mixer repair]] [[untagged tiddlers]] [[Class AB (G/H) idle/bias/quiescent current (Ruhestrom)]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20220911141107666" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -17252,6 +17261,111 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
+</div>
+<div created="20220803212202492" draft.of="DMX / DMX512" draft.title="DMX" modified="20220911150340827" tags="[[light / projection / visuals]] [[digital electronics]]" title="Draft of 'DMX / DMX512'">
+<pre>* http://www.dmx512-online.com/whats_dmx512.html
+
+USB DMX Interface
+
+* https://opendmx.net/index.php/Category:USB
+* FT232RL/FT232BM (USB to Serial/RS232) + SN75176 (RS-485 bus transceiver) - unbuffered, without protection
+** https://www.enttec.com/product/lighting-communication-protocols/dmx512/open-dmx-usb/
+** https://sourceforge.net/projects/opendmxusb/ ?
+** https://openschemes.com/homebrew-usb-dmx-interface-with-sparkfun/
+** https://opendmx.net/index.php/Open_DMX_USB
+** https://www.erwinrol.com/page/projects/open-dmx-usb/
+* https://opendmx.net/index.php/Anyma_uDMX
+* https://opendmx.net/index.php/Digital_Enlightenment_USB-DMX
+* https://opendmx.net/index.php/KarateLight
+* https://opendmx.net/index.php/DMXking_USB_DMX512-A
+* https://wiki-de.dmxcontrol-projects.org/index.php?title=DMX-Sender_f%C3%BCr_weniger_als_10_Euro
+* https://sourceforge.net/projects/open-rdm/
+** http://www.hoelscher-hi.de/hendrik/light/openrdm.htm
+* https://sourceforge.net/projects/dmx485/ - abandoned
+* https://sourceforge.net/projects/avrdmx/ - abandoned
+
+other diy
+
+* https://wiki-de.dmxcontrol-projects.org/index.php?title=Kategorie:Selbstbau-Projekte
+* https://hackaday.com/blog/?s=DMX
+* https://www.electroschematics.com/arduino-dmx-and-rgbw-par-led-spotlight/
+
+hardware:
+
+* XLR 5pin or 3pin connector
+* isolation using optocouplers or so
+* MAX485 and the SN75176 RS-485 to serial transceiver
+** or ADM483
+* [[microcontroller]]
+* drivers for light and stuff
+
+software
+
+* https://www.qlcplus.org/ - active, really good
+* https://www.pcdimmer.de/index.php - active
+* https://sourceforge.net/projects/dmxdesk/ - abandoned
+* https://sourceforge.net/projects/qlc/ - abandoned
+* https://sourceforge.net/projects/lightsup/ - abandoned
+
+stuff
+
+* [[Inside a wireless DMX receiver|https://www.youtube.com/watch?v=CBUxwt6Vliw]]</pre>
+</div>
+<div created="20220905191835405" draft.of="small open W-DMX stick" draft.title="small open W-DMX stick" modified="20220911150315753" tags="[[light / projection / visuals]] [[current projects]]" title="Draft of 'small open W-DMX stick'">
+<pre>while reading the WLED documentation and seing that it can output DMX i had the idea to make a small DMX over wifi receiver that fits into an off-the-shelf XRL connector.
+
+similar:
+
+* https://www.thomann.de/de/eurolite_akku_quickdmx_wireless_receiv.htm
+* https://www.thomann.de/de/eurolite_quickdmx_wireless_receiver.htm
+
+see [[DMX / DMX512]]
+
+!! Connector (XLR)
+
+devices might use 3pin XLR or 5pin XLR for DMX
+
+receivers have female plugs, the inputs on DMX devices are male.
+
+cheap option would be to have 3pin female on the wireless receivers and use 3pin male to 5pin female adapters:
+
+* https://www.thomann.de/de/pro_snake_tpa_1003_mf5.htm
+* https://www.thomann.de/de/stairville_dmxadapter_53_pol_wm.htm
+* https://www.thomann.de/de/adj_dmx_adapter_cable_dmxt_3m5f.htm
+
+how important is 110Ohm cable?
+
+thread
+
+* seetronic: M18x1,5
+* neutrik mxx: ...x1,0
+
+!! controller
+
+Firmware: WLED
+
+* ESP8266 ESP-01S
+* http://esp8266.net/
+
+having a PCB antenna is simpler, but the pcb might need more space, but having a external antenna might be possible too and might provide better signal/connection
+
+!! power
+
+i forgot about powering it... that might be a bit harder to fit in a small space
+
+18650 is really close to the XLR size
+
+maybe some small flat cells?
+
+integrated charger
+
+!! case
+
+maybe use 20mm diameter 5mm wall thickness aluminium tube, could be maschined and might fit with common XLR connectors
+
+* or just ABS junction boxes or so
+* doesn't have to be waterproof
+</pre>
 </div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
