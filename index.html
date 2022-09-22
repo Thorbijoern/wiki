@@ -12757,7 +12757,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220911160740451" list="osint [[Big mobile Battery Project]] [[big (portable) battery]] [[Skoda radio/control panel repair attempt]] [[(open source) Power Grid / Energy management]] [[Peavey PV8 USB 8-Channel Mixing Console repair]] About Wishlist TableOfContents" modified="20220922121209825" title="$:/StoryList">
+<div created="20220911160740451" list="[[Sonnensystem Signalweg]] osint [[Big mobile Battery Project]] [[big (portable) battery]] [[Skoda radio/control panel repair attempt]] [[(open source) Power Grid / Energy management]] [[Peavey PV8 USB 8-Channel Mixing Console repair]] About Wishlist TableOfContents" modified="20220922201951197" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13774,8 +13774,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20220922121206240" modifier="Thorbijoern" title="$:/temp/search">
-<pre>osint</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20220922201948867" modifier="Thorbijoern" title="$:/temp/search">
+<pre>sonnen</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -27248,10 +27248,12 @@ _____
 * CAD model for isolationchecker and circuit breaker
 * ask local bussiness to donate needed parts</pre>
 </div>
-<div created="20220831000902777" modified="20220903132816332" tags="" title="Sonnensystem Signalweg">
+<div created="20220831000902777" modified="20220922204601255" tags="" title="Sonnensystem Signalweg">
 <pre>the whole signal chain of the current ~SoSy Setup has to be checked in order to get the best sound quality and as prerequisite to measuring the frequency response of the whole system.
 
 check gain chain
+
+* http://neu.jobst-audio.de/tool/helfer/limiter-rechner
 
 !! inputs:
 
@@ -27260,7 +27262,8 @@ check gain chain
 ** to unbalanced 6.3mm jack
 * xlr to unbalanced 6.3mm jack
 
-!! [[the t.racks DSP 4x4 Mini reverse engineering]]
+
+!! [[the t.racks DSP 4x4 Mini|the t.racks DSP 4x4 Mini reverse engineering]]
 
 * the gains, sensitivity and internal reference is a bit fucked up, the thomann reviews describe it pretty well it seems
 * the inputs and outputs don't seem to have overhead and clip sooner than given in the datasheet it seems
@@ -27276,6 +27279,13 @@ check gain chain
 ** output &quot;sensitivity&quot;/level
 ** system gain
 ** more/other gain?
+
+
+!! the other dsp
+
+* similar to the dsp 4x4 mini, but different
+* Thomann t.racks DS 2/4: +5dBu * maybe?
+
 
 !!amps
 
@@ -27317,14 +27327,24 @@ des Systems an.
 &lt;&lt;&lt;
 
 
+* sowohl Lautstärke, Gain als auch Eingangs-Empfindlichkeit als bezeichnung für den regler
+* ich glaube der gain regler steht eigentlich für die empfindlichkeit. einstellbar von 500mV bis 6V.
+aber in welchen schritten, linear (easy) oder log?
+* sicher gehen und mit messungen checken
 
-!! speakers/setups
 
-* impedance
+!! speakers
 
-!! the other dsp
+impedance? power?
 
-* similar to the dsp 4x4 mini, but different</pre>
+https://www.bs-tek.de/
+
+* small 8&quot; Tops
+* 12&quot; Tops
+* 15&quot; subs
+* 21&quot; infas
+
+!! setups</pre>
 </div>
 <div created="20210126004435980" modified="20220528164150776" tags="Audio" title="sound (physics) basics">
 <pre>* https://www.physicsclassroom.com/class/sound
