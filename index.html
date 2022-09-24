@@ -12757,7 +12757,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220911160740451" list="[[Sonnensystem Signalweg]] osint [[Big mobile Battery Project]] [[big (portable) battery]] [[Skoda radio/control panel repair attempt]] [[(open source) Power Grid / Energy management]] [[Peavey PV8 USB 8-Channel Mixing Console repair]] About [[my equipment]] TableOfContents" modified="20220924005829686" title="$:/StoryList">
+<div created="20220911160740451" list="[[Sonnensystem Signalweg]] osint [[Big mobile Battery Project]] [[big (portable) battery]] [[Skoda radio/control panel repair attempt]] [[(open source) Power Grid / Energy management]] [[Peavey PV8 USB 8-Channel Mixing Console repair]] About [[my equipment]] TableOfContents" modified="20220924011718180" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -26633,7 +26633,7 @@ Es gibt Anlagen, die das automatisch tun, zum Beispiel von e3/dc. Da wird im Fal
 * [[CRAZY LOUD 3D Printed Tornado Siren - Elegoo Mars|https://www.youtube.com/watch?v=39OmzYyQ_dQ]]
 * https://de.wikipedia.org/wiki/Sirene_(Ger%C3%A4t)</pre>
 </div>
-<div created="20220814190332408" modified="20220904161402800" tags="repairs [[current projects]]" title="Skoda radio/control panel repair attempt">
+<div created="20220814190332408" modified="20220924012812777" tags="repairs [[current projects]]" title="Skoda radio/control panel repair attempt">
 <pre>i've got a stock radio/control panel out of a not that old Skoda car, but the warranty is already over. Its nothing too fancy, e.g. it is a version without navigation system, but replacing it costs around 1k€. The problem is that it started having problems and they got worse over time. sometimes it wouldn't start, sometimes it would randomly crash and just be off and sometimes it would crash in a way that the audio output / built in sound system had just digital garbage noise on it.
 
 I suspect an electrolytic cap is to blame because when they start to go bad the internal resistance start to rise, resulting in the ripple they are meant to smothe heating them up more, which is a vicious cycle. Then the problems that causes start to increase.
@@ -26660,7 +26660,23 @@ finding a replacement doesn't seem that easy. due to the pcb footprint the footp
 
 one option i'll probably try is to solder a bodge capacitor parallel to the existing one to test if that one even is the culprit.
 
-see [[quality Electrolytic Capacitors]]</pre>
+see [[quality Electrolytic Capacitors]]
+
+!! repair
+
+i finally decided to buy a ESR Meter (Peak Electronic Design ESR70) and with it i bought a couple of replacement capacitors, digikey luckily had some in stock. the stock of these more special parts is pretty volatile.
+
+i got [[nichicon UCZ series|https://www.nichicon.co.jp/english/products/pdfs/e-ucz.pdf]] caps UCZ1E102MNS1MS.
+these have a ok lifetime rating and a good temperature rating of +125°C, that should be plenty. i don't think it will be that hot in the vicinity, but it should aid in the cap lasting much longer.
+
+i immediately tested the ESR70 on the caps in the radio all seemed fine except the one i suspected and another one, both were in parallel and that skewed the result.
+The new caps measured 0.060 ohms spot on, like given in the datasheet.
+
+I carefully de-soldered the 25V 1000uF i suspected. the small one that was in parallel with it tested fine, but the one i suspected measured a bit higher than the example values given in the ESR70 manual. iirc it measured 0.23 ohms.
+
+because i already bought replacements i decided to just swap it out. i soldered the new nichicon one carefully in place. i checked with the ESR70 if it had good connection, because the ESR70 can also be used to measure small resistances, at least that is claimed in the user guide.
+
+i can't test the radio at my place, or at least i don't want to risk anything by just connecting 12V or so to it. So i have to wait until the owner can try it out.</pre>
 </div>
 <div created="20210327192759033" modified="20210415114858271" tags="[[sustainability / nachhaltigkeit]] Science nature" title="slime mold / schleimpilz">
 <pre>* can easily provide approximate solutions to the [[Travelling salesman problem]]
