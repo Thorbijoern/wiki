@@ -12770,7 +12770,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220928130946135" list="[[problems with non-commercial licences]] [[Monacor megaphone repair, reverse engineering]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20221006230659070" title="$:/StoryList">
+<div created="20220928130946135" list="[[Monacor megaphone repair, reverse engineering]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20221006230659070" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -22606,7 +22606,7 @@ stuff
 
 * [[Wie man ein Fahrrad baut - SWR Handwerkskunst|https://www.youtube.com/watch?v=ZUK7SKumutQ]]</pre>
 </div>
-<div created="20221006132828614" modified="20221006164916188" tags="[[audio repairs]]" title="Monacor megaphone repair, reverse engineering">
+<div created="20221006132828614" modified="20221011124907212" tags="[[audio repairs]]" title="Monacor megaphone repair, reverse engineering">
 <pre>people i know have got a roughed up monacore megaphone which doesn't really work anymore.
 It's a pretty good model, pretty loud, but this one has seen some use.
 
@@ -22617,31 +22617,39 @@ It's a pretty good model, pretty loud, but this one has seen some use.
 * m8 (13mm long) insert for mounting or so
 
 
-the issues:
+!! the issues and my fixes:
 
-i'm told the main problem is a corroded battery contact due to a battery leaking in the past.
+1. i'm told the main problem is a corroded battery contact due to a battery leaking in the past.
+i removed the problematic contact completely from the case. they have a hex head, a round recess below that and then M2? threads for normal cimp ring connectors.
+someone already cleaned the corroded contact superficially with a screwdriver or so, but in doing so gouged some pretty deep groves in the cheap contact screws. By removing the contact fully i could clean the contact completely. Then i used a drill to spin the contact an used fine sand paper and scotch brite to get the contact surface more even and flat. its not perfect, but much better.
 
-there is a broken plastic eyelet for the carrying strap.
+2. there is a broken plastic eyelet for the carrying strap.
 its pretty conveniently placed and one might find a metal eyelet as replacement that can be screwed in place.
 but i was not yet able to find a suitable one.
 the other side has a metal eyelet.
 
-The megaphone also just looks like shit due to sticker residue, gaffer/painters tape glue residue and other dirt.
+3. The megaphone also just looks like shit due to sticker residue, gaffer/painters tape glue residue and other dirt.
 i removed all the remaining tape.
 then i was able to scrub off all of the glue residue with ethanol.
 
-I know of prior problems due to broken wires inside the handpiece/mic.
-there was tape holding the cable kink protection together. i carefully removed it and also removed the glue leftovers with alcohole.
-the kink protection is split and also generally pretty cracked and desintigrating so it needs replacement. i could just fix it temporary with heat shrink tube, but that's not good.
+4. I know of prior problems due to broken wires inside the handpiece/mic.
+there was tape holding the cable kink protection together. i carefully removed it and also removed the glue leftovers with alcohol.
+the kink protection is split and also generally pretty cracked and desintigrating so it needs replacement. i could just fix it temporary with heat shrink tube, but that's not good. i got some new, different size kink protectors, the inside diameter is approx. 5,5 - 6,0 mm. they are a bit snug but i don't think that's bad.
 
-after opening the handpiece i could see the damage done by previous repair attempts: the wires that were already repaired once had really bad solder joins and the microswitch got butchered. the plastic got melted pretty bad and the contacts shifted. it still kinda works but not really good i think.
+5. After opening the handpiece i could see the damage done by previous repair attempts: the wires that were already repaired once had really bad solder joins and the microswitch got butchered. the plastic got melted pretty bad and the contacts shifted. it still kinda works but not really good i think.
 i bought a replacement.
-
 also the spiral wire was not secured into the strain relief, but that is an easy fix after fixing the kink protection.
 
-most tape was used to hold the battery compartment closed, because the latch doesn't latch.
+6. most tape was used to hold the battery compartment closed, because the latch doesn't latch.
 the problem is a missing o-ring that would function as spacer, but without it there is to much play and the latch can simply slip of.
-i got a new 120mm diameter and 3mm thick o-ring. i hope that fits well.</pre>
+i got a new 120mm diameter and 3mm thick o-ring. A bit bigger would probably also fit, but 3mm is fine. smaller would be too small though.
+
+!! a bit reverse engineering:
+
+the compression driver has no information printed on the back, but i did not disassemble the megaphone fully.
+
+the amplifier board is a pretty simple, discrete design. maybe class ab?
+it uses 2 TIP41C NPN power transistors and uses a center tapped transformer to drive the compression driver.</pre>
 </div>
 <div created="20220714000955807" modified="20220731164732628" tags="[[input / control devices]] [[electronics parts/components]]" title="motor / motorized faders / potentiometers">
 <pre>* https://www.youtube.com/results?search_query=motor+fader
