@@ -2045,6 +2045,8 @@ Error message and password prompt
 
 <li>storing, mounting, housing (hardware)</li>
 
+<li>strommarkt</li>
+
 <li>Supercaps</li>
 
 <li>sustainability / nachhaltigkeit</li>
@@ -12772,7 +12774,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220928130946135" list="[[diy / open stream deck]] [[old DJ mixer repair]] [[Monacor megaphone repair, reverse engineering]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20221011170727032" title="$:/StoryList">
+<div created="20220928130946135" list="strommarkt [[old DJ mixer repair]] [[Monacor megaphone repair, reverse engineering]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20221011170727032" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13789,8 +13791,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20221011170724943" modifier="Thorbijoern" title="$:/temp/search">
-<pre>dj </pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20221012203158584" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -23291,7 +23293,7 @@ The new laser assembly worked fine when i tested it for a while (1h or a bit mor
 <pre>* [[Sollte man Obdachlosen Geld geben?|https://www.youtube.com/watch?v=WtPPrhrsSgk]]
 * Treberhilfe</pre>
 </div>
-<div created="20220909230309256" modified="20221011151746181" tags="[[current projects]] [[audio repairs]]" title="old DJ mixer repair">
+<div created="20220909230309256" modified="20221012203537385" tags="[[current projects]] [[audio repairs]]" title="old DJ mixer repair">
 <pre>i got 2 old DJ mixers and might be able to repair them. One would be great to get working for the Band Room of a local Kids and Youth Club.
 
 !! Behringer DX500
@@ -23324,7 +23326,22 @@ chips
 * TL074C - 4 channel opamps
 * jrc 4580 - dual opamps
 * cd4051BM - single 8 channel analog multiplexer/demultiplexer
-* </pre>
+* CD4052BCM - dual 4 channel analog multiplexer/demultiplexer
+* ...
+
+with help of the schematics i was able to narrow down the problems with channel 2 to the fader, it controls the volume going to the main/master section.
+because other faders were also noisy or had dropouts i decided to desolder and clean them.
+pretty much all faders were a bit dirty. the master/main put fader worked fine again after cleaning. The fader of channel 1 still has some problems.
+the fader for channel 2 had very corroded slide contacts, i tried to clean it, but it only got a bit better. only a bit of one of the stereo signals gets through, just enough to hear it.
+so fader 2 needs a changeout and maybe changing other faders is also a good option...
+
+the faders are alpha (taiwanese company) a100kx2 45mm fader
+
+digikey didn't seem to have fader that look similar
+
+https://www.mouser.de/c/passive-components/potentiometers-trimmers-rheostats/slide-potentiometers/?resistance=100%20kOhms&amp;travel=45%20mm%7C~60%20mm
+
+https://www.alphapotentiometers.net/Slide%20Pots/html/slide_pots.html</pre>
 </div>
 <div created="20220206214004453" modified="20220920213358916" tags="[[electronics parts/components]]" title="Opamps">
 <pre>* https://hackaday.com/2022/02/05/how-to-spot-a-fake-op-amp/
@@ -28081,6 +28098,10 @@ other tools:
 
 * organizer
 ** https://www.kistenberg.com/de</pre>
+</div>
+<div created="20221012203200653" modified="20221012203535474" tags="Misc" title="strommarkt">
+<pre>* [[Warum wird Strom immer teurer? (EEG-Umlage, Strommarkt, Strompreis)|https://www.youtube.com/watch?v=YkA65vpeA5g]]
+* https://www.verbund.com/de-at/privatkunden/themenwelten/strom-aus-wasserkraft/strompreis-entstehung</pre>
 </div>
 <div created="20210421153131299" modified="20211123223736151" tags="[[accumulator - battery - rechargeable energy storage]] [[electronics parts/components]]" title="Supercaps">
 <pre>* [[Super Capacitor Module - 12v Solar Shed|https://www.youtube.com/watch?v=OuVUJ3_awiw]]
