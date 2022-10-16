@@ -1399,6 +1399,8 @@ Error message and password prompt
 
 <li>Korruption / Lobbyismus</li>
 
+<li>Koukaam NETIO-230C &quot;smart power socket&quot; repair</li>
+
 <li>kreativer aktivismus</li>
 
 <li>Krieg / War</li>
@@ -12780,7 +12782,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220928130946135" list="[[reactive load]] [[speaker / audio Dummy Load (Ersatzlast)]] [[dsp (digital signal processor) / digital crossover]] [[current projects]] [[radio stuff / funk kram]] capacitors strommarkt [[old DJ mixer repair]] [[Monacor megaphone repair, reverse engineering]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20221013225938476" title="$:/StoryList">
+<div created="20220928130946135" list="[[Koukaam NETIO-230C &quot;smart power socket&quot; repair]] [[reactive load]] [[speaker / audio Dummy Load (Ersatzlast)]] [[dsp (digital signal processor) / digital crossover]] [[current projects]] [[radio stuff / funk kram]] capacitors strommarkt [[old DJ mixer repair]] [[Monacor megaphone repair, reverse engineering]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20221015005321607" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13797,8 +13799,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20221013225939922" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20221015005317461" modifier="Thorbijoern" title="$:/temp/search">
+<pre>dns</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -20828,6 +20830,30 @@ Pins  Description          Wire Color
 * Lobbyregister!
 * [[Tranzparenz|Transparency]]
 * https://www.abgeordnetenwatch.de/</pre>
+</div>
+<div created="20221016013341121" modified="20221016020543207" tags="repairs" title="Koukaam NETIO-230C &quot;smart power socket&quot; repair">
+<pre>got a broken Koukaam NETIO-230C smart power socket, its just a box with a IEC power in and 4 IEC power outs. it can be controlled manually through buttons or via ethernet or rs232.
+
+internally its basically just a small smps, an Asix AX11005 microcontroller and 4 relays.
+
+* Manual: https://www.manualslib.de/manual/299067/Koukaam-Netio-230C.html
+* [[Asix AX11005 datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/216363/ASIX/AX11005.html]]
+** main feature is the integrated fast ethernet interface
+
+i opened the device, took the pcb out and started with a visual inspection, i could not see any signs of problems.
+so i assembled it partially again, plugged it in and switched it on. the smps made an audible high pitched sqeaking noise, that should not happen.
+
+Its a bit odd that the smps is on a small daughter board, but the manufacturer probably needed a different power supply design and didn't want to redesign everything.
+the smps is probably 12V and just low power, because such a device doesn't need much and the relays work with 12V and some caps near the smps are rated for 16V.
+
+i tried measuring voltage on the smps, but without luck, the smps is probably dead or maybe there is a short. I could not measure an obvious short, but the integrated signal buzzer sometimes sounds continuously after switching it on, maybe just some glitch to so small voltages on switch on or so.
+
+i decided to try powering it with my lab bench power supply, setting it to 12V and 1A max current. soldered a test cable to the PCB and it worked, the box booted and i could switch the relays.
+the first LED was constantly red, but the manual states that's just the missing ethernet connection.
+
+so the problem is the power supply. i desoldered it and under the small daughter board i could see the previous design. it looks like they originally planned on using a small print transformer and bridge rectifier for the job. but i wanna try salvaging the existing smps.
+
+i also inspected the smps board visually, but nothing out of the ordinarry. i tested the elektrolytic caps with my ESR70 and i can't measure the output capacitors, either they are faulty or i have to desolder them to measure them.</pre>
 </div>
 <div created="20200724182022683" modified="20211122004511768" tags="[[Politics (Politik)]] [[sustainability / nachhaltigkeit]]" title="kreativer aktivismus">
 <pre>* Free HK - Proteste
