@@ -1399,7 +1399,7 @@ Error message and password prompt
 
 <li>Korruption / Lobbyismus</li>
 
-<li>Koukaam NETIO-230C &quot;smart power socket&quot; repair</li>
+<li>Koukaam Netio-230C &quot;smart power socket&quot; repair</li>
 
 <li>kreativer aktivismus</li>
 
@@ -12782,7 +12782,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20220928130946135" list="[[Koukaam NETIO-230C &quot;smart power socket&quot; repair]] [[reactive load]] [[speaker / audio Dummy Load (Ersatzlast)]] [[dsp (digital signal processor) / digital crossover]] [[current projects]] [[radio stuff / funk kram]] capacitors strommarkt [[old DJ mixer repair]] [[Monacor megaphone repair, reverse engineering]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20221015005321607" title="$:/StoryList">
+<div created="20220928130946135" list="[[problems with non-commercial licences]] [[reactive load]] [[speaker / audio Dummy Load (Ersatzlast)]] [[dsp (digital signal processor) / digital crossover]] [[current projects]] [[radio stuff / funk kram]] capacitors strommarkt [[old DJ mixer repair]] [[Monacor megaphone repair, reverse engineering]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20221017164054350" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13799,8 +13799,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20221015005317461" modifier="Thorbijoern" title="$:/temp/search">
-<pre>dns</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20221017164051940" modifier="Thorbijoern" title="$:/temp/search">
+<pre>non</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -20831,14 +20831,15 @@ Pins  Description          Wire Color
 * [[Tranzparenz|Transparency]]
 * https://www.abgeordnetenwatch.de/</pre>
 </div>
-<div created="20221016013341121" modified="20221016020543207" tags="repairs" title="Koukaam NETIO-230C &quot;smart power socket&quot; repair">
-<pre>got a broken Koukaam NETIO-230C smart power socket, its just a box with a IEC power in and 4 IEC power outs. it can be controlled manually through buttons or via ethernet or rs232.
+<div created="20221016013341121" modified="20221016150110445" tags="repairs" title="Koukaam Netio-230C &quot;smart power socket&quot; repair">
+<pre>got a broken Koukaam NETIO-230C smart power socket, its just a box with a IEC power in and 4 IEC power outs. it can be controlled manually through buttons or via ethernet or RS232.
 
 internally its basically just a small smps, an Asix AX11005 microcontroller and 4 relays.
 
 * Manual: https://www.manualslib.de/manual/299067/Koukaam-Netio-230C.html
 * [[Asix AX11005 datasheet|https://pdf1.alldatasheet.com/datasheet-pdf/view/216363/ASIX/AX11005.html]]
 ** main feature is the integrated fast ethernet interface
+* [[Sipex SP3232EE|https://pdf1.alldatasheet.com/datasheet-pdf/view/157037/SIPEX/SP3232EEA.html]] rs232 transceiver IC
 
 i opened the device, took the pcb out and started with a visual inspection, i could not see any signs of problems.
 so i assembled it partially again, plugged it in and switched it on. the smps made an audible high pitched sqeaking noise, that should not happen.
@@ -20853,7 +20854,12 @@ the first LED was constantly red, but the manual states that's just the missing 
 
 so the problem is the power supply. i desoldered it and under the small daughter board i could see the previous design. it looks like they originally planned on using a small print transformer and bridge rectifier for the job. but i wanna try salvaging the existing smps.
 
-i also inspected the smps board visually, but nothing out of the ordinarry. i tested the elektrolytic caps with my ESR70 and i can't measure the output capacitors, either they are faulty or i have to desolder them to measure them.</pre>
+i also inspected the smps board visually, but nothing out of the ordinary. i tested the elektrolytic caps with my ESR70 and i can't measure the output capacitors, either they are faulty or i have to desolder them to measure them. so i desoldered them and tested them out of circuit, they were meassuring very high, i replaced the caps with good one out of my salvaged parts collection and soldered the smps PCB back onto the main board.
+
+the following test was successful, the box booted successfully and i could switch the power outlets without problems.
+
+there is another version with dual RS232, were the second RS232 port can be used to forward the commands to another netio-230 box, to control multible boxes with one serial line.
+The DB9 connector is missing on the C Version, but you can just solder it yourself if needed i don't yet know if another firmware is needed, but the passive components for the second connection are there.</pre>
 </div>
 <div created="20200724182022683" modified="20211122004511768" tags="[[Politics (Politik)]] [[sustainability / nachhaltigkeit]]" title="kreativer aktivismus">
 <pre>* Free HK - Proteste
@@ -25322,9 +25328,20 @@ getting data from all cells:
 <pre>* [[Optimize Gain Structure - Pro Audio (Public)https://www.youtube.com/watch?v=-RXlnVDVLrc]]
 * [[Sound System Tuning By Ear|https://www.youtube.com/watch?v=1IbvhgfGEhU]]</pre>
 </div>
-<div created="20210118134735828" modified="20221006231948820" tags="[[Free / Open / Libre *]]" title="problems with non-commercial licences">
+<div created="20210118134735828" modified="20221017173526720" tags="[[Free / Open / Libre *]]" title="problems with non-commercial licences">
 <pre>* projects with non-commercial licences like CC-NC are not open source software or open hardware
-* https://mifactori.de/non-commercial-is-not-open-source/</pre>
+* https://mifactori.de/non-commercial-is-not-open-source/
+* https://cccc.ncte.org/cccc/committees/ip/2009developments/openeducation
+* https://nbn.org.uk/news/guidance-definition-non-commercial-use/ - some special stuff to the platform, but some interresting bits
+* https://wiki.creativecommons.org/wiki/Defining_Noncommercial - not a legal definition, just a study about the perception of people
+
+educational purposes are excluded
+
+one big problem is also that NC licenses exclude educational purposes... that stands in contrary to the believes of the people using NC licenses, they want to make it open for education, but unknowingly restrict their creations in that regard
+
+!! non-commercial does not mean non-profit
+
+NC is often used for hardware... but for hardware you need to buy parts... if someone then does a workshop that is for free, the participants just have to pay for the parts (because its pretty easy to source them in bulk than everyone has to bring them themselves), that paying for the parts instantly makes the workshop commercial, even though the worksho was not for-profit</pre>
 </div>
 <div created="20220709214522967" modified="20220709220932995" tags="Audio" title="professional acoustic simulation software">
 <pre>* EASE - industry standard, fee for users, manufacturers pay to get their speakers modelled
