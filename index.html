@@ -809,6 +809,8 @@ Error message and password prompt
 
 <li>Alternating Current (AC) / Direct Current (DC) power</li>
 
+<li>Alto TS315 repair</li>
+
 <li>aluminium cases/housings/enclosures</li>
 
 <li>amcron geodyne repair</li>
@@ -12824,7 +12826,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20221020020424890" list="[[Audio IC's]] [[soldering tools]] tools [[Draft of ' 3']] [[Draft of ' 2']] [[Draft 2 of ' 1']] [[mobile battery pack]] [[VeloZack Documentation and new Design]] woodworking About TableOfContents" modified="20221020172618747" title="$:/StoryList">
+<div created="20221020020424890" list="[[Alto TS315 repair]] [[soldering tools]] tools [[Draft of ' 3']] [[Draft of ' 2']] [[Draft 2 of ' 1']] [[mobile battery pack]] [[VeloZack Documentation and new Design]] woodworking About TableOfContents" modified="20221020172618747" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13841,8 +13843,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20221020172616348" modifier="Thorbijoern" title="$:/temp/search">
-<pre>audio </pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20221020180144431" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14306,6 +14308,25 @@ stuff
 * [[EEVblog 1406 - DC Circuit Transients Fundamentals|https://www.youtube.com/watch?v=8nyNamrWcyE]]
 * [[EEVblog 1397 - DC Voltage &amp; Current Source Theory|https://www.youtube.com/watch?v=AQK7RyecVW0]]
 * [[EEVblog 1401 - DC Power, Efficiency, &amp; Maximum Power Transfer Theory|https://www.youtube.com/watch?v=fHoHYEZnVIg]]</pre>
+</div>
+<div created="20221020180145802" modified="20221020192921004" tags="[[audio repairs]]" title="Alto TS315 repair">
+<pre>GTC got some Alto TS315 active PA speakers in for repair which where damaged by a faulty mixing console.
+The customer only stated they plugged them into a mixing console, they tested everything but they didn't work.
+I immediately told them to call the owner and tell them not to use the mixing console anymore, it also has to be looked at.
+
+First I tested the speakers myself with a known-good device and known good cables.
+They have two separate inputs and one output per speaker. On one speaker both inputs are broken and on the other one one still functions kinda, but it's not symmetrical anymore and picks up interference from cellphones.
+
+Then i unplugged everything and opened them up. I first focused on the input/control pcb. I unplugged and disassembled it from the back-plate to give it a visual inspection. I could pretty quickly see some obvious burnt components.
+The damage is isolated to the input/volume control PCB directly after the XLR/Jack inputs it seems. The protection zener-diodes ZD1 through ZD8 are shorted and the small inductors L1 through L4 are damaged/burned.
+The components certainly did their job in protecting from further damage, but need replacement.
+The PCBs have markings &quot;HB04212&quot;, &quot;TS212 PRE&quot; and &quot;VER151029&quot;.
+
+The small smd inductors are probably there to improve the signal in some way, they are completely burned up, except one lucky inductor in one of the speakers.
+The zener diodes are for protection, to protect the inputs/opamps from high voltages. they are mostly meant for voltage spikes like esd or so, but in this case there probably was a pretty powerful DC voltage on the inputs. the zener diodes are between the signal lines and Vcc,GND and Vdd (depending on the circuit) and clamp the voltage to a level.
+one zener which wasn't shorted measured 2.1V in reverse, maybe that's the zener voltage of them?
+
+I did not yet try injecting a signal at other stages in the circuit, but </pre>
 </div>
 <div created="20210323120449180" modified="20220821151001723" tags="[[storing, mounting, housing (hardware)]]" title="aluminium cases/housings/enclosures">
 <pre>* https://www.happareute.de
