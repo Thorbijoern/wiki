@@ -12832,7 +12832,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20221027225422278" list="[[Alto TS315 repair]] [[DAP Mission 900 repair]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20221031204936514" title="$:/StoryList">
+<div created="20221027225422278" list="[[reloop digital jockey 2 (dj controller) repair]] [[Alto TS315 repair]] [[DAP Mission 900 repair]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20221031205847704" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13849,8 +13849,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20221031204148025" modifier="Thorbijoern" title="$:/temp/search">
-<pre>hornresp</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20221031205845644" modifier="Thorbijoern" title="$:/temp/search">
+<pre>digital</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -26238,7 +26238,7 @@ other
 * regexr.com/
 * regex101.com/</pre>
 </div>
-<div created="20220708151609748" modified="20220924233037235" tags="[[audio repairs]] [[current projects]]" title="reloop digital jockey 2 (dj controller) repair">
+<div created="20220708151609748" modified="20221031213622349" tags="[[audio repairs]] [[current projects]]" title="reloop digital jockey 2 (dj controller) repair">
 <pre>got this dj controller for free because it is broken, doesn't turn on.
 
 * https://www.reloop.com/reloop-digital-jockey-2-ie
@@ -26254,15 +26254,33 @@ It might be that the electrolytic cap died first, because of high esr and low ca
 
 i got the new MP1410es, a 5 pack, from china. I changed the chip out and checked the supply without screwing it back into the controler, 5V works. after that i reassembled the controller again and connected everything. i checked again and it seems like everything works again.
 
+the jogweels had some matte coating which is disintegrating and became sticky, its uggly and not nice to the touch. I want to remove that stuff. I also want to clean all of the poti knobs and button caps.
+
+To do that I had to remove the Main PCB. The jogwheels have a touch function, where i had to desolder two wires to remove the PCB, apart from unscrewing all of the nuts from the encoders and potentiometers. The jogwheels are mounted inside a brass bushing and retained with a snap ring. the wires for the touch function clip to the bushings and the jogwheels fit pretty tightly into the bushings. there is some grease used but i don't know which kind. i can try silicone grease but silicone is an insulator, maybe some other grease is better.
+
+After the pcb was removed i could see some liquid damage / corrosion on the top side of the PCB where the right jogwheel sits.
+That could also explain why the switching regulator died.
+It was pretty easy to clean with ethanol and isopropanol, as well as some scrubbing with a fibreglass pen. i put some solder tin on some spots but i no components were really affected it seems.
+
+everything was a bit dusty, so i brushed everything off with a fine brush.
+
+I put all of the knobs and caps into zipper-bags with some water and dishwashing soap, to let it soak. after some time, after i was done cleaning other parts, i came back, drained the soapy water and laid the buttons and knobs out to dry. After drying i could see that some of the poti knobs still hat some dirt on them, so i brushed them quickly off with water and dried them off again.
+
+Cleaning the front plate was simpler without the knobs and buttons. i used brushes to get stuff out of creases/cavities and used soapy water and a some microfibre cloth to clean the surface.
+there was some residue of the jogwheel coating which i removed with cotton swabs and some ethanol.
+
+I cleaned the jogwheels mainly with ethanol, its cheaper and i used it to remove pretty much everything. only for the last pass i used isopropanol to &quot;polish&quot; it. both worked fine to remove the coating residue. took some time to remove the stuff, but they look and feel much better without.
+
+i tried desoldering the faders but it was really hard, so i stopped.
+
+
 Todos:
 
 * 6V 1,5A power supply
 * replace 1 missing pot cap
-* cleaning caps
 * right/side b fader is sticky, maybe needs some grease
 * cleaning the faders
-* jogweels had some matte coating which is disintegrating and became sticky, is uggly and not nice to the touch, has to get removed
-* cleaning the frontplate
+* test all functions
 
 chips:
 
