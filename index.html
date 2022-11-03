@@ -13849,7 +13849,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20221102183801419" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20221103180521826" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -16633,7 +16633,7 @@ proprietary stuff
 * https://de.wikipedia.org/wiki/Digitale_Souver%C3%A4nit%C3%A4t
 * Datensouveränität</pre>
 </div>
-<div created="20220701211842311" modified="20221027232119235" tags="[[current projects]] [[PA Amplifier Repairs]]" title="DAP Mission 900 repair">
+<div created="20220701211842311" modified="20221103191533549" tags="[[current projects]] [[PA Amplifier Repairs]]" title="DAP Mission 900 repair">
 <pre>!! Info
 
 * 2x 400W RMS(?)
@@ -16695,7 +16695,7 @@ Pots:
 * test music
 ** sounds fine
 * test idle/bias current
-** pretty much all 0,5mV, one side on channel b was 0,7mV
+** pretty much all 0,5mV, one side on channel b it was 0,7mV but the pots are probably not fine enough that trying to change it would make it much better
 * let it run some time with music at a lower level and meassure temps
 ** both channels pretty spot on 35°C
 
@@ -16718,11 +16718,20 @@ its a nice coincidence that the [[Palladium 1200|DAP Palladium 1200 Vintage repa
 
 Luckily i could get all parts after some time.
 
-i cleaned the heatsink thoroughly. This amp is simpler to assemble again than the Palladium 1200. The PCB fits into a groove on the heatsink. I took each power transistor one by one, applied thermal paste on the back, slit the pins through the pcb to put them in the right place on the heatsink and screwed them down. i also applied solder paste below some diodes and bent them a bit so they touch the heatsink propperly. After everything was in place i checked once again that i didn't mix them up or so. Then I soldered every connection.
+i cleaned the heatsink thoroughly. This amp is simpler to assemble again than the Palladium 1200. The PCB fits into a groove on the heatsink. I took each power transistor one by one, applied thermal paste on the back, slit the pins through the pcb to put them in the right place on the heatsink and screwed them down. i also applied thermal paste behind some diodes and bent them a bit so they touch the heatsink propperly. After everything was in place i checked once again that i didn't mix them up or so. Then I soldered every connection.
 
-Before I replaced the power transistors i pretty randomly checked some of the other semiconductors on both amp boards and found one broken diode on the R/B Channel PCB. The SMD diode &quot;D4&quot; was cracked and open circuit. I got 1N4004 or 1N4007 from a small local shop, but they didn't have smd parts, so i got through-hole ones. To solder them to the PCB i bent the pins so the diode can be flat on the pcb and i removed some solder resist from the trace to have a bit more pad to solder to.
+I pretty randomly checked some of the other semiconductors on both amp boards and found one broken diode on the R/B Channel PCB. The SMD diode &quot;D4&quot; was cracked and open circuit. I got some 1N4007 from a small local shop, but they didn't have smd parts, so i got through-hole ones. To solder them to the PCB i bent the pins so the diode can be flat on the pcb and i removed some solder resist from the trace to have a bit more pad to solder to.
 
-Then I thoroughly tested every semiconductor part on both boards and compared the readings to check if i might have missed other damaged components. The passive components all seem fine too.</pre>
+The damaged diode was just a ordinary low power rectifier diode for the 15V supply for the opamps and other circuitry.
+
+Then I thoroughly tested every semiconductor part on both boards and compared the readings to check if i might have missed other damaged components. The passive components all seem fine too.
+
+After i was pretty sure no other components are damaged i was pretty confident they won't blow up again when testing. The Amp still had the original modules mounted. I tested them again and checked the voltages for the opamps to compare it with the refurbished channels were i replaced a diode. pretty good +-15V.
+
+I then changed the amp modules out to check the repaired ones.
+They worked fine and didn't have any audible difference. They also didn't heat up excessive. The supply voltage for the opamps was also good. So they are successfully repaired.
+
+The owner wanted me to change out the amp modules back to the original ones, so i did that.</pre>
 </div>
 <div created="20220701211656084" modified="20221027230616377" tags="[[current projects]] [[audio amplifiers]] [[PA Amplifier Repairs]] [[audio repairs]]" title="DAP Palladium 1200 Vintage repair">
 <pre>!! DAP Palladium 1200 Vintage
