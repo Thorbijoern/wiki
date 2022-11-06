@@ -1137,8 +1137,6 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of 'the t.racks DSP 4x4 Mini reverse engineering'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -12432,8 +12430,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20220810231345988" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Drafts</pre>
 </div>
-<div created="20200512220838244" modified="20221027225419442" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20200512220838244" modified="20221106001334206" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -12840,7 +12838,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20221027225422278" list="[[the t.racks DSP 206 reverse engineering]] [[thomann the t.racks DSP reverse engineering]] [[Draft of 'the t.racks DSP 4x4 Mini reverse engineering']] [[diy xy animation laser / laser xy-scanner / laser projector]] [[Skoda radio/control panel repair attempt]] [[reloop digital jockey 2 (dj controller) repair]] [[Alto TS315 repair]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20221106000412347" title="$:/StoryList">
+<div created="20221027225422278" list="[[the t.racks DSP 206 reverse engineering]] [[thomann the t.racks DSP reverse engineering]] [[the t.racks DSP 4x4 Mini reverse engineering]] [[diy xy animation laser / laser xy-scanner / laser projector]] [[Skoda radio/control panel repair attempt]] [[DAP Palladium 1200 Vintage repair]] About TableOfContents" modified="20221106000412347" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14323,7 +14321,7 @@ stuff
 * [[EEVblog 1397 - DC Voltage &amp; Current Source Theory|https://www.youtube.com/watch?v=AQK7RyecVW0]]
 * [[EEVblog 1401 - DC Power, Efficiency, &amp; Maximum Power Transfer Theory|https://www.youtube.com/watch?v=fHoHYEZnVIg]]</pre>
 </div>
-<div created="20221020180145802" modified="20221031205841611" tags="[[audio repairs]]" title="Alto TS315 repair">
+<div created="20221020180145802" modified="20221106001348690" tags="[[audio repairs]] [[current projects]]" title="Alto TS315 repair">
 <pre>GTC got some Alto TS315 active PA speakers in for repair which where damaged by a faulty mixing console.
 The customer only stated they plugged them into a mixing console, they tested everything but they didn't work.
 I immediately told them to call the owner and tell them not to use the mixing console anymore, it also has to be looked at.
@@ -17575,95 +17573,6 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
-</div>
-<div created="20220619173916735" draft.of="the t.racks DSP 4x4 Mini reverse engineering" draft.title="the t.racks DSP 4x4 Mini reverse engineering" modified="20221106000953616" tags="[[dsp (digital signal processor) / digital crossover]] [[reverse engineering]] [[current projects]]" title="Draft of 'the t.racks DSP 4x4 Mini reverse engineering'">
-<pre>https://www.thomann.de/de/the_t.racks_dsp_4x4_mini.htm
-
-seems to be made by http://en.musicrown-audio.com/index.html
-
-* reports as &quot;Musicrown Dsp Process&quot; in Linux
-* uses the USB HID class
-* see below for lsusb output
-* https://www.thomann.de/de/the_t.racks_dsp_4x4_mini_reviews.htm reviews give some information on gains and sensitivity
-
-
-!! pc software reverse engineering
-
-i thought i don't need to reverse engineer the software, but i can't make full sense of everything in the file format, so it seems like i need too.
-
-
-lsusb -v output:
-
-```
-Bus 003 Device 002: ID 0168:0821 Musicrown Dsp Process
-Couldn't open device, some information will be missing
-Device Descriptor:
-  bLength                18
-  bDescriptorType         1
-  bcdUSB               1.10
-  bDeviceClass            0 
-  bDeviceSubClass         0 
-  bDeviceProtocol         0 
-  bMaxPacketSize0         8
-  idVendor           0x0168 
-  idProduct          0x0821 
-  bcdDevice            0.00
-  iManufacturer           1 Musicrown
-  iProduct                2 Dsp Process
-  iSerial                 0 
-  bNumConfigurations      1
-  Configuration Descriptor:
-    bLength                 9
-    bDescriptorType         2
-    wTotalLength       0x0029
-    bNumInterfaces          1
-    bConfigurationValue     1
-    iConfiguration          0 
-    bmAttributes         0x80
-      (Bus Powered)
-    MaxPower              100mA
-    Interface Descriptor:
-      bLength                 9
-      bDescriptorType         4
-      bInterfaceNumber        0
-      bAlternateSetting       0
-      bNumEndpoints           2
-      bInterfaceClass         3 Human Interface Device
-      bInterfaceSubClass      0 
-      bInterfaceProtocol      0 
-      iInterface              0 
-        HID Device Descriptor:
-          bLength                 9
-          bDescriptorType        33
-          bcdHID               1.10
-          bCountryCode            0 Not supported
-          bNumDescriptors         1
-          bDescriptorType        34 Report
-          wDescriptorLength      27
-         Report Descriptors: 
-           ** UNAVAILABLE **
-      Endpoint Descriptor:
-        bLength                 7
-        bDescriptorType         5
-        bEndpointAddress     0x81  EP 1 IN
-        bmAttributes            3
-          Transfer Type            Interrupt
-          Synch Type               None
-          Usage Type               Data
-        wMaxPacketSize     0x0040  1x 64 bytes
-        bInterval               1
-      Endpoint Descriptor:
-        bLength                 7
-        bDescriptorType         5
-        bEndpointAddress     0x02  EP 2 OUT
-        bmAttributes            3
-          Transfer Type            Interrupt
-          Synch Type               None
-          Usage Type               Data
-        wMaxPacketSize     0x0040  1x 64 bytes
-        bInterval               1
-```
-</pre>
 </div>
 <div created="20201104201703044" modified="20220808153743275" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -27333,7 +27242,7 @@ Es gibt Anlagen, die das automatisch tun, zum Beispiel von e3/dc. Da wird im Fal
 * [[CRAZY LOUD 3D Printed Tornado Siren - Elegoo Mars|https://www.youtube.com/watch?v=39OmzYyQ_dQ]]
 * https://de.wikipedia.org/wiki/Sirene_(Ger%C3%A4t)</pre>
 </div>
-<div created="20220814190332408" modified="20220924012812777" tags="repairs [[current projects]]" title="Skoda radio/control panel repair attempt">
+<div created="20220814190332408" modified="20221106001656939" tags="repairs [[current projects]]" title="Skoda radio/control panel repair attempt">
 <pre>i've got a stock radio/control panel out of a not that old Skoda car, but the warranty is already over. Its nothing too fancy, e.g. it is a version without navigation system, but replacing it costs around 1k€. The problem is that it started having problems and they got worse over time. sometimes it wouldn't start, sometimes it would randomly crash and just be off and sometimes it would crash in a way that the audio output / built in sound system had just digital garbage noise on it.
 
 I suspect an electrolytic cap is to blame because when they start to go bad the internal resistance start to rise, resulting in the ripple they are meant to smothe heating them up more, which is a vicious cycle. Then the problems that causes start to increase.
@@ -27376,7 +27285,13 @@ I carefully de-soldered the 25V 1000uF i suspected. the small one that was in pa
 
 because i already bought replacements i decided to just swap it out. i soldered the new nichicon one carefully in place. i checked with the ESR70 if it had good connection, because the ESR70 can also be used to measure small resistances, at least that is claimed in the user guide.
 
-i can't test the radio at my place, or at least i don't want to risk anything by just connecting 12V or so to it. So i have to wait until the owner can try it out.</pre>
+i can't test the radio at my place, or at least i don't want to risk anything by just connecting 12V or so to it. So i have to wait until the owner can try it out.
+
+the test was unsuccessful. the device started better at first but quickly had the same problems again. so i took it back to take another look.
+
+the power connections are pretty obvious. i tried powering it just with 12V but it doesn't do anything. there are probably other signals/lines required for the radio to boot.
+
+https://pdf1.alldatasheet.com/datasheet-pdf/view/24648/STMICROELECTRONICS/S5H100.html</pre>
 </div>
 <div created="20210327192759033" modified="20210415114858271" tags="[[sustainability / nachhaltigkeit]] Science nature" title="slime mold / schleimpilz">
 <pre>* can easily provide approximate solutions to the [[Travelling salesman problem]]
@@ -29167,7 +29082,7 @@ links
 
 the pc software has an integrated pdf or so, that shows the RS232 settings and some of the RS232 commands and data for controlling the device.</pre>
 </div>
-<div created="20220619173916735" modified="20220702234042306" tags="[[dsp (digital signal processor) / digital crossover]] [[reverse engineering]] [[current projects]]" title="the t.racks DSP 4x4 Mini reverse engineering">
+<div created="20220619173916735" modified="20221106001122649" tags="[[dsp (digital signal processor) / digital crossover]] [[reverse engineering]] [[current projects]]" title="the t.racks DSP 4x4 Mini reverse engineering">
 <pre>https://www.thomann.de/de/the_t.racks_dsp_4x4_mini.htm
 
 seems to be made by http://en.musicrown-audio.com/index.html
@@ -29176,6 +29091,11 @@ seems to be made by http://en.musicrown-audio.com/index.html
 * uses the USB HID class
 * see below for lsusb output
 * https://www.thomann.de/de/the_t.racks_dsp_4x4_mini_reviews.htm reviews give some information on gains and sensitivity
+
+
+!! pc software reverse engineering
+
+i thought i don't need to reverse engineer the software, but i can't make full sense of everything in the file format, so it seems like i need too.
 
 
 lsusb -v output:
