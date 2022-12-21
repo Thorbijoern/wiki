@@ -1527,6 +1527,8 @@ Error message and password prompt
 
 <li>Map, open street maps</li>
 
+<li>Matrix Einfühung</li>
+
 <li>mcmaster carr alternative for europe</li>
 
 <li>meassuring resistance</li>
@@ -12879,7 +12881,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20221130161759215" list="[[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Sonnensystem Signalweg]] TableOfContents" modified="20221213234513405" title="$:/StoryList">
+<div created="20221130161759215" list="[[Matrix Einfühung]] [[Sonnensystem Signalweg]] TableOfContents" modified="20221213234513405" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -22249,6 +22251,95 @@ cheap rebranded? stuff
 <pre>* https://www.pedelecforum.de/wiki/doku.php?id=sonstige_interessante_links:openandromaps
 * https://umap.openstreetmap.fr/de
 * https://www.pedelecforum.de/wiki/doku.php?id=sonstige_interessante_links:openandromaps</pre>
+</div>
+<div created="20221221003608343" modified="20221221004434878" tags="" title="Matrix Einfühung">
+<pre>Matrix ist dezentraler verschlüsselter Messenger (Chatanwendung).
+Matrix ist vor allem der Name von dem Netzwerkprotokoll.
+
+Oft wird es mit Slack verglichen, weil es etwas an Slack abgelehnt ist.
+
+Matrix ist Ende-zu-Ende verschlüsselt, aber im Gegensatz zu z.B. XMPP hat man im Grunde keine Kontaktpunkte mit den technischen Punkten, was es einfacher für nicht-technische Nutzer:innen machen soll.
+Matrix
+
+Neben Chats gibts aber auch ~VoIP (Sprach- und Videotelefonie) Funktionen, man kann Bots nutzen und es gibt auch Funktionen fürs relativ einfache Bridgen zwischen anderen Messengern wie z.B. zu XMPP oder Telegram.
+
+* [[matrix.org/|https://matrix.org/]]
+* [[joinmatrix.org/|https://joinmatrix.org/]] - einfachere Einführung
+* [[joinmatrix.org/guide/#get-started|https://joinmatrix.org/guide/#get-started]]
+* [[matrix.org/docs/guides/introduction|https://matrix.org/docs/guides/introduction]] - etwas technischere Einführung
+
+
+! Clients
+
+Clients gibt es viele verschiedene.
+
+Am beliebtesten/verbreitetsten bzw. vermutlich auch am aktuellsten was die Funktionen von Matrix angeht ist [[Element|https://element.io/]] (früher Riot genannt).
+Element gibts als Smartphone Apps, Webapp im Browser und Desktop App.
+
+Es gibt aber auch andere Clients die zumindest alle die grundlegenden Chatfunktionen unterstützen (z.b. Clients fürs Linux Terminal)
+
+* [[element.io/|https://element.io/]] - beliebtester Client
+* [[matrix.org/clients/|https://matrix.org/clients/]] - Liste anderer beliebter Clients
+* [[matrix.org/docs/projects/try-matrix-now/|https://matrix.org/docs/projects/try-matrix-now/]] - noch eine Liste
+* [[matrix.org/docs/projects/clients-matrix|https://matrix.org/docs/projects/clients-matrix]] - lange, ausführliche Liste an Clients.
+
+
+! Heimserver/Homeserver
+
+Ihr könnt euch einen Server wählen auf dem ihr euch registrieren möchtet.
+Die Server können alle untereinander Kommunizieren.
+
+Es gibt den [matrix.org-&gt;matrix.org] Server von den Hauptentwicklern. Es ist nicht der Sinn hinter Matrix das alle auf dem selben Server sind, aber viele verwenden den [matrix.org-&gt;matrix.org] Server. Ich rate vom dem Server ab.
+
+Ich selbst bin bei https://tchncs.de/matrix betrieben von einem Nossener.
+
+Neben der Mastodon-Instanz dresden.network gibts auch https://chat.dresden.network/. Der Server bietet sich vlt. an für Dresdener und Dresdener Initiativen.
+
+Mitglieder der TU können auch den Matrix Server der TU nutzen solange Sie studieren oder in der TU arbeiten. Gehostet wird der Server vom ZIH und ist mit dem normalen TU ZIH Login nutzbar. [[matrix.tu-dresden.de/|https://matrix.tu-dresden.de/]]
+
+in einer solidarischen (linken) IT Gruppe in der ich auf Matrix bin sind folgende noch beliebt:
+
+* systemli.org
+* activism.international
+* livingutopia.org
+* systemausfall.org
+* rebellieren.jetzt
+* enteig.net
+
+Aber nicht alle Server bieten eine offene Registrierung.
+
+Weitere Listen:
+
+* [[joinmatrix.org/servers/|https://joinmatrix.org/servers/]] - lange Liste an öffentlichen servern
+* https://tatsumoto-ren.github.io/blog/list-of-matrix-servers.html - andere Liste mit einigen Servern
+
+
+h1. Konto erstellen
+
+Nicht alle Server sind öffentlich für die Registrierung freigeschaltet. Man braucht bei manchen Logins von den Organisationen z.B. wie beim TU Server.
+Aber es gibt auch viele öffentliche mit freier Anmeldung.
+
+Ein Konto erstellen ist vermutlich am einfachsten am PC mit dem Webclient, aber sollte auch in den Apps möglich sein.
+Falls der Server den ihr nutzen wollt selbst keinen Webclient hostet könnt ihr https://app.element.io/ nutzen.
+
+Beim Registrieren solltet ihr sicherstellen das ihr euch wirklich auf dem Server registriert auf dem ihr landen wollt.
+Im Webclient ist da ganz oben im Dialog zum Account erstellen ein Feld wo die Adresse von dem Server sein muss den Ihr nutzen wollt.
+
+Wenn ihr euch registriert gebt ihr einn Benutzernamen an, der ist einzigartig und kann später nicht geändert werden. Der Benutzername dient auch dazu das andere Matrix Nutzern euch zu kontaktieren können.
+Eure komplette ID besteht aus eurem persönlichen Benutzernamen und der Server Adresse, z.B. @mustermann:tchncs.de.
+
+Es gibt aber noch einen Anzeigenamen den ihr nach dem Anmelden frei wählen und Ändern könnt.
+Wenn Ihr bei der Registrierung eine Mail angebt dann müsst ihr zum Abschluss noch die Mail Adresse bestätigen.
+
+Beim Erstellen vom Konto müssen natürlich auch Passwörter erstellt werden. Zudem kommt dazu, dass man sich die Verschlüsselungskeys sichern sollte (Anleitungen siehe unter dem Absatz).
+Am besten nutzt ihr einen Passwortmanager dafür.
+
+* [[joinmatrix.org/guide/#set-up-key-backup|https://joinmatrix.org/guide/#set-up-key-backup]] - Text Anleitung (englisch)
+* https://www.ubuntubuzz.com/2021/01/element-made-easy-setup-security-phrase-and-key.html - grafische Anleitung (englisch)
+
+! Gruppen
+
+Wenn man mehrere Gruppen für z.B. einen Verein oder eine Initiative nutzt können die in Spaces organisiert sein. Dann sind die Gruppen und die Mitglieder des Space übersichtlicher aufrufbar.</pre>
 </div>
 <div created="20220808225415141" modified="20221002000716981" tags="[[parts and components]]" title="mcmaster carr alternative for europe">
 <pre>see [[Eisenwaren]]
