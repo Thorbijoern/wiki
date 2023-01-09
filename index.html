@@ -1163,8 +1163,6 @@ Error message and password prompt
 
 <li>Draft of 'modular, (open source) bike trailers'</li>
 
-<li>Draft of 'Open Sound Control (OSC) (protocol)'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -12932,7 +12930,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230103205111556" list="[[open VJ, projection/Video Mapping]] [[show control]] [[controlling lights, light hardware]] [[Draft of 'Open Sound Control (OSC) (protocol)']] [[cargo bike, bike trailers]] [[Draft of 'modular, (open source) bike trailers']] [[Draft 2 of ' 1']] [[PA Amplifier Repairs]] [[fahrrad reperatur / bike repair]] About TableOfContents" modified="20230109005745982" title="$:/StoryList">
+<div created="20230103205111556" list="[[Open Sound Control (OSC) (protocol)]] [[cargo bike, bike trailers]] [[Draft of 'modular, (open source) bike trailers']] [[Draft 2 of ' 1']] [[PA Amplifier Repairs]] [[fahrrad reperatur / bike repair]] About TableOfContents" modified="20230109005745982" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -16731,7 +16729,7 @@ high switching noise, probably dead electrolytic caps
 <div created="20220920180145278" modified="20220920180338665" tags="[[electronics parts/components]]" title="connectors">
 <pre>* https://www.plugsocketmuseum.nl/index.html - Digital Museum of Plugs and Sockets</pre>
 </div>
-<div created="20200802175507551" modified="20230109004652355" tags="[[power electronics (Leistungselektronik)]] [[light / projection / visuals]]" title="controlling lights, light hardware">
+<div created="20200802175507551" modified="20230109005823061" tags="[[power electronics (Leistungselektronik)]] [[light / projection / visuals]]" title="controlling lights, light hardware">
 <pre>* Q Light Controller+ - https://qlcplus.org/features.html
 * Art-Net DMX - https://art-net.org.uk/ / ARTNet
 * https://github.com/twischer/WLAN-IO
@@ -16739,6 +16737,7 @@ high switching noise, probably dead electrolytic caps
 * https://openthread.io/ - some IoT stuff
 * https://benjamin.kuperberg.fr/chataigne/en
 ** https://hackaday.com/2023/01/06/chataigne-an-open-source-swiss-army-knife/
+* https://ossia.io/
 
 hardware
 
@@ -17894,39 +17893,6 @@ components that are harder to design:
 * trailer hitch/coupling
 ** has to move/rotate pretty freely horizontally (around the Z axis)
 ** but also needs to allow for some movement in the other axis and some rotation around the other axis</pre>
-</div>
-<div created="20210425212454370" draft.of="Open Sound Control (OSC) (protocol)" draft.title="Open Sound Control (OSC) (protocol)" modified="20230109005738235" tags="[[digital audio]] [[music creation]] [[Recording Audio]]" title="Draft of 'Open Sound Control (OSC) (protocol)'">
-<pre>* https://en.wikipedia.org/wiki/Open_Sound_Control
-** https://de.wikipedia.org/wiki/Open_Sound_Control
-* see also [[Midi]]
-* https://github.com/fabb/SynOSCopy/wiki
-* http://opensoundcontrol.org/
-** https://www.cnmat.berkeley.edu/OpenSoundControl
-* https://www.linuxjournal.com/content/introduction-osc
-* https://behringerwiki.musictribe.com/index.php?title=OSC_Remote_Protocol
-* ''https://github.com/amir-arad/awesome-osc''
-* https://opensoundcontrol.stanford.edu/index.html
-
-devices i use which support it: [[Behringer XAir (XR12/XR18)]]
-
-python:
-
-* https://python-osc.readthedocs.io/en/latest/
-** https://github.com/attwad/python-osc
-** https://pypi.org/project/python-osc/
-* https://github.com/peterdikant/xair-remote
-
-other
-
-* https://github.com/automata/osc-web
-* https://github.com/colinbdclark/osc.js/
-
-extension: OSCQuery
-
-* https://github.com/Vidvox/OSCQueryProposal
-* https://vdmx.vidvox.net/blog/oscquery
-** https://docs.vidvox.net/vdmx_oscquery.html ?
-* https://github.com/benkuper/Unity-OSCQuery</pre>
 </div>
 <div created="20201104201703044" modified="20230108225316331" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -24709,7 +24675,7 @@ stuff
 * https://hackaday.com/tag/lab/
 * https://hackaday.com/tag/laboratory-equipment/</pre>
 </div>
-<div created="20210425212454370" modified="20221019003412635" tags="[[digital audio]] [[music creation]] [[Recording Audio]]" title="Open Sound Control (OSC) (protocol)">
+<div created="20210425212454370" modified="20230109005949353" tags="[[digital audio]] [[music creation]] [[Recording Audio]]" title="Open Sound Control (OSC) (protocol)">
 <pre>* https://en.wikipedia.org/wiki/Open_Sound_Control
 ** https://de.wikipedia.org/wiki/Open_Sound_Control
 * see also [[Midi]]
@@ -24733,7 +24699,15 @@ python:
 other
 
 * https://github.com/automata/osc-web
-* https://github.com/colinbdclark/osc.js/</pre>
+* https://github.com/colinbdclark/osc.js/
+
+extension: OSCQuery
+
+* https://github.com/Vidvox/OSCQueryProposal
+* https://vdmx.vidvox.net/blog/oscquery
+** https://docs.vidvox.net/vdmx_oscquery.html ?
+* https://github.com/benkuper/Unity-OSCQuery
+* https://forum.openframeworks.cc/t/ofxoscquery-addon/30341</pre>
 </div>
 <div created="20200616103919804" modified="20220706233142164" tags="[[Open Audio Hardware]] [[audio testing and measurement]]" title="Open Sound Lab">
 <pre>https://github.com/Thorbijoern/OpenSoundLab
@@ -27932,14 +27906,15 @@ tools
 
 * https://www.tunemymusic.com/ - convert playlists between platforms</pre>
 </div>
-<div created="20210425212620442" modified="20230109004531769" tags="[[digital audio]] Art [[Audio Reproduction and amplification]]" title="show control">
+<div created="20210425212620442" modified="20230109005812175" tags="[[digital audio]] Art [[Audio Reproduction and amplification]]" title="show control">
 <pre>* [[Open Sound Control (OSC) (protocol)]]
 * https://en.wikipedia.org/wiki/Show_control
 * [[Audio streaming]]
 * [[open VJ, projection/Video Mapping]]
 * https://en.wikipedia.org/wiki/Open_Control_Architecture
 * https://benjamin.kuperberg.fr/chataigne/en
-** https://hackaday.com/2023/01/06/chataigne-an-open-source-swiss-army-knife/</pre>
+** https://hackaday.com/2023/01/06/chataigne-an-open-source-swiss-army-knife/
+* https://ossia.io/</pre>
 </div>
 <div created="20210805131334722" modified="20220812202727959" tags="[[Solar / renewable energy]] [[electronics safety]] [[accumulator - battery - rechargeable energy storage]]" title="sicherheit/absicherung von mobilen stromerzeugern, invertern/wechselrichtern">
 <pre>* see [[generator]]
