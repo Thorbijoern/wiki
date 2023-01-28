@@ -12948,7 +12948,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230103205111556" list="[[Draft of 'esp32 audio projects']] [[ESP32 high-quality audio transmitter]] [[Draft of 'stm32 DSP']] [[dap palladium 1200 lass ab lern stuff]] [[Pioneer CX-J510 and M-J510 repair]] [[PA Amplifier Repairs]] [[DAP Palladium 1200 Vintage repair]] [[fahrrad reparatur / bike repair]] About TableOfContents" modified="20230128020621448" title="$:/StoryList">
+<div created="20230103205111556" list="[[ADCs / DACs]] [[Draft of 'esp32 audio projects']] [[Draft of 'stm32 DSP']] [[dap palladium 1200 lass ab lern stuff]] [[Pioneer CX-J510 and M-J510 repair]] [[PA Amplifier Repairs]] [[DAP Palladium 1200 Vintage repair]] [[fahrrad reparatur / bike repair]] About TableOfContents" modified="20230128020913964" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13968,8 +13968,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230128020446396" modifier="Thorbijoern" title="$:/temp/search">
-<pre>esp32</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230128020912114" modifier="Thorbijoern" title="$:/temp/search">
+<pre>adc</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -14291,7 +14291,7 @@ subarticles:
 <div created="20211104131946213" modified="20220404145508522" tags="[[Politics (Politik)]]" title="adbusting">
 <pre>* https://twitter.com/nervtjeden</pre>
 </div>
-<div created="20211030101007917" modified="20230108201531244" tags="[[electronics parts/components]] [[mixing / signal processing]]" title="ADCs / DACs">
+<div created="20211030101007917" modified="20230128022018507" tags="[[electronics parts/components]] [[mixing / signal processing]]" title="ADCs / DACs">
 <pre>informations and common adc and dac chips
 
 ADCs - analog (to) digital converters
@@ -14302,6 +14302,11 @@ ADCs - analog (to) digital converters
 * PCM1808
 ** [[Altec Lansing Speaker will only play loud Static noise - Motherboard repair &amp; BIG BOSS DANCING|https://www.youtube.com/watch?v=m7QjPZ4nzAc]]
 ** https://www.ti.com/lit/ds/symlink/pcm1808.pdf
+* info
+** [[ Understanding Analog to Digital Conversion |https://www.youtube.com/watch?v=_gZjBx9cdro]]
+** [[ Delta-Sigma Analog to Digital Converters |https://www.youtube.com/watch?v=SFAS8nE4_ZM]]
+*** [[ Delta Sigma ADCs, Part 2 |https://www.youtube.com/watch?v=mCWC0X2naY0]]
+* [[ TSP #32 - Tutorial on the Theory, Design and Measurement of Delta-Sigma Analog to Digital Converters |https://www.youtube.com/watch?v=z9u-QTDAeaM]]
 
 DACs - digital (to) analog converters
 
@@ -17985,15 +17990,25 @@ some android stuff for Fairphone 3:
 * https://www.hackster.io/janost/audio-hacking-on-the-esp8266-fa9464
 * ''[[ #419 ESP32 Audio Tutorial with lots of examples |https://www.youtube.com/watch?v=a936wNgtcRA]]''</pre>
 </div>
-<div created="20230128015107984" draft.of="stm32 DSP" draft.title="stm32 DSP" modified="20230128020356784" tags="[[dsp (digital signal processor) / digital crossover]] microcontroller" title="Draft of 'stm32 DSP'">
-<pre>* [[YetAnotherElectronicsChannel: STM32 Audio DSP|https://www.youtube.com/playlist?list=PLTNEB0-EzPluXh0d_5zRprbgRfgkrYxfO]]
+<div created="20230128015107984" draft.of="stm32 DSP" draft.title="microcontroller (stm32, esp32) DSP" modified="20230128020838880" tags="[[dsp (digital signal processor) / digital crossover]] microcontroller" title="Draft of 'stm32 DSP'">
+<pre>stm32
+
+* [[YetAnotherElectronicsChannel: STM32 Audio DSP|https://www.youtube.com/playlist?list=PLTNEB0-EzPluXh0d_5zRprbgRfgkrYxfO]]
 * [[ [#23] FFT Spectrum Analysis - Audio DSP On STM32 (24 Bit / 48 kHz) |https://www.youtube.com/watch?v=3WF4CGKoMas]]
 * [[ [#13] FIR Filters - Audio DSP On STM32 (24 Bit / 48 kHz) |https://www.youtube.com/watch?v=n9Cy1xkEf1E]]
 * [[easier in practice: Digital Signal Processing on the STM32G4|https://www.youtube.com/playlist?list=PLwa4R2HaZEqihzreDJynbcYGlc-mXn7F2]]
 ** [[ STM32G4 &amp; Real Time DSP: Part 1 Introduction to the STM32 Family and STM32G4 |https://www.youtube.com/watch?v=SVT7n7hSzJU]]
 ** [[ STM32G4 &amp; Real Time DSP: Part 2 Blinky Tutorial, Digital Functions, and Debugging. |https://www.youtube.com/watch?v=SVT7n7hSzJU]]
 * [[ STM32 DSP CMSIS library: FIR filter in one line (2022 new method) |https://www.youtube.com/watch?v=jqCpaleqfls]]
-* [[Phil’s Lab: DSP|https://www.youtube.com/playlist?list=PLXSyc11qLa1ZCn0JCnaaXOWN6Z46rK9jd]]</pre>
+* [[Phil’s Lab: DSP|https://www.youtube.com/playlist?list=PLXSyc11qLa1ZCn0JCnaaXOWN6Z46rK9jd]]
+
+esp32
+
+* [[ [#10] DIY DSP Bluetooth Speaker with ESP32 |https://www.youtube.com/watch?v=_nCOluMHfGI]]
+
+general
+
+* [[ Running DSP Algorithms on Arm Cortex M Processors |https://www.youtube.com/watch?v=PKdwQwBIv48]]</pre>
 </div>
 <div created="20201104201703044" modified="20230108225316331" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
