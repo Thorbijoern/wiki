@@ -1161,6 +1161,8 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
+<li>Draft of 'bldc motor (as) encoder'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -12940,7 +12942,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230103205111556" list="[[wled / fastled stuff]] [[DIY LED Par]] [[Pioneer CX-J510 and M-J510 repair]] [[funding (förderung)]] [[PA Amplifier Repairs]] [[fahrrad reparatur / bike repair]] About TableOfContents" modified="20230128002248749" title="$:/StoryList">
+<div created="20230103205111556" list="[[ESC / BLDC motor driver / controller]] [[Draft of 'bldc motor (as) encoder']] [[DIY LED Par]] [[Pioneer CX-J510 and M-J510 repair]] [[funding (förderung)]] [[PA Amplifier Repairs]] [[fahrrad reparatur / bike repair]] About TableOfContents" modified="20230128004116690" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13960,8 +13962,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230128002245659" modifier="Thorbijoern" title="$:/temp/search">
-<pre>dmx</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230128004114398" modifier="Thorbijoern" title="$:/temp/search">
+<pre>https://www.youtube.com/watch?v=zSdetJsSeNw</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -17886,6 +17888,22 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
+<div created="20220713230925462" draft.of="bldc motor (as) encoder" draft.title="bldc motor (as) encoder" modified="20230128004041030" tags="[[input / control devices]] [[power electronics (Leistungselektronik)]]" title="Draft of 'bldc motor (as) encoder'">
+<pre>bldc motors can function as encoders and offer custom haptic feedback.
+
+* https://www.youtube.com/results?search_query=bldc+encoder
+*[[DIY haptic input knob: BLDC motor + round LCD|https://www.youtube.com/watch?v=ip641WmY4pA]]
+** [[Building a haptic input knob from scratch!|https://www.youtube.com/watch?v=Q76dMggUH1M]]
+* see [[ESC / BLDC motor driver / controller]]
+* [[Festplattenmotor (BLDC) als Drehimpulsgeber / Encoder mit Atmega8 und DLG7137|https://www.youtube.com/watch?v=37tUzxodYGE]]
+* [[HACKED!: Using an HDD Motor as a Rotary Encoder?!|https://www.youtube.com/watch?v=tjCJ3MlFt7g]]
+* [[Magnetic Angle Sensor for BLDC Brushless DC Motor Replaces Optical Encoders with a Magnetic Encoder|https://www.youtube.com/watch?v=vuG8D7yX4m4]]
+* [[SmartKnob on STM32 - Update|https://www.youtube.com/watch?v=MPMm7QWxUBM]] - channel has several videos on their own version of the haptic input knob
+* gimbal BLDC motors with hollow axles allow for wires to be fed trough
+* mini bldc motors could make for useful small encoders
+** https://de.aliexpress.com/wholesale?catId=0&amp;SearchText=mini+bldc
+* [[ SmartKnob - BLDC + GC9a01 + ESP32 |https://www.youtube.com/watch?v=IfK-p96Ccdc]]</pre>
+</div>
 <div created="20201104201703044" modified="20230108225316331" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -18642,7 +18660,7 @@ ebay / ebay-kleinanzeigen CRM/ERP? bzw. softmware mit ebay integration?
 * kleiner sicherungskasten
 * 2x Klippel Production Analyzer - allerdings ohne Software und co, müsste reverse engineered werden</pre>
 </div>
-<div created="20210424233816923" modified="20220920222441632" tags="[[motor controller / driver]]" title="ESC / BLDC motor driver / controller">
+<div created="20210424233816923" modified="20230128004249162" tags="[[motor controller / driver]]" title="ESC / BLDC motor driver / controller">
 <pre>* often made for RC Vehicles, but also used in other vehicles like Scooters and E-Bikes
 * for bigger stuff see [[
 * [[LearnMore#3 - The ESCs - Brushless Motors - All Theory You Need To Know About ESCs|https://www.youtube.com/watch?v=erppWLMzw8I]]
@@ -18735,7 +18753,11 @@ stuff
 * [[My open source Arduino ESC - BEMF zero-cross|https://www.youtube.com/watch?v=VdkloigaxZo]]
 * [[How to control a BLDC with an Arduino|https://www.youtube.com/watch?v=qOzE5F5vFGs]]
 * [[Arduino DC Motor mit MOSFET H-Brücke steuern - Einstellbare Drehrichtung &amp; Geschwindigkeit|https://www.youtube.com/watch?v=13bCzydTz8I]]
-* https://forum.esk8.news/t/escs-based-on-the-vesc/60389</pre>
+* https://forum.esk8.news/t/escs-based-on-the-vesc/60389
+* https://community.simplefoc.com/t/linear-bldc-using-simplefoc/139
+** https://github.com/Juanduino/THE-DIMMER_M4SDRV_V1
+* https://github.com/Juanduino/Beefy-BLDC-3phase-Powerstage-T4
+* [[Field Oriented Control of Permanent Magnet Motors|https://www.youtube.com/watch?v=cdiZUszYLiA]]</pre>
 </div>
 <div created="20200522115726570" modified="20201111141730562" tags="[[digital audio]]" title="esp32 audio projects">
 <pre>* https://hackaday.io/project/164477-esp32-guitar-shield
