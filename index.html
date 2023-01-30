@@ -1163,8 +1163,6 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of 'Peavey PV8 USB 8-Channel Mixing Console repair'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -12954,7 +12952,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230130002154297" list="diodes [[Draft of 'Peavey PV8 USB 8-Channel Mixing Console repair']] About TableOfContents" modified="20230130020539864" title="$:/StoryList">
+<div created="20230130002154297" list="[[Peavey PV8 USB 8-Channel Mixing Console repair]] About TableOfContents" modified="20230130020539864" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -17984,88 +17982,6 @@ some android stuff for Fairphone 3:
 * if you want to use TWRP: fairphone/fairphone3.html
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
-** </pre>
-</div>
-<div created="20220406230035998" draft.of="Peavey PV8 USB 8-Channel Mixing Console repair" draft.title="Peavey PV8 USB 8-Channel Mixing Console repair" modified="20230130020518653" tags="[[audio repairs]] [[current projects]]" title="Draft of 'Peavey PV8 USB 8-Channel Mixing Console repair'">
-<pre>* https://elektrotanya.com/peavey_pv8_mixer_sch.pdf/download.html
-** older or newer version
-
-Problem:
-
-* doesn't work anymore after wire broke at the power supply and wire got repaired
-* small transistor seems to be burnt
-** Marking &quot;B1241&quot;, seems to be 2SB1241
-** has 3 different current gain options, seems to be Option R with hfe 180-390
-** https://pdf1.alldatasheet.com/datasheet-pdf/view/173350/ROHM/2SB1241.html
-** https://pdf1.alldatasheet.com/datasheet-pdf/view/335980/ROHM/2SB1241.html
-** original transistor is discontinued, have to reverse the circuitry and find a fitting alternative
-** weird &quot;3-SIP&quot; package but there is no real space problem, so any other similar transistor (like TO-92 package) is fine
-* NCP3063B voltage inverter shorted
-
-Info
-
-* uses an external 15V DC SMPS
-** can supply 1A, but it seems only 500mA are needed
-* uses an NCP3063B as voltage inverting switching regulator to supply -15V DC
-** https://www.onsemi.com/pdf/datasheet/ncp3063-d.pdf
-* https://electronics.stackexchange.com/questions/623186/2sb1241-transistor-replacement
-* https://electronics.stackexchange.com/questions/518706/finding-replacement-pnp-transistors
-* see also [[transistors]]
-* 1N5251B zener diode
-** https://www.onsemi.com/pdf/datasheet/1n5221b-d.pdf
-** https://www.vishay.com/docs/85588/1n5221.pdf
-
-Repair:
-
-I had already desoldered the 2SB1241 to have a better look at it and i then decided to test the mixing console a bit, but i couldn't figure out more about the problem.
-
-I hat the console lying around a bit because i had other projects. I was able to think about it and i finally got a dual lab bench power supply. now i could test the PV8 much better.
-
-I started by soldering leads to the 2 main caps for +15V, -15V and GND rails, so i could directly inject the voltage without using the original power supply and the integrated voltage inverter. I was careful and used the current limiting feature of my lab power supply. I didn't test everything but it seemed to work fine and drew less than 0.2A per voltage rail. So I don't suspect anything here.
-
-But after the successful test i noticed that an electrolytic cap next to the NCP3063B was bulged. Its a 25V 100uF low impedance ([[107KXM025M from Cornell Dubilier / Illinois Capacitor|https://www.cde.com/resources/catalogs/KXM.pdf]]). I had some used KY-Series caps from nippon chemicon in my spare parts boxes and replaced the bulged one.
-After that i moved the leads over to the 15V dc barrel jack connector to test the voltage inverting supply.
-It does not draw much power but the NCP3063B quickly heats up and it does not output the voltage it's supposed to.
-So the NCP3063B is probably dead.
-
-Finding a replacement NCP3063B is not easy because it's also discontinued
-
-* on aliexpress are some listings, but probably not originals from onsemi
-* [[there is one listing on ebay which might be legit|https://www.ebay.de/itm/123866036269]]
-* [[RS Components has some|https://de.rs-online.com/web/p/dc-dc-regulator-ics/7737844p]]
-* i finally got 3 from digikey when i ordered some other parts
-
-the 2SB1241 is discontinued and there are no new ones available.
-
-important data:
-
-* BJT PNP
-* pinout: ECB or BCE
-* hfe: 180-390
-** &quot;good hfe linearity&quot;
-* max Collector Current: 1A continuous
-* max collector power dissipation: 1W
-
-maybe important?
-
-* E-B breakdown Voltage: -5V
-* low V,,CE(sat),,
-** C-E saturation voltage: -0.4V (I,,C,,/I,,B,,= −500mA/ −50mA)
-* collector 
-* emitter cutoff current: 1uA (V,,EB,,=-4V)
-* 
-
-not as important i think:
-
-* C-B / C-E breakdown Voltage: -80V - can be lower/higher were only working with +-15V
-* transition frequency: 100MHz - we're not switching really fast, we only switch on once after some time
-* output capacitance: 25pF - also not important because we're not switching fast i think
-
-I bought some [[ST Micro BD140-16|https://www.mouser.com/datasheet/2/389/bd135-1848980.pdf]] as replacement for the burned 2SB1241 as a test. The hfe range is slightly lower but maybe i get a batch thats cood for me. when i got them and tested them they were'nt high enough though. But it's not a big loss, they are jelly bean parts and might be useful for something different, also they were'nt expensive.
-
-i have some transistors lying around  that i scavenged from old or broken electronics. i tested them with a simple [[transistor tester|&quot;transistor tester&quot; (avr) component tester]] to find out if they are truly BJT PNPs and find out their hfe values.
-
-* 3x B772 (TO-126)
 ** </pre>
 </div>
 <div created="20201104201703044" modified="20230108225316331" tags="TableOfContents" title="Dresden">
@@ -26097,7 +26013,7 @@ stuff
 * [[EEVblog #682 - Ness D16X Alarm Panel Repair|https://www.youtube.com/watch?v=h6D4MMWjrmM|]]
 * https://www.youtube.com/c/NorthridgeFix</pre>
 </div>
-<div created="20220406230035998" modified="20220824010243673" tags="[[audio repairs]] [[current projects]]" title="Peavey PV8 USB 8-Channel Mixing Console repair">
+<div created="20220406230035998" modified="20230130023804919" tags="[[audio repairs]] [[current projects]]" title="Peavey PV8 USB 8-Channel Mixing Console repair">
 <pre>* https://elektrotanya.com/peavey_pv8_mixer_sch.pdf/download.html
 ** older or newer version
 
@@ -26111,6 +26027,7 @@ Problem:
 ** https://pdf1.alldatasheet.com/datasheet-pdf/view/335980/ROHM/2SB1241.html
 ** original transistor is discontinued, have to reverse the circuitry and find a fitting alternative
 ** weird &quot;3-SIP&quot; package but there is no real space problem, so any other similar transistor (like TO-92 package) is fine
+* NCP3063B voltage inverter shorted
 
 Info
 
@@ -26121,10 +26038,13 @@ Info
 * https://electronics.stackexchange.com/questions/623186/2sb1241-transistor-replacement
 * https://electronics.stackexchange.com/questions/518706/finding-replacement-pnp-transistors
 * see also [[transistors]]
+* 1N5251B zener diode
+** https://www.onsemi.com/pdf/datasheet/1n5221b-d.pdf
+** https://www.vishay.com/docs/85588/1n5221.pdf
 
 Repair:
 
-I bought some [[ST Micro BD140-16|https://www.mouser.com/datasheet/2/389/bd135-1848980.pdf]] as replacement for the burned 2SB1241. I had already desoldered the 2SB1241 to have a better look at it and i then decided to test the mixing console a bit, but i couldn't figure out more about the problem.
+I had already desoldered the 2SB1241 to have a better look at it and i then decided to test the mixing console a bit, but i couldn't figure out more about the problem.
 
 I hat the console lying around a bit because i had other projects. I was able to think about it and i finally got a dual lab bench power supply. now i could test the PV8 much better.
 
@@ -26139,7 +26059,65 @@ Finding a replacement NCP3063B is not easy because it's also discontinued
 
 * on aliexpress are some listings, but probably not originals from onsemi
 * [[there is one listing on ebay which might be legit|https://www.ebay.de/itm/123866036269]]
-* [[RS Components has some|https://de.rs-online.com/web/p/dc-dc-regulator-ics/7737844p]]</pre>
+* [[RS Components has some|https://de.rs-online.com/web/p/dc-dc-regulator-ics/7737844p]]
+* i finally got 3 from digikey when i ordered some other parts
+
+the 2SB1241 is discontinued and there are no new ones available.
+
+important data:
+
+* BJT PNP
+* pinout: ECB or BCE
+* hfe: 180-390
+** &quot;good hfe linearity&quot;
+* max Collector Current: -1A continuous
+* max collector power dissipation: 1W
+
+maybe important?
+
+* E-B breakdown Voltage: -5V
+* low V,,CE(sat),,
+** C-E saturation voltage: -0.4V (I,,C,,/I,,B,,= −500mA/ −50mA)
+* collector cutoff current: 1uA (V,,CB,,=-60)
+* emitter cutoff current: 1uA (V,,EB,,=-4V)
+* 
+
+not as important i think:
+
+* C-B / C-E breakdown Voltage: -80V - can be lower/higher were only working with +-15V
+* transition frequency: 100MHz - we're not switching really fast, we only switch on once after some time
+* output capacitance: 25pF - also not important because we're not switching fast i think
+
+I bought some [[ST Micro BD140-16|https://www.mouser.com/datasheet/2/389/bd135-1848980.pdf]] as replacement for the burned 2SB1241 as a test. The hfe range is slightly lower but maybe i get a batch thats cood for me. when i got them and tested them they were'nt high enough though. But it's not a big loss, they are jelly bean parts and might be useful for something different, also they were'nt expensive.
+
+i have some transistors lying around  that i scavenged from old or broken electronics. i tested them with a simple [[transistor tester|&quot;transistor tester&quot; (avr) component tester]] to find out if they are truly BJT PNPs and find out their hfe values.
+
+* 3x B772 (TO-126)
+** https://www.alldatasheet.com/datasheet-pdf/pdf/112939/NEC/B772.html
+** https://pdf1.alldatasheet.com/datasheet-pdf/view/82698/ETC/B772.html
+** https://www.alldatasheet.com/datasheet-pdf/pdf/53331/FAIRCHILD/B772.html
+** good datapoints:
+*** low V,,CE(sat),,
+*** &quot;good hfe linearity&quot;
+*** NEC hfe Rating &quot;P&quot; and no-name hfe rating &quot;Y&quot;: 160-320, transistors measure 255, 266 and 305
+*** E-B breakdown Voltage: -5V
+*** max Collector Current: -3A continuous
+*** max total power dissipation: 1W
+*** cutoff currents and collector saturation voltage
+** higher output capacitance and lower transition frequency
+* 4x 2sa1020(long TO-92)
+** https://pdf1.alldatasheet.com/datasheet-pdf/view/29938/TOSHIBA/2SA1020.html
+** datapoints:
+*** hfe: 120-240; measured: 173, 190, 203, 243 (&quot;Y&quot; rating) - lower range
+*** pretty linear hfe
+*** 900mW collector power dissipation - a little less
+*** max 2A collector current
+*** breakdown voltages are fine
+*** cutoff currents are fine
+*** low V,,CE(sat),,
+*** higher output capacitance, same transition frequency
+* SS8550 / 8550SS / C8550
+** https://www.onsemi.com/pdf/datasheet/ss8550-d.pdf</pre>
 </div>
 <div created="20220713151015598" modified="20220808225637178" tags="[[My Setup]] [[Software stuff]] [[current projects]]" title="Pelican static site">
 <pre>see [[static site generator]]
