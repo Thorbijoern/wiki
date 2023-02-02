@@ -12952,7 +12952,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230130002154297" list="[[Peavey PV8 USB 8-Channel Mixing Console repair]] About TableOfContents" modified="20230130020539864" title="$:/StoryList">
+<div created="20230130002154297" list="[[Web Security]] About TableOfContents" modified="20230202224753264" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13972,8 +13972,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230130020537851" modifier="Thorbijoern" title="$:/temp/search">
-<pre>zener</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230202224746560" modifier="Thorbijoern" title="$:/temp/search">
+<pre>security</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -26013,13 +26013,13 @@ stuff
 * [[EEVblog #682 - Ness D16X Alarm Panel Repair|https://www.youtube.com/watch?v=h6D4MMWjrmM|]]
 * https://www.youtube.com/c/NorthridgeFix</pre>
 </div>
-<div created="20220406230035998" modified="20230130023804919" tags="[[audio repairs]] [[current projects]]" title="Peavey PV8 USB 8-Channel Mixing Console repair">
+<div created="20220406230035998" modified="20230131224916671" tags="[[audio repairs]] [[current projects]]" title="Peavey PV8 USB 8-Channel Mixing Console repair">
 <pre>* https://elektrotanya.com/peavey_pv8_mixer_sch.pdf/download.html
 ** older or newer version
 
 Problem:
 
-* doesn't work anymore after wire broke at the power supply and wire got repaired
+* doesn't work anymore after wire broke at the power supply and wire got bodge-repaired
 * small transistor seems to be burnt
 ** Marking &quot;B1241&quot;, seems to be 2SB1241
 ** has 3 different current gain options, seems to be Option R with hfe 180-390
@@ -26028,6 +26028,7 @@ Problem:
 ** original transistor is discontinued, have to reverse the circuitry and find a fitting alternative
 ** weird &quot;3-SIP&quot; package but there is no real space problem, so any other similar transistor (like TO-92 package) is fine
 * NCP3063B voltage inverter shorted
+* the power wire from the power supply has to be repaired propperly.
 
 Info
 
@@ -26060,7 +26061,8 @@ Finding a replacement NCP3063B is not easy because it's also discontinued
 * on aliexpress are some listings, but probably not originals from onsemi
 * [[there is one listing on ebay which might be legit|https://www.ebay.de/itm/123866036269]]
 * [[RS Components has some|https://de.rs-online.com/web/p/dc-dc-regulator-ics/7737844p]]
-* i finally got 3 from digikey when i ordered some other parts
+
+I finally got 3 NCP3063 from digikey when i ordered some other parts. Iirc the temp rating is a bit different but i don't think that really matters, i think both versions should work fine.
 
 the 2SB1241 is discontinued and there are no new ones available.
 
@@ -26117,7 +26119,30 @@ i have some transistors lying around  that i scavenged from old or broken electr
 *** low V,,CE(sat),,
 *** higher output capacitance, same transition frequency
 * SS8550 / 8550SS / C8550
-** https://www.onsemi.com/pdf/datasheet/ss8550-d.pdf</pre>
+** https://www.onsemi.com/pdf/datasheet/ss8550-d.pdf
+
+
+I compared the transistors a bit. In the end i just decided to try the B772.
+
+I removed the 100uF cap again so it's not blasted with the heat of the rework station. I shielded other parts in the vicinity of the NCP3063B with aluminium foil.
+
+I carefully heated the NCP3063B and the area around it with the rework station and carefully removed the shorted chip. Then I carefully put the replacement NCP3063 in its place. To make sure that every pin is soldered i used the soldering iron and applied a bit more solder to each pin. I removed exess solder and tested the connections.
+
+Then i went on to solder the B772. I bent the pins a little, so the TO-126 package can rest on a nearby inductor. I soldered the B772 with the soldering iron.
+
+After i was satisfied with the soldering and testing the connections i wanted to try if it powers on without problems.
+
+I first tested with my lab power supply with current limiting. Everything seemed fine. Then i checked the voltage of the original power supply and tested with it and it also works.
+
+I cleaned the board with rubbing alcohol and q-tips to get rid of the flux.
+
+To finish off i used some slightly elastic glue to glue down the bigger capacitors. They were glued from the factory, but it was just hotmelt glue which was a bit old and the caps didn't stick anymore. The new glue should last long. I also glued the B772 to the Inductor. I didn't use a lot of glue, but it should help dampen vibrations and shocks so the pins of the TO-126 don't break. The original, smaller transistor wasn't glued down, but the TO-126 is a bit bigger.
+
+I let the glue dry over night and tested the mixing console fully. Everything works again.
+
+I think the NCP3063B and 2SB1241 got damaged due to the owner trying to bodge the broken power wire and maybe reversing the polarity. The mixing console doesn't have a diode on the input, which is a oversight by the designers i think.
+
+Now i only have to repair the bodged power supply wire and get the remaining parts of the power supply case from the owner.</pre>
 </div>
 <div created="20220713151015598" modified="20220808225637178" tags="[[My Setup]] [[Software stuff]] [[current projects]]" title="Pelican static site">
 <pre>see [[static site generator]]
@@ -31358,12 +31383,13 @@ ressources:
 <pre>* https://scrapy.org/
 * Beautifulsoup</pre>
 </div>
-<div created="20201111085346602" modified="20221018232821952" tags="[[IT / Computer security and digital / internet privacy]]" title="Web Security">
+<div created="20201111085346602" modified="20230202224803437" tags="[[IT / Computer security and digital / internet privacy]]" title="Web Security">
 <pre>* https://owasp.org/www-project-web-security-testing-guide/
 * https://www.zaproxy.org/getting-started/
 * https://www.zaproxy.org/
 * https://openvas.org/
-* https://portswigger.net/burp/communitydownload</pre>
+* https://portswigger.net/burp/communitydownload
+* https://www.keycloak.org/</pre>
 </div>
 <div created="20210121175813817" modified="20210330231712651" tags="[[sustainability / nachhaltigkeit]]" title="Weg zu einer nachhaltigeren Gesellschaft">
 <pre>Politiker diverser wirtschaftsliberaler Parteien fordern, aus angst von der industrie nicht mehr gemocht zu werden, nur das sich die menschen im privaten, zuhause einschränken sollen. Aber es ist im grunde konsens in und zwischen den klima- und umweltbewegungen, dass das bei weitem nicht reicht.
