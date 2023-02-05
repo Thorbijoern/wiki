@@ -12541,8 +12541,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20220810231345988" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Drafts</pre>
 </div>
-<div created="20200512220838244" modified="20230129225822413" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20200512220838244" modified="20230205022552246" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -12952,7 +12952,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230130002154297" list="[[old DJ mixer repair]] About TableOfContents" modified="20230203231825175" title="$:/StoryList">
+<div created="20230130002154297" list="[[Peavey PV8 USB 8-Channel Mixing Console repair]] [[old DJ mixer repair]] About TableOfContents" modified="20230205022547982" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -26015,7 +26015,7 @@ stuff
 * [[EEVblog #682 - Ness D16X Alarm Panel Repair|https://www.youtube.com/watch?v=h6D4MMWjrmM|]]
 * https://www.youtube.com/c/NorthridgeFix</pre>
 </div>
-<div created="20220406230035998" modified="20230131224916671" tags="[[audio repairs]] [[current projects]]" title="Peavey PV8 USB 8-Channel Mixing Console repair">
+<div created="20220406230035998" modified="20230205024253077" tags="[[audio repairs]]" title="Peavey PV8 USB 8-Channel Mixing Console repair">
 <pre>* https://elektrotanya.com/peavey_pv8_mixer_sch.pdf/download.html
 ** older or newer version
 
@@ -26144,7 +26144,21 @@ I let the glue dry over night and tested the mixing console fully. Everything wo
 
 I think the NCP3063B and 2SB1241 got damaged due to the owner trying to bodge the broken power wire and maybe reversing the polarity. The mixing console doesn't have a diode on the input, which is a oversight by the designers i think.
 
-Now i only have to repair the bodged power supply wire and get the remaining parts of the power supply case from the owner.</pre>
+Now i only have to repair the bodged power supply wire and get the remaining parts of the power supply case from the owner.
+
+I got the missing half of the power supply case from the owner and started the repair on the power supply.
+
+First i marked the polarity on the pcb, before removing the screw terminals that were the temporary fix were the wire broke.
+I then removed the screw terminals and desoldered the remaining short pieces of wire from the PCB.
+I cut the part of the wire that was inside the screw terminals and a bit messed up, stripped the isolation from the wire and applied a bit of solder.
+The original cable break protective sleeve wasn't usable anymore. I have a sleeve that works as replacement. To protect the cable some more i also add a bit of heatshrink tube inside the sleeve.
+I slid the protection sleeve and shrink tube on the cable before soldering it to the PCB.
+I also tied a knot into the cable after the sleeve to funktion as strain relieve.
+Before gluing the case shut i shecked the polarity of the cable with my multimeter, so the output is right.
+I used the reflow station to shrink the heatshrink tube.
+I used some semi-flexible glue to close the case back up, i also glued the sleeve into the case because the replacment left some gabs. The semi-flexible glue makes it easier to open back up later. But i also used two cable ties to additionally hold the case together.
+
+Everything fixed.</pre>
 </div>
 <div created="20220713151015598" modified="20220808225637178" tags="[[My Setup]] [[Software stuff]] [[current projects]]" title="Pelican static site">
 <pre>see [[static site generator]]
