@@ -853,6 +853,8 @@ Error message and password prompt
 
 <li>audio basics</li>
 
+<li>Audio Cable Tester repair.</li>
+
 <li>audio codecs</li>
 
 <li>Audio Fachbegriffe</li>
@@ -12952,7 +12954,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230130002154297" list="[[Peavey PV8 USB 8-Channel Mixing Console repair]] [[old DJ mixer repair]] About TableOfContents" modified="20230205022547982" title="$:/StoryList">
+<div created="20230130002154297" list="[[Audio Cable Tester repair.]] [[old DJ mixer repair]] About TableOfContents" modified="20230205022547982" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14693,6 +14695,30 @@ stuff
 <div created="20220705005832072" modified="20220706163127764" tags="Audio" title="audio basics">
 <pre>* https://hackaday.com/2021/06/02/know-audio-start-at-the-very-beginning/
 * https://wiki.production-partner.de/allgemein/seitenverzeichnis-alle-themen-in-der-uebersicht/</pre>
+</div>
+<div created="20230205024304238" modified="20230205025915021" tags="[[audio repairs]]" title="Audio Cable Tester repair.">
+<pre>Got an old audio cable tester for free because it was broken.
+
+problems:
+
+* it's missing one cinch/phono connector
+* it was designed for 9V battery but someone bodged a 3V battery holder
+* some screws for the case are missing
+
+
+i tested it and the buzzer/single continuity tester works fine, but the wire tester doesn't work correctly.
+
+i opened it up and noted/marked all the wire connections first. I want to clean the complete box, but in order to do so, i have to desolder all the connectors to get them out.
+
+i cleaned the box and connectors.
+While cleaning i also saw that the pcb has some liquid damage and some dried stuff still on it. I cleaned it off thoroughly with alcohol. One LED has to be resoldered because it's a bit corroded and one LED has a snapped pin. To repair the snapped of pin, i desoldered the part that remained in the pcb and used a piece of component-pin/wire from some other repair out of the scrap. i soldered the wire through the pcb and then soldered the LED pin to the wire.
+I tested the function of all leds with the multimeter and they all work now.
+
+I have some cinch/phono connectors lying around. But the Hole is to big to propperly mount the ones i got. I had the idea to maybe find a washer as spacer and i found a perfect one. I used two other wahsers and a screw to press-fit it into the case. Now i can propperly mount the cinch connector.
+
+Before reassembly i reverse engineered the whole circuit and made a KiCAD schematic.
+
+</pre>
 </div>
 <div created="20210214153948430" modified="20230108224826274" tags="[[digital audio]]" title="audio codecs">
 <pre>* https://en.wikipedia.org/wiki/List_of_open-source_codecs
