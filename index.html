@@ -1181,9 +1181,9 @@ Error message and password prompt
 
 <li>dsp (digital signal processor) / digital crossover</li>
 
-<li>e-bike / pedelec</li>
-
 <li>e-bike controller, motor driver</li>
+
+<li>e-bike ebike / pedelec</li>
 
 <li>e-bike motor</li>
 
@@ -12977,7 +12977,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230226001645925" list="oscilloscope tools [[testing &amp; measuring]] [[usb oscilloscopes]] XLR [[balanced signals / symmetrische signale]] [[Draft of 'Digilent Analog Discovery 2']] [[cargo bike, bike trailers]] [[DIY Fahrradanhänger]] [[Lastenrad / Fahrradanhänger Konstruktionsideen]] [[Wood (Holz)]] [[Draft of 'Schweißen / Metallwerkstatt / metal diy']] [[ERP / WWS, inventory management]] About TableOfContents" modified="20230226224240529" title="$:/StoryList">
+<div created="20230226001645925" list="[[e-bike ebike / pedelec]] [[balanced signals / symmetrische signale]] [[Draft of 'Digilent Analog Discovery 2']] [[cargo bike, bike trailers]] [[DIY Fahrradanhänger]] [[Lastenrad / Fahrradanhänger Konstruktionsideen]] [[Wood (Holz)]] [[Draft of 'Schweißen / Metallwerkstatt / metal diy']] [[ERP / WWS, inventory management]] About TableOfContents" modified="20230226225254151" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -13997,8 +13997,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230226224238372" modifier="Thorbijoern" title="$:/temp/search">
-<pre>osci</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230226225252219" modifier="Thorbijoern" title="$:/temp/search">
+<pre>pedelec</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18071,9 +18071,10 @@ some android stuff for Fairphone 3:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
 </div>
-<div created="20221205221345120" draft.of="Digilent Analog Discovery 2" draft.title="Digilent Analog Discovery 2" modified="20230226223943584" tags="[[electronics tools]] [[testing &amp; measuring]]" title="Draft of 'Digilent Analog Discovery 2'">
+<div created="20221205221345120" draft.of="Digilent Analog Discovery 2" draft.title="Digilent Analog Discovery 2" modified="20230226224835913" tags="[[electronics tools]] [[testing &amp; measuring]]" title="Draft of 'Digilent Analog Discovery 2'">
 <pre>* https://digilent.com/reference/test-and-measurement/analog-discovery-2/start
 * https://hackaday.com/2016/12/28/review-digilent-analog-discovery-2/
+** https://learn.digilentinc.com/list?tag=analog-discovery
 
 Addons
 
@@ -18088,6 +18089,8 @@ my usecases
 
 * audio analyzer
 ** [[TheStuffMade Audio Analyzer Suite|https://www.youtube.com/watch?v=7yXUbU5bSGw&amp;list=PLj1iPGXgbNf2otUxBjLh93bI31FuradPS]]
+** https://www.diyaudio.com/community/threads/analog-discovery-audio-analyzer-suite-video.376466/
+** [[Audio Analyzer Suite / Analog Discovery 2 Review and Demo|https://www.youtube.com/watch?v=vZdL6jmCJvE]]
 * speaker impedance analyzer
 
 buying
@@ -18307,7 +18310,43 @@ stuff
 * https://dsp.stackexchange.com/questions/81189/modeling-analog-filters-for-software-implementation
 * [[Phil's Lab - Audio Electronics Playlist|https://www.youtube.com/playlist?list=PLXSyc11qLa1ZGY3nD7to5eQGKGMREhNGl]]</pre>
 </div>
-<div created="20210104214035250" modified="20220705015618323" tags="[[Fahrrad (bicycle, bike)]] [[electric vehicles (EV)]]" title="e-bike / pedelec">
+<div created="20210613140511485" modified="20230226225621835" tags="[[e-bike ebike / pedelec]] [[motor controller / driver]]" title="e-bike controller, motor driver">
+<pre>TODO: move esc/motor controller stuff ti
+
+* essentially just a [[ESC / BLDC motor driver / controller]] with some connections and features for external hardware and controlls
+* most controllers include the controller and the motor driver in one package
+* https://www.elecycles.com/blog/post/what-you-need-to-know-about-electric-bike-controller/
+
+controller + driver
+
+* cheap ones from china can be found on ebay, aliexpress/alibaba, bangood, etc., bmc-world.com also sells them
+** some wiring diagrams:
+*** https://www.elecycles.com/blog/post/what-you-need-to-know-about-electric-bike-controller/
+*** https://ricardolevinsmorales.com/e-bike-controller-wiring-diagram/
+** https://www.pedelecforum.de/wiki/doku.php?id=antriebsstrang:specialbike_lsdzs_com - some more information
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:barmalcontroller
+* the VESC can be easily used for bikes - open source
+* https://www.pedelecforum.de/forum/index.php?threads/eigenbau-universalcontroller-250-1000w.45553/ - open source
+* https://github.com/EBiCS/EBiCS_Hailong - open source
+* https://www.pedelecforum.de/wiki/doku.php?id=e-motor:programmierbare_controller
+
+open firmware for common controllers
+
+* https://github.com/stancecoke/BMSBattery_S_controllers_firmware/wiki
+** https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:open_source_firmware_fuer_sxxs_ktxx_-controller
+* https://github.com/EBiCS/EBiCS_Firmware
+** https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:open_source_firmware_fuer_lishui_-controller
+* https://github.com/OpenSourceEBike/TSDZ2-Smart-EBike
+
+stuff
+
+* some support [[regenerative breaking (rekuperation)]]
+* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:controller-reparaturanleitung
+* https://www.pedelecforum.de/wiki/doku.php?id=tipps:start#controllerfunktion_reparatur
+
+</pre>
+</div>
+<div created="20210104214035250" modified="20230226225621831" tags="[[Fahrrad (bicycle, bike)]] [[electric vehicles (EV)]]" title="e-bike ebike / pedelec">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
 
@@ -18362,45 +18401,10 @@ finding problems:
 stuff
 
 * https://hackaday.com/blog/page/4/?s=e%20bike
-* [[Electronic Basics #18: DC &amp; Brushless DC Motor + ESC|https://www.youtube.com/watch?v=UteZJ_7C4Mg]]</pre>
+* [[Electronic Basics #18: DC &amp; Brushless DC Motor + ESC|https://www.youtube.com/watch?v=UteZJ_7C4Mg]]
+* [[ Convert Tricycle to Electric Power for $200 - including the Battery Pack. |https://www.youtube.com/watch?v=UoGbLtdpOO4]]</pre>
 </div>
-<div created="20210613140511485" modified="20220911174818937" tags="[[e-bike / pedelec]] [[motor controller / driver]]" title="e-bike controller, motor driver">
-<pre>TODO: move esc/motor controller stuff ti
-
-* essentially just a [[ESC / BLDC motor driver / controller]] with some connections and features for external hardware and controlls
-* most controllers include the controller and the motor driver in one package
-* https://www.elecycles.com/blog/post/what-you-need-to-know-about-electric-bike-controller/
-
-controller + driver
-
-* cheap ones from china can be found on ebay, aliexpress/alibaba, bangood, etc., bmc-world.com also sells them
-** some wiring diagrams:
-*** https://www.elecycles.com/blog/post/what-you-need-to-know-about-electric-bike-controller/
-*** https://ricardolevinsmorales.com/e-bike-controller-wiring-diagram/
-** https://www.pedelecforum.de/wiki/doku.php?id=antriebsstrang:specialbike_lsdzs_com - some more information
-* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:barmalcontroller
-* the VESC can be easily used for bikes - open source
-* https://www.pedelecforum.de/forum/index.php?threads/eigenbau-universalcontroller-250-1000w.45553/ - open source
-* https://github.com/EBiCS/EBiCS_Hailong - open source
-* https://www.pedelecforum.de/wiki/doku.php?id=e-motor:programmierbare_controller
-
-open firmware for common controllers
-
-* https://github.com/stancecoke/BMSBattery_S_controllers_firmware/wiki
-** https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:open_source_firmware_fuer_sxxs_ktxx_-controller
-* https://github.com/EBiCS/EBiCS_Firmware
-** https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:open_source_firmware_fuer_lishui_-controller
-* https://github.com/OpenSourceEBike/TSDZ2-Smart-EBike
-
-stuff
-
-* some support [[regenerative breaking (rekuperation)]]
-* https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:controller-reparaturanleitung
-* https://www.pedelecforum.de/wiki/doku.php?id=tipps:start#controllerfunktion_reparatur
-
-</pre>
-</div>
-<div created="20210613140333450" modified="20210613182359924" tags="[[e-bike / pedelec]]" title="e-bike motor">
+<div created="20210613140333450" modified="20230226225621838" tags="[[e-bike ebike / pedelec]]" title="e-bike motor">
 <pre>* they all seem to be 3-phase BLDC motors
 ** https://en.wikipedia.org/wiki/Brushless_DC_electric_motor
 ** https://de.wikipedia.org/wiki/B%C3%BCrstenloser_Gleichstrommotor
@@ -18412,7 +18416,7 @@ stuff
 * https://www.pedelecforum.de/wiki/doku.php?id=elektrotechnik:epacsim
 * https://www.pedelecforum.de/wiki/doku.php?id=tipps:start#formeln_zur_berechnung_des_maximalen_anfahrdrehmoments_von_naben-_und_tretlagermotoren</pre>
 </div>
-<div created="20210613142331942" modified="20210613182228035" tags="[[e-bike / pedelec]]" title="e-bike PAS-Sensor">
+<div created="20210613142331942" modified="20230226225621840" tags="[[e-bike ebike / pedelec]]" title="e-bike PAS-Sensor">
 <pre>Pedal Assist Sensor, used to detect pedaling of the driving person.
 
 in some legislations (like the EU) the e-bike is only allowed to accelerate to a certain speed only with motor power. in the EU e-bikes are only allowed to accelerate up to 6km/h on motor power, for higher speeds the person driving the bike has to pedal and the motor is only assisting. this requires a PAS-Sensor
@@ -18433,7 +18437,7 @@ the data line of the hall-sensor has to be pulled high (with a 10k resistor to t
 * https://www.pedelecforum.de/wiki/doku.php?id=tipps:start#pas-sensorenfunktionsweise_und_tests
 * https://www.pedelecforum.de/wiki/doku.php?id=tipps:start#sensorbefestigung_von_pedelec-sensor_und_magnetscheibe</pre>
 </div>
-<div created="20210613142447035" modified="20210613143333876" tags="[[e-bike / pedelec]]" title="e-bike throttle control">
+<div created="20210613142447035" modified="20230226225621842" tags="[[e-bike ebike / pedelec]]" title="e-bike throttle control">
 <pre>mostly twist- or lever-style controlls used to controll the trottle and, to some extend, the speed. attached to the handlebars of the bike.
 
 most throttle controls for e-bikes use an analog hall-sensor and a magnet
@@ -18444,7 +18448,7 @@ pinout for most analog types:
 * GND (often black)
 * data (some other color, sometimes white) - the analog readout of the hall-sensor</pre>
 </div>
-<div created="20220801005223443" modified="20220801005910354" tags="[[e-bike / pedelec]]" title="ebike computer / display">
+<div created="20220801005223443" modified="20230226225621842" tags="[[e-bike ebike / pedelec]]" title="ebike computer / display">
 <pre>controller only, without motor driver
 
 * using/spying on the serial connection of the display to log the data
@@ -27585,7 +27589,7 @@ other
 * https://isemcon.net/en/#1
 * https://www.minidsp.com/products/acoustic-measurement</pre>
 </div>
-<div created="20210424232344026" modified="20211123231510976" tags="[[power electronics (Leistungselektronik)]] [[electric vehicles (EV)]] [[e-bike / pedelec]]" title="regenerative breaking (rekuperation)">
+<div created="20210424232344026" modified="20230226225621844" tags="[[power electronics (Leistungselektronik)]] [[electric vehicles (EV)]] [[e-bike ebike / pedelec]]" title="regenerative breaking (rekuperation)">
 <pre>* https://de.wikipedia.org/wiki/Rekuperation_(Technik)#Rekuperationsbremse
 ** https://de.wikipedia.org/wiki/Nutzbremse
 ** https://de.wikipedia.org/wiki/Elektromotorische_Bremse
@@ -27989,7 +27993,7 @@ additional:
 
 * several 222 3kV ceramic caps to ground</pre>
 </div>
-<div created="20210604152615292" modified="20210712233835944" tags="repairs [[reverse engineering]] [[cargo bike, bike trailers]] [[e-bike / pedelec]]" title="reverse engineering of electric cargo bike electronics">
+<div created="20210604152615292" modified="20230226225621845" tags="repairs [[reverse engineering]] [[cargo bike, bike trailers]] [[e-bike ebike / pedelec]]" title="reverse engineering of electric cargo bike electronics">
 <pre>Components of the drivetrain:
 
 * 38V battery pack
