@@ -12980,7 +12980,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230226001645925" list="[[gedanken zur &quot;jugendstrategie&quot; der bundesregierung und allgemein zur politik]] [[good, affordable LCR+ESR Meters]] [[Draft of 'Digilent Analog Discovery 2']] [[cargo bike, bike trailers]] [[DIY Fahrradanhänger]] [[Lastenrad / Fahrradanhänger Konstruktionsideen]] [[Wood (Holz)]] [[Draft of 'Schweißen / Metallwerkstatt / metal diy']] [[ERP / WWS, inventory management]] About TableOfContents" modified="20230227005136548" title="$:/StoryList">
+<div created="20230226001645925" list="capacitors [[Draft of 'Digilent Analog Discovery 2']] [[cargo bike, bike trailers]] [[DIY Fahrradanhänger]] [[Lastenrad / Fahrradanhänger Konstruktionsideen]] [[Wood (Holz)]] [[Draft of 'Schweißen / Metallwerkstatt / metal diy']] [[ERP / WWS, inventory management]] About TableOfContents" modified="20230227005315194" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14000,8 +14000,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230227005129088" modifier="Thorbijoern" title="$:/temp/search">
-<pre>esr</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230227005241782" modifier="Thorbijoern" title="$:/temp/search">
+<pre>electroly</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16105,7 +16105,7 @@ that's what i did in the end. the cable drum works fine again.</pre>
 * https://github.com/zombieCraig/ICSim
 * https://hackaday.com/tag/can/</pre>
 </div>
-<div created="20210604171320150" modified="20221012203603828" tags="[[accumulator - battery - rechargeable energy storage]] [[electronics parts/components]]" title="capacitors">
+<div created="20210604171320150" modified="20230227005423719" tags="[[accumulator - battery - rechargeable energy storage]] [[electronics parts/components]]" title="capacitors">
 <pre>* [[Capacitors Explained - The basics how capacitors work working principle|https://www.youtube.com/watch?v=X4EUwTwZ110]]
 * [[How to choose the right capacitor type for a circuit?! ~~ Film vs. Ceramic vs. Electrolytic|https://www.youtube.com/watch?v=2v8zBj7_sxg]]
 * [[Why electrolytic capacitors are actually kinda shitty|https://www.youtube.com/watch?v=WytU5uj78-4]]
@@ -16131,6 +16131,9 @@ types
 ** [[quality Electrolytic Capacitors]]
 ** [[EEVblog #742 - Why Electrolytic Capacitors Are Connected In Parallel|https://www.youtube.com/watch?v=wwANKw36Mjw]]
 ** https://en.wikipedia.org/wiki/Electrolytic_capacitor#Electrical_characteristics
+** https://forum.digikey.com/t/calculating-capacitor-esr-from-tan/2633
+** for audio use cases where low noise is prefered low inductance is important
+** for switching power supplies a low ESR is importat because of the high switching frequencies
 * film
 ** https://en.wikipedia.org/wiki/Film_capacitor
 * ceramic
@@ -27480,7 +27483,7 @@ maybe it's an option to buy plain steel screws (not stainless) and blue them:
 * https://en.wikipedia.org/wiki/Bluing_(steel)
 * https://de.wikipedia.org/wiki/Br%C3%BCnieren</pre>
 </div>
-<div created="20210201233501049" modified="20220808154225985" tags="[[electronics parts/components]] repairs" title="quality Electrolytic Capacitors">
+<div created="20210201233501049" modified="20230227005311481" tags="[[electronics parts/components]] repairs" title="quality Electrolytic Capacitors">
 <pre>failing electrolytic caps (elcos, Elkos) are a common failure mode of consumer electronics.
 
 because they contain liquid which dries out they should be 105°C rated. lower ratings like 85°C are often not as good.
@@ -27501,7 +27504,11 @@ other brands:
 
 when replacing dead caps i first try to find the datasheet to the original caps in order to see if they have a low esr or other special ratings that might be important. But most times cheap caps from some uncommon no-name brands are used and you can't find one, so you have to guess. In switching power supply circuitry the caps are almost always low esr caps. But low impedance might also be important in some applications.
 
-when searching for a replacement i not only filter for the obvious ratings of voltage and capacity, but also filter for the good brands and filter for brands with high lifetime and temperature ratings. Then i also often exclude the worst esr ratings and fiddle around with all of the ratings in some way that seems good to get to a selection that is not overwhelming. then i choose a model of cap that seems good.</pre>
+when searching for a replacement i not only filter for the obvious ratings of voltage and capacity, but also filter for the good brands and filter for brands with high lifetime and temperature ratings. Then i also often exclude the worst esr ratings and fiddle around with all of the ratings in some way that seems good to get to a selection that is not overwhelming. then i choose a model of cap that seems good.
+
+stuff
+
+* https://forum.digikey.com/t/calculating-capacitor-esr-from-tan/2633</pre>
 </div>
 <div created="20210410161115041" modified="20210410161142598" tags="[[Politics (Politik)]]" title="racism">
 <pre>* [[Uncomfortable Conversations with a Black Man|https://www.youtube.com/watch?v=h8jUA7JBkF4]]</pre>
