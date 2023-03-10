@@ -26482,16 +26482,45 @@ some microphones support lower voltages but in the professional sector most micr
 <div created="20210214191556547" modified="20210214191933839" tags="Science" title="physics stuff">
 <pre>* https://www.diyphysics.com/</pre>
 </div>
-<div created="20230104203245700" modified="20230304232950310" tags="[[audio repairs]]" title="Pioneer CX-J510 and M-J510 repair">
+<div created="20230104203245700" modified="20230310005224987" tags="[[audio repairs]]" title="Pioneer CX-J510 and M-J510 repair">
 <pre>the CX-J510 is a &quot;Stereo Tuner Control Amplifier&quot;, basically just Tuner and input&amp;control for all other parts of the system
 and the M-J510 a separate stereo power amplifier
 
 i've got these two devices from a relative, he owns them for a long time an they started to have problems. currently they don't work at all anymore, they are 20 years or older.
 
 i suspect some capacitors are just old and voltage rails don't have a stable voltage anymore.
-at a first look into the devices there already were some suspicious capacitors that might have leaked and some of the power rails were missing.
+at a first look into the devices there already were some suspicious capacitors that might have leaked and some of the power rails were missing it seemed.
 
 the devices come from a smoker household, so they had collected some sud over all the years. i cleaned the most obvious places with alcohol so it looks a bit nicer.
+
+As the first step i ordered the caps from the CX-J510 that were near power supply components like the voltage regulators and were relevant for the power rails.
+I replaced only the ones that looked bad, like some had corrosion, some looked like they leaked because they were a bit oily apart from the normal dust and smoking sud. Some even tested bad. If there was a bad one of one specific type/model i replaced all of them just to be sure.
+I had some left over because i just ordered not just the ones that looked bad but also other power supply related caps.
+
+When i wanted to test i was a bit confused that it didn't want to turn on, but after a bit of studying the manual and some testing i got it working.
+The important clue was written on &quot;5. How to check the product independently&quot; (page 38 in the pdf; page 56 in the original) in the service manual below.
+I followed the steps without the amplifier connected and it worked. I then tried with the amp connected and i only did step 1 (connecting the base of Q201 and Q202 to jumper lines) and it also worked fine.
+
+The Control Amplifier requires the CD and Tape Decks to be connected to start up and Step 1 fakes them being connected.
+Also the Control Amplifier needs the voltages from the Power Amplifier, so it too needs to be connected or you have to do the other steps.
+
+I then went to testing the audio with the aux input. Audio was totally fine, but the &quot;Function&quot; button, for switching the inputs, still misbehaves. The owner told me about that already, but i guessed that that was due to the aging caps and the Chips inside not correctly registering the input due to power supply noise on the power lines.
+
+So i disassembled the front of the control amplifier and drenched the button in IPA. I actuated the button a couple of times and let the IPA evaporate.
+I also tried cleaning the display (a nice old vacuum fluorescent display (VFD))  and the plastic window in the front from inside with IPA. Both also had the smoking sud on them.
+
+After that i partially reassembled the front to check it's function: it was better but still single presses registered double 50% to 1/3 of the time.
+But cleaning the display and the windows did wonders, the display is clearly visible again! Before i had thought that the display is just old, because it's quite normal for VFDs to loose some of their power due to internal &quot;wear&quot;, leaking of gases and such. But most of it just was smoking residue.
+
+I disassembled the front again to measure the button. Its a roughly 6x6mm footprint (6,2x6,2mm to be exact) and 5mm (4,8mm) height. The size seemed pretty normal to me, but it only has 2 pins. I cant recall ever seeing these tactile, momentary push-buttons with two pins. But it turns out they are not that uncommon, it was pretty easy to find them on ebay and digikey.
+
+When the replacement buttons arrived i desoldered the old button and compared the dimensions. They were pretty close, so it should work without problems. 
+I soldered in the new button , cleaned off the flux residue, checked if i made any fingerprints on the display and reassembled the front again.
+
+The new button is good and snappy (or tactile), it fits and functions perfectly. The difference of the snap between old and new is pretty noticeable side by side.
+
+I'm happy it all works again and i told my relative who is also happy.
+
 
 service manuals
 
