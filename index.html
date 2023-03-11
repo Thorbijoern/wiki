@@ -959,6 +959,8 @@ Error message and password prompt
 
 <li>Bluetooth Audio</li>
 
+<li>bluetooth serial modules</li>
+
 <li>bootloader (open source)</li>
 
 <li>Bresser / Meade DS Gen 1 motorized Telescope</li>
@@ -1176,6 +1178,8 @@ Error message and password prompt
 <li>Draft of ' 1'</li>
 
 <li>Draft of ''</li>
+
+<li>Draft of 'Parkside PDM 300 C2/C3'</li>
 
 <li>Dresden</li>
 
@@ -12593,8 +12597,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20220810231345988" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Drafts</pre>
 </div>
-<div created="20200512220838244" modified="20230226001643064" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20200512220838244" modified="20230311015619754" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -13004,7 +13008,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230302221950833" list="[[Digilent Analog Discovery 2]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[current projects]] [[Skoda Octavia &quot;Bolero&quot; radio / infotainment system repair attempt]] [[commercial, professional mobile off-grid battery solutions]] [[Parkside PDM 300 C2/C3]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20230310210541190" title="$:/StoryList">
+<div created="20230302221950833" list="[[bluetooth serial modules]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[current projects]] [[Skoda Octavia &quot;Bolero&quot; radio / infotainment system repair attempt]] [[commercial, professional mobile off-grid battery solutions]] [[Draft of 'Parkside PDM 300 C2/C3']] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20230310210541190" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14024,8 +14028,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230310211614416" modifier="Thorbijoern" title="$:/temp/search">
-<pre>park</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230311015538971" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15942,6 +15946,21 @@ linux bluetooth audio issues:
 stuff
 
 * https://hackaday.com/2022/09/14/esp32-adds-bluetooth-to-an-ipod-nano/</pre>
+</div>
+<div created="20230311015540163" modified="20230311015807192" tags="[[inter IC or inter device communication, networking]]" title="bluetooth serial modules">
+<pre>HC-05
+
+* see also [[Parkside PDM 300 C2/C3]]
+
+HC-06
+
+* https://forum.arduino.cc/t/solved-hc-06-bluetooth-module-and-at-commands/697344/6
+* see also [[Parkside PDM 300 C2/C3]]
+
+JDY-30/JDY-31
+
+* http://www.ko4bb.com/getsimple/index.php?id=jdy-30jdy-31-bluetooth-modules
+** http://www.ko4bb.com/getsimple/data/uploads/jdy-30/jdy-30-bluetooth-module.pdf</pre>
 </div>
 <div created="20210301175212980" modified="20211122003521390" tags="[[Software stuff]]" title="bootloader (open source)">
 <pre>* https://en.wikipedia.org/wiki/Comparison_of_boot_loaders
@@ -18175,6 +18194,85 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
+</div>
+<div created="20230216213733049" draft.of="Parkside PDM 300 C2/C3" draft.title="Parkside PDM 300 C2/C3" modified="20230311015346137" tags="multimeter" title="Draft of 'Parkside PDM 300 C2/C3'">
+<pre>https://twitter.com/atc1441/status/1583738148286132225
+
+
+&lt;&lt;&lt;
+These days LIDL offers the PDM 300 C3 Multimeter for 15€ again������
+
+The special part about it is that is offers a convenient UART 2400 baud TX line which spits out the current measurements!
+
+Fully reversed and neat tools available here:
+https://mikrocontroller.net/articles/Multi
+
+Its very simple to add Bleutooth to the 15€ Multimeter!
+Just bridge the 5V converter so the HC-06 module runs on the 3V from the Multimeter and set it to 2400 baud
+
+On my one its just a bridge between these two points, but there could be different revisions, so make sure to bridge the 5V rail with the 3.3V rail on the module
+&lt;&lt;&lt;
+
+https://www.mikrocontroller.net/articles/Multimeter_PDM-300-C2_Analyse
+
+I made the error to install the bluetooth module into the multimeter before setting the baud and name
+
+HC-05 config:
+
+* https://www.instructables.com/AT-command-mode-of-HC-05-Bluetooth-module/
+* https://www.instructables.com/How-to-Change-the-Name-of-HC-06-Bluetooth-Module/
+* https://www.instructables.com/Bluetooth-AT-Commands-Settings-HC05-HC06/
+
+
+HC-06 config
+
+everything is mixed up and confusing... i had problems talking to the module because i was using the AT command to check. I tested all standard baud rates, different parity, different stopbits and i tried \r, \n, \r\n and \n\r.
+
+nothing worked correctly... with baud 9600, 8bits data, no flow control, no parity, 1 stopbit i was atleast able to set the name, but nothing else. The &quot;AT&quot; command does not reply &quot;OK&quot; and it seems to do nothing with other commands too.
+I was able to send and receive data with the app ~SerialTest (https://f-droid.org/packages/priv.wh201906.serialtest/).
+
+ultimate help was the following: https://forum.arduino.cc/t/solved-hc-06-bluetooth-module-and-at-commands/697344/6
+
+* HC-05 and HC-06 have different command sets
+* HC-05 wants \r\n
+* HC-06 dosn't want \r\n, it instead works with timeouts
+
+now i also get why AT+NAME works, because the rest of the command is arbitrary data for the name.
+
+to the default settings you need for HC-06 are:
+
+* baud: 9600
+* data: 8 bits
+* flow control: none
+* parity: none
+* stop bit: 1
+* line termination: none
+
+the AT-commands are the following:
+
+* AT
+** reply: OK
+* AT+NAME&lt;name&gt;
+** substitute &lt;name&gt; with the name you want to set
+** reply: OKsetname
+* AT+BAUD&lt;nr&gt;
+** substitute &lt;nr&gt; with the number of the baud setting
+** reply: OK&lt;baudrate&gt;
+*AT+VERSION
+** reply: OKlinvor1.x
+
+
+what i set:
+
+* AT+NAMEDMM-PDM-300
+* AT+BAUD2
+
+
+other tips:
+
+* https://twitter.com/basti_uhl/status/1585316132654751745
+
+Portsdown test equipment suite</pre>
 </div>
 <div created="20201104201703044" modified="20230108225316331" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
