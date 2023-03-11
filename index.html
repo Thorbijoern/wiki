@@ -1179,8 +1179,6 @@ Error message and password prompt
 
 <li>Draft of ''</li>
 
-<li>Draft of 'Parkside PDM 300 C2/C3'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13008,7 +13006,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230302221950833" list="[[bluetooth serial modules]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[current projects]] [[Skoda Octavia &quot;Bolero&quot; radio / infotainment system repair attempt]] [[commercial, professional mobile off-grid battery solutions]] [[Draft of 'Parkside PDM 300 C2/C3']] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20230310210541190" title="$:/StoryList">
+<div created="20230302221950833" list="[[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[current projects]] [[Skoda Octavia &quot;Bolero&quot; radio / infotainment system repair attempt]] [[commercial, professional mobile off-grid battery solutions]] [[Parkside PDM 300 C2/C3]] [[Schweißen / Metallwerkstatt / metal diy]] About TableOfContents" modified="20230310210541190" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -18194,85 +18192,6 @@ some android stuff for Fairphone 3:
 * MicroG-LineageOS:
 ** https://download.lineage.microg.org/FP3/
 ** </pre>
-</div>
-<div created="20230216213733049" draft.of="Parkside PDM 300 C2/C3" draft.title="Parkside PDM 300 C2/C3" modified="20230311015346137" tags="multimeter" title="Draft of 'Parkside PDM 300 C2/C3'">
-<pre>https://twitter.com/atc1441/status/1583738148286132225
-
-
-&lt;&lt;&lt;
-These days LIDL offers the PDM 300 C3 Multimeter for 15€ again������
-
-The special part about it is that is offers a convenient UART 2400 baud TX line which spits out the current measurements!
-
-Fully reversed and neat tools available here:
-https://mikrocontroller.net/articles/Multi
-
-Its very simple to add Bleutooth to the 15€ Multimeter!
-Just bridge the 5V converter so the HC-06 module runs on the 3V from the Multimeter and set it to 2400 baud
-
-On my one its just a bridge between these two points, but there could be different revisions, so make sure to bridge the 5V rail with the 3.3V rail on the module
-&lt;&lt;&lt;
-
-https://www.mikrocontroller.net/articles/Multimeter_PDM-300-C2_Analyse
-
-I made the error to install the bluetooth module into the multimeter before setting the baud and name
-
-HC-05 config:
-
-* https://www.instructables.com/AT-command-mode-of-HC-05-Bluetooth-module/
-* https://www.instructables.com/How-to-Change-the-Name-of-HC-06-Bluetooth-Module/
-* https://www.instructables.com/Bluetooth-AT-Commands-Settings-HC05-HC06/
-
-
-HC-06 config
-
-everything is mixed up and confusing... i had problems talking to the module because i was using the AT command to check. I tested all standard baud rates, different parity, different stopbits and i tried \r, \n, \r\n and \n\r.
-
-nothing worked correctly... with baud 9600, 8bits data, no flow control, no parity, 1 stopbit i was atleast able to set the name, but nothing else. The &quot;AT&quot; command does not reply &quot;OK&quot; and it seems to do nothing with other commands too.
-I was able to send and receive data with the app ~SerialTest (https://f-droid.org/packages/priv.wh201906.serialtest/).
-
-ultimate help was the following: https://forum.arduino.cc/t/solved-hc-06-bluetooth-module-and-at-commands/697344/6
-
-* HC-05 and HC-06 have different command sets
-* HC-05 wants \r\n
-* HC-06 dosn't want \r\n, it instead works with timeouts
-
-now i also get why AT+NAME works, because the rest of the command is arbitrary data for the name.
-
-to the default settings you need for HC-06 are:
-
-* baud: 9600
-* data: 8 bits
-* flow control: none
-* parity: none
-* stop bit: 1
-* line termination: none
-
-the AT-commands are the following:
-
-* AT
-** reply: OK
-* AT+NAME&lt;name&gt;
-** substitute &lt;name&gt; with the name you want to set
-** reply: OKsetname
-* AT+BAUD&lt;nr&gt;
-** substitute &lt;nr&gt; with the number of the baud setting
-** reply: OK&lt;baudrate&gt;
-*AT+VERSION
-** reply: OKlinvor1.x
-
-
-what i set:
-
-* AT+NAMEDMM-PDM-300
-* AT+BAUD2
-
-
-other tips:
-
-* https://twitter.com/basti_uhl/status/1585316132654751745
-
-Portsdown test equipment suite</pre>
 </div>
 <div created="20201104201703044" modified="20230108225316331" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -26205,7 +26124,7 @@ do they have good bass?
 * https://www.instructables.com/id/Ultrasonic-Sound-Gun-Parametric-Speaker/
 * https://github.com/NiklasFauth/ParametricSpeaker</pre>
 </div>
-<div created="20230216213733049" modified="20230311010213615" tags="multimeter" title="Parkside PDM 300 C2/C3">
+<div created="20230216213733049" modified="20230311020130107" tags="multimeter" title="Parkside PDM 300 C2/C3">
 <pre>https://twitter.com/atc1441/status/1583738148286132225
 
 
@@ -26225,22 +26144,59 @@ On my one its just a bridge between these two points, but there could be differe
 
 https://www.mikrocontroller.net/articles/Multimeter_PDM-300-C2_Analyse
 
+I made the error to install the bluetooth module into the multimeter before setting the baud and name
 
-~~HC-06 config:~~
+HC-05 config:
 
-* made the error to install the bluetooth module into the multimeter before setting the baud and name
 * https://www.instructables.com/AT-command-mode-of-HC-05-Bluetooth-module/
 * https://www.instructables.com/How-to-Change-the-Name-of-HC-06-Bluetooth-Module/
 * https://www.instructables.com/Bluetooth-AT-Commands-Settings-HC05-HC06/
 
 
-everything is mixed up and confusing
+HC-06 config
+
+everything is mixed up and confusing... i had problems talking to the module because i was using the AT command to check. I tested all standard baud rates, different parity, different stopbits and i tried \r, \n, \r\n and \n\r.
+
+nothing worked correctly... with baud 9600, 8bits data, no flow control, no parity, 1 stopbit i was atleast able to set the name, but nothing else. The &quot;AT&quot; command does not reply &quot;OK&quot; and it seems to do nothing with other commands too.
+I was able to send and receive data with the app ~SerialTest (https://f-droid.org/packages/priv.wh201906.serialtest/).
 
 ultimate help was the following: https://forum.arduino.cc/t/solved-hc-06-bluetooth-module-and-at-commands/697344/6
 
+* HC-05 and HC-06 have different command sets
+* HC-05 wants \r\n
+* HC-06 dosn't want \r\n, it instead works with timeouts
 
-AT+NAMEDMM-PDM-300
-AT+BAUD2
+now i also get why AT+NAME works, because the rest of the command is arbitrary data for the name.
+
+to the default settings you need for HC-06 are:
+
+* baud: 9600
+* data: 8 bits
+* flow control: none
+* parity: none
+* stop bit: 1
+* line termination: none
+
+the AT-commands are the following:
+
+* AT
+** reply: OK
+* AT+NAME&lt;name&gt;
+** substitute &lt;name&gt; with the name you want to set
+** reply: OKsetname
+* AT+BAUD&lt;nr&gt;
+** substitute &lt;nr&gt; with the number of the baud setting
+** reply: OK&lt;baudrate&gt;
+*AT+VERSION
+** reply: OKlinvor1.x
+
+
+what i set:
+
+* AT+NAMEDMM-PDM-300
+** sets &quot;DMM-PDM-300&quot; as name for Digital MultiMeter PDM-300 as Name
+* AT+BAUD2
+** sets the baud to 2400
 
 
 other tips:
