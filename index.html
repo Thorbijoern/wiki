@@ -26124,7 +26124,7 @@ do they have good bass?
 * https://www.instructables.com/id/Ultrasonic-Sound-Gun-Parametric-Speaker/
 * https://github.com/NiklasFauth/ParametricSpeaker</pre>
 </div>
-<div created="20230216213733049" modified="20230311020130107" tags="multimeter" title="Parkside PDM 300 C2/C3">
+<div created="20230216213733049" modified="20230311020547063" tags="multimeter" title="Parkside PDM 300 C2/C3">
 <pre>https://twitter.com/atc1441/status/1583738148286132225
 
 
@@ -26157,7 +26157,7 @@ HC-06 config
 
 everything is mixed up and confusing... i had problems talking to the module because i was using the AT command to check. I tested all standard baud rates, different parity, different stopbits and i tried \r, \n, \r\n and \n\r.
 
-nothing worked correctly... with baud 9600, 8bits data, no flow control, no parity, 1 stopbit i was atleast able to set the name, but nothing else. The &quot;AT&quot; command does not reply &quot;OK&quot; and it seems to do nothing with other commands too.
+nothing worked correctly... with baud 9600, 8bits data, no flow control, no parity, 1 stopbit i was atleast able to set the name, but nothing else. The ``AT`` command does not reply ``OK`` and it seems to do nothing with other commands too.
 I was able to send and receive data with the app ~SerialTest (https://f-droid.org/packages/priv.wh201906.serialtest/).
 
 ultimate help was the following: https://forum.arduino.cc/t/solved-hc-06-bluetooth-module-and-at-commands/697344/6
@@ -26179,31 +26179,35 @@ to the default settings you need for HC-06 are:
 
 the AT-commands are the following:
 
-* AT
-** reply: OK
-* AT+NAME&lt;name&gt;
-** substitute &lt;name&gt; with the name you want to set
-** reply: OKsetname
-* AT+BAUD&lt;nr&gt;
-** substitute &lt;nr&gt; with the number of the baud setting
-** reply: OK&lt;baudrate&gt;
-*AT+VERSION
-** reply: OKlinvor1.x
+* ``AT``
+** reply: ``OK``
+* ``AT+NAME&lt;name&gt;``
+** substitute ``&lt;name&gt;`` with the name you want to set
+** reply: ``OKsetname``
+* ``AT+BAUD&lt;nr&gt;``
+** substitute ``&lt;nr&gt;`` with the number of the baud setting
+** nr. 2 is for 2400 baud
+** reply: ``OK&lt;baudrate&gt;``
+* ``AT+VERSION``
+** reply: ``OKlinvor1.x``
 
 
 what i set:
 
-* AT+NAMEDMM-PDM-300
+* ``AT+NAMEDMM-PDM-300``
 ** sets &quot;DMM-PDM-300&quot; as name for Digital MultiMeter PDM-300 as Name
-* AT+BAUD2
+* ``AT+BAUD2``
 ** sets the baud to 2400
+
+
+now i just need software for it.
 
 
 other tips:
 
 * https://twitter.com/basti_uhl/status/1585316132654751745
 
-Portsdown test equipment suite</pre>
+Portsdown test equipment suite?</pre>
 </div>
 <div created="20221002000504892" modified="20230108185033012" tags="TableOfContents" title="parts and components">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
