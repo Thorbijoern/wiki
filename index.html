@@ -13074,7 +13074,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230326153330284" list="[[datasheet search engines]] UV [[untagged tiddlers]] About TableOfContents" modified="20230326233247998" title="$:/StoryList">
+<div created="20230412201716443" list="[[Fohhn EasyPort FP1 plus repair]] About TableOfContents" modified="20230412201716443" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14091,7 +14091,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230329000749079" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20230412204757069" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -19681,7 +19681,7 @@ development software:
 * &quot;nebelfluid feuerwehr extra&quot;
 </pre>
 </div>
-<div created="20220604003352250" modified="20230310012145346" tags="[[current projects]] [[PA repairs]]" title="Fohhn EasyPort FP1 plus repair">
+<div created="20220604003352250" modified="20230414010457920" tags="[[current projects]] [[PA repairs]]" title="Fohhn EasyPort FP1 plus repair">
 <pre>!! Problems:
 
 * missing wireless microphone AKG WMS80 HT80
@@ -19713,19 +19713,29 @@ Chips
 
 * main pcb
 ** TDA1560Q - 40W (@8Ohm) class-H/B/AB power amplifier
-** KA7815 - 1A voltage regulator
 *** https://www.alldatasheet.com/datasheet-pdf/pdf/19229/PHILIPS/TDA1560Q.html
+** KA7815 - 1A voltage regulator
+*** https://www.alldatasheet.com/datasheet-pdf/pdf/99451/FAIRCHILD/KA7815.html
 ** mc33079n - low noise quad opamp
-** TL072CN - low-noise jfet dual opamp
-** TL074CN - low noise jfet quad opamp
+*** https://www.st.com/resource/en/datasheet/mc33079.pdf
 ** TL071CN - low noise jfet single opamp
+*** 
+** TL072CN - low-noise jfet dual opamp
+*** 
+** TL074CN - low noise jfet quad opamp
+*** 
 ** CA3140E -  4.5MHz, BiMOS Operational Amplifier with MOSFET Input/Bipolar Output 
 ** NE5534P - low noise opamp
 ** BUZ11 - n-channel mosfet
+*** https://www.alldatasheet.com/datasheet-pdf/pdf/22129/STMICROELECTRONICS/BUZ11.html
 ** BD237 - npn power transistor
+*** https://www.st.com/resource/en/datasheet/bd237.pdf
 ** 6 smaller transistors
-*** C546B
-** 4 1n4007 diodes
+*** 3x C546B
+*** C557B
+*** 2x bc 557b
+*** 
+** 4x 1n4007 diodes
 
 
 medium speed 10A 250V sand filled 20x5mm fuse
@@ -19755,6 +19765,7 @@ original battery:
 * sealed lead-acid
 * lasts for 6-12h (speech/music)
 * 135x67x6mm (body without connectors)
+* 10A M Fuse
 
 options
 
