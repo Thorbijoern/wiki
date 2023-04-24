@@ -1191,6 +1191,8 @@ Error message and password prompt
 
 <li>Draft of 'Fohhn EasyPort FP1 plus repair'</li>
 
+<li>Draft of 'Soundboks Batteryboks repair'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13086,7 +13088,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230419113031915" list="Lithium [[Draft of 'Fohhn EasyPort FP1 plus repair']] Arbeit [[Nabendynamo reparatur / aufbau]] [[Lotte Reparaturen]] [[reverse engineering of electric cargo bike electronics]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] About TableOfContents" modified="20230424223532839" title="$:/StoryList">
+<div created="20230419113031915" list="[[Soundboks Internals (Teardown)]] [[Draft of 'Soundboks Batteryboks repair']] [[Draft of 'Fohhn EasyPort FP1 plus repair']] Arbeit [[Nabendynamo reparatur / aufbau]] [[Lotte Reparaturen]] [[reverse engineering of electric cargo bike electronics]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] About TableOfContents" modified="20230424225730991" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14103,8 +14105,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230424223531308" modifier="Thorbijoern" title="$:/temp/search">
-<pre>lithium</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230424225712253" modifier="Thorbijoern" title="$:/temp/search">
+<pre>soundbo</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18364,7 +18366,7 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220604003352250" draft.of="Fohhn EasyPort FP1 plus repair" draft.title="Fohhn EasyPort FP1 plus repair" modified="20230424223459630" tags="[[current projects]] [[PA repairs]]" title="Draft of 'Fohhn EasyPort FP1 plus repair'">
+<div created="20220604003352250" draft.of="Fohhn EasyPort FP1 plus repair" draft.title="Fohhn EasyPort FP1 plus repair" modified="20230424225500313" tags="[[current projects]] [[PA repairs]]" title="Draft of 'Fohhn EasyPort FP1 plus repair'">
 <pre>!! Problems:
 
 * missing wireless microphone AKG WMS80 HT80
@@ -18449,7 +18451,20 @@ It seems the original is a special size. I don't want to buy a new lead-acid bat
 
 I decided to open the old battery, gut its contents and reuse the case for ~LiFePO4 cells.
 The internal dimensions are: ~ 115x60x45mm
-I tried finding new cells but it's challenging. The </pre>
+I tried finding new cells but it's challenging. The common battery sizes 18650, 32700, 26700, 33140, 60200, 46160</pre>
+</div>
+<div created="20220702220539139" draft.of="Soundboks Batteryboks repair" draft.title="Soundboks Batteryboks repair" modified="20230424225726450" tags="[[current projects]] repairs" title="Draft of 'Soundboks Batteryboks repair'">
+<pre>someone wanted their battery for the soundboks repaired, it wasn't charging anymore.
+
+I opened it up, the design is ok, best thing is that the case is screwed together and not glued or so.
+the battery is a pretty standard 12V ~LiFePO4 pack, 4s2p (4x 2 parallel cells in series).
+
+all cells were dead and had no voltage, i was able to revive 3 of the 4 parallel pairs of cells, but one pair was not holding any charge, it quickly discharged.
+
+i agreed with the owner to look for new cells that fit into the case when i got time.
+
+i haven't looked at the bms jet, but it has a state of charge indicator and balancing.
+the label on the case indicates it jas data communication, maybe something like: https://www.maximintegrated.com/en/products/power/battery-management/battery-fuel-gauges.html/tab1?fam=batt_stat&amp;node=13600&amp;374=OR%7C1-Wire&amp;152=OR%7C1-10%20Cell%20Li-Ion%7C2-4%20Cell%20Li-Ion%7CMulti-Cell%20Li-Ion</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -30105,13 +30120,14 @@ i agreed with the owner to look for new cells that fit into the case when i got 
 i haven't looked at the bms jet, but it has a state of charge indicator and balancing.
 the label on the case indicates it jas data communication, maybe something like: https://www.maximintegrated.com/en/products/power/battery-management/battery-fuel-gauges.html/tab1?fam=batt_stat&amp;node=13600&amp;374=OR%7C1-Wire&amp;152=OR%7C1-10%20Cell%20Li-Ion%7C2-4%20Cell%20Li-Ion%7CMulti-Cell%20Li-Ion</pre>
 </div>
-<div created="20200514144908281" modified="20220704230549368" tags="Soundsystem" title="Soundboks Internals (Teardown)">
+<div created="20200514144908281" modified="20230424225753906" tags="Soundsystem" title="Soundboks Internals (Teardown)">
 <pre>* Teardown: https://www.youtube.com/watch?v=WYk2dAuHJWo (Russian?)
 * https://www.soundboks.com/de/products/soundboks-2/techspecs/
 * https://www.soundboks.com/products/soundboks-2/techspecs/
 * https://www.soundboks.com/products/new-soundboks/compare/
 * https://github.com/alexgorbatchev/boominator
 * https://www.diyaudio.com/forums/class-d/104402-boominator-stab-ultimate-party-machine.html
+* see [[Soundboks Batteryboks repair]]
 
 tecspecs:
 
