@@ -1189,8 +1189,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of 'Fohhn EasyPort FP1 plus repair'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13086,7 +13084,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230419113031915" list="[[Soundboks Internals (Teardown)]] [[Soundboks Batteryboks repair]] [[Draft of 'Fohhn EasyPort FP1 plus repair']] Arbeit [[Nabendynamo reparatur / aufbau]] [[Lotte Reparaturen]] [[reverse engineering of electric cargo bike electronics]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] About TableOfContents" modified="20230424225730991" title="$:/StoryList">
+<div created="20230419113031915" list="[[Soundboks Internals (Teardown)]] [[Soundboks Batteryboks repair]] [[Fohhn EasyPort FP1 plus repair]] Arbeit [[Nabendynamo reparatur / aufbau]] [[Lotte Reparaturen]] [[reverse engineering of electric cargo bike electronics]] [[Schenker VIA 15 Pro Power Supply/Battery Problems]] About TableOfContents" modified="20230424225730991" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -18364,93 +18362,6 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220604003352250" draft.of="Fohhn EasyPort FP1 plus repair" draft.title="Fohhn EasyPort FP1 plus repair" modified="20230424225500313" tags="[[current projects]] [[PA repairs]]" title="Draft of 'Fohhn EasyPort FP1 plus repair'">
-<pre>!! Problems:
-
-* missing wireless microphone AKG WMS80 HT80
-* accoustic foam disintegrates, needs replacement
-* lead-acid battery is pretty dead
-** 12V 3.4Ah(/20h) (Panasonic LC-R123R4PG)
-** dampening foam used so the battery doesn't rattle turned into sticky sludge - needs annoying removal
-** maybe replace with lifepo4 instead of lead-acid?
-* heat sink pads and thermal paste need replacement
-* drops out at high volume -&gt; probably just the dead battery and dropping out due to low voltage or the amp chip running into protect mode due to low voltage or insufficient heat sinking
-
-!! Documentation:
-
-* https://www.akg.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw17dccf51/pdfs/WMS80_manual.pdf
-* https://www.manualslib.com/products/Fohhn-Easyport-Fp1-Plus-6033799.html
-** https://www.manualslib.de/manual/16309/Fohhn-Easyport-Fp-1-Plus.html?page=3#manual
-
-!! Internals:
-
-Parts
-
-* AKG WMS80 SR80 PCB
-* FP1 main PCB &quot;FP1 412 100 / 9907
-* input/output pcb
-* woofer 8 Ohms
-* motorola piezo tweeter
-
-Chips
-
-* main pcb
-** TDA1560Q - 40W (@8Ohm) class-H/B/AB power amplifier
-** KA7815 - 1A voltage regulator
-*** https://www.alldatasheet.com/datasheet-pdf/pdf/19229/PHILIPS/TDA1560Q.html
-** mc33079n - low noise quad opamp
-** TL072CN - low-noise jfet dual opamp
-** TL074CN - low noise jfet quad opamp
-** TL071CN - low noise jfet single opamp
-** CA3140E -  4.5MHz, BiMOS Operational Amplifier with MOSFET Input/Bipolar Output 
-** NE5534P - low noise opamp
-** BUZ11 - n-channel mosfet
-** BD237 - npn power transistor
-** 6 smaller transistors
-*** C546B
-** 4 1n4007 diodes
-
-
-medium speed 10A 250V sand filled 20x5mm fuse
-
-!! Repairs
-
-!!! new AKG HT80 Mic
-
-searched and found a used AKG WMS80 set with HT80 Mic, i ended up buying all 4 sets of WMS80 for just 5€ more than one set from the seller. read more here: [[AKG WMS80 Sets repair]]
-
-!!! front acoustic foam replacement
-
-* removed old acoustic foam
-* removed Fohhn logo from foam
-** was placed 2cm from the bottom of the mesh
-* removed glue leftovers from the mesh
-* the foam is a bit curved so it is ~7mm thick at the left and right edges and 1,5cm in the middle, but i've got a perfectly fine leftover 12mm thick foam piece from a friend and i don't care enough about the foam.
-
-
-
-!!! lead-acid battery replacement
-
-original battery:
-
-* 12V 3.4Ah (/20h)
-* Panasonic LC-R123R4PG
-* sealed lead-acid
-* lasts for 6-12h (speech/music)
-* 135x67x60?mm (body without connectors)
-
-options
-
-* just replace with new sealed lead-acid with same dimensions
-* replace with ~LiFePO4 battery, maybe with higher capacity
-
-i checked if there are empty cases available to assemble your own lithium batteries or if there are prebuild ones available in the right size. But the closest matching size is 150x65x96cm which is to big.
-It seems the original is a special size. I don't want to buy a new lead-acid battery even if that is the easiest option.
-
-I decided to open the old battery, gut its contents and reuse the case for ~LiFePO4 cells.
-The internal dimensions are: ~ 115x60x45mm
-I tried finding new cells but it's challenging. The common battery sizes 18650, 32700, 26700, 33140, 60200, 46160</pre>
-</div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -19872,7 +19783,7 @@ I changed the parts out, reassembled the lamp and tested it. The lamp is working
 * &quot;nebelfluid feuerwehr extra&quot;
 </pre>
 </div>
-<div created="20220604003352250" modified="20230310012145346" tags="[[current projects]] [[PA repairs]]" title="Fohhn EasyPort FP1 plus repair">
+<div created="20220604003352250" modified="20230426083914229" tags="[[current projects]] [[PA repairs]]" title="Fohhn EasyPort FP1 plus repair">
 <pre>!! Problems:
 
 * missing wireless microphone AKG WMS80 HT80
@@ -19945,13 +19856,24 @@ original battery:
 * Panasonic LC-R123R4PG
 * sealed lead-acid
 * lasts for 6-12h (speech/music)
-* 135x67x6mm (body without connectors)
+* 135x67x60?mm (body without connectors)
+* https://www.pro-akkus.de/panasonic-lc-r123r4pg-12v-3-4ah-blei-akku-agm-batterie-vds-zulassung
 
 options
 
 * just replace with new sealed lead-acid with same dimensions
-* replace with LiFePO4 battery, maybe with higher capacity
-</pre>
+* replace with ~LiFePO4 battery, maybe with higher capacity
+
+i checked if there are empty cases available to assemble your own lithium batteries or if there are prebuild ones available in the right size. But the closest matching size is 150x65x96cm which is to big.
+It seems the original is a special size. I don't want to buy a new lead-acid battery even if that is the easiest option.
+
+I decided to open the old battery, gut its contents and reuse the case for ~LiFePO4 cells.
+The internal dimensions are: ~ 115x60x45mm
+I tried finding new cells but it's challenging. The common battery sizes 18650, 32650, 32700, 26700, 32113, 33140, 60200, 46160
+
+pouch:
+
+* 136 x 82 x 11 mm</pre>
 </div>
 <div created="20211128231837597" modified="20220808182808714" tags="" title="force save">
 <pre>https://www.justinmind.com/blog/awesome-lorem-ipsum-alternatives/
