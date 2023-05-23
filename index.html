@@ -2045,6 +2045,8 @@ Error message and password prompt
 
 <li>schematics</li>
 
+<li>schenker via 15 pro gpu probleme</li>
+
 <li>Schenker VIA 15 Pro Power Supply/Battery Problems</li>
 
 <li>schmiermittel</li>
@@ -13100,7 +13102,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230516233137880" list="[[schweißen, welding]] [[metal stuff]] [[(wire) EDM CNC]] [[Tolerade/Tolerave Lichtelemente]] [[Kärcher WD3.230 repair]] Werkstadtpirat:innen [[keys, locks (schlüssel, schlösser)]] [[Fohhn EasyPort FP1 plus repair]] About TableOfContents" modified="20230521001619690" title="$:/StoryList">
+<div created="20230523193225661" list="[[schenker via 15 pro gpu probleme]] [[schweißen, welding]] About TableOfContents" modified="20230523193240635" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14114,8 +14116,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230521001618058" modifier="Thorbijoern" title="$:/temp/search">
-<pre>wig</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230523193252253" modifier="Thorbijoern" title="$:/temp/search">
+<pre>schenker</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -28679,6 +28681,42 @@ at last `raspi-config` has to be run and in the interfacing the serial interface
 <div created="20230519221813489" modified="20230519222012003" tags="repairs [[electronics knowledge]]" title="schematics">
 <pre>* [[ How To Read Schematics 3. Learn How To Understand Circuit Diagrams |https://www.youtube.com/watch?v=OirYfphm7nI]]
 * </pre>
+</div>
+<div created="20230523193256208" modified="20230523193322180" tags="" title="schenker via 15 pro gpu probleme">
+<pre>
+```
+Mai 23 21:07:09 snowmew kernel: [drm:amdgpu_job_timedout [amdgpu]] *ERROR* ring gfx_low timeout, signaled seq=29351270, emitted seq=29351273
+Mai 23 21:07:09 snowmew kernel: [drm:amdgpu_job_timedout [amdgpu]] *ERROR* Process information: process firefox pid 4261 thread firefox:cs0 pid 4371
+Mai 23 21:07:09 snowmew kernel: amdgpu 0000:04:00.0: amdgpu: GPU reset begin!
+Mai 23 21:07:12 snowmew kernel: [drm] psp gfx command UNLOAD_TA(0x2) failed and response status is (0x0)
+Mai 23 21:07:12 snowmew kernel: [drm:psp_suspend [amdgpu]] *ERROR* Failed to terminate hdcp ta
+Mai 23 21:07:12 snowmew kernel: [drm:amdgpu_device_ip_suspend_phase2 [amdgpu]] *ERROR* suspend of IP block &lt;psp&gt; failed -22
+Mai 23 21:07:12 snowmew kernel: amdgpu 0000:04:00.0: amdgpu: MODE2 reset
+Mai 23 21:07:12 snowmew kernel: amdgpu 0000:04:00.0: amdgpu: GPU reset succeeded, trying to resume
+Mai 23 21:07:12 snowmew kernel: [drm] PCIE GART of 1024M enabled.
+Mai 23 21:07:12 snowmew kernel: [drm] PTB located at 0x000000F41FC00000
+Mai 23 21:07:12 snowmew kernel: [drm] PSP is resuming...
+Mai 23 21:07:13 snowmew kernel: [drm:psp_hw_start [amdgpu]] *ERROR* PSP create ring failed!
+Mai 23 21:07:13 snowmew kernel: [drm:psp_resume [amdgpu]] *ERROR* PSP resume failed
+Mai 23 21:07:13 snowmew kernel: [drm:amdgpu_device_fw_loading [amdgpu]] *ERROR* resume of IP block &lt;psp&gt; failed -62
+Mai 23 21:07:13 snowmew kernel: amdgpu 0000:04:00.0: amdgpu: GPU reset(2) failed
+Mai 23 21:07:13 snowmew kernel: amdgpu 0000:04:00.0: amdgpu: GPU reset end with ret = -62
+Mai 23 21:07:13 snowmew kernel: [drm:amdgpu_job_timedout [amdgpu]] *ERROR* GPU Recovery Failed: -62
+Mai 23 21:07:13 snowmew kernel: [drm] Skip scheduling IBs!
+Mai 23 21:07:13 snowmew kernel: [drm] Skip scheduling IBs!
+Mai 23 21:07:13 snowmew kernel: [drm] Skip scheduling IBs!
+Mai 23 21:07:13 snowmew kernel: [drm] Skip scheduling IBs!
+Mai 23 21:07:13 snowmew kernel: [drm] Skip scheduling IBs!
+Mai 23 21:07:13 snowmew kernel: [drm] Skip scheduling IBs!
+Mai 23 21:07:13 snowmew kernel: [drm] Skip scheduling IBs!
+Mai 23 21:07:13 snowmew kernel: [drm] Skip scheduling IBs!
+Mai 23 21:07:13 snowmew kernel: [drm] ring 0 timeout to preempt ib
+Mai 23 21:07:23 snowmew kernel: [drm:amdgpu_job_timedout [amdgpu]] *ERROR* ring gfx_high timeout, signaled seq=4649690, emitted seq=4649692
+Mai 23 21:07:23 snowmew kernel: [drm:amdgpu_job_timedout [amdgpu]] *ERROR* Process information: process gnome-shell pid 3327 thread gnome-shel:cs0 pid 3338
+Mai 23 21:07:23 snowmew kernel: amdgpu 0000:04:00.0: amdgpu: GPU reset begin!
+Mai 23 21:07:23 snowmew kernel: amdgpu 0000:04:00.0: amdgpu: Failed to disallow df cstate
+```
+</pre>
 </div>
 <div created="20220808223445153" modified="20230419125402110" tags="" title="Schenker VIA 15 Pro Power Supply/Battery Problems">
 <pre>I seem to have problems with the embeded controller in my Schenker notebook, it seems to look up/bug/freeze and not allow charging. When i first had the problem the schenker support suggested updating the firmware, which solved the problem for some time, but it happened again.
