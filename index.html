@@ -13121,7 +13121,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230610120021574" list="[[diy speaker / audio Dummy Load / audio power amp load]] [[Sonnensystem Signalweg]] [[diy audio networking (AES67, etc.)]] [[testing batteries]] [[current projects]] [[PA repairs]] [[meine PA technik]] repairs [[audio repairs]] [[Behringer Ultradrive Pro DCX2496 repair 2 + XLR Mod]] [[professional manufacturers of audio hardware]] [[my equipment]] About TableOfContents" modified="20230612224551926" title="$:/StoryList">
+<div created="20230610120021574" list="[[Sonnensystem Signalweg]] [[testing batteries]] [[current projects]] About TableOfContents" modified="20230612224551926" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -30113,7 +30113,7 @@ _____
 * CAD model for isolationchecker and circuit breaker
 * ask local bussiness to donate needed parts</pre>
 </div>
-<div created="20220831000902777" modified="20230612224545478" tags="" title="Sonnensystem Signalweg">
+<div created="20220831000902777" modified="20230613211530645" tags="" title="Sonnensystem Signalweg">
 <pre>the whole signal chain of the current ~SoSy Setup has to be checked in order to get the best sound quality and as prerequisite to measuring the frequency response of the whole system.
 
 
@@ -30129,9 +30129,9 @@ _____
 
 check gain chain
 
-* http://neu.jobst-audio.de/tool/helfer/limiter-rechner
+* https://www.jobst-audio.de/tool/helfer/limiter-rechner
 
-!! inputs:
+! inputs:
 
 * yamaha mg06 (?)
 ** &quot;stereo out&quot; +4dBu (?)
@@ -30139,7 +30139,7 @@ check gain chain
 * xlr to unbalanced 6.3mm jack
 
 
-!! [[the t.racks DSP 4x4 Mini|the t.racks DSP 4x4 Mini reverse engineering]]
+! [[the t.racks DSP 4x4 Mini|the t.racks DSP 4x4 Mini reverse engineering]]
 
 * the gains, sensitivity and internal reference is a bit fucked up, the thomann reviews describe it pretty well it seems
 * the inputs and outputs don't seem to have overhead and clip sooner than given in the datasheet it seems
@@ -30161,9 +30161,10 @@ check gain chain
 
 * similar to the dsp 4x4 mini, but different
 * Thomann t.racks DS 2/4: +5dBu * maybe?
+* laut jobst: Thomann t.racks DS 2/4: 0dBu ** DSP senkt Pegel um 5dB ab
 
 
-!!amps
+!amps
 
 * sensitivity / gain?
 * 3x [[Eton POWER 450.2|https://eton-audio.com/verstaerker/power-450-2.html]]
@@ -30208,13 +30209,16 @@ des Systems an.
 
 * sowohl Lautstärke, Gain als auch Eingangs-Empfindlichkeit als bezeichnung für den regler
 * ich glaube der gain regler steht eigentlich für die empfindlichkeit. einstellbar von 500mV bis 6V.
-aber in welchen schritten, linear (easy) oder log?
+* aber in welchen schritten, linear (easy) oder log?
 * sicher gehen und mit messungen checken
+* 500mV bis 6V
 * 40 klicks bei dem regler?
-* 
+* 0,775V oder 1V standards?
+* benötige Eingangsempfindlichkeit, Leistung bei Impedanz und voltage gain oder sensitivity
+** gain kann aus leistung, sensitivity und impedance berechnet werden
 
 
-!! speakers
+! speakers
 
 impedance? power?
 
@@ -30225,7 +30229,184 @@ https://www.bs-tek.de/
 * 15&quot; subs
 * 21&quot; infas
 
-!! setups</pre>
+!! setups
+
+
+
+
+! notizen
+
+* https://t.me/onefunktion/71 - limiter berechnungen verstehen
+
+
+
+
+```
+##################################################################################
+```
+
+
+&lt;&lt;&lt;
+Tim | TurboTheSergal, [06.06.23 12:04]
+k.A welche empfindlichkeit die Stufen haben, sonst würde ich Mal berechnen was der limiter aktuell an Leistung wäre ������
+
+Tino, [06.06.23 12:05]
+Voltage Gain waere eine hilfreichere Angabe. Empfindlichkeit bezogen auf Ausgangsleistung ist immer eine totale Schaetzung
+
+Tim | TurboTheSergal, [06.06.23 12:06]
+Wenn man den wüsste würde ich den auch lieber zum rechnen nutzten
+
+Tino, [06.06.23 12:06]
+Kannste in 5 Minuten mit nem Multimeter rausfinden
+
+Tino, [06.06.23 12:08]
+einfach 50 Hz Sinusgenerator aufm Handy am Eingang auf max Lautstaerke abspielen, Multi im AC-Messmodus einmal an den input Link am XLR zwischen hot und cold um die Eingangsspannung zu messen und dann das Gleiche am Ausgang
+
+Tino, [06.06.23 12:08]
+Die Differenz als Faktor in dB umrechnen was auch recht ez ist
+
+Tino, [06.06.23 12:09]
+20*log(out/in)
+
+Tino, [06.06.23 12:12]
+Limiter berechnen ist essentiell wenn man irgendwie weiterkommen will, war anfangs auch zu faul
+
+Tino, [06.06.23 12:13]
+es hilft halt auch dem Verstandnis... mit nem simplen Peaklimiter laesst sich RMS allerdings nicht sinnvoll limitieren, ohne Headroom zu verschenken
+
+Tino, [06.06.23 12:13]
+Peak liegt eigentlich mind. 4 dB ueber RMS
+
+Tino, [06.06.23 12:13]
+Je nach Typ vielfach hoeher
+
+Tino, [06.06.23 12:14]
+RMS... ich meine halt thermische Belastbarkeit. Gibt viele Begriffe dafuer.
+
+Tim | TurboTheSergal, [06.06.23 12:19]
+Da komme ich bei der großen von den beiden Stufen auf 36,5691274
+
+Tim | TurboTheSergal, [06.06.23 12:35]
+Kleine sagt 11,6144387
+
+Tim | TurboTheSergal, [06.06.23 12:40]
+Aber um den limiter gut berechnen zu können brauche ich doch immer noch die eingangsempfindlichkeit... Anleitung finde ich zu den Endstufen nicht also keine Ahnung.
+
+Oder habe ich nen Dreher im Kopf
+
+Tim | TurboTheSergal, [06.06.23 12:52]
+Kann man die Empfindlichkeit irgendwie rausfinden ohne ein Datenblatt
+
+Tino, [06.06.23 12:52]
+Hoher Voltage Gain wow
+
+Tino, [06.06.23 12:52]
+Potis voll aufgedreht of course....?
+
+Tino, [06.06.23 12:53]
+Es gibt  schon Stufen mit bis 40 dB Voltage Gain, aber idR sind es 20 bis 36 oder so
+
+Tino, [06.06.23 12:53]
+Es sind ja nur Spannungsteiler, die hindern dich ja nich dran Vollgas zu geben
+
+Tino, [06.06.23 12:53]
+Das ist unrealistisch niedrig, Potis offen,...?
+
+Tino, [06.06.23 13:29]
+Naja war es Faktor 11 oder 11 dB?
+
+Tino, [06.06.23 13:30]
+waeren sonst ja so +21,3 dB
+
+Tino, [06.06.23 14:21]
+nur 11 dB ist super winzig, selbst Hifizeug hat um die 20 oder mehr
+
+Tim | TurboTheSergal, [06.06.23 17:18]
+So, dieses mal Beide Amps kurz vor Clipping (Laut eingebauter LED) gemessen...
+PA-1100 hat ergeben 38.107
+[ 20*log(53.8/0.669) ]
+
+PA-400 hat ergeben 31.440
+[ 20*log(19.56/0.524) ]
+
+Tim | TurboTheSergal, [06.06.23 17:23]
+Ohne Last btw... Oder muss das mit nem LS dran? Denn ich hätte nichts da was das volle Breitseite fressen würde.
+
+Tim | TurboTheSergal, [06.06.23 17:29]
+Mit Last könnte ich es nur mit einem minimalen Eingangssignal machen
+Edit: Endstufe immernoch Vollgas aber ausm Mixer minimal weil... Nachbarn
+
+Tino, [06.06.23 17:48]
+Die LED sagt halt verdammt wenig aus
+
+Tino, [06.06.23 17:48]
+das ist so ein grober Schätzkreis
+
+Tim | TurboTheSergal, [06.06.23 17:48]
+Ohne Oszi geht nicht viel mehr ������
+
+Tim | TurboTheSergal, [06.06.23 18:09]
+Aber mit oder ohne Last, was wäre jetzt richtig?
+
+Wenn's mit Last sein muss, ist das schlimm wenn's wenig Input vom Mischpult aus wäre und der gain beim amp trotzdem Vollgas ist?
+
+Tino, [06.06.23 20:18]
+Es gibt leider verschiedene Konzepte, nach denen Clipanzeigen funktionieren
+
+Tim | TurboTheSergal, [06.06.23 20:20]
+Bleibt der voltage gain bei geringem Eingangssignal gleich? Also am Mixer weniger Output, aber Endstufe Vollgas?
+
+Tim | TurboTheSergal, [06.06.23 20:20]
+Und die mit/ohne Last Frage steht auch noch
+
+Tim | TurboTheSergal, [06.06.23 20:37]
+Ansonsten Könnte ich das mitm clipping Per widerstand und REW Scope checken.
+
+Tino, [06.06.23 21:08]
+Natürlich
+
+Tino, [06.06.23 21:10]
+Der Voltage Gain ist einfach nur ein Faktor, welcher aussagt, wie viel höher als die Eingangsspannung – bei voll aufgedrehten Gain Pots – die Signalspannung an den Leistungsausgängen ist.
+
+Tino, [06.06.23 21:11]
+Das einzige, was den Faktor minimal beeinflussen kann, ist der Innenwiderstand der Endstufe, der hat aber nix mit der momentan abgegebenen Leistung zu tun sondern nur mit der angeschlossenen Lastimpedanz.
+
+Tino, [06.06.23 21:11]
+Also eigentlich musste keine Last anschließen. Würde sich der Voltage Gain dann relevant ändern, wäre dein Amp kaputt
+
+Tino, [06.06.23 21:14]
+Sobald es clippt verfälscht du das Ergebnis
+
+Tino, [06.06.23 21:14]
+Weil dann ja nur Ausgang clippt
+
+Tino, [06.06.23 21:14]
+Wodurch sich der Voltage Gain verringert
+
+Tim | TurboTheSergal, [07.06.23 10:42]
+So, Erledigt.
+Ich kam jetzt auf folgende werte.
+PA-400:
+20*log(10.48/0.28) = 31.464
+PA-1100
+20*log(10.86/0.28) = 31.773
+
+Für mich sehen sie so etwas realistischer aus.
+
+Tim | TurboTheSergal, [07.06.23 10:49]
+Zu der PA-400 Habe ich mittlerweile die Eingangsempfindlichkeit gefunden, die ist nicht umschaltbar und bei 1V
+
+EDIT: Der Jobsti Eingangsempfindlichkeit Rechner sagt mir allerdings das bei 110W @ 8 Ohm und 31.464db Gain eine Eingangsempfindlichkeit von 0.793 rauskommt. Es kann halt auch sein das das ausm Rechner richtig is da ich die Eingangsempfindlichkeit nicht aus einer Anleitung sondern nur eines Erfahrungsbericht auf irgendeinem schon lange toten forum gesehen hatte.
+
+EDIT 2: Der Jobsti Rechner sagt zur PA-1100 eine Eingangsempfindlichkeit von 1.345V. Also denke ich mal das im datenblatt bei den endstufen damals bei der 400er 0.775 drinne stand und bei der 1100er 1.4 drinne stand
+
+Tino, [07.06.23 16:10]
+Ja, das ist absolut realistisch
+
+Tino, [07.06.23 16:11]
+Denke es sind offiziell 32 dB Amps so wie die meisten.
+&lt;&lt;&lt;
+</pre>
 </div>
 <div created="20210126004435980" modified="20220528164150776" tags="Audio" title="sound (physics) basics">
 <pre>* https://www.physicsclassroom.com/class/sound
