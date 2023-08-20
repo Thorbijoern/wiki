@@ -12744,8 +12744,8 @@ TableOfContents</pre>
 <div created="20200512220852592" modified="20220810231345988" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Drafts</pre>
 </div>
-<div created="20200512220838244" modified="20230820144042774" title="$:/state/tab/sidebar--595412856">
-<pre>TableOfContents</pre>
+<div created="20200512220838244" modified="20230820212740706" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200512221049529" modified="20200512221054204" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -33592,7 +33592,7 @@ stuff
 * [[3D Print a Modular Toolbox, Soldering Station, and More!|https://www.youtube.com/watch?v=Bd4NnHvTRAY]]
 * https://www.youtube.com/results?search_query=adam+savage+organization</pre>
 </div>
-<div created="20230820174716789" modified="20230820212730974" tags="[[light / projection / visuals]]" title="WS2811 (ws2812) high power modules">
+<div created="20230820174716789" modified="20230820221834938" tags="[[light / projection / visuals]]" title="WS2811 (ws2812) high power modules">
 <pre>i can get some very small PAR-Type lamps from someone. these are designed to accept 12V halogen bulbs that just clip in.
 we suspect they were originally used in series to run them with 230V.
 
@@ -33671,7 +33671,65 @@ driving high power LEDs
 * https://de.aliexpress.com/item/4000154187480.html - other ws chips?
 * https://electronics.stackexchange.com/questions/543244/control-a-3w-rgb-led-with-an-arduino
 * https://www.onsemi.com/pdf/datasheet/cat4103-d.pdf
-* https://www.tindie.com/products/antonveretenenko/mini-constant-current-led-driver/</pre>
+* https://www.tindie.com/products/antonveretenenko/mini-constant-current-led-driver/
+
+notes
+
+&lt;&lt;&lt;
+snjor kÃ¶ttr, [20.08.23 21:15]
+kann mir jemensch von euch tipps geben wie ich am besten 3W, 6W oder so RGB LEDs mit strom versorge?
+schalten/dimmen will ich die einfach mit mosfets angesteuert vom microcontroller oder ws2811, aber ich bin mir unsicher wie ich die am besten mit strom versorge.
+ich brÃ¤uchte ja im grunde fÃ¼r jeden channel bzw. jeden led chip eine eigene strombegrenze versorgung, oder?
+oder habt ihr ideen wie ichs am besten machen kÃ¶nnte?
+
+Ennar í ¼í·©í ¼í·ª/ í ¼í·¬í ¼í·§, [20.08.23 22:03]
+n dedizierter LED-Treiber mit PWM/Analogeingang ist da besser geeignet als diskrete MOSFETs
+
+die haben alles an Board, inklusive Schutzbeschalten gegen internes Ãœberhitzen und ESD
+
+http://www.h-tronic.com/Presse/download/HV9910datasheet.pdf
+
+so was hatten wir mal in der alten Firma in mehreren Produkten drin, geht ziemlich gut. Braucht allerdings einen externen FET, gibt so was auch mit internem FET
+
+snjor kÃ¶ttr, [20.08.23 23:16]
+hmm... ich Ã¼berlege aber ob ich ws2812 artige ansteuerung mÃ¶chte, weil das unsere anderen lampen schon nutzen
+
+Ennar í ¼í·©í ¼í·ª/ í ¼í·¬í ¼í·§, [20.08.23 23:17]
+du kannst natÃ¼rlich den WS-Chip zur Ansteuerung benutzen, nur dass dann die PWM AusgÃ¤nge nicht direkt an LEDs gehen
+
+snjor kÃ¶ttr, [20.08.23 23:56]
+klar, halt mit mosfets dazwischen
+
+meine original frage war aber bzgl. wie ich dann die CC stromversorgung verschalten mÃ¼sste/kann?
+ich mÃ¼sste dann ja fÃ¼r jeden kanal eine eigene CC versorgung haben, oder?
+
+Ennar í ¼í·©í ¼í·ª/ í ¼í·¬í ¼í·§, [21.08.23 00:02]
+ja, steuerbar
+
+oder eine zentrale CC Quelle und die LEDs nie gleichzeitig betreiben
+
+so hat Philips das mal mit einer Hue-Leuchte gemacht
+
+snjor kÃ¶ttr, [21.08.23 00:08]
+was meinst du mit steuerbar?
+
+Ennar í ¼í·©í ¼í·ª/ í ¼í·¬í ¼í·§, [21.08.23 00:08]
+dass du die CC extern steuern kannst
+
+snjor kÃ¶ttr, [21.08.23 00:09]
+warum? wenn ich schon den ws2811 habe zum steuern?
+
+Ennar í ¼í·©í ¼í·ª/ í ¼í·¬í ¼í·§, [21.08.23 00:09]
+...der dann die CC Quellen steuert
+
+du solltest lieber nicht versuchen, das CC von extern mit PWM zu unterbrechen. Das kann die Regelung durcheinander bringen. Lieber eine CC Quelle nehmen, die von extern durch irgendein Signal (analog oder PWM) gesteuert werden kann
+
+snjor kÃ¶ttr, [21.08.23 00:11]
+achso... also CCs mit PWM input der mit der schaltfrequenz der ws2811 kompatibel ist... daran habe ich noch nicht gedacht
+
+muss ich dann bei gelegenheit mal schauen ob das geht, wÃ¼rde das ganze natÃ¼rlich nochmal um einiges vereinfachen
+&lt;&lt;&lt;
+</pre>
 </div>
 <div created="20200614215940118" modified="20221106202008338" tags="[[My Setup]]" title="xdotool on fedora wayland">
 <pre>not possible because of limitations in wayland (security). xdotool was written for xorg, you could change to that or use other tools.
