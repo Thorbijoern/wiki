@@ -1209,6 +1209,10 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of ' 1'</li>
+
+<li>Draft of 'WS2811 (ws2812) high power modules'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13153,7 +13157,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230820132021994" list="[[LED Driver (constant current)]] [[WS2811 (ws2812) high power modules]] Werkstadtpirat:innen [[Metallwerkstatt / metal diy]] About TableOfContents" modified="20230820195242993" title="$:/StoryList">
+<div created="20230820132021994" list="[[Draft of ' 1']] [[LED Driver (constant current)]] [[Draft of 'WS2811 (ws2812) high power modules']] Werkstadtpirat:innen [[Metallwerkstatt / metal diy]] About TableOfContents" modified="20230820195242993" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14167,8 +14171,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230820195309531" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230820203247123" modifier="Thorbijoern" title="$:/temp/search">
+<pre>dmx</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18631,6 +18635,74 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
+</div>
+<div created="20230820203654438" draft.of=" 1" draft.title="great led stuff, pixel and co" modified="20230820204105733" tags="[[light / projection / visuals]]" title="Draft of ' 1'">
+<pre>* https://www.nledshop.com/products/
+
+dmx to pixel
+
+* https://www.nledshop.com/pixelmicro
+* https://www.ebay.com/itm/133304110552</pre>
+</div>
+<div created="20230820174716789" draft.of="WS2811 (ws2812) high power modules" draft.title="WS2811 (ws2812) high power modules" modified="20230820203503003" tags="[[light / projection / visuals]]" title="Draft of 'WS2811 (ws2812) high power modules'">
+<pre>i can get some very small PAR-Type lamps from someone. these are designed to accept 12V halogen bulbs that just clip in.
+we suspect they were originally used in series to run them with 230V.
+
+I want to convert them to RGB LEDs.
+
+using a ws2811 would be an easy and cheap way to control the LEDs. ordinary Ws2812 LEDs don't have a lot of power and you can only fit so much 5050 smd chips inside these mini PAR cans.
+So I want to try and use 3W or higher power LED chips.
+
+maybe not only rgb (ws2811) but also rgbw or so (sk6812)?
+
+there are a few commercial modules available, but buying them is not easy because they are out of stock or the sellers don't ship to germany (or shipping would be expensive).
+
+* 
+* https://www.ebay.com/itm/143566018541
+
+there are a few questions/posts on the net on how to drive mosfets with the ws2811 chips
+
+* https://electronics.stackexchange.com/questions/649439/ws2811-mosfet-driver-components-help
+* https://forum.arduino.cc/t/ws2811-mosfet-driver-alternative-components-help/1075281
+* https://forum.arduino.cc/t/ws2811-high-power-driver/1114493?page=2
+* https://nootropicdesign.com/projectlab/2016/05/21/individually-addressable-incandescent-lamps/
+* https://forums.adafruit.com/viewtopic.php?t=44670
+* https://forum.arduino.cc/t/ws2811-led-analog-strip-controller/248937
+* https://community.element14.com/technologies/experts/f/forum/46839/help-using-ws2811-to-drive-12v-rgb-led-strip
+
+a great company making their design public
+
+* https://www.freetronics.com.au/products/addressable-n-mosfet-driver-output-module
+* https://www.freetronics.com.au/products/addressable-triple-n-mosfet-driver-output-module
+* schematic: https://cdn.shopify.com/s/files/1/0045/8932/files/FREENFET-v1_0-schematic.pdf?15966285591977644917
+* https://www.freetronics.com.au/pages/freenfet-quickstart-guide
+* https://forum.arduino.cc/t/ws2811-mosfet-driver-alternative-components-help/1075281
+* https://electronics.stackexchange.com/questions/649439/ws2811-mosfet-driver-components-help
+
+driving high power LEDs
+
+* [[LED Driver (constant current)]]
+* https://www.youtube.com/watch?v=JOqSCbm9G0c
+* https://www.youtube.com/watch?v=rib9GeZvjU4
+* https://www.youtube.com/watch?v=piET0Biqo0I
+* https://www.youtube.com/watch?v=A64kpzhzlqI
+* https://www.youtube.com/watch?v=rDkP97-BHXI
+* https://www.youtube.com/watch?v=2ojNDKIScpI
+* https://www.youtube.com/watch?v=WSpkLsp_9_o
+** https://www.infineon.com/cms/en/product/power/lighting-ics/linear-led-driver-ic/bcr421u/
+** https://www.infineon.com/cms/en/product/power/lighting-ics/linear-led-driver-ic/bcr420u/
+* aliexpress
+** &quot;dmx led constant&quot;
+** &quot;led constant current 3 channel&quot;
+*** https://de.aliexpress.com/item/1005005450523131.html
+*** https://de.aliexpress.com/item/1005005069916507.html
+*** https://de.aliexpress.com/item/1005003917892363.html
+*** https://de.aliexpress.com/item/1005005069991618.html
+*** https://de.aliexpress.com/item/1005005769194518.html
+* https://de.aliexpress.com/item/4000154187480.html - other ws chips?
+* https://electronics.stackexchange.com/questions/543244/control-a-3w-rgb-led-with-an-arduino
+* https://www.onsemi.com/pdf/datasheet/cat4103-d.pdf
+* https://www.tindie.com/products/antonveretenenko/mini-constant-current-led-driver/</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
