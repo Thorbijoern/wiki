@@ -17261,7 +17261,7 @@ high switching noise, probably dead electrolytic caps
 <pre>* https://www.plugsocketmuseum.nl/index.html - Digital Museum of Plugs and Sockets
 * &quot;stecker wasserdicht luftfahrt&quot;</pre>
 </div>
-<div created="20230819214208758" modified="20230819220649290" tags="[[audio repairs]] [[radio stuff / funk kram]]" title="conrad renkforce LB-508 cheap wireless mic system repair">
+<div created="20230819214208758" modified="20230820125252521" tags="[[audio repairs]] [[radio stuff / funk kram]]" title="conrad renkforce LB-508 cheap wireless mic system repair">
 <pre>problem: no audio output from the receiver
 
 internals
@@ -17275,17 +17275,18 @@ internals
 ** hk 24c02 - 2 kbit eprom for the wireless settings
 ** UTC4558 - dual opamp - https://www.alldatasheet.com/datasheet-pdf/pdf/1154494/YOUWANG/UTC4558.html
 ** 5V and 8V power supply
+** 1117 5V v-reg
 
+
+steps
 
 * receiver detects signal from wireless mics
 * i had one channel randomly working for a short time
 * was able to inject a signal to the output of the daughter boards and got output, the rest of the circuitry seems to work fine
 * some of the flimsy cables to the antennas or front panel already ripped of, I have to improve those. also the dc jack is crooked, i want to fix that too
 * power supply to the daughter boards seems fine
-
-next steps:
-
-* desolder the daughter boards fully and check them</pre>
+* desoldered the daughter boards fully and checked them
+** i think there is some short on the daughter boards, because components get pretty hot, was not able to identify them yet</pre>
 </div>
 <div created="20200802175507551" modified="20230127235834566" tags="[[power electronics (Leistungselektronik)]] [[light / projection / visuals]]" title="controlling lights, light hardware">
 <pre>* Q Light Controller+ - https://qlcplus.org/features.html
