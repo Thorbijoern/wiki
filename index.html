@@ -1029,6 +1029,8 @@ Error message and password prompt
 
 <li>cheap multi-device lab measurement/test devices/equipment</li>
 
+<li>cheap radio (funk) modules for microcontrollers</li>
+
 <li>chemistry</li>
 
 <li>chinese &quot;professional&quot; audio</li>
@@ -13151,7 +13153,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230820132021994" list="[[soap bubble machine/blower]] [[WS2811 (ws2812) high power modules]] Werkstadtpirat:innen [[Metallwerkstatt / metal diy]] About TableOfContents" modified="20230820144821406" title="$:/StoryList">
+<div created="20230820132021994" list="[[LED Matrix, panel]] [[soap bubble machine/blower]] [[WS2811 (ws2812) high power modules]] Werkstadtpirat:innen [[Metallwerkstatt / metal diy]] About TableOfContents" modified="20230820192352661" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14165,8 +14167,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230820144811461" modifier="Thorbijoern" title="$:/temp/search">
-<pre>werkst</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230820194914838" modifier="Thorbijoern" title="$:/temp/search">
+<pre>radio</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16874,6 +16876,24 @@ devices
 
 * Bode 100
 ** https://www.omicron-lab.com/products/vector-network-analysis/bode-100/#</pre>
+</div>
+<div created="20230820194917128" modified="20230820195142023" tags="[[radio stuff / funk kram]]" title="cheap radio (funk) modules for microcontrollers">
+<pre>433MHz
+
+* https://www.youtube.com/watch?v=Sfx0v42rD40&amp;pp=ygUMNDMzbWh6IHJhbmdl
+
+nRF24
+
+*
+
+LoRa
+
+*
+
+stuff
+
+* https://www.youtube.com/watch?v=nP6YuwNVoPU
+* https://www.youtube.com/watch?v=vxF1N9asjts</pre>
 </div>
 <div created="20210323163100138" modified="20210323163113722" tags="Science" title="chemistry">
 <pre>* https://chemrxiv.org/</pre>
@@ -22953,7 +22973,7 @@ the 150mA are reached at around 19,3V
 as replacement i've ordered a 20W Driver that outputs 21-38V at 600mA. That doesn't drive the LEDs at full power, but that prolonges the life of the LEDs. They got pretty hot at 150mA.
 I had to rewire the whole lamp so all modules are in parallel, but it works.</pre>
 </div>
-<div created="20220821142329941" modified="20230108222639599" tags="[[light / projection / visuals]]" title="LED Matrix, panel">
+<div created="20220821142329941" modified="20230820195148350" tags="[[light / projection / visuals]]" title="LED Matrix, panel">
 <pre>* 16x16 ws2812b matrix penels can be found at aliexpress from 13€
 * 8x8 or 8x32 is also pretty common
 * adafruit has some, but they are more expensive
@@ -22962,7 +22982,14 @@ I had to rewire the whole lamp so all modules are in parallel, but it works.</pr
 stuff
 
 * [[ Driving hub75 LED panels. (including free test software)|https://www.youtube.com/watch?v=_dB1w99AwGE]]
-* [[Inside the Project MC2 video purse. (Actual video wall panel!) |https://www.youtube.com/watch?v=CyLCwa2mneY]]</pre>
+* [[Inside the Project MC2 video purse. (Actual video wall panel!) |https://www.youtube.com/watch?v=CyLCwa2mneY]]
+* https://github.com/2dom/PxMatrix
+** https://www.arduino.cc/reference/en/libraries/pxmatrix-led-matrix-library/
+** [[ PxMatrix on ESP32 driving 64x64 RGB LED matrix |https://www.youtube.com/watch?v=Kw1oYAoJP4s]]
+* https://github.com/adafruit/Adafruit-GFX-Library
+** https://learn.adafruit.com/adafruit-gfx-graphics-library/overview
+* https://github.com/mrfaptastic/ESP32-HUB75-MatrixPanel-DMA
+* https://www.youtube.com/watch?v=mF9df4QYprU</pre>
 </div>
 <div created="20210425205159659" modified="20221019003331343" tags="[[Audio Projects]] [[Software stuff]]" title="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station">
 <pre>netbook with a weird old Atom N270, i686 instruction set, not much power, 2GB RAM... enough to use for playing audio
