@@ -1211,6 +1211,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of 'Konglomerat 2.5D wood CNC repair'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13157,7 +13159,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230822085753733" list="[[(wire) EDM CNC]] [[Metallwerkstatt / metal diy]] Werkstadtpirat:innen [[WS2811 (ws2812) high power modules]] [[electronics thermal management, heat sinking, cooling, kühlung]] [[bluetooth/BLE debugging/recording/sniffing/reverse engineering]] About TableOfContents" modified="20230822090012184" title="$:/StoryList">
+<div created="20230822085753733" list="[[CNC mill / router]] [[Draft of 'Konglomerat 2.5D wood CNC repair']] [[(wire) EDM CNC]] [[Metallwerkstatt / metal diy]] Werkstadtpirat:innen [[WS2811 (ws2812) high power modules]] [[electronics thermal management, heat sinking, cooling, kühlung]] [[bluetooth/BLE debugging/recording/sniffing/reverse engineering]] About TableOfContents" modified="20230823225133349" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14171,8 +14173,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230822090010224" modifier="Thorbijoern" title="$:/temp/search">
-<pre>edm</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230823225121856" modifier="Thorbijoern" title="$:/temp/search">
+<pre>cnc</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -17081,7 +17083,7 @@ hypex electronics
 * [[Solar / renewable energy]]
 * don't use sand</pre>
 </div>
-<div created="20210805115445466" modified="20230108215949326" tags="tools" title="CNC mill / router">
+<div created="20210805115445466" modified="20230823225210962" tags="tools" title="CNC mill / router">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
 * https://lcamtuf.coredump.cx/gcnc/ - Guerrilla guide to CNC machining, mold making, and resin casting
@@ -17102,6 +17104,11 @@ hypex electronics
 * https://wiki.opensourceecology.de/Maker%27s_Mill
 * https://wiki.opensourceecology.de/Bohrautomat
 * [[ OPEN-CNC-Shield 2 Überblick - Anschlüsse - Module - Funktionen |https://www.youtube.com/watch?v=Jcu9nbrWOIc]]
+
+open source controller
+
+* https://smoothieware.org/
+* https://buildbotics.com/
 
 stuff
 
@@ -18641,6 +18648,59 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
+</div>
+<div created="20230809223258304" draft.of="Konglomerat 2.5D wood CNC repair" draft.title="Konglomerat 2.5D wood CNC repair" modified="20230823225040971" tags="[[current projects]] repairs [[CNC mill / router]]" title="Draft of 'Konglomerat 2.5D wood CNC repair'">
+<pre>buildbotics controller
+
+* https://buildbotics.com/docs/
+* https://www.ti.com/product/de-de/DRV8711
+** https://www.ti.com/lit/ds/symlink/drv8711.pdf
+** https://www.digikey.de/de/products/result?s=N4IgTCBcDaICICUBqAOA7ARgyAugXyA
+
+
+
+https://www.ti.com/product/DRV8711
+https://www.pololu.com/product/3730
+
+done:
+
+* vor ort mit 24V labornetzteil auf factory default getestet - probleme immernoch
+
+
+
+todo:
+
+* links durchsehen
+* caps checken
+* passives checken
+* mosfets checken
+* traces checken
+* grounds checken
+* output der treiber/mosfets im oszi ansehen
+* register und daten der treiber checken
+
+
+&quot;stepper driver problems&quot;
+
+ * https://www.brainy-bits.com/post/stepper-driver-stops-working-what-happened-and-why
+ * https://www.st.com/resource/en/application_note/an460-stepper-motor-drive-considerations-common-problems--solutions-stmicroelectronics.pdf
+* http://www.ostermann-net.de/electronic/sm_problems.pdf
+* https://www.youtube.com/watch?v=UejSUgvbUgE
+* https://arduino.stackexchange.com/questions/74841/stepper-motor-is-not-working-with-a4988-board
+* https://www.steppermotors.net/stepper-motor-and-stepper-driver-troubleshooting
+* https://forum.arduino.cc/t/problems-with-stepper-motor-driver-dm542t-version-4-0/960903
+* https://eevblog.com/forum/projects/tb6600-stepper-driver-problems/
+* https://blog.orientalmotor.com/troubleshooting-basics-stepper-motors
+* https://www.ato.com/stepper-motor-troubleshooting
+* https://reprap.org/wiki/Stepper_motor_driver
+* https://learn.adafruit.com/all-about-stepper-motors/driving-a-stepper
+* https://www.brainy-bits.com/post/stepper-driver-stops-working-what-happened-and-why
+* https://www.reddit.com/r/Reprap/comments/l2wulu/has_my_stepper_driver_gone_bad/
+* https://electronics.stackexchange.com/questions/559790/drv8825-stepper-driver-burning-up
+* https://all3dp.com/2/what-s-a-stepper-motor-driver-why-do-i-need-it/
+* https://3dsolved.com/3d-printers-stepper-motor-not-working-lets-fix-it/
+* https://forum.pololu.com/t/stepper-motor-driver-36v4-4-units-all-burn/18644
+* https://lastminuteengineers.com/drv8825-stepper-motor-driver-arduino-tutorial/</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -33612,8 +33672,8 @@ stuff
 * [[3D Print a Modular Toolbox, Soldering Station, and More!|https://www.youtube.com/watch?v=Bd4NnHvTRAY]]
 * https://www.youtube.com/results?search_query=adam+savage+organization</pre>
 </div>
-<div created="20230820174716789" modified="20230820231747944" tags="[[light / projection / visuals]]" title="WS2811 (ws2812) high power modules">
-<pre>i can get some very small PAR-Type lamps from someone. these are designed to accept 12V halogen bulbs that just clip in.
+<div created="20230820174716789" modified="20230822090325522" tags="[[light / projection / visuals]]" title="WS2811 (ws2812) high power modules">
+<pre>i can get some very small PAR-Type (PAR16 i think) lamps from someone. these are designed to accept 12V halogen bulbs that just clip in.
 we suspect they were originally used in series to run them with 230V.
 
 I want to convert them to RGB LEDs.
