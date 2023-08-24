@@ -1211,8 +1211,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of 'Schenker VIA 15 Pro Power Supply/Battery Problems'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -2085,7 +2083,7 @@ Error message and password prompt
 
 <li>schematics</li>
 
-<li>Schenker VIA 15 Pro Power Supply/Battery Problems</li>
+<li>Schenker VIA 15 Pro Power Supply/Battery and GPU Problems</li>
 
 <li>schmiermittel</li>
 
@@ -13159,7 +13157,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230822085753733" list="[[pcb design]] [[Draft of 'Schenker VIA 15 Pro Power Supply/Battery Problems']] About TableOfContents" modified="20230824185701228" title="$:/StoryList">
+<div created="20230822085753733" list="[[Schenker VIA 15 Pro Power Supply/Battery and GPU Problems]] About TableOfContents" modified="20230824185701228" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -18648,83 +18646,6 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
-</div>
-<div created="20220808223445153" draft.of="Schenker VIA 15 Pro Power Supply/Battery Problems" draft.title="Schenker VIA 15 Pro Power Supply/Battery and GPU Problems" modified="20230824184547698" tags="" title="Draft of 'Schenker VIA 15 Pro Power Supply/Battery Problems'">
-<pre>I seem to have problems with the embeded controller in my Schenker notebook, it seems to look up/bug/freeze and not allow charging. When i first had the problem the schenker support suggested updating the firmware, which solved the problem for some time, but it happened again.
-this time the EC seems to have reset itself after some tries getting into the bios, so i didn't have to redo the update.
-
-i also seem to have problems with UPower - https://upower.freedesktop.org
-
-&quot;Ich konnte bisschen debuggen warum Gnome manchmal zufällig nicht mehr den aktuellen Akkustand anzeigt wenn der Akku entladen wird bzw. auch keine Warnung bei niedrigem Akkustand kommt.
-Scheinbar liegt das an UPower. Gnome nutzt UPower und UPower scheint sich bei mir ab und an aufzuhängen oder so. Wenn ich das Ladekabel anstecke updated es wieder.
-Das Gnome Power Manager Tool, welches die Daten auch von UPower bezieht, sowie das upower CLI Tool zeigen das selbe Verhalten.
-Wenn ich jedoch das acpi CLI Tool nutze oder per Kernel sysfs (/sys/class/power_supply/BAT0/uevent) checke dann finde ich dort aktuelle Daten auch wenn UPower noch falsch reported.
-Da UPower die Hardware-näheren Interfaces vom Kernel nochmal abstrahiert hat es vermutlich nichts mit der Hardware zu tun, also wohl nichts wo Sie viel Einfluss drauf haben.&quot;
-
-* https://gitlab.gnome.org/GNOME/gnome-power-manager
-** https://help.gnome.org/users/gnome-power-manager/stable/
-* https://www.simplified.guide/linux/view-battery-information
-* https://www.kernel.org/doc/html/latest/power/power_supply_class.html
-* https://www.geeksforgeeks.org/acpi-command-in-linux-with-examples/
-* https://upower.freedesktop.org/docs/
-
-
-vlt. hilft es anderen:
-
-22.07.22:
-
-&lt;&lt;&lt;
-Wir empfehlen Ihnen hier ein Firmware-Update, dies sollte die Probleme mit der Ladung des Akkus lösen.
-Falls nicht, können Sie Ihr Gerät natürlich für eine Garantiereparatur einsenden.
-
-Die Firmwaredateien für Ihr Gerät können Sie hier herunterladen:
-https://download.schenker-tech.de/package/schenker-via-15-pro-idsvi15pm20/
-
-Die Anleitung für den Flashvorgang finden Sie hier:
-Entschuldigen Sie bitte - hier der Link für die Anleitung &amp; EFI Shell:
-
-https://download.schenker-tech.de/package/bios-update-via-efi-shell/
-&lt;&lt;&lt;
-
-&lt;&lt;&lt;
-Firmware Update hat funktioniert und direkt nach dem Update vom EC hat das Notebook auch wieder geladen.
-Bios habe ich auch geupdates.
-Ich hoffe die nervigen ACPI Probleme sind nun auch Vergangenheit.
-&lt;&lt;&lt;
-
-10.08.2022:
-
-&lt;&lt;&lt;
-Das von Ihnen beschriebene Phänomen tritt nur sehr selten auf, daher haben wir leider bisher noch keine Lösung dafür finden können.
-Ein BIOS-Reset könnte hier helfen, da dadurch auch der EC zurückgesetzt wird.
-
-Halten Sie dafür beim Start einfach die Taste F2 gedrückt.
-Im BIOS drücken Sie dann die Tasten F3 und abschließend F4 für den Firmware-Reset.
-
-Falls das Phänomen jedoch öfter auftritt, können Sie Ihr Gerät gerne für eine Überprüfung zu uns einsenden.
-Melden Sie sich in diesem Fall einfach nochmal bei uns.
-&lt;&lt;&lt;
-
-
-TODO:
-
-* vlt. mit https://www.hirensbootcd.org/ paar firmware updates noch installieren?
-* fwugmrg hat vlt. noch updates?
-* amd ryzen hat sleep/suspend/deep-sleep probleme unter linux?
-* https://www.phoronix.com/news/AMD-One-Liner-System-Resume
-* https://docs.fedoraproject.org/en-US/quick-docs/viewing-logs/
-* https://www.howtogeek.com/499623/how-to-use-journalctl-to-read-linux-system-logs/
-
-
-! GPU
-
-freezes or is extremely slow after waking up from sleep sometimes.
-
-* linux check cpu power mode
-** http://unix.stackexchange.com/questions/182696/ddg#182699
-** https://unix.cafe/wp/en/2020/07/toggle-between-cpu-powersave-and-performance-in-linux/
-** https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/tuning-cpu-frequency-to-optimize-energy-consumption_monitoring-and-managing-system-status-and-performance
-** https://askubuntu.com/questions/203303/power-savings-and-performance-modes-on-ubuntu-system</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -29274,7 +29195,7 @@ at last `raspi-config` has to be run and in the interfacing the serial interface
 <pre>* [[ How To Read Schematics 3. Learn How To Understand Circuit Diagrams |https://www.youtube.com/watch?v=OirYfphm7nI]]
 * </pre>
 </div>
-<div created="20220808223445153" modified="20230603174011193" tags="" title="Schenker VIA 15 Pro Power Supply/Battery Problems">
+<div created="20220808223445153" modified="20230824190013457" tags="" title="Schenker VIA 15 Pro Power Supply/Battery and GPU Problems">
 <pre>I seem to have problems with the embeded controller in my Schenker notebook, it seems to look up/bug/freeze and not allow charging. When i first had the problem the schenker support suggested updating the firmware, which solved the problem for some time, but it happened again.
 this time the EC seems to have reset itself after some tries getting into the bios, so i didn't have to redo the update.
 
@@ -29338,7 +29259,18 @@ TODO:
 * amd ryzen hat sleep/suspend/deep-sleep probleme unter linux?
 * https://www.phoronix.com/news/AMD-One-Liner-System-Resume
 * https://docs.fedoraproject.org/en-US/quick-docs/viewing-logs/
-* https://www.howtogeek.com/499623/how-to-use-journalctl-to-read-linux-system-logs/</pre>
+* https://www.howtogeek.com/499623/how-to-use-journalctl-to-read-linux-system-logs/
+
+
+! GPU
+
+freezes or is extremely slow after waking up from sleep sometimes.
+
+* linux check cpu power mode
+** http://unix.stackexchange.com/questions/182696/ddg#182699
+** https://unix.cafe/wp/en/2020/07/toggle-between-cpu-powersave-and-performance-in-linux/
+** https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/tuning-cpu-frequency-to-optimize-energy-consumption_monitoring-and-managing-system-status-and-performance
+** https://askubuntu.com/questions/203303/power-savings-and-performance-modes-on-ubuntu-system</pre>
 </div>
 <div created="20230325011728375" modified="20230325011852271" tags="[[metal stuff]]" title="schmiermittel">
 <pre>* https://brunox.swiss/
