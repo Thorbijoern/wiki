@@ -1211,6 +1211,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of 'Schenker VIA 15 Pro Power Supply/Battery Problems'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13157,7 +13159,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230822085753733" list="LED [[LED Bastel]] [[Konglomerat 2.5D wood CNC repair]] [[(wire) EDM CNC]] [[Metallwerkstatt / metal diy]] Werkstadtpirat:innen [[WS2811 (ws2812) high power modules]] [[electronics thermal management, heat sinking, cooling, kühlung]] [[bluetooth/BLE debugging/recording/sniffing/reverse engineering]] About TableOfContents" modified="20230824184051428" title="$:/StoryList">
+<div created="20230822085753733" list="[[pcb design]] [[Draft of 'Schenker VIA 15 Pro Power Supply/Battery Problems']] About TableOfContents" modified="20230824185701228" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14171,8 +14173,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230824184058056" modifier="Thorbijoern" title="$:/temp/search">
-<pre>werkst</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230824185645320" modifier="Thorbijoern" title="$:/temp/search">
+<pre>pcb</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18647,6 +18649,83 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
+<div created="20220808223445153" draft.of="Schenker VIA 15 Pro Power Supply/Battery Problems" draft.title="Schenker VIA 15 Pro Power Supply/Battery and GPU Problems" modified="20230824184547698" tags="" title="Draft of 'Schenker VIA 15 Pro Power Supply/Battery Problems'">
+<pre>I seem to have problems with the embeded controller in my Schenker notebook, it seems to look up/bug/freeze and not allow charging. When i first had the problem the schenker support suggested updating the firmware, which solved the problem for some time, but it happened again.
+this time the EC seems to have reset itself after some tries getting into the bios, so i didn't have to redo the update.
+
+i also seem to have problems with UPower - https://upower.freedesktop.org
+
+&quot;Ich konnte bisschen debuggen warum Gnome manchmal zufällig nicht mehr den aktuellen Akkustand anzeigt wenn der Akku entladen wird bzw. auch keine Warnung bei niedrigem Akkustand kommt.
+Scheinbar liegt das an UPower. Gnome nutzt UPower und UPower scheint sich bei mir ab und an aufzuhängen oder so. Wenn ich das Ladekabel anstecke updated es wieder.
+Das Gnome Power Manager Tool, welches die Daten auch von UPower bezieht, sowie das upower CLI Tool zeigen das selbe Verhalten.
+Wenn ich jedoch das acpi CLI Tool nutze oder per Kernel sysfs (/sys/class/power_supply/BAT0/uevent) checke dann finde ich dort aktuelle Daten auch wenn UPower noch falsch reported.
+Da UPower die Hardware-näheren Interfaces vom Kernel nochmal abstrahiert hat es vermutlich nichts mit der Hardware zu tun, also wohl nichts wo Sie viel Einfluss drauf haben.&quot;
+
+* https://gitlab.gnome.org/GNOME/gnome-power-manager
+** https://help.gnome.org/users/gnome-power-manager/stable/
+* https://www.simplified.guide/linux/view-battery-information
+* https://www.kernel.org/doc/html/latest/power/power_supply_class.html
+* https://www.geeksforgeeks.org/acpi-command-in-linux-with-examples/
+* https://upower.freedesktop.org/docs/
+
+
+vlt. hilft es anderen:
+
+22.07.22:
+
+&lt;&lt;&lt;
+Wir empfehlen Ihnen hier ein Firmware-Update, dies sollte die Probleme mit der Ladung des Akkus lösen.
+Falls nicht, können Sie Ihr Gerät natürlich für eine Garantiereparatur einsenden.
+
+Die Firmwaredateien für Ihr Gerät können Sie hier herunterladen:
+https://download.schenker-tech.de/package/schenker-via-15-pro-idsvi15pm20/
+
+Die Anleitung für den Flashvorgang finden Sie hier:
+Entschuldigen Sie bitte - hier der Link für die Anleitung &amp; EFI Shell:
+
+https://download.schenker-tech.de/package/bios-update-via-efi-shell/
+&lt;&lt;&lt;
+
+&lt;&lt;&lt;
+Firmware Update hat funktioniert und direkt nach dem Update vom EC hat das Notebook auch wieder geladen.
+Bios habe ich auch geupdates.
+Ich hoffe die nervigen ACPI Probleme sind nun auch Vergangenheit.
+&lt;&lt;&lt;
+
+10.08.2022:
+
+&lt;&lt;&lt;
+Das von Ihnen beschriebene Phänomen tritt nur sehr selten auf, daher haben wir leider bisher noch keine Lösung dafür finden können.
+Ein BIOS-Reset könnte hier helfen, da dadurch auch der EC zurückgesetzt wird.
+
+Halten Sie dafür beim Start einfach die Taste F2 gedrückt.
+Im BIOS drücken Sie dann die Tasten F3 und abschließend F4 für den Firmware-Reset.
+
+Falls das Phänomen jedoch öfter auftritt, können Sie Ihr Gerät gerne für eine Überprüfung zu uns einsenden.
+Melden Sie sich in diesem Fall einfach nochmal bei uns.
+&lt;&lt;&lt;
+
+
+TODO:
+
+* vlt. mit https://www.hirensbootcd.org/ paar firmware updates noch installieren?
+* fwugmrg hat vlt. noch updates?
+* amd ryzen hat sleep/suspend/deep-sleep probleme unter linux?
+* https://www.phoronix.com/news/AMD-One-Liner-System-Resume
+* https://docs.fedoraproject.org/en-US/quick-docs/viewing-logs/
+* https://www.howtogeek.com/499623/how-to-use-journalctl-to-read-linux-system-logs/
+
+
+! GPU
+
+freezes or is extremely slow after waking up from sleep sometimes.
+
+* linux check cpu power mode
+** http://unix.stackexchange.com/questions/182696/ddg#182699
+** https://unix.cafe/wp/en/2020/07/toggle-between-cpu-powersave-and-performance-in-linux/
+** https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/tuning-cpu-frequency-to-optimize-energy-consumption_monitoring-and-managing-system-status-and-performance
+** https://askubuntu.com/questions/203303/power-savings-and-performance-modes-on-ubuntu-system</pre>
+</div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -22914,7 +22993,7 @@ there's also recycled leather using ground-up old leather and synthetics...
 
 but most leathers don't seem to fit... seems like i have to still use nylon and/or neopren</pre>
 </div>
-<div created="20220717170240425" modified="20221205215409427" tags="[[electronics parts/components]]" title="LED">
+<div created="20220717170240425" modified="20230824184158990" tags="[[electronics parts/components]]" title="LED">
 <pre>* https://www.circuitbread.com/ee-faq/the-forward-voltages-of-different-leds
 * [[LED Circuit Design - How to design LED circuits|https://www.youtube.com/watch?v=7d4ymjU9NqM]]
 * [[LED Driver Basics and Its Circuit Design|https://www.apogeeweb.net/article/78.html]]
@@ -22961,7 +23040,12 @@ stuff
 * [[SDG #262 DIY High quality 20 W/m 90CRI LED strip with Cree LEDs|https://www.youtube.com/watch?v=Hf3CHTn1Lsg]]
 * [[SDG #051 Driving RGB LEDs with 1 Constant Current Driver|https://www.youtube.com/watch?v=WSpkLsp_9_o]]
 * [[SDG #100 - High Efficiency Constant Current 1W and 3W LED Driver - Lighting Controller Part 5|https://www.youtube.com/watch?v=gI8CK8zyRnM]]
-* https://www.youtube.com/results?search_query=sdg+constant+current</pre>
+* https://www.youtube.com/results?search_query=sdg+constant+current
+
+
+tools
+
+* [[ LED tester and comparison device |https://www.youtube.com/watch?v=A2c2JMWm5u0]]</pre>
 </div>
 <div created="20230603124116345" modified="20230824183950684" tags="[[light / projection / visuals]]" title="LED Bastel">
 <pre>* 360° Röhren
@@ -27234,7 +27318,7 @@ writing images/isos to usb-stick/etc.
 * https://rufus.ie/
 * fedora media writer</pre>
 </div>
-<div created="20211114150705948" modified="20220920184553840" tags="[[electronics knowledge]]" title="pcb design">
+<div created="20211114150705948" modified="20230824185720164" tags="[[electronics knowledge]]" title="pcb design">
 <pre>!! pcb design basics
 
 * on paper
@@ -27256,7 +27340,13 @@ stuff
 * https://components101.com/articles
 * https://pinouts.org/
 
-!! noise reduction</pre>
+noise reduction
+
+
+
+stuff
+
+* https://electronics.stackexchange.com/questions/25308/what-do-the-pcb-markings-mean</pre>
 </div>
 <div created="20220713205753685" modified="20221106203245022" tags="repairs" title="pcb repair">
 <pre>see [[soldering, pcb repair, electronics cleaning supplies]]
