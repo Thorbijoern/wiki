@@ -1211,8 +1211,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of 'capacitors'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13172,7 +13170,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230826233005090" list="[[DAP Mission 900 repair]] [[Draft of 'capacitors']] About TableOfContents" modified="20230826233953334" title="$:/StoryList">
+<div created="20230826233005090" list="[[diy speaker / audio Dummy Load / audio power amp load]] [[speaker / audio Dummy Load (Ersatzlast)]] About TableOfContents" modified="20230826234718603" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14186,8 +14184,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230826233951357" modifier="Thorbijoern" title="$:/temp/search">
-<pre>2SA1943</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230826234713056" modifier="Thorbijoern" title="$:/temp/search">
+<pre>dummy</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -16470,7 +16468,7 @@ that's what i did in the end. the cable drum works fine again.</pre>
 * https://github.com/zombieCraig/ICSim
 * https://hackaday.com/tag/can/</pre>
 </div>
-<div created="20210604171320150" modified="20230725214933640" tags="[[accumulator - battery - rechargeable energy storage]] [[electronics parts/components]]" title="capacitors">
+<div created="20210604171320150" modified="20230826234141792" tags="[[accumulator - battery - rechargeable energy storage]] [[electronics parts/components]]" title="capacitors">
 <pre>* [[Capacitors Explained - The basics how capacitors work working principle|https://www.youtube.com/watch?v=X4EUwTwZ110]]
 * [[How to choose the right capacitor type for a circuit?! ~~ Film vs. Ceramic vs. Electrolytic|https://www.youtube.com/watch?v=2v8zBj7_sxg]]
 * [[Why electrolytic capacitors are actually kinda shitty|https://www.youtube.com/watch?v=WytU5uj78-4]]
@@ -16488,6 +16486,7 @@ that's what i did in the end. the cable drum works fine again.</pre>
 * [[Kondensatortausch: Kritisch - das solltest Du wissen!|https://www.youtube.com/watch?v=TJtoKx5eGY8]]
 * [[Capacitor calculations - Basic calculations for capacitors in series and parallel|https://www.youtube.com/watch?v=ucEiEic-kZ4]]
 * [[bypass / decoupling capacitors]]
+* https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-smd-capacitor-code
 
 types
 
@@ -16501,6 +16500,12 @@ types
 ** for switching power supplies a low ESR is importat because of the high switching frequencies
 * film
 ** https://en.wikipedia.org/wiki/Film_capacitor
+** https://www.vishay.com/docs/26033/gentechinfofilm.pdf
+** https://www.tdk-electronics.tdk.com/download/530754/480aeb04c789e45ef5bb9681513474ba/pdf-generaltechnicalinformation.pdf
+** https://en.wikipedia.org/wiki/Film_capacitor#Characteristics_of_film_materials_for_film_capacitors
+** https://eepower.com/capacitor-guide/types/film-capacitor/#
+** https://components101.com/articles/different-types-of-film-capacitors-and-their-applications
+** https://www.tdk-electronics.tdk.com/download/530780/7a11ce85afa1498543bf984153733752/pdf-markingandorderingcodesystem.pdf
 * ceramic
 ** [[EEVblog #1037 - Solving Ceramic Capacitor Cracking|https://www.youtube.com/watch?v=QgKY5QWehME]]
 ** [[EEVblog #855 - Ceramic Capacitor Piezoelectric Effect|https://www.youtube.com/watch?v=F2gX-R1k7MM]]
@@ -18392,15 +18397,15 @@ Optional
 
 * audio crossover (passive or active/digital), DSP or similar (recommended)</pre>
 </div>
-<div created="20230612224602093" modified="20230612224653075" tags="[[current projects]] [[audio testing and measurement]] [[power electronics (Leistungselektronik)]] [[audio amplifiers]]" title="diy speaker / audio Dummy Load / audio power amp load">
-<pre> pure resistive mode
+<div created="20230612224602093" modified="20230827000429178" tags="[[current projects]] [[audio testing and measurement]] [[power electronics (Leistungselektronik)]] [[audio amplifiers]]" title="diy speaker / audio Dummy Load / audio power amp load">
+<pre>* pure resistive mode
 * later addon: reacive load (with inductors to make it more speaker-like)
 * tests
-    - settable frequency and amplitude/volume
-    - pure sine for longer time (1kHz standard as default)
-        - detect power dropoffs
-    -  peak power test mode (standard?)
-    -  automatically determine clipping</pre>
+** settable frequency and amplitude/volume
+** pure sine for longer time (1kHz standard as default)
+*** detect power dropoffs
+**  peak power test mode (standard?)
+**  automatically determine clipping</pre>
 </div>
 <div created="20210330161654821" modified="20230108194731293" tags="[[speaker drivers]]" title="diy speaker drivers">
 <pre>* [[Can we print EVERYTHING in a speaker? Trying Polymate3D's FD52 fully 3D printed driver!|https://www.youtube.com/watch?v=nux47f92pf4]]
@@ -18665,60 +18670,6 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
-</div>
-<div created="20210604171320150" draft.of="capacitors" draft.title="capacitors" modified="20230826233654457" tags="[[accumulator - battery - rechargeable energy storage]] [[electronics parts/components]]" title="Draft of 'capacitors'">
-<pre>* [[Capacitors Explained - The basics how capacitors work working principle|https://www.youtube.com/watch?v=X4EUwTwZ110]]
-* [[How to choose the right capacitor type for a circuit?! ~~ Film vs. Ceramic vs. Electrolytic|https://www.youtube.com/watch?v=2v8zBj7_sxg]]
-* [[Why electrolytic capacitors are actually kinda shitty|https://www.youtube.com/watch?v=WytU5uj78-4]]
-* [[Capacitor calculations - Basic calculations for capacitors in series and parallel|https://www.youtube.com/watch?v=ucEiEic-kZ4]]
-* [[Capacitor Replacement Tutorial|https://www.youtube.com/watch?v=YCSNWi3UHf4]]
-* [[Capacitor i-v equations|https://www.youtube.com/watch?v=EqlsSqET1kk]]
-* see [[quality Electrolytic Capacitors]]
-* [[EEVblog #486 - Does Current Flow Through A Capacitor?|https://www.youtube.com/watch?v=ppWBwZS4e7A]]
-* https://caps.wiki/wiki/Capacitors
-** https://caps.wiki/wiki/Category:Capacitors
-** https://caps.wiki/wiki/Capacitor_Failure_Methods
-* https://analyseameter.com/2015/09/capacitor-markings-symbols.html
-* https://www.condoraudio.com/wp-content/uploads/Reviews/How-to-Choose-Replacement-Capacitors-and-Resistors.pdf
-* https://eevblog.com/forum/chat/capacitor-brands/
-* [[Kondensatortausch: Kritisch - das solltest Du wissen!|https://www.youtube.com/watch?v=TJtoKx5eGY8]]
-* [[Capacitor calculations - Basic calculations for capacitors in series and parallel|https://www.youtube.com/watch?v=ucEiEic-kZ4]]
-* [[bypass / decoupling capacitors]]
-* https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-smd-capacitor-code
-
-types
-
-* supercaps - extra type, see below
-* electrolytic
-** [[quality Electrolytic Capacitors]]
-** [[EEVblog #742 - Why Electrolytic Capacitors Are Connected In Parallel|https://www.youtube.com/watch?v=wwANKw36Mjw]]
-** https://en.wikipedia.org/wiki/Electrolytic_capacitor#Electrical_characteristics
-** https://forum.digikey.com/t/calculating-capacitor-esr-from-tan/2633
-** for audio use cases where low noise is prefered low inductance is important
-** for switching power supplies a low ESR is importat because of the high switching frequencies
-* film
-** https://en.wikipedia.org/wiki/Film_capacitor
-** https://www.vishay.com/docs/26033/gentechinfofilm.pdf
-** https://www.tdk-electronics.tdk.com/download/530754/480aeb04c789e45ef5bb9681513474ba/pdf-generaltechnicalinformation.pdf
-** https://en.wikipedia.org/wiki/Film_capacitor#Characteristics_of_film_materials_for_film_capacitors
-** https://eepower.com/capacitor-guide/types/film-capacitor/#
-** https://components101.com/articles/different-types-of-film-capacitors-and-their-applications
-** https://www.tdk-electronics.tdk.com/download/530780/7a11ce85afa1498543bf984153733752/pdf-markingandorderingcodesystem.pdf
-* ceramic
-** [[EEVblog #1037 - Solving Ceramic Capacitor Cracking|https://www.youtube.com/watch?v=QgKY5QWehME]]
-** [[EEVblog #855 - Ceramic Capacitor Piezoelectric Effect|https://www.youtube.com/watch?v=F2gX-R1k7MM]]
-
-~SuperCaps
-
-* special caps with very high capacity compared to normal caps, not as high as batteries though
-* charge/discharge rate is much higher than batteries
-* inbetween caps and batteries
-
-Powercaps
-
-* marketing term, widely used in the car-hifi sector
-* can be normals caps, supercaps or a combination of both
-</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
