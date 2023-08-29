@@ -1213,7 +1213,7 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of 'LED Matrix, panel'</li>
+<li>Draft of '(video) projector LED conversion'</li>
 
 <li>Dresden</li>
 
@@ -13198,7 +13198,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230828095128010" list="[[LiFePO4 (LFP)]] [[Draft of 'LED Matrix, panel']] [[diy rgb led light tubes]] About TableOfContents" modified="20230829085505967" title="$:/StoryList">
+<div created="20230828095128010" list="[[Draft of '(video) projector LED conversion']] [[LED Matrix, panel]] [[diy rgb led light tubes]] About TableOfContents" modified="20230829085738000" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14212,8 +14212,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230829085503382" modifier="Thorbijoern" title="$:/temp/search">
-<pre>lfp</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230829085734288" modifier="Thorbijoern" title="$:/temp/search">
+<pre>projec</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18725,28 +18725,19 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220821142329941" draft.of="LED Matrix, panel" draft.title="LED Matrix, panel" modified="20230829085423709" tags="[[light / projection / visuals]]" title="Draft of 'LED Matrix, panel'">
-<pre>* 16x16 ws2812b matrix penels can be found at aliexpress from 13€
-* 8x8 or 8x32 is also pretty common
-* adafruit has some, but they are more expensive
-* there are also some with other leds and active circuitry but driving them is completely different
+<div created="20210214171831225" draft.of="(video) projector LED conversion" draft.title="(video) projector LED conversion" modified="20230829085743503" tags="[[Electronic Projects]] [[light / projection / visuals]]" title="Draft of '(video) projector LED conversion'">
+<pre>gas discharge tubes are pretty inefficient, converting a projector to led might make it more efficient with more output.
 
-stuff
+problems: LEDs don't have a nice spectrum, most of the light is in the blue part of the spectrum and little in the red part
+so a combination of LEDs has to be tuned to get a good output.
 
-* [[ Driving hub75 LED panels. (including free test software)|https://www.youtube.com/watch?v=_dB1w99AwGE]]
-* [[Inside the Project MC2 video purse. (Actual video wall panel!) |https://www.youtube.com/watch?v=CyLCwa2mneY]]
-* https://github.com/2dom/PxMatrix
-** https://www.arduino.cc/reference/en/libraries/pxmatrix-led-matrix-library/
-** [[ PxMatrix on ESP32 driving 64x64 RGB LED matrix |https://www.youtube.com/watch?v=Kw1oYAoJP4s]]
-* https://github.com/adafruit/Adafruit-GFX-Library
-** https://learn.adafruit.com/adafruit-gfx-graphics-library/overview
-* https://github.com/mrfaptastic/ESP32-HUB75-MatrixPanel-DMA
-* https://www.youtube.com/watch?v=mF9df4QYprU
-* https://www.youtube.com/watch?v=QUtj9Dk9TVQ
-* https://www.youtube.com/watch?v=yzRHAdS9FLY&amp;t=66s
-* https://www.youtube.com/watch?v=m4H2ftpWheU
-* https://www.youtube.com/watch?v=FK7j8IgtUX0
-* https://www.youtube.com/watch?v=PiaS8zfuBHo</pre>
+a spectroscope is needed to characterise the output of the original lamp, of the whole projector and of the LEDs... see [[DIY/open hardware light spectroscope / spectrometer]]
+
+* https://www.eevblog.com/forum/projects/replacing-a-projector-bulb-with-leds/
+* https://www.instructables.com/LED-Projector-Lamp-v20-in-progress/
+* https://www.instructables.com/Convert-A-Projector-To-An-LED-Light-Source/
+* [[Inside a cheap LED projector.|https://www.youtube.com/watch?v=itrc38JgvRk]]
+* https://www.youtube.com/watch?v=dxbDYQZm68o</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -23206,7 +23197,7 @@ the 150mA are reached at around 19,3V
 as replacement i've ordered a 20W Driver that outputs 21-38V at 600mA. That doesn't drive the LEDs at full power, but that prolonges the life of the LEDs. They got pretty hot at 150mA.
 I had to rewire the whole lamp so all modules are in parallel, but it works.</pre>
 </div>
-<div created="20220821142329941" modified="20230827214701811" tags="[[light / projection / visuals]]" title="LED Matrix, panel">
+<div created="20220821142329941" modified="20230829090019008" tags="[[light / projection / visuals]]" title="LED Matrix, panel">
 <pre>* 16x16 ws2812b matrix penels can be found at aliexpress from 13€
 * 8x8 or 8x32 is also pretty common
 * adafruit has some, but they are more expensive
@@ -23224,9 +23215,17 @@ stuff
 * https://github.com/mrfaptastic/ESP32-HUB75-MatrixPanel-DMA
 * https://www.youtube.com/watch?v=mF9df4QYprU
 * https://www.youtube.com/watch?v=QUtj9Dk9TVQ
-* https://www.youtube.com/watch?v=yzRHAdS9FLY&amp;t=66s
+* https://www.youtube.com/watch?v=yzRHAdS9FLY
 * https://www.youtube.com/watch?v=m4H2ftpWheU
-* </pre>
+* https://www.youtube.com/watch?v=FK7j8IgtUX0
+* https://www.youtube.com/watch?v=PiaS8zfuBHo
+* https://www.youtube.com/watch?v=NaAsBxi2Evs
+* https://www.youtube.com/watch?v=6i8kzqvh94E
+* https://www.youtube.com/watch?v=bu308tAqyIw
+* https://www.youtube.com/watch?v=q1DxovtleYA
+* https://www.youtube.com/watch?v=Zn_M8plmWfo
+* https://www.youtube.com/watch?v=espfESarDkc
+* https://www.youtube.com/watch?v=xSwoM3M24W8</pre>
 </div>
 <div created="20210425205159659" modified="20221019003331343" tags="[[Audio Projects]] [[Software stuff]]" title="Lenovo IdeaPad S10-2 (Netbook) as portable Audio station">
 <pre>netbook with a weird old Atom N270, i686 instruction set, not much power, 2GB RAM... enough to use for playing audio
