@@ -1157,7 +1157,7 @@ Error message and password prompt
 
 <li>distortion analyzer</li>
 
-<li>diy / open stream deck</li>
+<li>diy / open stream deck / macro pad</li>
 
 <li>DIY Aluminium extrusion</li>
 
@@ -13209,7 +13209,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230909235953288" list="[[Fohhn EasyPort FP1 plus repair]] [[AKG WMS80 (SR80, HT80, PT80) Sets repair]] [[untagged tiddlers]] About TableOfContents" modified="20230910201504302" title="$:/StoryList">
+<div created="20230909235953288" list="[[diy / open stream deck / macro pad]] [[Fohhn EasyPort FP1 plus repair]] [[AKG WMS80 (SR80, HT80, PT80) Sets repair]] [[untagged tiddlers]] About TableOfContents" modified="20230910233806461" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14223,7 +14223,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230910231421060" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20230910234359342" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -14633,7 +14633,7 @@ links
 * https://www.nti-audio.com/Portals/0/data/en/NTi-Audio-AppNote-AES3-AES-EBU.pdf
 * https://sound-au.com/project85.htm</pre>
 </div>
-<div created="20220701232830428" modified="20230910232121194" tags="[[PA repairs]]" title="AKG WMS80 (SR80, HT80, PT80) Sets repair">
+<div created="20220701232830428" modified="20230911153500063" tags="[[PA repairs]]" title="AKG WMS80 (SR80, HT80, PT80) Sets repair">
 <pre>I was searching for AKG HT80 wireless mics for my [[Fohhn EasyPort FP1 plus repair]] when i found a seller who had 2 WMS80 sets with HT80 mics and 2 sets with PT80 bodypacks. I initially just wanted one set for 35€, but he sold me all 4 sets for 40€ and i couldn't refuse.
 
 * WMS80 is the series of the complete set
@@ -14658,14 +14658,20 @@ I could not find a schematic for the AKG SR80, but i found Datasheets for the LA
 * https://www.alldatasheet.com/datasheet-pdf/pdf/39979/SANYO/LA1235.html
 * https://cdn-reichelt.de/documents/datenblatt/A200/LA1235%23SAN.pdf
 
-The problem is the inductor between pins 8 and 9, but the datasheet does not state the value of the inductor. Instead it shows a &quot;detection transformer&quot; sumida 235s01 as external subassebly using the inductor. I could not find anything about the sumida 235s01, so i carefully desoldered the intact inductor from the additional SR80 and measured it.
+The problem is the inductor between pins 8 and 9, but the datasheet does not state the value of the inductor. Instead it shows a &quot;detection transformer&quot; sumida 235s01 or toko q228cel-1077b as external subassebly using the inductor. I could not find anything about both
 
-i measured 23uH with the cheap LCR meter that i got.
+in der beispiel schaltung vom datenblatt gehört die spule zu seinem &quot;detection transformer&quot; bzw. scheinbar zu einer quadraturspule.
+die schaltung von dem ampfänger den ich habe nutzt aber nicht so ein bauteil wie im datenblatt sondern entweder komplett diskret oder irgendwas eigenes.
+
+I carefully desoldered the intact inductor from the additional SR80 and measured it.
+I measured 23uH with the cheap LCR meter that i got.
 ich habe das mit paar 1,0, 1,5 und 2,2 uH induktivitäten getestet und ich denke das die 23uH recht genau sind.
 aber ich denke das es eher 22uH sind, denn 22uH wäre ein standardwert und der rest ist halt toleranz.
 wenn ich bei digikey und mouser schaue sind die anderen mit nominalwerten um 22 und 23uH alles leistungsinduktivitäten für DC-DC wandler und co.
 ich brauchts nur für signale.
-leider ist der datasheet von dem chip nicht hilfreich was den wert angeht.</pre>
+leider ist der datasheet von dem chip nicht hilfreich was den wert angeht.
+
+dc resistance of inductor is roughly 1,5 Ohm it seems</pre>
 </div>
 <div created="20220112153745695" modified="20220404145435827" tags="[[Audio Reproduction and amplification]] Demotechnik" title="Akku PA-Anlage / Akku Beschallungsanlage">
 <pre>save aus FFF wiki - https://wiki.fridaysforfuture.is/wiki/Akku_PA-Anlage_/_Akku_Beschallungsanlage
@@ -18187,10 +18193,19 @@ proprietary:
 
 * https://www.reddit.com/r/diyaudio/comments/3wd5s6/diy_open_source_distortion_analyser_programmer/</pre>
 </div>
-<div created="20221011161231932" modified="20221011180418955" tags="[[input / control devices]] [[Open Hardware]]" title="diy / open stream deck">
+<div created="20221011161231932" modified="20230910234758620" tags="[[input / control devices]] [[Open Hardware]]" title="diy / open stream deck / macro pad">
 <pre>* https://hackaday.io/project/176072-diy-stream-deck-with-raspberry-pi-pideck
 * https://stream-pi.com/
-** https://github.com/stream-pi</pre>
+** https://github.com/stream-pi
+* https://hackaday.com/2020/12/17/adaptive-macro-pad-uses-tiny-oled-screens-as-keycaps/
+* https://hackaday.com/tag/stream-deck/
+* https://hackaday.com/2020/07/09/open-source-stream-deck-does-it-without-touch-screens/
+* https://hackaday.com/2023/09/10/open-deck-is-your-window-to-shortcuts/
+
+* using smartphone / tablet
+** https://macrodeck.org/
+** https://deckboard.app/
+*** https://hackaday.com/2022/07/18/quick-hack-the-phone-to-stream-deck-conversion/</pre>
 </div>
 <div created="20230324224622239" modified="20230324224707593" tags="[[metal stuff]]" title="DIY Aluminium extrusion">
 <pre>* https://www.youtube.com/watch?v=obWFprWTRSs
