@@ -1213,6 +1213,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of ''</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13208,7 +13210,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230914074307164" list="[[WS2811 (ws2812) high power modules]] About TableOfContents" modified="20230916232658875" title="$:/StoryList">
+<div created="20230914074307164" list="[[Draft of '']] [[WS2811 (ws2812) high power modules]] About TableOfContents" modified="20230916232658875" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14222,8 +14224,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230916232655250" modifier="Thorbijoern" title="$:/temp/search">
-<pre>light</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230916235054766" modifier="Thorbijoern" title="$:/temp/search">
+<pre>ws2812</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18776,6 +18778,9 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
+</div>
+<div created="20230916235238369" draft.of="" draft.title="esp32 ws281x/ws2812 RMTparse/read" modified="20230916235239849" tags="" title="Draft of ''">
+<pre></pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -34096,7 +34101,7 @@ stuff
 * [[3D Print a Modular Toolbox, Soldering Station, and More!|https://www.youtube.com/watch?v=Bd4NnHvTRAY]]
 * https://www.youtube.com/results?search_query=adam+savage+organization</pre>
 </div>
-<div created="20230820174716789" modified="20230916234750464" tags="[[light / projection / visuals]]" title="WS2811 (ws2812) high power modules">
+<div created="20230820174716789" modified="20230916235242329" tags="[[light / projection / visuals]]" title="WS2811 (ws2812) high power modules">
 <pre>i can get some very small PAR-Type (PAR16 i think) lamps from someone. these are designed to accept 12V halogen bulbs that just clip in.
 we suspect they were originally used in series to run them with 230V.
 
@@ -34275,7 +34280,18 @@ muss ich dann bei gelegenheit mal schauen ob das geht, würde das ganze natürli
 
 i bought some ws2811 sop-8/soic-8 breakouts, 3W and 10W rgb LEDs and different small 300-350mA led drivers for 5 to 12V as well as esp8266 (esp-01s).
 
-i wanted to try controlling the led drivers using the pwm of the ws2811, but that did not work. i even tried tricking the </pre>
+i wanted to try controlling the led drivers using the pwm of the ws2811, but that did not work. i even tried tricking the constant current drive of the ws2811 but that did not improve things
+
+driving the led drivers with an esp directly would work
+
+wled pwm frequency:
+
+* https://github.com/Aircoookie/WLED/issues/2205
+* https://github.com/Aircoookie/WLED/issues/2868
+* https://kno.wled.ge/basics/compatible-led-strips/#non-addressable-led-strips
+
+
+[[esp32 ws281x/ws2812 RMTparse/read]]</pre>
 </div>
 <div created="20200614215940118" modified="20221106202008338" tags="[[My Setup]]" title="xdotool on fedora wayland">
 <pre>not possible because of limitations in wayland (security). xdotool was written for xorg, you could change to that or use other tools.
