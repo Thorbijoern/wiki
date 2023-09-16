@@ -1213,6 +1213,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of 'WS2811 (ws2812) high power modules'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13208,7 +13210,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230914074307164" list="transistors About TableOfContents" modified="20230916222311399" title="$:/StoryList">
+<div created="20230914074307164" list="[[light / projection / visuals]] [[Draft of 'WS2811 (ws2812) high power modules']] About TableOfContents" modified="20230916232658875" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14222,8 +14224,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230916222259997" modifier="Thorbijoern" title="$:/temp/search">
-<pre>mosfet</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230916232655250" modifier="Thorbijoern" title="$:/temp/search">
+<pre>light</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18776,6 +18778,175 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
+</div>
+<div created="20230820174716789" draft.of="WS2811 (ws2812) high power modules" draft.title="WS2811 (ws2812) high power modules" modified="20230916232632266" tags="[[light / projection / visuals]]" title="Draft of 'WS2811 (ws2812) high power modules'">
+<pre>i can get some very small PAR-Type (PAR16 i think) lamps from someone. these are designed to accept 12V halogen bulbs that just clip in.
+we suspect they were originally used in series to run them with 230V.
+
+I want to convert them to RGB LEDs.
+
+using a ws2811 would be an easy and cheap way to control the LEDs. ordinary Ws2812 LEDs don't have a lot of power and you can only fit so much 5050 smd chips inside these mini PAR cans.
+So I want to try and use 3W or higher power LED chips.
+
+if everything fails i can resort to smart MR16 LED bulbs
+
+maybe not only rgb (ws2811) but also rgbw or so (sk6812)?
+
+there are a few commercial modules available, but buying them is not easy because they are out of stock or the sellers don't ship to germany (or shipping would be expensive).
+
+* aliexpress - not shipping to europe
+** https://aliexpress.com/item/32798198341.html
+** https://imall.com/product/3W-high-power-led-UCS1903-WS2811-controlled-RGB-spotlight-DC5V-input-addressable-IP40-5-degree-beam-angle/Lights-Lighting-Outdoor-Floodlights/aliexpress.com/33035867933/567-20220884/en
+** https://de.aliexpress.com/item/10000279651349.html
+** https://de.aliexpress.com/item/32773133114.html
+* https://www.led-genial.de/navi.php?suchausdruck=power+dot
+* https://www.ulrichradig.de/home/index.php/dmx/3watt-power-dot
+* https://www.zedfy.shop/high-power-rgb-led-1-led-3-watt-typ-ws2811-ic-adressierbar
+* https://www.nledshop.com/ws2811fet/
+** https://www.ebay.com/itm/143566018541
+** https://www.nledshop.com/downloads/datasheets/nled-ws2811fet-datasheet.pdf
+* overly expensive and not compact enough
+** https://www.ledlightinghut.com/3w-chainable-digital-ws2811-rgb-pixel-dot.html
+** https://www.ledlightinghut.com/9w-rgb-high-power-digital-ws2811-pixel-dot.html
+** https://www.ledlightinghut.com/12w-rgbw-chainable-digital-pixel-dot.html
+** https://www.ledlightinghut.com/30w-digital-ws2811-pixel-dot.html
+** https://www.ledlightinghut.com/ws2811-digital-led-circuit-board-with-6-leds.html
+** https://www.ledlightinghut.com/ws2811-digital-led-pixel-module-with-12-leds.html
+** https://www.ledlightinghut.com/65mm-12-led-dmx-rgbw-plate-pcb.html
+* https://www.adafruit.com/product/4544
+** https://www.ipixelleds.com/index.php?id=611
+** https://www.ipixelleds.com/index.php?id=975
+* https://www.tindie.com/stores/RobG/
+** 
+
+there are a few questions/posts on the net on how to drive mosfets with the ws2811 chips
+
+* https://electronics.stackexchange.com/questions/649439/ws2811-mosfet-driver-components-help
+* https://forum.arduino.cc/t/ws2811-mosfet-driver-alternative-components-help/1075281
+* https://forum.arduino.cc/t/ws2811-high-power-driver/1114493?page=2
+* https://nootropicdesign.com/projectlab/2016/05/21/individually-addressable-incandescent-lamps/
+** https://hackaday.com/2016/06/12/using-ws2811-chip-to-drive-incandescent-lamps/
+* https://forums.adafruit.com/viewtopic.php?t=44670
+* https://forum.arduino.cc/t/ws2811-led-analog-strip-controller/248937
+* https://community.element14.com/technologies/experts/f/forum/46839/help-using-ws2811-to-drive-12v-rgb-led-strip
+* http://www.riderx.info/?s=WS2811+Expander
+* https://www.mikrocontroller.net/topic/310669
+* https://forum.arduino.cc/t/ws2811b-and-mosfets/688946
+* https://electronics.stackexchange.com/questions/619779/using-the-ws2811-as-a-vibration-motor-control
+* https://wiki.mobaledlib.de/anleitungen/anwendungen/strassenbeleuchtung
+* https://www.reddit.com/r/electronics/comments/oyfnc/how_to_connect_mosfets_to_a_ws2801_chip_instead/
+* https://forum.arduino.cc/t/ws2811-pixel-driver/199725
+* https://www.reddit.com/r/electronics/comments/oyfnc/how_to_connect_mosfets_to_a_ws2801_chip_instead/
+* https://electronics.stackexchange.com/questions/598820/knowledge-requested-for-ws2811-based-rgb-led-driver-module
+* https://www.reddit.com/r/led/comments/hacj6p/highpower_addressable_leds/
+* https://www.youtube.com/watch?v=yGDkNJZdvDA
+* [[WS2811 on Steroids |https://www.youtube.com/watch?v=pZl-YRROb4Q]]
+* https://www.reddit.com/r/led/comments/sv3d4r/need_help_using_a_ws2811_led_driver_to_control_a/
+* https://electronics.stackexchange.com/questions/191994/driving-high-power-led-using-ws2811-or-ws2801
+* https://www.mikrocontroller.net/topic/553800
+
+a great company making their design public
+
+* https://www.freetronics.com.au/products/addressable-n-mosfet-driver-output-module
+** schematic: https://cdn.shopify.com/s/files/1/0045/8932/files/FREENFET-v1_0-schematic.pdf?15966285591977644917
+* https://www.freetronics.com.au/products/addressable-triple-n-mosfet-driver-output-module
+** https://cdn.shopify.com/s/files/1/0045/8932/files/FREENFET3-v1_0-schematic.pdf?17886992959179520710
+* https://www.freetronics.com.au/pages/freenfet-quickstart-guide
+* https://forum.arduino.cc/t/ws2811-mosfet-driver-alternative-components-help/1075281
+* https://electronics.stackexchange.com/questions/649439/ws2811-mosfet-driver-components-help
+
+driving high power LEDs
+
+* [[LED Driver (constant current)]]
+* https://www.youtube.com/watch?v=JOqSCbm9G0c
+* https://www.youtube.com/watch?v=rib9GeZvjU4
+* https://www.youtube.com/watch?v=piET0Biqo0I
+* https://www.youtube.com/watch?v=A64kpzhzlqI
+* https://www.youtube.com/watch?v=rDkP97-BHXI
+* https://www.youtube.com/watch?v=2ojNDKIScpI
+* https://www.youtube.com/watch?v=WSpkLsp_9_o
+** https://www.infineon.com/cms/en/product/power/lighting-ics/linear-led-driver-ic/bcr421u/
+** https://www.infineon.com/cms/en/product/power/lighting-ics/linear-led-driver-ic/bcr420u/
+* aliexpress
+** &quot;dmx led constant&quot;
+** &quot;led constant current 3 channel&quot;
+*** https://de.aliexpress.com/item/1005005450523131.html
+*** https://de.aliexpress.com/item/1005005069916507.html
+*** https://de.aliexpress.com/item/1005003917892363.html
+*** https://de.aliexpress.com/item/1005005069991618.html
+*** https://de.aliexpress.com/item/1005005769194518.html
+*** https://de.aliexpress.com/item/1005005127762766.html
+* https://de.aliexpress.com/item/4000154187480.html - other ws chips?
+* https://electronics.stackexchange.com/questions/543244/control-a-3w-rgb-led-with-an-arduino
+* https://www.onsemi.com/pdf/datasheet/cat4103-d.pdf
+* https://www.tindie.com/products/antonveretenenko/mini-constant-current-led-driver/
+* P9813 based modules?
+** https://raw.githubusercontent.com/SeeedDocument/Grove-Chainable_RGB_LED/master/res/P9813_datasheet.pdf
+
+notes
+
+&lt;&lt;&lt;
+snjor köttr, [20.08.23 21:15]
+kann mir jemensch von euch tipps geben wie ich am besten 3W, 6W oder so RGB LEDs mit strom versorge?
+schalten/dimmen will ich die einfach mit mosfets angesteuert vom microcontroller oder ws2811, aber ich bin mir unsicher wie ich die am besten mit strom versorge.
+ich bräuchte ja im grunde für jeden channel bzw. jeden led chip eine eigene strombegrenze versorgung, oder?
+oder habt ihr ideen wie ichs am besten machen könnte?
+
+Ennar ������������/ ������������, [20.08.23 22:03]
+n dedizierter LED-Treiber mit PWM/Analogeingang ist da besser geeignet als diskrete MOSFETs
+
+die haben alles an Board, inklusive Schutzbeschalten gegen internes Überhitzen und ESD
+
+http://www.h-tronic.com/Presse/download/HV9910datasheet.pdf
+
+so was hatten wir mal in der alten Firma in mehreren Produkten drin, geht ziemlich gut. Braucht allerdings einen externen FET, gibt so was auch mit internem FET
+
+snjor köttr, [20.08.23 23:16]
+hmm... ich überlege aber ob ich ws2812 artige ansteuerung möchte, weil das unsere anderen lampen schon nutzen
+
+Ennar ������������/ ������������, [20.08.23 23:17]
+du kannst natürlich den WS-Chip zur Ansteuerung benutzen, nur dass dann die PWM Ausgänge nicht direkt an LEDs gehen
+
+snjor köttr, [20.08.23 23:56]
+klar, halt mit mosfets dazwischen
+
+meine original frage war aber bzgl. wie ich dann die CC stromversorgung verschalten müsste/kann?
+ich müsste dann ja für jeden kanal eine eigene CC versorgung haben, oder?
+
+Ennar ������������/ ������������, [21.08.23 00:02]
+ja, steuerbar
+
+oder eine zentrale CC Quelle und die LEDs nie gleichzeitig betreiben
+
+so hat Philips das mal mit einer Hue-Leuchte gemacht
+
+snjor köttr, [21.08.23 00:08]
+was meinst du mit steuerbar?
+
+Ennar ������������/ ������������, [21.08.23 00:08]
+dass du die CC extern steuern kannst
+
+snjor köttr, [21.08.23 00:09]
+warum? wenn ich schon den ws2811 habe zum steuern?
+
+Ennar ������������/ ������������, [21.08.23 00:09]
+...der dann die CC Quellen steuert
+
+du solltest lieber nicht versuchen, das CC von extern mit PWM zu unterbrechen. Das kann die Regelung durcheinander bringen. Lieber eine CC Quelle nehmen, die von extern durch irgendein Signal (analog oder PWM) gesteuert werden kann
+
+snjor köttr, [21.08.23 00:11]
+achso... also CCs mit PWM input der mit der schaltfrequenz der ws2811 kompatibel ist... daran habe ich noch nicht gedacht
+
+muss ich dann bei gelegenheit mal schauen ob das geht, würde das ganze natürlich nochmal um einiges vereinfachen
+&lt;&lt;&lt;
+
+
+
+!! my experiments
+
+i bought some ws2811 sop-8/soic-8 breakouts, 3W and 10W rgb LEDs and different small 300-350mA led drivers for 5 to 12V as well as esp8266 (esp-01s).
+
+i wanted to try controlling the led drivers using the pwm of the ws2811, but that did not work. i even tried tricking the </pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -23451,8 +23622,13 @@ stuff
 * https://basen.en.alibaba.com/index.html?spm=a2700.shop_plgr.88.12
 * https://www.youtube.com/watch?v=2I-QdZFQqP8</pre>
 </div>
-<div created="20220714182551518" modified="20220911150458620" tags="TableOfContents Art Electronics" title="light / projection / visuals">
-<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;</pre>
+<div created="20220714182551518" modified="20230916232708856" tags="TableOfContents Art Electronics" title="light / projection / visuals">
+<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
+
+
+stuff
+
+* https://www.diychristmas.org/wiki/index.php?title=Special:AllPages</pre>
 </div>
 <div created="20211025204112501" modified="20211025222249479" tags="[[bio polymers]]" title="Lignin">
 <pre>* https://en.wikipedia.org/wiki/Lignin
@@ -28244,7 +28420,7 @@ NC is often used for hardware... but for hardware you need to buy parts... if so
 * https://hoellstern.com/
 </pre>
 </div>
-<div created="20211103203738362" modified="20230829224713461" tags="Audio lists" title="professional audio hardware seller / distributor / händler">
+<div created="20211103203738362" modified="20230916222700578" tags="Audio lists" title="professional audio hardware seller / distributor / händler">
 <pre>* ~~zoundhouse~~ - no option anymore, seem to be a bunch of conspiracy theorists
 * https://www.musikhaus-korn.de/
 * https://www.thomann.de/
@@ -28261,7 +28437,8 @@ NC is often used for hardware... but for hardware you need to buy parts... if so
 * https://www.soundland.de/
 * https://www.recordcase.de/
 * https://www.deejayladen.de/
-* https://www.steinigke.de/</pre>
+* https://www.steinigke.de/
+* https://pa-shop.de/</pre>
 </div>
 <div created="20201208232944029" modified="20230830001732255" tags="[[Audio Reproduction and amplification]] lists" title="professional manufacturers of audio hardware">
 <pre>this list is not ordered in any way and i'm not an expert... please check for yourself if the hardware is suitable for you.
