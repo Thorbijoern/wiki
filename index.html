@@ -1213,8 +1213,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of ''</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -1296,6 +1294,8 @@ Error message and password prompt
 <li>esp32 dmx / artnet node</li>
 
 <li>ESP32 high-quality audio transmitter</li>
+
+<li>esp32 ws281x/ws2812 RMT parse/read</li>
 
 <li>ethics</li>
 
@@ -13212,7 +13212,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230914074307164" list="[[Draft of '']] [[WS2811 (ws2812) high power modules]] About TableOfContents" modified="20230916235835527" title="$:/StoryList">
+<div created="20230914074307164" list="[[esp32 ws281x/ws2812 RMT parse/read]] [[WS2811 (ws2812) high power modules]] About TableOfContents" modified="20230916235835527" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -18781,28 +18781,6 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20230916235238369" draft.of="" draft.title="esp32 ws281x/ws2812 RMT parse/read" modified="20230917000149215" tags="" title="Draft of ''">
-<pre>different rmt drivers
-
-* https://lib.rs/crates/ws2812-esp32-rmt-driver
-* https://github.com/codemee/esp32_rmt_pwm
-* https://github.com/bertmelis/esp32WS2811
-
-library stuff
-
-* https://docs.micropython.org/en/latest/esp32/quickref.html#rmt
-** https://docs.micropython.org/en/latest/library/esp32.html#esp32-rmt
-* 
-
-parse/read/sample
-
-* https://esp32.com/viewtopic.php?t=27561
-
-
-stuff
-
-* https://esp32.com/viewtopic.php?t=26659</pre>
-</div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -19980,6 +19958,49 @@ increasing signal range
 * not all esp32 modules with an U.FL connector have the connector actually connected, so check before with the seller
 * you might be able to calculate the range with tools like: https://www.rfwireless-world.com/calculators/WLAN-range-calculator.html
 * you can get RF amplifier modules from alibaba or similar shop platforms, but they might be illegal were you live</pre>
+</div>
+<div created="20230916235238369" modified="20230917002320190" tags="" title="esp32 ws281x/ws2812 RMT parse/read">
+<pre>only esp32 have this option, esp8266/esp8285 do not support it
+
+different rmt drivers
+
+* https://lib.rs/crates/ws2812-esp32-rmt-driver
+* https://github.com/codemee/esp32_rmt_pwm
+* https://github.com/bertmelis/esp32WS2811
+* https://github.com/espressif/esp-idf/blob/master/examples/peripherals/rmt/led_strip/README.md
+
+library stuff
+
+* https://docs.micropython.org/en/latest/esp32/quickref.html#rmt
+** https://docs.micropython.org/en/latest/library/esp32.html#esp32-rmt
+* https://www.espressif.com/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf - chapter 15
+* https://github.com/espressif/esp-idf/blob/master/docs/en/api-reference/peripherals/rmt.rst
+* https://pycom.github.io/pydocs/tutorials/all/rmt.html
+** https://pycom.github.io/pydocs/firmwareapi/pycom/machine/rmt.html
+* https://esp-cpp.github.io/espp/rmt.html
+* https://docs.espressif.com/projects/arduino-esp32/en/latest/api/rmt.html
+* https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/rmt.html#rmt-encoder
+** https://espressif-docs.readthedocs-hosted.com/projects/esp-faq/en/latest/software-framework/peripherals/rmt.html
+
+parse/read/sample
+
+* https://esp32.com/viewtopic.php?t=27561
+* https://github.com/kimeckert/ESP32-RMT-Rx-raw
+* https://stackoverflow.com/questions/56127996/how-to-receive-long-data-frame-by-esp32-rmt-ringbuffer
+
+send &amp; read
+
+* https://github.com/ExploreEmbedded/ESP32_RMT
+* https://hackaday.io/project/177672-esp32-rmt-peripheral-for-radio-remote-control
+* https://github.com/espressif/esp-idf/tree/release/v5.0/examples/peripherals/rmt/onewire
+* https://github.com/espressif/esp-idf/tree/master/examples/peripherals/rmt/ir_nec_transceiver
+
+stuff
+
+* https://esp32.com/viewtopic.php?t=26659
+* https://esp32.com/viewtopic.php?t=296
+* https://duckduckgo.com/?q=esp32+rmt+receiver
+* https://esphome.io/components/light/esp32_rmt_led_strip.html</pre>
 </div>
 <div created="20210214155912157" modified="20210330203916736" tags="Misc [[Politics (Politik)]] [[sustainability / nachhaltigkeit]]" title="ethics">
 <pre></pre>
