@@ -1937,6 +1937,8 @@ Error message and password prompt
 
 <li>Pioneer CX-J510 and M-J510 repair</li>
 
+<li>Pioneer ddj-sx - dj controller repair</li>
+
 <li>plant art</li>
 
 <li>plastic recycling</li>
@@ -13214,7 +13216,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230914074307164" list="[[coole initiativen]] [[untagged tiddlers]] [[Kärcher WD3.230 repair]] [[Fohhn EasyPort FP1 plus repair]] [[ebike workshop]] [[esp32 ws281x/ws2812 RMT parse/read]] [[WS2811 (ws2812) high power modules]] About TableOfContents" modified="20230921164754461" title="$:/StoryList">
+<div created="20230923222140615" list="[[Pioneer ddj-sx - dj controller repair]] [[esp32 ws281x/ws2812 RMT parse/read]] About TableOfContents" modified="20230923222140615" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14228,8 +14230,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20230921164752805" modifier="Thorbijoern" title="$:/temp/search">
-<pre>initi</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20230923224727753" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -27914,6 +27916,27 @@ stuff
 
 * https://pdf1.alldatasheet.com/datasheet-pdf/view/38772/SANYO/2SB560.html
 * https://pdf1.alldatasheet.net/datasheet-pdf/view/512108/ROHM/DTC143ZSA.html</pre>
+</div>
+<div created="20230925214229271" modified="20230925220801752" tags="[[audio repairs]]" title="Pioneer ddj-sx - dj controller repair">
+<pre>The owner connected a random power supply to the dj controller and it didn't power on and won't power on again. It was propably a higher voltage one or wrong polarity.
+
+The unit is designed for a 5V power supply 3,5A or so.
+
+the controller was in overall bad shape, the fader for fading between channels and several encoder knobs were heavily bent. but it seems the owner only wants us to fix the power on issue.
+
+The controller is inside pretty much just circuitboard. There are a lot of screws, so one should keep track of where they belong. you also have to be careful when disassembling, because there are some thin fpc ribbon cables that connect the PCBs, which can be easily torn and damaged.
+
+All inputs &amp; outputs as well as the power jack are on the DSP board, so i removed only that board. The top side of the board can be first inspected, because it has a metal support/shielding plate screwed onto the back. i could not spot anything on the front side.
+
+after removing the metal plate i could quickly spot the slightly charred SOT Package. i checked other components (diodes, transistors, etc.) in the vicinity and around the power input/power circuitry, but could not find any obvios failed ones.
+
+the failed component is numbered as Q2 on the silk screen, the marking on the component is only partially readable.
+
+luckily it was easy to find a service manual for the device: https://www.eserviceinfo.com/downloadsm/103501/Pioneer_pioneer%20ddj-sx%20rrv4382%20dj%20controller.html
+
+Q2 is marked as RTR030P02 in the schematics, which is a small mosfet by Rohm semiconductor that should match the usecase.
+
+Due to that repair being a commission of a friend of mine, i don't know if i will also finish the repair when the replacements come in or if he repairs it.</pre>
 </div>
 <div created="20210312203134638" modified="20210317212724873" tags="Art [[sustainability / nachhaltigkeit]] nature" title="plant art">
 <pre>* https://studioroosegaarde.net/project/grow
