@@ -21240,22 +21240,58 @@ some more
 * https://shop.led-studien.de/en/pixel-dmx
 * https://shop.dmx4all.de/de/</pre>
 </div>
-<div created="20220717162850260" modified="20231003205652434" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="großes modulares Akkupack mit Wechselrichter">
-<pre>24-28,4V pro zelle (25,6V)
-104Ah
+<div created="20220717162850260" modified="20231003222431316" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="großes modulares Akkupack mit Wechselrichter">
+<pre>Idee
 
-15s: 360-426V (384V 38,4kWh)
-20s: 480-568V (512V 51,2Wh)
+* mehrere akku module und einzelnes Wechselrichter-modul mit schaltkasten und  kontrollelektronik
 
 
+
+
+!! Bis zum Inverter
 
 * gebrauchte 24V 100AH LFP akkupacks aus gabelstaplern
 * jedes akkupack hat integriertes BMS mit CANbus support
-* mehrere akku module und einzelnes Wechselrichter-modul mit schaltkasten und  kontrollelektronik
-* Module haben Eurokisten Format, stapelbar
-* transport wahlweise auf Palette mit Gabelhubwagen oder auf rollbrettern
-* Anderson Stecker mit datenkontakten für canbus? oder vlt. Harting?
+
+Zellen verschaltung
+
+* 24-28,4V pro zelle (25,6V)
+** 104Ah
+* 15s: 360-426V (384V 38,4kWh)
+* 20s: 480-568V (512V 51,2Wh)
+
+Stecker
+
+* industrie hochstrom steckverbinder
+* mit datenkontakten für canbus und co
+* am besten wasserdicht
+* Gabelstaplerstecker - aus dem bereich sind die akkus ja eh
+** Anderson Stecker?
+*** daten/hilfskontakte?
+** DIN / Euro Battery Connector/Steckverbinder
+*** 80A version sollte reichen, ansonsten gibts noch 160A+
+*** Rema &quot;DIN&quot; Stecker
+**** https://www.remagroup.com/steckverbinder/
+*** https://www.andersonpower.com/us/en/resources/EBCResourcesPage.html
+* Harting?
+** harting alternativen?
+** https://www.harting.com/DE/de/produkte-loesungen
+*** https://www.harting.com/DE/de/industrie-steckverbinder-han#Han%C2%AE-Baureihen
+** https://www.thomann.de/at/10-pol_multipin_stecker.html
+*** https://www.thomann.de/at/harting_09330102601.htm
+
+
+
+
+
+!! Inverter Box
+
 * korrekte absicherung erde/FI/isolationswächter
+* zusätzliche steuerung?
+* freie software mit support für die schnittstellen des/der hersteller?
+** Modbus/RS485 protokolle
+** Ethernet/Wlan (IP)
+
 * ausgänge CEE 32A, CEE 16A (drehstrom und wohnwagen) und schuko
 * monitoring auf allen phasen
 ** entweder integriert in dem inverter oder extra energiemessgerät/drehstromzähler
@@ -21264,12 +21300,27 @@ some more
 ** frequenzmessung
 ** strommessung vlt. mit stromwandlern (current transformer)
 *** https://de.wikipedia.org/wiki/Stromwandler
+* Notaus schalter?
+
+
+
+!! Modul Kisten
+
+* Module haben Eurokisten Format oder normales Flightcase format
+* Module stapelbar
+* transport wahlweise auf Palette mit Gabelhubwagen oder auf rollbrettern
+* oder haben alle module Rollen?
+
+
+weiteres
+
+
 
 Zubehör
 
 * Stromverteiler/Stromwürfel/&quot;Stromschildkröte&quot;/Bau(strom)verteiler/verteilersteckdosen wasserdicht
 * diverse stromkabel
-* rollbretter
+* rollbretter?
 * gabelhubwagen?
 * kisten für zubehör
 
