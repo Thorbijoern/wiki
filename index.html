@@ -1217,6 +1217,10 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of ''</li>
+
+<li>Draft of 'großes modulares Akkupack mit Wechselrichter'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13232,7 +13236,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230930110926974" list="spektralwelt [[Sonnensystem Signalweg]] [[großes modulares Akkupack mit Wechselrichter]] [[HTTP stuff]] About TableOfContents" modified="20231004102027783" title="$:/StoryList">
+<div created="20230930110926974" list="[[Draft of '']] spektralwelt [[Draft of 'großes modulares Akkupack mit Wechselrichter']] [[HTTP stuff]] About TableOfContents" modified="20231004102027783" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -18827,6 +18831,151 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
+</div>
+<div created="20231005220618982" draft.of="" draft.title="LMB: Hochvolt Notizen" modified="20231005220645221" tags="" title="Draft of ''">
+<pre>Verschaltung
+
+* 15s: 360-426V (384V 38,4kWh)
+* 20s: 480-568V (512V 51,2Wh)</pre>
+</div>
+<div created="20220717162850260" draft.of="großes modulares Akkupack mit Wechselrichter" draft.title="Large mobile Battery (LMB)" modified="20231005220615964" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Draft of 'großes modulares Akkupack mit Wechselrichter'">
+<pre>Idee
+
+* großes modulares Akkupack mit Wechselrichter
+* mehrere akku module und einzelnes Wechselrichter-modul mit schaltkasten und  kontrollelektronik
+
+
+
+
+!! Bis zum Inverter
+
+* gebrauchte 24V 100AH LFP akkupacks aus gabelstaplern
+* jedes akkupack hat integriertes BMS mit CANbus support
+
+Zellen
+
+daten
+
+* triathlon tb 10508-v1
+* https://www.triathlon-batterien.de/produkte/lithium-ionen-batterien
+* https://www.triathlon-batterien.de/fileadmin/daten/02_Produkte/Lithium-Ionen-Batterien/Lithium-Ionen-Blockbatterie/Download/DE/2022_03_23_Lithium_Ionen_Blockbatterie_D_TBG.pdf
+* 24-28,4V pro zelle (25,6V)
+* 104Ah
+
+Stecker
+
+* industrie hochstrom steckverbinder
+* mit datenkontakten für canbus und co
+* am besten wasserdicht
+* berührungssicherheit
+* Gabelstaplerstecker - aus dem bereich sind die akkus ja eh
+** Anderson Stecker?
+*** daten/hilfskontakte?
+** DIN / Euro Battery Connector/Steckverbinder
+*** 80A version sollte reichen, ansonsten gibts noch 160A+
+*** Rema &quot;DIN&quot; Stecker
+**** https://www.remagroup.com/steckverbinder/
+*** https://www.andersonpower.com/us/en/resources/EBCResourcesPage.html
+* Harting?
+** harting alternativen?
+*** https://paforum.de/forum/index.php?thread/25313-harting-und-alternativen/
+*** https://www.amphenol-industrial.de/de/heavy-mate-Schwere-Rechtecksteckverbinder
+*** https://www.tme.eu/de/katalog/hdc-steckverbinder_113616/
+** https://www.harting.com/DE/de/produkte-loesungen
+*** https://www.harting.com/DE/de/industrie-steckverbinder-han#Han%C2%AE-Baureihen
+** https://www.thomann.de/at/10-pol_multipin_stecker.html
+*** https://www.thomann.de/at/harting_09330102601.htm
+** Modular - https://www.harting.com/sites/default/files/2021-03/Han_06_Han-Modular_de.pdf
+*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Einsaetze-Han-Modularsup-sup-der-modulare-Steckverbinder/40889?search=false&amp;showProducts=1&amp;q=:code-asc:inProductListAllowed:true:507:%25E2%2580%258C+40+A:507:%25E2%2580%258C+70+A&amp;sort=integer7172-desc&amp;page=0
+*** https://b2b.harting.com/ebusiness/de/Han-70A-axial-module-male-6-16mm/09140022641?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-70A-axial-module-male-14-22-mm/09140022642?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-CD-module-crimp-male/09140073001?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-CD-module-crimp-female/09140073101?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-CC-Protected-module-crimp-female/09140043141?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-CC-Protected-module-crimp-male/09140043041?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Gehaeuse-Han-Modularsup-sup-Twin-kompaktes-Metallgehaeuse-fuer-zwei-Module/380525?detail=true&amp;sewConfig=false
+*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Gehaeuse-Han-Modularsup-sup-Compact-kompaktes-Metallgehaeuse-fuer-ein-Modul/380524?detail=true&amp;sewConfig=false
+** Han-Com - teuer
+*** https://b2b.harting.com/ebusiness/de/Han-K4-4-F-6-16mm-beruehrsicher/09380082701?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-K4-4-M-6-16mm-beruehrsicher/09380082601?newPDP=true
+* powelock komplett overkill
+* IEC 62196 Typ 2 ?
+* mehrere stecker?
+* IEC 60309 8h grau - 2L+PE &gt;250V DC
+** https://de.wikipedia.org/wiki/IEC_60309
+** im standard, aber nicht einfach käuflich scheinbar
+* 
+
+
+Kabel
+
+* Schweißkabel?
+
+
+!! Inverter Box
+
+* korrekte absicherung erde/FI/isolationswächter
+* zusätzliche steuerung?
+* freie software mit support für die schnittstellen des/der hersteller?
+** Modbus/RS485 protokolle
+** Ethernet/Wlan (IP)
+
+* ausgänge CEE 32A, CEE 16A (drehstrom und wohnwagen) und schuko
+* monitoring auf allen phasen
+** entweder integriert in dem inverter oder extra energiemessgerät/drehstromzähler
+*** je nach inverter hersteller bieten die auch solche geräte mit integration an (scheiß proprietärer vendor lock in)
+** voltmeter
+** frequenzmessung
+** strommessung vlt. mit stromwandlern (current transformer)
+*** https://de.wikipedia.org/wiki/Stromwandler
+* Notaus schalter?
+* can bus?
+** scheint nicht offen dokumentiert
+** vlt. nachfragen?
+** mit zubehör sniffen und reverse engineeren?
+*** wo bekommt man zubehör?
+** ein defektes akkupack demontieren und reverse engineeren?
+
+
+
+!! Modul Kisten
+
+* Module haben Eurokisten Format oder normales Flightcase format
+* Module stapelbar
+* transport wahlweise auf Palette mit Gabelhubwagen oder auf rollbrettern
+* oder haben alle module Rollen?
+
+
+!! Laden
+
+* Photovoltaikanlage
+** Trennschalter vor dem anschluss
+** trennschalter mit physischem lockout für stecker?
+* IEC 62196 Typ 2 für laden von ladesäule?
+** bräuchte vermutlich einen mikrocontroller zum kommunizieren und co
+
+
+
+
+Zubehör
+
+* Stromverteiler/Stromwürfel/&quot;Stromschildkröte&quot;/Bau(strom)verteiler/verteilersteckdosen wasserdicht
+* diverse stromkabel
+* rollbretter?
+* gabelhubwagen?
+* kisten für zubehör
+
+info
+
+* https://de.wikipedia.org/wiki/CEE-Stromverteilung
+
+
+stuff
+
+* [[ Budget DIY Ecoflow Delta Pro! More power for less money |https://www.youtube.com/watch?v=fdeZz4QvxG0]]
+* [[fucking big portable battery]]
+* [[Big mobile Battery Project]]
+* [[big (portable) battery]]</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -32075,13 +32224,15 @@ other / not sorted
 * https://www.speakerplans.com/index.php?id=faq
 * https://www.youtube.com/@frankswerkstatt</pre>
 </div>
-<div created="20231004230910919" modified="20231005005211137" tags="" title="spektralwelt">
+<div created="20231004230910919" modified="20231005220803056" tags="" title="spektralwelt">
 <pre>* https://www.lutronic.biz/en/connectivity/range/panel-mount-connectors#serie-LT02d
 * https://www.lutronic.biz/en/connectivity/range/field-attachables#serie-LT03d
 * https://www.lumberg.com/de/quicklock-lumberg-lutronic-de
 * https://www.lumberg.com/de/produkte/sortiment/rundsteckverbinder#serie-002
 * https://www.cnlinko.com/product/whole
-* https://www.tme.eu/de/katalog/p,lutronic_1489/?params=412:1443409_anzahl-pole:3</pre>
+* https://www.tme.eu/de/katalog/p,lutronic_1489/?params=412:1443409_anzahl-pole:3
+* https://connector-distribution.com/eu/industrie/netzstecker/lp-serie-netzanschluss/lp-16-serie/m16-kunststoff/188/lp-16-power-netz-steckverbinder-m16-3-pol-maennchen-ip67-max.-400-v-10-a
+* https://connector24.de/c/power-steckverbinder/lp-serie-power-stecker</pre>
 </div>
 <div created="20221002000428334" modified="20221002000628324" tags="[[parts and components]]" title="standard ironmongery parts">
 <pre>* https://wiki.opensourceecology.de/Liste_von_m%C3%B6glichen_OSE-Standards</pre>
