@@ -1217,7 +1217,7 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of 'großes modulares Akkupack mit Wechselrichter'</li>
+<li>Draft of 'Large mobile Battery (LMB)'</li>
 
 <li>Dresden</li>
 
@@ -1427,8 +1427,6 @@ Error message and password prompt
 
 <li>great led stuff, pixel and co</li>
 
-<li>großes modulares Akkupack mit Wechselrichter</li>
-
 <li>gruppendynamik (Psychologie/Soziologie?)</li>
 
 <li>GTC software analyse</li>
@@ -1576,6 +1574,8 @@ Error message and password prompt
 <li>Lambda Labs KW18</li>
 
 <li>landschaftspflege mit schafen</li>
+
+<li>Large mobile Battery (LMB)</li>
 
 <li>Lastenfahrrad Förderung</li>
 
@@ -13236,7 +13236,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230930110926974" list="[[LMB: Hochvolt Notizen]] [[Draft of 'großes modulares Akkupack mit Wechselrichter']] [[HTTP stuff]] About TableOfContents" modified="20231004102027783" title="$:/StoryList">
+<div created="20230930110926974" list="[[LMB: Hochvolt Notizen]] [[Draft of 'Large mobile Battery (LMB)']] [[HTTP stuff]] About TableOfContents" modified="20231005222453475" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14250,8 +14250,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20231004230909767" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20231005222452130" modifier="Thorbijoern" title="$:/temp/search">
+<pre>misc</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18832,12 +18832,17 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220717162850260" draft.of="großes modulares Akkupack mit Wechselrichter" draft.title="Large mobile Battery (LMB)" modified="20231005222338317" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Draft of 'großes modulares Akkupack mit Wechselrichter'">
+<div created="20220717162850260" draft.of="Large mobile Battery (LMB)" draft.title="Large mobile Battery (LMB)" modified="20231005222732241" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Draft of 'Large mobile Battery (LMB)'">
 <pre>Idee
 
 * großes modulares Akkupack mit Wechselrichter
 * mehrere akku module und einzelnes Wechselrichter-modul mit schaltkasten und  kontrollelektronik
 
+
+
+Zugehörig:
+
+&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
 
 
@@ -18859,6 +18864,7 @@ Module
 
 * 2 Zellen pro Modul in serie
 * 48V @ 105Ah
+* ~50kg, wäre noch zu zweit tragbar
 * Sicherung (DC) für jedes Modul
 
 Stecker
@@ -21372,149 +21378,6 @@ some more
 * https://shop.led-studien.de/en/pixel-dmx
 * https://shop.dmx4all.de/de/</pre>
 </div>
-<div created="20220717162850260" modified="20231005195805071" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="großes modulares Akkupack mit Wechselrichter">
-<pre>Idee
-
-* mehrere akku module und einzelnes Wechselrichter-modul mit schaltkasten und  kontrollelektronik
-
-
-
-
-!! Bis zum Inverter
-
-* gebrauchte 24V 100AH LFP akkupacks aus gabelstaplern
-* jedes akkupack hat integriertes BMS mit CANbus support
-
-Zellen verschaltung
-
-daten
-
-* triathlon tb 10508-v1
-* https://www.triathlon-batterien.de/produkte/lithium-ionen-batterien
-* https://www.triathlon-batterien.de/fileadmin/daten/02_Produkte/Lithium-Ionen-Batterien/Lithium-Ionen-Blockbatterie/Download/DE/2022_03_23_Lithium_Ionen_Blockbatterie_D_TBG.pdf
-
-verschaltung
-
-* 24-28,4V pro zelle (25,6V)
-** 104Ah
-* 15s: 360-426V (384V 38,4kWh)
-* 20s: 480-568V (512V 51,2Wh)
-
-Stecker
-
-* industrie hochstrom steckverbinder
-* mit datenkontakten für canbus und co
-* am besten wasserdicht
-* berührungssicherheit
-* Gabelstaplerstecker - aus dem bereich sind die akkus ja eh
-** Anderson Stecker?
-*** daten/hilfskontakte?
-** DIN / Euro Battery Connector/Steckverbinder
-*** 80A version sollte reichen, ansonsten gibts noch 160A+
-*** Rema &quot;DIN&quot; Stecker
-**** https://www.remagroup.com/steckverbinder/
-*** https://www.andersonpower.com/us/en/resources/EBCResourcesPage.html
-* Harting?
-** harting alternativen?
-*** https://paforum.de/forum/index.php?thread/25313-harting-und-alternativen/
-*** https://www.amphenol-industrial.de/de/heavy-mate-Schwere-Rechtecksteckverbinder
-*** https://www.tme.eu/de/katalog/hdc-steckverbinder_113616/
-** https://www.harting.com/DE/de/produkte-loesungen
-*** https://www.harting.com/DE/de/industrie-steckverbinder-han#Han%C2%AE-Baureihen
-** https://www.thomann.de/at/10-pol_multipin_stecker.html
-*** https://www.thomann.de/at/harting_09330102601.htm
-** Modular - https://www.harting.com/sites/default/files/2021-03/Han_06_Han-Modular_de.pdf
-*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Einsaetze-Han-Modularsup-sup-der-modulare-Steckverbinder/40889?search=false&amp;showProducts=1&amp;q=:code-asc:inProductListAllowed:true:507:%25E2%2580%258C+40+A:507:%25E2%2580%258C+70+A&amp;sort=integer7172-desc&amp;page=0
-*** https://b2b.harting.com/ebusiness/de/Han-70A-axial-module-male-6-16mm/09140022641?newPDP=true
-*** https://b2b.harting.com/ebusiness/de/Han-70A-axial-module-male-14-22-mm/09140022642?newPDP=true
-*** https://b2b.harting.com/ebusiness/de/Han-CD-module-crimp-male/09140073001?newPDP=true
-*** https://b2b.harting.com/ebusiness/de/Han-CD-module-crimp-female/09140073101?newPDP=true
-*** https://b2b.harting.com/ebusiness/de/Han-CC-Protected-module-crimp-female/09140043141?newPDP=true
-*** https://b2b.harting.com/ebusiness/de/Han-CC-Protected-module-crimp-male/09140043041?newPDP=true
-*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Gehaeuse-Han-Modularsup-sup-Twin-kompaktes-Metallgehaeuse-fuer-zwei-Module/380525?detail=true&amp;sewConfig=false
-*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Gehaeuse-Han-Modularsup-sup-Compact-kompaktes-Metallgehaeuse-fuer-ein-Modul/380524?detail=true&amp;sewConfig=false
-** Han-Com - teuer
-*** https://b2b.harting.com/ebusiness/de/Han-K4-4-F-6-16mm-beruehrsicher/09380082701?newPDP=true
-*** https://b2b.harting.com/ebusiness/de/Han-K4-4-M-6-16mm-beruehrsicher/09380082601?newPDP=true
-* powelock komplett overkill
-* IEC 62196 Typ 2 ?
-* mehrere stecker?
-* IEC 60309 8h grau - 2L+PE &gt;250V DC
-** https://de.wikipedia.org/wiki/IEC_60309
-** im standard, aber nicht einfach käuflich scheinbar
-* 
-
-
-Kabel
-
-* Schweißkabel?
-
-
-!! Inverter Box
-
-* korrekte absicherung erde/FI/isolationswächter
-* zusätzliche steuerung?
-* freie software mit support für die schnittstellen des/der hersteller?
-** Modbus/RS485 protokolle
-** Ethernet/Wlan (IP)
-
-* ausgänge CEE 32A, CEE 16A (drehstrom und wohnwagen) und schuko
-* monitoring auf allen phasen
-** entweder integriert in dem inverter oder extra energiemessgerät/drehstromzähler
-*** je nach inverter hersteller bieten die auch solche geräte mit integration an (scheiß proprietärer vendor lock in)
-** voltmeter
-** frequenzmessung
-** strommessung vlt. mit stromwandlern (current transformer)
-*** https://de.wikipedia.org/wiki/Stromwandler
-* Notaus schalter?
-* can bus?
-** scheint nicht offen dokumentiert
-** vlt. nachfragen?
-** mit zubehör sniffen und reverse engineeren?
-*** wo bekommt man zubehör?
-** ein defektes akkupack demontieren und reverse engineeren?
-
-
-
-!! Modul Kisten
-
-* Module haben Eurokisten Format oder normales Flightcase format
-* Module stapelbar
-* transport wahlweise auf Palette mit Gabelhubwagen oder auf rollbrettern
-* oder haben alle module Rollen?
-
-
-!! Laden
-
-* Photovoltaikanlage
-** Trennschalter vor dem anschluss
-** trennschalter mit physischem lockout für stecker?
-* IEC 62196 Typ 2 für laden von ladesäule?
-** bräuchte vermutlich einen mikrocontroller zum kommunizieren und co
-
-
-
-
-Zubehör
-
-* Stromverteiler/Stromwürfel/&quot;Stromschildkröte&quot;/Bau(strom)verteiler/verteilersteckdosen wasserdicht
-* diverse stromkabel
-* rollbretter?
-* gabelhubwagen?
-* kisten für zubehör
-
-info
-
-* https://de.wikipedia.org/wiki/CEE-Stromverteilung
-
-
-stuff
-
-* [[ Budget DIY Ecoflow Delta Pro! More power for less money |https://www.youtube.com/watch?v=fdeZz4QvxG0]]
-* [[fucking big portable battery]]
-* [[Big mobile Battery Project]]
-* [[big (portable) battery]]</pre>
-</div>
 <div created="20210410165348724" modified="20210410165627363" tags="Misc" title="gruppendynamik (Psychologie/Soziologie?)">
 <pre>* [[Leadership From A Dancing Guy|https://www.youtube.com/watch?v=hO8MwBZl-Vc]]
 * [[Philip Schlaffer|https://www.youtube.com/channel/UCCcFnVUHZDKDUkghDspBKdQ]] beschreibt in einigen videos auch gruppendynamiken</pre>
@@ -23292,6 +23155,135 @@ these amps seem to be susceptible to surges/over voltage from generators. people
 * bisschen hier erklärt:
 ** https://www.youtube.com/watch?v=v99yCU7e6PI</pre>
 </div>
+<div created="20220717162850260" modified="20231005222512650" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Large mobile Battery (LMB)">
+<pre>Idee
+
+* großes modulares Akkupack mit Wechselrichter
+* mehrere akku module und einzelnes Wechselrichter-modul mit schaltkasten und  kontrollelektronik
+
+
+
+&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
+
+
+
+!! Bis zum Inverter
+
+Zellen
+
+daten
+
+* triathlon tb 10508-v1
+* https://www.triathlon-batterien.de/produkte/lithium-ionen-batterien
+* https://www.triathlon-batterien.de/fileadmin/daten/02_Produkte/Lithium-Ionen-Batterien/Lithium-Ionen-Blockbatterie/Download/DE/2022_03_23_Lithium_Ionen_Blockbatterie_D_TBG.pdf
+* 24-28,4V pro zelle (25,6V)
+* 104Ah
+* gebrauchte (eig. B-Ware)  24V 100AH LFP akkupacks von z.B. gabelstaplern
+* jedes akkupack hat integriertes BMS mit CANbus support
+
+Module
+
+* 2 Zellen pro Modul in serie
+* 48V @ 105Ah
+* Sicherung (DC) für jedes Modul
+
+Stecker
+
+* industrie hochstrom steckverbinder
+* mit datenkontakten für canbus und co
+* am besten wasserfest
+* Gabelstaplerstecker - aus dem bereich sind die akkus ja eh
+** Anderson Stecker?
+*** daten/hilfskontakte?
+** DIN / Euro Battery Connector/Steckverbinder
+*** 80A version sollte reichen, ansonsten gibts noch 160A+
+*** Rema &quot;DIN&quot; Stecker
+**** https://www.remagroup.com/steckverbinder/
+*** https://www.andersonpower.com/us/en/resources/EBCResourcesPage.html
+* Harting?
+** harting alternativen?
+*** https://paforum.de/forum/index.php?thread/25313-harting-und-alternativen/
+*** https://www.amphenol-industrial.de/de/heavy-mate-Schwere-Rechtecksteckverbinder
+*** https://www.tme.eu/de/katalog/hdc-steckverbinder_113616/
+** https://www.harting.com/DE/de/produkte-loesungen
+*** https://www.harting.com/DE/de/industrie-steckverbinder-han#Han%C2%AE-Baureihen
+** https://www.thomann.de/at/10-pol_multipin_stecker.html
+*** https://www.thomann.de/at/harting_09330102601.htm
+* mehrere stecker?
+* 
+
+
+Kabel
+
+* Schweißkabel?
+
+
+!! Inverter Box
+
+* korrekte absicherung erde/FI/isolationswächter
+* Bender Isometer am AC out
+* zusätzliche steuerung?
+* freie software mit support für die schnittstellen des/der hersteller?
+** Modbus/RS485 protokolle
+** Ethernet/Wlan (IP)
+
+* ausgänge CEE 32A, CEE 16A (drehstrom und wohnwagen) und schuko
+* monitoring auf allen phasen
+** entweder integriert in dem inverter oder extra energiemessgerät/drehstromzähler
+*** je nach inverter hersteller bieten die auch solche geräte mit integration an (scheiß proprietärer vendor lock in)
+** voltmeter
+** frequenzmessung
+** strommessung vlt. mit stromwandlern (current transformer)
+*** https://de.wikipedia.org/wiki/Stromwandler
+* Notaus schalter?
+* can bus?
+** scheint nicht offen dokumentiert
+** vlt. nachfragen?
+** mit zubehör sniffen und reverse engineeren?
+*** wo bekommt man zubehör?
+** ein defektes akkupack demontieren und reverse engineeren?
+
+
+
+!! Modul Kisten
+
+* Module haben Eurokisten Format oder normales Flightcase format
+* Module stapelbar
+* transport wahlweise auf Palette mit Gabelhubwagen oder auf rollbrettern
+* oder haben alle module Rollen?
+
+
+!! Laden
+
+* Photovoltaikanlage
+** Trennschalter vor dem anschluss
+** trennschalter mit physischem lockout für stecker?
+* IEC 62196 Typ 2 für laden von ladesäule?
+** bräuchte vermutlich einen mikrocontroller zum kommunizieren und co
+
+
+
+
+Zubehör
+
+* Stromverteiler/Stromwürfel/&quot;Stromschildkröte&quot;/Bau(strom)verteiler/verteilersteckdosen wasserdicht
+* diverse stromkabel
+* rollbretter?
+* gabelhubwagen?
+* kisten für zubehör
+
+info
+
+* https://de.wikipedia.org/wiki/CEE-Stromverteilung
+
+
+stuff
+
+* [[ Budget DIY Ecoflow Delta Pro! More power for less money |https://www.youtube.com/watch?v=fdeZz4QvxG0]]
+* [[fucking big portable battery]]
+* [[Big mobile Battery Project]]
+* [[big (portable) battery]]</pre>
+</div>
 <div created="20210316230957094" modified="20220829162514917" tags="[[Fahrrad (bicycle, bike)]]" title="Lastenfahrrad Förderung">
 <pre>Förderung
 
@@ -24033,11 +24025,12 @@ optaining lithium and other rare materials used in these batteries is a hard thi
 * LM3914 can display linear voltage ranges
 ** https://tronixstuff.com/2013/09/14/tutorial-lm3914-dotbar-display-driver-ic/</pre>
 </div>
-<div created="20231005220618982" modified="20231005222448983" tags="[[Large mobile Battery (LMB)]]" title="LMB: Hochvolt Notizen">
+<div created="20231005220618982" modified="20231005222903083" tags="[[Large mobile Battery (LMB)]]" title="LMB: Hochvolt Notizen">
 <pre>Verschaltung
 
 * 15s: 360-426V (384V 38,4kWh)
 * 20s: 480-568V (512V 51,2Wh)
+** 10x 48V Module
 
 Steckverbinder
 
