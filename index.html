@@ -1219,6 +1219,8 @@ Error message and password prompt
 
 <li>Draft of 'Large mobile Battery (LMB)'</li>
 
+<li>Draft of 'LMB: Hochvolt Notizen'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13236,7 +13238,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230930110926974" list="[[LMB: Hochvolt Notizen]] [[Draft of 'Large mobile Battery (LMB)']] [[HTTP stuff]] About TableOfContents" modified="20231005222453475" title="$:/StoryList">
+<div created="20230930110926974" list="[[storing, mounting, housing (hardware)]] [[Draft of 'LMB: Hochvolt Notizen']] [[Draft of 'Large mobile Battery (LMB)']] [[HTTP stuff]] About TableOfContents" modified="20231005230342505" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14250,8 +14252,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20231005222452130" modifier="Thorbijoern" title="$:/temp/search">
-<pre>misc</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20231005230358737" modifier="Thorbijoern" title="$:/temp/search">
+<pre>mounti</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18832,7 +18834,7 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220717162850260" draft.of="Large mobile Battery (LMB)" draft.title="Large mobile Battery (LMB)" modified="20231005222732241" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Draft of 'Large mobile Battery (LMB)'">
+<div created="20220717162850260" draft.of="Large mobile Battery (LMB)" draft.title="Large mobile Battery (LMB)" modified="20231005224554818" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Draft of 'Large mobile Battery (LMB)'">
 <pre>Idee
 
 * großes modulares Akkupack mit Wechselrichter
@@ -18859,6 +18861,11 @@ daten
 * 104Ah
 * gebrauchte (eig. B-Ware)  24V 100AH LFP akkupacks von z.B. gabelstaplern
 * jedes akkupack hat integriertes BMS mit CANbus support
+
+Verschaltung
+
+* 48V [[Kleinspannungs|https://de.wikipedia.org/wiki/Kleinspannung#Sicherheitskleinspannung_(SELV)]] (Sicherheitskleinspannung) system
+
 
 Module
 
@@ -18940,6 +18947,7 @@ Kabel
 ** trennschalter mit physischem lockout für stecker?
 * IEC 62196 Typ 2 für laden von ladesäule?
 ** bräuchte vermutlich einen mikrocontroller zum kommunizieren und co
+** https://de.wikipedia.org/wiki/Ladestation_(Elektrofahrrad)
 
 
 
@@ -18962,7 +18970,56 @@ stuff
 * [[ Budget DIY Ecoflow Delta Pro! More power for less money |https://www.youtube.com/watch?v=fdeZz4QvxG0]]
 * [[fucking big portable battery]]
 * [[Big mobile Battery Project]]
-* [[big (portable) battery]]</pre>
+* [[big (portable) battery]]
+* https://de.wikipedia.org/wiki/EnergyBus
+* https://de.wikipedia.org/wiki/OCPP
+* https://de.wikipedia.org/wiki/ISO_15118</pre>
+</div>
+<div created="20231005220618982" draft.of="LMB: Hochvolt Notizen" draft.title="LMB: Hochvolt Notizen" modified="20231005224729616" tags="[[Large mobile Battery (LMB)]]" title="Draft of 'LMB: Hochvolt Notizen'">
+<pre>Verschaltung
+
+* 15s: 360-426V (384V 38,4kWh)
+* 20s: 480-568V (512V 51,2Wh)
+** 10x 48V Module
+
+Steckverbinder
+
+* berührungssicher
+* wasserfest
+* powelock komplett overkill
+* E-Auto Stecker
+** IEC 62196 Typ 2 bzw. CCS
+*** https://en.wikipedia.org/wiki/Combined_Charging_System
+*** https://de.wikipedia.org/wiki/Combined_Charging_System
+** https://de.wikipedia.org/wiki/North_American_Charging_Standard - kompakt aber lang
+** https://de.wikipedia.org/wiki/CHAdeMO
+* IEC 60309 (CEE) 8h grau - 2L+PE &gt;250V DC
+** https://de.wikipedia.org/wiki/IEC_60309
+** im standard, aber nicht einfach käuflich scheinbar
+* Harting
+** Modular - https://www.harting.com/sites/default/files/2021-03/Han_06_Han-Modular_de.pdf
+*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Einsaetze-Han-Modularsup-sup-der-modulare-Steckverbinder/40889?search=false&amp;showProducts=1&amp;q=:code-asc:inProductListAllowed:true:507:%25E2%2580%258C+40+A:507:%25E2%2580%258C+70+A&amp;sort=integer7172-desc&amp;page=0
+*** https://b2b.harting.com/ebusiness/de/Han-70A-axial-module-male-6-16mm/09140022641?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-70A-axial-module-male-14-22-mm/09140022642?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-CD-module-crimp-male/09140073001?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-CD-module-crimp-female/09140073101?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-CC-Protected-module-crimp-female/09140043141?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-CC-Protected-module-crimp-male/09140043041?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Gehaeuse-Han-Modularsup-sup-Twin-kompaktes-Metallgehaeuse-fuer-zwei-Module/380525?detail=true&amp;sewConfig=false
+*** https://b2b.harting.com/ebusiness/de/Industrie-Steckverbinder-Hansup-sup-Gehaeuse-Han-Modularsup-sup-Compact-kompaktes-Metallgehaeuse-fuer-ein-Modul/380524?detail=true&amp;sewConfig=false
+** Han-Com - teuer
+*** https://b2b.harting.com/ebusiness/de/Han-K4-4-F-6-16mm-beruehrsicher/09380082701?newPDP=true
+*** https://b2b.harting.com/ebusiness/de/Han-K4-4-M-6-16mm-beruehrsicher/09380082601?newPDP=true
+
+Wichtige Punkte
+
+* Vorteil: niedrige Ströme
+* Nachteil: Hochvoltakku, dangerous
+* Steckverbinder müssen Berührungssicher sein
+* unter spannung erst wenn alles verbunden und ein handshake ausgeführt wurde
+** würde extra elektronik für jedes Modul und ein Gleichstromschütz pro Modul benötigen
+* 60V DC-Schütze müssten reichen, braucht keine 600V DC-Schütze
+* Isolationswächter am DC Input vom Inverter - Verbunden mit Sicherheits-Handshake</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -32328,7 +32385,7 @@ after plugging it in it has some nasty digital noise tone and the real audio has
 <div created="20200521130328546" modified="20201126225714090" tags="[[IT / Computer security and digital / internet privacy]]" title="storage encryption">
 <pre></pre>
 </div>
-<div created="20201126220714131" modified="20230930112226229" tags="Misc Audio" title="storing, mounting, housing (hardware)">
+<div created="20201126220714131" modified="20231005230411356" tags="Misc Audio" title="storing, mounting, housing (hardware)">
 <pre>stuff about storing, mounting, housing hardware in some way
 
 &lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -32347,11 +32404,12 @@ after plugging it in it has some nasty digital noise tone and the real audio has
 * organizer
 ** https://www.kistenberg.com/de
 
-* messebau verbinder?
+* messebau verbinder? rigging?
 * reutlinger / drahtseilhalter
 ** https://www.messebau.de/montage-verpackung/seilabhaengung/
 * draht keilschloss
-* https://de.wikipedia.org/wiki/TV-Zapfen</pre>
+* https://de.wikipedia.org/wiki/TV-Zapfen
+* https://www.huss-licht-ton.de/index.php/Rigging/cat/10037.html</pre>
 </div>
 <div created="20221012203200653" modified="20221012203535474" tags="Misc" title="strommarkt">
 <pre>* [[Warum wird Strom immer teurer? (EEG-Umlage, Strommarkt, Strompreis)|https://www.youtube.com/watch?v=YkA65vpeA5g]]
