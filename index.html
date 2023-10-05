@@ -1217,8 +1217,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of 'Large mobile Battery (LMB)'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13236,7 +13234,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20230930110926974" list="[[fucking big bicycle-trailer/carco-bike]] [[LMB: Hochvolt Notizen]] [[Draft of 'Large mobile Battery (LMB)']] [[HTTP stuff]] About TableOfContents" modified="20231005230500104" title="$:/StoryList">
+<div created="20230930110926974" list="[[LMB: Hochvolt Notizen]] [[Large mobile Battery (LMB)]] [[HTTP stuff]] About TableOfContents" modified="20231005230500104" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -18832,147 +18830,6 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20220717162850260" draft.of="Large mobile Battery (LMB)" draft.title="Large mobile Battery (LMB)" modified="20231005224554818" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Draft of 'Large mobile Battery (LMB)'">
-<pre>Idee
-
-* großes modulares Akkupack mit Wechselrichter
-* mehrere akku module und einzelnes Wechselrichter-modul mit schaltkasten und  kontrollelektronik
-
-
-
-Zugehörig:
-
-&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
-
-
-
-!! Bis zum Inverter
-
-Zellen
-
-daten
-
-* triathlon tb 10508-v1
-* https://www.triathlon-batterien.de/produkte/lithium-ionen-batterien
-* https://www.triathlon-batterien.de/fileadmin/daten/02_Produkte/Lithium-Ionen-Batterien/Lithium-Ionen-Blockbatterie/Download/DE/2022_03_23_Lithium_Ionen_Blockbatterie_D_TBG.pdf
-* 24-28,4V pro zelle (25,6V)
-* 104Ah
-* gebrauchte (eig. B-Ware)  24V 100AH LFP akkupacks von z.B. gabelstaplern
-* jedes akkupack hat integriertes BMS mit CANbus support
-
-Verschaltung
-
-* 48V [[Kleinspannungs|https://de.wikipedia.org/wiki/Kleinspannung#Sicherheitskleinspannung_(SELV)]] (Sicherheitskleinspannung) system
-
-
-Module
-
-* 2 Zellen pro Modul in serie
-* 48V @ 105Ah
-* ~50kg, wäre noch zu zweit tragbar
-* Sicherung (DC) für jedes Modul
-
-Stecker
-
-* industrie hochstrom steckverbinder
-* mit datenkontakten für canbus und co
-* am besten wasserfest
-* Gabelstaplerstecker - aus dem bereich sind die akkus ja eh
-** Anderson Stecker?
-*** daten/hilfskontakte?
-** DIN / Euro Battery Connector/Steckverbinder
-*** 80A version sollte reichen, ansonsten gibts noch 160A+
-*** Rema &quot;DIN&quot; Stecker
-**** https://www.remagroup.com/steckverbinder/
-*** https://www.andersonpower.com/us/en/resources/EBCResourcesPage.html
-* Harting?
-** harting alternativen?
-*** https://paforum.de/forum/index.php?thread/25313-harting-und-alternativen/
-*** https://www.amphenol-industrial.de/de/heavy-mate-Schwere-Rechtecksteckverbinder
-*** https://www.tme.eu/de/katalog/hdc-steckverbinder_113616/
-** https://www.harting.com/DE/de/produkte-loesungen
-*** https://www.harting.com/DE/de/industrie-steckverbinder-han#Han%C2%AE-Baureihen
-** https://www.thomann.de/at/10-pol_multipin_stecker.html
-*** https://www.thomann.de/at/harting_09330102601.htm
-* mehrere stecker?
-* 
-
-
-Kabel
-
-* Schweißkabel?
-
-
-!! Inverter Box
-
-* korrekte absicherung erde/FI/isolationswächter
-* Bender Isometer am AC out
-* zusätzliche steuerung?
-* freie software mit support für die schnittstellen des/der hersteller?
-** Modbus/RS485 protokolle
-** Ethernet/Wlan (IP)
-
-* ausgänge CEE 32A, CEE 16A (drehstrom und wohnwagen) und schuko
-* monitoring auf allen phasen
-** entweder integriert in dem inverter oder extra energiemessgerät/drehstromzähler
-*** je nach inverter hersteller bieten die auch solche geräte mit integration an (scheiß proprietärer vendor lock in)
-** voltmeter
-** frequenzmessung
-** strommessung vlt. mit stromwandlern (current transformer)
-*** https://de.wikipedia.org/wiki/Stromwandler
-* Notaus schalter?
-* can bus?
-** scheint nicht offen dokumentiert
-** vlt. nachfragen?
-** mit zubehör sniffen und reverse engineeren?
-*** wo bekommt man zubehör?
-** ein defektes akkupack demontieren und reverse engineeren?
-
-
-
-!! Modul Kisten
-
-* Module haben Eurokisten Format oder normales Flightcase format
-* Module stapelbar
-* transport wahlweise auf Palette mit Gabelhubwagen oder auf rollbrettern
-* oder haben alle module Rollen?
-
-
-!! Laden
-
-* Photovoltaikanlage
-** Trennschalter vor dem anschluss
-** trennschalter mit physischem lockout für stecker?
-* IEC 62196 Typ 2 für laden von ladesäule?
-** bräuchte vermutlich einen mikrocontroller zum kommunizieren und co
-** https://de.wikipedia.org/wiki/Ladestation_(Elektrofahrrad)
-
-
-
-
-Zubehör
-
-* Stromverteiler/Stromwürfel/&quot;Stromschildkröte&quot;/Bau(strom)verteiler/verteilersteckdosen wasserdicht
-* diverse stromkabel
-* rollbretter?
-* gabelhubwagen?
-* kisten für zubehör
-
-info
-
-* https://de.wikipedia.org/wiki/CEE-Stromverteilung
-
-
-stuff
-
-* [[ Budget DIY Ecoflow Delta Pro! More power for less money |https://www.youtube.com/watch?v=fdeZz4QvxG0]]
-* [[fucking big portable battery]]
-* [[Big mobile Battery Project]]
-* [[big (portable) battery]]
-* https://de.wikipedia.org/wiki/EnergyBus
-* https://de.wikipedia.org/wiki/OCPP
-* https://de.wikipedia.org/wiki/ISO_15118</pre>
-</div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -23174,13 +23031,15 @@ these amps seem to be susceptible to surges/over voltage from generators. people
 * bisschen hier erklärt:
 ** https://www.youtube.com/watch?v=v99yCU7e6PI</pre>
 </div>
-<div created="20220717162850260" modified="20231005222512650" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Large mobile Battery (LMB)">
+<div created="20220717162850260" modified="20231005232543277" tags="[[accumulator - battery - rechargeable energy storage]] [[current projects]]" title="Large mobile Battery (LMB)">
 <pre>Idee
 
 * großes modulares Akkupack mit Wechselrichter
 * mehrere akku module und einzelnes Wechselrichter-modul mit schaltkasten und  kontrollelektronik
 
 
+
+Zugehörig:
 
 &lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
 
@@ -23200,10 +23059,16 @@ daten
 * gebrauchte (eig. B-Ware)  24V 100AH LFP akkupacks von z.B. gabelstaplern
 * jedes akkupack hat integriertes BMS mit CANbus support
 
+Verschaltung
+
+* 48V [[Kleinspannungs|https://de.wikipedia.org/wiki/Kleinspannung#Sicherheitskleinspannung_(SELV)]] (Sicherheitskleinspannung) system
+
+
 Module
 
 * 2 Zellen pro Modul in serie
 * 48V @ 105Ah
+* ~50kg, wäre noch zu zweit tragbar
 * Sicherung (DC) für jedes Modul
 
 Stecker
@@ -23279,6 +23144,7 @@ Kabel
 ** trennschalter mit physischem lockout für stecker?
 * IEC 62196 Typ 2 für laden von ladesäule?
 ** bräuchte vermutlich einen mikrocontroller zum kommunizieren und co
+** https://de.wikipedia.org/wiki/Ladestation_(Elektrofahrrad)
 
 
 
@@ -23301,7 +23167,10 @@ stuff
 * [[ Budget DIY Ecoflow Delta Pro! More power for less money |https://www.youtube.com/watch?v=fdeZz4QvxG0]]
 * [[fucking big portable battery]]
 * [[Big mobile Battery Project]]
-* [[big (portable) battery]]</pre>
+* [[big (portable) battery]]
+* https://de.wikipedia.org/wiki/EnergyBus
+* https://de.wikipedia.org/wiki/OCPP
+* https://de.wikipedia.org/wiki/ISO_15118</pre>
 </div>
 <div created="20210316230957094" modified="20220829162514917" tags="[[Fahrrad (bicycle, bike)]]" title="Lastenfahrrad Förderung">
 <pre>Förderung
