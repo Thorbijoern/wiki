@@ -1951,6 +1951,8 @@ Error message and password prompt
 
 <li>Pioneer ddj-sx - dj controller repair</li>
 
+<li>Pioneer DDJ-SX DJ Controller repair</li>
+
 <li>plant art</li>
 
 <li>plastic recycling</li>
@@ -13242,7 +13244,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20231012153252197" list="[[smart / small soldering iron (Lötkolben)]] [[Sonnensystem bikes]] [[fucking big bicycle-trailer/cargo-bike]] [[cargo bike trailer design]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Fahrrad (bicycle, bike)]] About TableOfContents" modified="20231012231235267" title="$:/StoryList">
+<div created="20231012153252197" list="[[Pioneer DDJ-SX DJ Controller repair]] [[smart / small soldering iron (Lötkolben)]] [[Sonnensystem bikes]] [[fucking big bicycle-trailer/cargo-bike]] [[cargo bike trailer design]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Fahrrad (bicycle, bike)]] About TableOfContents" modified="20231012231235267" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -28243,6 +28245,29 @@ luckily it was easy to find a service manual for the device: https://www.eservic
 Q2 is marked as RTR030P02 in the schematics, which is a small mosfet by Rohm semiconductor that should match the usecase.
 
 Due to that repair being a commission of a friend of mine, i don't know if i will also finish the repair when the replacements come in or if he repairs it.</pre>
+</div>
+<div created="20231013172210873" modified="20231013181205786" tags="[[audio repairs]]" title="Pioneer DDJ-SX DJ Controller repair">
+<pre>GTC got this DJ Controller in for repair and asked me for help.
+It's pretty beat up with bent faders and encoders, but the owner doesn't want these repaired.
+The main problem is the owner used a random power supply which probably had a too high voltage and now the unit won't turn on.
+The unit needs a 5V 3A power supply.
+
+It's pretty well assembled, with a lot of screws, one has to be careful to keep track of them.
+
+I started on the DSP/Mainboard were the power jack is located and started looking. I quickly could see a small SOT-3 package that was a bit charred. I tested it and it is shorted. After that i checked other components in the vicinity, but they seemed fine.
+
+The charred component has the marking &quot;TV&quot; on the package but it's not easy to find something with that.
+Luckily a service manual is available:
+
+https://www.eserviceinfo.com/downloadsm/103501/Pioneer_pioneer%20ddj-sx%20rrv4382%20dj%20controller.html
+
+The component is marked Q2 on the PCB and i could quickly find out that it's a RTR030P02 from Rohm Semiconductor.
+
+The people at GTC ordered some new RTR030P02 and i soldered one in. After replacing the blown one i partially assembled the unit again for testing. I quickly made an adaptor to power the unit, because the barrel jack that Pioneer used has a pretty thick stem in the middle and the standard 5mm and 2.1mm or so don't fit.
+I used a lab power supply for testing and set the current limiting a bit below 3A to be careful, also i made sure the voltage and polarity is correct before plugging it in.
+After switching the dj controller on, it drew around 1,5A max, so well below the maximum.
+
+We had no good setup to fully test the device, but it seems to have booted successfully.</pre>
 </div>
 <div created="20210312203134638" modified="20210317212724873" tags="Art [[sustainability / nachhaltigkeit]] nature" title="plant art">
 <pre>* https://studioroosegaarde.net/project/grow
