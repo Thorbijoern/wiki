@@ -1219,6 +1219,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of 'Pioneer ddj-sx - dj controller repair'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13244,7 +13246,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20231012153252197" list="[[diy audio networking (AES67, etc.)]] [[Audio streaming]] [[ebike akku schlüssel (key, wafer, lock)]] [[coole initiativen]] [[Pioneer ddj-sx - dj controller repair]] [[Pioneer DDJ-SX DJ Controller repair]] [[reloop digital jockey 2 (dj controller) repair]] [[smart / small soldering iron (Lötkolben)]] [[Sonnensystem bikes]] [[fucking big bicycle-trailer/cargo-bike]] [[cargo bike trailer design]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Fahrrad (bicycle, bike)]] About TableOfContents" modified="20231013222009692" title="$:/StoryList">
+<div created="20231012153252197" list="[[Draft of 'Pioneer ddj-sx - dj controller repair']] [[Pioneer DDJ-SX DJ Controller repair]] [[reloop digital jockey 2 (dj controller) repair]] [[smart / small soldering iron (Lötkolben)]] [[Sonnensystem bikes]] [[fucking big bicycle-trailer/cargo-bike]] [[cargo bike trailer design]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Fahrrad (bicycle, bike)]] About TableOfContents" modified="20231013222408670" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14258,8 +14260,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20231013222004169" modifier="Thorbijoern" title="$:/temp/search">
-<pre>pipewire</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20231013222402371" modifier="Thorbijoern" title="$:/temp/search">
+<pre>dj contr</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18862,6 +18864,9 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
+</div>
+<div created="20230925214229271" draft.of="Pioneer ddj-sx - dj controller repair" draft.title="Pioneer ddj-sx - dj controller repair" modified="20231013222417116" tags="[[audio repairs]]" title="Draft of 'Pioneer ddj-sx - dj controller repair'">
+<pre></pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -28261,7 +28266,7 @@ Q2 is marked as RTR030P02 in the schematics, which is a small mosfet by Rohm sem
 
 Due to that repair being a commission of a friend of mine, i don't know if i will also finish the repair when the replacements come in or if he repairs it.</pre>
 </div>
-<div created="20231013172210873" modified="20231013181205786" tags="[[audio repairs]]" title="Pioneer DDJ-SX DJ Controller repair">
+<div created="20231013172210873" modified="20231013222459962" tags="[[audio repairs]]" title="Pioneer DDJ-SX DJ Controller repair">
 <pre>GTC got this DJ Controller in for repair and asked me for help.
 It's pretty beat up with bent faders and encoders, but the owner doesn't want these repaired.
 The main problem is the owner used a random power supply which probably had a too high voltage and now the unit won't turn on.
@@ -28282,7 +28287,34 @@ The people at GTC ordered some new RTR030P02 and i soldered one in. After replac
 I used a lab power supply for testing and set the current limiting a bit below 3A to be careful, also i made sure the voltage and polarity is correct before plugging it in.
 After switching the dj controller on, it drew around 1,5A max, so well below the maximum.
 
-We had no good setup to fully test the device, but it seems to have booted successfully.</pre>
+We had no good setup to fully test the device, but it seems to have booted successfully.
+
+
+wrote the same info 2 times, here is the older one:
+
+
+&lt;&lt;&lt;
+The owner connected a random power supply to the dj controller and it didn't power on and won't power on again. It was propably a higher voltage one or wrong polarity.
+
+The unit is designed for a 5V power supply 3,5A or so.
+
+the controller was in overall bad shape, the fader for fading between channels and several encoder knobs were heavily bent. but it seems the owner only wants us to fix the power on issue.
+
+The controller is inside pretty much just circuitboard. There are a lot of screws, so one should keep track of where they belong. you also have to be careful when disassembling, because there are some thin fpc ribbon cables that connect the PCBs, which can be easily torn and damaged.
+
+All inputs &amp; outputs as well as the power jack are on the DSP board, so i removed only that board. The top side of the board can be first inspected, because it has a metal support/shielding plate screwed onto the back. i could not spot anything on the front side.
+
+after removing the metal plate i could quickly spot the slightly charred SOT Package. i checked other components (diodes, transistors, etc.) in the vicinity and around the power input/power circuitry, but could not find any obvios failed ones.
+
+the failed component is numbered as Q2 on the silk screen, the marking on the component is only partially readable.
+
+luckily it was easy to find a service manual for the device: https://www.eserviceinfo.com/downloadsm/103501/Pioneer_pioneer%20ddj-sx%20rrv4382%20dj%20controller.html
+
+Q2 is marked as RTR030P02 in the schematics, which is a small mosfet by Rohm semiconductor that should match the usecase.
+
+Due to that repair being a commission of a friend of mine, i don't know if i will also finish the repair when the replacements come in or if he repairs it.
+&lt;&lt;&lt;
+</pre>
 </div>
 <div created="20210312203134638" modified="20210317212724873" tags="Art [[sustainability / nachhaltigkeit]] nature" title="plant art">
 <pre>* https://studioroosegaarde.net/project/grow
