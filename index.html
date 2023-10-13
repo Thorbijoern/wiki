@@ -1219,6 +1219,8 @@ Error message and password prompt
 
 <li>DNS</li>
 
+<li>Draft of 'Audio streaming'</li>
+
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13244,7 +13246,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20231012153252197" list="[[ebike akku schlüssel (key, wafer, lock)]] [[coole initiativen]] [[Pioneer ddj-sx - dj controller repair]] [[Pioneer DDJ-SX DJ Controller repair]] [[reloop digital jockey 2 (dj controller) repair]] [[smart / small soldering iron (Lötkolben)]] [[Sonnensystem bikes]] [[fucking big bicycle-trailer/cargo-bike]] [[cargo bike trailer design]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Fahrrad (bicycle, bike)]] About TableOfContents" modified="20231013220335355" title="$:/StoryList">
+<div created="20231012153252197" list="[[diy audio networking (AES67, etc.)]] [[Draft of 'Audio streaming']] [[ebike akku schlüssel (key, wafer, lock)]] [[coole initiativen]] [[Pioneer ddj-sx - dj controller repair]] [[Pioneer DDJ-SX DJ Controller repair]] [[reloop digital jockey 2 (dj controller) repair]] [[smart / small soldering iron (Lötkolben)]] [[Sonnensystem bikes]] [[fucking big bicycle-trailer/cargo-bike]] [[cargo bike trailer design]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Fahrrad (bicycle, bike)]] About TableOfContents" modified="20231013221201257" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14258,8 +14260,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20231013220333043" modifier="Thorbijoern" title="$:/temp/search">
-<pre>lock</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20231013221156786" modifier="Thorbijoern" title="$:/temp/search">
+<pre>dante</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -18314,10 +18316,10 @@ Class A
 * [[Moritz Klein: DIY Mixer series|https://www.youtube.com/playlist?list=PLHeL0JWdJLvQUWK_poeQVAd3mvSTiE0uV]]
 * https://hackaday.com/2023/02/15/how-to-build-jennys-budget-mixing-desk/</pre>
 </div>
-<div created="20230612221106941" modified="20230612221544852" tags="[[digital audio]] [[mixing / signal processing]] [[inter IC or inter device communication, networking]] [[current projects]]" title="diy audio networking (AES67, etc.)">
+<div created="20230612221106941" modified="20231013222000643" tags="[[digital audio]] [[mixing / signal processing]] [[inter IC or inter device communication, networking]] [[current projects]]" title="diy audio networking (AES67, etc.)">
 <pre>* some managed switch with QoS and other features for AES67, Dante, AVB or so (audio over IP in general)
 * i'm mainly focused on open source protocols
-* </pre>
+* https://www.youtube.com/results?search_query=aes67</pre>
 </div>
 <div created="20200520000029032" modified="20210604174253717" tags="[[Fahrrad (bicycle, bike)]]" title="diy bicycle bag (fahrradtasche)">
 <pre>hooks - not easy to find
@@ -18859,6 +18861,68 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
+</div>
+<div created="20200516205914729" draft.of="Audio streaming" draft.title="Audio streaming" modified="20231013221322613" tags="[[digital audio]] [[mixing / signal processing]]" title="Draft of 'Audio streaming'">
+<pre>* DLNA/~UPnP
+
+* VBAN - https://vb-audio.com/Voicemeeter/vban.htm
+** [[VBAN Protocol Specification|https://vb-audio.com/Voicemeeter/VBANProtocol_Specifications.pdf]]
+** https://github.com/quiniouben/vban - open source linux implementation
+
+* https://duckduckgo.com/?q=linux+stream+wav+audio&amp;t=ffab&amp;ia=web
+* [[RTP|https://en.wikipedia.org/wiki/Real-time_Transport_Protocol]], [[RTSP|https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol]], [[RTCP|https://en.wikipedia.org/wiki/RTCP]]
+* https://en.wikipedia.org/wiki/Audio_over_IP
+* https://en.wikipedia.org/wiki/Comparison_of_audio_network_protocols
+
+* Ethernet AVB
+** https://www.linux-magazin.de/ausgaben/2013/11/avb/
+** https://de.wikipedia.org/wiki/Audio/Video_Bridging
+** https://en.wikipedia.org/wiki/Audio_Video_Bridging
+** https://github.com/audioscience/Open-AVB
+** http://avnu.github.io/OpenAvnu/
+
+* [[AES: Audio Networking Resources|https://secure.aes.org/members/insidetrack/201810/]]
+** AES50
+** [[AES67-2018: AES standard for audio applications of networks - High-performance streaming audio-over-IP interoperability|https://www.aes.org/publications/standards/search.cfm?docID=96]]
+
+* https://trac.ffmpeg.org/wiki/StreamingGuide
+* https://stackoverflow.com/questions/11644625/rtp-streaming-with-ffmpeg
+* https://www.youtube.com/watch?v=ZXz-u1f-uw0
+* https://www.linux.com/training-tutorials/weekend-project-using-pulseaudio-share-sound-across-all-your-computers/
+* https://stackoverflow.com/questions/2795031/synchronizing-audio-over-a-network
+* https://stmllr.net/blog/streaming-audio-with-mpd-and-icecast2-on-raspberry-pi/
+* https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks#HTTP_streaming
+* https://www.musicpd.org/doc/html/user.html#satellite
+* https://wiki.archlinux.org/index.php/Icecast
+
+* https://www.musicpd.org/
+** https://wiki.ubuntuusers.de/MPD/
+** https://wiki.archlinux.org/index.php/Music_Player_Daemon#Multi-MPD_setup
+** https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Music_Player_Daemon_based
+
+* https://gstreamer.freedesktop.org/
+** https://github.com/matthew1000/gstreamer-cheat-sheet
+** https://arunraghavan.net/2016/11/gstreamer-and-synchronisation-made-easy/
+** https://gstreamer.freedesktop.org/documentation/application-development/advanced/clocks.html?gi-language=c
+** [[Synchronised multi-room multimedia playback and synchronised live media processing and mixing with G|https://www.youtube.com/watch?v=C7sH4TSc054]]
+** https://archive.org/details/lca2020-Synchronised_Playback_with_GStreamer
+
+* https://www.linux.com/topic/desktop/how-stream-audio-your-linux-pc-android/
+* https://blog.michael.franzl.name/2013/11/25/audio-streaming/
+* https://www.linuxquestions.org/questions/linux-software-2/linux-audio-streaming-server-4175441805/
+* https://www.linux.com/topic/desktop/5-streaming-audio-players-linux/
+
+* proprietary, professional:
+** Dante
+*** https://www.audinate.com/products/dante-enabled/audinate/audinate-dante-avio-aes3-ebu
+*** https://www.audinate.com/products/devices/dante-avio
+*** https://assets.audinate.com/wp-content/uploads/2022/03/Dante-AVIO-AES3-Marketing-Datasheet-03102022.pdf
+
+* https://sonobus.net/
+
+* https://jamulus.io/
+
+* [[Digital vs Analog Audio - X32/M32 AES50, Routing Latency (Public)|https://www.youtube.com/watch?v=hSYXAV-rpOg]]</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
