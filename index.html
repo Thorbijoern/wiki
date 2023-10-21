@@ -219,6 +219,8 @@ Error message and password prompt
 
 <li>$:/state/edit/references--1056708933</li>
 
+<li>$:/state/edit/references--1800255893</li>
+
 <li>$:/state/edit/references--1896307719</li>
 
 <li>$:/state/edit/references--2006604617</li>
@@ -1220,6 +1222,8 @@ Error message and password prompt
 <li>DNS</li>
 
 <li>Draft of ''</li>
+
+<li>Draft of 'the t.racks DSP 4x4 Mini reverse engineering'</li>
 
 <li>Dresden</li>
 
@@ -12722,6 +12726,9 @@ TableOfContents</pre>
 <div created="20220716014107212" modified="20220716014107212" title="$:/state/edit/references--1056708933">
 <pre>show</pre>
 </div>
+<div created="20231021214950677" modified="20231021214950677" title="$:/state/edit/references--1800255893">
+<pre>show</pre>
+</div>
 <div created="20220706232926268" modified="20220706232926268" title="$:/state/edit/references--1896307719">
 <pre>show</pre>
 </div>
@@ -13244,7 +13251,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20231012153252197" list="[[Big mobile Battery Project]] [[big (portable) battery]] [[fucking big portable battery]] [[Draft of '']] [[the t.racks DSP 4x4 Mini reverse engineering]] [[esp32 ws281x/ws2812 RMT parse/read]] [[smart / small soldering iron (Lötkolben)]] [[Sonnensystem bikes]] [[fucking big bicycle-trailer/cargo-bike]] [[cargo bike trailer design]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Fahrrad (bicycle, bike)]] About TableOfContents" modified="20231021214904187" title="$:/StoryList">
+<div created="20231012153252197" list="[[Draft of '']] [[Draft of 'the t.racks DSP 4x4 Mini reverse engineering']] [[thomann the t.racks DSP reverse engineering]] [[esp32 ws281x/ws2812 RMT parse/read]] [[smart / small soldering iron (Lötkolben)]] [[Sonnensystem bikes]] [[fucking big bicycle-trailer/cargo-bike]] [[cargo bike trailer design]] [[(DMX) / ArtNet / sACN LED Leisten und Logos]] [[Fahrrad (bicycle, bike)]] About TableOfContents" modified="20231021215021144" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -18865,11 +18872,140 @@ how important is 110Ohm cable?</pre>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
 </div>
-<div created="20231021211122242" draft.of="" draft.title="the t.racks DSP 4x4 Mini Pro reverse engineering" modified="20231021211319678" tags="[[thomann / musicrown DSPs]] [[dsp (digital signal processor) / digital crossover]]" title="Draft of ''">
+<div created="20231021211122242" draft.of="" draft.title="the t.racks DSP 4x4 Mini Pro reverse engineering" modified="20231021214936397" tags="[[thomann / musicrown DSPs]] [[dsp (digital signal processor) / digital crossover]]" title="Draft of ''">
 <pre>* https://www.thomann.de/de/the_t.racks_dsp_4x4_mini_pro.htm
 * manual: https://images.static-thomann.de/pics/atg/atgdata/document/manual/555772_c_555772_de_online.pdf
 
-this device is basically the same </pre>
+this device is basically the same 
+
+uses </pre>
+</div>
+<div created="20220619173916735" draft.of="the t.racks DSP 4x4 Mini reverse engineering" draft.title="the t.racks DSP 4x4 Mini and Mini Pro reverse engineering" modified="20231021214947498" tags="[[dsp (digital signal processor) / digital crossover]] [[reverse engineering]] [[current projects]] [[thomann / musicrown DSPs]]" title="Draft of 'the t.racks DSP 4x4 Mini reverse engineering'">
+<pre>https://www.thomann.de/de/the_t.racks_dsp_4x4_mini.htm
+
+seems to be made by http://en.musicrown-audio.com/index.html
+
+* reports as &quot;Musicrown Dsp Process&quot; in Linux
+* uses the USB HID class
+* see below for lsusb output
+* https://www.thomann.de/de/the_t.racks_dsp_4x4_mini_reviews.htm reviews give some information on gains and sensitivity
+
+!! file format reverse engineering
+
+
+!! pc software reverse engineering
+
+i thought i don't need to reverse engineer the software, but i can't make full sense of everything in the file format, so it seems like i need too.
+
+
+!! tests 
+
+''TODO: muss nochmal eine messreihe machen in der ich mit den festen limiter werten den genauen output messe und nicht versuche die limiter werte an die output amplitude anzupassen''
+
+also bei unsymmetrisch in:
+* symmetrisch out ist normal, aber bisschen lauter, ca. 0,536-0,537V
+* unsymmetrisch out: halbiert (0,268V)
+
+```
+alle tests 1kHz und unsymm in
+
+symm out ~0,53 ca. -0,4-0,7dB output Gain
+
+2V in; symm out:
+out 0,57: limit: -5,5dB
+out 0,8: limit: -2,5 ... -3dB
+out 0,93: limit: -1 ... -1,5dB
+out 0,91: limit: -1,5dB
+out 0,85: limit: -2 ... -2,5dB
+
+
+2V in; unsymm out:
+out 0,57: limit: 0 ... 0,5dB
+out 0,8: limit: +3dB?
+out 0,93: limit: +5dB
+out 0,91: limit: +4,5dB
+out 0,85: limit: +3,5 ... +4dB
+
+
+alles unsymm out:
+3,6V is noch gut, 3,7V ist clip am input
+3,6V in und +1,2dB input gain geht gerade so. (1,96V out)
+3,6V in und 1,3dB input gain ist clip
+3,6V in; 0dB input gain; +0,5db output gain (bei einem -0,7dB korrigiertem kanal; also -0,2dB out gain) ist clip - auch auf symmetrisch out - sind ~3,92V out symm; 1,96V unsymm
+```
+
+!! lsusb -v output:
+
+```
+Bus 003 Device 002: ID 0168:0821 Musicrown Dsp Process
+Couldn't open device, some information will be missing
+Device Descriptor:
+  bLength                18
+  bDescriptorType         1
+  bcdUSB               1.10
+  bDeviceClass            0 
+  bDeviceSubClass         0 
+  bDeviceProtocol         0 
+  bMaxPacketSize0         8
+  idVendor           0x0168 
+  idProduct          0x0821 
+  bcdDevice            0.00
+  iManufacturer           1 Musicrown
+  iProduct                2 Dsp Process
+  iSerial                 0 
+  bNumConfigurations      1
+  Configuration Descriptor:
+    bLength                 9
+    bDescriptorType         2
+    wTotalLength       0x0029
+    bNumInterfaces          1
+    bConfigurationValue     1
+    iConfiguration          0 
+    bmAttributes         0x80
+      (Bus Powered)
+    MaxPower              100mA
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        0
+      bAlternateSetting       0
+      bNumEndpoints           2
+      bInterfaceClass         3 Human Interface Device
+      bInterfaceSubClass      0 
+      bInterfaceProtocol      0 
+      iInterface              0 
+        HID Device Descriptor:
+          bLength                 9
+          bDescriptorType        33
+          bcdHID               1.10
+          bCountryCode            0 Not supported
+          bNumDescriptors         1
+          bDescriptorType        34 Report
+          wDescriptorLength      27
+         Report Descriptors: 
+           ** UNAVAILABLE **
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               1
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x02  EP 2 OUT
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               1
+```
+</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -31401,7 +31537,7 @@ _____
 * CAD model for isolationchecker and circuit breaker
 * ask local bussiness to donate needed parts</pre>
 </div>
-<div created="20220831000902777" modified="20230702181115815" tags="Sonnensystem" title="Sonnensystem Signalweg">
+<div created="20220831000902777" modified="20231021215013355" tags="Sonnensystem" title="Sonnensystem Signalweg">
 <pre>the whole signal chain of the current ~SoSy Setup has to be checked in order to get the best sound quality and as prerequisite to measuring the frequency response of the whole system.
 
 
@@ -31428,7 +31564,7 @@ check gain chain
 * xlr to unbalanced 6.3mm jack
 
 
-! [[the t.racks DSP 4x4 Mini|the t.racks DSP 4x4 Mini reverse engineering]]
+! [[the t.racks DSP 4x4 Mini|the t.racks DSP 4x4 Mini and Mini Pro reverse engineering]]
 
 * the gains, sensitivity and internal reference is a bit fucked up, the thomann reviews describe it pretty well it seems
 * the inputs and outputs don't seem to have overhead and clip sooner than given in the datasheet it seems
@@ -33204,8 +33340,8 @@ Device Descriptor:
 
 * https://github.com/gr4per/dsp206</pre>
 </div>
-<div created="20221106000415931" modified="20230702184201189" tags="[[dsp (digital signal processor) / digital crossover]] [[current projects]] [[reverse engineering]] [[thomann / musicrown DSPs]]" title="thomann the t.racks DSP reverse engineering">
-<pre>* [[the t.racks DSP 4x4 Mini|the t.racks DSP 4x4 Mini reverse engineering]]
+<div created="20221106000415931" modified="20231021215113803" tags="[[dsp (digital signal processor) / digital crossover]] [[current projects]] [[reverse engineering]] [[thomann / musicrown DSPs]]" title="thomann the t.racks DSP reverse engineering">
+<pre>* [[the t.racks DSP 4x4 Mini|the t.racks DSP 4x4 Mini and Mini Pro reverse engineering]]
 * [[the t.racks DSP 206|the t.racks DSP 206 reverse engineering]]
 
 not yet:
