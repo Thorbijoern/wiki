@@ -2305,6 +2305,8 @@ Error message and password prompt
 
 <li>spektralwelt</li>
 
+<li>Stairville led bar 240/8 rgb dmx 30° repair</li>
+
 <li>standard ironmongery parts</li>
 
 <li>standards / normen</li>
@@ -13275,7 +13277,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20231204162710660" list="[[&quot;diamond&quot;-port sub plans]] About TableOfContents" modified="20231204162932549" title="$:/StoryList">
+<div created="20231204162710660" list="[[Stairville led bar 240/8 rgb dmx 30° repair]] [[&quot;diamond&quot;-port sub plans]] About TableOfContents" modified="20231212174300486" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14289,8 +14291,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20231204162930157" modifier="Thorbijoern" title="$:/temp/search">
-<pre>plan</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20231219005825537" modifier="Thorbijoern" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -32544,6 +32546,80 @@ other / not sorted
 * https://www.tme.eu/de/katalog/p,lutronic_1489/?params=412:1443409_anzahl-pole:3
 * https://connector-distribution.com/eu/industrie/netzstecker/lp-serie-netzanschluss/lp-16-serie/m16-kunststoff/188/lp-16-power-netz-steckverbinder-m16-3-pol-maennchen-ip67-max.-400-v-10-a
 * https://connector24.de/c/power-steckverbinder/lp-serie-power-stecker</pre>
+</div>
+<div created="20231219005822134" modified="20231219013218998" tags="[[light / projection / visuals]] repairs" title="Stairville led bar 240/8 rgb dmx 30° repair">
+<pre>
+repair of a Stairville &quot;led bar 240/8 rgb dmx 30°&quot;
+
+info
+
+* https://www.thomann.de/de/stairville_led_bar_2408_rgb_dmx_30.htm
+
+!! PCBs
+
+LED PCBs
+
+* 4 pieces
+* each has 2 LED &quot;segments&quot;
+* 10mm LEDs
+
+power supply
+
+* IN: 100-240V 50Hz/60Hz AC
+* datecode: 2017/01/05
+* &quot;PAUO-36WS(3)&quot;
+* OUT: 12V, likely 36W
+
+control board
+
+* chips:
+** STC 12C5A60S2
+*** MCU
+*** https://www.alldatasheet.com/datasheet-pdf/pdf/1179047/STC/STC12C5A60S2.html
+*** http://www.stcmicro.com/datasheet/STC12C5A60S2-en.pdf
+** TI SN75176B
+*** https://www.ti.com/product/SN75176B
+** TI LM358 - dual opamp
+** 78M05 - 5V 0,5A V-REG
+** 2x STC 11F01
+*** MCU
+*** http://www.stcmicro.com/datasheet/STC11F-10Fxx-en.pdf
+** UTC ULN2803G
+*** Eight Darlington Arrays
+*** http://www.unisonic.com.tw/datasheet/ULN2803.pdf
+*** https://www.alldatasheet.com/datasheet-pdf/pdf/168892/UTC/ULN2803.html
+*** https://www.conrad.de/de/ratgeber/industrie-40/elektronik-bauteile/uln2803.html
+** HEF4069UBT
+*** general purpose hex inverter
+*** https://www.alldatasheet.com/datasheet-pdf/pdf/17728/PHILIPS/HEF4069UBT.html
+
+display/button board
+
+* 4x LED 7-segment displays
+* 4 buttons
+* ...
+
+DMX board
+
+* XLR3 male + XLR3 female
+* ...
+
+
+stuff to repair
+
+* control pcb
+** 2x 100uF 25V (RVT series?) electrolytics
+** likely all darlington array chips (ULN2803G)
+** check hex inverter (HEF4069UBT)
+
+* LED PCBs
+** few red
+** a lot of green
+** some blue
+** wire resoldering
+
+* check power supply caps
+* housing endcap</pre>
 </div>
 <div created="20221002000428334" modified="20221002000628324" tags="[[parts and components]]" title="standard ironmongery parts">
 <pre>* https://wiki.opensourceecology.de/Liste_von_m%C3%B6glichen_OSE-Standards</pre>
