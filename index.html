@@ -13287,7 +13287,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240305001620511" list="[[cheap amplifier boards with dsp or xlr/balanced]] [[bastel todo]] About TableOfContents" modified="20240305175302228" title="$:/StoryList">
+<div created="20240305001620511" list="[[thomann the t.amp TSA1400 repair]] [[bastel todo]] About TableOfContents" modified="20240305235712869" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14301,8 +14301,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20240305175259177" modifier="Thorbijoern" title="$:/temp/search">
-<pre>cheap chinese</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20240305235711626" modifier="Thorbijoern" title="$:/temp/search">
+<pre>tsa1400</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15673,7 +15673,7 @@ sources:
 <div created="20220528184640974" modified="20220528184654475" tags="Misc" title="bastel stuff">
 <pre>* https://www.youtube.com/watch?v=jVpUe46yaUE</pre>
 </div>
-<div created="20240217231249258" modified="20240305013149672" tags="" title="bastel todo">
+<div created="20240217231249258" modified="20240305180549674" tags="" title="bastel todo">
 <pre>* ~~RCF kaltgeräte kabel 3m?~~
 * vlt. neues 25m verlängerungskabel mit XLR dran?
 
@@ -15688,7 +15688,7 @@ sources:
 ** heatsink
 
 * Hope Rack
-** DB25 conn
+** DB15 conn
 ** kabel?
 ** DCX XLR-mod connectors sind da
 ** ?
@@ -29497,7 +29497,7 @@ projects:
 * pyqtgraph
 * </pre>
 </div>
-<div created="20220611235706036" modified="20220829221104949" tags="[[current projects]] [[PA Amplifier Repairs]]" title="QSC Powerlight 1.8 repair">
+<div created="20220611235706036" modified="20240305235610623" tags="[[current projects]] [[PA Amplifier Repairs]]" title="QSC Powerlight 1.8 repair">
 <pre>bought 2 used QSC PL1.8 to repair them.
 
 * https://www.qsc.com/resource-files/productresources/amp/discontinued/powerlight/q_amp_powerlight_series_specs.pdf
@@ -29531,6 +29531,8 @@ the supplier i wanted to order from had NE5532P and NE5532AP from TI. both have 
 
 I got a couple of both because they seem to be pretty popular and it doesn't hurt to have some opamps around.
 
+the opamps are probably not the problem and instead the dead electrolytic caps are.
+
 !! capacitors
 
 original ones are meritek vent 470uF 16V -40+85°C.
@@ -29538,7 +29540,7 @@ these can be found in both amps, only in one of them they seem to be damaged, bu
 
 i replaced them with 470uF 16V Rubycon ZLH series rated up to 105°C which should last a while.
 
-I replaced these caps first in the amp with one quieter channel, after the replacement both channels sounded like the same volume. I have to check with a meassurement mic to have solid data, but the new caps might have already fixed it.
+I replaced these caps first in the amp with one quieter channel, after the replacement both channels sounded like the same volume. I have to check with a meassurement mic or so to have solid data, but the new caps might have already fixed it.
 
 !! screws
 
@@ -29563,7 +29565,17 @@ maybe i can find some [[mcmaster carr alternative for europe]].
 maybe it's an option to buy plain steel screws (not stainless) and blue them:
 
 * https://en.wikipedia.org/wiki/Bluing_(steel)
-* https://de.wikipedia.org/wiki/Br%C3%BCnieren</pre>
+* https://de.wikipedia.org/wiki/Br%C3%BCnieren
+
+!! shorted power rail switching mosfets
+
+QSC schematics and service manuals say:
+
+* Q501, 502, 601, 602 are switching FETs, QSC P/N QD-000031-QD, 125W, 60V minimum, on-resistance 0.030 Ohms max.
+* QD-000031-QD : FET NChan TO220 60V 50A : Q501, 502, Q601, 602
+* TMOS FET (TMOS Power Field Effect Transistor) IRFZ44
+
+check which fets in amp</pre>
 </div>
 <div created="20210201233501049" modified="20230227005311481" tags="[[electronics parts/components]] repairs" title="quality Electrolytic Capacitors">
 <pre>failing electrolytic caps (elcos, Elkos) are a common failure mode of consumer electronics.
@@ -33698,7 +33710,7 @@ they use a common ground and a 5V-pullup data line which gets pulled down to gro
 
 * https://github.com/gr4per/dsp206</pre>
 </div>
-<div created="20240217232701952" modified="20240229104223319" tags="[[current projects]] [[PA Amplifier Repairs]]" title="thomann the t.amp TSA1400 repair">
+<div created="20240217232701952" modified="20240306000545681" tags="[[current projects]] [[PA Amplifier Repairs]]" title="thomann the t.amp TSA1400 repair">
 <pre>** IR gp4063d
 *** https://www.infineon.com/dgdl/Infineon-IRGP4063D-DataSheet-vNA-EN.pdf?fileId=5546d462533600a401535655ee0c2450
 *** https://octopart.com/search?q=gp4063d&amp;currency=USD&amp;specs=0
