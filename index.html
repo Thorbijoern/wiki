@@ -2541,6 +2541,8 @@ Error message and password prompt
 
 <li>WS2811 (ws2812) high power modules</li>
 
+<li>WSP BoXYZ CNC</li>
+
 <li>xdotool on fedora wayland</li>
 
 <li>XLR</li>
@@ -13289,7 +13291,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240305001620511" list="[[Fahrradanhänger kupplung]] [[Konglomerat wood CNC, buildbotics controller repair]] [[Draft of '']] [[thomann the t.amp TSA1400 repair]] [[bastel todo]] About TableOfContents" modified="20240310161051660" title="$:/StoryList">
+<div created="20240305001620511" list="[[steinberg UR22]] [[WSP BoXYZ CNC]] [[Konglomerat wood CNC, buildbotics controller repair]] [[Draft of '']] [[thomann the t.amp TSA1400 repair]] [[bastel todo]] About TableOfContents" modified="20240310175233498" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14303,8 +14305,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20240310161047975" modifier="Thorbijoern" title="$:/temp/search">
-<pre>weber</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20240310175231466" modifier="Thorbijoern" title="$:/temp/search">
+<pre>steinb</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -35388,6 +35390,38 @@ wled pwm frequency:
 
 
 [[esp32 ws281x/ws2812 RMT parse/read]]</pre>
+</div>
+<div created="20240310161751818" modified="20240310175235290" tags="" title="WSP BoXYZ CNC">
+<pre>company seems to be dead since the end of 2019
+
+* https://www.youtube.com/playlist?list=PL29OnkRjK38cut9g6SvXEYbKAhIWF92B9
+* https://www.youtube.com/@boxzy1167/videos
+* https://desktop-3dprinter.com/ - website, but outdated
+* https://boxzy.dozuki.com/c/BoXZY_Manual - original manual but offline - maybe available in the archive?
+* https://github.com/mwasilew/boxzy - unofficial manual but seems extensive
+
+mill
+
+the mill that came with it is an original makita but a US 110V version. i don't know if it is possible to rewire it, but probably not as easy because i don't know the 230V wiring and the speed-controll pcb probably also has to be modified.
+it might be possible to get spare parts for the current version that fit in the old version?
+
+there are some cheap china models available which seem to work with the same 65mm base.
+
+PC software
+
+* https://www.reddit.com/r/3Dprinting/comments/i0u54i/boxzy_software/
+**https://drive.google.com/file/d/0B0gOyqLrz4L-ZEcxQ2E2dnVsTlU/view?resourcekey=0-yQH9hragkKfnHfCFjtz3wQ
+* https://www.youtube.com/watch?v=7wva9jHEdbo - software install
+
+firmware 
+
+* https://forum.repetier.com/discussion/9567/what-do-i-need-to-know-to-update-the-firmware-for-boxzy
+* https://www.facebook.com/groups/boxzyusers/posts/975861179691346/
+* https://github.com/dewhisna/Repetier-Firmware/blob/BoXZY_Custom/README.md
+* https://github.com/chappy1978/Boxzy-
+* https://github.com/mwasilew/boxzy/blob/master/Upgrading_firmware.md
+** https://github.com/rbdavison/boxzy/blob/master/Upgrading_firmware.md
+** https://github.com/mwasilew/boxzy/issues/1</pre>
 </div>
 <div created="20200614215940118" modified="20221106202008338" tags="[[My Setup]]" title="xdotool on fedora wayland">
 <pre>not possible because of limitations in wayland (security). xdotool was written for xorg, you could change to that or use other tools.
