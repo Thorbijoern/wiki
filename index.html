@@ -1233,8 +1233,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of 'Musikstreaming zwischen Lautis'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13295,7 +13293,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240305001620511" list="[[wireless microphone hacking]] [[Draft of 'Musikstreaming zwischen Lautis']] [[bastel todo]] About TableOfContents" modified="20240310193819379" title="$:/StoryList">
+<div created="20240305001620511" list="[[Musikstreaming zwischen Lautis]] [[bastel todo]] About TableOfContents" modified="20240310193819379" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -19142,146 +19140,6 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
-</div>
-<div created="20220112154535699" draft.of="Musikstreaming zwischen Lautis" draft.title="Musikstreaming zwischen Lautis" modified="20240310194151939" tags="Demotechnik" title="Draft of 'Musikstreaming zwischen Lautis'">
-<pre>* raspberry pi oder ähnliches
-** linux
-** 
-* audio out
-** pcm5102 - habe ich noch rumliegen
-** pcm5122
-** https://www.ti.com/lit/ds/symlink/pcm5242.pdf - would be nice
-** https://www.raspberrypi.com/products/dac-pro/
-*** https://www.raspberrypi.com/documentation/accessories/audio.html#raspberry-pi-dac-pro
-** https://www.hifiberry.com/shop/boards/hifiberry-dac2-pro-xlr/
-
-weiteres
-
-* https://sonobus.net/
-* https://jamulus.io/
-* [[ High Fidelity Audio on a VHF Amateur Radio Repeater - (NSFW) |https://www.youtube.com/watch?v=lwVgrxgyU3E]]
-
-funk
-
-* https://de.wikipedia.org/wiki/M17_(Amateurfunk)
-* MMDVM
-** https://github.com/g4klx/MMDVM
-** https://mmdvm.com/
-* https://en.wikipedia.org/wiki/Digital_mobile_radio
-* DAB?
-* https://m17project.org/get-started/software
-* https://wiki.m17project.org/hotspot_mmdvm
-* https://github.com/g4klx/MMDVM
-* https://en.wikipedia.org/wiki/Spectral_efficiency#Comparison_table
-* https://en.wikipedia.org/wiki/List_of_interface_bit_rates
-* https://en.wikipedia.org/wiki/Comparison_of_wireless_data_standards
-* https://en.wikipedia.org/wiki/Digital_radio
-* WIFI?
-** low-latency / low jitter
-** wifi-direct (p2p)
-** wifi broadcast
-* [[wireless microphone hacking]]?
-
-
-save aus FFF wiki - https://wiki.fridaysforfuture.is/wiki/Musikstreaming_zwischen_Lautis_(Konzept)
-
-&lt;&lt;&lt;
-
-Für größere Städte, mit größeren Demonstrationen mag es interessant sein mehrere Lautis zu nutzen um die komplette Demonstration zu erreichen, da mehrere kleine Anlagen effizienter sein können als eine große.
-Jedoch ist es dabei nicht (einfach) möglich auf allen Lautis die selbe Musik zu spielen oder die reden gleichzeitig zu haben.
-
-Ziel dieses Artikels soll die Sammlung von Informationen zu einem Konzept für den Bau von Funkmodulen sein.
-Mit Diesen Funkmodulen soll es möglich sein die Musik in guter Qualität und ohne hohe Verzögerungen zwischen Lautis zu streamen.
-
-Funkübertragung
-* analog
-** in Masse wohl billiger
-* digital
-** Bluetooth
-*** nicht mehr als 100m
-*** Bluetooth Mesh wäre Option
-** WLAN
-*** mit der 100mW Begrenzung der Funkleistung ist man auf ca. 300m unidirektional im Freien begrenzt
-*** bessere Antennen, vor allem mit Richtwirkung können da was raus holen
-*** Verstärker sind aus legalen Gründen eher nicht empfohlen
-** mit Smartphone (Mumble) &lt;ref&gt;https://wiki.systemli.org/howto/mumble_fuer_redebeitraege_auf_demos&lt;/ref&gt;
-
-==In der Praxis==
-
-Es gibt Städte wie Potsdam, in denen wir mehrere Übertragungstechniken regelmäßig anwenden und unsere Erfahrungen hier mit euch teilen wollen. Bei Fragen könnt ihr uns jederzeit per E-Mail kontaktieren (potsdam @ fridaysforfuture punkt unsere domain).
-
-===Analoge Funkübertragung===
-
-Für die mobile Funkübertragung gibt es fertige Techniken, die sich in der Veranstaltungstechnik finden, eigentlich dienen sie wie Funkmikrofone der Übertragung auf kurze Strecken auf der Bühne. In der Praxis haben wir mit solchen Systemen aber auch schon Funkübertragung über bis zu 250m realisiert. Mit professionellem Antennenequipment (Richtfunktechnik) lässt sich dies auch noch erweitern, aber ein großes Problem sind Störfaktoren. Insbesondere um Häuserecken hilft auch die beste Antenne kaum etwas.
-
-Unsere Sets bestehen meist aus einem Taschensender (meist  mit 2xAA-Akkus betrieben) und einem stationären Empfänger auf dem nächsten Lastenrad. Ein günstiges Setup, mit dem wir angefangen haben, ist das [https://www.thomann.de/de/the_t.bone_free_solo_pt_823_mhz.htm free solo PT], das wir als Versandrückläufer erworben haben. Dies gibt es in verschiedenen Frequenzbereichen (Achtung: besorgt unbedingt solche, die von 823-832, 863-865 und / oder im 1.8GHz-Bereich funken, andernfalls können Lizenzen für die Frequenznutzung anfallen. Wenn ihr euch hier unsicher seid, fragt sicherheitshalber nach!). Auch wenn das für unsere Zwecke ein guter Start war, das System hat auch Macken. So hat unser Empfänger beim ersten Versuch nicht funktioniert und wir mussten es tauschen. Insgesamt ist das wohl eine sehr &quot;billige&quot; und keine hochwertige Lösung - aber mindestens so viel solltet ihr investieren, darunter wird es nur noch schlimmer!
-Wir sind inzwischen bei Funkstrecken der Firma Sennheiser gelandet, die wir gebraucht erworben haben, damit ist die Qualität deutlich besser.
-
-Um das Setup zu nutzen, speist ihr Sound von einem Lauti oder Lastenrad in den Funksender, stellt dort die Verstärkung runter (für Instrumentenabnahme ist diese meist erhöht, z. B. auf 9dB. Stellt diese auf 0 oder noch weniger). Stellt dann am Empfänger unbedingt den &quot;Squelch&quot; runter. Diese Einstellung besagt, dass bei schlechtem Empfang sich der Empfänger stummstellt und lieber Aussetzer in Kauf nimmt, als lästige Störgeräusche. Experimentiert hier gerne rum, aber unsere Erfahrung ist, dass gelegentliches Rauschen bei ständiger Übertragung deutlich besser ankommt als abgehakte Musik.
-
-Wenn ihr hier weitergehen wollt, könnt ihr auch bessere Funksender kaufen, schaut dazu nach sogenannten IEM-Sendern (in-Ear-Monitoring, diese senden einen Audiostream). An diese könnt ihr u. a. bessere Antennen anschließen, z. B. mit Richtwirkung. Da es hier aber schnell teuer wird und ihr natürlich auch darauf achten müsst, dass eure Anlage kompatibel bleibt, empfehlen wir hier Absprache mit Menschen, die Erfahrung in dieser Richtung haben, z. B. euren lokalen Veranstaltungsverleih.
-
-===Digitale Übertragung über Mobilfunk===
-
-Ein weiteres sehr vielversprechendes Konzept, das auch ohne hohe Investitionen in Funktechnik auskommt und dabei deutlich flexibler ist, weil man z. B. auch mit großem Abstand oder sogar an zwei Standorten in der Stadt funken kann, ist eine Funkverbindung über Mobilfunk (am besten LTE oder 5G falls verfügbar). Wir haben das in Potsdam zuerst während der Coronapandemie eingesetzt, um zwei getrennte Veranstaltungen zusammenzuschalten und dabei sogar Gespräche bei der Moderation 
-
-Wir haben dafür die Software [https://mumble.info Mumble] eingesetzt. Unser Setup funktioniert so: 
-* Es gibt einen zentralen Webserver, der installiert werden muss. Ihr könnt hier entweder einen eigenen installieren oder einen aus der öffentlichen Liste wählen. (PS: [[Infra4future]] stellt auch einen Mumble-Server zur Verfügung.)
-* Alle Geräte verbinden sich mit diesem Server und tretem einem gemeinsamen Audiochannel bei
-* Ein Gerät überträgt das Audio von einem Lastenrad in die Cloud. Am besten nehmt ihr hier einen Laptop, dort gibt es viel mehr Einstellungen und man behält auch leichter den Überblick, was man dort einstellt.
-* Alle weiteren Geräte an den anderen Lautsprechern (auch hier gerne Laptops, Smartphones reichen aber (App-Empfehlung: Mumla)) verbinden sich, stellen sich stumm und geben den Ton aus.
-
-Die Übertragung ist nun unabhängig von Hindernissen zwischen den Lastenrädern oder Lautsprechern wie Gebäudeecken, hohe Abstände etc, aber ihr seid nun auf den Mobilfunk angewiesen. Gerade da, wo ihr euch nicht bewegt und Sichtlinie habt, ist eine analoge Funkverbindung deutlich stabiler als der Weg über Mobilfunknetze.
-
-====Internet====
-Damit das also funktioniert, braucht es für jeden Lautsprecher oder jedes Lauti-Rad eine Internetanbindung. Dafür könnt ihr z. B. Hotspots per Smartphone aufmachen, LTE-Router nutzen (gibt es ja manchmal als Heimrouter dort, wo kein DSL verfügbar ist), euch Internetsticks kaufen oder ähnliches.
-
-Wir haben bei Discountern mehrere SIM-Karten gekauft und können bei diesen dann Tagesflats aktivieren (z. B. 5€ für 24 Stunden). Ihr könnt natürlich auch einfach eure bestehenden Smartphones nehmen, das ist deutlich günstiger - bei uns möchte aber meist niemand sein Smartphone für ein paar Stunden aus der Hand legen, man könnte ja etwas verpassen (und mein eigenes ist leider zu alt für stabiles Internet ...).
-
-====Setup====
-Damit das Streaming über Mumble gut funktioniert, haben wir folgende Einstellungen für gut empfunden:
-
-Wir empfehlen in allen Fällen eine Bitrate von etwa 48kbps. Das ist sehr wenig, reicht aber für Sprache und die meiste Musik ganz gut aus. Ihr könnt gerne herumprobieren, was bei euch im Netz stabil funktioniert. Beachtet bitte, dass einige Einstellungen '''nur im Desktop-Client''' verfügbar sind. Außerdem betreffen die Sendeeinstellungen nur das jeweilige Gerät. Das hat den Vorteil, dass ihr zentral am Sendegerät einstellen könnt mit welcher Qualität übertragen wird, aber dadurch können die, die vielleicht die schlechte Übertragung hören, nichts mehr umstellen. Testet das unbedingt gemeinsam aus.
-
-Nachfolgend zwei Setup-Möglichkeiten zur Übersicht:
-
-Die Übertragung (UDP/TCP) gibt an, mit welchem Netzwerkprotokoll die Daten übertragen werden. Bei UDP ist es nicht schlimm, wenn ein Paket fehlt, das wird dann einfach ignoriert und fehlt. Das führt zu dem bekannten Robotersound // Aussetzen, was ihr vielleicht von Telefonkonferenzen kennt. Bei TCP wird bei schlechter Verbindung darauf gewartet, dass ein Paket kommt. Dann hält alles kurz an und lädt (wie bei einem Videoplayer) und macht dann aber ohne Verluste weiter. Dadurch entsteht bei Livestreams aber eine immer größer werdende Verzögerung.
-
-Die Einstellung &quot;Audio pro Paket&quot; gibt an, wie viele Audiodaten in jedem Paket übertragen werden. Bei UDP ist ein kleiner Wert interessant, weil dann bei einem verlorenen Paket weniger am Stück fehlt. Die kleinste Einstellung ist daher hier günstig. Da weniger Audio pro Paket im Umkehrschluss auch mehr Pakete pro Audio bedeutet, braucht man hier mehr Netzwerkbandbreite, weil die kleinere Stückelung mehr zusätzlichen Kommunikationsbedarf hervorruft. Bei TCP, wo auf jeden Fall auf ein Paket gewartet wird, sollte der Wert daher möglichst hoch gewählt werden, da die kleine Einstellung kaum Mehrwert bringt.
-
-{| class=&quot;wikitable&quot;
-|-
-! Ziel !! Geringe Verzögerung !! Einzustellen an
-|-
-| Übertragung: || UDP (Standard) || Empfänger (Sender optional, ausprobieren!)
-|-
-| Audio pro Paket || 10ms || nur Sender
-|-
-| Bitrate || 48kbit || nur Sender
-|}
-
-Hält die Verzögerung meist unter einer Sekunde, aber bei schlechter Verbindung hört man Aussetzer sofort. Bei großer Paketgröße (60ms) versteht man kaum etwas, weil ganze Teile von Worten fehlen, wenn man das runterstellt (10ms) und Teile der Sprache verloren gehen, bleibt die Verständlichkeit gewährt - aber man merkt es
-
-{| class=&quot;wikitable&quot;
-|-
-! Ziel !! Gute Qualität !! Einzustellen an
-|-
-| Übertragung: || TCP (Umstellen!) || Empfänger (Sender optional, ausprobieren!)
-|-
-| Audio pro Paket || 60ms || nur Sender
-|-
-| Bitrate || 48kbit || nur Sender
-|}
-
-Hält die Verbindung aufrecht, bei kurzen Aussetzern stockt es, geht dann aber flüssig weiter (ohne Robotersound). Dabei wird die Verzögerung aber immer größer und kann bis zu 15 Sekunden betragen. Manchmal spricht der Client dann einige Sekunden weiter, was natürlich Teile der Sprache zerstört - insgesamt merkt man eine kurzzeitig schlechte Verbindung aber gar nicht, wenn schnell genug wieder genug Durchsatz da ist. Da zu empfehlen, wo die Lautsprecher nicht gegenseitig hörbar sind. Wenn sie in Hörweite sind, sorgt die Verzögerung schnell für Verwirrung.
-
-====Perspektivisch====
-In mittlerer Zukunft können sich interessierte mal ansehen, ob man mit diesen weiteren Apps für das Mumble-System stabilere Anlagen bauen kann, die z. B. auch einfach zu nutzen sind (etwa nur ein Gerät, was man einschaltet und mit dem Internet verbindet, statt viele Clients einzurichten).
-[https://wiki.mumble.info/wiki/3rd_Party_Applications Drittanbieter-Anwendungen für Mumble]
-
-[Kategorie:Wissen &amp; Diskurs][Kategorie:Technik-IT Support]
-
-&lt;&lt;&lt;</pre>
 </div>
 <div created="20201104201703044" modified="20230325014823181" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -26269,7 +26127,7 @@ stuff to try out:
 
 * https://de.wikipedia.org/wiki/M%E2%80%99era_Luna_Festival</pre>
 </div>
-<div created="20220112154535699" modified="20231012183811195" tags="Demotechnik" title="Musikstreaming zwischen Lautis">
+<div created="20220112154535699" modified="20240310195325514" tags="Demotechnik" title="Musikstreaming zwischen Lautis">
 <pre>* raspberry pi oder ähnliches
 ** linux
 ** 
@@ -26287,10 +26145,32 @@ weiteres
 * https://jamulus.io/
 * [[ High Fidelity Audio on a VHF Amateur Radio Repeater - (NSFW) |https://www.youtube.com/watch?v=lwVgrxgyU3E]]
 
+funk
+
+* https://de.wikipedia.org/wiki/M17_(Amateurfunk)
+* MMDVM
+** https://github.com/g4klx/MMDVM
+** https://mmdvm.com/
+* https://en.wikipedia.org/wiki/Digital_mobile_radio
+* DAB?
+* https://m17project.org/get-started/software
+* https://wiki.m17project.org/hotspot_mmdvm
+* https://github.com/g4klx/MMDVM
+* https://en.wikipedia.org/wiki/Spectral_efficiency#Comparison_table
+* https://en.wikipedia.org/wiki/List_of_interface_bit_rates
+* https://en.wikipedia.org/wiki/Comparison_of_wireless_data_standards
+* https://en.wikipedia.org/wiki/Digital_radio
+* WIFI?
+** low-latency / low jitter
+** wifi-direct (p2p)
+** wifi broadcast
+* [[wireless microphone hacking]]?
+
 
 save aus FFF wiki - https://wiki.fridaysforfuture.is/wiki/Musikstreaming_zwischen_Lautis_(Konzept)
 
 &lt;&lt;&lt;
+
 Für größere Städte, mit größeren Demonstrationen mag es interessant sein mehrere Lautis zu nutzen um die komplette Demonstration zu erreichen, da mehrere kleine Anlagen effizienter sein können als eine große.
 Jedoch ist es dabei nicht (einfach) möglich auf allen Lautis die selbe Musik zu spielen oder die reden gleichzeitig zu haben.
 
@@ -26383,7 +26263,8 @@ Hält die Verbindung aufrecht, bei kurzen Aussetzern stockt es, geht dann aber f
 In mittlerer Zukunft können sich interessierte mal ansehen, ob man mit diesen weiteren Apps für das Mumble-System stabilere Anlagen bauen kann, die z. B. auch einfach zu nutzen sind (etwa nur ein Gerät, was man einschaltet und mit dem Internet verbindet, statt viele Clients einzurichten).
 [https://wiki.mumble.info/wiki/3rd_Party_Applications Drittanbieter-Anwendungen für Mumble]
 
-[[Kategorie:Wissen &amp; Diskurs]][[Kategorie:Technik-IT Support]]
+[Kategorie:Wissen &amp; Diskurs][Kategorie:Technik-IT Support]
+
 &lt;&lt;&lt;</pre>
 </div>
 <div created="20210105163233028" modified="20220924010448042" tags="[[My Setup]]" title="my equipment">
@@ -35213,7 +35094,7 @@ some tools:
 <div created="20200522140827619" modified="20200522140837880" tags="[[My Setup]]" title="Wireguard">
 <pre></pre>
 </div>
-<div created="20240310193942907" modified="20240310194157378" tags="[[microphone stuff]] [[reverse engineering]] hacking" title="wireless microphone hacking">
+<div created="20240310193942907" modified="20240310194208197" tags="[[microphone stuff]] [[reverse engineering]] hacking [[radio stuff / funk kram]]" title="wireless microphone hacking">
 <pre>* https://vgnotepad.blogspot.com/2021/04/reprogramming-old-sennheiser-skm-3072-u.html?m=1
 * https://news.ycombinator.com/from?site=vgnotepad.blogspot.com</pre>
 </div>
