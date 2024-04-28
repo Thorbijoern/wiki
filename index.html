@@ -18084,7 +18084,7 @@ The owner wanted me to change out the amp modules back to the original ones, so 
 * https://www.fairaudio.de/lexikon/verstaerker-klassifizierungen/
 * [[ Spice simulation of the Class A amplifier |https://www.youtube.com/watch?v=fF9XzhJWYfk]]</pre>
 </div>
-<div created="20220701211656084" modified="20240428193711158" tags="[[current projects]] [[PA Amplifier Repairs]]" title="DAP Palladium 1200 Vintage repair">
+<div created="20220701211656084" modified="20240428194636592" tags="[[current projects]] [[PA Amplifier Repairs]]" title="DAP Palladium 1200 Vintage repair">
 <pre>!! DAP Palladium 1200 Vintage
 
 Fuses of one Channel missing/Blown, one Channel is dead, other one has some charred resistors but seems fine otherwise.
@@ -18133,14 +18133,34 @@ The caps i installed at slight angles away from the resistors so they hopefully 
 
 !! shorted channel
 
-
+i replaced the power transistors and preamps with new ones and measured everything thoroughly to check for other damaged components.
 
 assembling the boards to the heatsink was a pain because there are power resistors on both sides of the heatsink and one has to somehow still get thermal paste in between.
 
 
+!! 200Hz noise issue
 
+after repairing both channels, while testing, i had 200Hz noise on the channel with the charring.
+i did not really figgure out were it came from.
+I suspected something with my replacement parts for the RC-filter at the output or the biasing of the amp. i think i adjusted TR6 a bit and that fixed it, but i'm unsure what i did, because i'm writing that down now a while later.
 
+trimpot measurements:
 
+TR4
+102
+A: 513-514
+B: 508
+
+TR5
+102
+A: 595-596
+B: 645
+
+TR6
+101
+A: 21,4
+B: 17
+(NTC trim)
 
 
 ! reverse engineering
