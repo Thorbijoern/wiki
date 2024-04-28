@@ -13319,7 +13319,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240324214036587" list="[[reloop RA-1500 Pro repair]] [[DAP Palladium 1200 Vintage repair]] [[Veranstaltungstechniker rund um dresden]] [[Klotz P-A 1200 Amplifier]] [[electronics thermal management, heat sinking, cooling, kühlung]] [[ebike akku schlüssel (key, wafer, lock)]] About TableOfContents" modified="20240428203009921" title="$:/StoryList">
+<div created="20240324214036587" list="[[DAP Palladium 1200 Vintage repair]] [[Veranstaltungstechniker rund um dresden]] [[Klotz P-A 1200 Amplifier]] [[electronics thermal management, heat sinking, cooling, kühlung]] [[ebike akku schlüssel (key, wafer, lock)]] About TableOfContents" modified="20240428203009921" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -18084,7 +18084,7 @@ The owner wanted me to change out the amp modules back to the original ones, so 
 * https://www.fairaudio.de/lexikon/verstaerker-klassifizierungen/
 * [[ Spice simulation of the Class A amplifier |https://www.youtube.com/watch?v=fF9XzhJWYfk]]</pre>
 </div>
-<div created="20220701211656084" modified="20240428194636592" tags="[[current projects]] [[PA Amplifier Repairs]]" title="DAP Palladium 1200 Vintage repair">
+<div created="20220701211656084" modified="20240428205136607" tags="[[current projects]] [[PA Amplifier Repairs]]" title="DAP Palladium 1200 Vintage repair">
 <pre>!! DAP Palladium 1200 Vintage
 
 Fuses of one Channel missing/Blown, one Channel is dead, other one has some charred resistors but seems fine otherwise.
@@ -18133,12 +18133,34 @@ The caps i installed at slight angles away from the resistors so they hopefully 
 
 !! shorted channel
 
+
+&lt;&lt;&lt;
+also je ein PNP und NPN leistungstranistor ist tot, komplett kurz... die vorverstärker und anderen leistungstrans scheinen noch ok zu sein, aber da ist es gut sicher zu gehen und die zu tauschen...
+ansonsten habe ich auf dem kanal der durch war alle anderen silizium bauteile durchgetestet und die sind ok
+&lt;&lt;&lt;
+
+
 i replaced the power transistors and preamps with new ones and measured everything thoroughly to check for other damaged components.
 
 assembling the boards to the heatsink was a pain because there are power resistors on both sides of the heatsink and one has to somehow still get thermal paste in between.
 
 
 !! 200Hz noise issue
+
+&lt;&lt;&lt;
+die 200Hz sind bei dem Kanal wo ich nahe der Luftspule paar sachen getauscht hatte weil widerstände angeschmorrt waren... 
+die luftspule ist ja am ausgang und da ist ein widerstand und ein Kondensator in serie zu 0V... so weit recht normal für Class AB denke ich
+der Widerstand sind zwei parallel um die leistung zu erhöhen, beide waren stark angeschmorrt und haben den (folien) kondensator und die einen nahegelegenen elko angebrutzelt.
+elkos vertragen hitze ja nicht gut und die marke ist eher noname, deswegen wollte ich es nicht drauf an kommen lassen, ich denke eher nicht das der neue von Nichicon das problem ist. aber der folienkondensator könnte vlt. damit zu tun haben? hab was davon gelesen das das RC-Glied am ausgang dazu führen kann das sich die endstufe aufschwingt wenn mit denen was nicht stimmt?
+den folienkondensator habe ich getauscht weil der lack etwas angeschmorrt war, gegen einen panasonic mit selbem wert, ich weiß nur nicht ob die folien art die selbe ist.
+die widerstände habe ich gegen 3W metall-oxid von Yageo getauscht, die alten sahen von der konstruktion unterm lack nach metal-oxid aus. ich hätte bei einem anderen händler noch welche mit 5W leistung bekommen, aus der selben Yageo serie, aber die hätten eh nur sehr knapp gepasst.
+hab sogar das verschmorrte platinenmaterial sauber entfernt und mit neuem lötstoplack versiegelt
+
+ich komme nur nicht drauf was die 200Hz erzeugt...
+
+und ich kann keinen ruhestrom messen, was ich auch eigenartig finde.
+die potentiometer um das einzustellen sind mit silikon festgeklebt, die haben sich seit der fabrik nicht bewegt und bei beiden kanälen messe ich nichts, weder bei dem der noch am originalsten ist (mit den 200Hz) noch bei dem mit komplett neuen Leistungstransistoren
+&lt;&lt;&lt;
 
 after repairing both channels, while testing, i had 200Hz noise on the channel with the charring.
 i did not really figgure out were it came from.
