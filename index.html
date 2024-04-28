@@ -13321,7 +13321,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240324214036587" list="[[thomann the box MA120 MK2 active monitor speaker repair]] [[DAP Palladium 1200 Vintage repair]] [[Veranstaltungstechniker rund um dresden]] [[Klotz P-A 1200 Amplifier]] [[electronics thermal management, heat sinking, cooling, kühlung]] [[ebike akku schlüssel (key, wafer, lock)]] About TableOfContents" modified="20240428203009921" title="$:/StoryList">
+<div created="20240324214036587" list="[[Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller]] About TableOfContents" modified="20240428211648024" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14335,7 +14335,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20240428205150226" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20240428212032032" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -18086,7 +18086,7 @@ The owner wanted me to change out the amp modules back to the original ones, so 
 * https://www.fairaudio.de/lexikon/verstaerker-klassifizierungen/
 * [[ Spice simulation of the Class A amplifier |https://www.youtube.com/watch?v=fF9XzhJWYfk]]</pre>
 </div>
-<div created="20220701211656084" modified="20240428205136607" tags="[[current projects]] [[PA Amplifier Repairs]]" title="DAP Palladium 1200 Vintage repair">
+<div created="20220701211656084" modified="20240428210524107" tags="[[current projects]] [[PA Amplifier Repairs]]" title="DAP Palladium 1200 Vintage repair">
 <pre>!! DAP Palladium 1200 Vintage
 
 Fuses of one Channel missing/Blown, one Channel is dead, other one has some charred resistors but seems fine otherwise.
@@ -18162,6 +18162,9 @@ ich komme nur nicht drauf was die 200Hz erzeugt...
 
 und ich kann keinen ruhestrom messen, was ich auch eigenartig finde.
 die potentiometer um das einzustellen sind mit silikon festgeklebt, die haben sich seit der fabrik nicht bewegt und bei beiden kanälen messe ich nichts, weder bei dem der noch am originalsten ist (mit den 200Hz) noch bei dem mit komplett neuen Leistungstransistoren
+
+hab mir heute eure Palladium 1200 nochmal angesehen, ich habe das 200Hz brummen durch vorsichtiges einstellen des arbeitpunktes in dem einen kanal weg bekommen.
+aber ich kann keinen ruhestrom messen, dass verwirrt mich... ich habe aber einen test-header gefunden, den ich mir genauer ansehen werde wo der hin verbindet.
 &lt;&lt;&lt;
 
 after repairing both channels, while testing, i had 200Hz noise on the channel with the charring.
@@ -30208,7 +30211,7 @@ the bass has a black body and white pickguard, the screws seem to have been blac
 * https://www.1000manifestos.com/platform-21-repair-manifesto/
 * https://repair.eu/</pre>
 </div>
-<div created="20211020181403248" modified="20230310011943199" tags="[[PA repairs]] [[PA Amplifier Repairs]] [[mixing / signal processing]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
+<div created="20211020181403248" modified="20240428213430211" tags="[[PA repairs]] [[PA Amplifier Repairs]] [[mixing / signal processing]]" title="Repair of Klotz P-A 1200 Amp and Klotz RPC/2 Controller">
 <pre>People I know have got a full PA System made by the former german Company Klotz.
 
 * [[Klotz P-A 1200 Ampifier|Klotz P-A 1200 Amplifier]]
@@ -30232,8 +30235,16 @@ information online is really scarse and here are sources i dindn't check yet:
 
 * https://forum.speakerplans.com/klotz-pa1200-schematic_topic35205_page2.html
 
+!! RPC/2 Adapters
 
-</pre>
+The Klotz RPC/2 comes with a 19&quot; connection panel which is quite useful. the connection panel also houses some shunts and small transformers for isolation and measurement, but those are not important. Due to the RPC/2 not working we are using a Behringer DCX2496 DSP as Crossover, Limiter and such.
+But the RPC/2 connection panel uses DB15 Sub-D connectors to connect to the RPC/2. the connecton pannel has one DB15 for each stereo channel (xlr line in &amp; amplified out) and one for the optional mono sub channel (only out). our RPC/2 does not have the sub option fitted, so the cable is anyways not in use.
+
+i made adapters for the stereo channels, each using a DB15 gender changer, DB15 plug and 2 XLR connectors (1x plug, 1x socket).
+
+the connection panel has the xlr in, that is going to the DB15 and needs to be adapted again to XLR for the DSP. Also the XLR output of the dsp has to be adapted to DB15, because the connection panel has a cable going from the DB15 to the amp.
+
+I soldered everything up, checked everything and it worked first try.</pre>
 </div>
 <div created="20210419223302045" modified="20210419225546138" tags="[[audio repairs]]" title="repair of Renkforce EQ/Amp">
 <pre>* says &quot;Spectrum Analyzer/Graphic Equalizer Computer Control System&quot;
