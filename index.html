@@ -927,6 +927,8 @@ Error message and password prompt
 
 <li>balkon solar / balkonkraftwerk</li>
 
+<li>base hazer pro repair</li>
+
 <li>bass reflex</li>
 
 <li>Basshörner</li>
@@ -1244,8 +1246,6 @@ Error message and password prompt
 <li>DNA, (m)RNA, biotechnology, molecular biology</li>
 
 <li>DNS</li>
-
-<li>Draft of ''</li>
 
 <li>Dresden</li>
 
@@ -13323,7 +13323,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240526222936032" list="[[professional manufacturers of audio hardware]] [[professional amp manufacturers]] [[Draft of '']] [[fog machine stuff]] About TableOfContents" modified="20240526224942097" title="$:/StoryList">
+<div created="20240526222936032" list="[[base hazer pro repair]] [[fog machine stuff]] About TableOfContents" modified="20240526224942097" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -15735,6 +15735,35 @@ sources:
 <div created="20230108232629949" modified="20230109010824454" tags="[[Solar / renewable energy]]" title="balkon solar / balkonkraftwerk">
 <pre>* https://www.deutschlandfunknova.de/beitrag/sonnenstrom-nutzen-ein-micro-solarkraftwerk-bauen
 * https://www.heise.de/ratgeber/Balkonkraftwerke-Die-haeufigsten-Fragen-zu-Installation-etc-und-die-Antworten-7311273.html</pre>
+</div>
+<div created="20240526222938794" modified="20240526232145348" tags="[[fog machine stuff]] repairs" title="base hazer pro repair">
+<pre>i was tasked to repair two base hazer pro form hazebase, which didn't pump any fluid anymore after being used with water-diluted fog-fluid.
+
+* [[Inside a theatrical haze machine.  (hazer)|https://www.youtube.com/watch?v=SR9p2tDPA_U]] - basically the same
+* https://www.hazebaseamerica.com/base_hazer_pro.php
+* https://ulkapumps.com/collections/ulka-pump-nme-series?filter.p.m.custom.voltage=220V - probably the pump model-series
+
+i removed the hazer from the transport-case and unscrewed the lid to measure and check components individually.
+
+most hazers seem to have a blower, a fluid pump (Ulka, 230-240V 50Hz; NME series?) and an air pump, as well as the heater with vaporizer and control circuitry.
+the fluid pump is a small vibrating piston pump working similar to a solenoid. it can also be found in coffee machines and similar.
+the fluid and the air from the air pump get mixed right behind the fluid pump and moved through the vaporizer.
+
+the blower and air pump were working fine and i could press some leftover fluid out of a piece of hose. the fluid droplets then got moved to the vaporizer by the air and vaporized into a bit of mist.
+but the fluid pump wasn't working.
+
+I tried measuring the power supply of the pump and also the pumps resistance with a multimeter. the pump has a built-in diode, so measuring the resistance is only possible in one polarity. The fluid pumps measured around 6MOhm.
+I could not really measure a good power supply, so I suspected the AHQ3223 was to blame. The chip is a solid state relay and switches the power for the pump.
+The air pump, fluid pump and some other stuff are on the same fuse, and it was fine. And between the grid power and the pump is nothing except the fuse and the chip controlled by the microcontroller. the microcontroller drives everything else just fine and we cannot replace it, doe to not having the firmware.
+so we decided to order some AHQ3223 to try replacing those, but replacing them did nothing to get the pumps working again. So it could only be the pumps themself.
+
+we ordered two replacement fluid pumps from hazebase, because they removed the model-stickers from the original manufacturer. the pump has some markings &quot;NME A&quot;, but there is no NME &quot;A&quot; model, maybe the NME Type 4.
+After installing the new pumps everything worked fine again. Then i also learned that the pumps are pulsed, so i could not have measured a good supply with the multimeter, it would have required a oscilloscope, but isolated with a isolation transformer or differential high voltage probe.
+
+We obviously didn't use the old fluid again and did a ~10min test run, to also flush out all old fluid.
+
+I took the old, seized fluid pumps home to try to revive them. I disassembled them, thoroughly flushed the internal pumping parts with distilled water and assembled the pumps again. I connected the pumps directly up to 230V 50Hz grid power and after a few seconds they vibrated themself loose and worked fine again. Maybe we keep them as spares.
+later i also found some videos: https://www.youtube.com/results?search_query=ulka+pump</pre>
 </div>
 <div created="20240217235216257" modified="20240217235237095" tags="" title="bass reflex">
 <pre>* helmholtz resonator</pre>
@@ -19285,20 +19314,6 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
-</div>
-<div created="20240526222938794" draft.of="" draft.title="base hazer pro repair" modified="20240526224809877" tags="[[fog machine stuff]] repairs" title="Draft of ''">
-<pre>i was tasked to repair a base hazer pro form hazebase, which didn't pump any fluid anymore after being used with water-diluted fog-fluid.
-
-[[Inside a theatrical haze machine.  (hazer)|https://www.youtube.com/watch?v=SR9p2tDPA_U]] - basically the same
-https://www.hazebaseamerica.com/base_hazer_pro.php
-
-i removed the hazer from the transport-case and unscrewed the lid to meassure and check components individually.
-
-most hazers seem to have a blower, a fluid pump and an air pump, as well as the heater with vaporizer and control circuitry.
-the fluid pump is a small vibrating piston pump working similar to a solenoid. it can also be found in coffee machines and similar.
-the fluid and the air from the air pump get mixed right behind the fluid pump and moved through the vaporizer.
-
-the blower and air pump were working fine and i could press some leftover fluid out of a piece of hose which got moved to the </pre>
 </div>
 <div created="20201104201703044" modified="20240310205958702" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
