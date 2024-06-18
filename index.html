@@ -13331,7 +13331,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240617233347020" list="[[small digital mixer (mischpult)]] [[LED lampen]] [[monacor/img stage line/Marani DRM-880LAN - 8ch digital matrix router]] About TableOfContents" modified="20240617233347020" title="$:/StoryList">
+<div created="20240617233347020" list="[[LED lampen]] [[monacor/img stage line/Marani DRM-880LAN - 8ch digital matrix router]] About TableOfContents" modified="20240617233347020" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -26130,7 +26130,7 @@ the compression driver has no information printed on the back, but i did not dis
 the amplifier board is a pretty simple, discrete design. maybe class ab?
 it uses 2 TIP41C NPN power transistors and uses a center tapped transformer to drive the compression driver.</pre>
 </div>
-<div created="20240617234027695" modified="20240618003150832" tags="[[dsp (digital signal processor) / digital crossover]] [[Audio Projects]]" title="monacor/img stage line/Marani DRM-880LAN - 8ch digital matrix router">
+<div created="20240617234027695" modified="20240618010542005" tags="[[dsp (digital signal processor) / digital crossover]] [[Audio Projects]]" title="monacor/img stage line/Marani DRM-880LAN - 8ch digital matrix router">
 <pre>was opened, possibly has problems
 
 data/features
@@ -26152,15 +26152,43 @@ links
 * https://www.manualslib.de/manual/87626/Stageline-Drm-880Lan.html
 * https://www.monacor.com/media/FLE/CA2019-EN@E48.pdf
 
-chips/devices
+!! chips/devices
 
-* 1x crystallan cs8900a-cq3z - isa-bus ethernet controller
+general
+
 * JRC 4580 - opamps
 * 1x winbond w79e632a40pl - 8 bit microcontroller
-* 8x 2sc1815 - audio amplifier transistor (on inputs)
-* takamisawa A9W-K - relay
-* 4x AK5385B - 4bit, 192kHz sampling 2ch A/D converter - https://pdf1.alldatasheet.com/datasheet-pdf/view/136849/AKM/AK5385BVF.html
+* takamisawa A9W-K - relay - https://pdf1.alldatasheet.com/datasheet-pdf/view/343449/FUJITSU/A-9W-K.html
 * Marani M716 - custom/proprietary DSP chip - https://www.marani-proaudio.com/public/DPA440A_4448QRT-M716.pdf
+* flash chip for M716
+* 1x 74hc125d
+* 1x 74hc573d
+* 1x 74hc57d
+* 2x 74hc14d - hex inverting schmitt triggers
+* ft24c2??
+* 2x 3.3 LDO's
+* 1x LM2596-adj
+* pcf8563 - RTC
+
+ethernet
+
+* 1x crystallan cs8900a-cq3z - isa-bus ethernet controller
+* 1x stm8s20x - 8 bit microcontroller
+
+inputs
+
+* 8x 2sc1815 - audio amplifier transistor (on inputs)
+* 4x akm AK5385B - 4bit, 192kHz sampling 2ch A/D converter - https://pdf1.alldatasheet.com/datasheet-pdf/view/136849/AKM/AK5385BVF.html
+* 8x that 1512 - mic preamp - https://thatcorp.com/datashts/THAT_1510-1512_Datasheet.pdf
+
+outputs
+
+* 1x akm ak4358vq - 192kHz 24-Bit 8ch DAC - https://pdf1.alldatasheet.com/datasheet-pdf/view/92559/AKM/AK4358VQ.html
+
+rs485 / serial
+
+* ch340t
+* sp485ee
 
 
 !! notes
@@ -26186,7 +26214,7 @@ switch outputs
 
 other
 
-* 1 additional A9W-K relay?
+* 1 additional A9W-K relay, maybe phantom power?
 </pre>
 </div>
 <div created="20220714000955807" modified="20231118180541276" tags="[[input / control devices]] [[electronics parts/components]]" title="motor / motorized faders / potentiometers">
