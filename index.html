@@ -1247,8 +1247,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of ''</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -1763,6 +1761,8 @@ Error message and password prompt
 
 <li>Monacor megaphone repair, reverse engineering</li>
 
+<li>monacor/img stage line/Marani DRM-880LAN - 8ch digital matrix router</li>
+
 <li>motor / motorized faders / potentiometers</li>
 
 <li>motor controller / driver</li>
@@ -2214,6 +2214,8 @@ Error message and password prompt
 <li>small bass speakers</li>
 
 <li>small cheap MPPT modules</li>
+
+<li>small digital mixer (mischpult)</li>
 
 <li>small noise xlr stick</li>
 
@@ -13329,7 +13331,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240617233347020" list="[[LED lampen]] [[Draft of '']] About TableOfContents" modified="20240617233347020" title="$:/StoryList">
+<div created="20240617233347020" list="[[small digital mixer (mischpult)]] [[LED lampen]] [[monacor/img stage line/Marani DRM-880LAN - 8ch digital matrix router]] About TableOfContents" modified="20240617233347020" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14343,8 +14345,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20240617233605679" modifier="Thorbijoern" title="$:/temp/search">
-<pre></pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20240618003359896" modifier="Thorbijoern" title="$:/temp/search">
+<pre>mischpu</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -19321,65 +19323,6 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
-</div>
-<div created="20240617234027695" draft.of="" draft.title="monacor/img stage line/Marani DRM-880LAN - 8ch digital matrix router" modified="20240618002323845" tags="[[dsp (digital signal processor) / digital crossover]] [[Audio Projects]]" title="Draft of ''">
-<pre>was opened, possibly has problems
-
-data/features
-
-* 8 mic/line inputs (screw terminals)
-* 8 line outputs (screw terminals)
-* 6 presets
-* controll over Network (RJ45 Ethernet, IP) - for pc control
-* RS485 in&amp;out - for remote or pc control
-* 4 switch inputs (for additional presets) and switch outputs
-* usb-b input - for pc control
-* EQ, feedback supression, mic preamps
-
-links
-
-* https://marani-proaudio.com/
-* https://www.monacor.com/media/FLE/DRM880LAN_880WP.pdf
-* https://www.huss-licht-ton.de/product_info.php/Monacor-DRM-880LAN-Digital-Matrix-Router/info/17967.html
-* https://www.manualslib.de/manual/87626/Stageline-Drm-880Lan.html
-* https://www.monacor.com/media/FLE/CA2019-EN@E48.pdf
-
-chips/devices
-
-* 1x crystallan cs8900a-cq3z - isa-bus ethernet controller
-* JRC 4580 - opamps
-* 1x winbond w79e632a40pl - 8 bit microcontroller
-* 8x 2sc1815 - audio amplifier transistor (on inputs)
-* takamisawa A9W-K - relay
-* 4x AK5385B - 4bit, 192kHz sampling 2ch A/D converter - https://pdf1.alldatasheet.com/datasheet-pdf/view/136849/AKM/AK5385BVF.html
-* Marani M716 - custom/proprietary DSP chip - https://www.marani-proaudio.com/public/DPA440A_4448QRT-M716.pdf
-
-
-!! notes
-
-mic/line inputs
-
-* clearly laid out and separated
-* each got 2sc1815, that1512, A9W-K relay and 4580 opamp and one channel of one
-* each A/D converter got an LED, possibly for &quot;Analog Input Overflow Detect&quot; (Clip)
-
-line outputs
-
-* clearly laid out and separated
-* 2x 4850, 1x A9W-K relay
-
-switch inputs
-
-each got a resistor, and 2 protection diodes, go directly to 74hc573d it seems
-
-switch outputs
-
-* each got a A9W-K relay, flyback diode and smd transistor for driving
-
-other
-
-* 1 additional A9W-K relay?
-</pre>
 </div>
 <div created="20201104201703044" modified="20240310205958702" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -26187,6 +26130,65 @@ the compression driver has no information printed on the back, but i did not dis
 the amplifier board is a pretty simple, discrete design. maybe class ab?
 it uses 2 TIP41C NPN power transistors and uses a center tapped transformer to drive the compression driver.</pre>
 </div>
+<div created="20240617234027695" modified="20240618003150832" tags="[[dsp (digital signal processor) / digital crossover]] [[Audio Projects]]" title="monacor/img stage line/Marani DRM-880LAN - 8ch digital matrix router">
+<pre>was opened, possibly has problems
+
+data/features
+
+* 8 mic/line inputs (screw terminals)
+* 8 line outputs (screw terminals)
+* 6 presets
+* controll over Network (RJ45 Ethernet, IP) - for pc control
+* RS485 in&amp;out - for remote or pc control
+* 4 switch inputs (for additional presets) and switch outputs
+* usb-b input - for pc control
+* EQ, feedback supression, mic preamps
+
+links
+
+* https://marani-proaudio.com/
+* https://www.monacor.com/media/FLE/DRM880LAN_880WP.pdf
+* https://www.huss-licht-ton.de/product_info.php/Monacor-DRM-880LAN-Digital-Matrix-Router/info/17967.html
+* https://www.manualslib.de/manual/87626/Stageline-Drm-880Lan.html
+* https://www.monacor.com/media/FLE/CA2019-EN@E48.pdf
+
+chips/devices
+
+* 1x crystallan cs8900a-cq3z - isa-bus ethernet controller
+* JRC 4580 - opamps
+* 1x winbond w79e632a40pl - 8 bit microcontroller
+* 8x 2sc1815 - audio amplifier transistor (on inputs)
+* takamisawa A9W-K - relay
+* 4x AK5385B - 4bit, 192kHz sampling 2ch A/D converter - https://pdf1.alldatasheet.com/datasheet-pdf/view/136849/AKM/AK5385BVF.html
+* Marani M716 - custom/proprietary DSP chip - https://www.marani-proaudio.com/public/DPA440A_4448QRT-M716.pdf
+
+
+!! notes
+
+mic/line inputs
+
+* clearly laid out and separated
+* each got 2sc1815, that1512, A9W-K relay and 4580 opamp and one channel of one
+* each A/D converter got an LED, possibly for &quot;Analog Input Overflow Detect&quot; (Clip)
+
+line outputs
+
+* clearly laid out and separated
+* 2x 4850, 1x A9W-K relay
+
+switch inputs
+
+each got a resistor, and 2 protection diodes, go directly to 74hc573d it seems
+
+switch outputs
+
+* each got a A9W-K relay, flyback diode and smd transistor for driving
+
+other
+
+* 1 additional A9W-K relay?
+</pre>
+</div>
 <div created="20220714000955807" modified="20231118180541276" tags="[[input / control devices]] [[electronics parts/components]]" title="motor / motorized faders / potentiometers">
 <pre>see [[diy motor faders / potentiometer / encoders]]
 
@@ -31567,6 +31569,11 @@ With Photovoltaic Cell MPPT Function
 * Complete  Charger  Controller  for  1  
 or  multi-cell  Lithium-ion  Battery  or  
 LiFePO4 Battery </pre>
+</div>
+<div created="20240618003404972" modified="20240618004047316" tags="[[mixing / signal processing]]" title="small digital mixer (mischpult)">
+<pre>* behringer flow 8 - only bluetooth
+* https://www.studiomaster.com/digitalmixing/digilive4c/#
+** https://www.musik-produktiv.at/studiomaster-digilive-4c.html</pre>
 </div>
 <div created="20220430171103499" modified="20220715180635009" tags="[[mixing / signal processing]] [[digital audio]] [[Open Audio Hardware]] [[audio testing and measurement]] [[Audio Projects]] [[project ideas]]" title="small noise xlr stick">
 <pre>inspiration
