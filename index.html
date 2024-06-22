@@ -1815,7 +1815,7 @@ Error message and password prompt
 
 <li>Obdachlosigkeit</li>
 
-<li>old DJ mixer repair</li>
+<li>old/cheap DJ mixers repair</li>
 
 <li>Opamps</li>
 
@@ -13333,7 +13333,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240622215228672" list="[[old DJ mixer repair]] [[prosonic 12:2 - cheap analog mixing console repair]] About TableOfContents" modified="20240622215228672" title="$:/StoryList">
+<div created="20240622215228672" list="[[audio interface / soundcard]] [[old/cheap DJ mixers repair]] [[prosonic 12:2 - cheap analog mixing console repair]] About TableOfContents" modified="20240622221642508" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14347,8 +14347,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20240622215226932" modifier="Thorbijoern" title="$:/temp/search">
-<pre>djx7</pre>
+<div created="20200512223214443" creator="Thorbijoern" modified="20240622221640711" modifier="Thorbijoern" title="$:/temp/search">
+<pre>interfa</pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -15240,7 +15240,7 @@ there are some improvements that would be nice, like a new battery compartment, 
 <pre>* https://www.ti.com/audio-ic/overview.html
 * https://www.coolaudio.com/</pre>
 </div>
-<div created="20201121211605860" modified="20220715184031183" tags="[[digital audio]]" title="audio interface / soundcard">
+<div created="20201121211605860" modified="20240622224048058" tags="[[digital audio]]" title="audio interface / soundcard">
 <pre>most external audio interfaces use USB, you should pay attention to the class compliance of the interface. if the manufacturer followed the USB specifications the interface should use the USB audio device class. devices following this are mostly marketed as &quot;class compliant&quot;, but any interfaces not requiring drivers might be supported.
 
 * https://en.wikipedia.org/wiki/Sound_card
@@ -15255,12 +15255,23 @@ there are some improvements that would be nice, like a new battery compartment, 
 
 linux support of the interfaces i have:
 
-* creative e-mu 0202 - seems to be supported, not fully tested yet
+* creative e-mu 0202
+** seems to be supported, not fully tested yet
 ** https://www.alsa-project.org/wiki/Matrix:Module-emu10k1-fpga
-* Tascam US-122L - doesn't work yet
+** might have preamp issues
+** no phantom power
+* Tascam US-122L
+** have not got it to work yet
+** not class compliant
 ** not to be confused with the US-122
 ** https://www.alsa-project.org/wiki/Matrix:Module-usb-us122l
 * Yamaha MG10 XU - not tested yet, should be class compliant
+* steinberg UR22
+** phantom power
+** not supported, not class compliant
+* iConnectAudio2+
+** class compliant, working
+** has some weird control/settings software that only runs on windows
 
 
 open hardware
@@ -26949,7 +26960,7 @@ The new laser assembly worked fine when i tested it for a while (1h or a bit mor
 <pre>* [[Sollte man Obdachlosen Geld geben?|https://www.youtube.com/watch?v=WtPPrhrsSgk]]
 * Treberhilfe</pre>
 </div>
-<div created="20220909230309256" modified="20240622215420042" tags="[[current projects]] [[audio repairs]]" title="old DJ mixer repair">
+<div created="20220909230309256" modified="20240622221550204" tags="[[current projects]] [[audio repairs]]" title="old/cheap DJ mixers repair">
 <pre>i got 2 old DJ mixers and might be able to repair them. One would be great to get working for the Band Room of a local Kids and Youth Club.
 
 !! Behringer DX500
@@ -27012,7 +27023,11 @@ https://de.aliexpress.com/item/4000178368210.html ~~these faders might fit?~~ th
 
 http://www.taiwanalpha.com/en/products/48 - RA45D2F-211, RA45D2LF-211, RA45Q2F-211
 
-have found some faders that should match on aliexpress but they are quite expensive, i saved them in a list for now.</pre>
+have found some faders that should match on aliexpress but they are quite expensive, i saved them in a list for now.
+
+!! omnitronic PM-322 P
+
+broken input selection switch and probably other problems, not really worth much time</pre>
 </div>
 <div created="20220206214004453" modified="20231118183733320" tags="[[electronics parts/components]]" title="Opamps">
 <pre>* https://hackaday.com/2022/02/05/how-to-spot-a-fake-op-amp/
