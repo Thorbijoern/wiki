@@ -1049,6 +1049,8 @@ Error message and password prompt
 
 <li>cheap diy switchmode lab bench power supply (smps)</li>
 
+<li>cheap LED PAR56 repairs</li>
+
 <li>cheap mixing amp repair, reverse engineering</li>
 
 <li>cheap MPPT</li>
@@ -13339,7 +13341,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240828214209916" list="[[thomann t.box MA120 MK2 active monitor speaker repair]] [[current projects]] [[Stairville D610 dimmer]] [[DIY digital mixer stage box]] [[bastel todo]] [[thomann the t.amp TSA1400 repair]] [[Sonnensystem Speaker]] [[Sonnensystem Signalweg]] About TableOfContents" modified="20240909215615273" title="$:/StoryList">
+<div created="20240828214209916" list="[[cheap LED PAR56 repairs]] [[thomann t.box MA120 MK2 active monitor speaker repair]] [[current projects]] [[Stairville D610 dimmer]] [[DIY digital mixer stage box]] [[bastel todo]] [[thomann the t.amp TSA1400 repair]] [[Sonnensystem Speaker]] [[Sonnensystem Signalweg]] About TableOfContents" modified="20240909215615273" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14353,7 +14355,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20240909215137324" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20240909215917169" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -17187,6 +17189,38 @@ maybe related
 <pre>using off the shelf power supplys like PC power supplies, power bricks and DC converter
 
 i pretty much scrapped this project because i got a complete unit for the same price or even cheaper than i could have build a crude one from several DC converters and stuff.</pre>
+</div>
+<div created="20240909215918448" modified="20240909220209276" tags="repairs" title="cheap LED PAR56 repairs">
+<pre>got 6 cheap PAR56 for a steal because they all had water damage.
+one of them worked, but only slightly. the others all didn't turn on.
+
+the one working slightly seems to only needs a new dip switch because it has a bad connection and a few LEDs are out. it will function as reference.
+
+for all remaining 5 PARs the fuses on the power supplies are blown. i have to check them individually.
+i started disassebling all of them and checking the low voltage circuitry completely.
+the power supplies output 8,5V or 9,5V (it's hard to read) and 26V according to the pcb markings. the working one outputs 8,5V and 24,5V, close enough.
+
+so i checked all of them using my dual channel labbench power supply set to 8,5V and ~25V with current limiting enabled.
+some of them also had bad dip switches and some dead LEDs but appart from that they seem to work fine.
+have to check the DMX though, they might still have problems there.
+
+after that i removed all of the power supplies and checked each one.
+one of them looked pretty fine and all of the semiconducting components on the primary side checked good, it needed only a new fuse, had one lying arround. after replacing the fuse, i plugged it in carefully, without anything connected and the voltages meassured fine (9,3V and 26V).
+
+i used the LED pcb with the most LEDs out as donor and fixed all of the other LED PCBs.
+So we now have atleast 2 working PAR cans.
+
+i checked all of the other 4 power supplies, 3 of them had blown up chips and transistors and all four had some burned resistors. all 4 need new T1A 250V 4mm fuses with leads.
+componenta that had problems on all of them: uc3843an (power supply ASIC), 2sc945 (NPN), fta04n60d (mosfet), 1N4148 diode, small 1kOhm and 10k Ohm 5% resistors and bigger 1 ohm 5% 1W or so resistor.
+one of them even had one of the 817 optocouplers (817cn) meassuring bad.
+
+i have some salvaged small resistors i used a replacement, even had several salvaged 817c optocouplers, 1n4148 diodes and 2sc945 NPN. So i only need to order 4 new power supply chips, the mosfets and maybe the 1w resistors.
+
+i found the uc3843an power supply ICs from TI anstead of on semi, but it should be a drop in replacement. for the Mosfet i had to find a different model, because digikey and ebay do have the exact model but that's fine, found one that should match close enough.
+
+i think i had one or two burned out red and blue LEDs, but around 10 burned out green ones. i think i also had to replace a lot of the green ones on the LED Bar.
+
+i will replace all of the dip switches.</pre>
 </div>
 <div created="20220118153354402" modified="20230310013250207" tags="[[reverse engineering]] [[mixing / signal processing]] [[PA Amplifier Repairs]]" title="cheap mixing amp repair, reverse engineering">
 <pre>this is just a cheap chinese device, nothing of value, but the simple trough hole circuitry makes reverse engineering easy. i think its a good starting point to understand mixing consoles.
