@@ -1249,8 +1249,6 @@ Error message and password prompt
 
 <li>DNS</li>
 
-<li>Draft of 'KMT N500 repair'</li>
-
 <li>Dresden</li>
 
 <li>Dresden Material, Holz, Teile</li>
@@ -13341,7 +13339,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240828214209916" list="[[Draft of 'KMT N500 repair']] [[current projects]] TODO [[Stairville D610 dimmer]] [[DIY digital mixer stage box]] [[bastel todo]] [[Stairville led bar 240/8 rgb dmx 30° repair]] [[thomann the t.amp TSA1400 repair]] [[Sonnensystem Speaker]] [[Sonnensystem Signalweg]] About TableOfContents" modified="20240909213030195" title="$:/StoryList">
+<div created="20240828214209916" list="[[KMT N500 repair]] [[current projects]] TODO [[Stairville D610 dimmer]] [[DIY digital mixer stage box]] [[bastel todo]] [[thomann the t.amp TSA1400 repair]] [[Sonnensystem Speaker]] [[Sonnensystem Signalweg]] About TableOfContents" modified="20240909214130597" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -15818,13 +15816,9 @@ later i also found some videos: https://www.youtube.com/results?search_query=ulk
 <div created="20220528184640974" modified="20220528184654475" tags="Misc" title="bastel stuff">
 <pre>* https://www.youtube.com/watch?v=jVpUe46yaUE</pre>
 </div>
-<div created="20240217231249258" modified="20240909213006614" tags="" title="bastel todo">
+<div created="20240217231249258" modified="20240909214127407" tags="" title="bastel todo">
 <pre>* ~~RCF kaltgeräte kabel 3m?~~
 * vlt. neues 25m verlängerungskabel mit XLR dran?
-
-* [[Stairville led bar 240/8 rgb dmx 30° repair]]
-** 10mm LEDs R, G, B
-** drivers
 
 * Mini PARs
 ** LED Linsen
@@ -19349,25 +19343,6 @@ how important is 110Ohm cable?</pre>
 </div>
 <div created="20211011223357809" modified="20211122003448463" tags="[[IT / Computer security and digital / internet privacy]] [[Software stuff]]" title="DNS">
 <pre>* https://www.quad9.net/</pre>
-</div>
-<div created="20240217232039741" draft.of="KMT N500 repair" draft.title="KMT N500 repair" modified="20240909213142628" tags="[[current projects]] [[PA Amplifier Repairs]]" title="Draft of 'KMT N500 repair'">
-<pre>** FAGOR FB1506L
-*** https://www.ebay.de/itm/373994826963
-*** https://www.ebay.de/itm/325451685308
-*** alternative? - https://pdf1.alldatasheet.com/datasheet-pdf/view/98984/ETC/FB1506L.html
-** Kabel?
-
-
-
-* https://www.diy-hifi-forum.eu/forum/showthread.php?3450-Verst%C3%A4rker-Absichern-welche-Feinsicherung
-* 2x 250W @ ?Ohm
-* http://www.kmt-sound.de/museum/museum.htm
-
-
-brückengleichrichter + angeschmolzene kabel getauscht und platine sauber gemacht
-
-
-** ~T4,2A</pre>
 </div>
 <div created="20201104201703044" modified="20240310205958702" tags="TableOfContents" title="Dresden">
 <pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;
@@ -23462,7 +23437,7 @@ Pins  Description          Wire Color
 * for each amp output a power resistor 25W 0.1 ohm 1%
 * the speaker sense is implemented in the crossover of the speakers, a complete 4-wire NL4 speakon cable is needed for it to work</pre>
 </div>
-<div created="20240217232039741" modified="20240217234933992" tags="[[current projects]] [[PA Amplifier Repairs]]" title="KMT N500 repair">
+<div created="20240217232039741" modified="20240909214606708" tags="[[current projects]] [[PA Amplifier Repairs]]" title="KMT N500 repair">
 <pre>** FAGOR FB1506L
 *** https://www.ebay.de/itm/373994826963
 *** https://www.ebay.de/itm/325451685308
@@ -23473,7 +23448,42 @@ Pins  Description          Wire Color
 
 * https://www.diy-hifi-forum.eu/forum/showthread.php?3450-Verst%C3%A4rker-Absichern-welche-Feinsicherung
 * 2x 250W @ ?Ohm
-* http://www.kmt-sound.de/museum/museum.htm</pre>
+* http://www.kmt-sound.de/museum/museum.htm
+
+
+brückengleichrichter + angeschmolzene kabel getauscht und platine sauber gemacht
+
+
+~T4,2A fuses
+
+
+&lt;&lt;&lt;
+also die carver die ich habe kann wohl 2x 600W auf 4 Ohm (2x 450W auf 8Ohm; stimmt das?) und hat eine träge 6,25A Sicherung, aber das ding ist irgendwie bisschen magic.
+
+zu der KMT N500 finde ich nicht viel, hat aber wohl 2x 250W RMS
+2x T6,3A pro kanal
+
+die DAP palladium 1200 vintage hat F15A sicherung und 2x600W@4ohm / 2x400W@8Ohm
+2x F10A pro kanal
+
+wenn ich nach der DAP rechnung von den kanälen aus gehe KMT vlt. so T4,2A sicherung auf der primärseite?
+
+wenn ich aber von der leistung der primär-sicherung ausgehe, dann sinds bei der DAP 15A*230V=3450W ~= 3*1200W
+und bei der KMT wäre es vielleicht eher 2 x 500W = 1000W; 1000W/230V=4,35A würde da vlt. nur mal 2 statt mal 3 nehmen weil Träge sicherungen statt flinke?
+4A klingt bei 500W vernünftiger als 9A
+
+und nochmal anders ins verhältnis gesetzt:
+1200W/15A=80
+500W/80=6,25A
+dann nochmal bisschen A weg, weil träge und nicht flink und wir sind auch wieder bei 4-5A sicherung
+
+fidek fpa-10a
+t10a primär vs je 2x t15a sekundär
+2x 450w@8 / 2x 720w@4
+
+da würden ~T4,2A primär für die KMT wirklich passen denke ich
+&lt;&lt;&lt;
+</pre>
 </div>
 <div created="20230809223258304" modified="20240310184718696" tags="[[current projects]] repairs [[CNC mill / router]]" title="Konglomerat wood CNC, buildbotics controller repair">
 <pre>the local makerspace Konglomerat (konglomerat.org) has a big wood CNC which is sadly out of order due to the controller having issues.
@@ -33225,7 +33235,7 @@ other / not sorted
 <div created="20240908182708997" modified="20240908182847047" tags="repairs [[current projects]]" title="Stairville D610 dimmer">
 <pre>moc3023</pre>
 </div>
-<div created="20231219005822134" modified="20240909214057978" tags="[[light / projection / visuals]] repairs [[current projects]]" title="Stairville led bar 240/8 rgb dmx 30° repair">
+<div created="20231219005822134" modified="20240909214137671" tags="[[light / projection / visuals]] repairs" title="Stairville led bar 240/8 rgb dmx 30° repair">
 <pre>repair of a Stairville &quot;led bar 240/8 rgb dmx 30°&quot;
 
 info
