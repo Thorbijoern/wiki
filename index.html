@@ -13341,7 +13341,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240828214209916" list="[[cheap LED PAR56 repairs]] [[thomann t.box MA120 MK2 active monitor speaker repair]] [[current projects]] [[Stairville D610 dimmer]] [[DIY digital mixer stage box]] [[bastel todo]] [[thomann the t.amp TSA1400 repair]] [[Sonnensystem Speaker]] [[Sonnensystem Signalweg]] About TableOfContents" modified="20240909215615273" title="$:/StoryList">
+<div created="20240828214209916" list="[[thomann t.box MA120 MK2 active monitor speaker repair]] [[current projects]] [[Stairville D610 dimmer]] [[DIY digital mixer stage box]] [[bastel todo]] [[thomann the t.amp TSA1400 repair]] [[Sonnensystem Speaker]] [[Sonnensystem Signalweg]] About TableOfContents" modified="20240909215615273" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -17190,7 +17190,7 @@ maybe related
 
 i pretty much scrapped this project because i got a complete unit for the same price or even cheaper than i could have build a crude one from several DC converters and stuff.</pre>
 </div>
-<div created="20240909215918448" modified="20240909220855944" tags="repairs [[current projects]]" title="cheap LED PAR56 repairs">
+<div created="20240909215918448" modified="20240909220927075" tags="repairs [[current projects]]" title="cheap LED PAR56 repairs">
 <pre>got 6 cheap PAR56 for a steal because they all had water damage.
 one of them worked, but only slightly. the others all didn't turn on.
 
@@ -17216,7 +17216,7 @@ one of them even had one of the 817 optocouplers (817cn) meassuring bad.
 
 i have some salvaged small resistors i used a replacement, even had several salvaged 817c optocouplers, 1n4148 diodes and 2sc945 NPN. So i only need to order 4 new power supply chips, the mosfets and maybe the 1w resistors.
 
-i found the uc3843an power supply ICs from TI anstead of on semi, but it should be a drop in replacement. for the Mosfet i had to find a different model, because digikey and ebay do have the exact model but that's fine, found one that should match close enough.
+i found the uc3843an power supply ICs from TI anstead of on semi, but it should be a drop in replacement. for the Mosfet i had to find a different model, because digikey and ebay don't have the exact model but that's fine, found one that should match close enough.
 
 i think i had one or two burned out red and blue LEDs, but around 10 burned out green ones. i think i also had to replace a lot of the green ones on the LED Bar.
 
@@ -34350,10 +34350,29 @@ they use a common ground and a 5V-pullup data line which gets pulled down to gro
 
 * https://github.com/gr4per/dsp206</pre>
 </div>
-<div created="20240428205152288" modified="20240909215843053" tags="[[PA Amplifier Repairs]] [[current projects]]" title="thomann t.box MA120 MK2 active monitor speaker repair">
-<pre>10uF 63V
+<div created="20240428205152288" modified="20240910002708553" tags="[[PA Amplifier Repairs]] [[current projects]]" title="thomann t.box MA120 MK2 active monitor speaker repair">
+<pre>a crew gifted me this monitor speaker, it got blown up by someone. they connected the aux speaker output to the line input or something.
 
-tda7294</pre>
+2x tda7294
+
+* https://www.st.com/resource/en/datasheet/tda7294.pdf
+* https://www.st.com/en/audio-ics/tda7294.html
+
+there are 3 electrolytic caps (10uF 63V) dead, 2 are completely blown up and one is just bulged.
+had to clean the mess from the 2 blown up ones.
+
+the tda7294 for the aux speaker output is cracked an has a burnhole in it, so it's pretty visibly dead.
+
+the main tda7294 loked fine at first, but it rapidly heats up, a lot when powered on.
+both tda7294 need replacement then.
+
+also 2 diodes are shorted, they are part of the standby/mute circuitry, which switches the amps on after a short delay to prevent pop-noises when switching it on and the caps charge up.
+
+one is marked ZD1 on the pcb and has a blue ring on the small SOD-80/DO-213 glass package, so it's a zener diode.
+the other one seems to be a normal diode, according to the ST micro application circuits and other example circuits the other diode was probably a 1N4148, a very common diode.
+
+i could not find out which model or atleast zener voltage the zener diode has, so i have to guess.
+the supply is 29V AC (~40V rectified DC). i'm guessing 20-25V zener voltage should be fine.</pre>
 </div>
 <div created="20240217232701952" modified="20240311020453606" tags="[[current projects]] [[PA Amplifier Repairs]]" title="thomann the t.amp TSA1400 repair">
 <pre>** IR gp4063d
