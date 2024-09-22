@@ -13341,7 +13341,7 @@ TableOfContents</pre>
 <div created="20210105175037143" creator="T" modified="20210105180514990" modifier="Thorbijoern" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20240828214209916" list="[[thomann t.box MA120 MK2 active monitor speaker repair]] [[current projects]] [[Stairville D610 dimmer]] [[DIY digital mixer stage box]] [[bastel todo]] [[thomann the t.amp TSA1400 repair]] [[Sonnensystem Speaker]] [[Sonnensystem Signalweg]] About TableOfContents" modified="20240909215615273" title="$:/StoryList">
+<div created="20240922225059983" list="[[cheap LED PAR56 repairs]] About TableOfContents" modified="20240922225059983" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200512221743501" modified="20220810231549681" title="$:/temp/advancedsearch">
@@ -14355,7 +14355,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200512220538102" dependents="" description="Basic theme" modified="20200512220538102" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200512223214443" creator="Thorbijoern" modified="20240910004714769" modifier="Thorbijoern" title="$:/temp/search">
+<div created="20200512223214443" creator="Thorbijoern" modified="20240922225053847" modifier="Thorbijoern" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200512220538037" modified="20200512220538037" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -17190,7 +17190,7 @@ maybe related
 
 i pretty much scrapped this project because i got a complete unit for the same price or even cheaper than i could have build a crude one from several DC converters and stuff.</pre>
 </div>
-<div created="20240909215918448" modified="20240909220927075" tags="repairs [[current projects]]" title="cheap LED PAR56 repairs">
+<div created="20240909215918448" modified="20240922230852332" tags="repairs [[current projects]]" title="cheap LED PAR56 repairs">
 <pre>got 6 cheap PAR56 for a steal because they all had water damage.
 one of them worked, but only slightly. the others all didn't turn on.
 
@@ -17214,13 +17214,40 @@ i checked all of the other 4 power supplies, 3 of them had blown up chips and tr
 componenta that had problems on all of them: uc3843an (power supply ASIC), 2sc945 (NPN), fta04n60d (mosfet), 1N4148 diode, small 1kOhm and 10k Ohm 5% resistors and bigger 1 ohm 5% 1W or so resistor.
 one of them even had one of the 817 optocouplers (817cn) meassuring bad.
 
-i have some salvaged small resistors i used a replacement, even had several salvaged 817c optocouplers, 1n4148 diodes and 2sc945 NPN. So i only need to order 4 new power supply chips, the mosfets and maybe the 1w resistors.
+i have some salvaged small resistors i used a replacement, even had several salvaged 817c optocouplers, 1n4148 diodes and 2sc945 NPN. So i only need to order 4 new power supply chips, the mosfets and the 1w resistors.
 
-i found the uc3843an power supply ICs from TI anstead of on semi, but it should be a drop in replacement. for the Mosfet i had to find a different model, because digikey and ebay don't have the exact model but that's fine, found one that should match close enough.
+i found the uc3843an power supply ICs from TI instead of on semi, but it should be a drop in replacement. for the Mosfet i had to find a different model, because digikey and ebay don't have the exact model but that's fine, found one that should match close enough.
 
 i think i had one or two burned out red and blue LEDs, but around 10 burned out green ones. i think i also had to replace a lot of the green ones on the LED Bar.
 
-i will replace all of the 10 position dip switches.</pre>
+i replaced all of the 10 position dip switches.
+
+after replacing the obviously damaged components, i found one of the power supplies still had problems while testing, so i checked all components on it and found a 2.2Ohm 1/2W resistor that looked fine from the outside but was open circuit. luckily i also had some laying around that i also salvaged. after replacing it, the supply worked fine.
+
+now i have 6 functioning cheapo LED PAR cans. light mixing is not the best, but good enough for some stuff.
+
+
+i found a manual from a similar PAR can, that has the same modes and interface: https://www.bedienungsanleitu.ng/showtec/led-par-56-short-dmx/anleitung?p=9
+
+control modes:
+
+* auto mix
+** switches 9+10
+** switches 1-7 control the fading speed
+* sound
+** switch 10
+** the sensitivity potentiometer controls the sound sensitivity
+* manual
+** switches 8+9+10
+** red: 1&amp;2
+** green: 3&amp;4
+** blue: 5&amp;6
+** intensity: 00=0%; 10=25%; 01=50%; 11=100%
+* DMX
+** DMX address: switches 1-9 added together
+** 1=1; 2=2; 3=4; 4=8; 5=16; 6=32; 7=64; 8=128; 9=256
+
+many other models use an additional switch to switch between sound and auto mode or so.</pre>
 </div>
 <div created="20220118153354402" modified="20230310013250207" tags="[[reverse engineering]] [[mixing / signal processing]] [[PA Amplifier Repairs]]" title="cheap mixing amp repair, reverse engineering">
 <pre>this is just a cheap chinese device, nothing of value, but the simple trough hole circuitry makes reverse engineering easy. i think its a good starting point to understand mixing consoles.
